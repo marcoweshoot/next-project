@@ -1,0 +1,56 @@
+
+export interface Tour {
+  id: string;
+  title: string;
+  slug: string;
+  description?: string;
+  difficulty?: string;
+  image?: {
+    url: string;
+    alternativeText?: string;
+  };
+  states?: Array<{
+    id: string;
+    name: string;
+    slug: string;
+  }> | {
+    id: string;
+    name: string;
+    slug: string;
+  };
+  places?: Array<{
+    id: string;
+    name: string;
+    slug: string;
+  }>;
+  sessions?: Array<{
+    id: string;
+    start: string;
+    end: string;
+    price: number;
+    maxPax: number;
+    status?: string;
+    users?: Array<{
+      id: string;
+      username: string;
+      firstName: string;
+      lastName: string;
+      profilePicture?: {
+        id?: string;
+        url: string;
+        alternativeText?: string;
+      };
+    }>;
+  }>;
+}
+
+export interface Destination {
+  name: string;
+  slug: string;
+}
+
+export interface DestinationDetailToursProps {
+  tours: Tour[];
+  destination?: Destination;
+  loading: boolean;
+}
