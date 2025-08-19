@@ -1,5 +1,5 @@
-
-import type { TourSession, SessionUser } from '@/types/tour';
+// utils/tourFilters.ts
+import type { TourSession } from '@/types/tour';
 
 interface Tour {
   id: string;
@@ -8,43 +8,53 @@ interface Tour {
   sessions?: TourSession[];
 }
 
-export const filterToursByPhotographer = (tours: Tour[], photographerUsername: string): Tour[] => {
-  console.log('filterToursByPhotographer - All tours received:', tours);
-  console.log('filterToursByPhotographer - Looking for username:', photographerUsername);
-  
-  const photographerTours = tours.filter(tour => {
-    // Verifica se il tour ha sessioni
+export const filterToursByPhotographer = (
+  tours: Tour[],
+  photographerUsername: string
+): Tour[] => {
+  const now = new Date();
+
+  const photographerTours = tours.reduce<Tour[]>((acc, tour) => {
     if (!tour.sessions || tour.sessions.length === 0) {
-      console.log(`Tour "${tour.title}" has no sessions`);
-      return false;
+      console.log(`Tour "${tour.title}" has no sessions, skipping`);
+      return acc;
     }
 
-    // Verifica se almeno una sessione contiene il fotografo
-    const hasPhotographerInSessions = tour.sessions.some(session => {
-      if (!session.users || session.users.length === 0) {
-        return false;
-      }
-      
-      const hasPhotographer = session.users.some(user => {
-        const matches = user.username === photographerUsername;
-        if (matches) {
-          console.log(`Found photographer ${photographerUsername} in session ${session.id} of tour "${tour.title}"`);
-        }
-        return matches;
-      });
-      
-      return hasPhotographer;
+    // 1) seleziona solo le sessioni future
+    const futureSessions = tour.sessions.filter((session) => {
+      const startDate = new Date(session.start);
+      return startDate > now;
     });
 
-    if (!hasPhotographerInSessions) {
-      console.log(`Tour "${tour.title}" does NOT have photographer ${photographerUsername} in any session`);
+    if (futureSessions.length === 0) {
+      console.log(`Tour "${tour.title}" has no future sessions, skipping`);
+      return acc;
     }
 
-    return hasPhotographerInSessions;
-  });
+    // 2) di queste, prendi solo quelle con il fotografo
+    const sessionsWithPhotographer = futureSessions.filter((session) => {
+      return (
+        session.users?.some((u) => u.username === photographerUsername) ?? false
+      );
+    });
 
-  console.log('Filtered photographer tours:', photographerTours.length, 'out of', tours.length);
-  console.log('Photographer tours:', photographerTours.map(t => t.title));
+    if (sessionsWithPhotographer.length === 0) {
+      console.log(
+        `Tour "${tour.title}" has no future sessions with ${photographerUsername}, skipping`
+      );
+      return acc;
+    }
 
+    // 3) includi il tour, ma con sessions filtrate
+    acc.push({
+      ...tour,
+      sessions: sessionsWithPhotographer,
+    });
+    return acc;
+  }, []);
+
+  console.log(
+    `filterToursByPhotographer: ${photographerTours.length} tours matched out of ${tours.length}`
+  );
   return photographerTours;
 };

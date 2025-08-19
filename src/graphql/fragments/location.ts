@@ -10,6 +10,5 @@ export const LOCATION_FRAGMENT = gql`
     description
     slug
     locale
-    published_at
   }
 `;

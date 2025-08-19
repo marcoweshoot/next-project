@@ -25,18 +25,15 @@ interface CollectionDetailHeroProps {
   collection: Collection;
 }
 
-const CollectionDetailHero: React.FC<{
-  children?: React.ReactNode;
-}> = ({
-  collection,
-  children
+const CollectionDetailHero: React.FC<CollectionDetailHeroProps> = ({
+  collection
 }) => {
   return (
     <section className="relative bg-gray-900 pt-20">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={collection.image?.url || 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'}
+          src={collection.image?.url || 'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Viaggi%20Fotografici.avif'}
           alt={collection.image?.alternativeText || collection.name}
           className="w-full h-full object-cover"
         />

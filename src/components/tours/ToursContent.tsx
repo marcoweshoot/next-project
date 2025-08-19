@@ -1,4 +1,3 @@
-"use client"
 'use client';
 
 import Link from "next/link";
@@ -21,9 +20,7 @@ interface ToursContentProps {
   hasMore?: boolean;
 }
 
-const ToursContent: React.FC<{
-  children?: React.ReactNode;
-}> = ({
+const ToursContent: React.FC<ToursContentProps> = ({
   tours,
   loading,
   loadingMore = false,
@@ -31,8 +28,8 @@ const ToursContent: React.FC<{
   searchTerm,
   onClearSearch,
   hasMore = false,
-  children
 }) => {
+
   // Filter tours based on search term
   const filteredTours = useMemo(() => {
     if (!searchTerm.trim()) return tours;

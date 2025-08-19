@@ -1,131 +1,93 @@
+'use client';
 
-import Link from "next/link";
+import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { getTourLink } from '@/components/tour-card/tourCardUtils';
-
-interface LastMinuteTour {
-  id: string;
-  title: string;
-  slug: string;
-  image: string;
-  startDate: string;
-  duration: string;
-  price: number;
-  availableSpots: number;
-  status?: string;
-  states?: Array<{
-    id: string;
-    name: string;
-    slug: string;
-  }>;
-  places?: Array<{
-    id: string;
-    name: string;
-    slug: string;
-  }>;
-}
+import { FALLBACKS } from '@/constants/fallbacks';
+import type { Tour } from '@/types/tour';
 
 interface LastMinuteTourCardProps {
-  tour: LastMinuteTour;
+  tour: Tour;
 }
 
-const LastMinuteTourCard: React.FC<{
-  children?: React.ReactNode;
-}> = ({
-  tour,
-  children
-}) => {
+const LastMinuteTourCard: React.FC<LastMinuteTourCardProps> = ({ tour }) => {
   const tourLink = getTourLink({
     slug: tour.slug,
     states: tour.states,
-    places: tour.places
+    places: tour.places,
   });
 
+  const imageUrl = tour.cover?.url || FALLBACKS.LAST_MINUTE_IMAGE;
+  const altText = tour.cover?.alt || tour.title;
+
   const renderStatusBadge = () => {
-    // Priorità allo status del tour se presente
-    switch (tour.status) {
-      case 'confirmed':
-        return (
-          <div className="bg-green-100 text-green-800 text-center text-sm py-2 px-3 rounded-md font-medium">
-            Confermato
-          </div>
-        );
-      case 'soldOut':
-        return (
-          <div className="bg-red-100 text-red-800 text-center text-sm py-2 px-3 rounded-md font-medium">
-            Tutto esaurito
-          </div>
-        );
-      case 'waitingList':
-        return (
-          <div className="bg-gray-200 text-gray-800 text-center text-sm py-2 px-3 rounded-md font-medium">
-            Lista d'attesa
-          </div>
-        );
-      case 'almostConfirmed':
-        return (
-          <div className="bg-blue-100 text-blue-800 text-center text-sm py-2 px-3 rounded-md font-medium">
-            Quasi confermato
-          </div>
-        );
-      case 'almostFull':
-      case 'scheduled':
-      default:
-        // Se non c'è uno status specifico, mostra i posti disponibili
-        const spots = tour.availableSpots;
-        if (spots > 0) {
-          const postText = spots === 1 ? 'posto disponibile!' : 'posti disponibili!';
-          return (
-            <div className="bg-yellow-100 text-yellow-800 text-center text-sm py-2 px-3 rounded-md font-medium">
-              Solo {spots} {postText}
-            </div>
-          );
-        } else {
-          return (
-            <div className="bg-red-100 text-red-800 text-center text-sm py-2 px-3 rounded-md font-medium">
-              Tutto esaurito
-            </div>
-          );
-        }
+    const badgeMap: Record<string, { text: string; color: string }> = {
+      confirmed: { text: 'Confermato', color: 'bg-green-100 text-green-800' },
+      soldOut: { text: 'Tutto esaurito', color: 'bg-red-100 text-red-800' },
+      waitingList: { text: "Lista d'attesa", color: 'bg-gray-200 text-gray-800' },
+      almostConfirmed: { text: 'Quasi confermato', color: 'bg-blue-100 text-blue-800' },
+    };
+
+    if (tour.status && badgeMap[tour.status]) {
+      const { text, color } = badgeMap[tour.status];
+      return (
+        <span className={`text-sm py-1.5 px-3 rounded-md font-semibold ${color}`}>
+          {text}
+        </span>
+      );
     }
+
+    const spots = tour.availableSpots;
+    if (spots > 0) {
+      return (
+        <span className="bg-yellow-100 text-yellow-800 text-sm py-1.5 px-3 rounded-md font-semibold">
+          Solo {spots} {spots === 1 ? 'posto' : 'posti'} disponibili!
+        </span>
+      );
+    }
+
+    return (
+      <span className="bg-red-100 text-red-800 text-sm py-1.5 px-3 rounded-md font-semibold">
+        Tutto esaurito
+      </span>
+    );
   };
 
   return (
-    <Link 
+    <Link
       href={tourLink}
-      className="group"
+      aria-label={`Vai al tour: ${tour.title}`}
+      className="block group"
     >
-      <Card className="overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-xl h-full flex flex-col">
-        <div className="relative h-48 overflow-hidden">
-          <img
-            src={tour.image}
-            alt={tour.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            onError={(e) => {
-              e.currentTarget.src = 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-            }}
+      <Card className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1.5 bg-white flex flex-col h-full">
+        <div className="relative h-48 w-full">
+          <Image
+            src={imageUrl}
+            alt={altText}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-t-2xl"
+            sizes="(max-width: 768px) 100vw, 33vw"
           />
         </div>
-        
-        <CardContent className="p-6 flex flex-col flex-grow">
-          <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight h-14 overflow-hidden line-clamp-2">
+
+        <CardContent className="p-5 flex flex-col flex-grow">
+          <h3 className="text-lg font-semibold text-gray-900 leading-tight mb-3 line-clamp-2 min-h-[3.6rem]">
             {tour.title}
           </h3>
-          
-          <div className="flex items-center justify-between mb-4">
-            <div className="text-sm text-gray-600">
-              <div>Partenza: {tour.startDate}</div>
-              <div>Durata: {tour.duration}</div>
+
+          <div className="flex justify-between text-sm text-gray-600 mb-3">
+            <div>
+              <p>Partenza: {tour.startDate}</p>
+              <p>Durata: {tour.duration}</p>
             </div>
-            <div className="text-right">
-              <div className="text-2xl font-bold text-gray-900">€{tour.price.toLocaleString()}</div>
+            <div className="text-right text-lg font-bold text-gray-900">
+              €{tour.price.toLocaleString()}
             </div>
           </div>
-          
-          <div className="mt-auto">
-            {renderStatusBadge()}
-          </div>
+
+          <div className="mt-auto">{renderStatusBadge()}</div>
         </CardContent>
       </Card>
     </Link>

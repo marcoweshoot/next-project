@@ -1,4 +1,4 @@
-
+// components/CoursesList.tsx
 import React from 'react';
 import CourseCard from '@/components/CourseCard';
 import { Course } from '@/types';

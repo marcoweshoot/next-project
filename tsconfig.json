@@ -9,10 +9,11 @@
     }
   ],
   "compilerOptions": {
+    "composite": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "src/*"
       ]
     },
     "noImplicitAny": false,
@@ -27,7 +28,7 @@
       "esnext"
     ],
     "strict": false,
-    "noEmit": true,
+    "noEmit": false,
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,

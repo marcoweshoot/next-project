@@ -5,8 +5,6 @@ export const GET_SESSIONS = gql`
   query GetSessions($locale: String) {
     sessions(locale: $locale, sort: "start:asc") {
       id
-      created_at
-      updated_at
       start
       end
       status
@@ -19,7 +17,6 @@ export const GET_SESSIONS = gql`
       currency
       priceCompanion
       locale
-      published_at
     }
   }
 `;
@@ -40,7 +37,6 @@ export const GET_FUTURE_SESSIONS_DIRECT = gql`
       currency
       priceCompanion
       locale
-      published_at
     }
   }
 `;

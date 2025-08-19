@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Badge } from '@/components/ui/badge';
+import NextImage from 'next/image';
 import { BookOpen, Users, Award } from 'lucide-react';
 import {
   Breadcrumb,
@@ -8,72 +7,79 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-  BreadcrumbPage
+  BreadcrumbPage,
 } from '@/components/ui/breadcrumb';
 import { Course } from '@/types';
 
 interface CourseDetailHeroProps {
-  course: Course;
+  course: Course & { image?: { url: string; alternativeText?: string } };
 }
 
 const CourseDetailHero: React.FC<CourseDetailHeroProps> = ({ course }) => {
-  return (
-    <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 pt-16">
-      <div className="absolute inset-0 bg-black/50"></div>
-      {course.image && (
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${course.image.url})` }}
-        />
-      )}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-16">
-        {/* Breadcrumbs */}
-        <div className="mb-8">
-          <Breadcrumb>
-            <BreadcrumbList className="text-white/80">
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/" className="text-white/80 hover:text-white">
-                  WeShoot
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="text-white/60" />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/corsi-di-fotografia" className="text-white/80 hover:text-white">
-                  Corsi di Fotografia
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="text-white/60" />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-white">
-                  {course.title}
-                </BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
+  const img = course.image;
 
-        <div className="lg:col-span-2">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {course.title}
-          </h1>
-          <p className="text-xl text-gray-200 mb-8">
-            Diventa un fotografo professionista con il metodo WeShoot. 
-            Accesso immediato all'Accademia e supporto della community.
-          </p>
-          
-          <div className="flex flex-wrap gap-4 mb-8">
-            <div className="flex items-center space-x-2 text-white">
-              <BookOpen className="h-5 w-5" />
-              <span>Accesso immediato</span>
-            </div>
-            <div className="flex items-center space-x-2 text-white">
-              <Users className="h-5 w-5" />
-              <span>Community esclusiva</span>
-            </div>
-            <div className="flex items-center space-x-2 text-white">
-              <Award className="h-5 w-5" />
-              <span>Certificato finale</span>
-            </div>
+  return (
+    <section className="relative w-full h-[60vh] md:h-[70vh]">
+      {/* Background + Overlay */}
+      {img?.url && (
+        <div className="absolute inset-0">
+          <NextImage
+            src={img.url}
+            alt={img.alternativeText || course.title}
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            priority
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900/50" />
+        </div>
+      )}
+
+      {/* Content centered */}
+      <div className="relative z-10 flex flex-col justify-center items-center h-full px-4 text-center text-white max-w-4xl mx-auto">
+        <Breadcrumb aria-label="Breadcrumb" className="mb-6">
+          <BreadcrumbList className="text-white/80">
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/" className="hover:text-white">
+                WeShoot
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator aria-hidden="true" />
+            <BreadcrumbItem>
+              <BreadcrumbLink
+                href="/corsi-di-fotografia"
+                className="hover:text-white"
+              >
+                Corsi di Fotografia
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator aria-hidden="true" />
+            <BreadcrumbItem>
+              <BreadcrumbPage className="text-white">
+                {course.title}
+              </BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">{course.title}</h1>
+        <p className="text-lg md:text-xl mb-8">
+          Diventa un fotografo professionista con il metodo WeShoot. Accesso
+          immediato all'Accademia e supporto della community.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-6 text-white">
+          <div className="flex items-center space-x-2">
+            <BookOpen className="h-5 w-5" />
+            <span>Accesso immediato</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Users className="h-5 w-5" />
+            <span>Community esclusiva</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Award className="h-5 w-5" />
+            <span>Certificato finale</span>
           </div>
         </div>
       </div>

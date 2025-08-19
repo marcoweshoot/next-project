@@ -1,19 +1,14 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MessageCircle } from 'lucide-react';
 import TourPricingHeader from './TourPricingHeader';
-import TourDetailsGrid from './TourDetailsGrid';
 import TourInclusionsSection from './TourInclusionsSection';
 
 interface TourSummaryCardProps {
   tour: {
-    duration: number;
-    price: number;
-    deposit?: number;
-    maxParticipants: number;
     difficulty?: 'easy' | 'medium' | 'hard';
     sessions?: Array<{
       start: string;
@@ -22,7 +17,7 @@ interface TourSummaryCardProps {
       deposit?: number;
       maxPax: number;
     }>;
-    includes?: Array<{
+    whats_includeds?: Array<{
       title: string;
       description?: string;
       icon?: {
@@ -30,7 +25,7 @@ interface TourSummaryCardProps {
         alternativeText?: string;
       };
     }>;
-    excludes?: Array<{
+    whats_not_includeds?: Array<{
       title: string;
       description?: string;
       icon?: {
@@ -43,64 +38,62 @@ interface TourSummaryCardProps {
   onOpenWhatsApp: () => void;
 }
 
-const TourSummaryCard: React.FC<TourSummaryCardProps> = ({ 
-  tour, 
-  onViewSessions, 
-  onOpenWhatsApp 
+const TourSummaryCard: React.FC<TourSummaryCardProps> = ({
+  tour,
+  onViewSessions,
+  onOpenWhatsApp
 }) => {
-  // Get the next upcoming session
-  const getNextSession = () => {
-    if (!tour.sessions || tour.sessions.length === 0) return null;
-    
-    const now = new Date();
-    const futureSessions = tour.sessions
-      .filter(session => new Date(session.start) > now)
-      .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
-    
-    return futureSessions[0] || null;
-  };
+  const now = useMemo(() => new Date(), []);
 
-  const nextSession = getNextSession();
-  const hasAvailableSessions = nextSession !== null;
+  const nextSession = useMemo(() => {
+    if (!tour.sessions || tour.sessions.length === 0) return null;
+
+    return tour.sessions
+      .filter(session => new Date(session.start) > now)
+      .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime())[0] || null;
+  }, [tour.sessions, now]);
+
+  const hasAvailableSessions = !!nextSession;
 
   return (
     <Card className="sticky top-32 shadow-lg border-0">
       <CardContent className="p-0">
-        <TourPricingHeader 
-          price={tour.price}
-          deposit={tour.deposit}
-          nextSession={nextSession}
+        <TourPricingHeader
+          price={nextSession?.price}
+          deposit={nextSession?.deposit}
+          nextSession={nextSession ? {
+            start: nextSession.start,
+            end: nextSession.end,
+            maxPax: nextSession.maxPax
+          } : undefined}
+          difficulty={tour.difficulty}
           hasAvailableSessions={hasAvailableSessions}
         />
 
-        <TourDetailsGrid 
-          duration={tour.duration}
-          maxParticipants={tour.maxParticipants}
-          difficulty={tour.difficulty}
-        />
-
-        <TourInclusionsSection 
-          includes={tour.includes}
-          excludes={tour.excludes}
+        <TourInclusionsSection
+          includes={tour.whats_includeds}
+          excludes={tour.whats_not_includeds}
         />
 
         {/* Action buttons */}
         <div className="p-6 space-y-3">
-          <Button 
+          <Button
             onClick={onViewSessions}
             className="w-full font-bold py-3"
-            style={{ backgroundColor: '#E25141', color: 'white' }}
+            style={{ backgroundColor: 'red-600', color: 'white' }}
             size="lg"
+            aria-label="Scopri le prossime partenze disponibili"
           >
             Vedi Partenze
           </Button>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             onClick={onOpenWhatsApp}
             className="w-full border-2 hover:bg-gray-50"
             size="lg"
+            aria-label="Contattaci su WhatsApp"
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
+            <MessageCircle className="w-5 h-5 mr-2" aria-hidden="true" />
             Chatta con noi
           </Button>
         </div>

@@ -9,11 +9,8 @@ interface CollectionDetailErrorProps {
   error?: any;
 }
 
-const CollectionDetailError: React.FC<{
-  children?: React.ReactNode;
-}> = ({
-  error,
-  children
+const CollectionDetailError: React.FC<CollectionDetailErrorProps> = ({
+  error
 }) => {
   return (
     <div className="min-h-screen bg-gray-50">

@@ -1,31 +1,14 @@
+import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import { registerApolloClient } from "@apollo/experimental-nextjs-app-support/rsc";
 
-import { ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
-
-const httpLink = createHttpLink({
-  uri: "https://api.weshoot.it/graphql",
+export const { getClient } = registerApolloClient(() => {
+  return new ApolloClient({
+    ssrMode: typeof window === "undefined", // ✅ attiva modalità SSR su server
+    cache: new InMemoryCache(),
+    link: new HttpLink({
+      uri: "https://api.weshoot.it/graphql",
+      fetch,
+    }),
+    connectToDevTools: process.env.NODE_ENV === "development",
+  });
 });
-
-const authLink = setContext((_, { headers }) => {
-  return {
-    headers: {
-      ...headers,
-      // Add any auth headers here if needed in the future
-    }
-  }
-});
-
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-  defaultOptions: {
-    watchQuery: {
-      errorPolicy: 'all',
-    },
-    query: {
-      errorPolicy: 'all',
-    },
-  },
-});
-
-export default client;

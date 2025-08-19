@@ -21,7 +21,6 @@ export interface Picture {
   id: string;
   title?: string;
   type?: string;
-  published_at?: string;
   image: Image[]; // Changed to array to match GraphQL structure
 }
 
@@ -29,7 +28,6 @@ export interface FAQ {
   id: string;
   question: string;
   answer: string;
-  published_at?: string;
 }
 
 export interface Course {

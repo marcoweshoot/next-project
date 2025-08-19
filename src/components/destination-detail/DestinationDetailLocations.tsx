@@ -1,8 +1,8 @@
-
 import Link from "next/link";
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
+import Image from "next/image";
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface Location {
   id: string;
@@ -25,28 +25,20 @@ interface DestinationDetailLocationsProps {
   loading: boolean;
 }
 
-const DestinationDetailLocations: React.FC<{
-  children?: React.ReactNode;
-}> = ({
+const FALLBACK_IMAGE =
+  "https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//photo-1469474968028-56623f02e42e.avif";
+
+const getLocationMainImage = (location: Location): string => {
+  const firstImage = location?.pictures?.[0]?.image?.[0]?.url;
+  return firstImage || FALLBACK_IMAGE;
+};
+
+const DestinationDetailLocations: React.FC<DestinationDetailLocationsProps> = ({
   locations,
   destination,
   loading,
-  children
 }) => {
-  // Funzione per ottenere l'immagine principale di una location
-  const getLocationMainImage = (location: Location) => {
-    if (location.pictures && location.pictures.length > 0) {
-      const firstPicture = location.pictures[0];
-      if (firstPicture.image && firstPicture.image.length > 0) {
-        return firstPicture.image[0]?.url || 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-      }
-    }
-    return 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-  };
-
-  if (locations.length === 0 && !loading) {
-    return null;
-  }
+  if (locations.length === 0 && !loading) return null;
 
   return (
     <section className="py-16">
@@ -59,51 +51,51 @@ const DestinationDetailLocations: React.FC<{
             Scopri i luoghi più fotografici e iconici di {destination?.name}
           </p>
         </div>
-        
-        {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[...Array(6)].map((_, i) => (
-              <Card key={i} className="overflow-hidden">
-                <Skeleton className="h-64 w-full" />
-                <CardContent className="p-4">
-                  <Skeleton className="h-6 w-3/4 mb-2" />
-                  <Skeleton className="h-4 w-full" />
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {locations.map((location) => (
-              <Card key={location.id} className="overflow-hidden group hover:shadow-xl transition-all duration-300 cursor-pointer">
-                <Link href={`/viaggi-fotografici/destinazioni/${destination?.slug}/${location.slug}`} className="block">
-                  <div className="relative overflow-hidden h-64">
-                    <img
-                      src={getLocationMainImage(location)}
-                      alt={location.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-2xl font-bold text-white mb-2">
-                        {location.title}
-                      </h3>
-                      {location.description && (
-                        <p className="text-gray-200 text-sm line-clamp-2">
-                          {location.description}
-                        </p>
-                      )}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {loading
+            ? [...Array(6)].map((_, i) => (
+                <Card key={i} className="overflow-hidden">
+                  <Skeleton className="h-64 w-full" />
+                  <CardContent className="p-4">
+                    <Skeleton className="h-6 w-3/4 mb-2" />
+                    <Skeleton className="h-4 w-full" />
+                  </CardContent>
+                </Card>
+              ))
+            : locations.map((location) => (
+                <Card
+                  key={location.id}
+                  className="overflow-hidden group hover:shadow-xl transition-all duration-300 cursor-pointer"
+                >
+                  <Link
+                    href={`/viaggi-fotografici/destinazioni/${destination?.slug}/posti/${location.slug}`}
+                    className="block"
+                  >
+                    <div className="relative overflow-hidden h-64 w-full">
+                      <Image
+                        src={getLocationMainImage(location)}
+                        alt={location.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-2xl font-bold text-white mb-2">
+                          {location.title}
+                        </h3>
+                        {location.description && (
+                          <p className="text-gray-200 text-sm line-clamp-2">
+                            {location.description}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </Card>
-            ))}
-          </div>
-        )}
+                  </Link>
+                </Card>
+              ))}
+        </div>
       </div>
     </section>
   );

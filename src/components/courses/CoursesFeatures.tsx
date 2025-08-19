@@ -1,27 +1,30 @@
-
+// components/courses/CoursesFeatures.tsx
 import React from 'react';
 import IconWithTextSection from '@/components/IconWithTextSection';
 import { BookOpen, Users, Trophy } from 'lucide-react';
 
-const CoursesFeatures = () => {
-  const iconColumns = [
-    {
-      icon: BookOpen,
-      title: "Contenuti di Qualità",
-      subtitle: "Impara con videocorsi professionali e materiali didattici curati nei minimi dettagli."
-    },
-    {
-      icon: Users,
-      title: "Community Esclusiva",
-      subtitle: "Entra a far parte della community WeShoot e condividi la tua passione con altri fotografi."
-    },
-    {
-      icon: Trophy,
-      title: "Certificazione",
-      subtitle: "Ottieni certificati riconosciuti che attestano le tue competenze fotografiche."
-    }
-  ];
+const iconColumns = [
+  {
+    icon: BookOpen,
+    title: 'Contenuti di Qualità',
+    subtitle:
+      'Impara con videocorsi professionali e materiali didattici curati nei minimi dettagli.',
+  },
+  {
+    icon: Users,
+    title: 'Community Esclusiva',
+    subtitle:
+      'Entra a far parte della community WeShoot e condividi la tua passione con altri fotografi.',
+  },
+  {
+    icon: Trophy,
+    title: 'Certificazione',
+    subtitle:
+      'Ottieni certificati riconosciuti che attestano le tue competenze fotografiche.',
+  },
+];
 
+const CoursesFeatures: React.FC = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
@@ -39,4 +42,4 @@ const CoursesFeatures = () => {
   );
 };
 
-export default CoursesFeatures;
+export default React.memo(CoursesFeatures);

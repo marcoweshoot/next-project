@@ -8,7 +8,7 @@ const GalleryEmptyState: React.FC = () => {
       <div className="w-16 h-16 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
         <Eye className="w-8 h-8 text-gray-400" />
       </div>
-      <h3 className="text-lg font-semibold text-gray-600 mb-2">Nessuna foto disponibile</h3>
+      <h1 className="text-lg font-semibold text-gray-600 mb-2">Nessuna foto disponibile</h1>
       <p className="text-gray-500">Le foto di questa location verranno aggiunte presto</p>
     </div>
   );

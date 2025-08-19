@@ -17,11 +17,8 @@ export const GET_TOURS = gql`
       workshop
       priority
       locale
-      published_at
       image {
         id
-        created_at
-        updated_at
         name
         alternativeText
         caption
@@ -42,7 +39,6 @@ export const GET_TOURS = gql`
         name
         slug
         locale
-        published_at
       }
       states {
         id
@@ -50,7 +46,6 @@ export const GET_TOURS = gql`
         slug
         description
         locale
-        published_at
       }
       collections {
         id
@@ -59,12 +54,9 @@ export const GET_TOURS = gql`
         excerpt
         slug
         locale
-        published_at
       }
       sessions(sort: "start:asc") {
         id
-        created_at
-        updated_at
         start
         end
         status
@@ -77,7 +69,6 @@ export const GET_TOURS = gql`
         currency
         priceCompanion
         locale
-        published_at
         users {
           id
           username
@@ -102,53 +93,6 @@ export const GET_TOURS_COUNT = gql`
     toursConnection(locale: $locale) {
       aggregate {
         count
-      }
-    }
-  }
-`;
-
-// Query leggera per ottenere solo i tour highlights
-export const GET_TOURS_PREVIEW = gql`
-  query GetToursPreview($locale: String, $limit: Int = 6) {
-    tours(locale: $locale, limit: $limit, sort: "priority:desc") {
-      id
-      title
-      slug
-      excerpt
-      currency
-      image {
-        id
-        url
-        alternativeText
-      }
-      places {
-        id
-        name
-        slug
-      }
-      states {
-        id
-        name
-        slug
-      }
-      sessions(limit: 1, sort: "start:asc") {
-        id
-        start
-        end
-        price
-        maxPax
-        currency
-        users {
-          id
-          username
-          firstName
-          lastName
-          profilePicture {
-            id
-            url
-            alternativeText
-          }
-        }
       }
     }
   }

@@ -1,7 +1,5 @@
 "use client"
 
-'use client';
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Gift, Loader2 } from 'lucide-react';
@@ -45,7 +43,6 @@ const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPric
       toast({
         title: "Errore nel pagamento",
         description: "Si è verificato un errore durante la creazione del pagamento. Riprova.",
-        variant: "destructive",
       });
     } finally {
       setIsLoading(false);

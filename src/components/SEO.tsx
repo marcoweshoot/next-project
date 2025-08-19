@@ -1,8 +1,5 @@
-"use client"
-
-'use client';
-
-import React, { useEffect } from 'react';
+import Head from 'next/head';
+import React from 'react';
 
 interface SEOProps {
   title?: string;
@@ -30,83 +27,52 @@ const SEO: React.FC<SEOProps> = ({
   const siteTitle = "WeShoot.it";
   const fullTitle = title.includes(siteTitle) ? title : `${title} | ${siteTitle}`;
 
-  useEffect(() => {
-    // Update document title
-    document.title = fullTitle;
+  return (
+    <Head>
+      <title>{fullTitle}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="it-IT" />
 
-    // Create or update meta tags
-    const updateMetaTag = (name: string, content: string, property = false) => {
-      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
-      let meta = document.querySelector(selector) as HTMLMetaElement;
-      
-      if (!meta) {
-        meta = document.createElement('meta');
-        if (property) {
-          meta.setAttribute('property', name);
-        } else {
-          meta.setAttribute('name', name);
-        }
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    };
+      {/* Open Graph */}
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:site_name" content={siteTitle} />
+      <meta property="og:locale" content="it_IT" />
 
-    // Viewport meta tag for mobile optimization
-    updateMetaTag('viewport', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
+      {/* Article-specific */}
+      {type === "article" && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {type === "article" && modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {type === "article" && author && (
+        <meta property="article:author" content={author} />
+      )}
 
-    // Basic meta tags
-    updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords);
-    updateMetaTag('author', author);
-    updateMetaTag('robots', 'index, follow');
-    updateMetaTag('language', 'it-IT');
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@weshootit" />
 
-    // Open Graph tags
-    updateMetaTag('og:type', type, true);
-    updateMetaTag('og:title', fullTitle, true);
-    updateMetaTag('og:description', description, true);
-    updateMetaTag('og:image', image, true);
-    updateMetaTag('og:url', url, true);
-    updateMetaTag('og:site_name', siteTitle, true);
-    updateMetaTag('og:locale', 'it_IT', true);
-
-    // Article specific
-    if (type === "article" && publishedTime) {
-      updateMetaTag('article:published_time', publishedTime, true);
-    }
-    if (type === "article" && modifiedTime) {
-      updateMetaTag('article:modified_time', modifiedTime, true);
-    }
-    if (type === "article" && author) {
-      updateMetaTag('article:author', author, true);
-    }
-
-    // Twitter Card tags
-    updateMetaTag('twitter:card', 'summary_large_image');
-    updateMetaTag('twitter:title', fullTitle);
-    updateMetaTag('twitter:description', description);
-    updateMetaTag('twitter:image', image);
-    updateMetaTag('twitter:site', '@weshootit');
-
-    // Additional SEO tags
-    updateMetaTag('format-detection', 'telephone=no');
-    updateMetaTag('theme-color', '#ff6b35');
-    updateMetaTag('mobile-web-app-capable', 'yes');
-    updateMetaTag('apple-mobile-web-app-capable', 'yes');
-    updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
-
-    // Update canonical link
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', url);
-
-  }, [fullTitle, description, keywords, image, url, type, publishedTime, modifiedTime, author]);
-
-  return null; // This component doesn't render anything visible
+      {/* Altri tag */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="theme-color" content="#ff6b35" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <link rel="canonical" href={url} />
+    </Head>
+  );
 };
 
 export default SEO;

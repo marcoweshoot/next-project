@@ -1,5 +1,5 @@
-
 import React from 'react';
+import Image from 'next/image';
 import PageBreadcrumbs from '@/components/PageBreadcrumbs';
 
 interface StoryHeroProps {
@@ -15,17 +15,24 @@ interface StoryHeroProps {
 }
 
 const StoryHero: React.FC<StoryHeroProps> = ({ story, authorName, breadcrumbElements }) => {
+  const imageUrl = story.photo?.url || 'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//photo-1469474968028-56623f02e42e.avif';
+  const imageAlt = story.photo?.alternativeText?.trim() || `Fotografia della storia: ${story.name}`;
+
   return (
-    <section className="relative">
-      <div className="relative h-[70vh] overflow-hidden">
-        <img
-          src={story.photo?.url || 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'}
-          alt={story.photo?.alternativeText || story.name}
-          className="w-full h-full object-cover"
+    <section className="relative" aria-label={`Hero della storia ${story.name}`}>
+      <title>{`${story.name} – Storia di ${authorName} | WeShoot`}</title>
+
+      <div className="relative h-[70vh] min-h-[400px] overflow-hidden">
+        <Image
+          src={imageUrl}
+          alt={imageAlt}
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-        
-        {/* Title and Breadcrumbs */}
+
         <div className="absolute bottom-0 left-0 right-0 p-8">
           <div className="max-w-6xl mx-auto">
             <PageBreadcrumbs elements={breadcrumbElements} className="mb-4" />

@@ -17,7 +17,6 @@ export const SESSION_FRAGMENT = gql`
     currency
     priceCompanion
     locale
-    published_at
     users {
       ...UserFields
     }

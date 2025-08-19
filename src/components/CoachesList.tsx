@@ -1,36 +1,26 @@
+import Link from 'next/link'
+import { Skeleton } from '@/components/ui/skeleton'
+import CoachCard from './CoachCard'
 
-import Link from "next/link";
-import React from 'react';
-import { Skeleton } from '@/components/ui/skeleton';
-import CoachCard from './CoachCard';
-
-interface Coach {
-  id: string;
-  firstName: string;
-  lastName: string;
-  username: string;
-  bio?: string;
+export interface Coach {
+  id: string
+  firstName: string
+  lastName: string
+  username: string
   profilePicture?: {
-    localFile?: {
-      url: string;
-      alternativeText?: string;
-    };
-  };
-  instagram?: string;
+    id: string
+    url: string
+    alternativeText?: string
+  }
+  instagram?: string
 }
 
 interface CoachesListProps {
-  coaches: Coach[];
-  loading: boolean;
+  coaches: Coach[]
+  loading: boolean
 }
 
-const CoachesList: React.FC<{
-  children?: React.ReactNode;
-}> = ({
-  coaches,
-  loading,
-  children
-}) => {
+export default function CoachesList({ coaches, loading }: CoachesListProps) {
   if (loading) {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -42,7 +32,7 @@ const CoachesList: React.FC<{
           </div>
         ))}
       </div>
-    );
+    )
   }
 
   if (!coaches || coaches.length === 0) {
@@ -54,23 +44,21 @@ const CoachesList: React.FC<{
         <p className="text-gray-600 mb-8">
           I nostri coach saranno presto disponibili.
         </p>
-        <Link 
+        <Link
           href="/viaggi-fotografici/"
           className="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition-colors"
         >
           Scopri tutti i viaggi
         </Link>
       </div>
-    );
+    )
   }
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      {coaches.map((coach) => (
-        <CoachCard key={coach.id} coach={coach} />
+      {coaches.map((coach, index) => (
+        <CoachCard key={coach.id || `coach-${index}`} coach={coach} />
       ))}
     </div>
-  );
-};
-
-export default CoachesList;
+  )
+}

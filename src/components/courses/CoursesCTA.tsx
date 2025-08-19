@@ -1,35 +1,37 @@
-
+// components/courses/CoursesCTA.tsx
 import React from 'react';
+import Link from 'next/link';
 
-const CoursesCTA = () => {
+const CoursesCTA: React.FC = () => {
   return (
-    <section className="py-16 bg-primary text-white">
+    <section className="py-16 text-grey-900">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold mb-4">
           Pronto a Iniziare il Tuo Viaggio Fotografico?
         </h2>
-        <p className="text-xl mb-8 text-primary-foreground/90">
+        <p className="text-xl mb-8 text-gray-700">
           Unisciti a migliaia di fotografi che hanno trasformato la loro passione in professione
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
+          <a
             href="https://accademia.weshoot.it/wp-login"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Accedi all'Accademia
           </a>
-          <a 
+
+          <Link
             href="/viaggi-fotografici"
-            className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Scopri i Viaggi
-          </a>
+          </Link>
         </div>
       </div>
     </section>
   );
 };
 
-export default CoursesCTA;
+export default React.memo(CoursesCTA);

@@ -1,4 +1,4 @@
-
+// graphql/queries/tour-base.ts
 import { gql } from "@apollo/client";
 import { IMAGE_FRAGMENT } from "../fragments/image";
 import { SESSION_FRAGMENT } from "../fragments/session";
@@ -13,7 +13,6 @@ import {
   PACKAGE_FRAGMENT,
   COUPON_FRAGMENT,
   FAQ_FRAGMENT,
-  HIGHLIGHT_FRAGMENT
 } from "../fragments/basic-entities";
 
 export const TOUR_BASE_FIELDS = gql`
@@ -32,56 +31,39 @@ export const TOUR_BASE_FIELDS = gql`
     workshop
     priority
     locale
-    published_at
+
+
+    highlights {
+      id
+      title
+      description
+      locale
+      icon {
+           url
+           alternativeText
+      }
+    }
+
     things2know {
       id
       title
       description
       locale
-      published_at
-      icon {
-        ...ImageFields
-      }
+      icon { ...ImageFields }
     }
-    image {
-      ...ImageFields
-    }
-    places {
-      ...PlaceFields
-    }
-    states {
-      ...StateFields
-    }
-    locations {
-      ...LocationFields
-    }
-    reviews {
-      ...ReviewFields
-    }
-    pictures {
-      ...PictureFields
-    }
-    packages {
-      ...PackageFields
-    }
-    coupons {
-      ...CouponFields
-    }
-    faqs {
-      ...FAQFields
-    }
-    highlights {
-      ...HighlightFields
-    }
-    collections {
-      ...CollectionFields
-    }
-    sessions {
-      ...SessionFields
-    }
-    localizations {
-      ...TourLocalizationFields
-    }
+
+    image { ...ImageFields }
+    places { ...PlaceFields }
+    states { ...StateFields }
+    locations { ...LocationFields }
+    reviews { ...ReviewFields }
+    pictures { ...PictureFields }
+    packages { ...PackageFields }
+    coupons { ...CouponFields }
+    faqs { ...FAQFields }
+    collections { ...CollectionFields }
+    sessions { ...SessionFields }
+    localizations { ...TourLocalizationFields }
   }
   ${IMAGE_FRAGMENT}
   ${STATE_FRAGMENT}
@@ -92,7 +74,6 @@ export const TOUR_BASE_FIELDS = gql`
   ${PACKAGE_FRAGMENT}
   ${COUPON_FRAGMENT}
   ${FAQ_FRAGMENT}
-  ${HIGHLIGHT_FRAGMENT}
   ${COLLECTION_FRAGMENT}
   ${SESSION_FRAGMENT}
   ${TOUR_LOCALIZATION_FRAGMENT}

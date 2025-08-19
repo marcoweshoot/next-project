@@ -1,5 +1,6 @@
+'use client';
 
-import Link from "next/link";
+import Link from 'next/link';
 import React from 'react';
 import { Input } from '@/components/ui/input';
 import PageBreadcrumbs from '@/components/PageBreadcrumbs';
@@ -14,21 +15,18 @@ interface ToursHeroProps {
   };
 }
 
-const ToursHero: React.FC<{
-  children?: React.ReactNode;
-}> = ({
+const ToursHero: React.FC<ToursHeroProps> = ({
   searchTerm,
   onSearchChange,
   heroImage,
-  children
 }) => {
   const breadcrumbElements = [
     { name: 'WeShoot', path: '/' },
-    { name: 'Viaggi Fotografici' }
+    { name: 'Viaggi Fotografici' },
   ];
 
-  // Supabase Storage URL for the video
-  const videoUrl = "https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/videos/weshoot-viaggi-fotografici-destinazioni.mp4";
+  const videoUrl =
+    'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/videos/weshoot-viaggi-fotografici-destinazioni.mp4';
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -40,20 +38,10 @@ const ToursHero: React.FC<{
           muted
           loop
           playsInline
+          poster="https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//photo-1469474968028-56623f02e42e.avif"
           className="w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
         >
-          <source
-            src={videoUrl}
-            type="video/mp4"
-          />
-          {/* Fallback image if video doesn't load */}
-          <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: 'url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")'
-            }}
-          />
+          <source src={videoUrl} type="video/mp4" />
         </video>
       </div>
 
@@ -64,10 +52,10 @@ const ToursHero: React.FC<{
             Viaggi Fotografici
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 drop-shadow-md text-white">
-            Esplora il mondo attraverso l'obiettivo della tua fotocamera. 
+            Esplora il mondo attraverso l'obiettivo della tua fotocamera.
             Destinazioni mozzafiato, coach esperti e piccoli gruppi per un'esperienza unica.
           </p>
-          
+
           {/* Search Field */}
           <div className="max-w-lg mx-auto mb-8">
             <div className="relative">
@@ -81,25 +69,25 @@ const ToursHero: React.FC<{
               />
             </div>
           </div>
-          
+
           {/* Breadcrumbs */}
           <div className="flex justify-center mb-8">
             <PageBreadcrumbs elements={breadcrumbElements} />
           </div>
-          
+
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg py-3 px-4">
               <MapPin className="w-5 h-5" />
-              <span className="drop-shadow">Destinazioni Uniche</span>
+              <span className="drop-shadow text-white">Destinazioni Uniche</span>
             </div>
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg py-3 px-4">
               <Users className="w-5 h-5" />
-              <span className="drop-shadow">Piccoli Gruppi</span>
+              <span className="drop-shadow text-white">Piccoli Gruppi</span>
             </div>
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg py-3 px-4">
               <Star className="w-5 h-5" />
-              <span className="drop-shadow">Coach Esperti</span>
+              <span className="drop-shadow text-white">Coach Esperti</span>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-
+'use client';
 import React from 'react';
 import TourSummaryCard from './TourSummaryCard';
 import TourHighlights from './TourHighlights';

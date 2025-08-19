@@ -1,3 +1,4 @@
+'use client';
 
 import React from 'react';
 import { Camera, MapPin } from 'lucide-react';
@@ -25,68 +26,92 @@ interface DayLocation {
 
 interface TourDayStepsProps {
   steps: DayStep[];
-  onOpenLightbox: (pictures: Array<{id: string; title: string; url: string; alternativeText: string;}>, startIndex?: number) => void;
+  onOpenLightbox: (
+    pictures: Array<{ id: string; title: string; url: string; alternativeText: string }>,
+    startIndex?: number
+  ) => void;
+  /** livello base dell’intestazione per lo step (default: 3 => h3) */
+  baseLevel?: 2 | 3 | 4 | 5 | 6;
 }
 
-const TourDaySteps: React.FC<TourDayStepsProps> = ({ steps, onOpenLightbox }) => {
+const TourDaySteps: React.FC<TourDayStepsProps> = ({ steps, onOpenLightbox, baseLevel = 3 }) => {
   if (!steps || steps.length === 0) return null;
 
-  return (
-    <div className="space-y-8">
-      <div className="flex items-center space-x-2 mb-6">
-        <Camera className="w-6 h-6 text-primary" />
-        <h4 className="text-xl font-bold text-gray-900">Programma fotografico del giorno</h4>
-      </div>
-      
-      {steps.map((step, index) => (
-        <div key={step.id} className="relative">
-          {/* Timeline connector */}
-          {index < steps.length - 1 && (
-            <div className="absolute left-6 top-16 w-0.5 h-full bg-gradient-to-b from-primary/30 to-transparent"></div>
-          )}
-          
-          <div className="flex space-x-6">
-            {/* Timeline dot with map route icon - no background */}
-            <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
-              <img 
-                src="/lovable-uploads/4fe0578a-9abf-4dd3-82ec-b26dd8ca197d.png" 
-                alt="Route icon" 
-                className="w-8 h-8"
-              />
-            </div>
-            
-            <div className="flex-1 bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors duration-300">
-              <h5 className="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors duration-200">
-                {step.title}
-              </h5>
-              <div 
-                className="text-gray-700 leading-relaxed prose max-w-none mb-6"
-                dangerouslySetInnerHTML={{ __html: step.description }}
-              />
+  // heading dinamici: Step -> H, sottotitolo -> Hsub (H+1)
+  const H = (`h${baseLevel}` as keyof JSX.IntrinsicElements);
+  const Hsub = (`h${Math.min(6, baseLevel + 1)}` as keyof JSX.IntrinsicElements);
 
-              {step.locations && step.locations.length > 0 && (
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-2 mb-4">
-                    <MapPin className="w-5 h-5 text-primary" />
-                    <h6 className="font-bold text-gray-900">Location fotografiche</h6>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {step.locations.map((location) => (
-                      <TourDayLocation
-                        key={location.id}
-                        location={location}
-                        onOpenLightbox={onOpenLightbox}
-                      />
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+  return (
+    <section className="space-y-6">
+      {steps.map((step, index) => (
+        <article
+          key={step.id}
+          className="relative overflow-hidden rounded-2xl border border-zinc-200/70 bg-white shadow-[0_6px_22px_rgba(0,0,0,0.06)] p-6 md:p-8"
+          aria-labelledby={`step-title-${step.id}`}
+        >
+          {/* Accento sinistro decorativo */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 left-0 w-[3px] bg-gradient-to-b from-primary to-orange-400"
+          />
+
+          {/* Chip in testa alla card */}
+          <div className="mb-3">
+            {index === 0 ? (
+              <span className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-gray-900">
+                <Camera className="h-4 w-4" aria-hidden="true" />
+                Programma fotografico del giorno
+              </span>
+            ) : (
+              <span className="inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-xs font-semibold text-zinc-700 ring-1 ring-inset ring-zinc-200">
+                Step {index + 1}
+              </span>
+            )}
           </div>
-        </div>
+
+          {/* Titolo dello step: H3 di default */}
+          {React.createElement(
+            H,
+            { id: `step-title-${step.id}`, className: 'text-2xl font-semibold tracking-tight text-zinc-900' },
+            step.title
+          )}
+
+          {step.description && (
+            <div
+              className="prose prose-zinc max-w-none text-zinc-700 mt-3"
+              // Attenzione: se nel rich text ci sono <h1..h6> possono alterare l'ordine titoli
+              // Meglio limitarli in CMS o normalizzare lato codice.
+              dangerouslySetInnerHTML={{ __html: step.description }}
+            />
+          )}
+
+          {step.locations?.length ? (
+            <section className="mt-6" aria-labelledby={`loc-title-${step.id}`}>
+              <div className="mb-3 flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-primary" aria-hidden="true" />
+                {React.createElement(
+                  Hsub,
+                  { id: `loc-title-${step.id}`, className: 'text-base font-semibold text-zinc-900' },
+                  'Location fotografiche'
+                )}
+                <div className="ml-2 h-px flex-1 bg-zinc-200" aria-hidden="true" />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {step.locations.map((location) => (
+                  <TourDayLocation
+                    key={location.id}
+                    location={location}
+                    onOpenLightbox={onOpenLightbox}
+                    headingLevel={Math.min(6, baseLevel + 2) as 3 | 4 | 5 | 6} // es: step=h3 → loc=h5
+                  />
+                ))}
+              </div>
+            </section>
+          ) : null}
+        </article>
       ))}
-    </div>
+    </section>
   );
 };
 

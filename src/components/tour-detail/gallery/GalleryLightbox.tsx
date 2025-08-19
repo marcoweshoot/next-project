@@ -1,21 +1,18 @@
 'use client';
 
 import React from 'react';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import {
+  Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription
+} from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-
-interface GalleryImage {
-  id?: string;
-  url: string;
-  alternativeText?: string;
-  caption?: string;
-}
+// opzionale: puoi anche usare VisuallyHidden
+// import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
 interface GalleryLightboxProps {
   isOpen: boolean;
   onClose: () => void;
-  images: GalleryImage[];
+  images: Array<{ url: string; alternativeText?: string; caption?: string }>;
   currentIndex: number;
   onNext: () => void;
   onPrev: () => void;
@@ -29,16 +26,34 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
   currentIndex,
   onNext,
   onPrev,
-  onKeyDown
+  onKeyDown,
 }) => {
-  const currentImage = images[currentIndex];
+  const total = images.length;
+  const currentImage = images[currentIndex] || { url: '', alternativeText: '', caption: '' };
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent 
+    <Dialog
+      open={isOpen}
+      onOpenChange={(open) => { if (!open) onClose(); }} // chiudi solo quando viene richiesto
+    >
+      <DialogContent
         className="max-w-[95vw] max-h-[95vh] p-0 bg-black/95 border-none"
         onKeyDown={onKeyDown}
+        tabIndex={0}
+        autoFocus
+        aria-label="Galleria immagini a tutto schermo"
       >
+        {/* Titolo/descrizione richiesti da Radix (possono essere nascosti) */}
+        <DialogHeader className="sr-only">
+          <DialogTitle>Galleria immagini</DialogTitle>
+          <DialogDescription>Lightbox del tour. Usa frecce per navigare.</DialogDescription>
+        </DialogHeader>
+        {/* In alternativa:
+        <VisuallyHidden>
+          <DialogTitle>Galleria immagini</DialogTitle>
+        </VisuallyHidden>
+        */}
+
         <div className="relative w-full h-full flex items-center justify-center">
           {/* Close Button */}
           <Button
@@ -46,26 +61,29 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
             size="icon"
             className="absolute top-4 right-4 z-10 text-white hover:bg-white/20"
             onClick={onClose}
+            aria-label="Chiudi galleria"
           >
             <X className="w-6 h-6" />
           </Button>
 
           {/* Navigation Buttons */}
-          {images.length > 1 && (
+          {total > 1 && (
             <>
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
                 onClick={onPrev}
+                aria-label="Immagine precedente"
               >
                 <ChevronLeft className="w-8 h-8" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
                 onClick={onNext}
+                aria-label="Immagine successiva"
               >
                 <ChevronRight className="w-8 h-8" />
               </Button>
@@ -73,25 +91,25 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
           )}
 
           {/* Current Image */}
-          <div className="relative max-w-full max-h-full p-8">
+          <div className="relative max-w-full max-h-full p-8 flex items-center justify-center">
             <img
-              src={currentImage?.url}
-              alt={currentImage?.alternativeText || `Gallery image ${currentIndex + 1}`}
+              src={currentImage.url}
+              alt={currentImage.alternativeText || `Gallery image ${currentIndex + 1}`}
               className="max-w-full max-h-full object-contain"
             />
-            {currentImage?.caption && (
-              <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 text-center">
-                <p className="text-lg">{currentImage.caption}</p>
-              </div>
-            )}
-          </div>
 
-          {/* Image Counter */}
-          {images.length > 1 && (
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
-              {currentIndex + 1} / {images.length}
+            {/* Bottom bar */}
+            <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 flex justify-between items-center gap-4">
+              <p className="text-lg truncate max-w-[70%]" aria-label="Titolo immagine">
+                {currentImage.caption || ''}
+              </p>
+              {total > 1 && (
+                <div className="text-sm flex-shrink-0" aria-label="Contatore immagini">
+                  {currentIndex + 1} / {total}
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </DialogContent>
     </Dialog>

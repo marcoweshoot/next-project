@@ -1,9 +1,6 @@
-"use client"
-
 'use client';
 
-import React, { useState } from 'react';
-import { Eye } from 'lucide-react';
+import React, { useState, useMemo, useCallback } from 'react';
 import LocationGalleryLightbox from './LocationGalleryLightbox';
 import GalleryEmptyState from './gallery/GalleryEmptyState';
 import GalleryLayout from './gallery/GalleryLayout';
@@ -22,42 +19,37 @@ const LocationGallery: React.FC<LocationGalleryProps> = ({ pictures, locationTit
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-  console.log("🔍 LocationGallery - Received pictures:", pictures);
-  console.log("🔍 LocationGallery - Pictures is array?", Array.isArray(pictures));
-  
-  // Ensure pictures is always an array and filter out any invalid entries
-  const safePictures = Array.isArray(pictures) ? pictures.filter(picture => {
-    const isValid = picture && picture.url && picture.url.length > 0;
-    if (!isValid) {
-      console.log("🔍 LocationGallery - Filtering out invalid picture:", picture);
-    }
-    return isValid;
-  }) : [];
-  
-  console.log("🔍 LocationGallery - Safe pictures after filtering:", safePictures.length);
-  
+
+  // Sanitizza e memoizza le immagini valide
+  const safePictures = useMemo(() => {
+    return Array.isArray(pictures)
+      ? pictures.filter(
+          (p) => p && typeof p.url === 'string' && p.url.length > 0
+        )
+      : [];
+  }, [pictures]);
+
   if (safePictures.length === 0) {
     return <GalleryEmptyState />;
   }
 
-  const openLightbox = (index: number) => {
+  const openLightbox = useCallback((index: number) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
-  };
+  }, []);
 
-  const closeLightbox = () => {
+  const closeLightbox = useCallback(() => {
     setLightboxOpen(false);
     setCurrentImageIndex(0);
-  };
+  }, []);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCurrentImageIndex((prev) => (prev + 1) % safePictures.length);
-  };
+  }, [safePictures.length]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     setCurrentImageIndex((prev) => (prev - 1 + safePictures.length) % safePictures.length);
-  };
+  }, [safePictures.length]);
 
   return (
     <>
@@ -68,10 +60,9 @@ const LocationGallery: React.FC<LocationGalleryProps> = ({ pictures, locationTit
             Galleria di {locationTitle}
           </h3>
           <p className="text-gray-600">
-            {safePictures.length === 1 
-              ? '1 foto disponibile' 
-              : `${safePictures.length} foto disponibili`
-            }
+            {safePictures.length === 1
+              ? '1 foto disponibile'
+              : `${safePictures.length} foto disponibili`}
           </p>
         </div>
 
@@ -97,4 +88,29 @@ const LocationGallery: React.FC<LocationGalleryProps> = ({ pictures, locationTit
   );
 };
 
-export default LocationGallery;
+function arePropsEqual(prev: LocationGalleryProps, next: LocationGalleryProps) {
+  if (prev.locationTitle !== next.locationTitle) return false;
+
+  const a = Array.isArray(prev.pictures) ? prev.pictures : [];
+  const b = Array.isArray(next.pictures) ? next.pictures : [];
+  if (a === b) return true;
+  if (a.length !== b.length) return false;
+
+  for (let i = 0; i < a.length; i++) {
+    const p1 = a[i];
+    const p2 = b[i];
+    if (
+      p1.id !== p2.id ||
+      p1.title !== p2.title ||
+      p1.url !== p2.url ||
+      p1.alternativeText !== p2.alternativeText
+    ) {
+      return false;
+    }
+  }
+  return true;
+}
+
+LocationGallery.displayName = 'LocationGallery';
+
+export default React.memo(LocationGallery, arePropsEqual);

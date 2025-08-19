@@ -1,16 +1,8 @@
-
 import Link from "next/link";
-import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar, MapPin, Star } from 'lucide-react';
 
-const ToursQuickLinks: React.FC<{
-  children?: React.ReactNode;
-}> = (
-  {
-    children
-  }
-) => {
+export default function ToursQuickLinks() {
   return (
     <section className="py-8 border-b border-gray-200">
       <div className="container mx-auto px-4">
@@ -37,6 +29,4 @@ const ToursQuickLinks: React.FC<{
       </div>
     </section>
   );
-};
-
-export default ToursQuickLinks;
+}

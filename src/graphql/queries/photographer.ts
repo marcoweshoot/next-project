@@ -24,7 +24,6 @@ export const GET_PHOTOGRAPHER_BY_USERNAME = gql`
         id
         title
         type
-        published_at
         image {
           id
           url

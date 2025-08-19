@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { LucideIcon } from 'lucide-react';
 
@@ -41,13 +40,16 @@ const ContactCard: React.FC<ContactCardProps> = ({ section }) => {
       <div className="space-y-4">
         {contacts.map((contact, index) => {
           const Icon = contact.icon;
+          const isExternal = contact.href.startsWith('http');
+
           return (
             <a
               key={index}
               href={contact.href}
               className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 group"
-              target={contact.type === 'whatsapp' ? '_blank' : undefined}
-              rel={contact.type === 'whatsapp' ? 'noopener noreferrer' : undefined}
+              target={isExternal ? '_blank' : undefined}
+              rel={isExternal ? 'noopener noreferrer' : undefined}
+              aria-label={`${contact.label}: ${contact.value}`}
             >
               <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Icon className="w-5 h-5 text-primary" />

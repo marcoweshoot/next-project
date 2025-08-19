@@ -1,39 +1,26 @@
+import React from "react";
+import TourCard from "@/components/tour-card/TourCard";
+import type { Tour } from "@/types/tour";
 
-import React from 'react';
-import LastMinuteTourCard from './LastMinuteTourCard';
-
-interface LastMinuteTour {
-  id: string;
-  title: string;
-  slug: string;
-  image: string;
-  startDate: string;
-  duration: string;
-  price: number;
-  availableSpots: number;
-  states?: Array<{
-    id: string;
-    name: string;
-    slug: string;
-  }>;
-  places?: Array<{
-    id: string;
-    name: string;
-    slug: string;
-  }>;
+interface Props {
+  tours: Tour[];
 }
 
-interface LastMinuteToursGridProps {
-  tours: LastMinuteTour[];
-}
+const LastMinuteToursGrid: React.FC<Props> = ({ tours }) => {
+  if (!tours?.length) return null;
 
-const LastMinuteToursGrid: React.FC<LastMinuteToursGridProps> = ({ tours }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-      {tours.map((tour) => (
-        <LastMinuteTourCard key={tour.id} tour={tour} />
+    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {tours.map((tour, index) => (
+        <li
+          key={tour.id}
+          className="animate-fade-in"
+          style={{ animationDelay: `${index * 0.1}s` }}
+        >
+          <TourCard tour={tour} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

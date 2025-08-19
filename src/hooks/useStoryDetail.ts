@@ -76,7 +76,6 @@ const GET_STORIES_SIMPLE = gql`
           currency
           priceCompanion
           locale
-          published_at
           users {
             id
             username

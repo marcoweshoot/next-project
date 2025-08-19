@@ -1,5 +1,6 @@
-
 import React from 'react';
+import NextImage from 'next/image';
+import { getFullMediaUrl } from '@/utils/TourDataUtilis';
 import { Picture } from '@/types';
 
 interface CourseTeacherPhotosProps {
@@ -7,9 +8,28 @@ interface CourseTeacherPhotosProps {
 }
 
 const CourseTeacherPhotos: React.FC<CourseTeacherPhotosProps> = ({ pictures }) => {
-  if (!pictures || pictures.length === 0) {
-    return null;
-  }
+  if (!pictures || pictures.length === 0) return null;
+
+  // Prendiamo al massimo 6 foto
+  const gallery = pictures
+    .slice(0, 6)
+    .flatMap((picture) =>
+      // Su Strapi, picture.image è l'array delle immagini
+    (picture.image || []).map((img, idx) => {
+
+        if (!img?.url) return null;
+
+        const src = getFullMediaUrl(img.url);
+        const alt = img.alternativeText || picture.title || 'Foto del teacher';
+
+        return {
+          id: `${picture.id}-${idx}`,
+          src,
+          alt,
+        };
+      })
+    )
+    .filter((img): img is { id: string; src: string; alt: string } => Boolean(img));
 
   return (
     <section className="py-16 bg-white">
@@ -22,32 +42,23 @@ const CourseTeacherPhotos: React.FC<CourseTeacherPhotosProps> = ({ pictures }) =
             Nei miei corsi di fotografia ti insegnerò a fare fotografie come queste
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {pictures.slice(0, 6).map((picture) => {
-            // Get the first image from the array since image is an array
-            const imageData = picture.image?.[0];
-            
-            if (!imageData?.url) {
-              console.warn('CourseTeacherPhotos: Missing image data for picture:', picture.id);
-              return null;
-            }
-            
-            return (
-              <div key={picture.id} className="aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img
-                  src={imageData.url}
-                  alt={imageData.alternativeText || picture.title || 'Foto del teacher'}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  onLoad={() => console.log(`CourseTeacherPhotos: Image ${picture.id} loaded successfully`)}
-                  onError={(e) => {
-                    console.error(`CourseTeacherPhotos: Error loading image for picture ${picture.id}:`, e);
-                    console.error(`CourseTeacherPhotos: Failed URL:`, imageData.url);
-                  }}
-                />
-              </div>
-            );
-          })}
+          {gallery.map(({ id, src, alt }, index) => (
+            <div
+              key={id}
+              className="relative w-full aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <NextImage
+                src={src}
+                alt={alt}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="object-cover hover:scale-105 transition-transform duration-300"
+                {...(index < 2 ? { priority: true } : {})}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

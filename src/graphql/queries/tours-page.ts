@@ -8,7 +8,6 @@ export const GET_TOURS_PAGE = gql`
       title
       description
       locale
-      published_at
       cover {
         id
         url
@@ -16,7 +15,6 @@ export const GET_TOURS_PAGE = gql`
         caption
         width
         height
-        formats
       }
       SEO {
         id
@@ -33,7 +31,6 @@ export const GET_TOURS_PAGE = gql`
           alternativeText
           width
           height
-          formats
         }
       }
       faqs {
@@ -41,7 +38,6 @@ export const GET_TOURS_PAGE = gql`
         question
         answer
         locale
-        published_at
       }
     }
   }

@@ -1,3 +1,4 @@
+'use client';
 
 import React from 'react';
 import SessionCard from './SessionCard';
@@ -9,6 +10,8 @@ interface TourSessionsProps {
     title: string;
     slug: string;
     duration: number;
+    states: { slug: string }[];
+    places: { slug: string }[];
     sessions: Array<{
       id: string;
       start: string;
@@ -85,7 +88,7 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
         `${sessionCoaches[0].firstName} ${sessionCoaches[0].lastName || ''}`.trim() : 
         sessionCoaches[0].username,
       avatar: {
-        url: sessionCoaches[0].profilePicture?.url || coach.avatar?.url || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200',
+        url: sessionCoaches[0].profilePicture?.url || coach.avatar?.url || 'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Coach-WeShoot.avif',
         alt: sessionCoaches[0].firstName || sessionCoaches[0].username || coach.name
       }
     } : coach;

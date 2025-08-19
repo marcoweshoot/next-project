@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { DestinationDetailToursProps } from './types';
 import { filterToursByDestination } from './tourFilters';
@@ -10,16 +9,7 @@ const DestinationDetailTours: React.FC<DestinationDetailToursProps> = ({
   destination,
   loading
 }) => {
-  // Filter tours to show only those that belong to the current destination
   const filteredTours = filterToursByDestination(tours, destination);
-
-  console.log(`🔍 DestinationDetailTours - Destination slug: ${destination?.slug}`);
-  console.log(`🔍 DestinationDetailTours - All tours count: ${tours.length}`);
-  console.log(`🔍 DestinationDetailTours - Filtered tours count: ${filteredTours.length}`);
-  console.log(`🔍 DestinationDetailTours - Filtered tours:`, filteredTours.map(t => ({
-    title: t.title,
-    states: t.states
-  })));
 
   if (filteredTours.length === 0 && !loading) {
     return null;
@@ -36,7 +26,7 @@ const DestinationDetailTours: React.FC<DestinationDetailToursProps> = ({
             Partecipa ai nostri viaggi fotografici e scopri {destination?.name} insieme ai nostri coach esperti
           </p>
         </div>
-        
+
         {loading ? (
           <DestinationToursLoading />
         ) : (

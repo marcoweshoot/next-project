@@ -1,7 +1,6 @@
-
-import React from 'react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Instagram } from 'lucide-react';
+import Link from "next/link";
+import Image from "next/image";
+import { Instagram } from "lucide-react";
 
 interface PhotographerHeroProps {
   photographer: {
@@ -10,107 +9,84 @@ interface PhotographerHeroProps {
     bio?: string;
     username: string;
     instagram?: string;
-    profilePicture?: {
-      url: string;
-      alternativeText?: string;
-    };
-    cover?: {
-      url: string;
-      alternativeText?: string;
-    };
+    profilePicture?: { url: string; alternativeText?: string };
+    cover?: { url: string; alternativeText?: string };
   };
-  loading?: boolean;
 }
 
-const PhotographerHero: React.FC<PhotographerHeroProps> = ({ photographer, loading }) => {
-  // Helper function per gestire gli URL delle immagini
-  const getImageUrl = (url: string) => {
-    if (!url) return '';
-    if (url.startsWith('http://') || url.startsWith('https://')) {
-      return url;
-    }
-    return `https://api.weshoot.it${url}`;
-  };
+const abs = (u?: string) =>
+  u ? (u.startsWith("http") ? u : `https://api.weshoot.it${u}`) : undefined;
 
-  if (loading) {
-    return (
-      <div className="relative h-[70vh] bg-gray-900 flex items-center justify-center">
-        <div className="text-white text-center">
-          <div className="animate-pulse">
-            <div className="w-32 h-32 bg-gray-700 rounded-full mx-auto mb-6"></div>
-            <div className="h-8 bg-gray-700 rounded w-64 mx-auto mb-4"></div>
-            <div className="h-4 bg-gray-700 rounded w-96 mx-auto"></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+export default function PhotographerHero({ photographer }: PhotographerHeroProps) {
+  const backgroundImage =
+    abs(photographer.cover?.url) ||
+    "https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/photo-1469474968028-56623f02e42e.avif";
 
-  const backgroundImage = photographer.cover?.url 
-    ? getImageUrl(photographer.cover.url)
-    : 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';
-
-  const profilePictureUrl = photographer.profilePicture?.url 
-    ? getImageUrl(photographer.profilePicture.url)
-    : 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80';
+  const profilePictureUrl =
+    abs(photographer.profilePicture?.url) ||
+    "https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/Coach-WeShoot.avif";
 
   return (
     <div className="relative h-[70vh] overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
+      {/* LCP image */}
+      <div className="absolute inset-0">
+        <Image
+          src={backgroundImage}
+          alt={
+            photographer.cover?.alternativeText ??
+            `${photographer.firstName} ${photographer.lastName} cover`
+          }
+          fill
+          className="object-cover"
+          priority
+          fetchPriority="high"
+          sizes="(max-width:640px) 100vw, (max-width:1024px) 100vw, 1200px"
+        />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      {/* Content */}
+      {/* Foreground */}
       <div className="relative z-10 h-full flex items-center justify-center">
         <div className="text-center text-white px-4 max-w-4xl mx-auto">
-          {/* Profile Picture */}
-          <div className="mb-8">
-            <Avatar className="w-32 h-32 mx-auto border-4 border-white shadow-2xl">
-              <AvatarImage
-                src={profilePictureUrl}
-                alt={`${photographer.firstName} ${photographer.lastName}`}
-              />
-              <AvatarFallback className="bg-gray-300 text-gray-700 text-2xl font-bold">
-                {photographer.firstName.charAt(0)}{photographer.lastName.charAt(0)}
-              </AvatarFallback>
-            </Avatar>
-          </div>
-
-          {/* WeShoot Logo */}
-          <div className="mb-6 animate-fade-in">
-            <img 
-              src="/lovable-uploads/759cd14e-fb23-4e8f-ad1a-d8a690a28a83.png" 
-              alt="WeShoot" 
-              className="h-16 w-auto mx-auto"
+          {/* Avatar (server-friendly) */}
+          <div className="mb-8 mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+            <Image
+              src={profilePictureUrl}
+              alt={`${photographer.firstName} ${photographer.lastName}`}
+              width={128}
+              height={128}
+              sizes="128px"
+              className="h-full w-full object-cover"
             />
           </div>
 
-          {/* Name */}
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
+          {/* Nome */}
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {photographer.firstName} {photographer.lastName}
           </h2>
 
           {/* Bio */}
           {photographer.bio && (
-            <div 
-              className="text-xl md:text-2xl font-light leading-relaxed mb-8 animate-fade-in max-w-3xl mx-auto"
+            <div
+              className="text-xl md:text-2xl font-light leading-relaxed mb-8 max-w-3xl mx-auto"
               dangerouslySetInnerHTML={{ __html: photographer.bio }}
             />
           )}
 
-          {/* Instagram Link */}
+          {/* Instagram */}
           {photographer.instagram && (
-            <div className="animate-fade-in mb-8">
+            <div className="mb-8">
               <a
-                href={`https://instagram.com/${photographer.instagram}`}
+                href={
+                  photographer.instagram.startsWith("http")
+                    ? photographer.instagram
+                    : `https://instagram.com/${photographer.instagram}`
+                }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110"
-                title={`Segui @${photographer.instagram} su Instagram`}
+                aria-label={`Segui ${photographer.instagram} su Instagram`}
+                className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-red-500 transition-all duration-300 hover:scale-110"
+                title={`Segui @${photographer.instagram}`}
               >
                 <Instagram className="w-6 h-6" />
               </a>
@@ -118,17 +94,27 @@ const PhotographerHero: React.FC<PhotographerHeroProps> = ({ photographer, loadi
           )}
 
           {/* Breadcrumbs */}
-          <div className="mt-12 text-sm text-gray-300">
-            <span>WeShoot</span>
-            <span className="mx-2">/</span>
-            <span>Fotografi</span>
-            <span className="mx-2">/</span>
-            <span className="text-white">{photographer.firstName} {photographer.lastName}</span>
-          </div>
+          <nav className="mt-12 text-sm text-gray-300">
+            <ul className="inline-flex items-center space-x-2">
+              <li>
+                <Link href="/" className="hover:underline">
+                  WeShoot
+                </Link>
+              </li>
+              <li>/</li>
+              <li>
+                <Link href="/fotografi" className="hover:underline">
+                  Fotografi
+                </Link>
+              </li>
+              <li>/</li>
+              <li className="text-white">
+                {photographer.firstName} {photographer.lastName}
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
   );
-};
-
-export default PhotographerHero;
+}

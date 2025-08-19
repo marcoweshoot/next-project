@@ -1,29 +1,24 @@
+import { gql } from '@apollo/client';
 
-import { gql } from "@apollo/client";
-
-export const GET_STORY_DETAIL = gql`
-  query GetStoryDetail($id: ID!) {
-    story(id: $id) {
+export const GET_STORY_DETAIL_BY_SLUG = gql`
+  query GetStoryDetailBySlug($slug: String!, $locale: String!) {
+    stories(where: { slug: { eq: $slug } }, locale: $locale, limit: 1) {
       id
       name
       slug
       description
       locale
-      published_at
       seo {
-        id
         metaTitle
         metaDescription
         structuredData
       }
       photographer {
-        id
         instagram
         bio
         firstName
         lastName
         profilePicture {
-          id
           url
           alternativeText
           caption
@@ -41,7 +36,6 @@ export const GET_STORY_DETAIL = gql`
         experience_level
         currency
         image {
-          id
           url
           alternativeText
           caption
@@ -49,30 +43,53 @@ export const GET_STORY_DETAIL = gql`
           height
         }
         places {
-          id
           name
           slug
         }
         states {
-          id
           name
           slug
           description
         }
         SEO {
-          id
           metaTitle
           metaDescription
         }
+        sessions {
+          id
+          start
+          end
+          price
+          maxPax
+          status
+          users {
+            id
+            username
+            firstName
+            lastName
+            profilePicture {
+              id
+              url
+              alternativeText
+            }
+          }
+        }
       }
       photo {
-        id
         url
         alternativeText
         caption
         width
         height
       }
+    }
+  }
+`;
+
+export const GET_STORY_SLUGS = gql`
+  query GetStorySlugs($locale: String!) {
+    stories(locale: $locale) {
+      slug
     }
   }
 `;

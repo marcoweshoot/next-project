@@ -20,7 +20,7 @@ const TwoPhotosLayout: React.FC<TwoPhotosLayoutProps> = ({
   setHoveredIndex,
   openLightbox
 }) => {
-  const fallbackImage = 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+  const fallbackImage = 'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Viaggi%20Fotografici.avif';
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

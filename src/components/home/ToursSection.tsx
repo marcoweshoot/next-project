@@ -1,98 +1,32 @@
-"use client"
-
-'use client';
-
-import React, { useState } from 'react';
-import ToursSectionHeader from './tours/ToursSectionHeader';
-import ToursGrid from './tours/ToursGrid';
-import ToursSectionFooter from './tours/ToursSectionFooter';
-import { transformGraphQLTours, filterTours } from './tours/TourDataTransformer';
-import { useOptimizedTours } from '@/hooks/useOptimizedTours';
-import { Tour } from '@/types';
+import React from "react";
+import ToursServerContent from "./tours/ToursServerContent";
+import { Tour } from "@/types";
 
 interface HomePageTours {
   id: string;
   title: string;
   subtitle: string;
-  tours: Array<{
-    id: string;
-    title: string;
-    slug: string;
-    description?: string;
-    excerpt?: string;
-    difficulty?: string;
-    currency?: string;
-    image?: {
-      url: string;
-      alternativeText?: string;
-    };
-    places?: Array<{
-      id: string;
-      name: string;
-      slug: string;
-    }>;
-    states?: Array<{
-      id: string;
-      name: string;
-      slug: string;
-    }>;
-    sessions?: Array<{
-      id: string;
-      start: string;
-      end: string;
-      price: number;
-      maxPax: number;
-      users?: Array<{
-        id: string;
-        username: string;
-        firstName?: string;
-        lastName?: string;
-        profilePicture?: {
-          url: string;
-        };
-      }>;
-    }>;
-  }>;
+  tours: Tour[]; // <-- già trasformati!
 }
 
 interface ToursSectionProps {
-  homePageTours?: HomePageTours;
-  loading?: boolean;
+  homePageTours: HomePageTours;
 }
 
-const ToursSection: React.FC<ToursSectionProps> = ({ homePageTours, loading: externalLoading = false }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  
-  // Use optimized hook if no external data provided
-  const { tours: optimizedTours, loading: optimizedLoading } = useOptimizedTours(6, true);
-  
-  const isLoading = externalLoading || optimizedLoading;
-  
-  // Transform GraphQL tours to Tour format
-  const transformedTours: Tour[] = homePageTours?.tours ? 
-    transformGraphQLTours(homePageTours.tours) : 
-    optimizedTours;
-
-  // Filter tours based on search term
-  const filteredTours: Tour[] = filterTours(transformedTours, searchTerm);
+const ToursSection: React.FC<ToursSectionProps> = ({ homePageTours }) => {
+  const transformedTours: Tour[] = homePageTours?.tours || [];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section
+      className="py-16 bg-gray-50 dark:bg-background transition-colors"
+      aria-label="Viaggi fotografici in evidenza"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ToursSectionHeader 
-          title={homePageTours?.title}
-          subtitle={homePageTours?.subtitle}
-          searchTerm={searchTerm}
-          onSearchChange={setSearchTerm}
+        <ToursServerContent
+          title={homePageTours?.title || "Viaggi in evidenza"}
+          subtitle={homePageTours?.subtitle || "Le prossime partenze da non perdere"}
+          tours={transformedTours}
         />
-
-        <ToursGrid 
-          tours={filteredTours.slice(0, 6)}
-          loading={isLoading}
-          searchTerm={searchTerm}
-        />
-
-        <ToursSectionFooter />
       </div>
     </section>
   );

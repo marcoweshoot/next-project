@@ -7,7 +7,6 @@ export const GET_HOMEPAGE = gql`
       id
       title
       locale
-      published_at
       Tours {
         id
         title
@@ -85,7 +84,6 @@ export const GET_HOMEPAGE = gql`
       localizations {
         id
         locale
-        published_at
       }
     }
   }

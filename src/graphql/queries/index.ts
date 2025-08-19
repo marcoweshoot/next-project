@@ -1,8 +1,7 @@
 // Re-export all tour queries from their respective files
-export { GET_TOURS, GET_TOURS_PREVIEW } from './tours-list';
+export { GET_TOURS, } from './tours-list';
 export { GET_TOUR_BY_SLUG } from './tour-detail';
 export { GET_TOUR_SESSIONS, GET_FUTURE_SESSIONS } from './tours-sessions';
-export { GET_LOCATION_BY_SLUG } from './location-detail';
 
 // Export tour fragments
 export { TOUR_BASE_FIELDS } from './tour-base';
@@ -17,7 +16,7 @@ export { GET_PHOTOGRAPHER_BY_USERNAME, GET_PHOTOGRAPHER_TOURS } from './photogra
 export { GET_PRIVACY_POLICY } from './privacy';
 export { GET_REVIEWS } from './reviews';
 export { GET_STORIES } from './stories';
-export { GET_STORY_DETAIL } from './story-detail';
+export { GET_STORY_DETAIL_BY_SLUG } from './story-detail';
 export { GET_TERMS_CONDITIONS } from './terms';
 export { GET_COURSES } from './courses';
 export { GET_COURSES_PAGE } from './courses-page';
@@ -42,6 +41,3 @@ export { GET_TOURS_PAGE } from './tours-page';
 
 // Export sessions query
 export { GET_SESSIONS, GET_FUTURE_SESSIONS_DIRECT } from './sessions';
-
-// Export optimized location detail query
-export { GET_LOCATION_DETAIL_OPTIMIZED } from './location-detail-optimized';

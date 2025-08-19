@@ -9,11 +9,8 @@ interface FeaturedToursProps {
   tours: Tour[];
 }
 
-const FeaturedTours: React.FC<{
-  children?: React.ReactNode;
-}> = ({
-  tours,
-  children
+const FeaturedTours: React.FC<FeaturedToursProps> = ({
+  tours
 }) => {
   return (
     <section className="py-16 bg-gray-50">
@@ -29,20 +26,20 @@ const FeaturedTours: React.FC<{
         </div>
 
         {/* Tours Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {tours.slice(0, 6).map((tour, index) => (
-            <div 
+            <li 
               key={tour.id} 
               className="animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <TourCard tour={tour} />
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* View All Button */}
-        <div className="text-center">
+        <div className="text-center bg-red-600">
           <Button size="lg" asChild>
             <Link href="/viaggi-fotografici">
               Vedi Tutti i Viaggi

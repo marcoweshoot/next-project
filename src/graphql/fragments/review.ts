@@ -12,7 +12,6 @@ export const REVIEW_FRAGMENT = gql`
     ratingCordiality
     ratingProfessionality
     ratingKnowledge
-    published_at
     created_at
     user {
       firstName

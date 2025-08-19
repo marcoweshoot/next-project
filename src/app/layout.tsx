@@ -1,35 +1,33 @@
-import { ThemeProvider } from "@/components/providers/theme-provider";
+// app/layout.tsx
+import type { Metadata } from 'next';
 import './globals.css';
-import { ToastProvider } from "@/components/ui/toast-provider";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import ApolloClientProvider from "@/components/providers/apollo-provider-client"; // nuovo import
+import { Montserrat } from 'next/font/google';
+import ClientProviders from '@/components/providers/ClientProviders';
 
-export const metadata = {
-  title: 'vite_react_shadcn_ts',
-  description: 'Next.js App',
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  preload: true,
+});
+
+export const metadata: Metadata = {
+  title: 'viaggi fotografici nel mondo e workshop',
+  description: 'itinerari pensati per fotografi, coach professionisti e esperienze immersive.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <ApolloClientProvider>
-          <ToastProvider>
-            <TooltipProvider>
-              <Toaster />
-              <Sonner />
-              {children}
-            </TooltipProvider>
-          </ToastProvider>
-        </ApolloClientProvider>
-              </ThemeProvider>
+    <html
+      lang="it"
+      className={montserrat.variable}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* aiuta a prevenire flicker tra light/dark */}
+        <meta name="color-scheme" content="light dark" />
+      </head>
+      <body className="font-sans antialiased">
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-
+// Tipo principale per un Tour
 export interface Tour {
   id: string;
   title: string;
@@ -44,11 +44,13 @@ export interface Tour {
   }>;
 }
 
+// Tipo minimo per una destinazione
 export interface Destination {
   name: string;
   slug: string;
 }
 
+// Props per il componente DestinationDetailTours
 export interface DestinationDetailToursProps {
   tours: Tour[];
   destination?: Destination;

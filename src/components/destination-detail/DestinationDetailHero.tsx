@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PageHeader from '@/components/PageHeader';
 import PageBreadcrumbs from '@/components/PageBreadcrumbs';
@@ -8,8 +7,8 @@ interface DestinationDetailHeroProps {
   destination?: {
     name: string;
     slug: string;
-    description?: string;
-    image?: {
+    description: string;
+    image: {
       url: string;
     };
   };
@@ -31,15 +30,15 @@ const DestinationDetailHero: React.FC<DestinationDetailHeroProps> = ({
 
   return (
     <PageHeader 
-      backgroundImage={destination?.image?.url || "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"}
+      backgroundImage={destination?.image?.url || "https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//photo-1469474968028-56623f02e42e.avif"}
       size="medium"
       className="pt-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {loading ? (
-          <div className="animate-pulse">
-            <div className="h-12 bg-white/20 rounded w-64 mx-auto mb-6"></div>
-            <div className="h-6 bg-white/20 rounded w-96 mx-auto"></div>
+          <div className="flex flex-col items-center gap-4">
+            <Skeleton className="h-12 w-64 mb-2" />
+            <Skeleton className="h-6 w-96" />
           </div>
         ) : (
           <>

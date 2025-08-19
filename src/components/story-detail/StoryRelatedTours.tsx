@@ -1,8 +1,11 @@
-
 import React from 'react';
 import TourCard from '@/components/TourCard';
 import { Tour as TourCardTour } from '@/types';
-import { getFutureSessions, getLatestSession } from '@/components/tour-card/tourCardUtils';
+import {
+  getFutureSessions,
+  getLatestSession,
+  getDestinationFromTour
+} from '@/utils/TourDataUtilis';
 
 interface StoryRelatedToursProps {
   tours: any[];
@@ -25,7 +28,6 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
     console.log('StoryRelatedTours - Future sessions:', futureSessions);
     console.log('StoryRelatedTours - Latest session:', latestSession);
     
-    // Use future session if available, otherwise use latest session
     const displaySession = futureSessions.length > 0 ? futureSessions[0] : latestSession;
     
     console.log('StoryRelatedTours - Display session:', displaySession);
@@ -34,9 +36,7 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
     const registeredUsers = displaySession?.users?.length || 0;
     const availableSpots = Math.max(0, maxPax - registeredUsers);
 
-    // Calculate tour status based on session data
     let tourStatus = displaySession?.status;
-    
     if (!tourStatus && displaySession) {
       if (availableSpots <= 0) {
         tourStatus = 'soldOut';
@@ -49,7 +49,6 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
       tourStatus = 'coming_soon';
     }
 
-    // Map difficulty to allowed values
     const mapDifficulty = (difficulty?: string): 'easy' | 'medium' | 'hard' => {
       if (!difficulty) return 'medium';
       const lowerDifficulty = difficulty.toLowerCase();
@@ -58,10 +57,9 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
       return 'medium';
     };
 
-    // Extract coach from session users (first user is typically the coach)
     const getCoachFromSession = (session: any) => {
       if (session?.users && session.users.length > 0) {
-        const coach = session.users[0]; // Take the first user as coach
+        const coach = session.users[0];
         console.log('StoryRelatedTours - Coach from session:', coach);
         return {
           id: coach.id,
@@ -79,7 +77,6 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
     const sessionCoach = getCoachFromSession(displaySession);
     console.log('StoryRelatedTours - Session coach:', sessionCoach);
 
-    // Transform sessions to match TourSession interface
     const transformedSessions = (tour.sessions || []).map((session: any) => ({
       id: session.id,
       start: session.start,
@@ -99,24 +96,6 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
         } : undefined
       })) || []
     }));
-
-    // Handle states and places
-    const getStateInfo = () => {
-      if (Array.isArray(tour.states)) {
-        return tour.states[0];
-      }
-      return tour.states;
-    };
-
-    const getPlaceInfo = () => {
-      if (Array.isArray(tour.places)) {
-        return tour.places[0];
-      }
-      return tour.places;
-    };
-
-    const stateInfo = getStateInfo();
-    const placeInfo = getPlaceInfo();
 
     const transformedTour = {
       id: tour.id,
@@ -141,16 +120,11 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
         name: 'Coach WeShoot',
         slug: 'coach-weshoot',
         avatar: {
-          url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
+          url: 'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Coach-WeShoot.avif',
           alt: 'Coach WeShoot'
         }
       },
-      destination: {
-        id: stateInfo?.id || '1',
-        name: placeInfo?.name || stateInfo?.name || 'Destinazione',
-        slug: placeInfo?.slug || stateInfo?.slug || 'destinazione',
-        country: stateInfo?.name || 'Paese'
-      },
+      destination: getDestinationFromTour(tour),
       sessions: transformedSessions,
       states: Array.isArray(tour.states) ? tour.states : tour.states ? [tour.states] : [],
       places: Array.isArray(tour.places) ? tour.places : tour.places ? [tour.places] : []
@@ -173,17 +147,14 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {tours.map((tour) => {
+          {tours.map((tour, index) => {
             console.log('StoryRelatedTours - Processing tour for render:', tour);
-            
-            // Transform the tour data using our custom transformer
             const transformedTour = transformStoryTourData(tour);
-            
             console.log('StoryRelatedTours - Transformed tour for render:', transformedTour);
 
             return (
               <TourCard 
-                key={tour.id} 
+                key={tour.id || `tour-${index}`} 
                 tour={transformedTour}
               />
             );

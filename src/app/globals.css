@@ -1,13 +1,6 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
 @layer base {
   :root {
@@ -18,7 +11,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
     --primary: 7 75% 58%;
-    --primary-foreground: 0 0% 100%; /* bianco per contrasto */
+    --primary-foreground: 0 0% 100%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
@@ -54,98 +47,29 @@
     --input: 240 3.7% 15.9%;
     --ring: 346.8 77.2% 49.8%;
   }
+
+  *,::before,::after { border-color: hsl(var(--border)); }
+  body { @apply bg-background text-foreground font-sans antialiased; }
 }
 
-/* Custom animations for homepage */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+
+
+@layer utilities {
+  /* WCAG min 44x44; su dispositivi touch saliamo a 48x48 come Lighthouse */
+  .touch-target { min-width: 44px; min-height: 44px; }
+  @media (pointer: coarse) {
+    .touch-target { min-width: 48px; min-height: 48px; }
   }
-  to {
-    opacity: 1;
-  }
-}
 
-@keyframes slideIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+  /* espande l'area clic senza cambiare il layout (padding positivo + margin negativo) */
+  .touch-pad { padding: .5rem .625rem; margin: -.5rem -.625rem; }
 
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  70% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
+  /* link che copre tutta la card (evita micro-link multipli) */
+  .stretched-link { position: absolute; inset: 0; }
 
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-in-out forwards;
-}
+  /* per sezioni lunghe fuori viewport */
+  .cvis { content-visibility: auto; contain-intrinsic-size: 1000px; }
 
-.animate-slide-in {
-  animation: slideIn 0.5s ease-in-out forwards;
-}
-
-.animate-bounce-in {
-  animation: bounceIn 0.5s ease-in-out forwards;
-}
-
-/* Text gradient for hero title */
-.text-gradient {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Home page list styling for academy section */
-.list_order {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 2rem;
-}
-
-.list_order li {
-  position: relative;
-  padding-left: 3rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-}
-
-.list_order li span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2rem;
-  height: 2rem;
-  background-color: #FC4D33;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+  /* elimina il lampeggio blu su iOS/Android */
+  .tap-highlight-none { -webkit-tap-highlight-color: transparent; }
 }

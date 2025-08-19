@@ -8,7 +8,6 @@ export const STATE_FRAGMENT = gql`
     slug
     description
     locale
-    published_at
   }
 `;
 
@@ -18,7 +17,6 @@ export const PLACE_FRAGMENT = gql`
     name
     slug
     locale
-    published_at
   }
 `;
 
@@ -30,7 +28,6 @@ export const COLLECTION_FRAGMENT = gql`
     excerpt
     slug
     locale
-    published_at
   }
 `;
 
@@ -43,7 +40,6 @@ export const PACKAGE_FRAGMENT = gql`
     price
     type
     locale
-    published_at
   }
 `;
 
@@ -56,7 +52,6 @@ export const COUPON_FRAGMENT = gql`
     available
     expireDate
     active
-    published_at
   }
 `;
 
@@ -66,7 +61,6 @@ export const FAQ_FRAGMENT = gql`
     question
     answer
     locale
-    published_at
   }
 `;
 
@@ -76,7 +70,6 @@ export const DAY_FRAGMENT = gql`
     number
     title
     locale
-    published_at
   }
 `;
 
@@ -86,6 +79,9 @@ export const HIGHLIGHT_FRAGMENT = gql`
     title
     description
     locale
-    published_at
+    icon {
+      url
+      alternativeText
+    }
   }
 `;

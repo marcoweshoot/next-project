@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Accordion,
@@ -18,7 +17,7 @@ interface ToursFAQProps {
 }
 
 const ToursFAQ: React.FC<ToursFAQProps> = ({ faqs }) => {
-  if (!faqs || faqs.length === 0) {
+  if (!faqs?.length) {
     return null;
   }
 
@@ -29,11 +28,11 @@ const ToursFAQ: React.FC<ToursFAQProps> = ({ faqs }) => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Domande Frequenti sui Viaggi Fotografici
           </h2>
-          
+
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq) => (
-              <AccordionItem 
-                key={faq.id} 
+              <AccordionItem
+                key={faq.id}
                 value={faq.id}
                 className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
               >
@@ -43,7 +42,8 @@ const ToursFAQ: React.FC<ToursFAQProps> = ({ faqs }) => {
                   </h3>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4">
-                  <div 
+                  {/* Assumiamo che `faq.answer` sia HTML sicuro generato lato CMS */}
+                  <div
                     className="text-gray-700 leading-relaxed prose max-w-none"
                     dangerouslySetInnerHTML={{ __html: faq.answer }}
                   />

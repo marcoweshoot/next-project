@@ -17,6 +17,5 @@ export const TOUR_LOCALIZATION_FRAGMENT = gql`
     workshop
     priority
     locale
-    published_at
   }
 `;

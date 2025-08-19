@@ -1,6 +1,4 @@
-
 import Link from "next/link";
-import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -10,14 +8,11 @@ interface DestinationDetailErrorProps {
   currentPath?: string;
 }
 
-const DestinationDetailError: React.FC<{
-  children?: React.ReactNode;
-}> = ({
+export default function DestinationDetailError({
   type,
   destinationSlug,
-  currentPath,
-  children
-}) => {
+  currentPath
+}: DestinationDetailErrorProps) {
   const getErrorContent = () => {
     switch (type) {
       case 'missingParam':
@@ -76,6 +71,4 @@ const DestinationDetailError: React.FC<{
       <Footer />
     </div>
   );
-};
-
-export default DestinationDetailError;
+}

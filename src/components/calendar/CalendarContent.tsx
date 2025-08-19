@@ -1,8 +1,9 @@
 "use client";
+
 import React from 'react';
 import CalendarHero from './CalendarHero';
 import CalendarEmptyState from './CalendarEmptyState';
-import CalendarMonth from './CalendarMonth';
+import CalendarMonthPreview from './CalendarMonthPreview';
 
 interface GroupedSessions {
   [key: string]: {
@@ -30,7 +31,7 @@ const CalendarContent: React.FC<CalendarContentProps> = ({
           {Object.keys(groupedSessions).length > 0 ? (
             <div className="space-y-8">
               {Object.entries(groupedSessions).map(([key, monthData]) => (
-                <CalendarMonth 
+                <CalendarMonthPreview 
                   key={key}
                   monthKey={key}
                   monthData={monthData}

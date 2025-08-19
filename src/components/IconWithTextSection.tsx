@@ -1,36 +1,37 @@
+import React from "react";
 
-import React from 'react';
-import { LucideIcon } from 'lucide-react';
-
-interface IconColumn {
-  icon: LucideIcon;
+interface ColumnItem {
+  icon: React.ElementType;
   title: string;
   subtitle: string;
 }
 
-interface IconWithTextSectionProps {
-  columns: IconColumn[];
+interface Props {
+  columns: ColumnItem[];
 }
 
-const IconWithTextSection: React.FC<IconWithTextSectionProps> = ({ columns }) => {
+const IconWithTextSection: React.FC<Props> = ({ columns }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {columns.map((column, index) => {
-        const IconComponent = column.icon;
-        return (
-          <div key={index} className="text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <IconComponent className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold mb-3 text-gray-900">
-              {column.title}
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              {column.subtitle}
-            </p>
+    <div
+      role="list"
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+    >
+      {columns.map(({ icon: Icon, title, subtitle }, index) => (
+        <div
+          key={index}
+          role="listitem"
+          className="text-center flex flex-col items-center px-4"
+        >
+          <div
+            className="mb-4 rounded-full bg-red-100 p-4"
+            aria-hidden="true"
+          >
+            <Icon className="w-8 h-8 text-red-500" />
           </div>
-        );
-      })}
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+          <p className="text-base text-gray-600">{subtitle}</p>
+        </div>
+      ))}
     </div>
   );
 };

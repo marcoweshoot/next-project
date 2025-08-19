@@ -1,106 +1,141 @@
-"use client"
-
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-
-interface Picture {
-  id: string;
-  title: string;
-  image: Array<{
-    id: string;
-    url: string;
-    alternativeText?: string;
-    caption?: string;
-  }>;
-}
+import { ChevronLeft, ChevronRight, X, Play, Pause } from 'lucide-react';
 
 interface GalleryLightboxProps {
   isOpen: boolean;
+  /** chiamato da Radix sia per aprire che per chiudere */
+  onOpenChange: (open: boolean) => void;
+  /** chiamato solo dal pulsante “X” */
   onClose: () => void;
-  pictures: Array<{ node: Picture }>;
+  pictures: {
+    id: string;
+    title?: string;
+    url: string;
+    alt?: string;
+  }[][];
+  startIndex: number;
 }
 
 const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
   isOpen,
+  onOpenChange,
   onClose,
-  pictures
+  pictures,
+  startIndex,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(startIndex);
+  const [autoplay, setAutoplay] = useState(false);
 
-  // Trasforma le foto in formato utilizzabile
-  const allImages = pictures
-    .map(picture => {
-      const firstImage = picture.node.image && picture.node.image.length > 0 ? picture.node.image[0] : null;
-      return firstImage ? {
-        id: picture.node.id,
-        title: picture.node.title,
-        url: firstImage.url,
-        alt: firstImage.alternativeText || picture.node.title
-      } : null;
-    })
-    .filter(Boolean);
+  // Flatten and map images
+  const allImages = useMemo(() => {
+    return pictures
+      .flatMap((picture) =>
+        picture.map((img) => ({
+          id: img.id,
+          title: img.title,
+          url: img.url,
+          alt: img.alt,
+        }))
+      );
+  }, [pictures]);
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % allImages.length);
-  };
+  const total = allImages.length;
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + allImages.length) % allImages.length);
-  };
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % total);
+  }, [total]);
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'ArrowRight') handleNext();
-    if (e.key === 'ArrowLeft') handlePrev();
-    if (e.key === 'Escape') onClose();
-  };
+  const handlePrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + total) % total);
+  }, [total]);
+
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === 'ArrowRight') handleNext();
+      if (e.key === 'ArrowLeft') handlePrev();
+      if (e.key === 'Escape') onClose();
+    },
+    [handleNext, handlePrev, onClose]
+  );
 
   useEffect(() => {
     if (isOpen) {
-      setCurrentIndex(0);
+      setCurrentIndex(startIndex);
     }
-  }, [isOpen]);
+  }, [isOpen, startIndex]);
 
-  if (!allImages.length) return null;
+  useEffect(() => {
+    if (!autoplay || !isOpen) return;
+    const interval = setInterval(handleNext, 4000);
+    return () => clearInterval(interval);
+  }, [autoplay, handleNext, isOpen]);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext,
+    onSwipedRight: handlePrev,
+    trackMouse: true,
+  });
+
+  if (!total) return null;
 
   const currentImage = allImages[currentIndex];
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent 
+    <Dialog open={isOpen} onOpenChange={onOpenChange}>
+      <DialogContent
         className="max-w-[95vw] max-h-[95vh] p-0 bg-black/95 border-none"
         onKeyDown={handleKeyDown}
+        tabIndex={0}
+        autoFocus
+        role="dialog"
+        aria-label="Galleria immagini a tutto schermo"
       >
         <div className="relative w-full h-full flex items-center justify-center">
-          {/* Close Button */}
+          {/* Close button */}
           <Button
             variant="ghost"
             size="icon"
-            className="absolute top-4 right-4 z-10 text-white hover:bg-white/20"
             onClick={onClose}
+            className="absolute top-4 right-4 z-10 text-white hover:bg-white/20"
+            aria-label="Chiudi galleria"
           >
             <X className="w-6 h-6" />
           </Button>
 
-          {/* Navigation Buttons */}
-          {allImages.length > 1 && (
+          {/* Autoplay */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setAutoplay((prev) => !prev)}
+            className="absolute top-4 left-4 z-10 text-white hover:bg-white/20"
+            aria-label={autoplay ? 'Ferma autoplay' : 'Avvia autoplay'}
+          >
+            {autoplay ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
+          </Button>
+
+          {/* Navigation Arrows */}
+          {total > 1 && (
             <>
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white hover:bg-white/20"
                 onClick={handlePrev}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                aria-label="Immagine precedente"
               >
                 <ChevronLeft className="w-8 h-8" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-white hover:bg-white/20"
                 onClick={handleNext}
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                aria-label="Immagine successiva"
               >
                 <ChevronRight className="w-8 h-8" />
               </Button>
@@ -108,21 +143,29 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
           )}
 
           {/* Current Image */}
-          <div className="relative max-w-full max-h-full p-8">
+          <div
+            {...swipeHandlers}
+            className="relative max-w-full max-h-full p-8 touch-pan-x"
+          >
             <img
-              src={currentImage?.url}
-              alt={currentImage?.alt}
-              className="max-w-full max-h-full object-contain"
+              src={currentImage.url}
+              alt={currentImage.alt}
+              loading="lazy"
+              className="max-w-full max-h-full object-contain transition-transform duration-300"
+              onError={(e) => {
+                e.currentTarget.src =
+                  'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//viaggi-fotografici-e-workshop.avif';
+              }}
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 text-center">
-              <p className="text-lg">{currentImage?.title}</p>
+              <p className="text-lg">{currentImage.title}</p>
             </div>
           </div>
 
-          {/* Image Counter */}
-          {allImages.length > 1 && (
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
-              {currentIndex + 1} / {allImages.length}
+          {/* Counter */}
+          {total > 1 && (
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
+              {currentIndex + 1} / {total}
             </div>
           )}
         </div>

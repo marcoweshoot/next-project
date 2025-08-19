@@ -1,17 +1,12 @@
-
 import Link from "next/link";
-import React from 'react';
 
 interface DestinationDetailEmptyStateProps {
   destinationName?: string;
 }
 
-const DestinationDetailEmptyState: React.FC<{
-  children?: React.ReactNode;
-}> = ({
-  destinationName,
-  children
-}) => {
+export default function DestinationDetailEmptyState({
+  destinationName
+}: DestinationDetailEmptyStateProps) {
   return (
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -30,6 +25,4 @@ const DestinationDetailEmptyState: React.FC<{
       </div>
     </section>
   );
-};
-
-export default DestinationDetailEmptyState;
+}

@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")'
+            backgroundImage: 'url("https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Viaggi%20Fotografici.avif")'
           }}
         />
       </div>
@@ -45,7 +45,7 @@ const HeroSection = () => {
           <div className="mb-20">
             <Button 
               size="lg" 
-              className="text-lg px-12 py-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow-lg" 
+              className="text-lg px-12 py-4 bg-red-600 hover:bg-red-600 text-white font-semibold rounded-lg shadow-lg" 
               asChild
             >
               <Link href="/viaggi-fotografici">

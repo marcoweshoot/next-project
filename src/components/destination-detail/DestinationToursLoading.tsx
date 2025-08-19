@@ -1,19 +1,22 @@
-
 import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const DestinationToursLoading: React.FC = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {[...Array(3)].map((_, i) => (
-        <div key={i} className="animate-pulse">
-          <div className="bg-gray-300 h-48 rounded-lg mb-4"></div>
-          <div className="h-6 bg-gray-200 rounded mb-2"></div>
-          <div className="h-4 bg-gray-200 rounded mb-4"></div>
-          <div className="flex justify-between">
-            <div className="h-8 bg-gray-200 rounded w-16"></div>
-            <div className="h-8 bg-gray-200 rounded w-20"></div>
-          </div>
-        </div>
+      {[...Array(6)].map((_, i) => (
+        <Card key={i} className="overflow-hidden">
+          <Skeleton className="h-48 w-full" />
+          <CardContent className="p-4 space-y-3">
+            <Skeleton className="h-6 w-3/4" />
+            <Skeleton className="h-4 w-1/2" />
+            <div className="flex justify-between pt-4">
+              <Skeleton className="h-8 w-16" />
+              <Skeleton className="h-8 w-20" />
+            </div>
+          </CardContent>
+        </Card>
       ))}
     </div>
   );

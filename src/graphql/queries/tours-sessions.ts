@@ -61,12 +61,18 @@ export const GET_TOUR_SESSIONS = gql`
 
 // Query ottimizzata per il calendario che carica tutte le sessioni
 export const GET_FUTURE_SESSIONS = gql`
-  query GetFutureSessions($limit: Int = 50) {
+  query GetFutureSessions($limit: Int) {
     tours(limit: $limit) {
       id
       title
       slug
       currency
+      places {
+        slug
+      }
+      states {
+        slug
+      }
       image {
         id
         url
@@ -83,11 +89,9 @@ export const GET_FUTURE_SESSIONS = gql`
         currency
         users {
           id
-          username
           firstName
           lastName
           profilePicture {
-            id
             url
             alternativeText
           }

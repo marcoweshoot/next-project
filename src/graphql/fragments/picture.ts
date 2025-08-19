@@ -7,7 +7,6 @@ export const PICTURE_FRAGMENT = gql`
     id
     title
     type
-    published_at
     image {
       ...ImageFields
     }

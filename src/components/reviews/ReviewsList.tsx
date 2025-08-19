@@ -1,8 +1,4 @@
-"use client"
-
-'use client';
-
-import React, { useState } from 'react';
+import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Star } from 'lucide-react';
@@ -23,17 +19,14 @@ interface ReviewsListProps {
   reviews: Review[];
 }
 
-const ReviewsList: React.FC<ReviewsListProps> = ({ reviews }) => {
-  const [expandedReviews, setExpandedReviews] = useState<Set<string>>(new Set());
-
-  const toggleReview = (reviewId: string) => {
-    const newExpanded = new Set(expandedReviews);
-    if (newExpanded.has(reviewId)) {
-      newExpanded.delete(reviewId);
-    } else {
-      newExpanded.add(reviewId);
-    }
-    setExpandedReviews(newExpanded);
+export default function ReviewsList({ reviews }: ReviewsListProps) {
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('it-IT', { 
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric'
+    });
   };
 
   const renderStars = (rating: number) => {
@@ -47,30 +40,23 @@ const ReviewsList: React.FC<ReviewsListProps> = ({ reviews }) => {
     ));
   };
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('it-IT', { 
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric'
-    });
-  };
-
-  const truncateText = (text: string, maxLength: number = 150) => {
-    if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength) + '...';
-  };
+  const MAX_LENGTH = 250;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {reviews.map((review: Review) => {
-        const isExpanded = expandedReviews.has(review.id);
-        const shouldShowButton = review.description.length > 150;
-        
+      {reviews.map((review) => {
+        const isLong = review.description.length > MAX_LENGTH;
+        const truncated = isLong
+          ? review.description.slice(0, MAX_LENGTH) + '...'
+          : review.description;
+
         return (
-          <Card key={review.id} className="h-full hover:shadow-lg transition-shadow duration-300 border-gray-200">
+          <Card
+            key={review.id}
+            className="hover:shadow-lg transition-shadow duration-300 border-gray-200"
+          >
             <CardContent className="p-6">
-              {/* User Info and Rating */}
+              {/* User Info */}
               <div className="flex items-center space-x-3 mb-4">
                 <Avatar className="h-12 w-12">
                   {review.user?.profilePicture?.url && (
@@ -93,7 +79,7 @@ const ReviewsList: React.FC<ReviewsListProps> = ({ reviews }) => {
                 </div>
               </div>
 
-              {/* Tour Info */}
+              {/* Tour info */}
               {review.tour && (
                 <div className="mb-4 p-3 bg-gray-50 rounded-lg">
                   <p className="text-sm font-medium text-gray-900">
@@ -102,21 +88,20 @@ const ReviewsList: React.FC<ReviewsListProps> = ({ reviews }) => {
                 </div>
               )}
 
-              {/* Review Text */}
+              {/* Description */}
               <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                {isExpanded ? review.description : truncateText(review.description)}
+                {truncated}
               </p>
 
-              {/* Date and Read More */}
               <div className="flex items-center justify-between text-xs text-gray-500">
-                <span>{review.created_at ? formatDate(review.created_at) : 'Luglio 2024'}</span>
-                {shouldShowButton && (
-                  <button 
-                    onClick={() => toggleReview(review.id)}
-                    className="text-orange-500 hover:text-orange-600 font-medium transition-colors"
+                <span>{formatDate(review.created_at)}</span>
+                {isLong && (
+                  <Link
+                    href={`/recensioni/${review.id}`}
+                    className="text-orange-500 hover:text-orange-600 font-medium"
                   >
-                    {isExpanded ? 'Mostra meno' : 'Leggi tutto'}
-                  </button>
+                    Leggi tutto
+                  </Link>
                 )}
               </div>
             </CardContent>
@@ -125,6 +110,4 @@ const ReviewsList: React.FC<ReviewsListProps> = ({ reviews }) => {
       })}
     </div>
   );
-};
-
-export default ReviewsList;
+}

@@ -1,9 +1,12 @@
+import CalendarMonthContent from './calendar-month/CalendarMonthContent';
 
-import React from 'react';
-import CalendarMonthContent from '@/components/calendar-month/CalendarMonthContent';
+interface CalendarMonthProps {
+  year: string;
+  month: string;
+}
 
-const CalendarMonth = () => {
-  return <CalendarMonthContent />;
+const CalendarMonth = ({ year, month }: CalendarMonthProps) => {
+  return <CalendarMonthContent year={year} month={month} />;
 };
 
 export default CalendarMonth;

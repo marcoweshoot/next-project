@@ -1,4 +1,3 @@
-
 import React from 'react';
 import StoryAuthor from './StoryAuthor';
 
@@ -25,17 +24,22 @@ interface StoryContentProps {
 
 const StoryContent: React.FC<StoryContentProps> = ({ story }) => {
   return (
-    <section className="py-16">
+    <section className="py-16" aria-labelledby="story-description">
       <div className="max-w-6xl mx-auto px-4">
+        <title>La storia dietro allo scatto – WeShoot</title>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Story Description */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 id="story-description" className="text-3xl font-bold text-gray-900 mb-6">
               La storia dietro a questo scatto
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               {story.description ? (
-                <div dangerouslySetInnerHTML={{ __html: story.description }} />
+                <div
+                  dangerouslySetInnerHTML={{ __html: story.description }}
+                  aria-label="Contenuto della storia"
+                />
               ) : (
                 <p>Descrizione non disponibile per questa storia.</p>
               )}
@@ -43,8 +47,8 @@ const StoryContent: React.FC<StoryContentProps> = ({ story }) => {
           </div>
 
           {/* Author Info */}
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <div aria-labelledby="story-author">
+            <h2 id="story-author" className="text-3xl font-bold text-gray-900 mb-6">
               L'autore
             </h2>
             {story.photographer ? (

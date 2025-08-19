@@ -6,20 +6,14 @@ export const TOUR_ITINERARY_FIELDS = gql`
   fragment TourItineraryFields on Tour {
     days {
       id
-      created_at
-      updated_at
       number
       title
       locale
-      published_at
       steps {
         id
-        created_at
-        updated_at
         title
         description
         locale
-        published_at
         locations {
           id
           longitude
@@ -28,12 +22,10 @@ export const TOUR_ITINERARY_FIELDS = gql`
           description
           slug
           locale
-          published_at
           pictures {
             id
             title
             type
-            published_at
             image {
               id
               url
@@ -51,12 +43,9 @@ export const TOUR_ITINERARY_FIELDS = gql`
       }
       localizations {
         id
-        created_at
-        updated_at
         number
         title
         locale
-        published_at
       }
     }
   }

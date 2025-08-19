@@ -1,45 +1,6 @@
-
 import React from 'react';
 import TourCard from '@/components/TourCard';
-
-interface Tour {
-  id: string;
-  title: string;
-  slug: string;
-  description: string;
-  excerpt?: string;
-  difficulty?: 'easy' | 'medium' | 'hard';
-  experience_level?: string;
-  cover?: {
-    url: string;
-    alt?: string;
-  };
-  coach: {
-    id: string;
-    name: string;
-    slug: string;
-    avatar?: {
-      url: string;
-      alt?: string;
-    };
-  };
-  startDate: string;
-  endDate: string;
-  duration: number;
-  price: number;
-  maxParticipants?: number;
-  availableSpots?: number;
-  states?: any[];
-  places?: any[];
-  destination: {
-    id: string;
-    name: string;
-    slug: string;
-    country: string;
-    description?: string;
-  };
-  sessions: any[];
-}
+import { Tour } from '@/types';
 
 interface PhotographerToursGridProps {
   tours: Tour[];

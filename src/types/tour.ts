@@ -1,8 +1,9 @@
+// @/types/tour.ts
 
+import type { Image } from './media';
 import type { Coach } from './coach';
 import type { Destination, State, Place } from './location';
 import type { Collection } from './collection';
-import type { Image } from './media';
 
 export interface Tour {
   id: string;
@@ -10,62 +11,66 @@ export interface Tour {
   slug: string;
   description?: string;
   excerpt?: string;
+
   cover?: {
     url: string;
-    alt?: string;
+    alt: string;
+    alternativeText?: string;
+    gallery?: Image[];
   };
+
+  featured?: boolean;
+
+  // Dati logistici
   startDate: string;
   endDate?: string;
   duration: number;
   price: number;
   deposit?: number;
-  maxParticipants?: number;
   availableSpots?: number;
+  maxParticipants?: number;
   status?: string;
   difficulty?: 'easy' | 'medium' | 'hard';
-  featured?: boolean;
-  coach: Coach;
-  coaches?: Coach[];
-  destination: Destination;
-  collection?: Collection;
-  gallery?: Image[];
-  itinerary?: ItineraryDay[];
-  includes?: Array<{
-    title: string;
-    description?: string;
-    icon?: {
-      url: string;
-      alternativeText?: string;
-    };
-  }>;
-  excludes?: Array<{
-    title: string;
-    description?: string;
-    icon?: {
-      url: string;
-      alternativeText?: string;
-    };
-  }>;
-  highlights?: Array<{
+  experience_level?: string;
+
+  // Coach
+  coach: {
     id: string;
-    title: string;
-    description: string;
-    icon?: {
+    name: string;
+    slug: string;
+    avatar?: {
       url: string;
-      alternativeText?: string;
+      alt?: string;
     };
-  }>;
-  states?: State[];
+  };
+  coaches?: Coach[];
+
+  // Relazioni
+  destination?: Destination;
+  collection?: Collection;
   places?: Place[];
+  states?: State[];
+
+  // Sessioni
   sessions?: TourSession[];
+
+  // Itinerario
+  itinerary?: ItineraryDay[];
+
+  // Cosa è incluso / escluso
+  includes?: TourBlock[];
+  excludes?: TourBlock[];
+  highlights?: TourBlock[];
 }
 
 export interface TourSession {
   id: string;
+  sessionId?: string;
   start: string;
   end: string;
   price: number;
   deposit?: number;
+  currency?: string;
   maxPax: number;
   status?: string;
   users?: SessionUser[];
@@ -74,13 +79,9 @@ export interface TourSession {
 export interface SessionUser {
   id: string;
   username: string;
-  firstName: string;
-  lastName: string;
-  profilePicture?: {
-    id: string;
-    url: string;
-    alternativeText?: string;
-  };
+  firstName?: string;
+  lastName?: string;
+  profilePicture?: Image;
 }
 
 export interface ItineraryDay {
@@ -105,5 +106,12 @@ export interface DayLocation {
   title: string;
   slug: string;
   description?: string;
-  pictures?: any[];
+  pictures?: Image[];
+}
+
+export interface TourBlock {
+  id?: string;
+  title: string;
+  description?: string;
+  icon?: Image;
 }

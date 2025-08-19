@@ -16,7 +16,7 @@ const CalendarMonthSkeleton = () => (
 );
 
 const CalendarLoading = ({
-  coverImage = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'
+  coverImage = 'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//photo-1469474968028-56623f02e42e.avif'
 }: CalendarLoadingProps) => {
   return (
     <div className="min-h-screen bg-gray-50" aria-busy="true">

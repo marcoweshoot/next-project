@@ -33,9 +33,9 @@ const TourCardContent: React.FC<TourCardContentProps> = ({
       </h3>
 
       <TourCardCoaches 
-        sessionCoaches={sessionCoaches}
-        mainCoach={mainCoach}
+       sessionCoaches={sessionCoaches}
       />
+
 
       <TourCardPricing 
         duration={duration}

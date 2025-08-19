@@ -1,5 +1,4 @@
-
-import Link from "next/link";
+import Link from 'next/link';
 import React from 'react';
 import {
   Breadcrumb,
@@ -20,12 +19,9 @@ interface PageBreadcrumbsProps {
   className?: string;
 }
 
-const PageBreadcrumbs: React.FC<{
-  children?: React.ReactNode;
-}> = ({
+const PageBreadcrumbs: React.FC<PageBreadcrumbsProps> = ({
   elements,
   className,
-  children
 }) => {
   return (
     <Breadcrumb className={className}>
@@ -35,7 +31,10 @@ const PageBreadcrumbs: React.FC<{
             <BreadcrumbItem>
               {element.path ? (
                 <BreadcrumbLink asChild>
-                  <Link href={element.path} className="text-white/80 hover:text-white text-xs">
+                  <Link
+                    href={element.path}
+                    className="text-white/80 hover:text-white text-xs"
+                  >
                     {element.name}
                   </Link>
                 </BreadcrumbLink>

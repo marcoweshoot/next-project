@@ -1,6 +1,5 @@
-
-import Link from "next/link";
-import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,22 +13,21 @@ interface ReviewsHeroProps {
   totalReviews: number;
 }
 
-const ReviewsHero: React.FC<{
-  children?: React.ReactNode;
-}> = ({
-  totalReviews,
-  children
-}) => {
+export default function ReviewsHero({ totalReviews }: ReviewsHeroProps) {
   return (
-    <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 pt-20">
-      <div className="absolute inset-0 bg-black/40" />
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)'
-        }}
-      />
-      <div className="absolute inset-0 bg-black/60" />
+    <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 pt-20 overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/photo-1469474968028-56623f02e42e.avif"
+          alt="WeShoot recensioni"
+          fill
+          priority
+          sizes="(max-width: 1200px) 100vw, 1200px"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -41,14 +39,16 @@ const ReviewsHero: React.FC<{
           <p className="text-sm text-gray-300 uppercase tracking-wider">
             WESHOOT RECENSIONI
           </p>
-          
+
           {/* Breadcrumbs */}
           <div className="flex justify-center mt-8">
             <Breadcrumb className="text-gray-300">
               <BreadcrumbList>
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link href="/" className="hover:text-white">WeShoot</Link>
+                    <Link href="/" className="hover:text-white">
+                      WeShoot
+                    </Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
@@ -62,6 +62,4 @@ const ReviewsHero: React.FC<{
       </div>
     </section>
   );
-};
-
-export default ReviewsHero;
+}
