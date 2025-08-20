@@ -99,7 +99,6 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({
       className="pt-20"
       priority                 // ← true solo qui: migliora il LCP
       sizes="100vw"            // ← hero full-width responsive
-      quality={70}             // ← 60–75 è un buon compromesso
       alt={tour?.image?.alternativeText || tour?.title || 'Hero tour'}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

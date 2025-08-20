@@ -26,9 +26,14 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ReviewPage({ params }: { params: { id: string } }) {
+type PageProps = {
+  params: Promise<{ id: string }>;
+};
+
+export default async function ReviewPage({ params }: PageProps) {
+  const { id } = await params;
   const client = getClient();
-  const reviewId = params.id;
+  const reviewId = id;
 
   if (!reviewId) {
     return notFound();

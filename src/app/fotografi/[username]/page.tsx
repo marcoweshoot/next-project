@@ -26,9 +26,9 @@ export async function generateStaticParams() {
   return list.map((coach: any) => ({ username: coach.username }));
 }
 
-interface PageProps {
-  params: { username: string };
-}
+type PageProps = {
+  params: Promise<{ username: string }>;
+};
 
 export default async function PhotographerPage({ params }: PageProps) {
   const { username } = await params;

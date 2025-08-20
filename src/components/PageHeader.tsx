@@ -27,7 +27,6 @@ const PageHeader = ({
   alt = '',
   priority = false,
   sizes = '100vw',
-  quality = 70,
 }: PageHeaderProps) => {
   const heightClasses = {
     small: 'min-h-[40vh]',
@@ -76,7 +75,6 @@ const PageHeader = ({
             fill
             priority={priority}
             sizes={sizes}
-            quality={quality}
             className="object-cover"
           />
         </div>
