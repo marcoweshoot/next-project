@@ -1,12 +1,14 @@
-"use client" ;
-import { useToastContext } from "@/components/ui/toast-provider"
+"use client";
+import { useToastContext } from "@/components/ui/toast-provider";
 
-export const useToast = () => {
-  const { toast, toasts } = useToastContext()
-  return { toast, toasts }
-}
+type ToastArgs = { title?: string; description?: string; action?: React.ReactNode };
 
-export const toast = (args: { title?: string; description?: string }) => {
-  const ctx = useToastContext()
-  ctx.toast(args)
+export function useToast() {
+  const ctx = useToastContext();
+  return {
+    toasts: ctx.toasts,
+    toast: (args: ToastArgs) => ctx.toast(args),
+    dismiss: ctx.dismiss,
+    clear: ctx.clear,
+  };
 }

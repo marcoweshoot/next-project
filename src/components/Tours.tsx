@@ -37,7 +37,7 @@ export default function Tours({ initialTours, heroImage, faqs }: Props) {
 
     try {
       const data = await request<{ tours: any[] }>(
-        process.env.STRAPI_GRAPHQL_API!,
+        process.env.NEXT_PUBLIC_STRAPI_GRAPHQL_API!,
         GET_TOURS,
         {
           locale: 'it',

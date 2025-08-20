@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Gift, Loader2 } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
-import { useToast } from '@/hooks/use-toast';
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Gift, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 interface GiftCardItemProps {
   amount: number;
@@ -12,37 +12,33 @@ interface GiftCardItemProps {
   originalPrice: number;
 }
 
+type PaymentResponse = { url: string };
+
 const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPrice }) => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const handlePurchase = async () => {
+    if (isLoading) return; // evita doppi click
     setIsLoading(true);
-    
     try {
-      console.log(`Creating payment for gift card: €${amount}`);
-      
-      const { data, error } = await supabase.functions.invoke('create-gift-card-payment', {
-        body: { amount }
-      });
+      const { data, error } = await supabase.functions.invoke<PaymentResponse>(
+        "create-gift-card-payment",
+        { body: { amount } }
+      );
+      if (error) throw error;
+      if (!data?.url) throw new Error("URL di pagamento non ricevuto");
 
-      if (error) {
-        console.error('Error invoking payment function:', error);
-        throw error;
+      const w = window.open(data.url, "_blank", "noopener,noreferrer");
+      if (!w) {
+        // se il popup viene bloccato, fai fallback sulla stessa tab
+        window.location.href = data.url;
       }
-
-      if (data?.url) {
-        console.log('Payment URL received, opening in new tab:', data.url);
-        // Open Stripe checkout in a new tab
-        window.open(data.url, '_blank');
-      } else {
-        throw new Error('URL di pagamento non ricevuto');
-      }
-    } catch (error) {
-      console.error('Payment error:', error);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Si è verificato un errore";
       toast({
         title: "Errore nel pagamento",
-        description: "Si è verificato un errore durante la creazione del pagamento. Riprova.",
+        description: message,
       });
     } finally {
       setIsLoading(false);
@@ -66,16 +62,15 @@ const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPric
           Carta regalo valida per tutti i viaggi fotografici
         </div>
       </div>
-      
+
       <div className="p-4">
         <div className="text-center mb-4">
           <div className="text-gray-600 text-sm">Prezzo originale: €{originalPrice}</div>
         </div>
-        <Button 
+        <Button
           onClick={handlePurchase}
           disabled={isLoading}
-          className="w-full"
-          style={{ backgroundColor: '#E25141' }}
+          className="w-full bg-[#E25141] hover:bg-[#cf4637]"
         >
           {isLoading ? (
             <>
@@ -83,7 +78,7 @@ const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPric
               Elaborazione...
             </>
           ) : (
-            'Acquista Ora'
+            "Acquista Ora"
           )}
         </Button>
       </div>

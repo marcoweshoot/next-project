@@ -33,15 +33,14 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
 
   // Flatten and map images
   const allImages = useMemo(() => {
-    return pictures
-      .flatMap((picture) =>
-        picture.map((img) => ({
-          id: img.id,
-          title: img.title,
-          url: img.url,
-          alt: img.alt,
-        }))
-      );
+    return pictures.flatMap((picture) =>
+      picture.map((img) => ({
+        id: img.id,
+        title: img.title,
+        url: img.url,
+        alt: img.alt,
+      }))
+    );
   }, [pictures]);
 
   const total = allImages.length;
@@ -63,17 +62,28 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
     [handleNext, handlePrev, onClose]
   );
 
+  // Clamp dell'indice quando si apre o cambiano input/numero immagini
   useEffect(() => {
-    if (isOpen) {
-      setCurrentIndex(startIndex);
+    if (!isOpen) return;
+    if (total === 0) {
+      setCurrentIndex(0);
+      return;
     }
-  }, [isOpen, startIndex]);
+    const next = Math.min(Math.max(0, startIndex), total - 1);
+    setCurrentIndex(next);
+  }, [isOpen, startIndex, total]);
 
+  // Autoplay
   useEffect(() => {
     if (!autoplay || !isOpen) return;
     const interval = setInterval(handleNext, 4000);
     return () => clearInterval(interval);
   }, [autoplay, handleNext, isOpen]);
+
+  // Stop autoplay alla chiusura
+  useEffect(() => {
+    if (!isOpen && autoplay) setAutoplay(false);
+  }, [isOpen, autoplay]);
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: handleNext,
@@ -84,6 +94,7 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
   if (!total) return null;
 
   const currentImage = allImages[currentIndex];
+  const altText = currentImage?.alt || currentImage?.title || 'Immagine galleria';
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
@@ -149,16 +160,16 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
           >
             <img
               src={currentImage.url}
-              alt={currentImage.alt}
+              alt={altText}
               loading="lazy"
               className="max-w-full max-h-full object-contain transition-transform duration-300"
               onError={(e) => {
                 e.currentTarget.src =
-                  'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//viaggi-fotografici-e-workshop.avif';
+                  'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/viaggi-fotografici-e-workshop.avif';
               }}
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 text-center">
-              <p className="text-lg">{currentImage.title}</p>
+              <p className="text-lg">{currentImage.title || ' '}</p>
             </div>
           </div>
 

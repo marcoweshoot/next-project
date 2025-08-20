@@ -23,16 +23,13 @@ const LocationGallery: React.FC<LocationGalleryProps> = ({ pictures, locationTit
   // Sanitizza e memoizza le immagini valide
   const safePictures = useMemo(() => {
     return Array.isArray(pictures)
-      ? pictures.filter(
-          (p) => p && typeof p.url === 'string' && p.url.length > 0
-        )
+      ? pictures.filter((p) => p && typeof p.url === 'string' && p.url.length > 0)
       : [];
   }, [pictures]);
 
-  if (safePictures.length === 0) {
-    return <GalleryEmptyState />;
-  }
+  const len = safePictures.length;
 
+  // ⬇️ Gli hook DEVONO stare al top-level, prima di qualunque return condizionale
   const openLightbox = useCallback((index: number) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
@@ -44,12 +41,19 @@ const LocationGallery: React.FC<LocationGalleryProps> = ({ pictures, locationTit
   }, []);
 
   const nextImage = useCallback(() => {
-    setCurrentImageIndex((prev) => (prev + 1) % safePictures.length);
-  }, [safePictures.length]);
+    if (len === 0) return;
+    setCurrentImageIndex((prev) => (prev + 1) % len);
+  }, [len]);
 
   const prevImage = useCallback(() => {
-    setCurrentImageIndex((prev) => (prev - 1 + safePictures.length) % safePictures.length);
-  }, [safePictures.length]);
+    if (len === 0) return;
+    setCurrentImageIndex((prev) => (prev - 1 + len) % len);
+  }, [len]);
+
+  // Ora il return condizionale è OK: gli hook sono già stati chiamati
+  if (len === 0) {
+    return <GalleryEmptyState />;
+  }
 
   return (
     <>
@@ -60,9 +64,7 @@ const LocationGallery: React.FC<LocationGalleryProps> = ({ pictures, locationTit
             Galleria di {locationTitle}
           </h3>
           <p className="text-gray-600">
-            {safePictures.length === 1
-              ? '1 foto disponibile'
-              : `${safePictures.length} foto disponibili`}
+            {len === 1 ? '1 foto disponibile' : `${len} foto disponibili`}
           </p>
         </div>
 

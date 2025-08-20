@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Montserrat } from 'next/font/google';
 import ClientProviders from '@/components/providers/ClientProviders';
+import { ToastStateProvider } from '@/components/ui/toast-provider';
+import { Toaster } from '@/components/ui/toaster';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -12,7 +14,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'viaggi fotografici nel mondo e workshop',
-  description: 'itinerari pensati per fotografi, coach professionisti e esperienze immersive.',
+  description:
+    'itinerari pensati per fotografi, coach professionisti e esperienze immersive.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -27,7 +30,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="color-scheme" content="light dark" />
       </head>
       <body className="font-sans antialiased">
-        <ClientProviders>{children}</ClientProviders>
+        {/* Provider di stato per i toast (nostro) + UI Toaster (shadcn) */}
+        <ToastStateProvider>
+          <ClientProviders>{children}</ClientProviders>
+          <Toaster />
+        </ToastStateProvider>
       </body>
     </html>
   );
