@@ -11,51 +11,50 @@ interface Props {
 }
 
 const CalendarMonthContent = async ({ year, month }: Props) => {
-    const { groupedSessions, coverImage } = await fetchCalendarData();
-    const normalizedMonth = month.toLowerCase();
-    const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
-    const key = `${year}-${normalizedMonth}`;
-    const monthData = groupedSessions[key];
+  const { groupedSessions, coverImage } = await fetchCalendarData();
 
-    if (!monthData) {
-      console.warn(`Nessun dato trovato per la chiave: ${key}`);
-    }
+  const normalizedMonth = month.toLowerCase();
+  const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
+  const key = `${year}-${normalizedMonth}`;
+  const monthData = groupedSessions[key];
 
-    return (
-      <div className="min-h-screen bg-white">
-        <Header />
+  if (!monthData) {
+    console.warn(`Nessun dato trovato per la chiave: ${key}`);
+  }
 
-        <PageHeader backgroundImage={coverImage}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Viaggi Fotografici {capitalizedMonth} {year}
-            </h1>
-            <p className="text-xl text-white/80">
-              Tutti i viaggi programmati per {capitalizedMonth} {year}
-            </p>
-          </div>
-        </PageHeader>
 
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {monthData?.tours?.length > 0 ? (
-              <CalendarMonthToursGrid
-                tours={monthData.tours}
-                monthName={capitalizedMonth}
-                year={year}
-              />
-            ) : (
-              <CalendarMonthEmpty
-                monthName={capitalizedMonth}
-                year={year}
-              />
-            )}
-          </div>
-        </section>
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
 
-        <Footer />
-      </div>
-    );
+      <PageHeader backgroundImage={coverImage}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Viaggi Fotografici {capitalizedMonth} {year}
+          </h1>
+          <p className="text-xl text-white/80">
+            Tutti i viaggi programmati per {capitalizedMonth} {year}
+          </p>
+        </div>
+      </PageHeader>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {monthData?.tours?.length > 0 ? (
+            <CalendarMonthToursGrid
+              tours={monthData.tours}
+              monthName={capitalizedMonth}
+              year={year}
+            />
+          ) : (
+            <CalendarMonthEmpty monthName={capitalizedMonth} year={year} />
+          )}
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
 };
 
 export default CalendarMonthContent;

@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { getFullMediaUrl } from '@/utils/TourDataUtilis'; // <-- aggiorna il path se necessario
 import Image from 'next/image';
 import React from 'react';
 
@@ -27,6 +28,7 @@ const PageHeader = ({
   alt = '',
   priority = false,
   sizes = '100vw',
+  quality,
 }: PageHeaderProps) => {
   const heightClasses = {
     small: 'min-h-[40vh]',
@@ -38,8 +40,12 @@ const PageHeader = ({
     return <div className={cn('py-20', className)}>{children}</div>;
   }
 
-  const showVideo = Boolean(videoUrl);
-  const showImage = !videoUrl && Boolean(backgroundImage);
+  // Normalizza gli URL per evitare 400 dall'image optimizer
+  const normalizedVideoUrl = videoUrl ? getFullMediaUrl(videoUrl) : undefined;
+  const normalizedBgImage = backgroundImage ? getFullMediaUrl(backgroundImage) : undefined;
+
+  const showVideo = Boolean(normalizedVideoUrl);
+  const showImage = !showVideo && Boolean(normalizedBgImage);
 
   return (
     <div
@@ -49,7 +55,7 @@ const PageHeader = ({
         className
       )}
     >
-      {/* Video di sfondo (non pesa la rete prima del paint) */}
+      {/* Video di sfondo */}
       {showVideo && (
         <div className="absolute inset-0 z-0 h-full w-full">
           <video
@@ -59,22 +65,23 @@ const PageHeader = ({
             autoPlay
             playsInline
             preload="none"
-            poster={backgroundImage}
+            poster={normalizedBgImage}
           >
-            <source src={videoUrl!} type="video/mp4" />
+            <source src={normalizedVideoUrl!} type="video/mp4" />
           </video>
         </div>
       )}
 
       {/* Immagine di sfondo */}
-      {showImage && backgroundImage && (
+      {showImage && normalizedBgImage && (
         <div className="absolute inset-0 z-0 h-full w-full">
           <Image
-            src={backgroundImage}
+            src={normalizedBgImage}
             alt={alt}
             fill
             priority={priority}
             sizes={sizes}
+            quality={quality}
             className="object-cover"
           />
         </div>

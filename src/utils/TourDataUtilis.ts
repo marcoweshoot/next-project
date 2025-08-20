@@ -1,19 +1,26 @@
 import { Tour, Picture } from '@/types';
 
-// ------------------------------------
-// ✅ URL helpers
-// ------------------------------------
-export const getFullMediaUrl = (url?: string): string => {
-  if (!url) return '';
+// src/lib/url.ts (o dov'è già la tua util)
+export const getFullMediaUrl = (input?: string): string => {
+  if (!input) return '';
 
-  // Se è già assoluto (http/https o protocol-relative //) non toccarlo
-  if (/^(https?:)?\/\//i.test(url)) return url;
+  let url = input.trim();
 
+  // //cdn.example.com/...  ->  https://cdn.example.com/...
+  if (url.startsWith('//')) {
+    url = 'https:' + url;
+  }
+
+  // Se è già assoluto http/https, ok
+  if (/^https?:\/\//i.test(url)) return url;
+
+  // Prepara host base e compatta eventuali slash doppi
   const base = (process.env.NEXT_PUBLIC_STRAPI_URL || 'https://api.weshoot.it').replace(/\/+$/, '');
-  const path = url.startsWith('/') ? url : `/${url}`;
+  const path = ('/' + url).replace(/\/{2,}/g, '/'); // <-- niente // nel mezzo
 
   return `${base}${path}`;
 };
+
 
 // ------------------------------------
 // ✅ Date & Price formatting

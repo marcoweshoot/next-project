@@ -3,6 +3,7 @@ import { getFutureSessionsGroupedByMonth } from '@/utils/getFutureSessionsGroupe
 import type { Metadata } from 'next';
 
 type Params = { year: string; month: string };
+type PageProps = { params: Promise<Params> };
 
 export const dynamic = 'error';
 export const dynamicParams = false;
@@ -29,7 +30,7 @@ export async function generateStaticParams(): Promise<Params[]> {
 }
 
 // SEO dinamico per ogni pagina mese
-export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { year, month } = await params;
   const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
 
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 }
 
 // Rendering della pagina
-export default async function Page({ params }: { params: Params }) {
+export default async function Page({ params }: PageProps) {
   const { year, month } = await params;
   return <CalendarMonthContent year={year} month={month} />;
 }
