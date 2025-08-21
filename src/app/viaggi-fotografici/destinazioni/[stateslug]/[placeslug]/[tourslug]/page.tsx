@@ -13,7 +13,7 @@ export const revalidate = 60
 const CANONICAL_BASE = '/viaggi-fotografici/destinazioni'
 
 type Params = { stateslug: string; placeslug: string; tourslug: string }
-interface Props { params: Params }
+type Props = { params: Promise<Params> }
 interface TourDetailResponse { tours: any[] }
 
 const TourDetailHeaderClient = dynamicImport(
@@ -78,7 +78,7 @@ function getTourCached(slug: string) {
   return runner()
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<Params[]> {
   const client = getClient()
   try {
     const data = (await client.request(GET_ALL_TOUR_SLUGS, { locale: 'it' })) as { tours: any[] }
