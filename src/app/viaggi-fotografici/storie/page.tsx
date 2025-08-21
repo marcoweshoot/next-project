@@ -7,18 +7,27 @@ import PageBreadcrumbs from '@/components/PageBreadcrumbs';
 import SEO from '@/components/SEO';
 
 export const dynamic = 'force-static';
+export const revalidate = 60;
+
+type Story = {
+  id: string;
+  slug: string;
+  name: string;
+  photo?: { url?: string; alternativeText?: string };
+};
 
 export default async function StoriesPage() {
-  let stories = [];
+  let stories: Story[] = [];
 
   try {
     const { data } = await getClient().query({
       query: GET_STORIES,
       variables: { locale: 'it' },
+      fetchPolicy: 'no-cache',
     });
     stories = data?.stories || [];
-  } catch (error) {
-    console.error('Errore nel caricamento delle storie:', error);
+  } catch {
+    stories = [];
   }
 
   const breadcrumbElements = [
@@ -67,7 +76,7 @@ export default async function StoriesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {stories.length > 0 ? (
             <div className="space-y-8">
-              {stories.map((story: any) => (
+              {stories.map((story) => (
                 <Link
                   key={story.id}
                   href={`/viaggi-fotografici/storie/${story.slug}`}

@@ -7,6 +7,7 @@ import StoryHero from '@/components/story-detail/StoryHero';
 import StoryContent from '@/components/story-detail/StoryContent';
 import StoryRelatedTours from '@/components/story-detail/StoryRelatedTours';
 
+export const dynamic = 'force-static';
 export const revalidate = 60;
 export const dynamicParams = true;
 
@@ -14,6 +15,7 @@ type Params = { storiaslug: string };
 
 export async function generateMetadata({ params }: { params: Params }) {
   const { storiaslug } = params;
+
   try {
     const { data } = await getClient().query({
       query: GET_STORY_DETAIL_BY_SLUG,
@@ -28,7 +30,8 @@ export async function generateMetadata({ params }: { params: Params }) {
       ? `${story.photographer.firstName || ''} ${story.photographer.lastName || ''}`.trim()
       : 'Autore';
 
-    const title = story?.seo?.metaTitle || `${story.name} - Storia di ${authorName} | WeShoot`;
+    const title =
+      story?.seo?.metaTitle || `${story.name} - Storia di ${authorName} | WeShoot`;
     const description =
       story?.seo?.metaDescription ||
       story?.description ||
@@ -41,7 +44,12 @@ export async function generateMetadata({ params }: { params: Params }) {
       description,
       alternates: { canonical: url },
       openGraph: { title, description, url, images, type: 'article' },
-      twitter: { card: 'summary_large_image', title, description, images: images?.[0]?.url },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        images: images?.[0]?.url,
+      },
     };
   } catch {
     return {};
@@ -75,12 +83,14 @@ export default async function StoryPage({ params }: { params: Params }) {
       fetchPolicy: 'no-cache',
     }));
   } catch {
-    notFound();
+    return notFound();
   }
 
   const story =
-    data?.stories?.find((s: any) => s.slug === storiaslug) ?? data?.stories?.[0];
-  if (!story) notFound();
+    data?.stories?.find((s: any) => s.slug === storiaslug) ??
+    data?.stories?.[0];
+
+  if (!story) return notFound();
 
   const authorName = story.photographer
     ? `${story.photographer.firstName || ''} ${story.photographer.lastName || ''}`.trim()
