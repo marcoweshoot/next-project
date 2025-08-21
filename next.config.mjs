@@ -5,7 +5,7 @@ function makeCsp() {
   const scriptSrc = [
     "'self'",
     "'unsafe-inline'",
-    isDev ? "'unsafe-eval'" : null, // ✅ solo in sviluppo
+    isDev ? "'unsafe-eval'" : null,
   ].filter(Boolean).join(' ');
 
   const connectSrc = [
@@ -13,7 +13,7 @@ function makeCsp() {
     'https://api.weshoot.it',
     'https://s3.eu-west-1.amazonaws.com',
     'https://wxoodcdxscxazjkoqhsg.supabase.co',
-    isDev ? 'ws:' : null,           // HMR/WebSocket in dev
+    isDev ? 'ws:' : null,
     isDev ? 'http://localhost:*' : null,
   ].filter(Boolean).join(' ');
 
@@ -56,6 +56,18 @@ const nextConfig = {
         { key: 'Permissions-Policy', value: 'geolocation=(), microphone=(), camera=(), payment=(), usb=()' },
       ],
     }];
+  },
+
+  async redirects() {
+    return [
+      {
+        // vecchio schema: /destinazioni/:stateslug/:placeslug
+        source: '/viaggi-fotografici/destinazioni/:stateslug/:placeslug',
+        // nuovo schema:  /destinazioni/:stateslug/posti/:placeslug
+        destination: '/viaggi-fotografici/destinazioni/:stateslug/posti/:placeslug',
+        permanent: true, // 308 (SEO-friendly)
+      },
+    ];
   },
 };
 
