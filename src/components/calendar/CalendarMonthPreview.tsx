@@ -15,9 +15,11 @@ interface TourSession {
     id: string;
     title: string;
     slug: string;
-    places: string;
-    states: string;
+    places: { slug: string }[];
+    states: { slug: string }[];
     duration: number;
+    difficulty?: string;
+    experience_level?: string;
     coach: {
       id: string;
       name: string;
