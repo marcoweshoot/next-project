@@ -7,13 +7,15 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SocialProofSection from '@/components/SocialProofSection'
 
+// SSG: forziamo il rendering statico
 export const dynamic = 'force-static'
-export const revalidate = 60
+// Consenti fallback stile "blocking" per gli slug non pre-renderizzati
+export const dynamicParams = true
 
 const CANONICAL_BASE = '/viaggi-fotografici/destinazioni'
 
 type Params = { stateslug: string; placeslug: string; tourslug: string }
-type Props = { params: Promise<Params> }
+type Props = { params: Params }
 interface TourDetailResponse { tours: any[] }
 
 const TourDetailHeaderClient = dynamicImport(
@@ -73,8 +75,13 @@ async function fetchTourOnce(slug: string) {
   }
   return tours.find((t: any) => t?.slug === slug) ?? null
 }
+
 function getTourCached(slug: string) {
-  const runner = nextCache(() => fetchTourOnce(slug), [`tour:${slug}`], { revalidate: 60, tags: [`tour:${slug}`] })
+  // Nessuna revalidazione: resta statico
+  const runner = nextCache(() => fetchTourOnce(slug), [`tour:${slug}`], {
+    revalidate: false,
+    tags: [`tour:${slug}`],
+  })
   return runner()
 }
 
@@ -97,7 +104,10 @@ export async function generateStaticParams(): Promise<Params[]> {
       seen.add(key)
       params.push({ stateslug: canonicalState, placeslug: canonicalPlace, tourslug: tour.slug })
     }
-    return params
+
+    // Pre-renderizza solo i primi N per evitare timeouts in build
+    const LIMIT = Number(process.env.SSG_TOUR_LIMIT ?? '120')
+    return params.slice(0, LIMIT)
   } catch {
     return []
   }
@@ -105,7 +115,7 @@ export async function generateStaticParams(): Promise<Params[]> {
 
 export default async function TourDetailPage({ params }: Props) {
   try {
-    const { stateslug, placeslug, tourslug } = await params
+    const { stateslug, placeslug, tourslug } = params
     if (!tourslug) {
       return permanentRedirect(CANONICAL_BASE)
     }
