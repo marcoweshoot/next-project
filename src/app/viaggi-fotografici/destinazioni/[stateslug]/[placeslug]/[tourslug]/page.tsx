@@ -15,7 +15,7 @@ export const dynamicParams = true
 const CANONICAL_BASE = '/viaggi-fotografici/destinazioni'
 
 type Params = { stateslug: string; placeslug: string; tourslug: string }
-type Props = { params: Params }
+type Props = { params: Promise<Params> }
 interface TourDetailResponse { tours: any[] }
 
 const TourDetailHeaderClient = dynamicImport(
@@ -115,7 +115,7 @@ export async function generateStaticParams(): Promise<Params[]> {
 
 export default async function TourDetailPage({ params }: Props) {
   try {
-    const { stateslug, placeslug, tourslug } = params
+    const { stateslug, placeslug, tourslug } = await params
     if (!tourslug) {
       return permanentRedirect(CANONICAL_BASE)
     }
