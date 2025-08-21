@@ -3,6 +3,7 @@ node_modules/
 
 # Next.js build
 .next/
+.cache/
 out/
 dist/
 
