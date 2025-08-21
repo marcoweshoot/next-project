@@ -16,6 +16,7 @@ interface TourCardContentProps {
   duration: number;
   hasFutureSessions: boolean;
   price: number;
+  href: string;
 }
 
 const TourCardContent: React.FC<TourCardContentProps> = ({
@@ -24,7 +25,8 @@ const TourCardContent: React.FC<TourCardContentProps> = ({
   mainCoach,
   duration,
   hasFutureSessions,
-  price
+  price,
+  href
 }) => {
   return (
     <div className="p-6 flex flex-col flex-grow">
@@ -41,6 +43,7 @@ const TourCardContent: React.FC<TourCardContentProps> = ({
         duration={duration}
         hasFutureSessions={hasFutureSessions}
         price={price}
+        href={href}
       />
     </div>
   );
