@@ -12,13 +12,10 @@ import { notFound } from 'next/navigation';
 
 export const dynamic = 'force-static'; // per SSG puro
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
+type Params = { slug: string };
+type Props = { params: Promise<Params> };
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<Params[]> {
   const client = getClient();
 
   try {
