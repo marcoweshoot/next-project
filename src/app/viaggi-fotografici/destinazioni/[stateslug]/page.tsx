@@ -1,4 +1,3 @@
-
 import { notFound } from 'next/navigation';
 import { gql } from 'graphql-request';
 import { getClient } from '@/lib/graphqlClient';
@@ -12,7 +11,6 @@ import DestinationDetailEmptyState from '@/components/destination-detail/Destina
 
 export const dynamic = 'force-static';
 
-// ✅ QUERY aggiornata per compatibilità con GraphQL senza filters
 const GET_DESTINATION_STATE_PAGE = gql`
   query GetDestinationStatePage($locale: String, $slug: String) {
     states(locale: $locale, where: { slug: $slug }) {
@@ -94,24 +92,18 @@ const GET_ALL_STATE_SLUGS = gql`
 
 export async function generateStaticParams() {
   const client = getClient();
-
   try {
     const data = await client.request(GET_ALL_STATE_SLUGS);
     const states = (data as { states: { slug: string }[] }).states;
-
-    return states.map((state) => ({
-      stateslug: state.slug,
-    }));
-  } catch (error) {
-    console.error('Errore in generateStaticParams:', error);
+    return states.map((state) => ({ stateslug: state.slug }));
+  } catch {
     return [];
   }
 }
 
+type Params = { stateslug: string };
 interface Props {
-  params: {
-    stateslug: string;
-  };
+  params: Promise<Params>;
 }
 
 export default async function StatePage({ params }: Props) {
@@ -177,8 +169,7 @@ export default async function StatePage({ params }: Props) {
         <Footer />
       </div>
     );
-  } catch (error) {
-    console.error('Errore durante il fetch della destinazione:', error);
+  } catch {
     notFound();
   }
 }
