@@ -31,6 +31,7 @@ function makeCsp() {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  staticGenerationTimeout: 180,
   productionBrowserSourceMaps: process.env.NEXT_PUBLIC_ENABLE_BROWSER_SOURCEMAPS === '1',
 
   images: {

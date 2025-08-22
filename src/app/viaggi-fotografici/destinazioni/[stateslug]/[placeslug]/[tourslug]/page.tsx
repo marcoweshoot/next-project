@@ -1,3 +1,6 @@
+// src/app/viaggi-fotografici/destinazioni/[stateslug]/[placeslug]/[tourslug]/page.tsx
+import fs from 'node:fs/promises'
+import path from 'node:path'
 import { permanentRedirect } from 'next/navigation'
 import dynamicImport from 'next/dynamic'
 import { unstable_cache as nextCache } from 'next/cache'
@@ -9,10 +12,11 @@ import SocialProofSection from '@/components/SocialProofSection'
 
 // SSG: forziamo il rendering statico
 export const dynamic = 'force-static'
-// Consenti fallback stile "blocking" per gli slug non pre-renderizzati
+// Consenti fallback stile "blocking" per slug non pre-renderizzati
 export const dynamicParams = true
 
 const CANONICAL_BASE = '/viaggi-fotografici/destinazioni'
+const SNAPSHOT_DIR = path.join(process.cwd(), 'public', 'snapshots')
 
 type Params = { stateslug: string; placeslug: string; tourslug: string }
 type Props = { params: Promise<Params> }
@@ -65,7 +69,41 @@ function extractPastCoaches(sessions: any[] = []) {
   )
 }
 
+// ---------- SNAPSHOT HELPERS ----------
+async function readSnapshotTour(slug: string) {
+  try {
+    const file = path.join(SNAPSHOT_DIR, `tour.${slug}.json`)
+    const raw = await fs.readFile(file, 'utf8')
+    const data = JSON.parse(raw)
+    return data ?? null
+  } catch {
+    return null
+  }
+}
+async function readSnapshotList(): Promise<any[]> {
+  try {
+    const file = path.join(SNAPSHOT_DIR, 'tours.json')
+    const raw = await fs.readFile(file, 'utf8')
+    const data = JSON.parse(raw)
+    return Array.isArray(data) ? data : []
+  } catch {
+    return []
+  }
+}
+// -------------------------------------
+
 async function fetchTourOnce(slug: string) {
+  // 1) snapshot-first (file di dettaglio se presente)
+  const snap = await readSnapshotTour(slug)
+  if (snap) return snap
+
+  // 1-bis) se il dettaglio per-tour non esiste, prova a usare la lista snapshot
+  //        (evita la chiamata al CMS durante il build)
+  const list = await readSnapshotList()
+  const fromList = list.find((t: any) => t?.slug === slug)
+  if (fromList) return fromList
+
+  // 2) fallback al CMS
   const client = getClient()
   let data = await client.request<TourDetailResponse>(GET_TOUR_BY_SLUG, { slug, locale: 'it' })
   let tours = data?.tours ?? []
@@ -86,31 +124,36 @@ function getTourCached(slug: string) {
 }
 
 export async function generateStaticParams(): Promise<Params[]> {
-  const client = getClient()
-  try {
-    const data = (await client.request(GET_ALL_TOUR_SLUGS, { locale: 'it' })) as { tours: any[] }
-    const tours: any[] = data?.tours ?? []
+  // 1) snapshot-first
+  let tours: any[] = await readSnapshotList()
 
-    const params: Params[] = []
-    const seen = new Set<string>()
-
-    for (const tour of tours) {
-      const stateSlugs = mapSlugs(tour.states)
-      const placeSlugs = mapSlugs(tour.places)
-      const canonicalState = stateSlugs[0] || 'nessuno-stato'
-      const canonicalPlace = placeSlugs[0] || 'nessuna-location'
-      const key = `${canonicalState}__${canonicalPlace}__${tour.slug}`
-      if (seen.has(key)) continue
-      seen.add(key)
-      params.push({ stateslug: canonicalState, placeslug: canonicalPlace, tourslug: tour.slug })
+  // 2) fallback al CMS
+  if (!tours.length) {
+    try {
+      const client = getClient()
+      const data = (await client.request(GET_ALL_TOUR_SLUGS, { locale: 'it' })) as { tours: any[] }
+      tours = data?.tours ?? []
+    } catch {
+      tours = []
     }
-
-    // Pre-renderizza solo i primi N per evitare timeouts in build
-    const LIMIT = Number(process.env.SSG_TOUR_LIMIT ?? '120')
-    return params.slice(0, LIMIT)
-  } catch {
-    return []
   }
+
+  const params: Params[] = []
+  const seen = new Set<string>()
+
+  for (const tour of tours) {
+    const stateSlugs = mapSlugs(tour.states)
+    const placeSlugs = mapSlugs(tour.places)
+    const canonicalState = stateSlugs[0] || 'nessuno-stato'
+    const canonicalPlace = placeSlugs[0] || 'nessuna-location'
+    const key = `${canonicalState}__${canonicalPlace}__${tour.slug}`
+    if (seen.has(key)) continue
+    seen.add(key)
+    params.push({ stateslug: canonicalState, placeslug: canonicalPlace, tourslug: tour.slug })
+  }
+
+  const LIMIT = Number(process.env.SSG_TOUR_LIMIT ?? '120')
+  return params.slice(0, LIMIT)
 }
 
 export default async function TourDetailPage({ params }: Props) {
@@ -150,7 +193,6 @@ export default async function TourDetailPage({ params }: Props) {
       <div className="min-h-screen bg-white">
         <Header />
 
-        {/* H1 dovrebbe stare dentro questo componente */}
         <TourDetailHeaderClient
           tour={tour}
           reviewsCount={reviewsCount}
@@ -159,15 +201,12 @@ export default async function TourDetailPage({ params }: Props) {
           placeSlug={placeslug}
         />
 
-        <SocialProofSection /> {/* idealmente usa h2 al suo interno */}
+        <SocialProofSection />
 
-        {/* 👇 Aggiungiamo l'H2 di sezione prima degli step/itinerario */}
         <section aria-labelledby="itinerary-heading" className="mt-8">
           <h2 id="itinerary-heading" className="sr-only">
             Itinerario giorno per giorno
           </h2>
-
-          {/* Dentro questo componente mantieni: Step=h3, Location=h4, Card=h5 */}
           <TourDetailContentClient tour={tour} coaches={coaches} isFallbackPast={isFallbackPast} />
         </section>
 
