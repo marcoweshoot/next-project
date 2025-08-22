@@ -1,0 +1,51 @@
+{
+  "slug": "dolomiti-autunnali",
+  "title": "Dolomiti autunnali: foliage, luce dorata e paesaggi maestosi",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "veneto"
+  },
+  "sessions": [
+    {
+      "start": "2025-10-16",
+      "end": "2025-10-19"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "434",
+      "title": "Lago di Carezza",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "435",
+      "title": "Lago di Braies",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "436",
+      "title": "Lago Anterselva",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "437",
+      "title": "Val di Funes",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

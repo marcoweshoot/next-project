@@ -1,0 +1,39 @@
+{
+  "slug": "workshop-fotografia-foliage-faggi-torti",
+  "title": "Foliage: workshop di fotografia alla foresta dei faggi torti",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "abruzzo"
+  },
+  "sessions": [
+    {
+      "start": "2024-10-26",
+      "end": "2024-10-26"
+    },
+    {
+      "start": "2025-10-11",
+      "end": "2025-10-11"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "378",
+      "title": "bosco di jacci di verre",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "379",
+      "title": "foresta di jacci di verre",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

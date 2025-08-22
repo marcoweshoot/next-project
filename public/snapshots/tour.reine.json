@@ -1,0 +1,246 @@
+{
+  "slug": "reine",
+  "title": "Lofoten: esperienza tra i fiordi del nord e le affascinanti aurore boreali",
+  "states": {
+    "slug": "norvegia"
+  },
+  "places": {
+    "slug": "lofoten"
+  },
+  "sessions": [
+    {
+      "start": "2022-02-06",
+      "end": "2022-02-13"
+    },
+    {
+      "start": "2022-02-13",
+      "end": "2022-02-20"
+    },
+    {
+      "start": "2022-11-06",
+      "end": "2022-11-13"
+    },
+    {
+      "start": "2023-02-05",
+      "end": "2023-02-12"
+    },
+    {
+      "start": "2023-11-05",
+      "end": "2023-11-12"
+    },
+    {
+      "start": "2024-02-02",
+      "end": "2024-02-09"
+    },
+    {
+      "start": "2024-02-09",
+      "end": "2024-02-16"
+    },
+    {
+      "start": "2024-11-08",
+      "end": "2024-11-15"
+    },
+    {
+      "start": "2024-11-01",
+      "end": "2024-11-08"
+    },
+    {
+      "start": "2025-02-02",
+      "end": "2025-02-09"
+    },
+    {
+      "start": "2025-02-09",
+      "end": "2025-02-16"
+    },
+    {
+      "start": "2025-12-07",
+      "end": "2025-12-14"
+    },
+    {
+      "start": "2025-09-21",
+      "end": "2025-09-28"
+    },
+    {
+      "start": "2026-02-07",
+      "end": "2026-02-14"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "3",
+      "title": "Hamnoy",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "45",
+      "title": "Evenes",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "46",
+      "title": "Svolvaer",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "47",
+      "title": "Spiaggia di kvalvika",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "48",
+      "title": "Spiaggia di Haukland",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "49",
+      "title": "Nusfjord",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "50",
+      "title": "Spiaggia di Skagsanden",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "51",
+      "title": "Ponte Fredvang",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "52",
+      "title": "Spiaggia di Uttakleiv",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "53",
+      "title": "Reine",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "54",
+      "title": "Flakstad",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "168",
+      "title": "WeShooters sotto l'aurora boreale alle Lofoten",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "169",
+      "title": "Tramonto scogliera lofoten",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "170",
+      "title": "Gruppo WeShooters in viaggio alle Lofoten",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "171",
+      "title": "WeShooters emozionati l'aurora boreale alle Lofoten",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "174",
+      "title": "WeShooters fotografa montagne Lofoten",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "272",
+      "title": "Vareid beach",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "341",
+      "title": "WeShooters sotto l'aurora Boreale Lofoten",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

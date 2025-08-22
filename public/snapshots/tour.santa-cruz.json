@@ -1,0 +1,123 @@
+{
+  "slug": "santa-cruz",
+  "title": "Madeira: scopriamo l’Isola tra selvagge foreste e scogliere",
+  "states": {
+    "slug": "portogallo"
+  },
+  "places": {
+    "slug": "madeira"
+  },
+  "sessions": [
+    {
+      "start": "2022-04-03",
+      "end": "2022-04-10"
+    },
+    {
+      "start": "2022-09-17",
+      "end": "2022-09-24"
+    },
+    {
+      "start": "2023-10-21",
+      "end": "2023-10-28"
+    },
+    {
+      "start": "2024-10-19",
+      "end": "2024-10-26"
+    },
+    {
+      "start": "2026-04-11",
+      "end": "2026-04-18"
+    },
+    {
+      "start": "2024-08-18",
+      "end": "2024-08-25"
+    },
+    {
+      "start": "2025-04-26",
+      "end": "2025-05-03"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "64",
+      "title": "Santa Cruz",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "65",
+      "title": "Fanal pond",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "66",
+      "title": "Parco naturale di Madeira",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "67",
+      "title": "Canical",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "68",
+      "title": "Ponta do Rosto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "267",
+      "title": "Pico do Areiro",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "269",
+      "title": "Albero Fanal Pond",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "270",
+      "title": "Praia da Ribeira da Janela",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "350",
+      "title": "Whispering Glade",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "352",
+      "title": "Day one",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

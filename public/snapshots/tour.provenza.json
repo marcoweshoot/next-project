@@ -1,0 +1,144 @@
+{
+  "slug": "provenza",
+  "title": "Provenza: un'esplosione di colori tra campi di lavanda, albe e tramonti",
+  "states": {
+    "slug": "francia"
+  },
+  "places": {
+    "slug": "valensole"
+  },
+  "sessions": [
+    {
+      "start": "2022-06-30",
+      "end": "2022-07-03"
+    },
+    {
+      "start": "2023-06-29",
+      "end": "2023-07-02"
+    },
+    {
+      "start": "2024-06-27",
+      "end": "2024-06-30"
+    },
+    {
+      "start": "2024-07-04",
+      "end": "2024-07-07"
+    },
+    {
+      "start": "2025-07-03",
+      "end": "2025-07-06"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "9",
+      "title": "Valensole",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "122",
+      "title": "Alba campi di lavanda",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "123",
+      "title": "Tramonto sui campi di Lavanda",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "124",
+      "title": "Via lattea sui campi di lavanda",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "145",
+      "title": "WeShooters sui campi di lavanda",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "179",
+      "title": "Selfie WeShooters in Provenza",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "180",
+      "title": "WeShooters all'alba campi di lavanda",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "182",
+      "title": "Teoria sul campo di lavanda",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "296",
+      "title": "Gole del Verdon",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "slug": "tenerife",
+  "title": "Tenerife: paesaggi lunari sotto uno dei cieli più scuri d'Europa",
+  "states": {
+    "slug": "spagna"
+  },
+  "places": {
+    "slug": "canarie"
+  },
+  "sessions": [
+    {
+      "start": "2023-06-10",
+      "end": "2023-06-17"
+    },
+    {
+      "start": "2024-05-04",
+      "end": "2024-05-11"
+    },
+    {
+      "start": "2024-05-11",
+      "end": "2024-05-18"
+    },
+    {
+      "start": "2025-05-24",
+      "end": "2025-05-31"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "84",
+      "title": "Mines of San Jose",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "85",
+      "title": "Queen Shoes",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "86",
+      "title": "Osservatorio del Teide",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "87",
+      "title": "Roque Cinchado",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "88",
+      "title": "Roque de Garcìa",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "89",
+      "title": "Il Teide",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "276",
+      "title": "Mirador do Ayosa",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "277",
+      "title": "Playa do Benijo",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "278",
+      "title": "Arco di Tajao",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "279",
+      "title": "Punta de Teno",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "410",
+      "title": "Tramonto Playa de Benijo",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "411",
+      "title": "Tramonto a Mirador la Tarta",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "412",
+      "title": "Cornice naturale Mirador la Tarta",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

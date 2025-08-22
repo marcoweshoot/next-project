@@ -1,0 +1,219 @@
+{
+  "slug": "wadi-rum",
+  "title": "Giordania: tra paesaggi antichi, deserti e tradizioni",
+  "states": {
+    "slug": "giordania"
+  },
+  "places": {
+    "slug": "aqaba"
+  },
+  "sessions": [
+    {
+      "start": "2022-02-26",
+      "end": "2022-03-05"
+    },
+    {
+      "start": "2022-11-20",
+      "end": "2022-11-27"
+    },
+    {
+      "start": "2023-11-12",
+      "end": "2023-11-19"
+    },
+    {
+      "start": "2024-11-07",
+      "end": "2024-11-14"
+    },
+    {
+      "start": "2025-11-09",
+      "end": "2025-11-16"
+    },
+    {
+      "start": "2025-02-22",
+      "end": "2025-03-01"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "70",
+      "title": "Petra",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "71",
+      "title": "Deserto Wadi-Rum",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "125",
+      "title": "Petra Piccola",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "126",
+      "title": "Ponte di Roccia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "134",
+      "title": "coach e alunni in Giordania",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "140",
+      "title": "Escursione in jeep nel deserto Wadi Rum",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "141",
+      "title": "Pausa pranzo e ralax nel deserto Wadi Rum",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "150",
+      "title": "WeShooters in viaggio vesro Petra",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "172",
+      "title": "Pranzo nel deserto Wadi Rum",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "173",
+      "title": "Giordania dietro le quinte",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "304",
+      "title": "Amman",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "305",
+      "title": "Jerash",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "306",
+      "title": "Villaggio di Ajloun",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "307",
+      "title": "Lavorazione del Sapone",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "308",
+      "title": "Artigiano del legno",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "309",
+      "title": "Madaba",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "310",
+      "title": "Riserva di Dana",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "311",
+      "title": "Wadi Dana",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "312",
+      "title": "Le erbe officinali",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "313",
+      "title": "Mar Morto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "314",
+      "title": " Tramonto sul Mar morto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "315",
+      "title": "Lavorazione dei mosaici",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

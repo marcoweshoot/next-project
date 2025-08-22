@@ -1,0 +1,90 @@
+{
+  "slug": "rocca-calascio",
+  "title": "Rocca Calascio: Una notte incredibile in un luogo incantato",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "abruzzo"
+  },
+  "sessions": [
+    {
+      "start": "2022-05-07",
+      "end": "2022-05-07"
+    },
+    {
+      "start": "2022-07-30",
+      "end": "2022-07-30"
+    },
+    {
+      "start": "2022-08-27",
+      "end": "2022-08-27"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "26",
+      "title": "Rocca Calascio",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "190",
+      "title": "Weshooters fotografano tramonto gran sasso",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "191",
+      "title": "Scouting viaggio fotografico rocca calascio",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "215",
+      "title": "Ruderi Rocca Calascio",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "216",
+      "title": "Chiesa santa Maria della pietà",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "217",
+      "title": "Via lattea su rudere a Calascio",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "218",
+      "title": "Tramonto a Rocca Calascio",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

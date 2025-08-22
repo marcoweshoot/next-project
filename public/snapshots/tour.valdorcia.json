@@ -1,0 +1,384 @@
+{
+  "slug": "valdorcia",
+  "title": "Immergiti nei paesaggi sinuosi della Val D'Orcia e Crete Senesi",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "toscana"
+  },
+  "sessions": [
+    {
+      "start": "2021-12-18",
+      "end": "2021-12-19"
+    },
+    {
+      "start": "2022-01-08",
+      "end": "2022-01-09"
+    },
+    {
+      "start": "2022-02-05",
+      "end": "2022-02-06"
+    },
+    {
+      "start": "2022-03-05",
+      "end": "2022-03-06"
+    },
+    {
+      "start": "2022-04-09",
+      "end": "2022-04-10"
+    },
+    {
+      "start": "2022-05-14",
+      "end": "2022-05-15"
+    },
+    {
+      "start": "2022-06-04",
+      "end": "2022-06-05"
+    },
+    {
+      "start": "2022-07-09",
+      "end": "2022-07-10"
+    },
+    {
+      "start": "2022-08-06",
+      "end": "2022-08-07"
+    },
+    {
+      "start": "2022-09-24",
+      "end": "2022-09-25"
+    },
+    {
+      "start": "2022-10-22",
+      "end": "2022-10-23"
+    },
+    {
+      "start": "2022-11-19",
+      "end": "2022-11-20"
+    },
+    {
+      "start": "2022-12-17",
+      "end": "2022-12-18"
+    },
+    {
+      "start": "2023-01-07",
+      "end": "2023-01-08"
+    },
+    {
+      "start": "2023-03-25",
+      "end": "2023-03-26"
+    },
+    {
+      "start": "2023-06-17",
+      "end": "2023-06-18"
+    },
+    {
+      "start": "2023-09-16",
+      "end": "2023-09-17"
+    },
+    {
+      "start": "2023-11-04",
+      "end": "2023-11-05"
+    },
+    {
+      "start": "2024-01-20",
+      "end": "2024-01-21"
+    },
+    {
+      "start": "2023-12-15",
+      "end": "2023-12-16"
+    },
+    {
+      "start": "2024-03-23",
+      "end": "2024-03-24"
+    },
+    {
+      "start": "2024-02-17",
+      "end": "2024-02-18"
+    },
+    {
+      "start": "2024-04-13",
+      "end": "2024-04-14"
+    },
+    {
+      "start": "2024-10-12",
+      "end": "2024-10-13"
+    },
+    {
+      "start": "2024-06-08",
+      "end": "2024-06-09"
+    },
+    {
+      "start": "2024-09-14",
+      "end": "2024-09-15"
+    },
+    {
+      "start": "2024-11-09",
+      "end": "2024-11-10"
+    },
+    {
+      "start": "2025-01-04",
+      "end": "2025-01-05"
+    },
+    {
+      "start": "2025-03-22",
+      "end": "2025-03-23"
+    },
+    {
+      "start": "2025-04-26",
+      "end": "2025-04-27"
+    },
+    {
+      "start": "2025-06-14",
+      "end": "2025-06-15"
+    },
+    {
+      "start": "2025-09-06",
+      "end": "2025-09-07"
+    },
+    {
+      "start": "2025-11-15",
+      "end": "2025-11-16"
+    },
+    {
+      "start": "2025-10-18",
+      "end": "2025-10-19"
+    },
+    {
+      "start": "2025-07-05",
+      "end": "2025-07-06"
+    },
+    {
+      "start": "2026-01-24",
+      "end": "2026-01-25"
+    },
+    {
+      "start": "2026-02-21",
+      "end": "2026-02-22"
+    },
+    {
+      "start": "2026-03-28",
+      "end": "2026-03-29"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "8",
+      "title": "Podere belvedere in Val d'Orcia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "15",
+      "title": "Podere Baccoleno",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "16",
+      "title": "Cipressini in Val d'Orcia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "63",
+      "title": "Cappella della Madonna di Vitaleta",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "137",
+      "title": "Alunni fotografano alba in toscana",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "143",
+      "title": "WeShooters nel viaggio in Toscana",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "152",
+      "title": "WeShooters in notturna in Toscana",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "153",
+      "title": "WeShooters al tramonto podere baccoleno",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "160",
+      "title": "Drone weshooters vitaleta",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "161",
+      "title": "WeShooters sui campi fioriti toscana",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "162",
+      "title": "weshooters sui campi di grano",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "295",
+      "title": "Poggio Covili",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "slug": "dolomiti",
+  "title": "Le Dolomiti: un'esperienza fotografica incredibile tra scenari mozzafiato",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "veneto"
+  },
+  "sessions": [
+    {
+      "start": "2022-07-28",
+      "end": "2022-07-31"
+    },
+    {
+      "start": "2022-09-29",
+      "end": "2022-10-02"
+    },
+    {
+      "start": "2023-06-29",
+      "end": "2023-07-02"
+    },
+    {
+      "start": "2023-07-06",
+      "end": "2023-07-09"
+    },
+    {
+      "start": "2024-07-11",
+      "end": "2024-07-14"
+    },
+    {
+      "start": "2024-07-04",
+      "end": "2024-07-07"
+    },
+    {
+      "start": "2025-07-03",
+      "end": "2025-07-06"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "11",
+      "title": "Lago di Limides",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "12",
+      "title": "Tre Cime di Lavaredo",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "13",
+      "title": "Passo Giau",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "14",
+      "title": "Pale di San Martino",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "127",
+      "title": "Cadini di Misurina",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "154",
+      "title": "Weshooters brindisi in dolomiti",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "157",
+      "title": "WeShooter in dolomiti alle tre cime",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "158",
+      "title": "WeShooter corso di post produzione dolomiti",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "159",
+      "title": "WeShooters alle cinque torri dolomiti",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "184",
+      "title": "Gruppo WeShooters in Dolomiti",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "185",
+      "title": "Passeggiata lago Limides",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "186",
+      "title": "WeShooter scattano la Tofana",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "187",
+      "title": "WeShooters tra la nebbia dolomiti",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "188",
+      "title": "Grotta tre cime di lavaredo",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "189",
+      "title": "WeShooter fase di scatto dolomiti",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "208",
+      "title": "Genziana Passo Giau",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "slug": "fiordi-del-nord",
+  "title": "Lofoten: vivi i grandi fiordi del nord",
+  "states": {
+    "slug": "norvegia"
+  },
+  "places": {
+    "slug": "lofoten"
+  },
+  "sessions": [
+    {
+      "start": "2022-09-03",
+      "end": "2022-09-10"
+    },
+    {
+      "start": "2024-08-25",
+      "end": "2024-09-01"
+    },
+    {
+      "start": "2025-08-16",
+      "end": "2025-08-23"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "3",
+      "title": "Hamnoy",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "47",
+      "title": "Spiaggia di kvalvika",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "48",
+      "title": "Spiaggia di Haukland",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "52",
+      "title": "Spiaggia di Uttakleiv",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "109",
+      "title": "Volandstind",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "110",
+      "title": "Bunes",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "111",
+      "title": "Helvetestinden",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "112",
+      "title": "Sakrisoy",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "406",
+      "title": "Reinebringen",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "407",
+      "title": "Skedra",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "408",
+      "title": "Vaeroy",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "409",
+      "title": "Munkebu",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

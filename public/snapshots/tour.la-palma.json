@@ -1,0 +1,131 @@
+{
+  "slug": "la-palma",
+  "title": "La Palma: vieni ad ammirare la via lattea tra paesaggi vulcanici e marini",
+  "states": {
+    "slug": "spagna"
+  },
+  "places": {
+    "slug": "canarie"
+  },
+  "sessions": [
+    {
+      "start": "2022-02-06",
+      "end": "2022-02-10"
+    },
+    {
+      "start": "2022-04-30",
+      "end": "2022-05-04"
+    },
+    {
+      "start": "2022-05-21",
+      "end": "2022-05-28"
+    },
+    {
+      "start": "2023-06-18",
+      "end": "2023-06-22"
+    },
+    {
+      "start": "2024-07-03",
+      "end": "2024-07-07"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "4",
+      "title": "Roque De Los Muchachos",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "27",
+      "title": "Faro de Fuencaliente",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "28",
+      "title": "Poris De Candelaria",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "117",
+      "title": "Pico de la Cruz",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "118",
+      "title": "Caldera de Taburiente",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "119",
+      "title": "Saline di La Palma",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "121",
+      "title": "Osservatorio del Roque de Los Muchachos",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "146",
+      "title": "Tramonto a La Palma",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "175",
+      "title": "Weshooters a La Palma",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "176",
+      "title": "Gruppo a cena in relax a la palma",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "177",
+      "title": "coach e weshooter al tramonto la palma",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "178",
+      "title": "Coach che segue WeShooters a La Palma",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

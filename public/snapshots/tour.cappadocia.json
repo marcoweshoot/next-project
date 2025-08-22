@@ -1,0 +1,158 @@
+{
+  "slug": "cappadocia",
+  "title": "Cappadocia: esperienza fotografica tra i paesaggi della Turchia",
+  "states": {
+    "slug": "turchia"
+  },
+  "places": {
+    "slug": "goreme"
+  },
+  "sessions": [
+    {
+      "start": "2022-05-14",
+      "end": "2022-05-21"
+    },
+    {
+      "start": "2022-09-03",
+      "end": "2022-09-10"
+    },
+    {
+      "start": "2023-06-02",
+      "end": "2023-06-09"
+    },
+    {
+      "start": "2024-06-01",
+      "end": "2024-06-08"
+    },
+    {
+      "start": "2023-09-23",
+      "end": "2023-09-30"
+    },
+    {
+      "start": "2024-09-14",
+      "end": "2024-09-21"
+    },
+    {
+      "start": "2025-06-14",
+      "end": "2025-06-21"
+    },
+    {
+      "start": "2025-09-06",
+      "end": "2025-09-13"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "220",
+      "title": "Goreme",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "221",
+      "title": "Museo all'aperto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "222",
+      "title": "Fairy Chimney",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "223",
+      "title": "Valle delle Rose tramonto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "224",
+      "title": "Valle Ihlara",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "225",
+      "title": "Goreme dalla mongolfiera",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "226",
+      "title": "Canyon di Goreme",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "274",
+      "title": "Valle delle Rose",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "297",
+      "title": "Lago salato Tuz Golu",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "316",
+      "title": "Gruppo Cappadocia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "317",
+      "title": "Gruppo Cappadocia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "318",
+      "title": "Gruppo WeShooters Cappadocia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "354",
+      "title": "Instanbul",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

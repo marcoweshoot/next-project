@@ -1,0 +1,83 @@
+{
+  "slug": "deserto-algerino",
+  "title": "Viaggio Fotografico in Algeria: l'altra faccia del Sahara",
+  "states": {
+    "slug": "algeria"
+  },
+  "places": {
+    "slug": "djanet"
+  },
+  "sessions": [
+    {
+      "start": "2026-03-21",
+      "end": "2026-03-28"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "414",
+      "title": "Canyon di El Berdj",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "426",
+      "title": "Tin Merzouga",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "427",
+      "title": "Moula Naga",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "428",
+      "title": "Wan Nagn",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "429",
+      "title": "Erg Admer",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "430",
+      "title": "Tilalin",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "432",
+      "title": "Djanet",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "433",
+      "title": "Algerian Nights",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

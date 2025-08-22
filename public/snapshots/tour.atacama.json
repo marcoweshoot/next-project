@@ -1,0 +1,99 @@
+{
+  "slug": "atacama",
+  "title": "Atacama: Il cielo piu' buio del pianeta nel Deserto",
+  "states": {
+    "slug": "cile"
+  },
+  "places": {
+    "slug": "antofagasta"
+  },
+  "sessions": [
+    {
+      "start": "2023-05-11",
+      "end": "2023-05-25"
+    },
+    {
+      "start": "2024-04-04",
+      "end": "2024-04-18"
+    },
+    {
+      "start": "2025-03-20",
+      "end": "2025-04-04"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "99",
+      "title": "Santiago del Cile",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "100",
+      "title": "La mano del Deserto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "101",
+      "title": "Cerro Paranal",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "102",
+      "title": "VLT",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "103",
+      "title": "Valle Arcobaleno",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "104",
+      "title": "Geyser El Tatio",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "105",
+      "title": "Valle della Luna",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "106",
+      "title": "Laguna Chaxa",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "107",
+      "title": "Laguna Miscanti",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

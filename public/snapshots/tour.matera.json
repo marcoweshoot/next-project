@@ -1,0 +1,70 @@
+{
+  "slug": "matera",
+  "title": "Scopri i paesaggi di Matera, una delle città più antiche al mondo",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "basilicata"
+  },
+  "sessions": [
+    {
+      "start": "2022-01-29",
+      "end": "2022-01-30"
+    },
+    {
+      "start": "2023-12-16",
+      "end": "2023-12-17"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "22",
+      "title": "Matera incorniciata al tramonto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "183",
+      "title": "Gruppo WeShooters a Matera",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "205",
+      "title": "Sassi di Matera al tramonto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "206",
+      "title": "Belvedere Murgia Timone",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "207",
+      "title": "Matera di notte",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

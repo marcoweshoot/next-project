@@ -1,0 +1,127 @@
+{
+  "slug": "faro",
+  "title": "Algarve: un posto unico tra mare, scogliere e via lattea",
+  "states": {
+    "slug": "portogallo"
+  },
+  "places": {
+    "slug": "algarve"
+  },
+  "sessions": [
+    {
+      "start": "2021-12-04",
+      "end": "2021-12-11"
+    },
+    {
+      "start": "2022-01-29",
+      "end": "2022-02-06"
+    },
+    {
+      "start": "2022-12-03",
+      "end": "2022-12-10"
+    },
+    {
+      "start": "2023-12-10",
+      "end": "2023-12-17"
+    },
+    {
+      "start": "2023-12-03",
+      "end": "2023-12-10"
+    },
+    {
+      "start": "2024-12-14",
+      "end": "2024-12-21"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "55",
+      "title": "Faro",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "56",
+      "title": "Praia do Castelejo",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "57",
+      "title": "Faro di Capo San Vicente",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "58",
+      "title": "Ponta da Piedade",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "59",
+      "title": "Praia do Barranco do Martinho",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "60",
+      "title": "Praia de Carvoeiro",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "61",
+      "title": "Praia da Marinha",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "62",
+      "title": "Praia de Albandeira",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "142",
+      "title": "WeShooter al tramonto in Algarve",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "348",
+      "title": "Sagres",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "349",
+      "title": "Algarve costa Ovest",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

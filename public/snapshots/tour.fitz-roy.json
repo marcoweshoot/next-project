@@ -1,0 +1,143 @@
+{
+  "slug": "fitz-roy",
+  "title": "Patagonia: un viaggio fotografico che unisce passione per la fotografia e amore per l'avventura.",
+  "states": {
+    "slug": "argentina"
+  },
+  "places": {
+    "slug": "fitz-roy"
+  },
+  "sessions": [
+    {
+      "start": "2024-03-16",
+      "end": "2024-03-27"
+    },
+    {
+      "start": "2025-04-07",
+      "end": "2025-04-21"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "322",
+      "title": "Fitz roy",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "324",
+      "title": "Laguna de Los Tres",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "325",
+      "title": "Foresta Secca",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "326",
+      "title": "Laguna Sucia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "327",
+      "title": "Cascata Nascosta Patagonia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "328",
+      "title": "Laguna Capri",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "329",
+      "title": "Laguna Torre",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "330",
+      "title": "Cerro Torre",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "331",
+      "title": "Maestri Observation Point",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "334",
+      "title": "Gruppo WeShoot inizio trekking",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "335",
+      "title": "WeShooters Patagonia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "336",
+      "title": "WeShooters  verso Laguna Torre",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "337",
+      "title": "WeShooters inizio sentiero El Chalten",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "338",
+      "title": "Scatti a Laguna Torre",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "339",
+      "title": "WeShooters all'Alba sul Fitz Roy e Cerro Torre",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

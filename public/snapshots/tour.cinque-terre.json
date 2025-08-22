@@ -1,0 +1,193 @@
+{
+  "slug": "cinque-terre",
+  "title": "Cinque Terre: lasciati ispirare da questi antichi borghi sul mare",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "liguria"
+  },
+  "sessions": [
+    {
+      "start": "2021-12-18",
+      "end": "2021-12-19"
+    },
+    {
+      "start": "2022-01-15",
+      "end": "2022-01-16"
+    },
+    {
+      "start": "2022-02-12",
+      "end": "2022-02-13"
+    },
+    {
+      "start": "2022-03-12",
+      "end": "2022-03-13"
+    },
+    {
+      "start": "2022-10-29",
+      "end": "2022-10-30"
+    },
+    {
+      "start": "2022-11-26",
+      "end": "2022-11-27"
+    },
+    {
+      "start": "2022-12-03",
+      "end": "2022-12-04"
+    },
+    {
+      "start": "2023-01-28",
+      "end": "2023-01-29"
+    },
+    {
+      "start": "2023-10-21",
+      "end": "2023-10-22"
+    },
+    {
+      "start": "2023-11-25",
+      "end": "2023-11-26"
+    },
+    {
+      "start": "2024-01-13",
+      "end": "2024-01-14"
+    },
+    {
+      "start": "2024-03-02",
+      "end": "2024-03-03"
+    },
+    {
+      "start": "2024-05-18",
+      "end": "2024-05-19"
+    },
+    {
+      "start": "2024-11-16",
+      "end": "2024-11-17"
+    },
+    {
+      "start": "2024-02-24",
+      "end": "2024-02-25"
+    },
+    {
+      "start": "2024-12-14",
+      "end": "2024-12-15"
+    },
+    {
+      "start": "2025-01-18",
+      "end": "2025-01-19"
+    },
+    {
+      "start": "2025-12-20",
+      "end": "2025-12-21"
+    },
+    {
+      "start": "2026-01-17",
+      "end": "2026-01-18"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "17",
+      "title": "Manarola, Cinque Terre",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "18",
+      "title": "Vernazza",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "155",
+      "title": "Gruppo Weshooters alle cinque terre",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "156",
+      "title": "WeShooters a Vernazza",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "166",
+      "title": "WeShooters fotografano Vernazza",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "167",
+      "title": "WeShooters studiano Post produzione",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "271",
+      "title": "Riomaggiore",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

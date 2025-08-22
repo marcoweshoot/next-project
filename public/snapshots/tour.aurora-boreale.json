@@ -1,0 +1,254 @@
+{
+  "slug": "aurora-boreale",
+  "title": "Islanda: a caccia dell'aurora boreale",
+  "states": {
+    "slug": "islanda"
+  },
+  "places": {
+    "slug": "reykjavik"
+  },
+  "sessions": [
+    {
+      "start": "2024-03-30",
+      "end": "2024-04-06"
+    },
+    {
+      "start": "2024-03-16",
+      "end": "2024-03-23"
+    },
+    {
+      "start": "2024-10-06",
+      "end": "2024-10-13"
+    },
+    {
+      "start": "2024-10-13",
+      "end": "2024-10-20"
+    },
+    {
+      "start": "2024-10-20",
+      "end": "2024-10-27"
+    },
+    {
+      "start": "2025-03-07",
+      "end": "2025-03-14"
+    },
+    {
+      "start": "2025-10-05",
+      "end": "2025-10-12"
+    },
+    {
+      "start": "2025-10-12",
+      "end": "2025-10-19"
+    },
+    {
+      "start": "2026-03-07",
+      "end": "2026-03-14"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "2",
+      "title": "Vestrahorn",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "5",
+      "title": "Skogafoss",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "29",
+      "title": "Lago Kleifarvatn",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "30",
+      "title": "Chiesa di Budir",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "31",
+      "title": "Arnarstapi",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "32",
+      "title": "Skogafoss",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "33",
+      "title": "Seljalandsfoss",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "34",
+      "title": "Kvernufoss",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "35",
+      "title": "Sólheimajökull",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "36",
+      "title": "Vestrahorn",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "37",
+      "title": "Spiaggia di Diamanti",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "38",
+      "title": "Jokulsarlon",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "39",
+      "title": "Vík í Mýrdal",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "40",
+      "title": "Dyrhólaey",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "120",
+      "title": "Vestrahorn Islanda",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "132",
+      "title": " Sólheimajökull aurora boreale",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "136",
+      "title": "spiaggia dei diamanti islanda",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "138",
+      "title": "Fotografi sotto il kirkjufell",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "139",
+      "title": "Saluti dal Kirkjufell",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "319",
+      "title": "Londrangar",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "prati-di-tivo",
+  "title": "Prati di Tivo: Workshop di fotografia di paesaggio immersi nella neve",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "abruzzo"
+  },
+  "sessions": [
+    {
+      "start": "2025-12-13",
+      "end": "2025-12-14"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "422",
+      "title": "Prati di Tivo",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "423",
+      "title": "Gran Sasso",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "424",
+      "title": "Prati di Tivo in blu hour",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "425",
+      "title": "Alba ai Prati di Tivo",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "slug": "cascate-del-volturno",
+  "title": "Cascate del Volturno: un workshop fotografico per catturare la magia dell'acqua in movimento",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "molise"
+  },
+  "sessions": [
+    {
+      "start": "2025-03-22",
+      "end": "2025-03-22"
+    },
+    {
+      "start": "2025-09-20",
+      "end": "2025-09-20"
+    },
+    {
+      "start": "2026-03-21",
+      "end": "2026-03-21"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "383",
+      "title": "Volturno Gran finale",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "384",
+      "title": "Volturno Leafing",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "385",
+      "title": "Volturno Pool Of Mist",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "386",
+      "title": "Volturno Dream Big",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "387",
+      "title": "Volturno Under Water",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "costa-dei-trabocchi",
+  "title": "Workshop fotografico alla Costa dei Trabocchi",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "abruzzo"
+  },
+  "sessions": [
+    {
+      "start": "2025-04-26",
+      "end": "2025-04-27"
+    },
+    {
+      "start": "2025-11-08",
+      "end": "2025-11-09"
+    },
+    {
+      "start": "2026-04-11",
+      "end": "2026-04-12"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "358",
+      "title": "Trabocco Turchino",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "388",
+      "title": "trabocco Punta Aderci",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "389",
+      "title": "trabocco del turchino",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "390",
+      "title": "Trabocco Punta Torre",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "391",
+      "title": "Trabocco Punta Le Morge",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "392",
+      "title": "Trabocco Spezzacatena",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

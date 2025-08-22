@@ -1,0 +1,124 @@
+{
+  "slug": "highlands",
+  "title": "Scozia: l'isola di Skye e i paesaggi incantati",
+  "states": {
+    "slug": "scozia"
+  },
+  "places": {
+    "slug": "isola-skye"
+  },
+  "sessions": [
+    {
+      "start": "2022-11-05",
+      "end": "2022-11-12"
+    },
+    {
+      "start": "2023-05-20",
+      "end": "2023-05-27"
+    },
+    {
+      "start": "2024-05-25",
+      "end": "2024-06-01"
+    },
+    {
+      "start": "2025-05-17",
+      "end": "2025-05-24"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "72",
+      "title": "Edimburgo",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "73",
+      "title": "Falls of Falloch",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "74",
+      "title": "Buachaille Etive Mor",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "75",
+      "title": "Eilean Donan",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "76",
+      "title": "Neist Point",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "77",
+      "title": "Old Man of Storr",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "78",
+      "title": "Quiraing",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "79",
+      "title": "Sligachan",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "80",
+      "title": "Fairy Pools",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "151",
+      "title": "WeShooters in Scozia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

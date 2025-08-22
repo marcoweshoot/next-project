@@ -1,0 +1,71 @@
+{
+  "slug": "lago-di-bled",
+  "title": "Slovenia: viaggio  fotografico sulle sponde del Lago di Bled",
+  "states": {
+    "slug": "slovenia"
+  },
+  "places": {
+    "slug": "alpi-giulie"
+  },
+  "sessions": [
+    {
+      "start": "2021-11-26",
+      "end": "2021-11-28"
+    },
+    {
+      "start": "2022-10-28",
+      "end": "2022-10-30"
+    },
+    {
+      "start": "2022-12-16",
+      "end": "2022-12-18"
+    },
+    {
+      "start": "2026-10-22",
+      "end": "2026-10-25"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "19",
+      "title": "Lago di Bled",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "20",
+      "title": "Chiesa di San Primus e Felicianus",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "21",
+      "title": "Lago Bohinj",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "415",
+      "title": "The Church of St. Primož",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "416",
+      "title": "Bled Drone",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

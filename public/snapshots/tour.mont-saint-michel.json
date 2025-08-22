@@ -1,0 +1,139 @@
+{
+  "slug": "mont-saint-michel",
+  "title": "Viaggio Fotografico in Bretagna e Mont Saint-Michel:  tra fari e coste frastagliate",
+  "states": {
+    "slug": "francia"
+  },
+  "places": {
+    "slug": "bretagna"
+  },
+  "sessions": [
+    {
+      "start": "2022-07-25",
+      "end": "2022-07-31"
+    },
+    {
+      "start": "2022-09-10",
+      "end": "2022-09-17"
+    },
+    {
+      "start": "2023-08-31",
+      "end": "2023-09-07"
+    },
+    {
+      "start": "2024-10-17",
+      "end": "2024-10-24"
+    },
+    {
+      "start": "2025-10-05",
+      "end": "2025-10-11"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "258",
+      "title": "Nantes vista dall'alto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "259",
+      "title": "Mont Saint Michel",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "260",
+      "title": "Castello Meur",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "261",
+      "title": "Faro Ploumanac’h",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "262",
+      "title": "Faro Kermorvan",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "263",
+      "title": "Faro di Pontusval",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "264",
+      "title": "Faro di Petit Minou",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "265",
+      "title": "Faro Pointe Saint Mathieu",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "299",
+      "title": "Rennes",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "417",
+      "title": "Castello Meur",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "418",
+      "title": "Alba al Faro Ploumanac’h",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "419",
+      "title": "Pointe Saint Mathieu",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "420",
+      "title": "Petit Minou",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

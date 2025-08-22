@@ -1,0 +1,211 @@
+{
+  "slug": "isola-smeraldo",
+  "title": "Irlanda: angoli nascosti tra scogliere, castelli e fari",
+  "states": {
+    "slug": "irlanda"
+  },
+  "places": {
+    "slug": "dublino"
+  },
+  "sessions": [
+    {
+      "start": "2022-06-11",
+      "end": "2022-06-18"
+    },
+    {
+      "start": "2022-09-11",
+      "end": "2022-09-18"
+    },
+    {
+      "start": "2023-09-09",
+      "end": "2023-09-16"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "211",
+      "title": "Downpatrick Head al tramonto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "227",
+      "title": "Lago Derryclare",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "228",
+      "title": "Abbazia Kylemore",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "229",
+      "title": "Lago Nero",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "230",
+      "title": "Westport",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "231",
+      "title": "Downpatrick Head",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "232",
+      "title": "Benbulbin",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "233",
+      "title": "Slieve league",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "234",
+      "title": "Bunbeg wreck Cara Na Mara",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "235",
+      "title": "Le Cascate Assaranca",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "236",
+      "title": "Arco di Crohy",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "237",
+      "title": "Letterkenny",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "238",
+      "title": "Mount Errigal",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "239",
+      "title": "Murder Hole Beach",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "240",
+      "title": "Fanad Head Lighthouse",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "241",
+      "title": "Dunluce Castle",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "242",
+      "title": "Giant’s Causeway",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "243",
+      "title": "The Dark Hedges",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "244",
+      "title": "Cascate Dunseverick",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "245",
+      "title": "Galway",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "246",
+      "title": "Dog’s Bay",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "247",
+      "title": "Dublino",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "266",
+      "title": "Castello dei Duchi di Bretagna",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "slug": "tulipani-e-mulini-a-vento",
+  "title": "Scouting Olanda: tulipani in fiore e mulini",
+  "states": {
+    "slug": "olanda"
+  },
+  "places": {
+    "slug": "amsterdam"
+  },
+  "sessions": [
+    {
+      "start": "2023-04-27",
+      "end": "2023-04-30"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "248",
+      "title": "Utrecht",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "249",
+      "title": "Kinderdijk",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "250",
+      "title": "Zaanse Schans",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "251",
+      "title": "Fattoria tipica olandese",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "252",
+      "title": "Schermerhorn",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "253",
+      "title": "Bergen",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "254",
+      "title": "Canali Amsterdam di notte",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "255",
+      "title": "Amsterdam riflessa nel canale",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

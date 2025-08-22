@@ -1,0 +1,171 @@
+{
+  "slug": "workshop-fotografia-roma",
+  "title": "Roma: workshop di fotografia",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "lazio"
+  },
+  "sessions": [
+    {
+      "start": "2024-09-07",
+      "end": "2024-09-07"
+    },
+    {
+      "start": "2024-10-05",
+      "end": "2024-10-05"
+    },
+    {
+      "start": "2024-11-16",
+      "end": "2024-11-16"
+    },
+    {
+      "start": "2024-12-21",
+      "end": "2024-12-21"
+    },
+    {
+      "start": "2025-01-25",
+      "end": "2025-01-25"
+    },
+    {
+      "start": "2025-02-15",
+      "end": "2025-02-15"
+    },
+    {
+      "start": "2025-03-29",
+      "end": "2025-03-29"
+    },
+    {
+      "start": "2025-04-19",
+      "end": "2025-04-19"
+    },
+    {
+      "start": "2025-05-17",
+      "end": "2025-05-17"
+    },
+    {
+      "start": "2025-06-14",
+      "end": "2025-06-14"
+    },
+    {
+      "start": "2025-09-20",
+      "end": "2025-09-20"
+    },
+    {
+      "start": "2025-10-11",
+      "end": "2025-10-11"
+    },
+    {
+      "start": "2025-11-22",
+      "end": "2025-11-22"
+    },
+    {
+      "start": "2025-12-13",
+      "end": "2025-12-13"
+    },
+    {
+      "start": "2025-08-30",
+      "end": "2025-08-30"
+    },
+    {
+      "start": "2026-01-10",
+      "end": "2026-01-10"
+    },
+    {
+      "start": "2026-02-07",
+      "end": "2026-02-07"
+    },
+    {
+      "start": "2026-03-14",
+      "end": "2026-03-14"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "371",
+      "title": "Castel Sant'Angelo riflesso nel Tevere",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "372",
+      "title": "Ponte Umberto I",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "373",
+      "title": "Fori Imperiali",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "374",
+      "title": "Colosseo con scie",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "375",
+      "title": "Colosseo in notturna",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "376",
+      "title": "Altare della Patria",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "377",
+      "title": "San Pietro al tramonto",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

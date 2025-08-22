@@ -1,0 +1,99 @@
+{
+  "slug": "winter-dolomiti",
+  "title": "Dolomiti Invernali: Un Paradiso Fotografico Tra Natura e Paesaggi innevati",
+  "states": {
+    "slug": "italia"
+  },
+  "places": {
+    "slug": "veneto"
+  },
+  "sessions": [
+    {
+      "start": "2024-01-11",
+      "end": "2024-01-14"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "343",
+      "title": "San Martino di Castrozza Innevata",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "344",
+      "title": "Lagazuoi",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "345",
+      "title": "Passo Giau Innevato",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "346",
+      "title": "Nuvolau",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "347",
+      "title": "Tofana Innevata",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

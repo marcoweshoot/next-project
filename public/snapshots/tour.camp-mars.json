@@ -1,0 +1,119 @@
+{
+  "slug": "camp-mars",
+  "title": "Tunisia: Esperienza unica di un viaggio fotografico nel Sahara",
+  "states": {
+    "slug": "tunisia"
+  },
+  "places": {
+    "slug": "sahara"
+  },
+  "sessions": [
+    {
+      "start": "2023-03-18",
+      "end": "2023-03-25"
+    },
+    {
+      "start": "2024-04-06",
+      "end": "2024-04-13"
+    },
+    {
+      "start": "2024-02-03",
+      "end": "2024-02-10"
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    },
+    {
+      "rating": 5
+    }
+  ],
+  "pictures": [
+    {
+      "id": "92",
+      "title": "Chott el-Jerid",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "93",
+      "title": "Deserto di Mos Espa",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "94",
+      "title": "Camp Mars",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "135",
+      "title": "gruppo al tramonto deserto sahara",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "148",
+      "title": "Tramonto a Mos Espa",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "149",
+      "title": "Gruppo viaggio tunisia",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "164",
+      "title": "WeShooters nel deserto del sahara",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "165",
+      "title": "WeShooters via lattea chott el jerid",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}

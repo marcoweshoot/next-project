@@ -1,0 +1,43 @@
+{
+  "slug": "cervino",
+  "title": "Zermatt Winter Experience",
+  "states": {
+    "slug": "svizzera"
+  },
+  "places": {
+    "slug": "zermatt"
+  },
+  "sessions": [
+    {
+      "start": "2022-01-28",
+      "end": "2022-01-30"
+    }
+  ],
+  "reviews": [],
+  "pictures": [
+    {
+      "id": "42",
+      "title": "Zermatt",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "43",
+      "title": "Cervino",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    },
+    {
+      "id": "44",
+      "title": "Gornergrat",
+      "url": null,
+      "width": null,
+      "height": null,
+      "alt": null
+    }
+  ]
+}
