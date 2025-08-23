@@ -19,7 +19,7 @@ const CANONICAL_BASE = '/viaggi-fotografici/destinazioni'
 const SNAPSHOT_DIR = path.join(process.cwd(), 'public', 'snapshots')
 
 type Params = { stateslug: string; placeslug: string; tourslug: string }
-type Props = { params: Params } // <-- ✅ qui
+type Props = { params: Promise<Params> }
 
 interface TourDetailResponse { tours: any[] }
 
@@ -157,7 +157,7 @@ export async function generateStaticParams(): Promise<Params[]> {
 
 export default async function TourDetailPage({ params }: Props) {
   try {
-    const { stateslug, placeslug, tourslug } = params // <-- ✅ niente await
+    const { stateslug, placeslug, tourslug } = await params
 
     if (!tourslug) {
       return permanentRedirect(CANONICAL_BASE)
