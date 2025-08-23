@@ -255,7 +255,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-09-12T20:10:45.000Z"
+      "created_at": "2018-09-12T20:10:45.000Z",
+      "user": {
+        "firstName": "Qi",
+        "lastName": "",
+        "username": "qi.oliveri.jing@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "184",
@@ -266,7 +275,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-05-14T16:10:48.000Z"
+      "created_at": "2019-05-14T16:10:48.000Z",
+      "user": {
+        "firstName": "Enrico Beltrami",
+        "lastName": "",
+        "username": "enrico.beltrami@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "185",
@@ -277,7 +295,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-05-14T18:35:18.000Z"
+      "created_at": "2019-05-14T18:35:18.000Z",
+      "user": {
+        "firstName": "Irma Monica Ricci",
+        "lastName": "Ricci",
+        "username": "monricci.roma@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "202",
@@ -288,7 +315,19 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-07-30T16:30:07.000Z"
+      "created_at": "2019-07-30T16:30:07.000Z",
+      "user": {
+        "firstName": "Stefano Ricca",
+        "lastName": "Ricca",
+        "username": "stefanoricca89@gmail.com",
+        "instagram": "",
+        "bio": "<p>Amo la fotografia per le avventure che si vivono per realizzare gli scatti e per poter comunicare quanto è bello il nostro pianeta.</p>",
+        "profilePicture": {
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Stefano_Ricca_d61963f9c5.jpg",
+          "alternativeText": "Stefano Ricca coach accademia WeShoot"
+        },
+        "fiscalCode": null
+      }
     },
     {
       "id": "203",
@@ -299,7 +338,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-07-30T21:30:47.000Z"
+      "created_at": "2019-07-30T21:30:47.000Z",
+      "user": {
+        "firstName": "Alexander Vallefuoco",
+        "lastName": "",
+        "username": "alessandro_vallefuoco@yahoo.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "204",
@@ -310,7 +358,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-08-01T16:31:38.000Z"
+      "created_at": "2019-08-01T16:31:38.000Z",
+      "user": {
+        "firstName": "Verdiana Valenti",
+        "lastName": "Valenti",
+        "username": "verdianavalenti@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "205",
@@ -321,7 +378,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-08-01T18:34:34.000Z"
+      "created_at": "2019-08-01T18:34:34.000Z",
+      "user": {
+        "firstName": "Lucia Corrà",
+        "lastName": "",
+        "username": "corralucia@libero.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "206",
@@ -332,7 +398,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-08-05T15:46:01.000Z"
+      "created_at": "2019-08-05T15:46:01.000Z",
+      "user": {
+        "firstName": "Iris Valorosi",
+        "lastName": "",
+        "username": "irisblu2004@yahoo.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "241",
@@ -343,7 +418,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2020-07-21T11:40:44.000Z"
+      "created_at": "2020-07-21T11:40:44.000Z",
+      "user": {
+        "firstName": "Tommaso Corona",
+        "lastName": "",
+        "username": "tommaso_corona@alice.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "242",
@@ -354,7 +438,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2020-07-21T16:37:41.000Z"
+      "created_at": "2020-07-21T16:37:41.000Z",
+      "user": {
+        "firstName": "Marco Scrofani",
+        "lastName": "",
+        "username": "marcosao@icloud.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "243",
@@ -365,7 +458,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2020-07-21T21:06:33.000Z"
+      "created_at": "2020-07-21T21:06:33.000Z",
+      "user": {
+        "firstName": "Andrea De Polo Saibanti",
+        "lastName": "De Polo Saibanti",
+        "username": "andrea@alinari.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "255",
@@ -376,7 +478,16 @@
       "ratingCordiality": 5,
       "ratingProfessionality": 5,
       "ratingKnowledge": 5,
-      "published_at": "2023-07-17T07:04:06.000Z"
+      "created_at": "2023-07-17T07:04:06.000Z",
+      "user": {
+        "firstName": "Stefano",
+        "lastName": "Di Giulio",
+        "username": "StefanoDiGiulio",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "256",
@@ -387,7 +498,16 @@
       "ratingCordiality": 5,
       "ratingProfessionality": 5,
       "ratingKnowledge": 5,
-      "published_at": "2023-07-17T07:20:35.000Z"
+      "created_at": "2023-07-17T07:20:35.000Z",
+      "user": {
+        "firstName": "Nicola",
+        "lastName": "Simone",
+        "username": "NicolaSimone",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     }
   ],
   "whats_includeds": [

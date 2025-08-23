@@ -398,7 +398,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2015-07-20T21:32:01.000Z"
+      "created_at": "2015-07-20T21:32:01.000Z",
+      "user": {
+        "firstName": "Francesco Termine",
+        "lastName": "",
+        "username": "francesco.termine@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "10",
@@ -409,7 +418,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2015-07-22T13:31:40.000Z"
+      "created_at": "2015-07-22T13:31:40.000Z",
+      "user": {
+        "firstName": "Gianluigi Gamba",
+        "lastName": "",
+        "username": "gianluigi.gamba@virgilio.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "12",
@@ -420,7 +438,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2015-07-23T12:12:27.000Z"
+      "created_at": "2015-07-23T12:12:27.000Z",
+      "user": {
+        "firstName": "Letizia",
+        "lastName": "",
+        "username": "lety.dream@live.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "15",
@@ -431,7 +458,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2015-09-21T17:35:04.000Z"
+      "created_at": "2015-09-21T17:35:04.000Z",
+      "user": {
+        "firstName": "Francesco Francioni",
+        "lastName": "Francioni",
+        "username": "franz2422@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "16",
@@ -442,7 +478,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2015-09-24T15:15:34.000Z"
+      "created_at": "2015-09-24T15:15:34.000Z",
+      "user": {
+        "firstName": "giuseppe barino",
+        "lastName": "",
+        "username": "barinogiuseppe@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "225",
@@ -453,7 +498,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-12-03T19:39:01.000Z"
+      "created_at": "2019-12-03T19:39:01.000Z",
+      "user": {
+        "firstName": "Roberto Perrella",
+        "lastName": "",
+        "username": "rperrella.photography@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "246",
@@ -464,7 +518,16 @@
       "ratingCordiality": 5,
       "ratingProfessionality": 5,
       "ratingKnowledge": 5,
-      "published_at": "2022-02-18T17:34:27.000Z"
+      "created_at": "2022-02-18T17:34:27.000Z",
+      "user": {
+        "firstName": "Sabrina",
+        "lastName": "Caleno",
+        "username": "sabrinacaleno",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": "CLNSRN60L55A662I"
+      }
     },
     {
       "id": "249",
@@ -475,7 +538,16 @@
       "ratingCordiality": 5,
       "ratingProfessionality": 5,
       "ratingKnowledge": 5,
-      "published_at": "2023-02-14T17:35:05.000Z"
+      "created_at": "2023-02-14T17:35:05.000Z",
+      "user": {
+        "firstName": "Alfio",
+        "lastName": "Santanocita",
+        "username": "Alfio Santanocita",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "250",
@@ -486,7 +558,16 @@
       "ratingCordiality": 5,
       "ratingProfessionality": 5,
       "ratingKnowledge": 5,
-      "published_at": "2023-02-14T17:40:34.000Z"
+      "created_at": "2023-02-14T17:40:34.000Z",
+      "user": {
+        "firstName": "Francesco",
+        "lastName": "Capitani",
+        "username": "Francesco Capitani",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "252",
@@ -497,7 +578,16 @@
       "ratingCordiality": 5,
       "ratingProfessionality": 5,
       "ratingKnowledge": 5,
-      "published_at": "2023-04-20T09:07:08.000Z"
+      "created_at": "2023-04-20T09:07:08.000Z",
+      "user": {
+        "firstName": "Alfio",
+        "lastName": "Santanocita",
+        "username": "Alfio Santanocita",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     }
   ],
   "whats_includeds": [

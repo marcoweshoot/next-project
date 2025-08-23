@@ -149,7 +149,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-01-30T09:21:17.000Z"
+      "created_at": "2018-01-30T09:21:17.000Z",
+      "user": {
+        "firstName": "Pier Paolo",
+        "lastName": "",
+        "username": "Pierpaolo.ribaldi@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "57",
@@ -160,7 +169,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-01-30T13:52:52.000Z"
+      "created_at": "2018-01-30T13:52:52.000Z",
+      "user": {
+        "firstName": "Giada Arcetti",
+        "lastName": "",
+        "username": "arcettigiada@live.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "58",
@@ -171,7 +189,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-02-05T21:34:52.000Z"
+      "created_at": "2018-02-05T21:34:52.000Z",
+      "user": {
+        "firstName": "Cristina Geier",
+        "lastName": "Geier",
+        "username": "cristina.geier@hotmail.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "94",
@@ -182,7 +209,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-04-09T05:28:06.000Z"
+      "created_at": "2018-04-09T05:28:06.000Z",
+      "user": {
+        "firstName": "Marco Scrofani",
+        "lastName": "",
+        "username": "marcosao@icloud.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "95",
@@ -193,7 +229,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-04-09T12:49:59.000Z"
+      "created_at": "2018-04-09T12:49:59.000Z",
+      "user": {
+        "firstName": "Federica",
+        "lastName": "",
+        "username": "feor76@hotmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "96",
@@ -204,7 +249,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-04-09T17:09:03.000Z"
+      "created_at": "2018-04-09T17:09:03.000Z",
+      "user": {
+        "firstName": "alessandro",
+        "lastName": "",
+        "username": "ravaioli.alessandro@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "97",
@@ -215,7 +269,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-04-10T09:54:33.000Z"
+      "created_at": "2018-04-10T09:54:33.000Z",
+      "user": {
+        "firstName": "Alessandro Gualtieri",
+        "lastName": "Gualtieri",
+        "username": "a.gualtie4@libero.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "139",
@@ -226,7 +289,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-09-25T08:10:25.000Z"
+      "created_at": "2018-09-25T08:10:25.000Z",
+      "user": {
+        "firstName": "Davide",
+        "lastName": "",
+        "username": "dspadazzi@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "140",
@@ -237,7 +309,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-09-25T15:23:38.000Z"
+      "created_at": "2018-09-25T15:23:38.000Z",
+      "user": {
+        "firstName": "Luana",
+        "lastName": "",
+        "username": "Cattafilu@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "141",
@@ -248,7 +329,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-09-26T00:59:07.000Z"
+      "created_at": "2018-09-26T00:59:07.000Z",
+      "user": {
+        "firstName": "anthony",
+        "lastName": "",
+        "username": "anthony.ortolani@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "222",
@@ -259,7 +349,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-11-25T15:22:54.000Z"
+      "created_at": "2019-11-25T15:22:54.000Z",
+      "user": {
+        "firstName": "Luisa",
+        "lastName": "",
+        "username": "lgaggioli@libero.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "223",
@@ -270,7 +369,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-11-26T20:21:13.000Z"
+      "created_at": "2019-11-26T20:21:13.000Z",
+      "user": {
+        "firstName": "Giulia Picciau",
+        "lastName": "Picciau",
+        "username": "thleosw@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "229",
@@ -281,7 +389,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2020-02-11T10:18:38.000Z"
+      "created_at": "2020-02-11T10:18:38.000Z",
+      "user": {
+        "firstName": "Nadia",
+        "lastName": "",
+        "username": "nadiavens@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "247",
@@ -292,7 +409,16 @@
       "ratingCordiality": 5,
       "ratingProfessionality": 5,
       "ratingKnowledge": 5,
-      "published_at": "2022-03-25T09:29:32.000Z"
+      "created_at": "2022-03-25T09:29:32.000Z",
+      "user": {
+        "firstName": "Simone",
+        "lastName": "Ciocci",
+        "username": "cc56181@yahoo.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "248",
@@ -303,7 +429,16 @@
       "ratingCordiality": 5,
       "ratingProfessionality": 5,
       "ratingKnowledge": 5,
-      "published_at": "2022-03-25T10:16:22.000Z"
+      "created_at": "2022-03-25T10:16:22.000Z",
+      "user": {
+        "firstName": "Mauro",
+        "lastName": "Foco",
+        "username": "maurofoco",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     }
   ],
   "whats_includeds": [

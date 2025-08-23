@@ -91,7 +91,16 @@ const TOURS_QUERY = /* GraphQL */ `
         ratingCordiality
         ratingProfessionality
         ratingKnowledge
-        published_at
+        createdAt: published_at
+        user {
+          firstName
+          lastName
+          username
+          instagram
+          bio
+          profilePicture { url alternativeText }
+          fiscalCode
+        }
       }
 
       whats_includeds {
@@ -249,6 +258,33 @@ function normalizeTour(t) {
     })),
   }));
 
+  // ✅ reviews -> normalizza e garantisce created_at + avatar assoluto
+  const reviews = arr(t.reviews).map((r, i) => ({
+    id: String(r.id ?? `rev-${i}`),
+    title: r.title ?? "",
+    description: r.description ?? "",
+    rating: Number.isFinite(r.rating) ? r.rating : 5,
+    ratingOrganization: Number.isFinite(r.ratingOrganization) ? r.ratingOrganization : null,
+    ratingCordiality: Number.isFinite(r.ratingCordiality) ? r.ratingCordiality : null,
+    ratingProfessionality: Number.isFinite(r.ratingProfessionality) ? r.ratingProfessionality : null,
+    ratingKnowledge: Number.isFinite(r.ratingKnowledge) ? r.ratingKnowledge : null,
+    created_at: r.createdAt ?? r.published_at ?? null, // il front-end legge created_at
+    user: {
+      firstName: r.user?.firstName ?? "",
+      lastName: r.user?.lastName ?? "",
+      username: r.user?.username ?? "",
+      instagram: r.user?.instagram ?? "",
+      bio: r.user?.bio ?? "",
+      profilePicture: r.user?.profilePicture
+        ? {
+            url: toAbsUrl(r.user.profilePicture.url),
+            alternativeText: r.user.profilePicture.alternativeText ?? null,
+          }
+        : null,
+      fiscalCode: r.user?.fiscalCode ?? null,
+    },
+  }));
+
   // icons -> absolute
   const whats_includeds = arr(t.whats_includeds).map((x) => ({
     ...x,
@@ -318,6 +354,7 @@ function normalizeTour(t) {
     image,
     pictures,
     sessions,
+    reviews, // <-- aggiunto
     whats_includeds,
     whats_not_includeds,
     things2know,

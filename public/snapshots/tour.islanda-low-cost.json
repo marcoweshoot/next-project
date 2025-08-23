@@ -661,7 +661,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-10-18T13:48:16.000Z"
+      "created_at": "2018-10-18T13:48:16.000Z",
+      "user": {
+        "firstName": "giovanni lo conti",
+        "lastName": "",
+        "username": "mc4386@openaccess.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "144",
@@ -672,7 +681,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-10-21T11:36:47.000Z"
+      "created_at": "2018-10-21T11:36:47.000Z",
+      "user": {
+        "firstName": "Luca",
+        "lastName": "",
+        "username": "luca.tergolina87@yahoo.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "145",
@@ -683,7 +701,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-10-24T16:09:20.000Z"
+      "created_at": "2018-10-24T16:09:20.000Z",
+      "user": {
+        "firstName": "Valentino Bozzi",
+        "lastName": "",
+        "username": "Valentinobozzi.foto@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "146",
@@ -694,7 +721,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-10-26T07:53:01.000Z"
+      "created_at": "2018-10-26T07:53:01.000Z",
+      "user": {
+        "firstName": "Marco Capitanio",
+        "lastName": "Capitanio",
+        "username": "cap46@live.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "148",
@@ -705,7 +741,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2018-11-02T12:59:28.000Z"
+      "created_at": "2018-11-02T12:59:28.000Z",
+      "user": {
+        "firstName": "Bandelli Davide",
+        "lastName": "",
+        "username": "volleybande@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "168",
@@ -716,7 +761,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-04-02T10:13:22.000Z"
+      "created_at": "2019-04-02T10:13:22.000Z",
+      "user": {
+        "firstName": "simone",
+        "lastName": "",
+        "username": "blue_dark_eyes@hotmail.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "169",
@@ -727,7 +781,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-04-03T17:23:53.000Z"
+      "created_at": "2019-04-03T17:23:53.000Z",
+      "user": {
+        "firstName": "Daniela",
+        "lastName": "",
+        "username": "danielapaolucci85@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "170",
@@ -738,7 +801,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-04-08T09:51:50.000Z"
+      "created_at": "2019-04-08T09:51:50.000Z",
+      "user": {
+        "firstName": "Claudio Leonetti",
+        "lastName": "Leonetti",
+        "username": "neon.95@libero.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     },
     {
       "id": "172",
@@ -749,7 +821,19 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-04-08T14:42:21.000Z"
+      "created_at": "2019-04-08T14:42:21.000Z",
+      "user": {
+        "firstName": "Giacomo",
+        "lastName": "Finotti",
+        "username": "giacomofinotti",
+        "instagram": "https://www.instagram.com/giacomo_finotti/",
+        "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>",
+        "profilePicture": {
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg",
+          "alternativeText": "Coach WeShoot Viaggi fotografici"
+        },
+        "fiscalCode": null
+      }
     },
     {
       "id": "173",
@@ -760,7 +844,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2019-04-08T17:49:45.000Z"
+      "created_at": "2019-04-08T17:49:45.000Z",
+      "user": {
+        "firstName": "NADIA",
+        "lastName": "",
+        "username": "fnadia4@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     }
   ],
   "whats_includeds": [

@@ -468,7 +468,16 @@
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "published_at": "2020-01-28T08:32:21.000Z"
+      "created_at": "2020-01-28T08:32:21.000Z",
+      "user": {
+        "firstName": "renzo",
+        "lastName": "",
+        "username": "faina.renzo@libero.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      }
     }
   ],
   "whats_includeds": [

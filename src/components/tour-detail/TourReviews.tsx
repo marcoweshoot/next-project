@@ -2,11 +2,7 @@
 
 import React, { useState } from 'react';
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
@@ -21,13 +17,20 @@ interface TourReviewsProps {
     description: string;
     rating: number;
     user: {
-      firstName: string;
+      firstName?: string;
+      lastName?: string;
+      /** fallback possibili da CMS diversi */
+      username?: string;
+      name?: string;
       profilePicture?: {
         url: string;
         alternativeText?: string;
       };
     };
-    created_at: string;
+    /** gestiamo più varianti di campo */
+    created_at?: string | number | Date;
+    createdAt?: string | number | Date;
+    publishedAt?: string | number | Date;
   }>;
 }
 
@@ -37,22 +40,36 @@ const makeReviewKey = (
 ): string => {
   const idPart =
     review.id !== undefined && review.id !== null ? `id:${String(review.id)}` : undefined;
-  const tsPart = review.created_at ? `t:${new Date(review.created_at).getTime()}` : undefined;
-  // Preferisci id -> timestamp -> fallback con indice (stabile se l'array non cambia ordine)
+  const rawDate = review.created_at ?? review.createdAt ?? review.publishedAt;
+  const tsPart = rawDate ? `t:${new Date(rawDate as any).getTime()}` : undefined;
   return `rev-${idPart ?? tsPart ?? `idx:${index}`}`;
 };
 
+function fullNameOf(review: TourReviewsProps['reviews'][number]): string {
+  const fn = review.user?.firstName?.trim();
+  const ln = review.user?.lastName?.trim();
+  const fallback = review.user?.username || review.user?.name;
+  return [fn, ln].filter(Boolean).join(' ') || fallback || 'Utente';
+}
+
+function initialsOf(review: TourReviewsProps['reviews'][number]): string {
+  const fnI = review.user?.firstName?.[0] ?? '';
+  const lnI = review.user?.lastName?.[0] ?? '';
+  const fromUser = (review.user?.username || review.user?.name || 'U').slice(0, 2);
+  const res = (fnI + lnI) || fromUser;
+  return res.toUpperCase();
+}
+
+function parseDateLabel(review: TourReviewsProps['reviews'][number]): string | null {
+  const raw = review.created_at ?? review.createdAt ?? review.publishedAt;
+  if (!raw) return null;
+  const d = new Date(raw as any);
+  if (Number.isNaN(d.getTime())) return null;
+  return d.toLocaleDateString('it-IT', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
 const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = ({ review }) => {
   const [open, setOpen] = useState(false);
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('it-IT', {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
-    });
-  };
 
   const renderStars = (rating: number) => {
     const safeRating = Number.isFinite(rating) ? Math.max(0, Math.min(5, Math.floor(rating))) : 5;
@@ -66,6 +83,9 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
 
   const text = review.description ?? '';
   const truncated = text.length > 300 ? text.slice(0, 300) + '...' : text;
+  const name = fullNameOf(review);
+  const initials = initialsOf(review);
+  const dateLabel = parseDateLabel(review);
 
   return (
     <>
@@ -76,21 +96,15 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
               {review.user?.profilePicture?.url && (
                 <AvatarImage
                   src={review.user.profilePicture.url}
-                  alt={
-                    review.user.profilePicture.alternativeText ||
-                    review.user?.firstName ||
-                    'Utente'
-                  }
+                  alt={review.user.profilePicture.alternativeText || name}
                 />
               )}
               <AvatarFallback className="bg-gradient-to-br from-orange-400 to-red-500 text-white font-bold text-lg">
-                {review.user?.firstName?.charAt(0) || 'U'}
+                {initials}
               </AvatarFallback>
             </Avatar>
             <div>
-              <h3 className="font-semibold text-gray-900">
-                {review.user?.firstName || 'Utente'}
-              </h3>
+              <h3 className="font-semibold text-gray-900">{name}</h3>
               <div className="flex items-center space-x-1">
                 {renderStars(review.rating || 5)}
               </div>
@@ -111,25 +125,22 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
           )}
 
           <div className="flex items-center justify-between text-xs text-gray-500 mt-3">
-            <span>{formatDate(review.created_at)}</span>
+            {dateLabel ? <span>{dateLabel}</span> : <span>&nbsp;</span>}
           </div>
         </CardContent>
       </Card>
 
-      {/* Popup dialog */}
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-xl">
           <DialogTitle className="text-lg font-semibold text-gray-900 mb-2">
-            Recensione di {review.user?.firstName || 'Utente'}
+            Recensione di {name}
           </DialogTitle>
 
           <DialogDescription className="text-sm text-gray-500 mb-4">
-            Valutazione: {review.rating}/5 · {formatDate(review.created_at)}
+            Valutazione: {review.rating}/5{dateLabel ? ` · ${dateLabel}` : ''}
           </DialogDescription>
 
-          <p className="text-sm text-gray-700 whitespace-pre-wrap">
-            {text}
-          </p>
+          <p className="text-sm text-gray-700 whitespace-pre-wrap">{text}</p>
         </DialogContent>
       </Dialog>
     </>
@@ -138,11 +149,10 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
 
 const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   if (!reviews?.length) return null;
 
   const averageRating =
-    reviews.reduce((sum, review) => sum + (Number.isFinite(review.rating) ? review.rating : 0), 0) /
+    reviews.reduce((sum, r) => sum + (Number.isFinite(r.rating) ? r.rating : 0), 0) /
     reviews.length;
 
   return (
@@ -175,9 +185,7 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
             <span className="text-lg font-semibold text-gray-900">
               {averageRating.toFixed(1)}
             </span>
-            <span className="text-gray-600">
-              ({reviews.length} recensioni)
-            </span>
+            <span className="text-gray-600">({reviews.length} recensioni)</span>
           </div>
 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -187,13 +195,7 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
 
         {/* Carousel */}
         <div className="relative max-w-6xl mx-auto">
-          <Carousel
-            opts={{
-              align: 'start',
-              loop: true,
-            }}
-            className="w-full"
-          >
+          <Carousel opts={{ align: 'start', loop: true }} className="w-full">
             <CarouselContent className="-ml-2 md:-ml-4">
               {reviews.map((review, idx) => (
                 <CarouselItem
@@ -207,14 +209,8 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
 
             {reviews.length > 3 && (
               <>
-                <CarouselPrevious
-                  aria-label="Precedente"
-                  className="hidden md:flex -left-4 lg:-left-12"
-                />
-                <CarouselNext
-                  aria-label="Successivo"
-                  className="hidden md:flex -right-4 lg:-right-12"
-                />
+                <CarouselPrevious aria-label="Precedente" className="hidden md:flex -left-4 lg:-left-12" />
+                <CarouselNext aria-label="Successivo" className="hidden md:flex -right-4 lg:-right-12" />
               </>
             )}
           </Carousel>
@@ -235,9 +231,14 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
         <TourReviewsModal
           open={isModalOpen}
           onOpenChange={setIsModalOpen}
-          reviews={reviews.map(review => ({
-            ...review,
-            id: String(review.id || `review-${review.created_at}`)
+          reviews={reviews.map(r => ({ 
+            ...r, 
+            id: String(r.id ?? `review-${r.createdAt ?? r.created_at ?? r.publishedAt}`),
+            user: {
+              firstName: fullNameOf(r),
+              profilePicture: r.user?.profilePicture
+            },
+            created_at: String(r.created_at ?? r.createdAt ?? r.publishedAt ?? '')
           }))}
           title="Recensioni del viaggio"
         />
