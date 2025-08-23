@@ -1,42 +1,41 @@
+// src/components/tour-detail/TourDay.tsx
 'use client';
 
-import React, { useState } from 'react';
-import { cn } from '@/lib/utils';
+import React, { useMemo, useState } from 'react';
 import GalleryLightbox from './gallery/GalleryLightbox';
 import TourDayHeader from './day/TourDayHeader';
 import TourDayContent from './day/TourDayContent';
 import TourDaySteps from './day/TourDaySteps';
 
-interface DayStep {
-  id: string;
-  title: string;
-  description: string;
-  locations?: DayLocation[];
-}
-
 interface DayLocation {
-  id: string;
+  id: string | number;
   title: string;
-  slug: string;
+  slug?: string;
   description?: string;
   pictures?: Array<{
-    id: string;
-    title: string;
-    url: string;
-    alternativeText: string;
+    id?: string | number;
+    title?: string;
+    url?: string;
+    alternativeText?: string;
+    image?: any; // per sicurezza: alcuni tour possono avere ancora il formato vecchio
   }>;
+  // NB: nel JSON delle location c'è anche steps[] (usato nel matching)
+  steps?: Array<{ id?: string | number | null; title?: string | null }>;
+}
+
+interface DayStep {
+  id?: string | number | null;
+  title: string;
+  description?: string;
+  locations?: DayLocation[]; // verrà popolato da noi
 }
 
 interface DayProps {
-  id: string;
+  id: string | number;
   number: number;
   title: string;
   description?: string;
   steps?: DayStep[];
-  locations?: DayLocation[];
-  activities?: string[];
-  accommodation?: string;
-  meals?: string[];
 }
 
 interface LightboxImage {
@@ -47,7 +46,35 @@ interface LightboxImage {
 
 interface TourDayProps {
   day: DayProps;
-  tour?: any;
+  tour?: {
+    locations?: DayLocation[];
+  };
+}
+
+/** Match location ↔︎ step: per ID, altrimenti per titolo (case-insensitive) */
+function locationsForStep(all: DayLocation[] = [], step: DayStep): DayLocation[] {
+  if (!all.length || !step) return [];
+  const stepId = step.id != null ? String(step.id) : null;
+  const stepTitle = (step.title || '').trim().toLowerCase();
+
+  const byId = stepId
+    ? all.filter((loc) =>
+        Array.isArray(loc.steps) &&
+        loc.steps.some((s) => s?.id != null && String(s.id) === stepId)
+      )
+    : [];
+
+  if (byId.length) return byId;
+
+  const byTitle = all.filter((loc) =>
+    Array.isArray(loc.steps) &&
+    loc.steps.some(
+      (s) =>
+        (s?.title || '').trim().toLowerCase() === stepTitle
+    )
+  );
+
+  return byTitle;
 }
 
 const TourDay: React.FC<TourDayProps> = ({ day, tour }) => {
@@ -55,41 +82,53 @@ const TourDay: React.FC<TourDayProps> = ({ day, tour }) => {
   const [lightboxImages, setLightboxImages] = useState<LightboxImage[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  console.log(`TourDay: Rendering day ${day.number}:`, day);
-  console.log(`TourDay: Day ${day.number} steps:`, day.steps);
+  // 🔗 Collega ad ogni step SOLO le location pertinenti (in base a location.steps[])
+  const stepsWithLocations = useMemo(() => {
+    const allLocations = tour?.locations || [];
+    const steps = day.steps || [];
+    return steps.map((s) => ({
+      ...s,
+      locations: locationsForStep(allLocations, s).map(location => ({
+        ...location,
+        pictures: location.pictures?.map(pic => ({
+          id: String(pic.id || ''),
+          title: pic.title || '',
+          url: pic.url || '',
+          alternativeText: pic.alternativeText || ''
+        })) || []
+      }))
+    }));
+  }, [day.steps, tour?.locations]);
 
   const openLightbox = (
     pictures: Array<{ id?: string; title?: string; url?: string; alternativeText?: string }>,
     startIndex = 0
   ) => {
-    const images: LightboxImage[] = pictures
-      .filter((pic) => pic?.url && typeof pic.url === 'string')
-      .map((pic) => ({
-        url: pic.url!,
-        alternativeText: pic.alternativeText || '',
-        caption: pic.title || '',
+    const images: LightboxImage[] = (pictures || [])
+      .filter((p) => p?.url && typeof p.url === 'string')
+      .map((p) => ({
+        url: p.url!,
+        alternativeText: p.alternativeText || '',
+        caption: p.title || '',
       }));
 
-    if (images.length === 0) {
-      console.warn('openLightbox chiamato con immagini non valide:', pictures);
-      return;
-    }
+    if (!images.length) return;
 
     setLightboxImages(images);
-    setCurrentImageIndex(startIndex >= 0 && startIndex < images.length ? startIndex : 0);
+    setCurrentImageIndex(
+      startIndex >= 0 && startIndex < images.length ? startIndex : 0
+    );
     setLightboxOpen(true);
   };
 
-  const nextImage = () => {
-    if (lightboxImages.length === 0) return;
-    setCurrentImageIndex((prev) => (prev + 1) % lightboxImages.length);
-  };
-
-  const prevImage = () => {
-    if (lightboxImages.length === 0) return;
-    setCurrentImageIndex((prev) => (prev - 1 + lightboxImages.length) % lightboxImages.length);
-  };
-
+  const nextImage = () =>
+    setCurrentImageIndex((prev) =>
+      lightboxImages.length ? (prev + 1) % lightboxImages.length : 0
+    );
+  const prevImage = () =>
+    setCurrentImageIndex((prev) =>
+      lightboxImages.length ? (prev - 1 + lightboxImages.length) % lightboxImages.length : 0
+    );
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowRight') nextImage();
     if (e.key === 'ArrowLeft') prevImage();
@@ -104,7 +143,8 @@ const TourDay: React.FC<TourDayProps> = ({ day, tour }) => {
         <div className="p-8">
           <TourDayContent description={day.description} />
 
-          <TourDaySteps steps={day.steps || []} onOpenLightbox={openLightbox} />
+          {/* ✅ passiamo gli step “arricchiti” con le loro location */}
+          <TourDaySteps steps={stepsWithLocations} onOpenLightbox={openLightbox} />
         </div>
       </div>
 

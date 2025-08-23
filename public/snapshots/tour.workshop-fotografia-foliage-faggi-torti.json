@@ -1,39 +1,297 @@
 {
+  "id": "33",
+  "tour_id": "workshop_ftografico_foliage",
   "slug": "workshop-fotografia-foliage-faggi-torti",
   "title": "Foliage: workshop di fotografia alla foresta dei faggi torti",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p>Un bosco particolarissimo nel Cuore dei Monti della Laga, in Abruzzo. Abbiamo deciso di dedicare a questo Spot una data per l’Autunno che<br>secondo noi ti sorprenderà!<br>Avrai a disposizione un Parco Giochi per andare ad allenare il tuo occhio e migliorare le tue composizioni fotografiche. Tutto questo anche grazie al nostro Coach che ti guiderà in questa esperienza.<br>Approfondiremo l’utilizzo del grandangolo in ambienti dove il centimetro può fare la differenza nella rappresentazione del luogo e andremo a spiegarti come effettuare un Focus Stacking per avere l’intera immagine a fuoco pur essendo molto vicino al primo piano.<br>Affrettati a prenotare il tuo posto: solo 7 persone potranno partecipare per garantire la migliore esperienza possibile a ciascuno di voi. Prima dell'inizio del corso, avrai accesso a un gruppo WhatsApp riservato ai corsisti per scambi di consigli e organizzazione dell'uscita fotografica, riceverai anche un estratto del nostro PDF sulla Pianificazione e un video corso per iniziare a muovere i primi passi con la post-produzione con Photoshop.</p>",
+  "excerpt": "Cattura la magia dei colori autunnali in una foresta di faggi",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>ATTREZZATURA CONSIGLIATA</p><ul><li>Reflex o Mirrorless</li><li>Obiettivo Grandangolare, Ultragrandangolare o Medio Zoom</li><li>Treppiede</li></ul><p>Abbigliamento:</p><ul><li>Vestiario antivento e antipioggia adatto a temperature autunnali fresche</li><li>Scarpe da Trekking per non avere problemi a camminare nel bosco</li><li>Guanti e Cappello (da tenere con se e usare se necessario)</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "abruzzo"
+    "slug": "abruzzo",
+    "locale": "it",
+    "name": "Abruzzo"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Workshop Fotografico sul Foliage 2025",
+    "metaDescription": "Questo workshop di fotografia sul foliage è pensato per tutti i fotografi di paesaggio che amano le atmosfere fiabesche dell' autunno.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2024-10-26",
-      "end": "2024-10-26"
-    },
-    {
-      "start": "2025-10-11",
-      "end": "2025-10-11"
+      "id": "241",
+      "title": "Jacci di Verre",
+      "description": "Jacci di Verre, situato nel cuore dell’Abruzzo, è un incantevole bosco di faggi che offre un’immersione totale nella natura. Questo luogo magico, caratterizzato da alberi maestosi e una vegetazione lussureggiante, è perfetto per un tour fotografico in cui catturare l’atmosfera del bosco durante il foliage.",
+      "slug": "jacci-di-verre",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "174",
+          "title": "Questo è quello che vedrai e potrai imparare durante la giornata",
+          "description": "<p>Ore 9:00 | Incontro con i partecipanti presso il Parcheggio del Ceppo di Rocca Santa Maria (TE). Briefing della giornata, controllo provviste e attrezzatura e divisione dei partecipanti in massimo 2 macchine (preferibilmente 4x4).</p><p>Ore 9:30 | spostamento in direzione degli “Jacci di Verre” che saranno la nostra location per tutta la giornata. È previsto il pagamento di una quota di circa 2€ per poter accedere alla zona in macchina.</p><p>10:00 - 13:00 | Una volta arrivati sulla location inizieremo a fare scouting insieme in questo Bosco abbastanza grande da farvi perdere molte ore della giornata per trovare quella che potrebbe essere la composizione poi da sfruttare in situazioni favorevoli di nebbia o se la luce dovesse diventare interessante. Andremo a scegliere la lente migliore per raccontare al meglio una determinata composizione e andremo ad imparare come effettuare un focus stacking perfetto (come farlo, dove è necessario e quando è meglio evitare farlo).</p><p>13:00 - 14:00 | Pausa Pranzo nel Bosco in cui il nostro Coach Samuele sarà disponibile per qualsiasi domanda relativa a quanto visto in mattinata.</p><p>14:00 - 17:00 | La luce pian piano inizierà a scendere ed è possibile, data la zona in cui ci troveremo e la Stagione Autunnale, che si formi spesso durante la giornata della nebbia che arricchirà le nostre composizioni. Avrete a disposizione l’intera Faggeta per trovare le vostre composizioni e provare la tecnica del Focus Stacking. Tutto questo con al vostro fianco il nostro Samuele che potrà aiutarvi per quanto riguarda la parte tecnica dello scatto e darvi consigli sulla composizione.</p><p>17:15/17:30max | Spostamento verso il Parcheggio del Ceppo e saluti</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/CALIFORNIA_DREAMIN_Monti_della_Laga_4ee927e10e.jpg",
+          "alternativeText": "workshop di fotografia sul foliage"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Foresta_dei_Faggi_Torti_949119be70.jpg",
+          "alternativeText": "workshop di fotografia di foliage"
+        },
+        {
+          "id": "locpic-0-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Jacci_di_Verre_foliage_46fa33b469.jpg",
+          "alternativeText": "workshop di fotografia di foliage"
+        }
+      ]
     }
   ],
   "reviews": [],
-  "pictures": [
+  "whats_includeds": [
     {
-      "id": "378",
-      "title": "bosco di jacci di verre",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
     },
     {
-      "id": "379",
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "186",
+      "number": 1,
+      "title": "Benvenuti a Jacci di Verre",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "174",
+          "title": "Questo è quello che vedrai e potrai imparare durante la giornata",
+          "description": "<p>Ore 9:00 | Incontro con i partecipanti presso il Parcheggio del Ceppo di Rocca Santa Maria (TE). Briefing della giornata, controllo provviste e attrezzatura e divisione dei partecipanti in massimo 2 macchine (preferibilmente 4x4).</p><p>Ore 9:30 | spostamento in direzione degli “Jacci di Verre” che saranno la nostra location per tutta la giornata. È previsto il pagamento di una quota di circa 2€ per poter accedere alla zona in macchina.</p><p>10:00 - 13:00 | Una volta arrivati sulla location inizieremo a fare scouting insieme in questo Bosco abbastanza grande da farvi perdere molte ore della giornata per trovare quella che potrebbe essere la composizione poi da sfruttare in situazioni favorevoli di nebbia o se la luce dovesse diventare interessante. Andremo a scegliere la lente migliore per raccontare al meglio una determinata composizione e andremo ad imparare come effettuare un focus stacking perfetto (come farlo, dove è necessario e quando è meglio evitare farlo).</p><p>13:00 - 14:00 | Pausa Pranzo nel Bosco in cui il nostro Coach Samuele sarà disponibile per qualsiasi domanda relativa a quanto visto in mattinata.</p><p>14:00 - 17:00 | La luce pian piano inizierà a scendere ed è possibile, data la zona in cui ci troveremo e la Stagione Autunnale, che si formi spesso durante la giornata della nebbia che arricchirà le nostre composizioni. Avrete a disposizione l’intera Faggeta per trovare le vostre composizioni e provare la tecnica del Focus Stacking. Tutto questo con al vostro fianco il nostro Samuele che potrà aiutarvi per quanto riguarda la parte tecnica dello scatto e darvi consigli sulla composizione.</p><p>17:15/17:30max | Spostamento verso il Parcheggio del Ceppo e saluti</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Esplorativo",
+      "description": "Andremo insieme alla scoperta di nuove location.",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "181",
+      "start": "2024-10-26",
+      "end": "2024-10-26",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 129,
+      "deposit": 129,
+      "balance": 0,
+      "minPax": 5,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/ibuxus/",
+          "firstName": "Samuele",
+          "lastName": "Bucci",
+          "username": "samuelebucci",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+        }
+      ]
+    },
+    {
+      "id": "211",
+      "start": "2025-10-11",
+      "end": "2025-10-11",
+      "status": "almostFull",
+      "maxPax": 7,
+      "price": 129,
+      "deposit": 129,
+      "balance": 0,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/ibuxus/",
+          "firstName": "Samuele",
+          "lastName": "Bucci",
+          "username": "samuelebucci",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Quali attrezzature fotografiche sono necessarie?",
+      "answer": "<p>Si consiglia di portare una reflex digitale o una fotocamera mirrorless. Tuttavia, anche smartphone con buone capacità fotografiche sono benvenuti. Porta anche batterie di riserva e schede di memoria. Obiettivi dal grandangolare (es 14-24mm, 10-22mm) al medio zoom (es: 24-70mm o 24-120mm)</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Cosa succede in caso di maltempo?",
+      "answer": "<p>In caso di maltempo (per maltempo intendiamo scroscioni importanti di pioggia da non permettere gli scatti), il workshop fotografico verrà posticipato a una data successiva. Ti avviseremo via email con tutti i dettagli aggiornati. In tutti gli altri casi il workshop sarà confermato, anche perchè gli scatti migliori si ottengono sempre con il meteo avverso.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Posso portare un accompagnatore che non partecipa al workshop?",
+      "answer": "<p>Sì, gli accompagnatori sono i benvenuti. Tuttavia, si prega di notare che l'accompagnatore non parteciperà attivamente al workshop né riceverà materiali didattici. Gli accompagnatori possono unirsi a noi durante le passeggiate e le pause, rendendo l'esperienza ancora più piacevole.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "Come posso prenotare il mio posto al workshop fotografico?",
+      "answer": "<p>Per prenotare il tuo posto, clicca sul pulsante “richiedi info”, si aprirà in automatico un messaggio da inviare direttamente su whatsapp. Poiché i posti del workshop fotografico sono limitati a 10 partecipanti per garantire un'esperienza di qualità, ti consigliamo di prenotare il prima possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Chi può partecipare al workshop fotografico?",
+      "answer": "<p><span style=\"background-color:rgb(255,255,255);color:rgb(51,51,51);\">Il workshop fotografico è aperto a tutti gli appassionati di fotografia, indipendentemente dal livello di esperienza. Che tu sia alle prime armi o un fotografo con qualche anno di esperienza, troverai utili i nostri insegnamenti e consigli pratici.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "workshop di fotografia di foliage",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Jacci_di_Verre_foliage_46fa33b469.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "bosco di jacci di verre",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/CALIFORNIA_DREAMIN_Monti_della_Laga_4ee927e10e.jpg",
+      "alt": "workshop di fotografia sul foliage"
+    },
+    {
+      "id": "1",
+      "type": "tour",
       "title": "foresta di jacci di verre",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Foresta_dei_Faggi_Torti_949119be70.jpg",
+      "alt": "workshop di fotografia di foliage"
+    },
+    {
+      "id": "locpic-0-2",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Jacci_di_Verre_foliage_46fa33b469.jpg",
+      "alt": "workshop di fotografia di foliage"
     }
   ]
 }

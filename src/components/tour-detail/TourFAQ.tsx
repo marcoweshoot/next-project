@@ -1,3 +1,4 @@
+'use client';
 
 import React from 'react';
 import {
@@ -7,8 +8,17 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
+function slugify(input: string | number | undefined | null) {
+  return String(input ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '') || 'item';
+}
+
 interface FAQ {
-  id: string;
+  id?: string | number | null; // lo schema che hai mostrato non ha id → opzionale
   question: string;
   answer: string;
 }
@@ -29,27 +39,30 @@ const TourFAQ: React.FC<TourFAQProps> = ({ faqs }) => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Domande Frequenti
           </h2>
-          
+
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq) => (
-              <AccordionItem 
-                key={faq.id} 
-                value={faq.id}
-                className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
-              >
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-50 transition-colors">
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                    {faq.question}
-                  </h3>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4">
-                  <div 
-                    className="text-gray-700 leading-relaxed prose max-w-none"
-                    dangerouslySetInnerHTML={{ __html: faq.answer }}
-                  />
-                </AccordionContent>
-              </AccordionItem>
-            ))}
+            {faqs.map((faq, i) => {
+              const safe = `${slugify(faq.id ?? faq.question)}-${i}`;
+              return (
+                <AccordionItem
+                  key={safe}
+                  value={safe}
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
+                >
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-50 transition-colors">
+                    <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                      {faq.question}
+                    </h3>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    <div
+                      className="text-gray-700 leading-relaxed prose max-w-none"
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
+                  </AccordionContent>
+                </AccordionItem>
+              );
+            })}
           </Accordion>
         </div>
       </div>

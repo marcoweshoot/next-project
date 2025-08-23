@@ -1,83 +1,562 @@
 {
+  "id": "26",
+  "tour_id": "olanda-tulipani-in-fiore-e-mulini",
   "slug": "tulipani-e-mulini-a-vento",
   "title": "Scouting Olanda: tulipani in fiore e mulini",
-  "states": {
-    "slug": "olanda"
-  },
+  "description": "<p><span style=\"background-color:transparent;color:#282828;\">Quello che stai guardando è un programma di viaggio scouting, un viaggio fotografico tra appassionati di fotografia di paesaggio che ha come scopo la scoperta di una nuova location.&nbsp;</span></p><p><span style=\"background-color:#ffffff;color:#282828;\">Tra la fine di aprile e la prima metà di Maggio, l’Olanda diventa uno scenario multicolore per la fioritura dei tulipani. Immense distese di fiori che colorano le pianure olandesi.&nbsp;</span></p><p><span style=\"background-color:#ffffff;color:#282828;\">In questo viaggio scouting andremo alla scoperta delle location più caratteristiche della fioritura dei tulipani e dei mulini a vento che sono uno degli altri elementi caratteristici delle pianure olandesi.</span></p><p><span style=\"background-color:#ffffff;color:#282828;\">Visiteremo Zaanse Schans, Kinderdjik e scopriremo le location con le luci dell’alba e del tramonto.</span></p><p><span style=\"background-color:transparent;color:#282828;\">Una volta che raggiungeremo gli spot fotografici (che scopriremo giorno dopo giorno attraverso lo scouting ed attraverso l'esplorazione digitale su Google earth) ogni partecipante si muoverà in completa autonomia, saremo pochi in modo da non disturbarci a vicenda, ci sparpaglieremo per le location e ci daremo appuntamento a fine sessione di scatto al van. Ogni partecipante dovrà essere smaliziato ed autonomo nel muoversi in location, non è previsto il tutoring di tecniche base o avanzate, proporremo il viaggio fotografico il prossimo anno ad un costo completamente diverso.</span></p><p><span style=\"background-color:transparent;color:#282828;\">Il programma di viaggio redatto è una massima di ciò che andremo a realizzare una volta sul posto, essendo una scoperta per tutti noi, ci riserverà diverse sorprese che renderanno lo scouting ancora più memorabile. Dai un'occhiata al programma ed unisciti a noi, scopriamo insieme questa location incredibile.</span></p>",
+  "excerpt": "Viaggio fotografico in Olanda tra Mulini, campi fioriti di tulipani e colori esplosivi",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e tele zoom (24mm-200mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Scarpe comode o da Trekking</li><li>Insetticida</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "amsterdam"
+    "slug": "amsterdam",
+    "locale": "it",
+    "name": "Amsterdam"
   },
-  "sessions": [
+  "states": {
+    "name": "Olanda",
+    "slug": "olanda",
+    "description": "<p>Mai farsi ingannare dall’apparenza. L’Olanda, che al primo impatto si presenta come una distesa piatta e senza rilievi montuosi, regala delle perle di alto valore. Dalle distese super colorate dei tulipani in fiore, al fascino dei mulini a vento e delle sue città ricche di storia e cultura. Abbiamo studiato un viaggio fotografico nel periodo della fioritura dei tulipani che ti lascerà a bocca aperta.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Olanda tulipani 2025 | WeShoot",
+    "metaDescription": "Parti insieme a noi per questo viaggio fotografico in Olanda tra gli incantevoli paesaggi dei campi fioriti di tulipani e dei mulini a vento.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2023-04-27",
-      "end": "2023-04-30"
+      "id": "161",
+      "title": "Utrecht",
+      "description": "Utrecht è una città che si trova al centro dei Paesi Bassi, ricca di storia religiosa e monumenti molto antichi. E’ considerata il cuore vitale e pulsante dell’Olanda. Ricca di incantevoli canali, regala un’atmosfera unica con le sue caratteristiche cantine e i tavolini lungo le banchine. Sarà il nostro quartier generale nei giorni di scouting.",
+      "slug": "utrecht",
+      "locale": "it",
+      "state": {
+        "name": "Olanda",
+        "slug": "olanda",
+        "locale": "it",
+        "description": "<p>Mai farsi ingannare dall’apparenza. L’Olanda, che al primo impatto si presenta come una distesa piatta e senza rilievi montuosi, regala delle perle di alto valore. Dalle distese super colorate dei tulipani in fiore, al fascino dei mulini a vento e delle sue città ricche di storia e cultura. Abbiamo studiato un viaggio fotografico nel periodo della fioritura dei tulipani che ti lascerà a bocca aperta.</p>"
+      },
+      "steps": [
+        {
+          "id": "131",
+          "title": "Raduno e partenza per Utrecht",
+          "description": "<p>Ritrovo presso l’aeroporto di Amsterdam Schipol entro le ore 15:00 e partenza per Utrecht. Sistemazione presso la struttura convenzionata e faremo uno scouting delle location intorno al nostro hotel alla ricerca di campi di tulipani con possibilità di foto al tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Utrecht_viaggio_fotografico_olanda_83f268b3ee.jpg",
+          "alternativeText": "canali, paesaggi urbani viaggio fotografico olanda"
+        }
+      ]
+    },
+    {
+      "id": "162",
+      "title": "Kinderdijk",
+      "description": "Kinderdijk è una località olandese la cui caratteristica principale sono i suoi 19 mulini a vento, costruiti intorno al 1740 e riconosciuti oggi come patrimonio mondiale dell’UNESCO. Sarà bellissimo ammirare i numerosi corsi d'acqua, argini, mulini e chiuse e scoprire come in Olanda la forza dell’acqua sia utilizzata a loro vantaggio da più di mille anni.",
+      "slug": "kinderdijk",
+      "locale": "it",
+      "state": {
+        "name": "Olanda",
+        "slug": "olanda",
+        "locale": "it",
+        "description": "<p>Mai farsi ingannare dall’apparenza. L’Olanda, che al primo impatto si presenta come una distesa piatta e senza rilievi montuosi, regala delle perle di alto valore. Dalle distese super colorate dei tulipani in fiore, al fascino dei mulini a vento e delle sue città ricche di storia e cultura. Abbiamo studiato un viaggio fotografico nel periodo della fioritura dei tulipani che ti lascerà a bocca aperta.</p>"
+      },
+      "steps": [
+        {
+          "id": "132",
+          "title": "Esploriamo la zona di Kinderdijk e dei suoi mulini e la fiabesca Zaanse Schans",
+          "description": "<p>Passeremo la giornata ad esplorare queste due zone alla ricerca di campi di tulipani e di mulini interessanti da fotografare nei momenti di luce migliore di alba e tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Kinderdijk_mulini_a_vento_793680a5cd.jpg",
+          "alternativeText": "tramonto sui mulini a vento e canali viaggio fotografico olanda"
+        }
+      ]
+    },
+    {
+      "id": "163",
+      "title": "Zaanse Schans",
+      "description": "Nel Seicento, nell'area di Zaanse Schans si trovavano più di 600 mulini a vento. I mulini venivano utilizzati per macinare le spezie o per lavorazioni “industriali” come la produzione di vernici o assi di legno e olio. Alcuni di questi mulini sono ancora esistenti e visitabili. La località è fiabesca soprattutto alle luci di tramonto e alba.",
+      "slug": "zaanse-schans",
+      "locale": "it",
+      "state": {
+        "name": "Olanda",
+        "slug": "olanda",
+        "locale": "it",
+        "description": "<p>Mai farsi ingannare dall’apparenza. L’Olanda, che al primo impatto si presenta come una distesa piatta e senza rilievi montuosi, regala delle perle di alto valore. Dalle distese super colorate dei tulipani in fiore, al fascino dei mulini a vento e delle sue città ricche di storia e cultura. Abbiamo studiato un viaggio fotografico nel periodo della fioritura dei tulipani che ti lascerà a bocca aperta.</p>"
+      },
+      "steps": [
+        {
+          "id": "132",
+          "title": "Esploriamo la zona di Kinderdijk e dei suoi mulini e la fiabesca Zaanse Schans",
+          "description": "<p>Passeremo la giornata ad esplorare queste due zone alla ricerca di campi di tulipani e di mulini interessanti da fotografare nei momenti di luce migliore di alba e tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tulipani_e_mulini_viaggio_fotografico_olanda_2f2ec264d4.jpg",
+          "alternativeText": "tulipani colorati, mulini a vento, viaggio fotografico olanda"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/fattoria_canali_olanda_6cf0742b99.jpg",
+          "alternativeText": "tramonto su canali e fattoria viaggio fotografico olanda"
+        }
+      ]
+    },
+    {
+      "id": "164",
+      "title": "Schermerhorn",
+      "description": "Schermerhorn è un villaggio dell'Olanda Settentrionale. Come i villaggi che abbiamo visitato in precedenza è ricco di mulini a vento e campi di tulipani.",
+      "slug": "schermerhorn",
+      "locale": "it",
+      "state": {
+        "name": "Olanda",
+        "slug": "olanda",
+        "locale": "it",
+        "description": "<p>Mai farsi ingannare dall’apparenza. L’Olanda, che al primo impatto si presenta come una distesa piatta e senza rilievi montuosi, regala delle perle di alto valore. Dalle distese super colorate dei tulipani in fiore, al fascino dei mulini a vento e delle sue città ricche di storia e cultura. Abbiamo studiato un viaggio fotografico nel periodo della fioritura dei tulipani che ti lascerà a bocca aperta.</p>"
+      },
+      "steps": [
+        {
+          "id": "133",
+          "title": "Alla scoperta delle aree di Schermerhorn e Bergen e rientro nella capitale",
+          "description": "<p>Dopo l’alba su una location che avremo individuato il giorno prima ci sposteremo un po’ più a nord ad esplorare un’altra area dove la concentrazione di campi di tulipani e mulini a vento è alta. Dopo la sessione del tramonto torneremo ad Amsterdam e se ci sarà la possibilità potremo approfittare del dopo cena per qualche foto notturna in città.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_a_Schermerhorn_3ea7f9cbf0.jpg",
+          "alternativeText": "mulino con tramonto viaggio fotografico olanda"
+        }
+      ]
+    },
+    {
+      "id": "165",
+      "title": "Bergen",
+      "description": "Bergen è un piccolo villaggio di artisti e per tale ragione attrae molti pittori, scrittori e architetti. Anche Bergen, nel periodo della fioritura dei tulipani diventa un tripudio di colori. \nEsploreremo questa zona per qualche occasione fotografica al tramonto e poi torneremo nella capitale.",
+      "slug": "bergen",
+      "locale": "it",
+      "state": {
+        "name": "Olanda",
+        "slug": "olanda",
+        "locale": "it",
+        "description": "<p>Mai farsi ingannare dall’apparenza. L’Olanda, che al primo impatto si presenta come una distesa piatta e senza rilievi montuosi, regala delle perle di alto valore. Dalle distese super colorate dei tulipani in fiore, al fascino dei mulini a vento e delle sue città ricche di storia e cultura. Abbiamo studiato un viaggio fotografico nel periodo della fioritura dei tulipani che ti lascerà a bocca aperta.</p>"
+      },
+      "steps": [
+        {
+          "id": "133",
+          "title": "Alla scoperta delle aree di Schermerhorn e Bergen e rientro nella capitale",
+          "description": "<p>Dopo l’alba su una location che avremo individuato il giorno prima ci sposteremo un po’ più a nord ad esplorare un’altra area dove la concentrazione di campi di tulipani e mulini a vento è alta. Dopo la sessione del tramonto torneremo ad Amsterdam e se ci sarà la possibilità potremo approfittare del dopo cena per qualche foto notturna in città.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/cielo_nuvole_campi_fioriti_tulipani_76c7f100da.jpg",
+          "alternativeText": "campi fioriti, tulipani viaggio fotografico olanda"
+        }
+      ]
+    },
+    {
+      "id": "166",
+      "title": "Amsterdam",
+      "description": "Capitale dei Paesi Bassi, nota per il suo patrimonio artistico, per il suo intricato sistema di canali e le case strette e colorate. Ricca di musei dove sono esposte importanti opere di arte moderna. Alloggeremo nella capitale e avremo modo di cenare e fare qualche foto notturna con le luci della città.",
+      "slug": "amsterdam",
+      "locale": "it",
+      "state": {
+        "name": "Olanda",
+        "slug": "olanda",
+        "locale": "it",
+        "description": "<p>Mai farsi ingannare dall’apparenza. L’Olanda, che al primo impatto si presenta come una distesa piatta e senza rilievi montuosi, regala delle perle di alto valore. Dalle distese super colorate dei tulipani in fiore, al fascino dei mulini a vento e delle sue città ricche di storia e cultura. Abbiamo studiato un viaggio fotografico nel periodo della fioritura dei tulipani che ti lascerà a bocca aperta.</p>"
+      },
+      "steps": [
+        {
+          "id": "133",
+          "title": "Alla scoperta delle aree di Schermerhorn e Bergen e rientro nella capitale",
+          "description": "<p>Dopo l’alba su una location che avremo individuato il giorno prima ci sposteremo un po’ più a nord ad esplorare un’altra area dove la concentrazione di campi di tulipani e mulini a vento è alta. Dopo la sessione del tramonto torneremo ad Amsterdam e se ci sarà la possibilità potremo approfittare del dopo cena per qualche foto notturna in città.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Amsterdam_Canale_ora_blu_e_luci_30aad90374.jpg",
+          "alternativeText": "amsterdam di notte, luci, canali viaggio fotografico olanda"
+        },
+        {
+          "id": "locpic-5-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/amsterdam_riflessa_nel_canale_2df24830c7.jpg",
+          "alternativeText": "viaggio fotografico olanda tra canali, tulipani e mulini"
+        }
+      ]
     }
   ],
   "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Volo A/R dall'Italia (Milano)",
+      "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "147",
+      "number": 1,
+      "title": "Benvenuti in Olanda",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "131",
+          "title": "Raduno e partenza per Utrecht",
+          "description": "<p>Ritrovo presso l’aeroporto di Amsterdam Schipol entro le ore 15:00 e partenza per Utrecht. Sistemazione presso la struttura convenzionata e faremo uno scouting delle location intorno al nostro hotel alla ricerca di campi di tulipani con possibilità di foto al tramonto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "148",
+      "number": 2,
+      "title": "Kinderdijk e Zaanse Schans",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "132",
+          "title": "Esploriamo la zona di Kinderdijk e dei suoi mulini e la fiabesca Zaanse Schans",
+          "description": "<p>Passeremo la giornata ad esplorare queste due zone alla ricerca di campi di tulipani e di mulini interessanti da fotografare nei momenti di luce migliore di alba e tramonto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "149",
+      "number": 3,
+      "title": "Schermerhorn, Bergen e Amsterdam",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "133",
+          "title": "Alla scoperta delle aree di Schermerhorn e Bergen e rientro nella capitale",
+          "description": "<p>Dopo l’alba su una location che avremo individuato il giorno prima ci sposteremo un po’ più a nord ad esplorare un’altra area dove la concentrazione di campi di tulipani e mulini a vento è alta. Dopo la sessione del tramonto torneremo ad Amsterdam e se ci sarà la possibilità potremo approfittare del dopo cena per qualche foto notturna in città.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "150",
+      "number": 4,
+      "title": "Arrivederci Olanda",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "134",
+          "title": "Saluti e fine del nostro viaggio",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">Dopo una buona colazione e una bella foto di gruppo ci saluteremo e torneremo in aeroporto dove terminerà il nostro viaggio.</span></p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Esplorativo",
+      "description": "Andremo insieme alla scoperta di nuove location.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "65",
+      "start": "2023-04-27",
+      "end": "2023-04-30",
+      "status": "scheduled",
+      "maxPax": 6,
+      "price": 599,
+      "deposit": 100,
+      "balance": 499,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 599,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "tulipani colorati, mulini a vento, viaggio fotografico olanda",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tulipani_e_mulini_viaggio_fotografico_olanda_2f2ec264d4.jpg"
+  },
   "pictures": [
     {
-      "id": "248",
+      "id": "0",
+      "type": "tour",
       "title": "Utrecht",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Utrecht_viaggio_fotografico_olanda_83f268b3ee.jpg",
+      "alt": "canali, paesaggi urbani viaggio fotografico olanda"
     },
     {
-      "id": "249",
+      "id": "1",
+      "type": "tour",
       "title": "Kinderdijk",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Kinderdijk_mulini_a_vento_793680a5cd.jpg",
+      "alt": "tramonto sui mulini a vento e canali viaggio fotografico olanda"
     },
     {
-      "id": "250",
+      "id": "2",
+      "type": "tour",
       "title": "Zaanse Schans",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tulipani_e_mulini_viaggio_fotografico_olanda_2f2ec264d4.jpg",
+      "alt": "tulipani colorati, mulini a vento, viaggio fotografico olanda"
     },
     {
-      "id": "251",
+      "id": "3",
+      "type": "tour",
       "title": "Fattoria tipica olandese",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/fattoria_canali_olanda_6cf0742b99.jpg",
+      "alt": "tramonto su canali e fattoria viaggio fotografico olanda"
     },
     {
-      "id": "252",
+      "id": "4",
+      "type": "tour",
       "title": "Schermerhorn",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_a_Schermerhorn_3ea7f9cbf0.jpg",
+      "alt": "mulino con tramonto viaggio fotografico olanda"
     },
     {
-      "id": "253",
+      "id": "5",
+      "type": "tour",
       "title": "Bergen",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/cielo_nuvole_campi_fioriti_tulipani_76c7f100da.jpg",
+      "alt": "campi fioriti, tulipani viaggio fotografico olanda"
     },
     {
-      "id": "254",
+      "id": "6",
+      "type": "tour",
       "title": "Canali Amsterdam di notte",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Amsterdam_Canale_ora_blu_e_luci_30aad90374.jpg",
+      "alt": "amsterdam di notte, luci, canali viaggio fotografico olanda"
     },
     {
-      "id": "255",
+      "id": "7",
+      "type": "tour",
       "title": "Amsterdam riflessa nel canale",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/amsterdam_riflessa_nel_canale_2df24830c7.jpg",
+      "alt": "viaggio fotografico olanda tra canali, tulipani e mulini"
     }
   ]
 }

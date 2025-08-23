@@ -1,171 +1,980 @@
 {
+  "id": "32",
+  "tour_id": "workshop-di-fotografia-roma",
   "slug": "workshop-fotografia-roma",
   "title": "Roma: workshop di fotografia",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p>Passeggiando per le strade di Roma, hai mai sognato di catturare la città in una foto da cartolina?</p><p>Il team di WeShoot ha creato per te dei workshop fotografici dedicati alla splendida Roma.</p><p>Ma come si realizzano fotografie straordinarie? Quali sono i segreti del mestiere di un fotografo professionista?</p><p>Come fare impazzire i tuoi followers con scatti mozzafiato?</p><p>Vivi un indimenticabile pomeriggio con un fotografo professionista, ti insegnerà a sfruttare al meglio la composizione fotografica e a gestire la tua reflex o fotocamera per creare foto da cartolina.</p><p>Un modo diverso di trascorrere un pomeriggio per le strade di Roma: invece di chiuderti in un centro commerciale, porta con te la tua reflex e vieni a scoprire la magia della Città Eterna.</p><p>Affrettati a prenotare il tuo posto: solo 8 persone potranno partecipare per garantire la migliore esperienza possibile a ciascuno di voi.</p><p>Prima dell'inizio del corso, avrai accesso a un gruppo WhatsApp riservato ai corsisti per scambi di consigli e organizzazione dell'uscita fotografica, riceverai anche un estratto del nostro PDF sulla Pianificazione e un viceo corso per iniziare a muovere i primi passi con la post-produzione con Photoshop.</p>",
+  "excerpt": "Cattura la magia di Roma",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:</p><ul style=\"list-style-type:disc;\"><li>Treppiede</li><li>Relfex, Mirrorless o cellulare</li><li>Grandangolo (tra i 10mm e 18mm) e medio zoom (fino a 100mm)</li><li>Filtri fotografici come polarizzatore e ND (opzionali)</li><li>Scatto remoto (opzionale)<br><br>Abbigliamento:</li><li>Vestiario comodo e fresco (impermeabile in caso di pioggia)</li><li>Scarpe comode per camminare</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "lazio"
+    "slug": "lazio",
+    "locale": "it",
+    "name": "lazio"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Workshop di fotografia a Roma 2025",
+    "metaDescription": "Partecipa ai nostri workshop fotografici a Roma, scopri i segreti della fotografia con un professionista che ti insegnerà sul campo come scattare foto da cartolina.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2024-09-07",
-      "end": "2024-09-07"
+      "id": "234",
+      "title": "Castel Sant'Angelo",
+      "description": "Castel Sant'Angelo sorge sulle rive del fiume Tevere, durante il workshop fotografico, catturerete l'architettura storica, i panorami urbani mozzafiato e l'atmosfera vibrante di una della città eterna.",
+      "slug": "castel-sant-angelo",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "173",
+          "title": "Questo è quello che faremo durante il workshop fotografico a Roma",
+          "description": "<p style=\"margin-left:0px;\">Ore 16:00</p><p style=\"margin-left:0px;\">Ci ritroveremo alle 16 per le presentazioni e per un briefing iniziale nei pressi di Castel Sant'angelo. Introduzione alla fotografia di paesaggio e breve spiegazione su come pianificare correttamente un uscita fotografica.</p><p style=\"margin-left:0px;\">Ore 17:00</p><p style=\"margin-left:0px;\">Inizieremo dalle basi della fotografia e imparando la composizione e l'uso dei filtri per scattare i riflessi del tevere in attesa dell'ora d'oro che andremo a catturare su ponte Umberto I.</p><p style=\"margin-left:0px;\">Ore 19:00</p><p style=\"margin-left:0px;\">Continueremo a passeggiare in giro per Roma ad immortalare scene paesaggistiche, architettoniche e di street Photography, fino ad arrivare alle 20 per una pausa con cena al sacco e discussione delle fotografie appena scattate.</p><p style=\"margin-left:0px;\">Ore 21:00</p><p style=\"margin-left:0px;\">Andremo verso il colosseo per terminare il workshop fotografico, imparando come fotografare in notturna e la tecnica delle lunghe esposizioni per immortalare le scie delle auto</p><p style=\"margin-left:0px;\">Ore 22:30</p><p style=\"margin-left:0px;\">Il workshop terminerà all'incirca a quest'ora, ma come diciamo ogni volta se ci stiamo divertendo può capitare che si prolunghi anche di più, in fin dei conti fotografare è bello ed emozionante per cui sai quando cominci... ma non sai quando finisci! :)</p><p style=\"margin-left:0px;\"><span style=\"background-color:rgb(255,255,255);color:rgba(0,0,0,0.87);\">l programma potrebbe variare anche in base alle condizioni meteo. Quindi per garantire il migliore svolgimento possibile del workshop fotografico sarà nostro compito monitorare costantemente il meteo per proporvi sempre il posto migliore da fotografare in base allo studio della luce e allo stesso tempo, di spiegarvi come pianificare al meglio anche le vostre future uscite fotografiche</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/workshop_fotografia_roma_5ca1b30691.jpg",
+          "alternativeText": "castel sant'angelo riflesso nel tevere"
+        }
+      ]
     },
     {
-      "start": "2024-10-05",
-      "end": "2024-10-05"
+      "id": "235",
+      "title": "Ponte Umberto I",
+      "description": "Ponte Umberto I, situato a Roma, collega il centro storico della città con il quartiere Prati. Questo elegante ponte attraversa il fiume Tevere, offrendo una vista spettacolare sulla Cupola di San Pietro.",
+      "slug": "ponte-umberto-i",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "173",
+          "title": "Questo è quello che faremo durante il workshop fotografico a Roma",
+          "description": "<p style=\"margin-left:0px;\">Ore 16:00</p><p style=\"margin-left:0px;\">Ci ritroveremo alle 16 per le presentazioni e per un briefing iniziale nei pressi di Castel Sant'angelo. Introduzione alla fotografia di paesaggio e breve spiegazione su come pianificare correttamente un uscita fotografica.</p><p style=\"margin-left:0px;\">Ore 17:00</p><p style=\"margin-left:0px;\">Inizieremo dalle basi della fotografia e imparando la composizione e l'uso dei filtri per scattare i riflessi del tevere in attesa dell'ora d'oro che andremo a catturare su ponte Umberto I.</p><p style=\"margin-left:0px;\">Ore 19:00</p><p style=\"margin-left:0px;\">Continueremo a passeggiare in giro per Roma ad immortalare scene paesaggistiche, architettoniche e di street Photography, fino ad arrivare alle 20 per una pausa con cena al sacco e discussione delle fotografie appena scattate.</p><p style=\"margin-left:0px;\">Ore 21:00</p><p style=\"margin-left:0px;\">Andremo verso il colosseo per terminare il workshop fotografico, imparando come fotografare in notturna e la tecnica delle lunghe esposizioni per immortalare le scie delle auto</p><p style=\"margin-left:0px;\">Ore 22:30</p><p style=\"margin-left:0px;\">Il workshop terminerà all'incirca a quest'ora, ma come diciamo ogni volta se ci stiamo divertendo può capitare che si prolunghi anche di più, in fin dei conti fotografare è bello ed emozionante per cui sai quando cominci... ma non sai quando finisci! :)</p><p style=\"margin-left:0px;\"><span style=\"background-color:rgb(255,255,255);color:rgba(0,0,0,0.87);\">l programma potrebbe variare anche in base alle condizioni meteo. Quindi per garantire il migliore svolgimento possibile del workshop fotografico sarà nostro compito monitorare costantemente il meteo per proporvi sempre il posto migliore da fotografare in base allo studio della luce e allo stesso tempo, di spiegarvi come pianificare al meglio anche le vostre future uscite fotografiche</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Ponte_Umberto_I_al_tramonto_ab229677c3.jpg",
+          "alternativeText": "Workshop di fotografia a roma"
+        }
+      ]
     },
     {
-      "start": "2024-11-16",
-      "end": "2024-11-16"
+      "id": "236",
+      "title": "Fori Imperiali",
+      "description": "I Fori Imperiali, situati nel cuore di Roma, sono un vasto complesso archeologico che racconta la grandiosità dell'antica Roma. Questo sito storico, che comprende i resti di importanti piazze monumentali costruite dai vari imperatori, offre uno scenario unico per un tour fotografico.",
+      "slug": "fori-imperiali",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "173",
+          "title": "Questo è quello che faremo durante il workshop fotografico a Roma",
+          "description": "<p style=\"margin-left:0px;\">Ore 16:00</p><p style=\"margin-left:0px;\">Ci ritroveremo alle 16 per le presentazioni e per un briefing iniziale nei pressi di Castel Sant'angelo. Introduzione alla fotografia di paesaggio e breve spiegazione su come pianificare correttamente un uscita fotografica.</p><p style=\"margin-left:0px;\">Ore 17:00</p><p style=\"margin-left:0px;\">Inizieremo dalle basi della fotografia e imparando la composizione e l'uso dei filtri per scattare i riflessi del tevere in attesa dell'ora d'oro che andremo a catturare su ponte Umberto I.</p><p style=\"margin-left:0px;\">Ore 19:00</p><p style=\"margin-left:0px;\">Continueremo a passeggiare in giro per Roma ad immortalare scene paesaggistiche, architettoniche e di street Photography, fino ad arrivare alle 20 per una pausa con cena al sacco e discussione delle fotografie appena scattate.</p><p style=\"margin-left:0px;\">Ore 21:00</p><p style=\"margin-left:0px;\">Andremo verso il colosseo per terminare il workshop fotografico, imparando come fotografare in notturna e la tecnica delle lunghe esposizioni per immortalare le scie delle auto</p><p style=\"margin-left:0px;\">Ore 22:30</p><p style=\"margin-left:0px;\">Il workshop terminerà all'incirca a quest'ora, ma come diciamo ogni volta se ci stiamo divertendo può capitare che si prolunghi anche di più, in fin dei conti fotografare è bello ed emozionante per cui sai quando cominci... ma non sai quando finisci! :)</p><p style=\"margin-left:0px;\"><span style=\"background-color:rgb(255,255,255);color:rgba(0,0,0,0.87);\">l programma potrebbe variare anche in base alle condizioni meteo. Quindi per garantire il migliore svolgimento possibile del workshop fotografico sarà nostro compito monitorare costantemente il meteo per proporvi sempre il posto migliore da fotografare in base allo studio della luce e allo stesso tempo, di spiegarvi come pianificare al meglio anche le vostre future uscite fotografiche</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/fori_imperiale_blu_hour_f247ea947f.jpg",
+          "alternativeText": "workshop di fotografia a roma"
+        }
+      ]
     },
     {
-      "start": "2024-12-21",
-      "end": "2024-12-21"
+      "id": "237",
+      "title": "Ponte degli Annibaldi",
+      "description": "Ponte degli Annibaldi, situato nel cuore di Roma, è un passaggio pedonale sopraelevato che offre una vista unica sul Colosseo e sull'antico centro della città. Durante il workshop fotografico, avrete l'opportunità di catturare l'imponente anfiteatro romano da una prospettiva privilegiata, incorniciato dal verde dei parchi circostanti e dalle scie delle auto.",
+      "slug": "ponte-degli-annibaldi",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "173",
+          "title": "Questo è quello che faremo durante il workshop fotografico a Roma",
+          "description": "<p style=\"margin-left:0px;\">Ore 16:00</p><p style=\"margin-left:0px;\">Ci ritroveremo alle 16 per le presentazioni e per un briefing iniziale nei pressi di Castel Sant'angelo. Introduzione alla fotografia di paesaggio e breve spiegazione su come pianificare correttamente un uscita fotografica.</p><p style=\"margin-left:0px;\">Ore 17:00</p><p style=\"margin-left:0px;\">Inizieremo dalle basi della fotografia e imparando la composizione e l'uso dei filtri per scattare i riflessi del tevere in attesa dell'ora d'oro che andremo a catturare su ponte Umberto I.</p><p style=\"margin-left:0px;\">Ore 19:00</p><p style=\"margin-left:0px;\">Continueremo a passeggiare in giro per Roma ad immortalare scene paesaggistiche, architettoniche e di street Photography, fino ad arrivare alle 20 per una pausa con cena al sacco e discussione delle fotografie appena scattate.</p><p style=\"margin-left:0px;\">Ore 21:00</p><p style=\"margin-left:0px;\">Andremo verso il colosseo per terminare il workshop fotografico, imparando come fotografare in notturna e la tecnica delle lunghe esposizioni per immortalare le scie delle auto</p><p style=\"margin-left:0px;\">Ore 22:30</p><p style=\"margin-left:0px;\">Il workshop terminerà all'incirca a quest'ora, ma come diciamo ogni volta se ci stiamo divertendo può capitare che si prolunghi anche di più, in fin dei conti fotografare è bello ed emozionante per cui sai quando cominci... ma non sai quando finisci! :)</p><p style=\"margin-left:0px;\"><span style=\"background-color:rgb(255,255,255);color:rgba(0,0,0,0.87);\">l programma potrebbe variare anche in base alle condizioni meteo. Quindi per garantire il migliore svolgimento possibile del workshop fotografico sarà nostro compito monitorare costantemente il meteo per proporvi sempre il posto migliore da fotografare in base allo studio della luce e allo stesso tempo, di spiegarvi come pianificare al meglio anche le vostre future uscite fotografiche</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/colosse_con_scie_b0ce23370d.jpg",
+          "alternativeText": "workshop di fotografia roma"
+        }
+      ]
     },
     {
-      "start": "2025-01-25",
-      "end": "2025-01-25"
+      "id": "238",
+      "title": "Colosseo",
+      "description": "Il Colosseo, uno dei monumenti più iconici di Roma e del mondo intero, è un antico anfiteatro che incanta con la sua grandiosità e storia. Situato nel centro della città, il Colosseo offre innumerevoli angoli per scatti fotografici mozzafiato.",
+      "slug": "colosseo",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "173",
+          "title": "Questo è quello che faremo durante il workshop fotografico a Roma",
+          "description": "<p style=\"margin-left:0px;\">Ore 16:00</p><p style=\"margin-left:0px;\">Ci ritroveremo alle 16 per le presentazioni e per un briefing iniziale nei pressi di Castel Sant'angelo. Introduzione alla fotografia di paesaggio e breve spiegazione su come pianificare correttamente un uscita fotografica.</p><p style=\"margin-left:0px;\">Ore 17:00</p><p style=\"margin-left:0px;\">Inizieremo dalle basi della fotografia e imparando la composizione e l'uso dei filtri per scattare i riflessi del tevere in attesa dell'ora d'oro che andremo a catturare su ponte Umberto I.</p><p style=\"margin-left:0px;\">Ore 19:00</p><p style=\"margin-left:0px;\">Continueremo a passeggiare in giro per Roma ad immortalare scene paesaggistiche, architettoniche e di street Photography, fino ad arrivare alle 20 per una pausa con cena al sacco e discussione delle fotografie appena scattate.</p><p style=\"margin-left:0px;\">Ore 21:00</p><p style=\"margin-left:0px;\">Andremo verso il colosseo per terminare il workshop fotografico, imparando come fotografare in notturna e la tecnica delle lunghe esposizioni per immortalare le scie delle auto</p><p style=\"margin-left:0px;\">Ore 22:30</p><p style=\"margin-left:0px;\">Il workshop terminerà all'incirca a quest'ora, ma come diciamo ogni volta se ci stiamo divertendo può capitare che si prolunghi anche di più, in fin dei conti fotografare è bello ed emozionante per cui sai quando cominci... ma non sai quando finisci! :)</p><p style=\"margin-left:0px;\"><span style=\"background-color:rgb(255,255,255);color:rgba(0,0,0,0.87);\">l programma potrebbe variare anche in base alle condizioni meteo. Quindi per garantire il migliore svolgimento possibile del workshop fotografico sarà nostro compito monitorare costantemente il meteo per proporvi sempre il posto migliore da fotografare in base allo studio della luce e allo stesso tempo, di spiegarvi come pianificare al meglio anche le vostre future uscite fotografiche</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/colosseo_in_notturna_5ad99c602b.jpg",
+          "alternativeText": "workshop di fotografia roma"
+        }
+      ]
     },
     {
-      "start": "2025-02-15",
-      "end": "2025-02-15"
+      "id": "239",
+      "title": "Altare della Patria",
+      "description": "L'Altare della Patria, noto anche come il Vittoriano, è un maestoso monumento situato nel cuore di Roma, in Piazza Venezia. Durante il workshop fotografico, potrete immortalare le sue colonne corinzie, le statue equestri e le quadrighe che sormontano il monumento. ",
+      "slug": "altare-della-patria",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "173",
+          "title": "Questo è quello che faremo durante il workshop fotografico a Roma",
+          "description": "<p style=\"margin-left:0px;\">Ore 16:00</p><p style=\"margin-left:0px;\">Ci ritroveremo alle 16 per le presentazioni e per un briefing iniziale nei pressi di Castel Sant'angelo. Introduzione alla fotografia di paesaggio e breve spiegazione su come pianificare correttamente un uscita fotografica.</p><p style=\"margin-left:0px;\">Ore 17:00</p><p style=\"margin-left:0px;\">Inizieremo dalle basi della fotografia e imparando la composizione e l'uso dei filtri per scattare i riflessi del tevere in attesa dell'ora d'oro che andremo a catturare su ponte Umberto I.</p><p style=\"margin-left:0px;\">Ore 19:00</p><p style=\"margin-left:0px;\">Continueremo a passeggiare in giro per Roma ad immortalare scene paesaggistiche, architettoniche e di street Photography, fino ad arrivare alle 20 per una pausa con cena al sacco e discussione delle fotografie appena scattate.</p><p style=\"margin-left:0px;\">Ore 21:00</p><p style=\"margin-left:0px;\">Andremo verso il colosseo per terminare il workshop fotografico, imparando come fotografare in notturna e la tecnica delle lunghe esposizioni per immortalare le scie delle auto</p><p style=\"margin-left:0px;\">Ore 22:30</p><p style=\"margin-left:0px;\">Il workshop terminerà all'incirca a quest'ora, ma come diciamo ogni volta se ci stiamo divertendo può capitare che si prolunghi anche di più, in fin dei conti fotografare è bello ed emozionante per cui sai quando cominci... ma non sai quando finisci! :)</p><p style=\"margin-left:0px;\"><span style=\"background-color:rgb(255,255,255);color:rgba(0,0,0,0.87);\">l programma potrebbe variare anche in base alle condizioni meteo. Quindi per garantire il migliore svolgimento possibile del workshop fotografico sarà nostro compito monitorare costantemente il meteo per proporvi sempre il posto migliore da fotografare in base allo studio della luce e allo stesso tempo, di spiegarvi come pianificare al meglio anche le vostre future uscite fotografiche</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Altare_della_Patria_Roma_ora_blu_b8df952a4c.jpg",
+          "alternativeText": "Workshop di fotografia a Roma"
+        }
+      ]
     },
     {
-      "start": "2025-03-29",
-      "end": "2025-03-29"
-    },
-    {
-      "start": "2025-04-19",
-      "end": "2025-04-19"
-    },
-    {
-      "start": "2025-05-17",
-      "end": "2025-05-17"
-    },
-    {
-      "start": "2025-06-14",
-      "end": "2025-06-14"
-    },
-    {
-      "start": "2025-09-20",
-      "end": "2025-09-20"
-    },
-    {
-      "start": "2025-10-11",
-      "end": "2025-10-11"
-    },
-    {
-      "start": "2025-11-22",
-      "end": "2025-11-22"
-    },
-    {
-      "start": "2025-12-13",
-      "end": "2025-12-13"
-    },
-    {
-      "start": "2025-08-30",
-      "end": "2025-08-30"
-    },
-    {
-      "start": "2026-01-10",
-      "end": "2026-01-10"
-    },
-    {
-      "start": "2026-02-07",
-      "end": "2026-02-07"
-    },
-    {
-      "start": "2026-03-14",
-      "end": "2026-03-14"
+      "id": "240",
+      "title": "San Pietro",
+      "description": "La Basilica di San Pietro, situata nel cuore del Vaticano, è uno dei luoghi più sacri e riconoscibili al mondo. Questo maestoso capolavoro di architettura rinascimentale, con la sua iconica cupola progettata da Michelangelo, domina il panorama romano.",
+      "slug": "san-pietro",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "173",
+          "title": "Questo è quello che faremo durante il workshop fotografico a Roma",
+          "description": "<p style=\"margin-left:0px;\">Ore 16:00</p><p style=\"margin-left:0px;\">Ci ritroveremo alle 16 per le presentazioni e per un briefing iniziale nei pressi di Castel Sant'angelo. Introduzione alla fotografia di paesaggio e breve spiegazione su come pianificare correttamente un uscita fotografica.</p><p style=\"margin-left:0px;\">Ore 17:00</p><p style=\"margin-left:0px;\">Inizieremo dalle basi della fotografia e imparando la composizione e l'uso dei filtri per scattare i riflessi del tevere in attesa dell'ora d'oro che andremo a catturare su ponte Umberto I.</p><p style=\"margin-left:0px;\">Ore 19:00</p><p style=\"margin-left:0px;\">Continueremo a passeggiare in giro per Roma ad immortalare scene paesaggistiche, architettoniche e di street Photography, fino ad arrivare alle 20 per una pausa con cena al sacco e discussione delle fotografie appena scattate.</p><p style=\"margin-left:0px;\">Ore 21:00</p><p style=\"margin-left:0px;\">Andremo verso il colosseo per terminare il workshop fotografico, imparando come fotografare in notturna e la tecnica delle lunghe esposizioni per immortalare le scie delle auto</p><p style=\"margin-left:0px;\">Ore 22:30</p><p style=\"margin-left:0px;\">Il workshop terminerà all'incirca a quest'ora, ma come diciamo ogni volta se ci stiamo divertendo può capitare che si prolunghi anche di più, in fin dei conti fotografare è bello ed emozionante per cui sai quando cominci... ma non sai quando finisci! :)</p><p style=\"margin-left:0px;\"><span style=\"background-color:rgb(255,255,255);color:rgba(0,0,0,0.87);\">l programma potrebbe variare anche in base alle condizioni meteo. Quindi per garantire il migliore svolgimento possibile del workshop fotografico sarà nostro compito monitorare costantemente il meteo per proporvi sempre il posto migliore da fotografare in base allo studio della luce e allo stesso tempo, di spiegarvi come pianificare al meglio anche le vostre future uscite fotografiche</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/San_Pietro_dopo_una_tempesta_al_tramonto_751e6b2e3e.jpg",
+          "alternativeText": "workshop di fotografia a roma"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "45",
+      "title": "Fotografia notturna a Roma",
+      "description": "Marco e ad Alessandro due ottimi maestri e consiglieri che mi hanno arricchito molto con i loro consigli tecnici sulla fotografia notturna. Ora ho le idee un po più chiare su come fotografare di notte! Bel gruppo e bella serata. Distesa e istruttiva! La consiglio come \"cura\" mente corpo!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2017-11-15T13:31:06.000Z"
     },
     {
-      "rating": 5
+      "id": "80",
+      "title": "Esperienza esclusiva!!!",
+      "description": "Primo viaggio fotografico di fotografia molto produttivo, sia per la professionalità delle risposte di Marco Carotenuto che per l'approfondimento e la scoperta di nuove tecniche fotografiche. Magico per la location Roma caput mundi, ci ha regalato sfumature arancio alle spalle di San Pietro! Ringrazio nuovamente Marco per la disponibilità e la dedizione e auguro a tutti un viaggio fotografico di tale livello!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-04-06T18:37:17.000Z"
     },
     {
-      "rating": 5
+      "id": "142",
+      "title": "Quando la passione incontra la professionalità ",
+      "description": "Prima di fare questo workshop fotografico non avevo mai acceso una reflex e non capivo assolutamente nulla di fotografia. A fine giornata sono tornata a casa con una voglia matta di entrare in questo mondo, comprare un’attrezzatura adeguata ed uscire a scattare. Marco non so come è riuscito a farmi scattare delle bellissime foto, e a prendere confidenza con la macchina in poco più di 5 ore. Complice della riuscita del tutto è stata anche Roma, semplicemente meravigliosa. Consigliatissimo",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-10-01T17:58:34.000Z"
     },
     {
-      "rating": 5
+      "id": "163",
+      "title": "Abbiamo catturato la magia di Roma",
+      "description": "Splendida giornata appena trascorsa al workshop fotografico base a Roma! Le ore sono volate e l’entusiasmo di Alessandro e Marco per la fotografia è contagioso ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-01-14T10:01:27.000Z"
     },
     {
-      "rating": 5
+      "id": "167",
+      "title": "Ne ho già nostalgia!",
+      "description": "E' stato il mio terzo viaggio fotografico a cui partecipavo, ma non mi era mai capitato finora di andar via a fine lavori con la sensazione di aver lasciato degli amici! A conti fatti, in questo workshop fotografico ho conosciuto nuove persone con cui ho trascorso delle ore piacevoli, ho fatto una lunga e bella passeggiata tra le bellezze di Roma, ho portato a casa delle belle foto, ho imparato nuove tecniche ed ho affinato quelle che avevo già. Complimenti a Marco, che ha saputo seguire un gruppo di persone piuttosto eterogeneo per età e competenze fotografiche senza trascurare nulla e nessuno. ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-04-01T18:52:03.000Z"
     },
     {
-      "rating": 5
+      "id": "191",
+      "title": "workshop fotografico  Roma",
+      "description": "siete un team molto preparato e in un pomeriggio caldo di Roma siete riusciti a far correre il tempo talmente in fretta che non volevamo concluderlo sia per il bel gruppo sia per tutto ciò che avete insegnato e che abbiamo subito messo in pratica. Bravi, simpatici e molto attenti a rispondere ad ogni nostra domanda. Grazie ragazzi avete messo in me la voglia di sperimentare e imparare tutto ciò che questo mondo può insegnarmi",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-06-17T11:21:19.000Z"
     },
     {
-      "rating": 5
+      "id": "192",
+      "title": "Competenza e divertimento a passeggio per Roma",
+      "description": "Ale e Marco sono spettacalori, riescono a trasmettere tutta la loro passione per la fotografia. Sempre pronti a darti consigli e suggerimenti. Il tempo è volato. Grande professionalità e competenza. \n\nGrazie e sicuramente al prossimo Workshop fotografico e perche no anche qualche viaggio organizzato da voi ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-06-21T13:28:00.000Z"
     },
     {
-      "rating": 5
+      "id": "212",
+      "title": "Workshop fotografico a Roma",
+      "description": "Corso organizzato benissimo, sotto ogni aspetto. Il corso è molto utile per poter apprendere molte cose (esposizione, luce ecc.), Marco vi seguirà passo passo per riuscire a catturare al meglio ciò che state vendendo di fronte a voi. Concludo con la classica frase \"consigliatissimo\".",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-10-31T12:14:25.000Z"
     },
     {
-      "rating": 5
+      "id": "248",
+      "title": "Ottima compagnia e Insegnamenti",
+      "description": "Un workshop fotografico in luoghi romantici in ottima compagnia e con i nostri accompagnatori Alessandro e Marco che hanno saputo creare un clima familiare ",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "published_at": "2022-03-25T10:16:22.000Z"
     }
   ],
+  "whats_includeds": [
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [],
+  "days": [
+    {
+      "id": "185",
+      "number": 1,
+      "title": "Benvenuto a Roma",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "173",
+          "title": "Questo è quello che faremo durante il workshop fotografico a Roma",
+          "description": "<p style=\"margin-left:0px;\">Ore 16:00</p><p style=\"margin-left:0px;\">Ci ritroveremo alle 16 per le presentazioni e per un briefing iniziale nei pressi di Castel Sant'angelo. Introduzione alla fotografia di paesaggio e breve spiegazione su come pianificare correttamente un uscita fotografica.</p><p style=\"margin-left:0px;\">Ore 17:00</p><p style=\"margin-left:0px;\">Inizieremo dalle basi della fotografia e imparando la composizione e l'uso dei filtri per scattare i riflessi del tevere in attesa dell'ora d'oro che andremo a catturare su ponte Umberto I.</p><p style=\"margin-left:0px;\">Ore 19:00</p><p style=\"margin-left:0px;\">Continueremo a passeggiare in giro per Roma ad immortalare scene paesaggistiche, architettoniche e di street Photography, fino ad arrivare alle 20 per una pausa con cena al sacco e discussione delle fotografie appena scattate.</p><p style=\"margin-left:0px;\">Ore 21:00</p><p style=\"margin-left:0px;\">Andremo verso il colosseo per terminare il workshop fotografico, imparando come fotografare in notturna e la tecnica delle lunghe esposizioni per immortalare le scie delle auto</p><p style=\"margin-left:0px;\">Ore 22:30</p><p style=\"margin-left:0px;\">Il workshop terminerà all'incirca a quest'ora, ma come diciamo ogni volta se ci stiamo divertendo può capitare che si prolunghi anche di più, in fin dei conti fotografare è bello ed emozionante per cui sai quando cominci... ma non sai quando finisci! :)</p><p style=\"margin-left:0px;\"><span style=\"background-color:rgb(255,255,255);color:rgba(0,0,0,0.87);\">l programma potrebbe variare anche in base alle condizioni meteo. Quindi per garantire il migliore svolgimento possibile del workshop fotografico sarà nostro compito monitorare costantemente il meteo per proporvi sempre il posto migliore da fotografare in base allo studio della luce e allo stesso tempo, di spiegarvi come pianificare al meglio anche le vostre future uscite fotografiche</span></p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Urbano",
+      "description": "Viaggi fotografici tra borghi e paesaggi urbani",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Fotografia Notturna",
+      "description": "Impara a scattare in luce lunare o con le stelle",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "179",
+      "start": "2024-09-07",
+      "end": "2024-09-07",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 5,
+      "currency": "EUR",
+      "priceCompanion": 30,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "180",
+      "start": "2024-10-05",
+      "end": "2024-10-05",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 5,
+      "currency": "EUR",
+      "priceCompanion": 30,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "183",
+      "start": "2024-11-16",
+      "end": "2024-11-16",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "185",
+      "start": "2024-12-21",
+      "end": "2024-12-21",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "194",
+      "start": "2025-01-25",
+      "end": "2025-01-25",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": null,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "195",
+      "start": "2025-02-15",
+      "end": "2025-02-15",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": null,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "196",
+      "start": "2025-03-29",
+      "end": "2025-03-29",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": null,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "205",
+      "start": "2025-04-19",
+      "end": "2025-04-19",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "206",
+      "start": "2025-05-17",
+      "end": "2025-05-17",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "207",
+      "start": "2025-06-14",
+      "end": "2025-06-14",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "219",
+      "start": "2025-09-20",
+      "end": "2025-09-20",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 2,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "220",
+      "start": "2025-10-11",
+      "end": "2025-10-11",
+      "status": "almostFull",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 2,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "221",
+      "start": "2025-11-22",
+      "end": "2025-11-22",
+      "status": "confirmed",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 2,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "222",
+      "start": "2025-12-13",
+      "end": "2025-12-13",
+      "status": "confirmed",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 2,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "223",
+      "start": "2025-08-30",
+      "end": "2025-08-30",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 2,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "228",
+      "start": "2026-01-10",
+      "end": "2026-01-10",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 69,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "232",
+      "start": "2026-02-07",
+      "end": "2026-02-07",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 69,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "235",
+      "start": "2026-03-14",
+      "end": "2026-03-14",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 69,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Chi può partecipare al workshop fotografico a Roma?",
+      "answer": "<p>Il workshop fotografico è aperto a tutti gli appassionati di fotografia, indipendentemente dal livello di esperienza. Che tu sia alle prime armi o un fotografo con qualche anno di esperienza, troverai utili i nostri insegnamenti e consigli pratici.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Quali attrezzature fotografiche sono necessarie?",
+      "answer": "<p>Si consiglia di portare una reflex digitale o una fotocamera mirrorless. Tuttavia, anche smartphone con buone capacità fotografiche sono benvenuti. Porta anche batterie di riserva e schede di memoria. Obiettivi dal grandangolare (es 14-24mm, 10-22mm) al medio zoom (es: 24-70mm o 24-120mm)</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Qual è il costo del workshop e cosa include?",
+      "answer": "<p>Il costo del workshop è di 69€. Include l'insegnamento da parte di fotografi professionisti, materiali didattici e un estratto del nostro PDF sulla Pianificazione. Ogni partecipante avrà anche diritto a uno sconto del 10% sul prossimo viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Come posso prenotare il mio posto al workshop fotografico?",
+      "answer": "<p>Per prenotare il tuo posto, clicca sul pulsante “richiedi info”, si aprirà in automatico un messaggio da inviare direttamente su whatsapp. Poiché i posti del workshop fotografico a roma sono limitati a 10 partecipanti per garantire un'esperienza di qualità, ti consigliamo di prenotare il prima possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Dove si svolgerà il workshop fotografico?",
+      "answer": "<p>Il workshop si svolgerà per le strade di Roma, visitando i luoghi più iconici e fotogenici della città. Il punto di incontro verrà comunicato via email dopo la conferma della prenotazione.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "Qual è la durata del workshop?",
+      "answer": "<p>l workshop fotografico a Roma ha una durata di un pomeriggio, circa 6 ore. Durante questo tempo, esploreremo vari punti di interesse e praticheremo diverse tecniche fotografiche, tra cui la fotografia notturna e in lunga esposizione.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Cosa succede in caso di maltempo?",
+      "answer": "<p>In caso di maltempo (per maltempo intendiamo scroscioni importanti di pioggia da non permettere gli scatti), il workshop fotografico verrà posticipato a una data successiva. Ti avviseremo via email con tutti i dettagli aggiornati. In tutti gli altri casi il workshop sarà confermato, anche perchè gli scatti migliori si ottengono sempre con il meteo avverso.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Avrò supporto prima del workshop fotografico a Roma?",
+      "answer": "<p>Sì, qualche giorno prima dell'inizio del workshop fotografico avrai accesso a un gruppo WhatsApp riservato ai corsisti, dove potrai scambiare consigli e organizzare tutto il materiale da portare.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Posso portare un accompagnatore che non partecipa al workshop?",
+      "answer": "<p>Sì, gli accompagnatori sono i benvenuti. Tuttavia, si prega di notare che l'accompagnatore non parteciperà attivamente al workshop né riceverà materiali didattici. Gli accompagnatori possono unirsi a noi durante le passeggiate e le pause, rendendo l'esperienza ancora più piacevole.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "Workshop di fotografia a roma",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Ponte_Umberto_I_al_tramonto_ab229677c3.jpg"
+  },
   "pictures": [
     {
-      "id": "371",
+      "id": "0",
+      "type": "tour",
       "title": "Castel Sant'Angelo riflesso nel Tevere",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/workshop_fotografia_roma_5ca1b30691.jpg",
+      "alt": "castel sant'angelo riflesso nel tevere"
     },
     {
-      "id": "372",
+      "id": "1",
+      "type": "tour",
       "title": "Ponte Umberto I",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Ponte_Umberto_I_al_tramonto_ab229677c3.jpg",
+      "alt": "Workshop di fotografia a roma"
     },
     {
-      "id": "373",
+      "id": "2",
+      "type": "tour",
       "title": "Fori Imperiali",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/fori_imperiale_blu_hour_f247ea947f.jpg",
+      "alt": "workshop di fotografia a roma"
     },
     {
-      "id": "374",
+      "id": "3",
+      "type": "tour",
       "title": "Colosseo con scie",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/colosse_con_scie_b0ce23370d.jpg",
+      "alt": "workshop di fotografia roma"
     },
     {
-      "id": "375",
+      "id": "4",
+      "type": "tour",
       "title": "Colosseo in notturna",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/colosseo_in_notturna_5ad99c602b.jpg",
+      "alt": "workshop di fotografia roma"
     },
     {
-      "id": "376",
+      "id": "5",
+      "type": "tour",
       "title": "Altare della Patria",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Altare_della_Patria_Roma_ora_blu_b8df952a4c.jpg",
+      "alt": "Workshop di fotografia a Roma"
     },
     {
-      "id": "377",
+      "id": "6",
+      "type": "tour",
       "title": "San Pietro al tramonto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/San_Pietro_dopo_una_tempesta_al_tramonto_751e6b2e3e.jpg",
+      "alt": "workshop di fotografia a roma"
     }
   ]
 }

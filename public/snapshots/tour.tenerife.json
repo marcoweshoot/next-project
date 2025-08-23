@@ -1,135 +1,812 @@
 {
+  "id": "19",
+  "tour_id": "tenerife-paesaggi-lunari-sotto-uno-dei-cieli-piu-scuri-d-europa",
   "slug": "tenerife",
   "title": "Tenerife: paesaggi lunari sotto uno dei cieli più scuri d'Europa",
-  "states": {
-    "slug": "spagna"
-  },
+  "description": "<p>Se sei entrato a leggere questo programma vuol dire che sei un appassionato di viaggi in luoghi esclusivi, e cosa rende esclusiva questa location?</p><p><strong>Tenerife</strong> è l'isola più grande delle Canarie, domina l'oceano Atlantico dall'alto del Vulcano Teide (3718mt).</p><p>E' famosa in tutto il Mondo per la straordinaria varietà di paesaggi che la caratterizzano, le rocce vulcaniche e le più variegate forme di vegetazione che crescono nel Parco Nazionale rendono magico questo posto del Mondo, ogni angolo di questo paradiso terrestre è ideale per la fotografia che ami di più, il paesaggio.</p><p>Perchè unirti ad un viaggio fotografico organizzato ha molti più vantaggi rispetto a prenotare e muoverti in autonomia?</p><p>Semplicissimo: sarai seguito da due fotografi professionisti durante le sessioni di scatto notturno.</p><p>Ogni giorno imparerai a <strong>pianificare</strong> le migliori location fotografiche, vedrai come si muovono due riferimenti del settore e prenderai parte ai <strong>processi creativi</strong> che caratterizzano la riuscita di una fotografia di paesaggio, condividendo con altri appassionati come te un viaggio all'insegna della passione e della ricerca. Saliremo sulle locations con dei trekking di facile livello (è richiesto comunque un minimo di predisposizione al cammino in montagna) e scatteremo tutta la notte, in modo da portare a casa tantissime riprese incredibili della <strong>Via Lattea</strong>. (Dormiremo la mattinata)</p><p>I posti sono limitati per poter vivere al meglio questa esperienza, ed ognuno di voi tornerà a casa con un bagaglio di nuove conoscenze e tante foto incredibili.</p>",
+  "excerpt": "Scopri insieme a noi Tenerife con i suoi paesaggi e la via lattea",
+  "difficulty": "easy",
+  "experience_level": "Intenso",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Astroinseguitore (opzionale)</li></ul><p>Abbigliamento:</p><ul><li>Vestiario comodo e impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "canarie"
+    "slug": "canarie",
+    "locale": "it",
+    "name": "Canarie"
   },
-  "sessions": [
+  "states": {
+    "name": "Spagna",
+    "slug": "spagna",
+    "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Tenerife 2025 | WeShoot",
+    "metaDescription": "Un viaggio fotografico tra paesaggi marziani di Tenerife e i suoi cieli notturni incredibili dove fotografare la via lattea.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2023-06-10",
-      "end": "2023-06-17"
+      "id": "82",
+      "title": "Mines of San Jose",
+      "description": "Nel parco nazionale del Teide si trova questa infinita distesa di dune di sabbia, un paesaggio che ricorda molto quello lunare.",
+      "slug": "mines-of-san-jose",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "76",
+          "title": "Mines of San Jose",
+          "description": "<p>Impiegheremo la prima parte della giornata per organizzare il materiale che sarà necessario per affrontare le seguenti sessioni di scatto. in questa parete della giornata avremo la possibilità di acquistare la spesa comune della settimana a fronte dell’istituzione di una cassa comune, e della spesa personale che sarà utile per la preparazione dei vari pasti che faremo al socco.</p><p>Nel primo pomeriggio ci sposteremo verso la prima location del viaggio per scattare il tramonto: Mirador do Ayosa e Mirador la Tarta. dove avremo modo di ammirare la maestosità del teide al tramonto al di sopra di un incredibile tappeto di nuvole.<br>successivamente al tramonto raggiungeremo l'esclusiva location di Mines de San Jose, dove affronteremo le complessità teoriche e pratiche della fotografia notturna prima di dedicarci alla sessione di &nbsp;scatto, dove fotograferemo bellissime rocce del posto con la Via Lattea di sfondo.</p><p>Terminata la prima parte della notte, torneremo in struttura per il meritato sonno.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Via_lattea_a_Mines_of_San_Jose_894546b2c2.jpg",
+          "alternativeText": "Via lattea durante viaggio fotografico tenerife a Mines of San Jose"
+        }
+      ]
     },
     {
-      "start": "2024-05-04",
-      "end": "2024-05-11"
+      "id": "83",
+      "title": "La Scarpa della Regina",
+      "description": "La \"Queen Shoes\", ovvero, la Scarpa della Regina è una formazione rocciosa di Zapato collocata nel famoso parco nazionale di Teide, dell'isola di Tenerife.",
+      "slug": "la-scarpa-della-regina",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Queen_Shoes_viaggio_fotografico_tenerife_bae564b044.jpg",
+          "alternativeText": "la scarpa della regina ripresa viaggio fotografico tenerife"
+        }
+      ]
     },
-    {
-      "start": "2024-05-11",
-      "end": "2024-05-18"
-    },
-    {
-      "start": "2025-05-24",
-      "end": "2025-05-31"
-    }
-  ],
-  "reviews": [],
-  "pictures": [
     {
       "id": "84",
-      "title": "Mines of San Jose",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Osservatorio del Teide",
+      "description": "L'osservatorio Astronomico del Teide insieme all'osservatorio di Roque de los Muchachos, forma il complesso osservativo dell'Osservatorio europeo dell'emisfero nord.",
+      "slug": "osservatorio-del-teide",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "78",
+          "title": "Alba all’arco di Tajao e via lattea tra i telescopi",
+          "description": "<p>In questa giornata la sveglia suonerà molto presto, prima delle prime luci, poichè dovremo dirigerci &nbsp;presso l’arco di Tajao per la sessione di scatto all’alba. Qui la roccia friabile levigata dal vento ha creato incredibili strutture tra cui un meraviglioso arco naturale che sarà il soggetto da fotografare con sfondo le magiche luci dell’alba.<br>con calma ci dirigeremo in struttura e dopo un meritato pranzo ci sposteremo nuovamente verso la cima dell’isola dove raggiungeremo l'Osservatorio del Teide.</p><p>Qui avremo modo di vedere e fotografare i telescopi più importanti della Spagna in azione. Riprenderemo questi giganti tecnologici a diverse focali e avremo modo di fare anche qualche timelapse della Via Lattea che sorge dietro di essi. In tarda nottata dopo la sessione di scatto notturna faremo ritorno in struttura per un meritato riposo.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/osservatorio_astronomico_del_Teide_79d53da27b.jpg",
+          "alternativeText": "il teide e l'osservatorio ripresi durante viaggio fotografico a tenerife"
+        }
+      ]
     },
     {
       "id": "85",
-      "title": "Queen Shoes",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Roque Cinchado",
+      "description": "Roque Cinchado è una formazione rocciosa, di origine vulcanica, si trova a circa 2.000 m sul livello del mare. È uno dei monumenti naturali più significativi dell'isola di Tenerife. ",
+      "slug": "roque-cinchado",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "79",
+          "title": "Esploriamo l'area di Roque Cinchado",
+          "description": "<p>Dopo aver trascorso la sessione notturna, ci godremo un pò di relax durante tutta la prima parte della giornata. Partiremo dopo pranzo verso il complesso di rocce vulcaniche di Roque de Garcìa e Roque Cinchado dove avremo modo di fare un bel po' di scouting tra questi giganti di roccia.<br>In questo contesto ci muoveremo fino all’ora del tramonto dove, una volta individuati gli spot migliori, ognuno si dedicherà a fotografare fino all'ora blu.<br>Successivamente cercheremo uno dei tipici ristoranti dell’isola per il momento della cena e poi ci dirigeremo in struttura.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_a_Roque_Cinchado_18ed309edf.jpg",
+          "alternativeText": "via lattea scattata nel viaggio fotografico a tenerife a Roque Cinchado"
+        }
+      ]
     },
     {
       "id": "86",
-      "title": "Osservatorio del Teide",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Roque de Garcìa",
+      "description": "Le Roques de García sono un gruppo di formazioni rocciose modellate da fenomeni di erosione, situate nel Parco nazionale del Teide, all'interno della caldera de Las Cañadas",
+      "slug": "roque-de-garcìa",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "80",
+          "title": "Roque de Garcìa",
+          "description": "<p>Durante tutta la prima parte della giornata ci dedicheremo ad una sessione di critica degli scatti svolti durante questa parte di viaggio fotografico Tenerife. Il Coach del gruppo, eseguirà una critica oggettiva degli scatti dei partecipanti portando esempi personali e di altri affermati fotografi. Qui tutti avranno modo di comprendere dove migliorare e su cosa concentrarsi per affrontare al meglio le prossime sessioni di scatto. Durante la seconda parte della giornata, nel tardo pomeriggio ci dirigeremo nuovamente presso il complesso vulcanico visitato il giorno precedente. Questa volta, grazia alla buona conoscenza del luogo acquisita il giorno precedente saremo in grado di fotografare questi meravigliosi giganti di roccia in luce lunare e successivamente con la via lattea e tutta la magia del meraviglioso cielo stellato.<br>L'obiettivo finale di queste sessioni di scatto è far si che ogni fotografo acquisisca le conoscenze e le capacità tecniche per affrontare le sessioni di scatto notturno autonomamente. Questa sarà la sessione notturna più lunga del viaggio, faremo ritorno in struttura verso le prime luci dell’ alba per dormire tutto l’indomani.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_a_Roques_Garcia_f570525373.jpg",
+          "alternativeText": "via lattea durante il viaggio fotografico a tenerife in Roques Garcia"
+        }
+      ]
     },
     {
       "id": "87",
-      "title": "Roque Cinchado",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Il teide",
+      "description": "Il Teide è il vulcano delle isole canarie. Alto ben 3715 metri, è la vetta più alta della Spagna e delle isole dell'oceano Atlantico.",
+      "slug": "il-teide",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_sul_vulcano_22edf4e145.jpg",
+          "alternativeText": "tramonto al vulcano teide durante viaggio fotografico tenerife"
+        }
+      ]
     },
     {
-      "id": "88",
-      "title": "Roque de Garcìa",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "89",
-      "title": "Il Teide",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "276",
-      "title": "Mirador do Ayosa",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "277",
+      "id": "180",
       "title": "Playa do Benijo",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Playa do Benijo è una location particolare posizionata a nord ovest dell’isola, che grazie ad enormi faraglioni e rocce che svettano al di sopra dell’oceano è in grado di regalare scorci unici nel loro genere.",
+      "slug": "playa-do-benijo",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "77",
+          "title": "Playa do Benijo",
+          "description": "<p>Riposeremo tutta la prima parte della giornata per recuperare le forze dalla lunga serata. Dopo il momento del pranzo ci sposteremo a nordovest dell’isola per raggiungere la location di scatto del tramonto. Scenderemo in una suggestiva spiaggia di sabbia vulcanica e rocce levigate per fotografare gli iconici pilastri di roccia che spiccano imponenti fuori dalla superficie dell’oceano. Playa do Benijo al tramonto saprà regalarci scorci meravigliosi e fotografia marine &nbsp;davvero incredibili.&nbsp;<br>Avremo modo di imparare a scattare con lunghe esposizioni e tramite l'ausilio di filtri fotografici.<br>Dopo la sessione di scatto ceneremo e torneremo in struttura.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Playa_do_Benijo_687eafd1e7.jpg",
+          "alternativeText": "ora blu Playa do Benijo viaggio fotografico tenerife"
+        },
+        {
+          "id": "locpic-6-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tenerife_Playa_de_Benijo_tramonto_3baade467c.jpg",
+          "alternativeText": "viaggio fotografico a Tenerife"
+        }
+      ]
     },
     {
-      "id": "278",
+      "id": "266",
+      "title": "Mirador la Tarta",
+      "description": "Il Mirador La Tarta è un punto panoramico rinomato per la sua straordinaria formazione geologica. Qui, strati sovrapposti di materiali vulcanici di diversi colori—bianchi, neri e rossastri—creano un effetto visivo simile a una torta a strati, da cui deriva il nome \"La Tarta\". ?",
+      "slug": "mirador-la-tarta",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "76",
+          "title": "Mines of San Jose",
+          "description": "<p>Impiegheremo la prima parte della giornata per organizzare il materiale che sarà necessario per affrontare le seguenti sessioni di scatto. in questa parete della giornata avremo la possibilità di acquistare la spesa comune della settimana a fronte dell’istituzione di una cassa comune, e della spesa personale che sarà utile per la preparazione dei vari pasti che faremo al socco.</p><p>Nel primo pomeriggio ci sposteremo verso la prima location del viaggio per scattare il tramonto: Mirador do Ayosa e Mirador la Tarta. dove avremo modo di ammirare la maestosità del teide al tramonto al di sopra di un incredibile tappeto di nuvole.<br>successivamente al tramonto raggiungeremo l'esclusiva location di Mines de San Jose, dove affronteremo le complessità teoriche e pratiche della fotografia notturna prima di dedicarci alla sessione di &nbsp;scatto, dove fotograferemo bellissime rocce del posto con la Via Lattea di sfondo.</p><p>Terminata la prima parte della notte, torneremo in struttura per il meritato sonno.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tenerife_Mirador_de_la_Tarta_Tramonto_6255da9ab2.jpg",
+          "alternativeText": "viaggio fotografico Tenerife"
+        },
+        {
+          "id": "locpic-7-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tenerife_Mirador_de_la_Tarta_Tramonto_d6597a06eb.jpg",
+          "alternativeText": "viaggio fotografico tenerife"
+        }
+      ]
+    }
+  ],
+  "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Villa Privata",
+      "description": "Soggiorno in una villa privata.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alloggio_in_villa_b5499fc6eb.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "80",
+      "number": 1,
+      "title": "Benvenuti a Tenerife",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "75",
+          "title": "Presentazioni e briefing iniziale",
+          "description": "L'appuntamento è fissato entro le ore 19:00 all'aeroporto di Tenerife Sud, dove vi verremo a prendere con il mini van/auto per trasferirci alla struttura che ci ospiterà durante tutto il soggiorno (sarà un'unica struttura per tutta la nostra permanenza). Utilizzeremo questo tempo per conoscerci meglio, fare un bel breafing delle attività della settimana e cominciare a pianificare la prima giornata del tour.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "81",
+      "number": 2,
+      "title": "La caldera del Teide",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "76",
+          "title": "Mines of San Jose",
+          "description": "<p>Impiegheremo la prima parte della giornata per organizzare il materiale che sarà necessario per affrontare le seguenti sessioni di scatto. in questa parete della giornata avremo la possibilità di acquistare la spesa comune della settimana a fronte dell’istituzione di una cassa comune, e della spesa personale che sarà utile per la preparazione dei vari pasti che faremo al socco.</p><p>Nel primo pomeriggio ci sposteremo verso la prima location del viaggio per scattare il tramonto: Mirador do Ayosa e Mirador la Tarta. dove avremo modo di ammirare la maestosità del teide al tramonto al di sopra di un incredibile tappeto di nuvole.<br>successivamente al tramonto raggiungeremo l'esclusiva location di Mines de San Jose, dove affronteremo le complessità teoriche e pratiche della fotografia notturna prima di dedicarci alla sessione di &nbsp;scatto, dove fotograferemo bellissime rocce del posto con la Via Lattea di sfondo.</p><p>Terminata la prima parte della notte, torneremo in struttura per il meritato sonno.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "82",
+      "number": 3,
+      "title": "Immergiamoci nelle spiagge di Tenerife",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "77",
+          "title": "Playa do Benijo",
+          "description": "<p>Riposeremo tutta la prima parte della giornata per recuperare le forze dalla lunga serata. Dopo il momento del pranzo ci sposteremo a nordovest dell’isola per raggiungere la location di scatto del tramonto. Scenderemo in una suggestiva spiaggia di sabbia vulcanica e rocce levigate per fotografare gli iconici pilastri di roccia che spiccano imponenti fuori dalla superficie dell’oceano. Playa do Benijo al tramonto saprà regalarci scorci meravigliosi e fotografia marine &nbsp;davvero incredibili.&nbsp;<br>Avremo modo di imparare a scattare con lunghe esposizioni e tramite l'ausilio di filtri fotografici.<br>Dopo la sessione di scatto ceneremo e torneremo in struttura.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "83",
+      "number": 4,
+      "title": "Verso L'osservatorio",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "78",
+          "title": "Alba all’arco di Tajao e via lattea tra i telescopi",
+          "description": "<p>In questa giornata la sveglia suonerà molto presto, prima delle prime luci, poichè dovremo dirigerci &nbsp;presso l’arco di Tajao per la sessione di scatto all’alba. Qui la roccia friabile levigata dal vento ha creato incredibili strutture tra cui un meraviglioso arco naturale che sarà il soggetto da fotografare con sfondo le magiche luci dell’alba.<br>con calma ci dirigeremo in struttura e dopo un meritato pranzo ci sposteremo nuovamente verso la cima dell’isola dove raggiungeremo l'Osservatorio del Teide.</p><p>Qui avremo modo di vedere e fotografare i telescopi più importanti della Spagna in azione. Riprenderemo questi giganti tecnologici a diverse focali e avremo modo di fare anche qualche timelapse della Via Lattea che sorge dietro di essi. In tarda nottata dopo la sessione di scatto notturna faremo ritorno in struttura per un meritato riposo.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "84",
+      "number": 5,
+      "title": "Alla scoperta delle Roque più importanti",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "79",
+          "title": "Esploriamo l'area di Roque Cinchado",
+          "description": "<p>Dopo aver trascorso la sessione notturna, ci godremo un pò di relax durante tutta la prima parte della giornata. Partiremo dopo pranzo verso il complesso di rocce vulcaniche di Roque de Garcìa e Roque Cinchado dove avremo modo di fare un bel po' di scouting tra questi giganti di roccia.<br>In questo contesto ci muoveremo fino all’ora del tramonto dove, una volta individuati gli spot migliori, ognuno si dedicherà a fotografare fino all'ora blu.<br>Successivamente cercheremo uno dei tipici ristoranti dell’isola per il momento della cena e poi ci dirigeremo in struttura.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "85",
+      "number": 6,
+      "title": "Un percorso tra le rocce vulcaniche",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "80",
+          "title": "Roque de Garcìa",
+          "description": "<p>Durante tutta la prima parte della giornata ci dedicheremo ad una sessione di critica degli scatti svolti durante questa parte di viaggio fotografico Tenerife. Il Coach del gruppo, eseguirà una critica oggettiva degli scatti dei partecipanti portando esempi personali e di altri affermati fotografi. Qui tutti avranno modo di comprendere dove migliorare e su cosa concentrarsi per affrontare al meglio le prossime sessioni di scatto. Durante la seconda parte della giornata, nel tardo pomeriggio ci dirigeremo nuovamente presso il complesso vulcanico visitato il giorno precedente. Questa volta, grazia alla buona conoscenza del luogo acquisita il giorno precedente saremo in grado di fotografare questi meravigliosi giganti di roccia in luce lunare e successivamente con la via lattea e tutta la magia del meraviglioso cielo stellato.<br>L'obiettivo finale di queste sessioni di scatto è far si che ogni fotografo acquisisca le conoscenze e le capacità tecniche per affrontare le sessioni di scatto notturno autonomamente. Questa sarà la sessione notturna più lunga del viaggio, faremo ritorno in struttura verso le prime luci dell’ alba per dormire tutto l’indomani.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "86",
+      "number": 7,
+      "title": "Al Faro Punta de Teno",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "81",
+          "title": "Escursione al faro di Punta de Teno",
+          "description": "<p>Dopo aver riposato il più possibile, nella seconda parte della giornata ci dirigiamo presso l’estremo ovest dell’isola di Tenerife: Punta de Teno. Qui fotograferemo il famoso e suggestivo Faro del Teno alle luci del tramonto e con le prime stelle in luce lunare. Una volta conclusa la sessione di scatto torneremo in struttura per fare i bagagli e prepararci al ritorno in Italia dell’indomani.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "87",
+      "number": 8,
+      "title": "Arrivederci Tenerife",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "82",
+          "title": "Saluti e transfer in aeroporto",
+          "description": "Arrivederci Tenerife, torneremo verso l'aeroporto dove sbrigheremo le pratiche di drop off dell'auto e di check in per i voli di rimpatrio",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Via Lattea",
+      "description": "Immergiti nello splendore dei cieli stellati e della nostra galassia",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "24",
+      "start": "2023-06-10",
+      "end": "2023-06-17",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 1499,
+      "deposit": 100,
+      "balance": 1399,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1399,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "126",
+      "start": "2024-05-04",
+      "end": "2024-05-11",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2230,
+      "deposit": 670,
+      "balance": 1560,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2230,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "127",
+      "start": "2024-05-11",
+      "end": "2024-05-18",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 2230,
+      "deposit": 670,
+      "balance": 1560,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2230,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "177",
+      "start": "2025-05-24",
+      "end": "2025-05-31",
+      "status": "confirmed",
+      "maxPax": 7,
+      "price": 1599,
+      "deposit": 480,
+      "balance": 1119,
+      "minPax": 7,
+      "currency": "EUR",
+      "priceCompanion": 1599,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/andreacurziph/",
+          "firstName": "Andrea",
+          "lastName": "Curzi",
+          "username": "andreacurzi",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Andre_Curzi_876ef6c363.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-18",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "viaggio fotografico a tenerife",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_su_Roques_Garcia_64f8421ede.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Mines of San Jose",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Via_lattea_a_Mines_of_San_Jose_894546b2c2.jpg",
+      "alt": "Via lattea durante viaggio fotografico tenerife a Mines of San Jose"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Queen Shoes",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Queen_Shoes_viaggio_fotografico_tenerife_bae564b044.jpg",
+      "alt": "la scarpa della regina ripresa viaggio fotografico tenerife"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Osservatorio del Teide",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/osservatorio_astronomico_del_Teide_79d53da27b.jpg",
+      "alt": "il teide e l'osservatorio ripresi durante viaggio fotografico a tenerife"
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "Roque Cinchado",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_a_Roque_Cinchado_18ed309edf.jpg",
+      "alt": "via lattea scattata nel viaggio fotografico a tenerife a Roque Cinchado"
+    },
+    {
+      "id": "4",
+      "type": "tour",
+      "title": "Roque de Garcìa",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_a_Roques_Garcia_f570525373.jpg",
+      "alt": "via lattea durante il viaggio fotografico a tenerife in Roques Garcia"
+    },
+    {
+      "id": "5",
+      "type": "tour",
+      "title": "Il Teide",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_sul_vulcano_22edf4e145.jpg",
+      "alt": "tramonto al vulcano teide durante viaggio fotografico tenerife"
+    },
+    {
+      "id": "6",
+      "type": "tour",
+      "title": "Mirador do Ayosa",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Mirador_do_Ayosa_2a7559bd85.jpg",
+      "alt": "Tramonto Mirador do Ayosa viaggio fotografico tenerife"
+    },
+    {
+      "id": "7",
+      "type": "tour",
+      "title": "Playa do Benijo",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Playa_do_Benijo_687eafd1e7.jpg",
+      "alt": "ora blu Playa do Benijo viaggio fotografico tenerife"
+    },
+    {
+      "id": "8",
+      "type": "tour",
       "title": "Arco di Tajao",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Arco_di_Tajao_f8b3b5fbf1.jpg",
+      "alt": "arco di roccia viaggio fotografico tenerife"
     },
     {
-      "id": "279",
+      "id": "9",
+      "type": "tour",
       "title": "Punta de Teno",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Punta_de_Teno_8854d281b8.jpg",
+      "alt": "tramonto Punta de Teno viaggio fotografico tenerife"
     },
     {
-      "id": "410",
+      "id": "10",
+      "type": "tour",
       "title": "Tramonto Playa de Benijo",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tenerife_Playa_de_Benijo_tramonto_3baade467c.jpg",
+      "alt": "viaggio fotografico a Tenerife"
     },
     {
-      "id": "411",
+      "id": "11",
+      "type": "tour",
       "title": "Tramonto a Mirador la Tarta",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tenerife_Mirador_de_la_Tarta_Tramonto_6255da9ab2.jpg",
+      "alt": "viaggio fotografico Tenerife"
     },
     {
-      "id": "412",
+      "id": "12",
+      "type": "tour",
       "title": "Cornice naturale Mirador la Tarta",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tenerife_Mirador_de_la_Tarta_Tramonto_d6597a06eb.jpg",
+      "alt": "viaggio fotografico tenerife"
     }
   ]
 }

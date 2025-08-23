@@ -1,179 +1,1182 @@
 {
+  "id": "28",
+  "tour_id": "islanda-estiva-colori-e-paesaggi-al-sole-di-mezzanotte",
   "slug": "sole-di-mezzanotte",
   "title": "Islanda d'estate: colori e paesaggi al sole di mezzanotte",
-  "states": {
-    "slug": "islanda"
-  },
+  "description": "<p>L’Islanda: una terra ricca di contrasti selvaggi. Il suo fascino deriva proprio dalla morfologia del suo territorio e comunicare a parole le emozioni che abbiamo vissuto perdendoci in questi luoghi è impossibile. &nbsp;Ci abbiamo provato con le fotografie, ma vi assicuriamo che vivere l’esperienza islandese è senza eguali.</p><p>A tutto questo, nel periodo di questo viaggio, si aggiungono i colori accesi delle fioriture e il fascino delle tante ore di luce e del &nbsp;sole fino a mezzanotte.</p><p>Ogni anno torniamo in Islanda ad insegnare la fotografia di paesaggio a fotografi ed appassionati. Il viaggio è adatto alle esigenze di tutti i tipi di fotografi, principianti e avanzati e genererà un’enorme dose di adrenalina e di emozioni indimenticabili. &nbsp;Una settimana di stimoli creativi e natura mozzafiato.</p>",
+  "excerpt": "Vivi l'esperienza di un viaggio fotografico Islanda dai paesaggi illuminati dal sole di mezzanotte.",
+  "difficulty": "easy",
+  "experience_level": "Intenso",
+  "things_needed": "<p>Attrezzatura fotografica:</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 16mm) e focali medio/lunghe (24mm-300mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p><br>Abbigliamento:</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarponi da Trekking</li><li>Costume da Bagno</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "reykjavik"
+    "slug": "reykjavik",
+    "locale": "it",
+    "name": "Reykjavik"
   },
-  "sessions": [
+  "states": {
+    "name": "Islanda",
+    "slug": "islanda",
+    "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Islanda Estiva 2025 | WeShoot",
+    "metaDescription": "Il viaggio fotografico Islanda estiva ti farà vivere l'esperienza di fotografare la bellissima luce morbida del sole di mezzanotte.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2023-07-16",
-      "end": "2023-07-23"
+      "id": "24",
+      "title": "Kleifarvatn",
+      "description": "Il lago Kleifarvatn e le scogliere della penisola di Keflavik si prestano per delle sessioni di scatto molto interessanti",
+      "slug": "kleifarvatn",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "1",
+          "title": "Presentazioni, briefing e poi subito a cercare l'aurora boreale",
+          "description": "<p>Incontro all'aeroporto di Milano (MXP). Atterreremo a Keflavik dove andremo a prendere le auto/van per portarvi direttamente in struttura. Sfrutteremo questa giornata per sistemarci e iniziare a prendere confidenza con il lluogo. Se avremo un buon margine di tempo andremo dopo cena a cercare l'aurora nelle zone più buie intorno all'aeroporto.</p>",
+          "locale": "it"
+        },
+        {
+          "id": "142",
+          "title": "Presentazioni, briefing e poi subito a scattare",
+          "description": "<p>Incontro all'aeroporto di Keflavik entro le ore 23:00, vi verremo a prendere con le auto per portarvi direttamente in struttura. Sfrutteremo questa giornata per attendere tutti gli arrivi. Se ci sarà il tempo, sfruttando la luce disponibile fino a tarda notte, dopo cena avremo la possibilità di fare una sessione al tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lago_al_tramonto_in_Islanda_5f7dbe22b2.jpg",
+          "alternativeText": "tramonto durante il viaggio fotografico in islanda"
+        }
+      ]
     },
     {
-      "start": "2024-07-13",
-      "end": "2024-07-20"
+      "id": "27",
+      "title": "Arnarstapi",
+      "description": "Arnarstapi è un piccolo villaggio di pescatori, noto per i sui incredibili paesaggi a picco sul mare e per l'arco di pietra Gatlettur.",
+      "slug": "arnarstapi",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "2",
+          "title": "Verso il Kirkjufell, Londrangar e le scogliere di Arnarstapi",
+          "description": "<p>In questo secondo giorno ci dirigeremo verso la penisola di Snaefellsnes una delle mete più conosciute dell'Islanda, dove potremo fotografare il monte a cappello di strega, il Kirkjufell. Alloggeremo in una struttura qui vicino in modo tale da esplorare con calma le perle di questa penisola tra cui: Arnarstapi, Hellnar e Londrangar.</p>",
+          "locale": "it"
+        },
+        {
+          "id": "146",
+          "title": "Kirkjufell, la Chiesa di Budir e le scogliere di Arnarstapi",
+          "description": "<p>In questo quinto giorno ci dirigeremo verso la penisola di Snaefellsnes una delle mete più conosciute dell'Islanda, dove potremo fotografare il monte a cappello di strega, il Kirkjufell. Alloggeremo in una struttura qui vicino in modo tale da esplorare con calma le perle di questa penisola tra cui: Budir, Arnarstapi, Hellnar e Londrangar e se saremo fortunati potremo anche avvistare le foche e le balene.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Arnarstapi_al_tramonto_ea10d80754.avif",
+          "alternativeText": "Arnarstapi viaggio fotografico islanda"
+        }
+      ]
     },
-    {
-      "start": "2024-07-06",
-      "end": "2024-07-13"
-    }
-  ],
-  "reviews": [],
-  "pictures": [
     {
       "id": "29",
-      "title": "Lago Kleifarvatn",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Cascata Seljalandsfoss",
+      "description": "Seljalandsfoss è una delle cascate più incredibili dell'Islanda, infatti il sentiero che la costeggia ti permette passare all'interno di essa, dandoti l'opportunità di fare scatti pazzeschi da dentro la \"grotta\". (Il percorso potrebbe essere chiuso per ghiaccio)",
+      "slug": "seljalandsfoss",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "28",
+          "title": "Skogafoss, Seljalandsfoss e paesaggi magici",
+          "description": "<p>Percorreremo la tratta più lunga del viaggio per raggiungere le cascate più incredibili d'Islanda, Skogafoss, Seljalandsfoss e Kvernufoss. Avremo modo di scattare splendide immagini ai paesaggi circostanti, divertendoci con le lunghe esposizioni per catturare il movimento dell'acqua in modo creativo. Questa tecnica ci permetterà di trasformare il flusso delle cascate in una vera opera d'arte, creando effetti di seta che aggiungeranno un tocco di magia alle nostre fotografie.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Seljalandsfoss_al_tramonto_e2917fde97.jpg",
+          "alternativeText": "cascata seljalandsfoss al tramonto viaggio fotografico islanda"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Seljalandsfoss_viaggio_fotografico_islanda_estiva_3211a45fda.jpg",
+          "alternativeText": "tramonto cacata islandese Seljalandsfoss"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "title": "Kvernufoss",
+      "description": "Kvernufoss o \"hidden fall\" è una cascata che si trova molto vicino a Skogafoss. Meno nota della prima, (la sua posizione \"nascosta\" la rende meno accessibile), se riusciremo ad ottimizzare i tempi il suo salto e la piccola passeggiata che si può fare al suo interno sapranno regalarti forti emozioni.",
+      "slug": "kvernufoss",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "28",
+          "title": "Skogafoss, Seljalandsfoss e paesaggi magici",
+          "description": "<p>Percorreremo la tratta più lunga del viaggio per raggiungere le cascate più incredibili d'Islanda, Skogafoss, Seljalandsfoss e Kvernufoss. Avremo modo di scattare splendide immagini ai paesaggi circostanti, divertendoci con le lunghe esposizioni per catturare il movimento dell'acqua in modo creativo. Questa tecnica ci permetterà di trasformare il flusso delle cascate in una vera opera d'arte, creando effetti di seta che aggiungeranno un tocco di magia alle nostre fotografie.</p>",
+          "locale": "it"
+        },
+        {
+          "id": "143",
+          "title": "Skogafoss, Seljalandsfoss, Kvernufoss fino a Vik",
+          "description": "<p><span style=\"background-color:transparent;color:#333333;\">Percorreremo la tratta più lunga del viaggio fotografico, per raggiungere le cascate più incredibili d'Islanda: Skogafoss, Seljalandsfoss e Kvernufoss. Nel tardo pomeriggio arriveremo a Vik, dove usciremo per la sessione fotografica al tramonto sulla spiaggia nera Reynisfjara.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Kvernufoss_al_tramonto_e8dd85c2c9.jpg",
+          "alternativeText": "cascata Kvernufoss tramonto viaggio fotografico islanda"
+        }
+      ]
     },
     {
       "id": "31",
-      "title": "Arnarstapi",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "La spiaggia di diamanti",
+      "description": "La spiaggi di diamanti si trova a sud dell'isola in prossimità della laguna Jokulsarlon, si tratta di una spiaggia nera che si estende per molti km su cui si possono trovare grossi iceberg e pezzi di ghiaccio che vengono illuminati dalla luce calda dell'alba.",
+      "slug": "la-spiaggia-di-diamanti",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "30",
+          "title": "La laguna Jokulsarlon e la spiaggia dei diamanti",
+          "description": "Dedicheremo questa giornata alla laguna dei ghiacci ed alla spiaggia dei diamanti. Riprenderemo gli Icebergs in scioglimento sul mare, una delle esperienze più incredibili del viaggio.",
+          "locale": "it"
+        },
+        {
+          "id": "145",
+          "title": "La spiaggia di diamanti e la laguna Jokulsarlon",
+          "description": "<p>Questa giornata del viaggio fotografico Islanda la dedicheremo interamente alla laguna di Jokulsarlon e alla spiaggia di diamanti (Diamond Beach), dove cercheremo di fotografare questo imponente lago glaciale pieno di Iceberg galleggianti che si staccano dal ghiacciaio Breiðamerkurjökull, che fa parte del ghiacciaio Vatnajökull.&nbsp;</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Spiaggi_di_diamanti_63d1b85b50.jpg",
+          "alternativeText": "tempesta alla diamond beach in islanda viaggio fotografico"
+        },
+        {
+          "id": "locpic-4-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/fotografi_sulla_spiaggia_dei_diamanti_5a14875ea8.jpg",
+          "alternativeText": "fotografi spiaggia dei diamanti viaggio fotografico islanda"
+        },
+        {
+          "id": "locpic-4-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/corso_online_fotografare_con_lo_smartphone_dcf7fe9bf3.jpg",
+          "alternativeText": "come fare belle foto con il cellulare"
+        },
+        {
+          "id": "locpic-4-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Diamond_Beach_di_Samuele_Bucci_2c2d28baf6.jpg",
+          "alternativeText": "Viaggio fotografico Islanda"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "title": "Vík í Mýrdal",
+      "description": "Vík í Mýrdal è una cittadina islandese con una delle baie più famose dell'Islanda dove oltre alla sabbia nera vulcanica, si possono scorgere pareti di basalto e i grossi faraglioni. ",
+      "slug": "vík-í-mýrdal",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "31",
+          "title": "I panorami incredibili di Vik e Dyrhólaey",
+          "description": "Percorreremo l'itinerario al contrario per raggiungere Vik i Myrdal, cittadina strategica all'estremo sud dell'Isola. Qui avremo modo di fotografare le scogliere ed i faraglioni più interessanti dell'Islanda: Dyrholaey, Reynisfjara, Kirkjufjara.",
+          "locale": "it"
+        },
+        {
+          "id": "143",
+          "title": "Skogafoss, Seljalandsfoss, Kvernufoss fino a Vik",
+          "description": "<p><span style=\"background-color:transparent;color:#333333;\">Percorreremo la tratta più lunga del viaggio fotografico, per raggiungere le cascate più incredibili d'Islanda: Skogafoss, Seljalandsfoss e Kvernufoss. Nel tardo pomeriggio arriveremo a Vik, dove usciremo per la sessione fotografica al tramonto sulla spiaggia nera Reynisfjara.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Vik_e_i_faraglioni_all_alba_08bbfe7a14.jpg",
+          "alternativeText": "i faraglioni di vik all'alba durante viaggio fotografico islanda"
+        },
+        {
+          "id": "locpic-5-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/corso_online_fotografare_con_lo_smartphone_8cfb641c06.jpg",
+          "alternativeText": "come fare belle foto con il cellulare"
+        },
+        {
+          "id": "locpic-5-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vik_i_myrdal_dal_viaggio_fotografico_islanda_estiva_09589791ef.jpg",
+          "alternativeText": "alba faraglioni di vik"
+        }
+      ]
     },
     {
       "id": "34",
-      "title": "Kvernufoss",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "37",
-      "title": "Spiaggia di Diamanti",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "39",
-      "title": "Vík í Mýrdal",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "40",
       "title": "Dyrhólaey",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Dyrhólaey è una penisola di origine vulcanica, da cui si può scorgere un bellissimo panorama su di un arco in pietra sul mare.",
+      "slug": "dyrhólaey",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "31",
+          "title": "I panorami incredibili di Vik e Dyrhólaey",
+          "description": "Percorreremo l'itinerario al contrario per raggiungere Vik i Myrdal, cittadina strategica all'estremo sud dell'Isola. Qui avremo modo di fotografare le scogliere ed i faraglioni più interessanti dell'Islanda: Dyrholaey, Reynisfjara, Kirkjufjara.",
+          "locale": "it"
+        },
+        {
+          "id": "143",
+          "title": "Skogafoss, Seljalandsfoss, Kvernufoss fino a Vik",
+          "description": "<p><span style=\"background-color:transparent;color:#333333;\">Percorreremo la tratta più lunga del viaggio fotografico, per raggiungere le cascate più incredibili d'Islanda: Skogafoss, Seljalandsfoss e Kvernufoss. Nel tardo pomeriggio arriveremo a Vik, dove usciremo per la sessione fotografica al tramonto sulla spiaggia nera Reynisfjara.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tempesta_sulla_scogliera_del_Dyrholaey_421421c11a.jpg",
+          "alternativeText": "Dyrhólaey scogliera tappa del viaggio fotografico"
+        }
+      ]
     },
     {
-      "id": "41",
-      "title": "Blue Lagoon",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "35",
+      "title": "Blu Lagoon",
+      "description": "Una grandissima piscina riempita con le acque dell’area geotermale. Un ottimo momento per rilassarsi e sorseggiare un buon drink.",
+      "slug": "blu-lagoon",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "148",
+          "title": "Rilassiamoci con un bel bagno nelle acque termali",
+          "description": "<p>Dopo aver fotografato l'alba e fatto il checkout ci dirigeremo verso Keflavik, il nostro incredibile viaggio fotografico islanda estiva sta per giungere al termine. Ci fermeremo durante il percorso per ammirare altri incredibili paesaggi, fino ad arrivare al check-in presso la struttura dell'ultimo pernotto, dove ci prepareremo per un pò di meritato relax. Infatti, dopo una settimana di stupendi paesaggi, un viaggio meraviglioso ma stancante, ci andremo a rilassare alla Blue Lagoon, la sorgente geotermale più famosa d'Islanda. Verremo accolti da un Drink di benvenuto e avremo a disposizione la maschera viso lenitiva. Qui recupereremo tutte le energie spese nel viaggio.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/islanda8_3ed462b9d8.png",
+          "alternativeText": "relax blue lagoon dopo viaggio fotografico islanda"
+        }
+      ]
     },
     {
-      "id": "136",
-      "title": "spiaggia dei diamanti islanda",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "185",
+      "title": "Faro di Gardur",
+      "description": "Un antico faro Islandese che si affaccia sull'oceano atlantico e si presta per essere fotografato sia all'alba che al tramonto.",
+      "slug": "faro-di-gardur",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "142",
+          "title": "Presentazioni, briefing e poi subito a scattare",
+          "description": "<p>Incontro all'aeroporto di Keflavik entro le ore 23:00, vi verremo a prendere con le auto per portarvi direttamente in struttura. Sfrutteremo questa giornata per attendere tutti gli arrivi. Se ci sarà il tempo, sfruttando la luce disponibile fino a tarda notte, dopo cena avremo la possibilità di fare una sessione al tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-8-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gardur_faro_viaggio_fotografico_islanda_estiva_31982cdbc0.jpg",
+          "alternativeText": "vecchio faro islandese ripreso al tramonto"
+        }
+      ]
     },
     {
-      "id": "282",
-      "title": "Gardur al tramonto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "283",
+      "id": "186",
       "title": "Cascata Skogafoss",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "La cascata di Skogafoss è tra le più grandi d'Europa: alta 60mt e larga 20mt è una delle attrazioni più fotografate del territorio Islandese.",
+      "slug": "cascata-skogafoss",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "143",
+          "title": "Skogafoss, Seljalandsfoss, Kvernufoss fino a Vik",
+          "description": "<p><span style=\"background-color:transparent;color:#333333;\">Percorreremo la tratta più lunga del viaggio fotografico, per raggiungere le cascate più incredibili d'Islanda: Skogafoss, Seljalandsfoss e Kvernufoss. Nel tardo pomeriggio arriveremo a Vik, dove usciremo per la sessione fotografica al tramonto sulla spiaggia nera Reynisfjara.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-9-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Colori_nebbia_a_Skogafoss_e8e3bb8738.jpg",
+          "alternativeText": "skogafoss sotto la nebbia viaggio fotografico islanda"
+        }
+      ]
     },
     {
-      "id": "284",
-      "title": "Seljalandsfoss",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "285",
+      "id": "188",
       "title": "Svartifoss",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Svartifoss è una cascata islandese situata all'interno del Parco nazionale Skaftafell. Caratteristica particolare di questa cascata è la presenza di colonne di basalto dalla forma esagonale di provenienza vulcanica, motivo per cui viene definita \"la cascata nera\"",
+      "slug": "svartifoss",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "29",
+          "title": "Il Vestrahorn ai piedi dell'oceano",
+          "description": "Ci sposteremo l'estremo Est dell'Isola; durante il nostro itinerario avremo modo di esplorare diverse zone interessanti come i muschi e la laguna di Fjallsarlon. Raggiungeremo quello che viene definito il Re dell'Islanda, il Vestrahorn, tipica montagna sul mare che cattureremo con alba o tramonto e notturna.",
+          "locale": "it"
+        },
+        {
+          "id": "144",
+          "title": "Trekking verso Svartifoss e poi tramonto al Vestrahorn",
+          "description": "<p>Ci sposteremo l'estremo Est dell'Isola; durante il nostro itinerario se ci sarà la possibilità raggiungeremo la cascata Svartifoss, nota come Cascata Nera. Una cascata circondata da colonne di basalto. Il percorso per raggiungerla richiede un piccolo trekking di circa 45 minuti. Dopo questo piccolo trekking, riprenderemo il viaggio fotografico per raggiungere quello che viene definito il Re dell'Islanda: il Vestrahorn. Una tipica montagna sull'oceano che cattureremo con la luce estiva del sole di mezzanotte.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-10-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Svartifoss_viaggio_fotografico_islanda_estiva_43b56419aa.jpg",
+          "alternativeText": "cascata islandese viaggio fotografico islanda estiva"
+        }
+      ]
     },
     {
-      "id": "286",
+      "id": "189",
       "title": "Il maestoso Vestrahorn",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Il Vestrahorn è una delle location preferite dai tutti i fotografi, una montagna che si specchia nel bagnasciuga dell'oceano atlantico che regala incredibili emozioni con le luci del nord.",
+      "slug": "vestrahorn-estivo",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "144",
+          "title": "Trekking verso Svartifoss e poi tramonto al Vestrahorn",
+          "description": "<p>Ci sposteremo l'estremo Est dell'Isola; durante il nostro itinerario se ci sarà la possibilità raggiungeremo la cascata Svartifoss, nota come Cascata Nera. Una cascata circondata da colonne di basalto. Il percorso per raggiungerla richiede un piccolo trekking di circa 45 minuti. Dopo questo piccolo trekking, riprenderemo il viaggio fotografico per raggiungere quello che viene definito il Re dell'Islanda: il Vestrahorn. Una tipica montagna sull'oceano che cattureremo con la luce estiva del sole di mezzanotte.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-11-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_al_Vestrahorn_357642db99.jpg",
+          "alternativeText": "riflesso tramonto Vestrahorn viaggio fotografico islanda"
+        }
+      ]
     },
     {
-      "id": "287",
-      "title": "Laguna Jokulsarlon ",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "190",
+      "title": "La laguna Jokulsarlon",
+      "description": "Jökulsárlón è una laguna di origine glaciale che costeggia il Parco nazionale del Vatnajökull, nel sud-est dell'Islanda. Le sue tranquille acque blu sono punteggiate di iceberg del vicino ghiacciaio Breiðamerkurjökull",
+      "slug": "la-laguna-jokulsarlon",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "145",
+          "title": "La spiaggia di diamanti e la laguna Jokulsarlon",
+          "description": "<p>Questa giornata del viaggio fotografico Islanda la dedicheremo interamente alla laguna di Jokulsarlon e alla spiaggia di diamanti (Diamond Beach), dove cercheremo di fotografare questo imponente lago glaciale pieno di Iceberg galleggianti che si staccano dal ghiacciaio Breiðamerkurjökull, che fa parte del ghiacciaio Vatnajökull.&nbsp;</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-12-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/jokulsarlon_al_tramonto_3d3f691600.jpg",
+          "alternativeText": "foto tramonto di jokulsarlon"
+        }
+      ]
     },
     {
-      "id": "289",
+      "id": "191",
+      "title": "Il Kirkjufell",
+      "description": "La famosa montagna a cappello di strega in veste estiva, ricca di colori e con il torrente ricco di acqua a contornare questo paesaggio incantato.",
+      "slug": "kirkjufell-estivo",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "146",
+          "title": "Kirkjufell, la Chiesa di Budir e le scogliere di Arnarstapi",
+          "description": "<p>In questo quinto giorno ci dirigeremo verso la penisola di Snaefellsnes una delle mete più conosciute dell'Islanda, dove potremo fotografare il monte a cappello di strega, il Kirkjufell. Alloggeremo in una struttura qui vicino in modo tale da esplorare con calma le perle di questa penisola tra cui: Budir, Arnarstapi, Hellnar e Londrangar e se saremo fortunati potremo anche avvistare le foche e le balene.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-13-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Kirkjufell_al_tramonto_65791ddd8a.jpg",
+          "alternativeText": "Kirkjufell al tramonto durante viaggio fotografico Islanda"
+        }
+      ]
+    },
+    {
+      "id": "192",
       "title": "Chiesa di Budir",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "La chiesa di Budir è una delle tre chiese di legno dipinte di nero islandesi, questa colorazione e il paesaggio desolato intorno l'hanno resa nota nel mondo.",
+      "slug": "chiesa-di-budir-1",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "146",
+          "title": "Kirkjufell, la Chiesa di Budir e le scogliere di Arnarstapi",
+          "description": "<p>In questo quinto giorno ci dirigeremo verso la penisola di Snaefellsnes una delle mete più conosciute dell'Islanda, dove potremo fotografare il monte a cappello di strega, il Kirkjufell. Alloggeremo in una struttura qui vicino in modo tale da esplorare con calma le perle di questa penisola tra cui: Budir, Arnarstapi, Hellnar e Londrangar e se saremo fortunati potremo anche avvistare le foche e le balene.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-14-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/budir_viaggio_fotografico_islanda_estiva_d454704b95.jpg",
+          "alternativeText": "chiesa tipica islandese dal colore nero"
+        }
+      ]
     },
     {
-      "id": "290",
+      "id": "193",
       "title": "Hallgrímskirkja",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Nel centro di Reykjavíka troviamo Hallgrímskirkja, un luogo di culto luterano, alta ben 74,5 metri è la quinta struttura architettonica più alta d'Islanda.",
+      "slug": "hallgrimskirkja",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "147",
+          "title": "Scopriamo la magia di Rekjavik",
+          "description": "<p>Dopo un’ultima sessione fotografica nella penisola di Snæfellsness, partiremo per rientrare nella capitale dove sfrutteremo questa giornata per tour fotografico della città.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-15-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Hallgrimskirkja_al_tramonto_408bcd584a.jpg",
+          "alternativeText": "città rekjavik viaggio fotografico islanda estiva"
+        }
+      ]
     },
     {
-      "id": "291",
+      "id": "194",
       "title": "Sun Voyager",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Il Sun Voyager è la scultura più conosciuta di Rekjavik, ad opera di Jón Gunnar ha una forma di relitto di una barca.",
+      "slug": "sun-voyager",
+      "locale": "it",
+      "state": {
+        "name": "Islanda",
+        "slug": "islanda",
+        "locale": "it",
+        "description": "<p>L'Islanda per i fotografi è come il paese dei balocchi per i bambini. Potrai vivere la natura come non lo hai mai fatto e fotografare paesaggi incredibili: cascate, vulcani, ghiacciai, spiagge, scogliere, montagne. I viaggi fotografici sono pianificati per farti godere di tutte queste meraviglie, che nel periodo invernale, potranno essere illuminate dell'aurora boreale.</p>"
+      },
+      "steps": [
+        {
+          "id": "147",
+          "title": "Scopriamo la magia di Rekjavik",
+          "description": "<p>Dopo un’ultima sessione fotografica nella penisola di Snæfellsness, partiremo per rientrare nella capitale dove sfrutteremo questa giornata per tour fotografico della città.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-16-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Sun_Voyager_scultura_27ec6a120d.jpg",
+          "alternativeText": "tramonto sculura rekjavik viaggio fotografico islanda estiva"
+        }
+      ]
+    }
+  ],
+  "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
     },
     {
-      "id": "292",
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Volo A/R dall'Italia (Roma)",
+      "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "159",
+      "number": 1,
+      "title": "Benvenuti nella terra del ghiaccio e fuoco",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "142",
+          "title": "Presentazioni, briefing e poi subito a scattare",
+          "description": "<p>Incontro all'aeroporto di Keflavik entro le ore 23:00, vi verremo a prendere con le auto per portarvi direttamente in struttura. Sfrutteremo questa giornata per attendere tutti gli arrivi. Se ci sarà il tempo, sfruttando la luce disponibile fino a tarda notte, dopo cena avremo la possibilità di fare una sessione al tramonto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "160",
+      "number": 2,
+      "title": "Cascate e la spiaggia nera di Vik",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "143",
+          "title": "Skogafoss, Seljalandsfoss, Kvernufoss fino a Vik",
+          "description": "<p><span style=\"background-color:transparent;color:#333333;\">Percorreremo la tratta più lunga del viaggio fotografico, per raggiungere le cascate più incredibili d'Islanda: Skogafoss, Seljalandsfoss e Kvernufoss. Nel tardo pomeriggio arriveremo a Vik, dove usciremo per la sessione fotografica al tramonto sulla spiaggia nera Reynisfjara.</span></p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "161",
+      "number": 3,
+      "title": "Direzione Vestrahorn la Montagna sull'Oceano",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "144",
+          "title": "Trekking verso Svartifoss e poi tramonto al Vestrahorn",
+          "description": "<p>Ci sposteremo l'estremo Est dell'Isola; durante il nostro itinerario se ci sarà la possibilità raggiungeremo la cascata Svartifoss, nota come Cascata Nera. Una cascata circondata da colonne di basalto. Il percorso per raggiungerla richiede un piccolo trekking di circa 45 minuti. Dopo questo piccolo trekking, riprenderemo il viaggio fotografico per raggiungere quello che viene definito il Re dell'Islanda: il Vestrahorn. Una tipica montagna sull'oceano che cattureremo con la luce estiva del sole di mezzanotte.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "162",
+      "number": 4,
+      "title": "Il ghiacciaio e la Diamond Beach",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "145",
+          "title": "La spiaggia di diamanti e la laguna Jokulsarlon",
+          "description": "<p>Questa giornata del viaggio fotografico Islanda la dedicheremo interamente alla laguna di Jokulsarlon e alla spiaggia di diamanti (Diamond Beach), dove cercheremo di fotografare questo imponente lago glaciale pieno di Iceberg galleggianti che si staccano dal ghiacciaio Breiðamerkurjökull, che fa parte del ghiacciaio Vatnajökull.&nbsp;</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "163",
+      "number": 5,
+      "title": "Direzione Est verso la penisola di Snaefellsnes",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "146",
+          "title": "Kirkjufell, la Chiesa di Budir e le scogliere di Arnarstapi",
+          "description": "<p>In questo quinto giorno ci dirigeremo verso la penisola di Snaefellsnes una delle mete più conosciute dell'Islanda, dove potremo fotografare il monte a cappello di strega, il Kirkjufell. Alloggeremo in una struttura qui vicino in modo tale da esplorare con calma le perle di questa penisola tra cui: Budir, Arnarstapi, Hellnar e Londrangar e se saremo fortunati potremo anche avvistare le foche e le balene.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "164",
+      "number": 6,
+      "title": "Direzione nella Capitale",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "147",
+          "title": "Scopriamo la magia di Rekjavik",
+          "description": "<p>Dopo un’ultima sessione fotografica nella penisola di Snæfellsness, partiremo per rientrare nella capitale dove sfrutteremo questa giornata per tour fotografico della città.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "165",
+      "number": 7,
+      "title": "Un pò di meritato relax alle blue lagoon",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "148",
+          "title": "Rilassiamoci con un bel bagno nelle acque termali",
+          "description": "<p>Dopo aver fotografato l'alba e fatto il checkout ci dirigeremo verso Keflavik, il nostro incredibile viaggio fotografico islanda estiva sta per giungere al termine. Ci fermeremo durante il percorso per ammirare altri incredibili paesaggi, fino ad arrivare al check-in presso la struttura dell'ultimo pernotto, dove ci prepareremo per un pò di meritato relax. Infatti, dopo una settimana di stupendi paesaggi, un viaggio meraviglioso ma stancante, ci andremo a rilassare alla Blue Lagoon, la sorgente geotermale più famosa d'Islanda. Verremo accolti da un Drink di benvenuto e avremo a disposizione la maschera viso lenitiva. Qui recupereremo tutte le energie spese nel viaggio.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "166",
+      "number": 8,
+      "title": "Arrivederci Islanda",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "149",
+          "title": "Saluti finali e foto di gruppo",
+          "description": "<p>Ci sveglieremo per fare colazione tutti insieme e discutere di questo bellissimo viaggio, foto di gruppo e transfer autonomo in aeroporto per ritornare a casa.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Scogliere",
+      "description": "Viaggi fotografici tra le più alte scogliere",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "73",
+      "start": "2023-07-16",
+      "end": "2023-07-23",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2699,
+      "deposit": 100,
+      "balance": 2599,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2699,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "137",
+      "start": "2024-07-13",
+      "end": "2024-07-20",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 2799,
+      "deposit": 100,
+      "balance": 2699,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2699,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "150",
+      "start": "2024-07-06",
+      "end": "2024-07-13",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2799,
+      "deposit": 100,
+      "balance": 2699,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2699,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "Quando vedere l'Aurora Boreale?",
+      "answer": "<p>L'Aurora Boreale è un fenomeno naturale che si manifesta nell'atmosfera terrestre ed è visibile maggiormente nei paesi che si trovano vicino all'emisfero nord o sud. Il fenomeno ottico si manifesta con bande luminose che mutano forma e colore (dal verde, al rosso, all'azzurrino) mentre danza nel cielo. I periodi migliore per vedere l'aurora boreale sono sicuramente quelli che vanno da Ottobre/Novembre e Febbraio/Marzo, ma con un pò di fortuna e una buona ricerca è possibile vederla anche in altri periodi. Questo perchè il fenomeno è dipeso dalle macchie solari che si formano sul sole e questo avviene costantemente durante l'arco dell'anno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "tramonto vestrahorn viaggio fotografico islanda",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Vestrahorna_al_tramonto_b672958fea.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Lago Kleifarvatn",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lago_al_tramonto_in_Islanda_5f7dbe22b2.jpg",
+      "alt": "tramonto durante il viaggio fotografico in islanda"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Arnarstapi",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Arnarstapi_al_tramonto_ea10d80754.avif",
+      "alt": "Arnarstapi viaggio fotografico islanda"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Kvernufoss",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Kvernufoss_al_tramonto_e8dd85c2c9.jpg",
+      "alt": "cascata Kvernufoss tramonto viaggio fotografico islanda"
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "Spiaggia di Diamanti",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Spiaggi_di_diamanti_63d1b85b50.jpg",
+      "alt": "tempesta alla diamond beach in islanda viaggio fotografico"
+    },
+    {
+      "id": "4",
+      "type": "tour",
+      "title": "Vík í Mýrdal",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Vik_e_i_faraglioni_all_alba_08bbfe7a14.jpg",
+      "alt": "i faraglioni di vik all'alba durante viaggio fotografico islanda"
+    },
+    {
+      "id": "5",
+      "type": "tour",
+      "title": "Dyrhólaey",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tempesta_sulla_scogliera_del_Dyrholaey_421421c11a.jpg",
+      "alt": "Dyrhólaey scogliera tappa del viaggio fotografico"
+    },
+    {
+      "id": "6",
+      "type": "tour",
+      "title": "Blue Lagoon",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/islanda8_3ed462b9d8.png",
+      "alt": "relax blue lagoon dopo viaggio fotografico islanda"
+    },
+    {
+      "id": "7",
+      "type": "group",
+      "title": "spiaggia dei diamanti islanda",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/fotografi_sulla_spiaggia_dei_diamanti_5a14875ea8.jpg",
+      "alt": "fotografi spiaggia dei diamanti viaggio fotografico islanda"
+    },
+    {
+      "id": "8",
+      "type": "tour",
+      "title": "Gardur al tramonto",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gardur_faro_viaggio_fotografico_islanda_estiva_31982cdbc0.jpg",
+      "alt": "vecchio faro islandese ripreso al tramonto"
+    },
+    {
+      "id": "9",
+      "type": "tour",
+      "title": "Cascata Skogafoss",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Colori_nebbia_a_Skogafoss_e8e3bb8738.jpg",
+      "alt": "skogafoss sotto la nebbia viaggio fotografico islanda"
+    },
+    {
+      "id": "10",
+      "type": "tour",
+      "title": "Seljalandsfoss",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Seljalandsfoss_al_tramonto_e2917fde97.jpg",
+      "alt": "cascata seljalandsfoss al tramonto viaggio fotografico islanda"
+    },
+    {
+      "id": "11",
+      "type": "tour",
+      "title": "Svartifoss",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Svartifoss_viaggio_fotografico_islanda_estiva_43b56419aa.jpg",
+      "alt": "cascata islandese viaggio fotografico islanda estiva"
+    },
+    {
+      "id": "12",
+      "type": "tour",
+      "title": "Il maestoso Vestrahorn",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_al_Vestrahorn_357642db99.jpg",
+      "alt": "riflesso tramonto Vestrahorn viaggio fotografico islanda"
+    },
+    {
+      "id": "13",
+      "type": "tour",
+      "title": "Laguna Jokulsarlon ",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/jokulsarlon_al_tramonto_3d3f691600.jpg",
+      "alt": "foto tramonto di jokulsarlon"
+    },
+    {
+      "id": "14",
+      "type": "tour",
+      "title": "Chiesa di Budir",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/budir_viaggio_fotografico_islanda_estiva_d454704b95.jpg",
+      "alt": "chiesa tipica islandese dal colore nero"
+    },
+    {
+      "id": "15",
+      "type": "tour",
+      "title": "Hallgrímskirkja",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Hallgrimskirkja_al_tramonto_408bcd584a.jpg",
+      "alt": "città rekjavik viaggio fotografico islanda estiva"
+    },
+    {
+      "id": "16",
+      "type": "tour",
+      "title": "Sun Voyager",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Sun_Voyager_scultura_27ec6a120d.jpg",
+      "alt": "tramonto sculura rekjavik viaggio fotografico islanda estiva"
+    },
+    {
+      "id": "17",
+      "type": "tour",
       "title": "Vík í Mýrdal con teleobiettivo",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vik_i_myrdal_dal_viaggio_fotografico_islanda_estiva_09589791ef.jpg",
+      "alt": "alba faraglioni di vik"
     },
     {
-      "id": "293",
+      "id": "18",
+      "type": "tour",
       "title": " Seljalandsfoss dall'alto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Seljalandsfoss_viaggio_fotografico_islanda_estiva_3211a45fda.jpg",
+      "alt": "tramonto cacata islandese Seljalandsfoss"
+    },
+    {
+      "id": "locpic-4-2",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/corso_online_fotografare_con_lo_smartphone_dcf7fe9bf3.jpg",
+      "alt": "come fare belle foto con il cellulare"
+    },
+    {
+      "id": "locpic-4-3",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Diamond_Beach_di_Samuele_Bucci_2c2d28baf6.jpg",
+      "alt": "Viaggio fotografico Islanda"
+    },
+    {
+      "id": "locpic-5-1",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/corso_online_fotografare_con_lo_smartphone_8cfb641c06.jpg",
+      "alt": "come fare belle foto con il cellulare"
+    },
+    {
+      "id": "locpic-13-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Kirkjufell_al_tramonto_65791ddd8a.jpg",
+      "alt": "Kirkjufell al tramonto durante viaggio fotografico Islanda"
     }
   ]
 }

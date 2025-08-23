@@ -1,51 +1,363 @@
 {
+  "id": "39",
+  "tour_id": "prati-di-tivo-workshop-di-fotografia-di-paesaggio",
   "slug": "prati-di-tivo",
   "title": "Prati di Tivo: Workshop di fotografia di paesaggio immersi nella neve",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p>Due Giornate ai piedi del Gran Sasso in veste Invernale dove andremo a caccia di composizioni fotografiche sfruttando i primi piani creati dalla neve. Dal Corno Piccolo alla Croce di Prati di Tivo cercheremo di fotografare più scorci possibili di questa location. Tutto dipenderà dalla quantità di neve e dal meteo condizionerà l’evento. Imparerai a sfruttare al meglio i primi piani e sfruttare le soffici luci dell’alba e del tramonto su un elemento tanto bello quanto a volte complicato come la neve e il ghiaccio.Affrettati a prenotare il tuo posto: solo 7 persone potranno partecipare per garantire la migliore esperienza possibile a ciascuno di voi. Prima della data del Workshop, avrai accesso a un gruppo WhatsApp riservato ai corsisti per scambi di consigli e organizzazione dell'uscita fotografica, riceverai anche un estratto del nostro PDF sulla Pianificazione e due video corsi per iniziare a muovere i primi passi con la post-produzione con Photoshop.</p>",
+  "excerpt": "Una giornata di fotografia tra gli scenari unici ai piedi del Gran Sasso",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica consigliata:</p><ul><li>Reflex o Mirrorless</li><li>Obiettivo Grandangolare</li><li>Obiettivo Medio-Tele (facoltativo ma utilizzabile)</li><li>Treppiede stabile e preferibilmente senza colonna centrale.</li><li>Filtri non obbligatori</li><li>Intervallometro/Telecomando di scatto remoto con funzionalità BULB solo per eventuale fotografia notturna</li></ul><p><br>Abbigliamento consigliato per il workshop:</p><ul><li>Vestiario Invernale da neve, termico</li><li>Scaldini, cappello, maglie termiche, calzemaglie termiche e tutti gli</li><li>accessori del caso per ridurre al minimo il freddo</li><li>Torcia da testa</li><li>Ciaspole (obbligatorio almeno portarle per camminare senza sprofondare<br>in caso di neve alta)</li><li>bastoncini da trekking (opzionali)</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "abruzzo"
+    "slug": "abruzzo",
+    "locale": "it",
+    "name": "Abruzzo"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Workshop Fotografico Prati di Tivo 2025",
+    "metaDescription": "Partecipa a questo workshop di fotografia di paesaggio ai Prati di Tivo in Abruzzo, imparerai sul campo le migliori tecniche per foto incredibili in un contesto unico.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2025-12-13",
-      "end": "2025-12-14"
+      "id": "270",
+      "title": "Prati di Tivo",
+      "description": "Immersi nel cuore del Parco Nazionale del Gran Sasso e Monti della Laga, i Prati di Tivo rappresentano una delle località più suggestive dell’Appennino centrale. Situati ai piedi del maestoso Corno Piccolo, offrono un colpo d’occhio spettacolare già all’arrivo: ampi prati d’altura, boschi di faggi e vedute panoramiche mozzafiato che spaziano fino all’Adriatico nelle giornate più limpide.",
+      "slug": "prati-di-tivo",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "193",
+          "title": "Ritrovo e accoglienza partecipanti",
+          "description": "<p>10:00 – Ritrovo e accoglienza partecipanti presso rifugio base o struttura convenzionata, presentazioni e introduzione al workshop.<br>Controllo attrezzatura, impostazioni consigliate e panoramica sul programma.<br>11:00 – Briefing dei vari spot, panoramica di Prati di Tivo e di cosa offre fotograficamente parlando. Valuteremo le condizioni di neve per l’alba del giorno successivo dato che spesso la strada per raggiungere la Madonnina in Inverno è chiusa se c’è troppa neve.<br>12:00/12:30 – Pausa pranzo libera al sacco<br>13:30 – Direzione spot Tramonto e Ora Blu. Lavoro sulla luce radente del pomeriggio. Studio dei primi piani. Approfondimenti su storytelling fotografico e mood.<br>15:30 – Preparazione al tramonto. Corno Piccolo (raggiungibile con escursione medio-facile ma con ciaspole necessarie). Imparare a leggere e prevedere la luce.<br>17:00 - Valutazione delle condizioni meteo per un pò di fotografia al cielo notturno e rientro in struttura.<br>19:30/20:00 - Cena in un ristorante sempre lì a Prati di Tivo</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Prati_di_Tivo_innevati_640b2356b6.jpg",
+          "alternativeText": "workshop di fotografia di paesaggio - neve"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/prati_di_tivo_innevati_599106bbb0.jpeg",
+          "alternativeText": "workshop di fotografia di paesaggio - gran sasso"
+        },
+        {
+          "id": "locpic-0-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/prati_di_tivo_in_blu_hour_ea2fa33f44.jpeg",
+          "alternativeText": "workshop di fotografia di paesaggio abruzzo - gran sasso"
+        }
+      ]
+    },
+    {
+      "id": "271",
+      "title": "Gran Sasso",
+      "description": "Il Gran Sasso d’Italia è la vetta più alta dell’Appennino, un vero colosso roccioso che domina l’Italia centrale con i suoi 2.912 metri di altitudine (Corno Grande). Ma non è solo un massiccio montuoso: è un mondo a parte, fatto di creste frastagliate, altopiani sconfinati, pareti vertiginose e silenzi assoluti. Un paradiso per ogni fotografo di paesaggio.",
+      "slug": "grande-corno",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "194",
+          "title": "Alba verso la Madonnina o vista Monte Corvo ",
+          "description": "<p>05:30 o 6:00 – Ritrovo per l’alba in direzione del punto panoramico: Madonnina (se raggiungibile) o Vista Monte Corvo. Previsualizzazione e attesa della luce.<br>07:26 – Shooting all’alba con un ripasso generale di quello appreso durante il weekend<br>08:30 – Colazione in struttura (o rifugio).<br>09:30 – Ultimo confronto sull’esperienza, domande aperte, saluti. Possibilità di ricevere consigli su post-produzione.<br>10:00 - Fine Workshop fotografico</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gran_Sasso_d_italia_bd2c0dd057.jpg",
+          "alternativeText": "workshop di fotografia di paesaggio prati di tivo"
+        }
+      ]
     }
   ],
   "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Mezza pensione",
+      "description": "La mezza pensione prevede che si possano consumare la colazione e un pasto a scelta tra il pranzo o la cena all'interno della struttura.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/mezza_pensione_3cfc2aa873.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [],
+  "days": [
+    {
+      "id": "204",
+      "number": 1,
+      "title": "Benvenuti a Prati di Tivo",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "193",
+          "title": "Ritrovo e accoglienza partecipanti",
+          "description": "<p>10:00 – Ritrovo e accoglienza partecipanti presso rifugio base o struttura convenzionata, presentazioni e introduzione al workshop.<br>Controllo attrezzatura, impostazioni consigliate e panoramica sul programma.<br>11:00 – Briefing dei vari spot, panoramica di Prati di Tivo e di cosa offre fotograficamente parlando. Valuteremo le condizioni di neve per l’alba del giorno successivo dato che spesso la strada per raggiungere la Madonnina in Inverno è chiusa se c’è troppa neve.<br>12:00/12:30 – Pausa pranzo libera al sacco<br>13:30 – Direzione spot Tramonto e Ora Blu. Lavoro sulla luce radente del pomeriggio. Studio dei primi piani. Approfondimenti su storytelling fotografico e mood.<br>15:30 – Preparazione al tramonto. Corno Piccolo (raggiungibile con escursione medio-facile ma con ciaspole necessarie). Imparare a leggere e prevedere la luce.<br>17:00 - Valutazione delle condizioni meteo per un pò di fotografia al cielo notturno e rientro in struttura.<br>19:30/20:00 - Cena in un ristorante sempre lì a Prati di Tivo</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "205",
+      "number": 2,
+      "title": "Sveglia per immortalare l'alba sul Gran Sasso",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "194",
+          "title": "Alba verso la Madonnina o vista Monte Corvo ",
+          "description": "<p>05:30 o 6:00 – Ritrovo per l’alba in direzione del punto panoramico: Madonnina (se raggiungibile) o Vista Monte Corvo. Previsualizzazione e attesa della luce.<br>07:26 – Shooting all’alba con un ripasso generale di quello appreso durante il weekend<br>08:30 – Colazione in struttura (o rifugio).<br>09:30 – Ultimo confronto sull’esperienza, domande aperte, saluti. Possibilità di ricevere consigli su post-produzione.<br>10:00 - Fine Workshop fotografico</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "227",
+      "start": "2025-12-13",
+      "end": "2025-12-14",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 100,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/ibuxus/",
+          "firstName": "Samuele",
+          "lastName": "Bucci",
+          "username": "samuelebucci",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "workshop di fotografia di paesaggio - neve",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Prati_di_Tivo_innevati_640b2356b6.jpg"
+  },
   "pictures": [
     {
-      "id": "422",
+      "id": "0",
+      "type": "tour",
       "title": "Prati di Tivo",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Prati_di_Tivo_innevati_640b2356b6.jpg",
+      "alt": "workshop di fotografia di paesaggio - neve"
     },
     {
-      "id": "423",
+      "id": "1",
+      "type": "tour",
       "title": "Gran Sasso",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gran_Sasso_d_italia_bd2c0dd057.jpg",
+      "alt": "workshop di fotografia di paesaggio prati di tivo"
     },
     {
-      "id": "424",
+      "id": "2",
+      "type": "tour",
       "title": "Prati di Tivo in blu hour",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/prati_di_tivo_innevati_599106bbb0.jpeg",
+      "alt": "workshop di fotografia di paesaggio - gran sasso"
     },
     {
-      "id": "425",
+      "id": "3",
+      "type": "tour",
       "title": "Alba ai Prati di Tivo",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/prati_di_tivo_in_blu_hour_ea2fa33f44.jpeg",
+      "alt": "workshop di fotografia di paesaggio abruzzo - gran sasso"
     }
   ]
 }

@@ -1,6 +1,12 @@
 import { Tour, Picture } from '@/types';
 
-// src/lib/url.ts (o dov'è già la tua util)
+// ------------------------------------
+// ✅ URL & Avatar helpers
+// ------------------------------------
+export const DEFAULT_COACH_AVATAR =
+  'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/Coach-WeShoot.avif';
+
+// Converte qualunque input (relativo, protocol-relative, assoluto) in URL assoluto
 export const getFullMediaUrl = (input?: string): string => {
   if (!input) return '';
 
@@ -21,6 +27,15 @@ export const getFullMediaUrl = (input?: string): string => {
   return `${base}${path}`;
 };
 
+// Ritorna sempre un avatar valido con URL assoluto e alt sensato
+export const getCoachAvatar = (u?: {
+  profilePicture?: { url?: string; alternativeText?: string };
+  firstName?: string;
+  username?: string;
+}) => ({
+  url: getFullMediaUrl(u?.profilePicture?.url) || DEFAULT_COACH_AVATAR,
+  alt: u?.profilePicture?.alternativeText || u?.firstName || u?.username || 'Coach WeShoot',
+});
 
 // ------------------------------------
 // ✅ Date & Price formatting
@@ -37,8 +52,7 @@ export const formatDateRange = (start: string, duration: number): string => {
     const iso = startDate.toISOString().split('T')[0];
     const giorni = duration === 1 ? '1 giorno' : `${duration} giorni`;
     return `${iso} · ${giorni}`;
-  } catch (error) {
-    console.warn('Invalid date format:', start);
+  } catch {
     return `${duration === 1 ? '1 giorno' : `${duration} giorni`}`;
   }
 };
@@ -68,23 +82,38 @@ interface ProcessedImage {
 export const processGalleryImages = (
   pictures: Picture[] = []
 ): ProcessedImage[] => {
-  console.log('📸 processGalleryImages > pictures:', pictures);
+  // console.log('📸 processGalleryImages > pictures:', pictures);
 
   return pictures
     .map((picture, index) => {
-      const url = (picture as any).url || picture.image?.[0]?.url;
-      const alt = (picture as any).alt || picture.image?.[0]?.alternativeText;
-      
+      // supporta: picture.url  |  picture.image?.url  |  picture.image?.[0]?.url
+      const directUrl = (picture as any).url;
+      const objUrl = (picture as any).image?.url;
+      const arrUrl = Array.isArray((picture as any).image)
+        ? (picture as any).image?.[0]?.url
+        : undefined;
+
+      const url = directUrl || objUrl || arrUrl;
+
+      // alt preferibilmente da image, poi fallback su title
+      const directAlt = (picture as any).alt;
+      const objAlt = (picture as any).image?.alternativeText;
+      const arrAlt = Array.isArray((picture as any).image)
+        ? (picture as any).image?.[0]?.alternativeText
+        : undefined;
+
+      const alt = directAlt || objAlt || arrAlt || picture.title || 'Immagine galleria';
+
       if (!url) {
-        console.warn(`⚠️ picture url mancante o vuoto (index ${index}):`, picture);
+        // console.warn(`⚠️ picture url mancante o vuoto (index ${index}):`, picture);
         return null;
       }
 
       return {
-        id: picture.id?.toString() ?? `img-${index}`,
+        id: (picture as any).id?.toString() ?? `img-${index}`,
         title: picture.title || '',
         url: getFullMediaUrl(url),
-        alt: alt || picture.title || 'Immagine galleria',
+        alt,
       };
     })
     .filter((img): img is ProcessedImage => Boolean(img));
@@ -93,62 +122,54 @@ export const processGalleryImages = (
 // ------------------------------------
 // ✅ Tour session & duration helpers
 // ------------------------------------
-export const getFutureSessions = (sessions: any[]) =>
-  sessions.filter((s) => new Date(s.start) > new Date());
+export const getFutureSessions = (sessions: any[] = []) =>
+  sessions.filter((s) => {
+    const d = new Date(s?.start);
+    return !isNaN(d.getTime()) && d > new Date();
+  });
 
-export const getLatestSession = (sessions: any[]) =>
-  [...sessions].sort(
-    (a, b) => new Date(b.start).getTime() - new Date(a.start).getTime()
-  )[0];
+export const getLatestSession = (sessions: any[] = []) =>
+  [...sessions]
+    .filter((s) => !isNaN(new Date(s?.start).getTime()))
+    .sort((a, b) => new Date(b.start).getTime() - new Date(a.start).getTime())[0];
 
 export const getNextSession = (sessions: any[]) =>
   getFutureSessions(sessions)[0] || getLatestSession(sessions) || null;
 
 export const calculateTourDuration = (
-  start: string,
+  start?: string,
   end?: string
 ): number => {
   if (!start || !end) return 7;
   const startDate = new Date(start);
   const endDate = new Date(end);
+  if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) return 7;
   const diff = endDate.getTime() - startDate.getTime();
-  return Math.ceil(diff / (1000 * 60 * 60 * 24)) + 1;
+  return Math.max(1, Math.ceil(diff / (1000 * 60 * 60 * 24)) + 1);
 };
 
 // ------------------------------------
 // ✅ Coach helpers
 // ------------------------------------
 export const createDefaultCoach = (coaches: any[] = []) => {
-  const coach = coaches[0];
+  const coach = coaches?.[0];
   if (coach) {
     return {
       id: coach.id,
       name: coach.firstName
         ? `${coach.firstName} ${coach.lastName || ''}`.trim()
         : coach.username,
-      avatar: {
-        url:
-          coach.profilePicture?.url ||
-          'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/Coach-WeShoot.avif',
-        alt:
-          coach.profilePicture?.alternativeText ||
-          coach.firstName ||
-          coach.username,
-      },
+      avatar: getCoachAvatar(coach),
     };
   }
   return {
     id: 'default',
     name: 'Team WeShoot',
-    avatar: {
-      url:
-        'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/Coach-WeShoot.avif',
-      alt: 'Team WeShoot',
-    },
+    avatar: { url: DEFAULT_COACH_AVATAR, alt: 'Team WeShoot' },
   };
 };
 
-export const getCoachesFromSessions = (sessions: any[]) => {
+export const getCoachesFromSessions = (sessions: any[] = []) => {
   const unique: Record<string, any> = {};
   sessions.forEach((s) => {
     s.coaches?.forEach((coach: any) => {
@@ -197,7 +218,23 @@ export const filterTours = (tours: Tour[], searchTerm: string): Tour[] => {
 };
 
 // ------------------------------------
+// ✅ Destination helper
+// ------------------------------------
+export const getDestinationFromTour = (tour: any) => {
+  const state = Array.isArray(tour.states) ? tour.states[0] : tour.states;
+  const place = Array.isArray(tour.places) ? tour.places[0] : tour.places;
+
+  return {
+    id: state?.id || '1',
+    name: place?.name || state?.name || 'Destinazione',
+    slug: place?.slug || state?.slug || 'destinazione',
+    country: state?.slug || 'stato',
+  };
+};
+
+// ------------------------------------
 // ✅ Trasforma i tour da GraphQL in oggetti Tour
+//     (con coach.avatar sempre definito)
 // ------------------------------------
 export const transformTourData = (tour: any): Tour => {
   if (!tour) return {} as Tour;
@@ -209,9 +246,23 @@ export const transformTourData = (tour: any): Tour => {
   const firstCoach = displaySession?.users?.[0];
   const maxPax = displaySession?.maxPax ?? 0;
   const registeredUsers = displaySession?.users?.length ?? 0;
-  const availableSpots = maxPax - registeredUsers;
+  const availableSpots = Math.max(0, maxPax - registeredUsers);
 
   const image = Array.isArray(tour.image) ? tour.image[0] : tour.image;
+
+  const coachBlock = firstCoach
+    ? {
+        id: firstCoach.id,
+        name: firstCoach.firstName || firstCoach.username || 'Coach WeShoot',
+        slug: firstCoach.username || 'coach-weshoot',
+        avatar: getCoachAvatar(firstCoach),
+      }
+    : {
+        id: '1',
+        name: 'Coach WeShoot',
+        slug: 'coach-weshoot',
+        avatar: { url: DEFAULT_COACH_AVATAR, alt: 'Coach WeShoot' },
+      };
 
   return {
     id: tour.id,
@@ -230,34 +281,14 @@ export const transformTourData = (tour: any): Tour => {
         : { url: '', alt: tour.title || '', gallery: [] },
     startDate: displaySession?.start || '',
     endDate: displaySession?.end || '',
-    duration: calculateTourDuration(
-      displaySession?.start,
-      displaySession?.end
-    ),
+    duration: calculateTourDuration(displaySession?.start, displaySession?.end),
     price: displaySession?.price ?? 0,
     deposit: displaySession?.deposit ?? 0,
-    availableSpots: availableSpots > 0 ? availableSpots : 0,
+    availableSpots,
     maxParticipants: displaySession?.maxPax ?? 0,
     status: displaySession?.status,
     featured: tour.featured ?? false,
-    coach: firstCoach
-      ? {
-          id: firstCoach.id,
-          name:
-            firstCoach.firstName || firstCoach.username || 'Coach WeShoot',
-          slug: firstCoach.username || 'coach-weshoot',
-          avatar: firstCoach.profilePicture
-            ? {
-                url: getFullMediaUrl(firstCoach.profilePicture.url),
-                alt:
-                  firstCoach.profilePicture.alternativeText ||
-                  firstCoach.firstName ||
-                  firstCoach.username ||
-                  'Coach WeShoot',
-              }
-            : undefined,
-        }
-      : { id: '1', name: 'Coach WeShoot', slug: 'coach-weshoot' },
+    coach: coachBlock,
     coaches: displaySession?.users || [],
     destination: getDestinationFromTour(tour),
     collection: tour.collections?.[0]
@@ -285,9 +316,23 @@ export const transformTours = (tours: any[]): Tour[] => {
     const firstCoach = displaySession?.users?.[0];
     const maxPax = displaySession?.maxPax ?? 0;
     const registeredUsers = displaySession?.users?.length ?? 0;
-    const availableSpots = maxPax - registeredUsers;
+    const availableSpots = Math.max(0, maxPax - registeredUsers);
 
     const image = Array.isArray(tour.image) ? tour.image[0] : tour.image;
+
+    const coachBlock = firstCoach
+      ? {
+          id: firstCoach.id,
+          name: firstCoach.firstName || firstCoach.username || 'Coach WeShoot',
+          slug: firstCoach.username || 'coach-weshoot',
+          avatar: getCoachAvatar(firstCoach),
+        }
+      : {
+          id: '1',
+          name: 'Coach WeShoot',
+          slug: 'coach-weshoot',
+          avatar: { url: DEFAULT_COACH_AVATAR, alt: 'Coach WeShoot' },
+        };
 
     return {
       id: tour.id,
@@ -306,34 +351,14 @@ export const transformTours = (tours: any[]): Tour[] => {
           : { url: '', alt: tour.title || '', gallery: [] },
       startDate: displaySession?.start || '',
       endDate: displaySession?.end || '',
-      duration: calculateTourDuration(
-        displaySession?.start,
-        displaySession?.end
-      ),
+      duration: calculateTourDuration(displaySession?.start, displaySession?.end),
       price: displaySession?.price ?? 0,
       deposit: displaySession?.deposit ?? 0,
-      availableSpots: availableSpots > 0 ? availableSpots : 0,
+      availableSpots,
       maxParticipants: displaySession?.maxPax ?? 0,
       status: displaySession?.status,
       featured: tour.featured ?? false,
-      coach: firstCoach
-        ? {
-            id: firstCoach.id,
-            name:
-              firstCoach.firstName || firstCoach.username || 'Coach WeShoot',
-            slug: firstCoach.username || 'coach-weshoot',
-            avatar: firstCoach.profilePicture
-              ? {
-                  url: getFullMediaUrl(firstCoach.profilePicture.url),
-                  alt:
-                    firstCoach.profilePicture.alternativeText ||
-                    firstCoach.firstName ||
-                    firstCoach.username ||
-                    'Coach WeShoot',
-                }
-              : undefined,
-          }
-        : { id: '1', name: 'Coach WeShoot', slug: 'coach-weshoot' },
+      coach: coachBlock,
       coaches: displaySession?.users || [],
       destination: getDestinationFromTour(tour),
       collection: tour.collections?.[0]
@@ -352,20 +377,8 @@ export const transformTours = (tours: any[]): Tour[] => {
 };
 
 // ------------------------------------
-// ✅ Destination helper
+// ✅ Card override (coach forzato) con fallback avatar
 // ------------------------------------
-export const getDestinationFromTour = (tour: any) => {
-  const state = Array.isArray(tour.states) ? tour.states[0] : tour.states;
-  const place = Array.isArray(tour.places) ? tour.places[0] : tour.places;
-
-  return {
-    id: state?.id || '1',
-    name: place?.name || state?.name || 'Destinazione',
-    slug: place?.slug || state?.slug || 'destinazione',
-    country: state?.slug || 'stato',
-  };
-};
-
 export const transformTourForCard = (
   tour: any,
   photographerUsername: string,
@@ -379,10 +392,7 @@ export const transformTourForCard = (
       id: photographerUsername,
       name: photographerName,
       slug: photographerUsername,
-      avatar: transformed.coach?.avatar || {
-        url: 'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/Coach-WeShoot.avif',
-        alt: photographerName,
-      },
+      avatar: transformed.coach?.avatar ?? { url: DEFAULT_COACH_AVATAR, alt: photographerName },
     },
   };
 };

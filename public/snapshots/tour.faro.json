@@ -1,127 +1,865 @@
 {
+  "id": "5",
+  "tour_id": "algarve-tra-scogliere-e-via-lattea",
   "slug": "faro",
   "title": "Algarve: un posto unico tra mare, scogliere e via lattea",
-  "states": {
-    "slug": "portogallo"
-  },
+  "description": "<p><span style=\"color:rgb(40,40,40);\">Se sei entrato su questa pagina vuol dire che sei appassionato di <strong>fotografia di paesaggio</strong> e di <strong>seascape</strong>, la fotografia di paesaggio con lunghe esposizioni, scogliere, colori del mare e composizioni articolate tra i faraglioni... Bene, Algarve è il posto giusto per scattare fotografie così speciali.&nbsp;</span></p><p><span style=\"color:rgb(40,40,40);\">Le scogliere di questa costa si espandono per decine e decine di chilometri, creando grotte, archi, insenature, faraglioni, paesaggi mozzafiato. Avrai la possibilità di scendere direttamente in spiaggia ed entrare nelle bellissime calette dall'acqua cristallina, usare i coralli come primo piano e le luci di alba e tramonto che illumineranno la roccia brillante tipica di queste zone.&nbsp;</span></p><p><span style=\"color:rgb(40,40,40);\">Ogni appassionato di fotografia di paesaggio potrà godere di queste meraviglie da vicino, portando a casa scatti pazzeschi che altrove sarebbe impossibile fare. Le locations sono abbastanza semplici da raggiungere, i meno avvezzi rimarranno sulla parte alta delle scogliere mentre i più smaliziati avranno modo di calarsi nelle guglie con corde e scarponi da trekking, ogni partecipante porterà a casa delle fotografie uniche, supportato dai due tour leaders che guideranno le sessioni di scatto.&nbsp;</span></p><p><span style=\"color:rgb(40,40,40);\">Pernotterai in un'unica struttura ricettiva a poche centinaia di metri dalle locations principali, con cucina comune dove potrai godere di buona compagnia e grandi risate con altri (pochi) appassionati come te. I posti sono limitati, blocca il tuo ed immergiti in una settimana incredibile di luci, colori e relax.</span></p>",
+  "excerpt": "Un viaggio alla scoperta di una nuova location",
+  "difficulty": "medium",
+  "experience_level": "Intenso",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "algarve"
+    "slug": "algarve",
+    "locale": "it",
+    "name": "Algarve"
   },
-  "sessions": [
+  "states": {
+    "name": "Portogallo",
+    "slug": "portogallo",
+    "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Algarve 2025 | WeShoot",
+    "metaDescription": "Immergiti in questo viaggio fotografico ad Algarve tra mare, scogliere e paesaggi da togliere il fiato. Un'esperienza fotografica incredibile",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2021-12-04",
-      "end": "2021-12-11"
-    },
-    {
-      "start": "2022-01-29",
-      "end": "2022-02-06"
-    },
-    {
-      "start": "2022-12-03",
-      "end": "2022-12-10"
-    },
-    {
-      "start": "2023-12-10",
-      "end": "2023-12-17"
-    },
-    {
-      "start": "2023-12-03",
-      "end": "2023-12-10"
-    },
-    {
-      "start": "2024-12-14",
-      "end": "2024-12-21"
-    }
-  ],
-  "reviews": [],
-  "pictures": [
-    {
-      "id": "55",
-      "title": "Faro",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "56",
-      "title": "Praia do Castelejo",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "57",
-      "title": "Faro di Capo San Vicente",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "7",
+      "title": "Ponta da Piedade",
+      "description": "Ponta da Piedade è un promontorio con un gruppo di formazioni rocciose lungo la costa della città di Lagos, nella regione portoghese dell'Algarve. Costituiti da rocce giallo-dorate simili a scogliere alte fino a 20 metri.",
+      "slug": "ponta-da-piedade-1",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "49",
+          "title": "alba a Ponta da Piedade",
+          "description": "<p>La sveglia suonerà molto presto, ci muoveremo per scattare l'alba in una zona molto interessante della costa Sud, nello specifico scatteremo a Ponta da Piedade, zona ricca di spunti creativi dove potremo trascorrere la prima parte della mattinata.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Praia_da_Boneca_e9836537f7.jpg",
+          "alternativeText": "viaggio fotografico algarve workshop"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/ponta_da_piedade_47ef6d4f57.jpg",
+          "alternativeText": "viaggio fotografico algarve workshop"
+        }
+      ]
     },
     {
       "id": "58",
-      "title": "Ponta da Piedade",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "59",
-      "title": "Praia do Barranco do Martinho",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "60",
-      "title": "Praia de Carvoeiro",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Faro",
+      "description": "Faro è il capoluogo di Algarve, il punto di partenza del nostro viaggio fotografico. Separata dal mare da una laguna, Faro è un porto di pesca e una località turistica affacciata sull'oceano Atlantico.",
+      "slug": "faro",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "46",
+          "title": "Presentazioni e briefing iniziale per organizzarsi",
+          "description": "Appuntamento all'Aeroporto de Faro (8006-901 Faro, Portogallo), meeting con tutti i partecipanti e spostamento verso la struttura ricettiva. Faremo una cassa comune per acquistare beni di prima necessità come pasta, sale, olio, pane ecc. Mentre ognuno provvederà ad acquistare autonomamente le provviste per eventuali cene fuori dalla struttura.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Algarve_costa_Sud_faro_948c3ff288.jpg",
+          "alternativeText": "Viaggio fotografico algarve"
+        }
+      ]
     },
     {
       "id": "61",
+      "title": "Praia do Barranco do Martinho",
+      "description": "Praia do Barranco do Martinho è un'altra delle spiagge che visiteremo per attendere le ultime luci del tramonto e fotografare la via lattea.",
+      "slug": "praia-do-barranco-do-martinho",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "50",
+          "title": "Tramonto e notturna a Praia do Barranco do Martinho",
+          "description": " Nel pomeriggio ci sposteremo in un bellissimo contesto di scogliera chiamato Praia do Barranco do Martinho, dove trascorreremo tramonto e buona parte della nottata a fotografare la via lattea.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/praia_do_barranco_do_martinho_04a8b7985c.jpg",
+          "alternativeText": "viaggio fotografico algarve workshop"
+        }
+      ]
+    },
+    {
+      "id": "64",
       "title": "Praia da Marinha",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Praia da Marinha è una delle 10 scogliere più belle d'Europa, sarà meta per fotografare le prime luci del mattino.",
+      "slug": "praia-da-marinha",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "52",
+          "title": "Praia da Marinha",
+          "description": "Ci sveglieremo nuovamente nel cuore della notte per andare a riprendere l'alba a Praia da Marinha, la zona sarà estremamente frastagliata e molto stimolante dal punto di vista creativo.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_praia_da_marinha_77ea1a61db.jpg",
+          "alternativeText": "viaggio fotografico  Algarve "
+        }
+      ]
+    },
+    {
+      "id": "231",
+      "title": "Sagres",
+      "description": "Sagres, situata nella regione dell'Algarve in Portogallo, è una destinazione affascinante nota per la sua bellezza naturale mozzafiato e la ricca storia marittima. Questa piccola cittadina, posizionata sulla punta sud-occidentale dell'Europa, è circondata da imponenti scogliere che offrono viste panoramiche sull'Oceano Atlantico.",
+      "slug": "sagres",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "47",
+          "title": "Tramonto e via lattea a Praia do Castelejo",
+          "description": "Ci muoveremo verso le prime locations sulla costa Ovest, precisamente a Praia do Castelejo, dove faremo cena al sacco con panini ed avremo modo di muoverci autonomamente, ognuno con il proprio scouting fino a trovare le composizioni ideali per il tramonto e per l'arco galattico invernale. Le guide mostreranno come si realizzano scatti singoli con la figura umana e come si contestualizza l'arco galattico in una panoramica estrema. Torneremo alla struttura nella tarda nottata.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/sagres_via_lattea_23469befd7.jpg",
+          "alternativeText": "viaggio fotografico algarve workshop"
+        }
+      ]
+    },
+    {
+      "id": "232",
+      "title": "Algarve Costa Ovest",
+      "description": "Altre Bellissime scogliere frastagliate della costa Ovest di Algarve. Avremo modo di scoprire queste spiagge uniche al mondo.",
+      "slug": "algarve-costa-ovest",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "54",
+          "title": "Ultimi scatti e rientro a Faro",
+          "description": "<p>In base alle condizioni meteo sfrutteremo questa giornata per dedicarci ad uno degli spot visti fino a questo punto del viaggio per cercare di portare a casa più fotografie possibile. Nel pomeriggio rientreremo verso Faro per fare insieme la cena di fine viaggio e trascorrere l'ultima notte vicino l'aereporto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alba_Costa_Ovest_Algarve_1286c5c2fe.jpg",
+          "alternativeText": "Viaggio fotografico algarve"
+        }
+      ]
+    }
+  ],
+  "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Volo A/R dall'Italia (Milano)",
+      "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Villa Privata",
+      "description": "Soggiorno in una villa privata.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alloggio_in_villa_b5499fc6eb.png"
+      }
+    },
+    {
+      "title": "Volo A/R dall'Italia (Roma)",
+      "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "56",
+      "number": 1,
+      "title": "Benvenuti ad Algarve",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "46",
+          "title": "Presentazioni e briefing iniziale per organizzarsi",
+          "description": "Appuntamento all'Aeroporto de Faro (8006-901 Faro, Portogallo), meeting con tutti i partecipanti e spostamento verso la struttura ricettiva. Faremo una cassa comune per acquistare beni di prima necessità come pasta, sale, olio, pane ecc. Mentre ognuno provvederà ad acquistare autonomamente le provviste per eventuali cene fuori dalla struttura.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "57",
+      "number": 2,
+      "title": "Alla scoperta della costa Ovest",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "47",
+          "title": "Tramonto e via lattea a Praia do Castelejo",
+          "description": "Ci muoveremo verso le prime locations sulla costa Ovest, precisamente a Praia do Castelejo, dove faremo cena al sacco con panini ed avremo modo di muoverci autonomamente, ognuno con il proprio scouting fino a trovare le composizioni ideali per il tramonto e per l'arco galattico invernale. Le guide mostreranno come si realizzano scatti singoli con la figura umana e come si contestualizza l'arco galattico in una panoramica estrema. Torneremo alla struttura nella tarda nottata.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "58",
+      "number": 3,
+      "title": "Esploriamo la zona Sud-Occidentale",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "48",
+          "title": "Faro di Capo San Vicente",
+          "description": "In questa giornata ci muoveremo verso la parte sud occidentale dell'isola, per esplorare la zona intorno al famosissimo Faro di Capo San Vicente, una location iconica che sarà un ottimo spunto per tramonto e scatti notturni con la coda della Via Lattea.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "59",
+      "number": 4,
+      "title": "Scogliere, albe, tramonti e via lattea",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "49",
+          "title": "alba a Ponta da Piedade",
+          "description": "<p>La sveglia suonerà molto presto, ci muoveremo per scattare l'alba in una zona molto interessante della costa Sud, nello specifico scatteremo a Ponta da Piedade, zona ricca di spunti creativi dove potremo trascorrere la prima parte della mattinata.</p>",
+          "locale": "it"
+        },
+        {
+          "id": "50",
+          "title": "Tramonto e notturna a Praia do Barranco do Martinho",
+          "description": " Nel pomeriggio ci sposteremo in un bellissimo contesto di scogliera chiamato Praia do Barranco do Martinho, dove trascorreremo tramonto e buona parte della nottata a fotografare la via lattea.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "number": 5,
+      "title": "Le case bianche dei pescatori",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "51",
+          "title": "Praia de Carvoeiro all'ora blu",
+          "description": "In questa sessione di scatto approfitteremo del tramonto e della blue hour per riprendere il paese illuminato sulla scogliera, a Praia de Carvoeiro, un grande classico del posto.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "61",
+      "number": 6,
+      "title": "Esploriamo una delle 10 scogliere più belle d'Europa",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "52",
+          "title": "Praia da Marinha",
+          "description": "Ci sveglieremo nuovamente nel cuore della notte per andare a riprendere l'alba a Praia da Marinha, la zona sarà estremamente frastagliata e molto stimolante dal punto di vista creativo.",
+          "locale": "it"
+        },
+        {
+          "id": "53",
+          "title": "Tramonto all'arco di Albandeira",
+          "description": "Dopo aver pranzato in struttura ci muoveremo verso la spiaggia di Albandeira dove potremo fotografare il \"ponte di roccia\" che si affaccia sull'oceano, avremo modo di utilizzare questo tempo per fare scouting e trovare i giusti spot al tramonto e per la notturna.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "62",
+      "number": 7,
+      "title": "Rientro alla base",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "54",
+          "title": "Ultimi scatti e rientro a Faro",
+          "description": "<p>In base alle condizioni meteo sfrutteremo questa giornata per dedicarci ad uno degli spot visti fino a questo punto del viaggio per cercare di portare a casa più fotografie possibile. Nel pomeriggio rientreremo verso Faro per fare insieme la cena di fine viaggio e trascorrere l'ultima notte vicino l'aereporto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "63",
+      "number": 8,
+      "title": "Arrivederci Algarve",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "55",
+          "title": "Saluti e transfer all'aeroporto",
+          "description": "Dopo aver fatto colazione faremo il. check-out dalla struttura per dirigerci verso l'aeroporto. ",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Via Lattea",
+      "description": "Immergiti nello splendore dei cieli stellati e della nostra galassia",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Scogliere",
+      "description": "Viaggi fotografici tra le più alte scogliere",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "6",
+      "start": "2021-12-04",
+      "end": "2021-12-11",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 1699,
+      "deposit": 1,
+      "balance": 1698,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1599,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "start": "2022-01-29",
+      "end": "2022-02-06",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 1699,
+      "deposit": 1,
+      "balance": 1698,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1599,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "58",
+      "start": "2022-12-03",
+      "end": "2022-12-10",
+      "status": "scheduled",
+      "maxPax": 12,
+      "price": 1299,
+      "deposit": 100,
+      "balance": 1199,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1199,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        },
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "77",
+      "start": "2023-12-10",
+      "end": "2023-12-17",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 1399,
+      "deposit": 100,
+      "balance": 1299,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1399,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "113",
+      "start": "2023-12-03",
+      "end": "2023-12-10",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 1399,
+      "deposit": 100,
+      "balance": 1299,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1299,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "165",
+      "start": "2024-12-14",
+      "end": "2024-12-21",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 2250,
+      "deposit": 675,
+      "balance": 1575,
+      "minPax": 7,
+      "currency": "EUR",
+      "priceCompanion": 2250,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "tramonto scogliere viaggio fotografico algarve",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_algarve_e023fb0973.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Faro",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Algarve_costa_Sud_faro_948c3ff288.jpg",
+      "alt": "Viaggio fotografico algarve"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Praia do Castelejo",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Praia_do_Castelejo_viaggio_fotografico_algarve_3c067b6cfa.jpg",
+      "alt": "Praia do Castelejo"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Faro di Capo San Vicente",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Faro_Sao_Vicente_Algarve_costa_Portogallo_7f84763348.jpg",
+      "alt": " viaggio fotografico algarve"
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "Ponta da Piedade",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/ponta_da_piedade_47ef6d4f57.jpg",
+      "alt": "viaggio fotografico algarve workshop"
+    },
+    {
+      "id": "4",
+      "type": "tour",
+      "title": "Praia do Barranco do Martinho",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/praia_do_barranco_do_martinho_04a8b7985c.jpg",
+      "alt": "viaggio fotografico algarve workshop"
+    },
+    {
+      "id": "5",
+      "type": "tour",
+      "title": "Praia de Carvoeiro",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Praia_de_Carvoeiro_9078ef2791.jpg",
+      "alt": "viaggio fotografico algarve workshop"
+    },
+    {
+      "id": "6",
+      "type": "tour",
+      "title": "Praia da Marinha",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_praia_da_marinha_77ea1a61db.jpg",
+      "alt": "viaggio fotografico  Algarve "
+    },
+    {
+      "id": "7",
+      "type": "tour",
       "title": "Praia de Albandeira",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/praia_de_albandeira_65cb2230d8.jpg",
+      "alt": "viaggio fotografico algarve workshop"
     },
     {
-      "id": "142",
+      "id": "8",
+      "type": "group",
       "title": "WeShooter al tramonto in Algarve",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_scogliere_algarve_e53425b7d6.jpg",
+      "alt": "tramonto scogliere viaggio fotografico algarve"
     },
     {
-      "id": "348",
+      "id": "9",
+      "type": "tour",
       "title": "Sagres",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/sagres_via_lattea_23469befd7.jpg",
+      "alt": "viaggio fotografico algarve workshop"
     },
     {
-      "id": "349",
+      "id": "10",
+      "type": "tour",
       "title": "Algarve costa Ovest",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alba_Costa_Ovest_Algarve_1286c5c2fe.jpg",
+      "alt": "Viaggio fotografico algarve"
+    },
+    {
+      "id": "locpic-0-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Praia_da_Boneca_e9836537f7.jpg",
+      "alt": "viaggio fotografico algarve workshop"
     }
   ]
 }

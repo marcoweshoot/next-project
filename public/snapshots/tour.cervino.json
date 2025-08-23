@@ -1,43 +1,454 @@
 {
+  "id": "11",
+  "tour_id": "zermatt-winter-experience",
   "slug": "cervino",
   "title": "Zermatt Winter Experience",
-  "states": {
-    "slug": "svizzera"
-  },
+  "description": "<p>La Svizzera è da sempre considerata una delle <strong>mete fotografiche più interessanti</strong> di sempre, i paesaggi incontaminati di questa zona del mondo attirano ogni anno milioni di turisti, ma pochi riescono a godersi l'inverno più rigido in queste locations.<br><br>In questo viaggio fotografico avrai la grandissima opportunità di partecipare ad un'esperienza incredibile, dormiremo per due notti alle pendici di uno dei ghiacciai più grandi d'Europa, in un contesto epico, circondati da montagne straordinarie tra cui il meraviglioso Monte Cervino.<br><br>Durante questa esperienza fotografica cattureremo la bellezza di questi straordinari luoghi con tecniche avanzate e durante gli orari più interessanti. Svolgeremo le sessioni di scatto durante alba, tramonto e notturna, portando a casa delle fotografie esclusive ricche di atmosfere surreali.</p>",
+  "excerpt": "L'esperienza di dormire su un ghiacciaio per un weekend di fotografia",
+  "difficulty": "medium",
+  "experience_level": "Intenso",
+  "things_needed": "<p>Attrezzatura fotografica:</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "zermatt"
+    "slug": "zermatt",
+    "locale": "it",
+    "name": "Zermatt"
   },
-  "sessions": [
+  "states": {
+    "name": "Svizzera",
+    "slug": "svizzera",
+    "description": "<p>I viaggi fotografici in Svizzera offrono una varietà di paesaggi montani dalle incredibili sfumature di colore: dalle bianche cime innevate del Cervino e dei 4000, fino alle straordinarie radure dal verde perfettamente curato ed incontaminato delle zone più basse. Le locations sono facilmente raggiungibili con trenini ed impianti sciistici.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Zermatt 2025 | WeShoot",
+    "metaDescription": "Vieni ad vivere un esperienza fotografica tra le cime della Svizzera, dormiremo sopra uno dei ghiacciai più grandi d'Europa.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-01-28",
-      "end": "2022-01-30"
+      "id": "37",
+      "title": "Zermatt",
+      "description": "Zermatt è una cittadina di montagna della Svizzera meridionale ai piedi del monte Cervino.",
+      "slug": "zermatt",
+      "locale": "it",
+      "state": {
+        "name": "Svizzera",
+        "slug": "svizzera",
+        "locale": "it",
+        "description": "<p>I viaggi fotografici in Svizzera offrono una varietà di paesaggi montani dalle incredibili sfumature di colore: dalle bianche cime innevate del Cervino e dei 4000, fino alle straordinarie radure dal verde perfettamente curato ed incontaminato delle zone più basse. Le locations sono facilmente raggiungibili con trenini ed impianti sciistici.</p>"
+      },
+      "steps": [
+        {
+          "id": "34",
+          "title": "Saliamo sul trenino per raggiungere il Gornergrat",
+          "description": "Appuntamento alle ore 14:00 a Tasch, dove avremo modo di fare conoscenza, e parcheggiare le auto per salire con il trenino. È prevista una sessione di briefing una volta raggiunta la struttura ricettiva, al termine della quale ci sposteremo direttamente in location per la prima sessione di scatto al tramonto. Rimarremo sul posto per scattare anche la blue hour, circa fino all'ora di cena. Dopo la cena terremo una sessione di teoria della composizione e di analisi critica delle immagini, l'obiettivo della lezione sarà acquisire consapevolezza su come strutturare un'immagine di grande impatto sfruttando gli elementi della scena e la luce.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Trenino_rosso_Zermatt_14adc58d65.jpg",
+          "alternativeText": "viaggio fotografico a zermatt"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "title": "Cervino",
+      "description": "Il monte cervino è una montagna delle Alpi alta 4478, famosa per la sua forma appuntita",
+      "slug": "cervino",
+      "locale": "it",
+      "state": {
+        "name": "Svizzera",
+        "slug": "svizzera",
+        "locale": "it",
+        "description": "<p>I viaggi fotografici in Svizzera offrono una varietà di paesaggi montani dalle incredibili sfumature di colore: dalle bianche cime innevate del Cervino e dei 4000, fino alle straordinarie radure dal verde perfettamente curato ed incontaminato delle zone più basse. Le locations sono facilmente raggiungibili con trenini ed impianti sciistici.</p>"
+      },
+      "steps": [
+        {
+          "id": "36",
+          "title": "Analisi degli scatti e saluti finali",
+          "description": "L'ultima mattinata che avremo a disposizione verrà dedicata all'analisi delle fotografie dei partecipanti, dove faremo il punto su ciò che avete appreso e sugli aspetti da migliorare. Ogni partecipante riceverà delle critiche costruttive atte a migliorare la sua tecnica, al termine di questa attività si concluderà l'evento, ognuno tornerà verso casa, per poi ricevere tutto il materiale didattico e i video di post produzione direttamente via mail.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Monte_Cervino_di_notte_811c121852.jpg",
+          "alternativeText": "viaggio fotografico sul monte cervino"
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "title": "Gornergrat",
+      "description": "Il Gornergrat è una montagna delle alpi pennine dove si può ammirare un paesaggio mozzafiato a picco sul ghiacciaio.",
+      "slug": "gornergrat",
+      "locale": "it",
+      "state": {
+        "name": "Svizzera",
+        "slug": "svizzera",
+        "locale": "it",
+        "description": "<p>I viaggi fotografici in Svizzera offrono una varietà di paesaggi montani dalle incredibili sfumature di colore: dalle bianche cime innevate del Cervino e dei 4000, fino alle straordinarie radure dal verde perfettamente curato ed incontaminato delle zone più basse. Le locations sono facilmente raggiungibili con trenini ed impianti sciistici.</p>"
+      },
+      "steps": [
+        {
+          "id": "35",
+          "title": "Dalle prime luci dell'alba, al tramonto",
+          "description": "Per il secondo giorno prevediamo di svegliarci molto presto, recarci in location ancora con il buio, ed attendere le prime luci dell'alba. Questa sarà probabilmente la sessione più impegnativa di tutto l'evento ma varrà la pena assistere ad uno degli spettacoli più straordinari che la natura possa offrirci: l'alba sul ghiacciaio a 3100 m di quota. Cercheremo di trovare le migliori composizioni sfruttando la luce radente, il controluce e la luce alle spalle. Una volta delineate le sessioni di scatto torneremo in struttura per un po' di relax, una sana colazione, una sessione di analisi critica degli scatti dei partecipanti.Al termine delle attività faremo il pranzo, dopodiché ci rilasseremo fino all'arrivo del tramonto, Dove torneremo al fresco a scattare nuove inquadrature. Dopo il tramonto e la cena è prevista una sessione di fotografia notturna (previa verifica delle condizioni metereologiche) dove fotograferemo le stelle sul ghiacciaio.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vista_Gornergrat_dall_alto_11981f33ce.jpg",
+          "alternativeText": "viaggio fotografico sul ghiacciaio Gornergrat "
+        }
+      ]
     }
   ],
   "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    },
+    {
+      "title": "Supplemento Camera Singola",
+      "description": "Supplemento per prenotare la camera singola",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_person_in_bed_96_717714bbfc.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "34",
+      "number": 1,
+      "title": "Benvenuti a Zermatt",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "34",
+          "title": "Saliamo sul trenino per raggiungere il Gornergrat",
+          "description": "Appuntamento alle ore 14:00 a Tasch, dove avremo modo di fare conoscenza, e parcheggiare le auto per salire con il trenino. È prevista una sessione di briefing una volta raggiunta la struttura ricettiva, al termine della quale ci sposteremo direttamente in location per la prima sessione di scatto al tramonto. Rimarremo sul posto per scattare anche la blue hour, circa fino all'ora di cena. Dopo la cena terremo una sessione di teoria della composizione e di analisi critica delle immagini, l'obiettivo della lezione sarà acquisire consapevolezza su come strutturare un'immagine di grande impatto sfruttando gli elementi della scena e la luce.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "number": 3,
+      "title": "Arrivederci Zermatt",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "36",
+          "title": "Analisi degli scatti e saluti finali",
+          "description": "L'ultima mattinata che avremo a disposizione verrà dedicata all'analisi delle fotografie dei partecipanti, dove faremo il punto su ciò che avete appreso e sugli aspetti da migliorare. Ogni partecipante riceverà delle critiche costruttive atte a migliorare la sua tecnica, al termine di questa attività si concluderà l'evento, ognuno tornerà verso casa, per poi ricevere tutto il materiale didattico e i video di post produzione direttamente via mail.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "number": 2,
+      "title": "Un'intera giornata sul ghiacciaio",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "35",
+          "title": "Dalle prime luci dell'alba, al tramonto",
+          "description": "Per il secondo giorno prevediamo di svegliarci molto presto, recarci in location ancora con il buio, ed attendere le prime luci dell'alba. Questa sarà probabilmente la sessione più impegnativa di tutto l'evento ma varrà la pena assistere ad uno degli spettacoli più straordinari che la natura possa offrirci: l'alba sul ghiacciaio a 3100 m di quota. Cercheremo di trovare le migliori composizioni sfruttando la luce radente, il controluce e la luce alle spalle. Una volta delineate le sessioni di scatto torneremo in struttura per un po' di relax, una sana colazione, una sessione di analisi critica degli scatti dei partecipanti.Al termine delle attività faremo il pranzo, dopodiché ci rilasseremo fino all'arrivo del tramonto, Dove torneremo al fresco a scattare nuove inquadrature. Dopo il tramonto e la cena è prevista una sessione di fotografia notturna (previa verifica delle condizioni metereologiche) dove fotograferemo le stelle sul ghiacciaio.",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Fotografia Notturna",
+      "description": "Impara a scattare in luce lunare o con le stelle",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "15",
+      "start": "2022-01-28",
+      "end": "2022-01-30",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 1399,
+      "deposit": 1,
+      "balance": 1398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1199,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "cervino illuminato con la luna viaggio fotografico zermatt",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Matterhorn_di_notte_f6ff5bef86.jpg"
+  },
   "pictures": [
     {
-      "id": "42",
+      "id": "0",
+      "type": "tour",
       "title": "Zermatt",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Trenino_rosso_Zermatt_14adc58d65.jpg",
+      "alt": "viaggio fotografico a zermatt"
     },
     {
-      "id": "43",
+      "id": "1",
+      "type": "tour",
       "title": "Cervino",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Monte_Cervino_di_notte_811c121852.jpg",
+      "alt": "viaggio fotografico sul monte cervino"
     },
     {
-      "id": "44",
+      "id": "2",
+      "type": "tour",
       "title": "Gornergrat",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vista_Gornergrat_dall_alto_11981f33ce.jpg",
+      "alt": "viaggio fotografico sul ghiacciaio Gornergrat "
     }
   ]
 }

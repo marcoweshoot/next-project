@@ -1,123 +1,948 @@
 {
+  "id": "22",
+  "tour_id": "lofoten-estive-tra-i-fiordi",
   "slug": "fiordi-del-nord",
   "title": "Lofoten: vivi i grandi fiordi del nord",
-  "states": {
-    "slug": "norvegia"
-  },
+  "description": "<p>Anche tu vorresti viaggiare nel Nord Europa? Come darti torto… Questi sono luoghi ricchi di paesaggi incontaminati, estremi, che fondono la bellezza del mare cristallino all’imponenza delle montagne dalle bianche creste invernali e dalle diverse sfumature di verde e giallo nel periodo estivo.</p><p>Hai sentito parlare delle Isole Lofoten, famose per la loro bellezza e per le generose aurore boreali che spesso illuminano i cieli di questa incredibile zona, vero? Bene, eppure, centinaia di migliaia di appassionati come te, ogni anno, non vedono l’ora che arrivi il periodo estivo, perché? Perché le Isole Lofoten in piena estate sono un paradiso fotografico: spiagge bianche sul mare smeraldo, trekking sui diversi fiordi per godere della spettacolare vista di queste lingue di terra che si diramano nell’Oceano, una vista per pochi. Come ogni anno, anche ora sono disponibili i pochissimi posti per prendere parte ad un’avventura di una settimana immerso in questo straordinario contesto di luci e di colori; esplorerai le isole con lo zaino in spalla, raggiungeremo le cime più spettacolari (è richiesto un minimo di allenamento alla fatica) e porteremo a casa fotografie mozzafiato di questo posto unico. Il programma è stato redatto con la massima attenzione ai trekking ed alle sessioni fotografiche, unisciti anche tu a questo gruppo di appassionati di montagna e di fotografia, insieme, vivremo una settimana in uno dei luoghi più belli al Mondo.</p>",
+  "excerpt": "Un'esperienza di trekking ed esplorazione immerso nelle isole più incredibili isole dell'alta Norvegia, le Lofoten.",
+  "difficulty": "easy",
+  "experience_level": "Sfida",
+  "things_needed": "<p>Abbigliamento classico da Trekking, leggero per camminare di giorno (calzoncini, t-shirt), e termico/traspirante per i pernotti (pantaloni lunghi, maglie e completi impermeabili per quando ci saranno piovaschi di passaggio... e ci saranno). Quindi scarponcini in gore-tex, un grande zaino comodo per camminare (ideale 80lt).</p>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "lofoten"
+    "slug": "lofoten",
+    "locale": "it",
+    "name": "Lofoten"
   },
-  "sessions": [
+  "states": {
+    "name": "Norvegia",
+    "slug": "norvegia",
+    "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Lofoten Estive 2025 | WeShoot",
+    "metaDescription": "Scopri i fiordi norvegesi in questo viaggio fotografico Lofoten che ti farà esplorare l'isola dalle cime più alte e farti ammirare i fiordi dall'alto.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-09-03",
-      "end": "2022-09-10"
-    },
-    {
-      "start": "2024-08-25",
-      "end": "2024-09-01"
-    },
-    {
-      "start": "2025-08-16",
-      "end": "2025-08-23"
-    }
-  ],
-  "reviews": [],
-  "pictures": [
-    {
-      "id": "3",
+      "id": "2",
       "title": "Hamnoy",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Tipica cittadina dei fiordi norvegesi.",
+      "slug": "hamnoy",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "42",
+          "title": "Tra i paesaggi tipici dei pescatori",
+          "description": "Questa giornata la dedicheremo a due delle cittadine più conosciute delle isole Lofoten, dove potrai fotografare le tipiche case rosse dei pescatori, tra gli incredibili sfondi ",
+          "locale": "it"
+        },
+        {
+          "id": "108",
+          "title": "Scopriamo insieme le tradizioni e la cultura dei pescatori delle Lofoten",
+          "description": "Riposo durante la mattinata e spostamento verso Hamnoy\nEsplorazione delle zone di Reine, Sakrisoy ed Hamnoya, con il classico ponte sulle rorbue dei pescatori\nTramonto in una location inedita",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Hamnoy_1787be4684.jpg",
+          "alternativeText": "alba hamnoy viaggio fotografico Lofoten"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_divertiti_sotto_l_aurora_boreale_alle_Lofoten_33a2b8dbd1.JPG",
+          "alternativeText": "WeShooters sotto l'aurora boreale viaggio fotografico alle Lofoten"
+        }
+      ]
     },
     {
-      "id": "47",
-      "title": "Spiaggia di kvalvika",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "46",
+      "title": "Flakstadoya",
+      "description": "Flakstadoya è un'isola appartenente all'arcipelago delle Lofoten, con spiaggie bianche e mare caraibico.",
+      "slug": "flakstadoya",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "41",
+          "title": "Alba a Flakstadoya e tramonto Skagsanden",
+          "description": "<p>Alle prime luci dell'alba ci dirigeremo verso Flakstadoya dove svolgeremo una sessione fotografica in prossimità della montagna più famosa della zona. Nel pomeriggio ci sposteremo verso la spiaggia di Skagsanden per fotografare il tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Spiaggia_di_Skagsanden_al_tramonto_1173021336.jpg",
+          "alternativeText": "tramonto sulla Flakstad beach nel viaggio fotografico alle lofoten"
+        },
+        {
+          "id": "locpic-1-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_lofoten_spiaggia_72992c1fad.JPG",
+          "alternativeText": "tramonto montagne scogliera viaggio fotografico lofoten"
+        }
+      ]
     },
     {
-      "id": "48",
-      "title": "Spiaggia di Haukland",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "52",
+      "id": "49",
       "title": "Spiaggia di Uttakleiv",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Uttakleiv beach è una delle spiagge più belle e fotogeniche dei fiordi Norvegesi.",
+      "slug": "spiaggia-di-uttakleiv",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "43",
+          "title": "La spiaggia di Uttakleiv e dintorni",
+          "description": "Raggiungeremo la spiaggia di Uttakleiv per fotografare le luci del tramonto e sfruttare questo momento per fare un pò di ricerca; in questo modo saremo pronti se si presentasse l'occasione di vedere l'aurora boreale.",
+          "locale": "it"
+        },
+        {
+          "id": "110",
+          "title": "La stupenda spiaggia di Haukland vista dall’alto",
+          "description": "Esplorazione della zona di Haukland e Uttakleiv\nTrekking facile/medio verso la cima Mannen per ammirare la spiaggia dall’alto",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Spiaggia_di_Uttakleiv_viaggio_fotografico_lofoten_7cc3377dec.jpg",
+          "alternativeText": "Uttakleiv beach al tramonto durante il viaggio fotografico alle lofoten"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Uttakleiv_Beach_sotto_l_aurora_boreale_3090099f60.jpg",
+          "alternativeText": "viaggio fotografico Lofoten, foto di Samuele Bucci"
+        }
+      ]
     },
     {
-      "id": "109",
+      "id": "54",
+      "title": "Spiaggia di Haukland",
+      "description": "Haukland beach è una delle spiagge più belle delle isole Lofoten, qui potrai trovare diversi spunti fotografici.",
+      "slug": "spiaggia-di-haukland",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "40",
+          "title": "Alba a Vareid e tramonto a Haukland",
+          "description": "Ci muoveremo alle prime luci del mattino per andare a fotografare l'alba a Vareid, famosissima location dalla caratteristica scogliera frastagliata con le montagne di Flakstad sullo sfondo. Nel pomeriggio ci muoveremo verso la spiaggia di Haukland per fotografare il tramonto.",
+          "locale": "it"
+        },
+        {
+          "id": "110",
+          "title": "La stupenda spiaggia di Haukland vista dall’alto",
+          "description": "Esplorazione della zona di Haukland e Uttakleiv\nTrekking facile/medio verso la cima Mannen per ammirare la spiaggia dall’alto",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Haukland_con_aurora_boreale_b5ffe6af81.jpg",
+          "alternativeText": "Spiaggia di Haukland sotto l'aurora boreale"
+        }
+      ]
+    },
+    {
+      "id": "55",
+      "title": "Spiaggia di kvalvika",
+      "description": "Un'altra incredibile spiaggia, Kvalvika beach, che si raggiunge dopo un piccolo trekking, paesaggio e spettacolo assicurati.",
+      "slug": "spiaggia-di-kvalvika",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "105",
+          "title": "Primo trekking e sessione fotografica a Kvalvika",
+          "description": "<p>Dopo la colazione faremo il check out per sostarci verso la struttura ricettiva di Lekenes. Ci organizzeremo per fare un pò di spesa e lasciare i bagagli per poi iniziare un trekking leggero/medio (3.6 km andata e ritorno per 280mt di dislivello) e tramonto sulla prima location fotografica.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_lofoten_kvalvika_spiaggia_29cf11ad18.jpg",
+          "alternativeText": "Viaggio fotografico lofoten kvalvika beach"
+        }
+      ]
+    },
+    {
+      "id": "107",
       "title": "Volandstind",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Volandstind è una vetta delle isole Lofoten da cui puoi scorgere un bellissimo panorama sui fiordi.",
+      "slug": "volandstind",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "106",
+          "title": "Il tramonto dalla vetta di Volandstind",
+          "description": "In questa giornata sfrutteremo alcuni momenti per fare scouting nella zona di Bunes<br>\nPer la sessione del tramonto ci sposteremo verso la cima Volandstind dove affronteremo un trekking leggero/medio verso (4.6 km  andata e ritorno per 413mt di dislivello) ",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Volandstind_al_tramonto_4765c5385c.jpg",
+          "alternativeText": "Volandstind ripresa al tramonto viaggio fotografico lofoten"
+        }
+      ]
+    },
+    {
+      "id": "108",
+      "title": "Bunes Beach",
+      "description": "Una delle splendide spiagge delle isole Lofoten da cui si possono scegliere diversi punti di ripresa, in particolar modo dall'alto facendo piccoli trekking.",
+      "slug": "bunes-beach",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "106",
+          "title": "Il tramonto dalla vetta di Volandstind",
+          "description": "In questa giornata sfrutteremo alcuni momenti per fare scouting nella zona di Bunes<br>\nPer la sessione del tramonto ci sposteremo verso la cima Volandstind dove affronteremo un trekking leggero/medio verso (4.6 km  andata e ritorno per 413mt di dislivello) ",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/la_spiaggia_di_Bunes_e794b42915.jpg",
+          "alternativeText": "Vista dall'alto della spiaggia di Bunes viaggio fotografico Lofoten"
+        }
+      ]
     },
     {
       "id": "110",
-      "title": "Bunes",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Sakrisoy",
+      "description": "Sakrisoy è una piccola cittadina di pescatori delle Lofoten, con le tipiche casette rosse e gialle denominate rorbuer.",
+      "slug": "sakrisoy",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "108",
+          "title": "Scopriamo insieme le tradizioni e la cultura dei pescatori delle Lofoten",
+          "description": "Riposo durante la mattinata e spostamento verso Hamnoy\nEsplorazione delle zone di Reine, Sakrisoy ed Hamnoya, con il classico ponte sulle rorbue dei pescatori\nTramonto in una location inedita",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tipica_rourbuer_di_Sakrisoy_1315832587.jpeg",
+          "alternativeText": "Sakrisoy meta del viaggio fotografico lofoten"
+        }
+      ]
     },
     {
       "id": "111",
-      "title": "Helvetestinden",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "112",
-      "title": "Sakrisoy",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "406",
       "title": "Reinebringen",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Reinebringen è la cima più famosa delle isole Lofoten; per raggiungere la vetta si affronta un trekking medio alto, ma una volta sopra si godrà della vista più bella sulle cittadine di Reine e Hamnoy.",
+      "slug": "reinebringen",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "109",
+          "title": "Saliremo sulla montagna più famosa della Norvegia",
+          "description": "Partenza presto dalla struttura in direzione di Reine, da qui partiremo per raggiungere all'alba la cima Reinebringen; l'escursione prevederà un trekking medio/faticoso.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-8-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Reinebringen_di_Samuele_Bucci_30e8aed527.jpg",
+          "alternativeText": "Coach dei viaggi fotografici weshoot"
+        },
+        {
+          "id": "locpic-8-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Reinebringen_b40490fd7f.jpeg",
+          "alternativeText": "viaggio fotografico lofoten estive"
+        }
+      ]
     },
     {
-      "id": "407",
+      "id": "263",
       "title": "Skedra",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Skreda è una delle mete più affascinanti per il trekking fotografico alle Isole Lofoten, un angolo selvaggio e incontaminato che regala viste mozzafiato sui fiordi norvegesi.",
+      "slug": "skedra",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-9-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_lofoten_estive_a4f1e8558d.jpeg",
+          "alternativeText": "tramonto sui fiordi norvegesi viaggio fotografico lofoten"
+        }
+      ]
     },
     {
-      "id": "408",
+      "id": "264",
       "title": "Vaeroy",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Værøy è una delle isole più selvagge e affascinanti dell’arcipelago delle Lofoten, un vero paradiso per gli amanti del trekking fotografico. Situata a sud della più famosa Moskenesøya, questa piccola isola è un mix perfetto tra natura incontaminata, panorami mozzafiato e un’atmosfera remota che la rende unica.",
+      "slug": "vaeroy",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-10-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Vaeroy_a67786dd36.jpeg",
+          "alternativeText": "viaggio fotografico Lofoten estive"
+        }
+      ]
     },
     {
-      "id": "409",
+      "id": "265",
       "title": "Munkebu",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Munkebu è una delle destinazioni più affascinanti per un trekking fotografico alle Isole Lofoten. Situata sull’isola di Moskenesøya, questa escursione porta nel cuore delle montagne, tra laghi alpini, valli incontaminate e viste mozzafiato sulle vette frastagliate che si specchiano nelle acque cristalline.",
+      "slug": "munkebu",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-11-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Munkebu_22a833c053.jpeg",
+          "alternativeText": "viaggio fotografico Lofoten estive"
+        }
+      ]
+    }
+  ],
+  "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Villa Privata",
+      "description": "Soggiorno in una villa privata.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alloggio_in_villa_b5499fc6eb.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "119",
+      "number": 1,
+      "title": "Benvenuti alle Lofoten",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "104",
+          "title": "Ci conosceremo meglio e faremo un briefing delle attività",
+          "description": "Incontro con i partecipanti all'aeroporto di Evenes, Harstad/Narvik Airport, ritireremo le auto a noleggio per sistemarci in una struttura convenzionata a pochi chilometri di distanza, per trascorrere la prima notte e garantire a tutti un arrivo comodo.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "120",
+      "number": 2,
+      "title": "In viaggio verso Lekenes ",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "105",
+          "title": "Primo trekking e sessione fotografica a Kvalvika",
+          "description": "<p>Dopo la colazione faremo il check out per sostarci verso la struttura ricettiva di Lekenes. Ci organizzeremo per fare un pò di spesa e lasciare i bagagli per poi iniziare un trekking leggero/medio (3.6 km andata e ritorno per 280mt di dislivello) e tramonto sulla prima location fotografica.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "121",
+      "number": 3,
+      "title": "Immersi nei sentieri delle Lofoten",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "106",
+          "title": "Il tramonto dalla vetta di Volandstind",
+          "description": "In questa giornata sfrutteremo alcuni momenti per fare scouting nella zona di Bunes<br>\nPer la sessione del tramonto ci sposteremo verso la cima Volandstind dove affronteremo un trekking leggero/medio verso (4.6 km  andata e ritorno per 413mt di dislivello) ",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "122",
+      "number": 4,
+      "title": "Alla scoperta dei fiordi occidentali",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "107",
+          "title": "Alba sulla bellissima vetta di Helvetestinden",
+          "description": "Spostamento durante la notte verso la spiaggi di Bunes, dove partiremo per un trekking notturno verso Helvetestinden; il trekking sarà di livello medio/faticoso (8,4km andata e ritorno per 602mt di dislivello).",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "123",
+      "number": 5,
+      "title": "Una giornata di relax tra Reine e Hamnoy",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "108",
+          "title": "Scopriamo insieme le tradizioni e la cultura dei pescatori delle Lofoten",
+          "description": "Riposo durante la mattinata e spostamento verso Hamnoy\nEsplorazione delle zone di Reine, Sakrisoy ed Hamnoya, con il classico ponte sulle rorbue dei pescatori\nTramonto in una location inedita",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "124",
+      "number": 6,
+      "title": "L’alba sui villaggi dei pescatori ",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "109",
+          "title": "Saliremo sulla montagna più famosa della Norvegia",
+          "description": "Partenza presto dalla struttura in direzione di Reine, da qui partiremo per raggiungere all'alba la cima Reinebringen; l'escursione prevederà un trekking medio/faticoso.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "125",
+      "number": 7,
+      "title": "L’ultimo tramonto sui fiordi",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "110",
+          "title": "La stupenda spiaggia di Haukland vista dall’alto",
+          "description": "Esplorazione della zona di Haukland e Uttakleiv\nTrekking facile/medio verso la cima Mannen per ammirare la spiaggia dall’alto",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "126",
+      "number": 8,
+      "title": "Arrivederci Lofoten",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "111",
+          "title": "Ultime ore sulle isole più belle del Nord",
+          "description": "Check out struttura ricettiva e viaggio verso l'aeroporto di Narvik.\nDrop off dell’auto e dei bagagli e rimpatrio in Italia.",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Lunghe Esposizioni",
+      "description": "Ti divertirai a giocare con le lunghe esposizioni per creare effetti unici con acqua, nuvole e scie luminose",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "28",
+      "start": "2022-09-03",
+      "end": "2022-09-10",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 1999,
+      "deposit": 100,
+      "balance": 1899,
+      "minPax": 2,
+      "currency": "EUR",
+      "priceCompanion": 1899,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "133",
+      "start": "2024-08-25",
+      "end": "2024-09-01",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2780,
+      "deposit": 835,
+      "balance": 1945,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2780,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "208",
+      "start": "2025-08-16",
+      "end": "2025-08-23",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 2499,
+      "deposit": 749,
+      "balance": 1750,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2499,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "tramonto sui fiordi norvegesi viaggio fotografico lofoten",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_lofoten_estive_a4f1e8558d.jpeg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Hamnoy",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Hamnoy_1787be4684.jpg",
+      "alt": "alba hamnoy viaggio fotografico Lofoten"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Spiaggia di kvalvika",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_lofoten_kvalvika_spiaggia_29cf11ad18.jpg",
+      "alt": "Viaggio fotografico lofoten kvalvika beach"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Spiaggia di Haukland",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Haukland_con_aurora_boreale_b5ffe6af81.jpg",
+      "alt": "Spiaggia di Haukland sotto l'aurora boreale"
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "Spiaggia di Uttakleiv",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Spiaggia_di_Uttakleiv_viaggio_fotografico_lofoten_7cc3377dec.jpg",
+      "alt": "Uttakleiv beach al tramonto durante il viaggio fotografico alle lofoten"
+    },
+    {
+      "id": "4",
+      "type": "tour",
+      "title": "Volandstind",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Volandstind_al_tramonto_4765c5385c.jpg",
+      "alt": "Volandstind ripresa al tramonto viaggio fotografico lofoten"
+    },
+    {
+      "id": "5",
+      "type": "tour",
+      "title": "Bunes",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/la_spiaggia_di_Bunes_e794b42915.jpg",
+      "alt": "Vista dall'alto della spiaggia di Bunes viaggio fotografico Lofoten"
+    },
+    {
+      "id": "6",
+      "type": "tour",
+      "title": "Helvetestinden",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Helvetestinden_ecdbae6f6f.jpg",
+      "alt": "panorama da Helvetestinden viaggio fotografico lofoten"
+    },
+    {
+      "id": "7",
+      "type": "tour",
+      "title": "Sakrisoy",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tipica_rourbuer_di_Sakrisoy_1315832587.jpeg",
+      "alt": "Sakrisoy meta del viaggio fotografico lofoten"
+    },
+    {
+      "id": "8",
+      "type": "tour",
+      "title": "Reinebringen",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Reinebringen_b40490fd7f.jpeg",
+      "alt": "viaggio fotografico lofoten estive"
+    },
+    {
+      "id": "9",
+      "type": "tour",
+      "title": "Skedra",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_lofoten_estive_a4f1e8558d.jpeg",
+      "alt": "tramonto sui fiordi norvegesi viaggio fotografico lofoten"
+    },
+    {
+      "id": "10",
+      "type": "tour",
+      "title": "Vaeroy",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Vaeroy_a67786dd36.jpeg",
+      "alt": "viaggio fotografico Lofoten estive"
+    },
+    {
+      "id": "11",
+      "type": "tour",
+      "title": "Munkebu",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Munkebu_22a833c053.jpeg",
+      "alt": "viaggio fotografico Lofoten estive"
+    },
+    {
+      "id": "locpic-0-1",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_divertiti_sotto_l_aurora_boreale_alle_Lofoten_33a2b8dbd1.JPG",
+      "alt": "WeShooters sotto l'aurora boreale viaggio fotografico alle Lofoten"
+    },
+    {
+      "id": "locpic-1-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Spiaggia_di_Skagsanden_al_tramonto_1173021336.jpg",
+      "alt": "tramonto sulla Flakstad beach nel viaggio fotografico alle lofoten"
+    },
+    {
+      "id": "locpic-1-1",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_lofoten_spiaggia_72992c1fad.JPG",
+      "alt": "tramonto montagne scogliera viaggio fotografico lofoten"
+    },
+    {
+      "id": "locpic-2-1",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Uttakleiv_Beach_sotto_l_aurora_boreale_3090099f60.jpg",
+      "alt": "viaggio fotografico Lofoten, foto di Samuele Bucci"
+    },
+    {
+      "id": "locpic-8-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Reinebringen_di_Samuele_Bucci_30e8aed527.jpg",
+      "alt": "Coach dei viaggi fotografici weshoot"
     }
   ]
 }

@@ -1,51 +1,471 @@
 {
+  "id": "40",
+  "tour_id": "dolomiti-autunnali-foliage-luce-dorata-e-paesaggi-maestosi",
   "slug": "dolomiti-autunnali",
   "title": "Dolomiti autunnali: foliage, luce dorata e paesaggi maestosi",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p>Le Dolomiti in questa stagione sono davvero un incanto: larici dorati ondeggiano nel vento, le prime spolverate di neve coprono le cime, mentre nebbie mattutine si alzano lente dai prati. Questo è il periodo dell'anno in cui la fotografia di paesaggio si trasforma in pura poesia. Preparati a vivere un'esperienza avvolgente ed emozionante. Trascorrerai 4 giorni insieme ad altri appassionati di fotografia come te, alla ricerca dello scatto perfetto. Tra splendide vette dolomitiche, incredibili laghi dai colori fiabeschi e la stagione autunnale che con i suoi colori caldi, riempie il paesaggio e il tuo occhio di infinite idee creative.</p><h2>A chi è rivolto</h2><p>A chi ama la montagna e la fotografia di paesaggio, a prescindere dal livello. Seguiamo passo passo i meno esperti e sfidiamo gli avanzati a spingere la propria ricerca visiva.</p><h2>Che tipo di esperienza è</h2><p>Un workshop fotografico in alta montagna con ritmi fotografici (albe/tramonti) e pause diurne per il recupero. Servono elasticità fisica e mentale più che performance atletiche: i percorsi sono accessibili, lo sforzo principale è creativo. Il gruppo sarà composto massimo da 7 persone, per garantire a tutti i partecipanti la migliore esperienza possibile. Infatti il coach oltre a fare delle lezioni di gruppo, quando sarete in location vi seguirà uno ad uno per portare a casa gli scatti migliori.</p><h2>Cosa impari in questo viaggio</h2><ul><li>Composizione consapevole in ambienti iconici: layering, gestione del soggetto, equilibrio tra elementi naturali e architetture alpine</li><li>Lettura della luce autunnale: foschie, controluce, riflessi, colore dei larici</li><li>Tecniche di ripresa: esposizione, bracketing, focus stacking, panoramiche, focal blending, uso del polarizzatore su acqua e fogliame</li><li>Pianificazione: scegliere spot, orari, meteo e alternative in sicurezza</li><li>Workflow: dal RAW al file finito con postproduzione base e avanzata</li></ul><h2>Cosa ricevi alla fine</h2><ul style=\"list-style-type:disc;\"><li>Accesso a un gruppo WhatsApp riservato</li><li>2 video completi di postproduzione (da principiante ad avanzato)</li><li>Uno sconto sul prossimo viaggio di 200€*</li><li>Un estratto del nostro PDF sulla Pianificazione della fotografia di paesaggio</li></ul>",
+  "excerpt": "Un Workshop fotografico tra laghi, boschi e le vette dolomitiche.",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (se lo hai portalo, se non lo hai non serve comprarlo)</li><li>Filtri fotografici come polarizzatore e ND (se li hai portali, se non li hai parlerai con il coach per capire se e quali acquistare)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario sufficientemente pesante da montagna impermeabile e traspirante</li><li>Maglia Termica</li><li>Cappello di lana</li><li>Guanti</li><li>Scarponi isolanti</li><li>Verrà creato un gruppo whatsapp la settimana prima dei viaggio per coordinare acquisti o noleggi extra</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "veneto"
+    "slug": "veneto",
+    "locale": "it",
+    "name": "Veneto"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico sulle Dolomiti in autunno",
+    "metaDescription": "Più che un workshop è un'esperienza fotografica immersi tra i bellissimi paesaggi autunnali delle Dolomiti, tra laghi, foreste e cime maestose.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2025-10-16",
-      "end": "2025-10-19"
+      "id": "279",
+      "title": "Lago di Carezza",
+      "description": "Il lago di Carezza è un piccolo lago alpino in Val d'Ega, famoso per la sua incredibile colorazione smerarldo. Si trova a circa 1500mt di altezza e offre scenari paesaggistici incredibile, con le vette del Latemar che ci si specchiano dentro.",
+      "slug": "lago-di-carezza",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "200",
+          "title": "Incontro tra i partecipanti, sistemazione e sessione di scatto",
+          "description": "<p>Ritrovo all’aeroporto di Verona/stazione ferroviaria di Trento, da qui ci dirigeremo nei pressi di Bolzano dove sarà il nostro alloggio, una volta sistemati e presentati , ci dirigeremo verso il lago di Carezza , un piccolo lago alpino sotto le pendici del Latemar.</p><p>Qui scatteremo tra la golden hour ed il tramonto in diverse condizioni di luce e lungo i diversi spot (tutti nelle immediate vicinanze, successivamente faremo rientro su Bolzano dove ceneremo e rientro in struttura.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lago_di_carezza_dall_alto_33711821df.jpg",
+          "alternativeText": "viaggio fotografico dolomiti autunno foliage"
+        }
+      ]
+    },
+    {
+      "id": "280",
+      "title": "Lago di Braies",
+      "description": "Il lago di Braies è un lago alpino ai piedi della croda del becco. Il giro ad anello è un ottimo spunto per immortalare paesaggi incredibili incastonati nei riflessi di queste acque turchesi.",
+      "slug": "lago-di-braies",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "201",
+          "title": "Visita al lago di Braies e di Anterselva",
+          "description": "<p>Ore 4.00 sveglia in direzione dell’iconico lago di Braies per scattare l'alba prevista per le 7:30 circa; una volta scattato le prime luci dell’alba , passeremo qui la mattinata e faremo il classico giro ad anello della durata di circa 1:30h, una camminata semplice con massimo 200 metri di dislivello positivo, lungo il percorso cercheremo altre composizioni diverse dalle solite.<br>Ore 12:30/13 pranzo nei dintorni (in posti come Speckstube Eggerhof o Trattoria Mosslhof Alto Adige)<br>Ore 14:30 dopo aver pranzato ci dirigeremo vero il vicino lago di Anterselva un piccolo lago alpino incastonato fra imponenti montagne , dove il foliage dà il meglio di se. Qui seguiremo il percorso ad anello sempre di circa 1:30/40 , percorso quasi totalmente in pianura che costeggia le acque cristalline e blu del lago fino a raggiungere gli spot per il tramonto.<br>Finita con la sessione del tramonto torneremo in zona Bolzano dove ceneremo (se si fa tardi , si cena al Viktor Imbiss di Caldaro a pochi km da Bolzano).</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alba_lago_di_braies_a80843f718.jpg",
+          "alternativeText": "viaggio fotografico in dolomiti foliage in autunno"
+        }
+      ]
+    },
+    {
+      "id": "281",
+      "title": "Lago di Anterselva",
+      "description": "Il lago di Anterselva è un lago alpino che si trova a circa 1650mt di altezza nel Parco Naturale Vedrette di Ries-Aurina, vicino al Passo Stalle. Il giro ad anello che si può fare lungo il lago è ottimo per diversi spunti fotografici.",
+      "slug": "lago-di-anterselva",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "201",
+          "title": "Visita al lago di Braies e di Anterselva",
+          "description": "<p>Ore 4.00 sveglia in direzione dell’iconico lago di Braies per scattare l'alba prevista per le 7:30 circa; una volta scattato le prime luci dell’alba , passeremo qui la mattinata e faremo il classico giro ad anello della durata di circa 1:30h, una camminata semplice con massimo 200 metri di dislivello positivo, lungo il percorso cercheremo altre composizioni diverse dalle solite.<br>Ore 12:30/13 pranzo nei dintorni (in posti come Speckstube Eggerhof o Trattoria Mosslhof Alto Adige)<br>Ore 14:30 dopo aver pranzato ci dirigeremo vero il vicino lago di Anterselva un piccolo lago alpino incastonato fra imponenti montagne , dove il foliage dà il meglio di se. Qui seguiremo il percorso ad anello sempre di circa 1:30/40 , percorso quasi totalmente in pianura che costeggia le acque cristalline e blu del lago fino a raggiungere gli spot per il tramonto.<br>Finita con la sessione del tramonto torneremo in zona Bolzano dove ceneremo (se si fa tardi , si cena al Viktor Imbiss di Caldaro a pochi km da Bolzano).</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lago_Anterselva_5dd2f82a25.jpg",
+          "alternativeText": "viaggio fotografico dolomiti foliage autunno"
+        }
+      ]
+    },
+    {
+      "id": "282",
+      "title": "Val di Funes",
+      "description": "La val di Funes è una della valli più conosciute dell'altro adige. Iconica con le sue distese di prati verdi e le odle a far da contorno a questi paesaggi fiabeschi.",
+      "slug": "val-di-funes",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "202",
+          "title": "Esploriamo la val di Funes",
+          "description": "<p>Ore 8 colazione presso la struttura<br>Ore 10.30/11 partenza in direzione Val Di Funes dove ammireremo le varie chiese al cospetto delle Odle. Inizieremo con la chiesa di San Giovanni in Ranui.<br>Ore 13 pranzeremo al sacco li in zona (o poco più tardi dalla panoramica)<br>Ore 14 ci dirigeremo alla panoramica di Santa Magdalena , qui affronteremo un percorso molto semplice di circa 50 min /1 ora di camminata , con un minimo di dislivello. In attesa del tramonto&nbsp; ci godremo un po' di relax in questa favolosa vallata ,accompagnati dai rintocchi della chiesa che si propagano in tutta la valle, discuteremo inoltre delle composizioni e di quanto fatto anche nei giorni precedenti<br>Dopo la sessione del tramonto rientremo nei pressi della struttura e usciremo fuori a cena a Bolzano o dintorni</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/colori_autunnali_in_val_di_funes_889f8b60e9.jpg",
+          "alternativeText": "viaggio fotografico in dolomiti autunno foliage"
+        }
+      ]
     }
   ],
   "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Colazione",
+      "description": "Colazione normale o internazionale a seconda della disponibilità della struttura.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/colazione_15d08d6cb1.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Pranzo e Cena",
+      "description": "I pranzi e le cene possono essere fatte direttamente in struttura o nei ristoranti convenzionati.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/pranzi_e_cene_9a6dec606d.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "211",
+      "number": 1,
+      "title": "Benvenuti in Dolomiti",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "200",
+          "title": "Incontro tra i partecipanti, sistemazione e sessione di scatto",
+          "description": "<p>Ritrovo all’aeroporto di Verona/stazione ferroviaria di Trento, da qui ci dirigeremo nei pressi di Bolzano dove sarà il nostro alloggio, una volta sistemati e presentati , ci dirigeremo verso il lago di Carezza , un piccolo lago alpino sotto le pendici del Latemar.</p><p>Qui scatteremo tra la golden hour ed il tramonto in diverse condizioni di luce e lungo i diversi spot (tutti nelle immediate vicinanze, successivamente faremo rientro su Bolzano dove ceneremo e rientro in struttura.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "212",
+      "number": 2,
+      "title": "Lago di Braies e Anterselva",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "201",
+          "title": "Visita al lago di Braies e di Anterselva",
+          "description": "<p>Ore 4.00 sveglia in direzione dell’iconico lago di Braies per scattare l'alba prevista per le 7:30 circa; una volta scattato le prime luci dell’alba , passeremo qui la mattinata e faremo il classico giro ad anello della durata di circa 1:30h, una camminata semplice con massimo 200 metri di dislivello positivo, lungo il percorso cercheremo altre composizioni diverse dalle solite.<br>Ore 12:30/13 pranzo nei dintorni (in posti come Speckstube Eggerhof o Trattoria Mosslhof Alto Adige)<br>Ore 14:30 dopo aver pranzato ci dirigeremo vero il vicino lago di Anterselva un piccolo lago alpino incastonato fra imponenti montagne , dove il foliage dà il meglio di se. Qui seguiremo il percorso ad anello sempre di circa 1:30/40 , percorso quasi totalmente in pianura che costeggia le acque cristalline e blu del lago fino a raggiungere gli spot per il tramonto.<br>Finita con la sessione del tramonto torneremo in zona Bolzano dove ceneremo (se si fa tardi , si cena al Viktor Imbiss di Caldaro a pochi km da Bolzano).</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "213",
+      "number": 3,
+      "title": "Direzione Val di Funes",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "202",
+          "title": "Esploriamo la val di Funes",
+          "description": "<p>Ore 8 colazione presso la struttura<br>Ore 10.30/11 partenza in direzione Val Di Funes dove ammireremo le varie chiese al cospetto delle Odle. Inizieremo con la chiesa di San Giovanni in Ranui.<br>Ore 13 pranzeremo al sacco li in zona (o poco più tardi dalla panoramica)<br>Ore 14 ci dirigeremo alla panoramica di Santa Magdalena , qui affronteremo un percorso molto semplice di circa 50 min /1 ora di camminata , con un minimo di dislivello. In attesa del tramonto&nbsp; ci godremo un po' di relax in questa favolosa vallata ,accompagnati dai rintocchi della chiesa che si propagano in tutta la valle, discuteremo inoltre delle composizioni e di quanto fatto anche nei giorni precedenti<br>Dopo la sessione del tramonto rientremo nei pressi della struttura e usciremo fuori a cena a Bolzano o dintorni</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "214",
+      "number": 4,
+      "title": "Arrivederci Dolomiti",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "203",
+          "title": "Colazione, analisi degli scatti e saluti",
+          "description": "<p>Ore 8 colazione presso la struttura e briefing di quanto imparato in questi giorni. A seguire una piccola lezione di post produzione sugli scatti fatti durante il tour fotografico, con domande e risposte. Infine meritato relax e saluti.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [
+    {
+      "title": "Requisiti Fisici",
+      "description": "<p>Il viaggio fotografico o workshop è adatto a tutti, non serve avere una particolare preparazione fisica. L'esperienza è stata pensata per essere accessibile e piacevole per chiunque.</p>",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/requisiti_viaggio_fotografico_c1570cd0f3.png"
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "id": "239",
+      "start": "2025-10-16",
+      "end": "2025-10-19",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 899,
+      "deposit": 270,
+      "balance": 629,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 899,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/anto_tru_alo90/",
+          "firstName": "Antonello",
+          "lastName": "Alò",
+          "username": "Antonelloalo",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/coach_Antonello_Alo_01741f2027.jpg"
+          },
+          "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "viaggio fotografico dolomiti foliage autunno",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/funes_in_autunno_fe2d3f04b5.jpg"
+  },
   "pictures": [
     {
-      "id": "434",
+      "id": "0",
+      "type": "tour",
       "title": "Lago di Carezza",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lago_di_carezza_dall_alto_33711821df.jpg",
+      "alt": "viaggio fotografico dolomiti autunno foliage"
     },
     {
-      "id": "435",
+      "id": "1",
+      "type": "tour",
       "title": "Lago di Braies",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alba_lago_di_braies_a80843f718.jpg",
+      "alt": "viaggio fotografico in dolomiti foliage in autunno"
     },
     {
-      "id": "436",
+      "id": "2",
+      "type": "tour",
       "title": "Lago Anterselva",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lago_Anterselva_5dd2f82a25.jpg",
+      "alt": "viaggio fotografico dolomiti foliage autunno"
     },
     {
-      "id": "437",
+      "id": "3",
+      "type": "tour",
       "title": "Val di Funes",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/colori_autunnali_in_val_di_funes_889f8b60e9.jpg",
+      "alt": "viaggio fotografico in dolomiti autunno foliage"
     }
   ]
 }

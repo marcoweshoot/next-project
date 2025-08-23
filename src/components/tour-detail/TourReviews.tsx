@@ -16,7 +16,7 @@ import TourReviewsModal from './TourReviewsModal';
 
 interface TourReviewsProps {
   reviews: Array<{
-    id: string;
+    id?: string | number;
     title: string;
     description: string;
     rating: number;
@@ -31,6 +31,17 @@ interface TourReviewsProps {
   }>;
 }
 
+const makeReviewKey = (
+  review: TourReviewsProps['reviews'][number],
+  index: number
+): string => {
+  const idPart =
+    review.id !== undefined && review.id !== null ? `id:${String(review.id)}` : undefined;
+  const tsPart = review.created_at ? `t:${new Date(review.created_at).getTime()}` : undefined;
+  // Preferisci id -> timestamp -> fallback con indice (stabile se l'array non cambia ordine)
+  return `rev-${idPart ?? tsPart ?? `idx:${index}`}`;
+};
+
 const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = ({ review }) => {
   const [open, setOpen] = useState(false);
 
@@ -44,20 +55,17 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
   };
 
   const renderStars = (rating: number) => {
+    const safeRating = Number.isFinite(rating) ? Math.max(0, Math.min(5, Math.floor(rating))) : 5;
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
-        className={`h-4 w-4 ${
-          i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
-        }`}
+        className={`h-4 w-4 ${i < safeRating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
       />
     ));
   };
 
-  const truncated =
-    review.description.length > 300
-      ? review.description.slice(0, 300) + '...'
-      : review.description;
+  const text = review.description ?? '';
+  const truncated = text.length > 300 ? text.slice(0, 300) + '...' : text;
 
   return (
     <>
@@ -93,7 +101,7 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
             {truncated}
           </p>
 
-          {review.description.length > 300 && (
+          {text.length > 300 && (
             <button
               onClick={() => setOpen(true)}
               className="text-sm text-blue-600 hover:underline"
@@ -110,20 +118,20 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
 
       {/* Popup dialog */}
       <Dialog open={open} onOpenChange={setOpen}>
-  <DialogContent className="max-w-xl">
-    <DialogTitle className="text-lg font-semibold text-gray-900 mb-2">
-      Recensione di {review.user?.firstName || 'Utente'}
-    </DialogTitle>
+        <DialogContent className="max-w-xl">
+          <DialogTitle className="text-lg font-semibold text-gray-900 mb-2">
+            Recensione di {review.user?.firstName || 'Utente'}
+          </DialogTitle>
 
-    <DialogDescription className="text-sm text-gray-500 mb-4">
-      Valutazione: {review.rating}/5 · {formatDate(review.created_at)}
-    </DialogDescription>
+          <DialogDescription className="text-sm text-gray-500 mb-4">
+            Valutazione: {review.rating}/5 · {formatDate(review.created_at)}
+          </DialogDescription>
 
-    <p className="text-sm text-gray-700 whitespace-pre-wrap">
-      {review.description}
-    </p>
-  </DialogContent>
-</Dialog>
+          <p className="text-sm text-gray-700 whitespace-pre-wrap">
+            {text}
+          </p>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
@@ -134,7 +142,8 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
   if (!reviews?.length) return null;
 
   const averageRating =
-    reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length;
+    reviews.reduce((sum, review) => sum + (Number.isFinite(review.rating) ? review.rating : 0), 0) /
+    reviews.length;
 
   return (
     <section className="py-16 bg-gray-50">
@@ -152,7 +161,7 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
             <div className="flex space-x-1">
               {Array.from({ length: 5 }, (_, index) => (
                 <Star
-                  key={index}
+                  key={`avg-star-${index}`}
                   className={`w-5 h-5 ${
                     index + 1 <= Math.floor(averageRating)
                       ? 'fill-yellow-400 text-yellow-400'
@@ -186,9 +195,9 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {reviews.map((review) => (
+              {reviews.map((review, idx) => (
                 <CarouselItem
-                  key={review.id}
+                  key={makeReviewKey(review, idx)}
                   className="pl-2 md:pl-4 basis-[90%] sm:basis-1/2 lg:basis-1/3"
                 >
                   <SingleReviewCard review={review} />
@@ -226,7 +235,10 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
         <TourReviewsModal
           open={isModalOpen}
           onOpenChange={setIsModalOpen}
-          reviews={reviews}
+          reviews={reviews.map(review => ({
+            ...review,
+            id: String(review.id || `review-${review.created_at}`)
+          }))}
           title="Recensioni del viaggio"
         />
       </div>

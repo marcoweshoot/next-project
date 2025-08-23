@@ -1,90 +1,472 @@
 {
+  "id": "10",
+  "tour_id": "la-magia-di-rocca-calascio",
   "slug": "rocca-calascio",
   "title": "Rocca Calascio: Una notte incredibile in un luogo incantato",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p>La vita è fatta di momenti bellissimi ed occasioni speciali, molte di queste irripetibili ed uniche. Spesso ti rendi conto che la vita scorre veloce e frenetica, in alcune occasioni sembra che esperienze piacevoli spariscano inghiottite dalle ansietà che fanno parte di questo mondo.</p><p>Purtroppo il tempo non può essere fermato, eppure esiste un modo per immortalare i momenti che segneranno la tua esperienza di vita.</p><p>Puoi farlo in modo semplice ma efficace, attraverso un viaggio fotografico pianificato ed organizzato da professionisti del settore, così da ottenere scatti emozionanti che ti faranno venire i brividi ogni volta che li guarderai.</p><p>Tuttavia, per ottenere un viaggio fotografico eccezionale, hai bisogno di una località mozzafiato che con la sua bellezza stupisca te ed i tuoi cari. Che dire di <strong>Rocca Calascio</strong>? Rocca Calascio è una ridente località situata nell'Abruzzo, all'interno di un parco nazionale storico e tradizionalistico. Questa location ha stupito milioni di persone provenienti da tutto il mondo nel corso della sua storia, tanto da essere scelta come set principale di diversi film internazionali come ad esempio, Il Nome della Rosa e Lady Hawk. La bellezza di Rocca Calascio sta nelle sue montagne rocciose, nella sua natura scarna e potente che la trasforma nel set fotografico adatto a qualsiasi situazione.</p><p>Trascorri un Tour fotografico a Rocca Calascio e potrai immortalare condizioni uniche ed irripetibili, così da rendere i tuoi ricordi ancora più belli e spettacolari.</p><p>Rocca Calascio è situata in un particolare punto strategico che durante la tarda notte, ti darà la possibilità di effettuare scatti mentre alle tue spalle avrai la famosa Via Lattea scintillante e splendente che costituirà una cornice fenomenale.</p><p>Il viaggio fotografico sarà eseguito con la giusta calma e il giusto relax, per questa ragione la sessione di scatti non sarà nè stressante, nè inopportuna, al contrario ti sentirai costantemente a tuo agio mentre gli esperti lavoreranno duramente per farti realizzare i tuoi scatti da sogno.</p>",
+  "excerpt": "Scopri la magia di una notte stellata ai piedi di un antica Rocca, un viaggio fotografico incredibile, dove imparerai i migliori trucchi e segreti come i veri professionisti",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 16mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Astroinseguitore (opzionale)</li></ul><p>Abbigliamento:</p><ul><li>Vestiario da montagna impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "abruzzo"
+    "slug": "abruzzo",
+    "locale": "it",
+    "name": "Abruzzo"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Rocca Calascio 2025 | WeShoot",
+    "metaDescription": "Trascorri una giornata dal tramonto all'alba in una location esclusiva come Rocca Calascio, un viaggio fotografico organizzato con fotografi professionisti.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-05-07",
-      "end": "2022-05-07"
-    },
-    {
-      "start": "2022-07-30",
-      "end": "2022-07-30"
-    },
-    {
-      "start": "2022-08-27",
-      "end": "2022-08-27"
+      "id": "21",
+      "title": "Rocca Calascio",
+      "description": "Rocca Calascio è un antico castello posizionato a circa 1500mt di altezza, in Abruzzo. La sua posizione è ottima per godere di un paesaggio incredibile",
+      "slug": "rocca-calascio",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "16",
+          "title": "Una notte magica sotto le stelle",
+          "description": "<ul><li>Ore 16:30: incontro e registrazione partecipanti.&nbsp;</li><li>Ore 17.00: ci incammineremo verso la Rocca, il percorso è molto semplice con una leggera pendenza. Durata totale: circa 20 minuti.&nbsp;</li><li>Ore 18.00: inizio della sessione fotografica dove ti spiegheremo la lettura della luce e ti mostreremo come ottenere le migliori composizioni;&nbsp;</li><li>Ore 20.00: cena al sacco (non inclusa nella quota).&nbsp;</li><li>Ore 21.00: inizio della sessione di fotografia notturna: ti spiegheremo la volta celeste, faremo un po' di teoria e passeremo al montaggio ed alla spiegazione di cos'è e come si usa un astroinseguitore, avrai la possibilità di catturare la via lattea con l'attrezzatura dedicata che metteremo a tua disposizione.&nbsp;</li><li>Ore 00.00 : introduzione alla tecnica star-trail e svolgimento sul campo per la realizzazione di splendide scie di stelle.&nbsp;</li><li>Ore 2: fine tour fotografico</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Panoramica_notturna_di_Rocca_Calascio_a74c1a9c2f.jpg",
+          "alternativeText": "fotografia notturna dal viaggio fotografico di rocca calascio"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Weshooters_fotografano_tramonto_gran_sasso_31b6b540d3.jpg",
+          "alternativeText": "weshootesrs tramonto viaggio fotografico rocca calascio"
+        },
+        {
+          "id": "locpic-0-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Scouting_viaggio_fotografico_rocca_calascio_05df9bdff4.jpg",
+          "alternativeText": "gran sasso e piana campo imperatore da viaggio fotografico viaggio fotografico rocca calascio"
+        },
+        {
+          "id": "locpic-0-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/ruderi_di_rocca_calascio_d172984bdf.jpg",
+          "alternativeText": "Star-trail durante il viaggio fotografico a rocca calascio"
+        },
+        {
+          "id": "locpic-0-4",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gran_Sasso_e_la_chiesa_santa_Maria_della_pieta_a76e6ceddf.jpg",
+          "alternativeText": "Viaggio fotografico a rocca calascio"
+        },
+        {
+          "id": "locpic-0-5",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Via_lattea_su_rocca_calascio_ebf4a22420.jpg",
+          "alternativeText": "Via lattea fotografata durante il viaggio fotografico a rocca calascio"
+        },
+        {
+          "id": "locpic-0-6",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_in_cima_a_Rocca_Calascio_c8ceeb8fdd.jpg",
+          "alternativeText": "foto scattata durante il viaggio fotografico a rocca calascio"
+        },
+        {
+          "id": "locpic-0-7",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Rocca_Calascio_di_Andrea_Curzi_ba7fff1db6.jpg",
+          "alternativeText": "viaggio fotografico Rocca Calascio"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "31",
+      "title": "Rocca Calascio",
+      "description": "È il terzo WS che partecipo con Marco,  sempre molto professionale e gentile con tutti i partecipanti, ai quali  non fa mai mancare i suoi preziosi suggerimenti sono eventi in cui si conoscono nuovi fotografi. Da ripetere assolutamente.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2017-07-31T09:53:04.000Z"
     },
     {
-      "rating": 5
+      "id": "186",
+      "title": "Ws Rocca Calascio e Campo Imperatore ",
+      "description": "Esperienza splendida. Professionalità e divertimento hanno caratterizzato questo viaggio fotografico condotto da Alessandro. Sicuramente ripeterò questa esperienza ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-15T09:42:19.000Z"
     }
   ],
+  "whats_includeds": [
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "16",
+      "number": 1,
+      "title": "Benvenuto a Rocca Calascio",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "16",
+          "title": "Una notte magica sotto le stelle",
+          "description": "<ul><li>Ore 16:30: incontro e registrazione partecipanti.&nbsp;</li><li>Ore 17.00: ci incammineremo verso la Rocca, il percorso è molto semplice con una leggera pendenza. Durata totale: circa 20 minuti.&nbsp;</li><li>Ore 18.00: inizio della sessione fotografica dove ti spiegheremo la lettura della luce e ti mostreremo come ottenere le migliori composizioni;&nbsp;</li><li>Ore 20.00: cena al sacco (non inclusa nella quota).&nbsp;</li><li>Ore 21.00: inizio della sessione di fotografia notturna: ti spiegheremo la volta celeste, faremo un po' di teoria e passeremo al montaggio ed alla spiegazione di cos'è e come si usa un astroinseguitore, avrai la possibilità di catturare la via lattea con l'attrezzatura dedicata che metteremo a tua disposizione.&nbsp;</li><li>Ore 00.00 : introduzione alla tecnica star-trail e svolgimento sul campo per la realizzazione di splendide scie di stelle.&nbsp;</li><li>Ore 2: fine tour fotografico</li></ul>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Via Lattea",
+      "description": "Immergiti nello splendore dei cieli stellati e della nostra galassia",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "11",
+      "start": "2022-05-07",
+      "end": "2022-05-07",
+      "status": "almostFull",
+      "maxPax": 12,
+      "price": 129,
+      "deposit": 129,
+      "balance": 0,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "55",
+      "start": "2022-07-30",
+      "end": "2022-07-30",
+      "status": "soldOut",
+      "maxPax": 12,
+      "price": 129,
+      "deposit": 129,
+      "balance": 0,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "56",
+      "start": "2022-08-27",
+      "end": "2022-08-27",
+      "status": "confirmed",
+      "maxPax": 12,
+      "price": 129,
+      "deposit": 1,
+      "balance": 128,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 0,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Rimborso 100% causa COVID-19",
+      "answer": "Tutti i nostri viaggi includono un'assicurazione speciale che protegge il cliente da qualsiasi inconveniente causato da COVID-19. Ad esempio se diventa impossibile partire a cause di norme che impediscano l'accesso alla destinazione o in caso di messa in quarantena da parte dell ASL, ti rimborsiamo il 100% della quota.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "foto scattata durante il viaggio fotografico a rocca calascio",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_in_cima_a_Rocca_Calascio_c8ceeb8fdd.jpg"
+  },
   "pictures": [
     {
-      "id": "26",
+      "id": "0",
+      "type": "tour",
       "title": "Rocca Calascio",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Panoramica_notturna_di_Rocca_Calascio_a74c1a9c2f.jpg",
+      "alt": "fotografia notturna dal viaggio fotografico di rocca calascio"
     },
     {
-      "id": "190",
+      "id": "1",
+      "type": "group",
       "title": "Weshooters fotografano tramonto gran sasso",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Weshooters_fotografano_tramonto_gran_sasso_31b6b540d3.jpg",
+      "alt": "weshootesrs tramonto viaggio fotografico rocca calascio"
     },
     {
-      "id": "191",
+      "id": "2",
+      "type": "group",
       "title": "Scouting viaggio fotografico rocca calascio",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Scouting_viaggio_fotografico_rocca_calascio_05df9bdff4.jpg",
+      "alt": "gran sasso e piana campo imperatore da viaggio fotografico viaggio fotografico rocca calascio"
     },
     {
-      "id": "215",
+      "id": "3",
+      "type": "tour",
       "title": "Ruderi Rocca Calascio",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/ruderi_di_rocca_calascio_d172984bdf.jpg",
+      "alt": "Star-trail durante il viaggio fotografico a rocca calascio"
     },
     {
-      "id": "216",
+      "id": "4",
+      "type": "tour",
       "title": "Chiesa santa Maria della pietà",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gran_Sasso_e_la_chiesa_santa_Maria_della_pieta_a76e6ceddf.jpg",
+      "alt": "Viaggio fotografico a rocca calascio"
     },
     {
-      "id": "217",
+      "id": "5",
+      "type": "tour",
       "title": "Via lattea su rudere a Calascio",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Via_lattea_su_rocca_calascio_ebf4a22420.jpg",
+      "alt": "Via lattea fotografata durante il viaggio fotografico a rocca calascio"
     },
     {
-      "id": "218",
+      "id": "6",
+      "type": "tour",
       "title": "Tramonto a Rocca Calascio",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_in_cima_a_Rocca_Calascio_c8ceeb8fdd.jpg",
+      "alt": "foto scattata durante il viaggio fotografico a rocca calascio"
+    },
+    {
+      "id": "locpic-0-7",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Rocca_Calascio_di_Andrea_Curzi_ba7fff1db6.jpg",
+      "alt": "viaggio fotografico Rocca Calascio"
     }
   ]
 }

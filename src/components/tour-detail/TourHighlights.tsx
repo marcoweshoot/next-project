@@ -3,13 +3,22 @@
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { getFullMediaUrl } from '@/utils/TourDataUtilis'; // ✅ fix import
+import { getFullMediaUrl } from '@/utils/TourDataUtilis'; // ok
 const defaultIcon = '/icons/default-icon.png';
 
+function slugify(input: string | number | undefined | null) {
+  return String(input ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '') || 'item';
+}
+
 interface HighlightItem {
-  id: string | number;
-  title: string;
-  description: string;
+  id?: string | number | null;
+  title?: string;
+  description?: string;
   icon?: {
     url?: string | null;
     alternativeText?: string | null;
@@ -23,7 +32,8 @@ interface TourHighlightsProps {
 const HighlightCard = React.memo(({ highlight }: { highlight: HighlightItem }) => {
   const remote = highlight?.icon?.url ? getFullMediaUrl(highlight.icon.url) : '';
   const iconSrc = remote && remote.trim().length > 0 ? remote : defaultIcon;
-  const iconAlt = highlight?.icon?.alternativeText?.trim() || highlight?.title || 'Icona';
+  const iconAlt =
+    (highlight?.icon?.alternativeText || highlight?.title || 'Icona').toString();
 
   return (
     <Card className="border-0 shadow-sm hover:shadow-md transition-shadow duration-200">
@@ -40,8 +50,12 @@ const HighlightCard = React.memo(({ highlight }: { highlight: HighlightItem }) =
             />
           </div>
           <div className="flex-1 min-w-0">
-            <h4 className="text-base font-semibold text-gray-900 mb-1">{highlight.title}</h4>
-            <p className="text-sm text-gray-600 leading-relaxed">{highlight.description}</p>
+            <h4 className="text-base font-semibold text-gray-900 mb-1">
+              {highlight.title || 'Senza titolo'}
+            </h4>
+            {highlight.description ? (
+              <p className="text-sm text-gray-600 leading-relaxed">{highlight.description}</p>
+            ) : null}
           </div>
         </div>
       </CardContent>
@@ -63,9 +77,10 @@ const TourHighlights: React.FC<TourHighlightsProps> = ({ highlights }) => {
       </h3>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {highlights.map((h) => (
-          <HighlightCard key={String(h.id)} highlight={h} />
-        ))}
+        {highlights.map((h, i) => {
+          const safeKey = `${slugify(h?.id ?? h?.title)}-${i}`;
+          return <HighlightCard key={safeKey} highlight={h} />;
+        })}
       </div>
     </section>
   );

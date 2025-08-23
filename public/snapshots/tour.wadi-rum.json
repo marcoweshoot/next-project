@@ -1,219 +1,1180 @@
 {
+  "id": "14",
+  "tour_id": "lasciati-ispirare-dalla-giordania",
   "slug": "wadi-rum",
   "title": "Giordania: tra paesaggi antichi, deserti e tradizioni",
-  "states": {
-    "slug": "giordania"
-  },
+  "description": "<p style=\"margin-left:0px;\">Stai cercando un'esperienza unica che ti permetta di scoprire la bellezza di un luogo intatto e di conoscere le antiche tradizioni artigianali?</p><p style=\"margin-left:0px;\">Se ti manca questa esperienza, beh, questo è il viaggio fotografico che fa per te. In questi anni di esplorazione abbiamo scoperto luoghi incredibilmente affascinanti, siamo stati in diversi posti dove la scarsa presenza umana ci ha permesso di godere a pieno delle meraviglie naturali e di <strong>scattare fotografie</strong> in delle location davvero particolari.&nbsp;</p><p style=\"margin-left:0px;\">Abbiamo avuto la fortuna di incontrare artigiani locali che ci hanno mostrato le loro abilità nel lavorare il legno, il sapone e assistito alla preparazione di spezie e di erbe officinali scoprendo i segreti e le tradizioni che si tramandano da generazioni.</p><p style=\"margin-left:0px;\">Abbiamo capito che andare a visitare questo paese è si, un viaggio fotografico, ma ancor prima è una esperienza.</p><p style=\"margin-left:0px;\">Quando ti trovi a contatto con questi paesaggi e con la volta celeste puoi veramente ascoltarne il silenzio, quando il fruscio del vento è l’unico suono nell’arco di chilometri e chilometri di assoluto “nulla”, le sensazioni di stupore e meravigli si svegliano e cominciano a farti vivere ogni momento in maniera molto più intensa.</p><p style=\"margin-left:0px;\">Ogni volta che facciamo questo viaggio fotografico in Giordania ci rendiamo conto di quanto sia importante il lato spirituale della nostra esistenza, questo <strong>stretto contatto con gli elementi naturali</strong> ci da modo di ritrovare noi stessi, una cosa rara in un ambiente urbano pieno di stress e di corse frenetiche.</p><p style=\"margin-left:0px;\">Sei pronto ad immergerti nella bellezza della Giordania?</p><p style=\"margin-left:0px;\">Se anche tu desideri vivere queste straordinarie emozioni e scoprire l'arte antica degli artigiani locali, unisciti a noi in questa avventura. Ti promettiamo che tornerai a casa con ricordi e esperienze indimenticabili.</p>",
+  "excerpt": "Un vero sogno ad occhi aperti tra cultura e paesaggi",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "aqaba"
+    "slug": "aqaba",
+    "locale": "it",
+    "name": "Aqaba"
   },
-  "sessions": [
+  "states": {
+    "name": "Giordania",
+    "slug": "giordania",
+    "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Giordania 2025 | WeShoot",
+    "metaDescription": "Il viaggio fotografico in Giordania ti farà vivere un esperienza tra incredibili paesaggi, antiche tradizioni e la magia del deserto Wadi Rum.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-02-26",
-      "end": "2022-03-05"
+      "id": "68",
+      "title": "Petra",
+      "description": "Petra è un famoso sito archeologico nel deserto sudoccidentale della Giordania. Risalente al 300 a.C. è accessibile tramite una stretta gola chiamata Al Siq, contiene tombe e templi scavati nelle pareti di arenaria rosa, da cui deriva il suo nome \"Città rosa\".",
+      "slug": "petra",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "156",
+          "title": "Esploriamo Petra e Petra by Night",
+          "description": "<p style=\"margin-left:0px;\">La giornata di oggi sarà dedicata interamente al sito archeologico di Petra. Visiteremo e fotograferemo il tesoro, ma scopriremo anche la vastità di tutto il sito archeologico fino ad arrivare al monastero.</p><p style=\"margin-left:0px;\">La sera avremo modo di scoprire la magia di Petra by night. Arrivare al tesoro di Petra attraversando il siq è un’esperienza davvero unica, ma lo è ancor di più camminando sotto le stelle e con la luce di tantissime candele. Lo spettacolo al quale assisteremo ci regalerà un’atmosfera unica e magica.</p><p style=\"margin-left:0px;\">Cena e pernottamento.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/petra_dall_alto_e8a2fa027a.jpg",
+          "alternativeText": "veduta di petra viaggio fotografico giordania"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_Giordania_4dd93a6ee3.jpg",
+          "alternativeText": "coach e alunni viaggio fotografico Giordania"
+        },
+        {
+          "id": "locpic-0-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giordania_dietro_le_quinte_fca3e5532b.JPG",
+          "alternativeText": "coach di WeShoot viaggio fotografico Giordania"
+        }
+      ]
     },
     {
-      "start": "2022-11-20",
-      "end": "2022-11-27"
+      "id": "69",
+      "title": "Deserto del Wadi-Rum",
+      "description": "Il Deserto del Wadi-Rum è conosciuto come \"la Valle della Luna\" per via delle sue formazioni rocciose e della sua sabbia rossa.",
+      "slug": "deserto-del-wadi-rum",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "66",
+          "title": "3 giorni e 3 notti in un campo tendato",
+          "description": "<p>Ci dirigeremo verso l'incredibile deserto di Wadi Rum, dove trascorreremo 3 notti in un campo tendato per vivere un'esperienza fantastica tra i paesaggi desertici di questo luogo. Sfrutteremo i momenti di luce dura per ricercare gli spot più interessanti da fotografare per poi tornare a fotografare all'alba, al tramonto o in notturna.</p>",
+          "locale": "it"
+        },
+        {
+          "id": "157",
+          "title": "La magia del deserto del Wadi Rum",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">Dopo la colazione inizieremo il nostro viaggio in direzione Deserto del Wadi Rum. Durante il viaggio faremo una sosta per visitare degli artigiani che lavorano la lana.</span></p><p><span style=\"background-color:transparent;color:#000000;\">Ci dirigeremo verso l'incredibile deserto di Wadi Rum, dove trascorreremo 1 notte in un campo tendato per vivere un'esperienza fantastica tra i paesaggi desertici di questo luogo. Sfrutteremo i momenti di luce dura per ricercare gli spot più interessanti da fotografare per poi tornare a fotografare all'alba, al tramonto o in notturna.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/particolare_del_deserto_del_wadi_rum_14caed2999.jpg",
+          "alternativeText": "resti di auto nel deserto del wadi rum nel viaggio fotografico in giordania"
+        },
+        {
+          "id": "locpic-1-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Sulla_Jeep_deserto_Wadi_Rum_f11e66ca15.jpg",
+          "alternativeText": "escursione in jeep deserto wadi rum viaggio fotografico giordania"
+        },
+        {
+          "id": "locpic-1-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/sosta_nel_deserto_giordano_b34ebbd62e.jpg",
+          "alternativeText": "escursione deserto wadi rum viaggio fotografico giordania"
+        },
+        {
+          "id": "locpic-1-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/pranzo_nel_deserto_wadi_rum_f3c3699842.JPG",
+          "alternativeText": "weshooters pranzo nel deserto wadi rum beduini viaggio fotografico Giordania"
+        }
+      ]
     },
     {
-      "start": "2023-11-12",
-      "end": "2023-11-19"
+      "id": "122",
+      "title": "Petra Piccola",
+      "description": "Piccola Petra o Petra la Bianca in arabo è un sito archeologico della Giordania dove sono presenti i templi di origine nabatea immersi nei paesaggi rocciosi.",
+      "slug": "petra-piccola",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/panoramica_piccola_petra_f84553295d.jpg",
+          "alternativeText": "cornice roccia naturale piccola petra viaggio fotografico giordania"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_in_viaggio_vesro_Petra_0112faba43.jpg",
+          "alternativeText": "weshooters viaggio fotografico giordania wadi rum petra"
+        }
+      ]
     },
     {
-      "start": "2024-11-07",
-      "end": "2024-11-14"
+      "id": "123",
+      "title": "Ponte di Roccia",
+      "description": "Il Giant rock bridge è un'incredibile ponte di roccia alto più di 30 metri che si è formato nel bel mezzo del deserto giordano. Da qui sarà possibile fotografare bellissimi tramonti.",
+      "slug": "ponte-di-roccia",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "66",
+          "title": "3 giorni e 3 notti in un campo tendato",
+          "description": "<p>Ci dirigeremo verso l'incredibile deserto di Wadi Rum, dove trascorreremo 3 notti in un campo tendato per vivere un'esperienza fantastica tra i paesaggi desertici di questo luogo. Sfrutteremo i momenti di luce dura per ricercare gli spot più interessanti da fotografare per poi tornare a fotografare all'alba, al tramonto o in notturna.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Ponte_di_roccia_deserto_wadi_rum_giordania_5481f7b7ae.jpg",
+          "alternativeText": "panoramica al tramonto ponte di roccia deserto wadi rum viaggio fotografico giordania"
+        }
+      ]
     },
     {
-      "start": "2025-11-09",
-      "end": "2025-11-16"
+      "id": "201",
+      "title": "Amman",
+      "description": "Amman, capitale della Giordania sarà la prima tappa di questo viaggio fotografico. Avremo modo di visitare questa splendida cittadina storica, ricca di scorci romani.",
+      "slug": "amman",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "64",
+          "title": "Raduno, presentazioni e pernottamento a Amman",
+          "description": "<p>L'appuntamento è fissato all'aereoporto di Amman dove vi verremo a prendere con il mini van per trasferirci alla struttura che ci ospiterà la prima notte. Utilizzeremo questo tempo per cominciare a pianificare la prima giornata e per gustarci una passeggiata per il centro di Amman.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vista_di_Amman_d7b088df0f.jpg",
+          "alternativeText": "viaggio fotografico Giordania"
+        }
+      ]
     },
     {
-      "start": "2025-02-22",
-      "end": "2025-03-01"
+      "id": "202",
+      "title": "Jerash",
+      "description": "Jerash a circa 30km da Amman è una delle cittadine più antiche della Giordania, situata sulle rive del fiume Wadi Jerash.",
+      "slug": "jerash",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "65",
+          "title": "Esploriamo il sito archeologico greco romano e fotografia di reportage",
+          "description": "<p><span style=\"background-color:transparent;color:#282828;\">Partiremo subito dopo la colazione alla volta di Jerash.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#282828;\">Jerash è la capitale della regione giordana omonima e si trova al nord della Giordania, a circa 30 km da Amman. Il sito archeologico greco romano, noto come la Pompei d’Oriente, costituisce dopo quello di Petra, il luogo storico di interesse più visitato in Giordania.</span></p><p><span style=\"background-color:transparent;color:#282828;\">Nel pomeriggio visiteremo il villaggio di Ajloun e avremo la possibilità di scoprire che profumo ha il sapone al melograno e ovviamente avremo la possibilità di fotografare questa affascinante lavorazione in un laboratorio dove le donne fabbricano vari tipi di sapone ottenuti da ingredienti naturali locali. Dopo questa bellissima esperienza ci recheremo alla casa dei biscotti dove potremo fotografare la lavorazione di biscotti e leccornie tradizionali giordane.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#282828;\">Rientro ad Amman per la cena e il pernottamento.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/jerash_tempio_760850ed8b.jpg",
+          "alternativeText": "viaggio fotografico Giordania"
+        }
+      ]
+    },
+    {
+      "id": "203",
+      "title": "Villaggio di Ajloun",
+      "description": "Il Villaggio di Ajloun è una cittadina di etnia Araba e di religione islamica. Famosa per il suo castello, considerato uno dei maggiori esempi di architettura militare araba. Inoltre nota per la lavorazione del sapone.",
+      "slug": "villaggio-di-ajloun",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "65",
+          "title": "Esploriamo il sito archeologico greco romano e fotografia di reportage",
+          "description": "<p><span style=\"background-color:transparent;color:#282828;\">Partiremo subito dopo la colazione alla volta di Jerash.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#282828;\">Jerash è la capitale della regione giordana omonima e si trova al nord della Giordania, a circa 30 km da Amman. Il sito archeologico greco romano, noto come la Pompei d’Oriente, costituisce dopo quello di Petra, il luogo storico di interesse più visitato in Giordania.</span></p><p><span style=\"background-color:transparent;color:#282828;\">Nel pomeriggio visiteremo il villaggio di Ajloun e avremo la possibilità di scoprire che profumo ha il sapone al melograno e ovviamente avremo la possibilità di fotografare questa affascinante lavorazione in un laboratorio dove le donne fabbricano vari tipi di sapone ottenuti da ingredienti naturali locali. Dopo questa bellissima esperienza ci recheremo alla casa dei biscotti dove potremo fotografare la lavorazione di biscotti e leccornie tradizionali giordane.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#282828;\">Rientro ad Amman per la cena e il pernottamento.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/villaggio_ajloun_5e125e1ba3.jpg",
+          "alternativeText": "viaggio fotografico giordania"
+        },
+        {
+          "id": "locpic-6-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lavorazione_del_sapone_bb0c638afc.jpg",
+          "alternativeText": "viaggio fotografico giordania"
+        }
+      ]
+    },
+    {
+      "id": "204",
+      "title": "Amman e gli artigiani",
+      "description": "Andremo a fotografare gli artigiani del legno di Amman",
+      "slug": "amman-e-gli-artigiani",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "153",
+          "title": "Artigianato locale",
+          "description": "<p style=\"margin-left:0px;\">Se gli orari del volo lo permetteranno, nella mattinata visiteremo Amman e gli artigiani locali famosi per la lavorazione del legno.&nbsp;</p><p style=\"margin-left:0px;\">Trasferimento in aeroporto e rientro a casa</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/artigiano_del_legno_8aa63bab0d.jpg",
+          "alternativeText": "viaggio fotografico Giordania"
+        }
+      ]
+    },
+    {
+      "id": "205",
+      "title": "Madaba",
+      "description": "Madaba è una città sorta sull'antico sito biblico di Medba, da cui ha poi preso il nome. Si trova a circa 35 km a sud-ovest di Amman. La città sorge sulla Via Regia, una strada costruita cinquemila anni fa, scopriremo la lavorazione dei mosaici.",
+      "slug": "madaba",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "154",
+          "title": "Lavorazione dei tappeti e dei mosaici",
+          "description": "<p><span style=\"background-color:#ffffff;color:#282828;\">Dopo la colazione inizieremo il nostro viaggio verso sud. Le nostre tappe quotidiane ci regaleranno due esperienze fotografiche affascinanti. La prima sarà legata alla realizzazione dei mosaici nella zona di Madaba dove quest’arte giordana è consolidata e la seconda ci porterà alla lavorazione dei coloratissimi tappeti beduini. Passeremo la notte nella riserva di Dana.</span></p><p><span style=\"background-color:#ffffff;color:#282828;\">Cena e pernottamento.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-8-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vista_di_madaba_e7892a50f4.jpg",
+          "alternativeText": "viaggio fotografico giordania"
+        },
+        {
+          "id": "locpic-8-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lavorazione_mosaici_e5dfa48a4d.jpg",
+          "alternativeText": "viaggio fotografico giordania"
+        }
+      ]
+    },
+    {
+      "id": "206",
+      "title": "Riserva di Dana",
+      "description": "La Riserva di Dana è stata fondata nel 1989 ed è la più grande riserva naturale della Giordania, situata nel sud-centro della Giordania all'interno e intorno al villaggio di Dana e Wadi Dana.",
+      "slug": "riserva-di-dana",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "155",
+          "title": "Le spezie e le erbe officinali di Dana",
+          "description": "<p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#282828;\">La riserva della biosfera di Dana è la più grande riserva naturale della Giordania. </span><span style=\"background-color:#ffffff;color:#202122;\">L'area di Wadi Dana è caratterizzata da scogliere di arenaria tagliate dal vento. Avremo la possibilità di visitare quest’area e i suoi artigiani.&nbsp;</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">Nel tardo pomeriggio partiremo per Petra.</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">La sera avremo modo di scoprire la magia di Petra by night. Arrivare al tesoro di Petra attraversando il siq è un’esperienza davvero unica, ma lo è ancor di più camminando sotto le stelle e con la luce di tantissime candele. Lo spettacolo al quale assisteremo ci regalerà un’atmosfera unica e magica.</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">Cena e pernottamento.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-9-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/riserva_di_dana_2cca40fb18.jpg",
+          "alternativeText": "viaggio fotografico in Giordania"
+        }
+      ]
+    },
+    {
+      "id": "207",
+      "title": "Wadi Dana",
+      "description": "Wadi Dana è una riserva naturale tutta da esplorare, con le sue formazioni rocciose di arenaria a fare da contorno per questi splendidi paesaggi marziani.",
+      "slug": "wadi-dana",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "155",
+          "title": "Le spezie e le erbe officinali di Dana",
+          "description": "<p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#282828;\">La riserva della biosfera di Dana è la più grande riserva naturale della Giordania. </span><span style=\"background-color:#ffffff;color:#202122;\">L'area di Wadi Dana è caratterizzata da scogliere di arenaria tagliate dal vento. Avremo la possibilità di visitare quest’area e i suoi artigiani.&nbsp;</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">Nel tardo pomeriggio partiremo per Petra.</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">La sera avremo modo di scoprire la magia di Petra by night. Arrivare al tesoro di Petra attraversando il siq è un’esperienza davvero unica, ma lo è ancor di più camminando sotto le stelle e con la luce di tantissime candele. Lo spettacolo al quale assisteremo ci regalerà un’atmosfera unica e magica.</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">Cena e pernottamento.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-10-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Wadi_Dana_a5157f70c5.jpg",
+          "alternativeText": "viaggio fotografico Giordania"
+        }
+      ]
+    },
+    {
+      "id": "208",
+      "title": "Artigiani di spezie ed Erbe",
+      "description": "Andremo a visitare gli artigiani di spezie e erbe officinali mentre lavorano nelle loro botteghe.",
+      "slug": "artigiani-di-spezie-ed-erbe",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "155",
+          "title": "Le spezie e le erbe officinali di Dana",
+          "description": "<p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#282828;\">La riserva della biosfera di Dana è la più grande riserva naturale della Giordania. </span><span style=\"background-color:#ffffff;color:#202122;\">L'area di Wadi Dana è caratterizzata da scogliere di arenaria tagliate dal vento. Avremo la possibilità di visitare quest’area e i suoi artigiani.&nbsp;</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">Nel tardo pomeriggio partiremo per Petra.</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">La sera avremo modo di scoprire la magia di Petra by night. Arrivare al tesoro di Petra attraversando il siq è un’esperienza davvero unica, ma lo è ancor di più camminando sotto le stelle e con la luce di tantissime candele. Lo spettacolo al quale assisteremo ci regalerà un’atmosfera unica e magica.</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">Cena e pernottamento.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-11-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/erbe_e_spezie_12fc2c950d.jpg",
+          "alternativeText": "viaggio fotografico giordania"
+        }
+      ]
+    },
+    {
+      "id": "209",
+      "title": "Mar Morto",
+      "description": "Il Mar Morto è un lago salato le cui rive si trovano 400 m sotto il livello del mare, il punto più basso al mondo sulla terra. Le sue acque hanno un'elevata salinità, che permette di galleggiare facilmente, mentre il suo fango ricco di minerali è usato per scopi terapeutici e cosmetici nei centri benessere della zona.",
+      "slug": "mar-morto",
+      "locale": "it",
+      "state": {
+        "name": "Giordania",
+        "slug": "giordania",
+        "locale": "it",
+        "description": "<p>Scopri la Giordania con i suoi incredibili paesaggi marziani del deserto del Wadi-Rum, l'antica cittadina di Petra e lasciati emozionare dall'esperienza di vivere diverse notti con il naso all'insù ad ammirare la via lattea e milioni di stelle.</p>"
+      },
+      "steps": [
+        {
+          "id": "68",
+          "title": "Mar Morto e rientro ad Amman",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">Dopo la colazione inizieremo il nostro rientro verso Amman. Faremo tappa sul mar morto per fotografare gli incredibili cristalli di sale. Arrivo in Hotel in serata.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-12-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Mar_Morto_7bc43f9c02.jpg",
+          "alternativeText": "Viaggio Fotografico Giordania"
+        },
+        {
+          "id": "locpic-12-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_sul_mar_morto_335791f81e.jpg",
+          "alternativeText": "viaggio fotografico giordania"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "228",
+      "title": "Scouting in Giordania",
+      "description": "la Giordania è stata una piacevole sorpresa.La bellezza di Petra in qualche modo già si conosceva,ma quello che mi ha lasciato stupito e meravigliato,sono stati i panorami strabilianti e dai diversi colori del Wadi Rum.\nViaggio da consigliare a tutti, fotografi e non.\nBellissimo",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-01-28T08:32:21.000Z"
     }
   ],
-  "pictures": [
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Mezza pensione",
+      "description": "La mezza pensione prevede che si possano consumare la colazione e un pasto a scelta tra il pranzo o la cena all'interno della struttura.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/mezza_pensione_3cfc2aa873.png"
+      }
+    },
+    {
+      "title": "Guida Locale",
+      "description": "Potremo usufruire di una guida turistica locale che ci accompagnerà durante il viaggio fotografico.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_tourist_guide_skin_type_1_96_f5e7901b4f.png"
+      }
+    },
+    {
+      "title": "Campo Tendato",
+      "description": "Esperienza all'interno di un campo tendato, organizzato con tutti i confort.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/campo_tendato_06cf7ba881.png"
+      }
+    },
+    {
+      "title": "Jordan Pass",
+      "description": "?Il Jordan Pass è un pacchetto turistico ufficiale offerto dal Ministero del Turismo e delle Antichità della Giordania.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Jordan_pass_a8359f08d6.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [],
+  "days": [
+    {
+      "id": "64",
+      "number": 1,
+      "title": "Benvenuti in Giordania",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "64",
+          "title": "Raduno, presentazioni e pernottamento a Amman",
+          "description": "<p>L'appuntamento è fissato all'aereoporto di Amman dove vi verremo a prendere con il mini van per trasferirci alla struttura che ci ospiterà la prima notte. Utilizzeremo questo tempo per cominciare a pianificare la prima giornata e per gustarci una passeggiata per il centro di Amman.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "65",
+      "number": 2,
+      "title": "Jerash e la lavorazione del sapone",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "65",
+          "title": "Esploriamo il sito archeologico greco romano e fotografia di reportage",
+          "description": "<p><span style=\"background-color:transparent;color:#282828;\">Partiremo subito dopo la colazione alla volta di Jerash.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#282828;\">Jerash è la capitale della regione giordana omonima e si trova al nord della Giordania, a circa 30 km da Amman. Il sito archeologico greco romano, noto come la Pompei d’Oriente, costituisce dopo quello di Petra, il luogo storico di interesse più visitato in Giordania.</span></p><p><span style=\"background-color:transparent;color:#282828;\">Nel pomeriggio visiteremo il villaggio di Ajloun e avremo la possibilità di scoprire che profumo ha il sapone al melograno e ovviamente avremo la possibilità di fotografare questa affascinante lavorazione in un laboratorio dove le donne fabbricano vari tipi di sapone ottenuti da ingredienti naturali locali. Dopo questa bellissima esperienza ci recheremo alla casa dei biscotti dove potremo fotografare la lavorazione di biscotti e leccornie tradizionali giordane.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#282828;\">Rientro ad Amman per la cena e il pernottamento.</span></p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "66",
+      "number": 8,
+      "title": "Artigianato locale e Rientro a casa",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "153",
+          "title": "Artigianato locale",
+          "description": "<p style=\"margin-left:0px;\">Se gli orari del volo lo permetteranno, nella mattinata visiteremo Amman e gli artigiani locali famosi per la lavorazione del legno.&nbsp;</p><p style=\"margin-left:0px;\">Trasferimento in aeroporto e rientro a casa</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "67",
+      "number": 3,
+      "title": "Madaba e riserva di Dana",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "154",
+          "title": "Lavorazione dei tappeti e dei mosaici",
+          "description": "<p><span style=\"background-color:#ffffff;color:#282828;\">Dopo la colazione inizieremo il nostro viaggio verso sud. Le nostre tappe quotidiane ci regaleranno due esperienze fotografiche affascinanti. La prima sarà legata alla realizzazione dei mosaici nella zona di Madaba dove quest’arte giordana è consolidata e la seconda ci porterà alla lavorazione dei coloratissimi tappeti beduini. Passeremo la notte nella riserva di Dana.</span></p><p><span style=\"background-color:#ffffff;color:#282828;\">Cena e pernottamento.</span></p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "68",
+      "number": 4,
+      "title": "La riserva di dana e le erbe officinali",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "155",
+          "title": "Le spezie e le erbe officinali di Dana",
+          "description": "<p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#282828;\">La riserva della biosfera di Dana è la più grande riserva naturale della Giordania. </span><span style=\"background-color:#ffffff;color:#202122;\">L'area di Wadi Dana è caratterizzata da scogliere di arenaria tagliate dal vento. Avremo la possibilità di visitare quest’area e i suoi artigiani.&nbsp;</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">Nel tardo pomeriggio partiremo per Petra.</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">La sera avremo modo di scoprire la magia di Petra by night. Arrivare al tesoro di Petra attraversando il siq è un’esperienza davvero unica, ma lo è ancor di più camminando sotto le stelle e con la luce di tantissime candele. Lo spettacolo al quale assisteremo ci regalerà un’atmosfera unica e magica.</span></p><p style=\"text-align:justify;\"><span style=\"background-color:#ffffff;color:#202122;\">Cena e pernottamento.</span></p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "69",
+      "number": 5,
+      "title": "Sito archeologico di Petra",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "156",
+          "title": "Esploriamo Petra e Petra by Night",
+          "description": "<p style=\"margin-left:0px;\">La giornata di oggi sarà dedicata interamente al sito archeologico di Petra. Visiteremo e fotograferemo il tesoro, ma scopriremo anche la vastità di tutto il sito archeologico fino ad arrivare al monastero.</p><p style=\"margin-left:0px;\">La sera avremo modo di scoprire la magia di Petra by night. Arrivare al tesoro di Petra attraversando il siq è un’esperienza davvero unica, ma lo è ancor di più camminando sotto le stelle e con la luce di tantissime candele. Lo spettacolo al quale assisteremo ci regalerà un’atmosfera unica e magica.</p><p style=\"margin-left:0px;\">Cena e pernottamento.</p>",
+          "locale": "it"
+        }
+      ]
+    },
     {
       "id": "70",
-      "title": "Petra",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 6,
+      "title": "Wadi Rum e una notte nel deserto",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "157",
+          "title": "La magia del deserto del Wadi Rum",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">Dopo la colazione inizieremo il nostro viaggio in direzione Deserto del Wadi Rum. Durante il viaggio faremo una sosta per visitare degli artigiani che lavorano la lana.</span></p><p><span style=\"background-color:transparent;color:#000000;\">Ci dirigeremo verso l'incredibile deserto di Wadi Rum, dove trascorreremo 1 notte in un campo tendato per vivere un'esperienza fantastica tra i paesaggi desertici di questo luogo. Sfrutteremo i momenti di luce dura per ricercare gli spot più interessanti da fotografare per poi tornare a fotografare all'alba, al tramonto o in notturna.</span></p>",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "71",
-      "title": "Deserto Wadi-Rum",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 7,
+      "title": "Mar Morto ed Amman",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "68",
+          "title": "Mar Morto e rientro ad Amman",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">Dopo la colazione inizieremo il nostro rientro verso Amman. Faremo tappa sul mar morto per fotografare gli incredibili cristalli di sale. Arrivo in Hotel in serata.</span></p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
     },
     {
-      "id": "125",
-      "title": "Petra Piccola",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "hl-1",
+      "title": "Tenda",
+      "description": "Esperienza wild",
+      "locale": "it"
     },
     {
-      "id": "126",
-      "title": "Ponte di Roccia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Via Lattea",
+      "description": "Immergiti nello splendore dei cieli stellati e della nostra galassia",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    },
+    {
+      "id": "hl-7",
+      "title": "Guida Locale",
+      "description": "Accompagnati da guide locali che parlano inglese/italiano",
+      "locale": "it"
+    },
+    {
+      "id": "hl-8",
+      "title": "Esplorativo",
+      "description": "Andremo insieme alla scoperta di nuove location.",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "21",
+      "start": "2022-02-26",
+      "end": "2022-03-05",
+      "status": "waitingList",
+      "maxPax": 10,
+      "price": 1999,
+      "deposit": 1,
+      "balance": 1998,
+      "minPax": 5,
+      "currency": "EUR",
+      "priceCompanion": 1899,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "start": "2022-11-20",
+      "end": "2022-11-27",
+      "status": "almostConfirmed",
+      "maxPax": 10,
+      "price": 1699,
+      "deposit": 100,
+      "balance": 1599,
+      "minPax": 5,
+      "currency": "EUR",
+      "priceCompanion": 1599,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "94",
+      "start": "2023-11-12",
+      "end": "2023-11-19",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2499,
+      "deposit": 100,
+      "balance": 2399,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2499,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
     },
     {
       "id": "134",
-      "title": "coach e alunni in Giordania",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "start": "2024-11-07",
+      "end": "2024-11-14",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2549,
+      "deposit": 769,
+      "balance": 1780,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2549,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
     },
     {
-      "id": "140",
-      "title": "Escursione in jeep nel deserto Wadi Rum",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "141",
-      "title": "Pausa pranzo e ralax nel deserto Wadi Rum",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "150",
-      "title": "WeShooters in viaggio vesro Petra",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "135",
+      "start": "2025-11-09",
+      "end": "2025-11-16",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 2899,
+      "deposit": 870,
+      "balance": 2029,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2899,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
     },
     {
       "id": "172",
+      "start": "2025-02-22",
+      "end": "2025-03-01",
+      "status": "waitingList",
+      "maxPax": 7,
+      "price": 2549,
+      "deposit": 765,
+      "balance": 1784,
+      "minPax": 7,
+      "currency": "EUR",
+      "priceCompanion": 2549,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Cosa è incluso nel viaggio fotografico in Giordania",
+      "answer": "<p>Nella quota è incluso:</p><ul><li>6 Pernotti in camera doppia condivisa con bagno privato</li><li>1 notte nel campo tendato</li><li><span style=\"background-color:transparent;color:#000000;\">Assicurazione medica</span></li><li><span style=\"background-color:transparent;color:#000000;\">Fotografo coordinatore dall’Italia&nbsp;</span></li><li><span style=\"background-color:transparent;color:#000000;\">Tutti i trasporti in minivan, driver e carburante&nbsp;</span></li><li><span style=\"background-color:transparent;color:#000000;\">Tutte le colazioni, pranzi e cene con bevande incluse (acqua)&nbsp;</span></li><li><span style=\"background-color:transparent;color:#000000;\">Tutti i tour, escursioni e ingressi come da programma&nbsp;</span></li><li><span style=\"background-color:transparent;color:#000000;\">Guide private certificate in loco parlanti italiano/inglese</span></li><li><span style=\"background-color:transparent;color:#000000;\">Corso di Photoshop</span></li><li><span style=\"background-color:transparent;color:#000000;\">Gruppo Whatsapp</span></li></ul>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Cosa non è incluso nel viaggio fotografico in Giordania",
+      "answer": "<p>La quota non comprende:</p><ul><li><span style=\"background-color:transparent;color:#000000;\">Volo internazionale su Amman&nbsp;</span></li><li><span style=\"background-color:transparent;color:#000000;\">Jordan Pass 70JOD ( € 90 circa )&nbsp;</span></li><li><span style=\"background-color:transparent;color:#000000;\">Assicurazione annullamento ( quantificabile su richiesta al momento dell’adesione )</span></li><li><span style=\"background-color:transparent;color:#000000;\">Petra by night € 25,00 ( da comunicare la partecipazione al momento dell’adesione)&nbsp;</span></li><li><span style=\"background-color:transparent;color:#000000;\">Pasti e bevande dove non indicato&nbsp;</span></li><li><span style=\"background-color:transparent;color:#000000;\">Mance e spese extra e di carattere generale&nbsp;</span></li><li><span style=\"background-color:transparent;color:#000000;\">Tutto ciò che non è esplicitamente indicato nella voce “la quota comporende”</span></li></ul>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-18",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-19",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Workshop_photography_events_f21c6cf3a0590927c1a85d84a2a4bc79_37edf73c3f.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Petra",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/petra_dall_alto_e8a2fa027a.jpg",
+      "alt": "veduta di petra viaggio fotografico giordania"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Deserto Wadi-Rum",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/particolare_del_deserto_del_wadi_rum_14caed2999.jpg",
+      "alt": "resti di auto nel deserto del wadi rum nel viaggio fotografico in giordania"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Petra Piccola",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/panoramica_piccola_petra_f84553295d.jpg",
+      "alt": "cornice roccia naturale piccola petra viaggio fotografico giordania"
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "Ponte di Roccia",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Ponte_di_roccia_deserto_wadi_rum_giordania_5481f7b7ae.jpg",
+      "alt": "panoramica al tramonto ponte di roccia deserto wadi rum viaggio fotografico giordania"
+    },
+    {
+      "id": "4",
+      "type": "group",
+      "title": "coach e alunni in Giordania",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_Giordania_4dd93a6ee3.jpg",
+      "alt": "coach e alunni viaggio fotografico Giordania"
+    },
+    {
+      "id": "5",
+      "type": "group",
+      "title": "Escursione in jeep nel deserto Wadi Rum",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Sulla_Jeep_deserto_Wadi_Rum_f11e66ca15.jpg",
+      "alt": "escursione in jeep deserto wadi rum viaggio fotografico giordania"
+    },
+    {
+      "id": "6",
+      "type": "group",
+      "title": "Pausa pranzo e ralax nel deserto Wadi Rum",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/sosta_nel_deserto_giordano_b34ebbd62e.jpg",
+      "alt": "escursione deserto wadi rum viaggio fotografico giordania"
+    },
+    {
+      "id": "7",
+      "type": "group",
+      "title": "WeShooters in viaggio vesro Petra",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_in_viaggio_vesro_Petra_0112faba43.jpg",
+      "alt": "weshooters viaggio fotografico giordania wadi rum petra"
+    },
+    {
+      "id": "8",
+      "type": "group",
       "title": "Pranzo nel deserto Wadi Rum",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/pranzo_nel_deserto_wadi_rum_f3c3699842.JPG",
+      "alt": "weshooters pranzo nel deserto wadi rum beduini viaggio fotografico Giordania"
     },
     {
-      "id": "173",
+      "id": "9",
+      "type": "group",
       "title": "Giordania dietro le quinte",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giordania_dietro_le_quinte_fca3e5532b.JPG",
+      "alt": "coach di WeShoot viaggio fotografico Giordania"
     },
     {
-      "id": "304",
+      "id": "10",
+      "type": "tour",
       "title": "Amman",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vista_di_Amman_d7b088df0f.jpg",
+      "alt": "viaggio fotografico Giordania"
     },
     {
-      "id": "305",
+      "id": "11",
+      "type": "tour",
       "title": "Jerash",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/jerash_tempio_760850ed8b.jpg",
+      "alt": "viaggio fotografico Giordania"
     },
     {
-      "id": "306",
+      "id": "12",
+      "type": "tour",
       "title": "Villaggio di Ajloun",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/villaggio_ajloun_5e125e1ba3.jpg",
+      "alt": "viaggio fotografico giordania"
     },
     {
-      "id": "307",
+      "id": "13",
+      "type": "tour",
       "title": "Lavorazione del Sapone",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lavorazione_del_sapone_bb0c638afc.jpg",
+      "alt": "viaggio fotografico giordania"
     },
     {
-      "id": "308",
+      "id": "14",
+      "type": "tour",
       "title": "Artigiano del legno",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/artigiano_del_legno_8aa63bab0d.jpg",
+      "alt": "viaggio fotografico Giordania"
     },
     {
-      "id": "309",
+      "id": "15",
+      "type": "tour",
       "title": "Madaba",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vista_di_madaba_e7892a50f4.jpg",
+      "alt": "viaggio fotografico giordania"
     },
     {
-      "id": "310",
+      "id": "16",
+      "type": "tour",
       "title": "Riserva di Dana",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/riserva_di_dana_2cca40fb18.jpg",
+      "alt": "viaggio fotografico in Giordania"
     },
     {
-      "id": "311",
+      "id": "17",
+      "type": "tour",
       "title": "Wadi Dana",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Wadi_Dana_a5157f70c5.jpg",
+      "alt": "viaggio fotografico Giordania"
     },
     {
-      "id": "312",
+      "id": "18",
+      "type": "tour",
       "title": "Le erbe officinali",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/erbe_e_spezie_12fc2c950d.jpg",
+      "alt": "viaggio fotografico giordania"
     },
     {
-      "id": "313",
+      "id": "19",
+      "type": "tour",
       "title": "Mar Morto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Mar_Morto_7bc43f9c02.jpg",
+      "alt": "Viaggio Fotografico Giordania"
     },
     {
-      "id": "314",
+      "id": "20",
+      "type": "tour",
       "title": " Tramonto sul Mar morto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_sul_mar_morto_335791f81e.jpg",
+      "alt": "viaggio fotografico giordania"
     },
     {
-      "id": "315",
+      "id": "21",
+      "type": "tour",
       "title": "Lavorazione dei mosaici",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lavorazione_mosaici_e5dfa48a4d.jpg",
+      "alt": "viaggio fotografico giordania"
     }
   ]
 }

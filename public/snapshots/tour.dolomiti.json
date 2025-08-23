@@ -1,211 +1,1034 @@
 {
+  "id": "6",
+  "tour_id": "scenari-mozzafiato-sulle-dolomiti",
   "slug": "dolomiti",
   "title": "Le Dolomiti: un'esperienza fotografica incredibile tra scenari mozzafiato",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p>Le Dolomiti... Difficile descrivere con un testo questi posti, la montagna è già di per se un ambiente che si presta alla fotografia di paesaggio nella sua forma più estrema, qui si raggiunge l'apice dell'inesplorato, dell'emozione.</p><p>Islanda, Norvegia, Deserti, Scozia... Noi di WeShoot giriamo il mondo <strong>alla scoperta degli scenari più estremi del pianeta</strong>, ed ogni volta che andiamo sulle Dolomiti il pensiero è sempre lo stesso: in Italia non esiste luogo più assurdo di questo.</p><p>Quando si arriva al Passo Giau per la prima volta si rimane avvolti da <strong>un'atmosfera fiabesca</strong>, il profumo dell'aria pulita e fresca pervade i sensi e rilassa, lasciando l'osservatore perso in questo angolo di paradiso che non si trova altrove.</p><p>L'itinerario prevede in assoluto gli spot migliori della zona, luoghi come le Cinque Torri, le tre Cime di Lavaredo, il Passo Giau e il famoso e meraviglioso lago di Limides.</p><p>L'obiettivo dell'evento è riunire una decina al massimo di appassionati e portarli con noi tra questi scorci in modo da catturarne insieme l'essenza, studiando le composizioni, i colori, gli elementi naturali e le situazioni.</p><p><strong>A chi è rivolto l'evento?</strong></p><p>Questo specifico foto tour è rivolto agli amanti della montagna, della fotografia di paesaggio nella sua forma più estrema, a prescindere dal livello (seguiremo passo passo i meno esperti)</p><p>Riusciamo a seguire il principiante, che ha bisogno di imparare le linee guida della fotografia di base (composizione, regole, settaggi della fotocamera), fino al fotografo avanzato che cerca di approfondire la sua tecnica ed imparare a gestire al meglio la pianificazione.</p><p><strong>Che tipo di esperienza è?</strong></p><p>Questo foto tour si svolgerà in alta quota, alle Tre Cime di Lavaredo avremo un'oretta di cammino con circa 270mt di dislivello da superare, non è richiesta chi sa quale forma fisica (è un percorso che fanno tranquillamente donne, bambini e anziani) è però richiesta elasticità fisica e mentale; albe, tramonti e notturne potranno essere stancanti, ma sapranno ricompensarci di grandi emozioni. Inoltre ci sarà sempre la possibilità di usufruire di alcune ore diurne di riposo tra una sessione fotografia di alba e di tramonto.</p><p><strong>Cosa posso imparare in questo viaggio fotografico?</strong></p><ul><li>Il corso è strutturato per apprendere come scattare fotografie di paesaggio padroneggiando sia attrezzatura che creatività. Per tutta la durata del soggiorno approfondiremo diverse tematiche, scambieremo costantemente informazioni per chiarire ogni dubbio dei partecipanti, sviscerando le tecniche e i trucchi per ottenere immagini di grande impatto qualità.</li><li>Tecniche base ed avanzate di scatto, dalla lettura della luce al focus stacking, panoramiche e focal blending</li><li>Postproduzione base ed avanzata in video che riceverai direttamente via mail.</li></ul><p><strong>Cosa riceverà ogni partecipante alla fine del corso</strong></p><ul><li>accesso ad un gruppo whatsapp riservato</li><li>un video sulla postpdroduzione da principiante ad esperto</li><li>uno sconto sul prossimo viaggio</li><li>un estratto del nostro PDF sulla Pianificazione della fotografia di paesaggio</li></ul>",
+  "excerpt": "Se sei un'appassionato della fotografia di paesaggio, della via lattea e ti piace la montagna amerai questi tre giorni immerso nella natura incontaminata delle Dolomiti.",
+  "difficulty": "medium",
+  "experience_level": "Intenso",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "veneto"
+    "slug": "veneto",
+    "locale": "it",
+    "name": "Veneto"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Dolomiti 2025 | WeShoot",
+    "metaDescription": "Un'esperienza fotografica tra le incredibili cime più belle del mondo, le Dolomiti. Un viaggio fotografico organizzato in ogni dettaglio.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-07-28",
-      "end": "2022-07-31"
+      "id": "8",
+      "title": "Pale di San Martino",
+      "description": "Le Pale di San Martino sono il gruppo montuoso più esteso delle Dolomiti, con circa 240 km² di superficie, situate a cavallo tra Trentino orientale e Veneto",
+      "slug": "pale-di-san-martino",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "5",
+          "title": "San Martino di Castrozza",
+          "description": "<ul><li>Ore 14:30: ci incontreremo alla struttura ricettiva Hotel Venezia (o similari), a San Martino di Castrozza (TN), dove faremo base per la prima notte, ci sistemeremo nelle camere e faremo un piccolo briefing sulla pianificazione della fotografia.</li><li>Ore 18:00: ci sposteremo per le luci del tramonto verso le straordinarie Pale di San Martino, presso la Baita Segantini, dove ragioneremo sulla lettura della scena, della composizione e potrai mettere in pratica diverse tecniche fotografiche.</li><li>Ore 21:30: cena (inclusa nella quota)</li><li>Ore 22:30: sessione notturna se le previsioni meteo ce lo consentono</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_baita_segantini_e_pale_di_san_martino_8e6d0f720c.jpg",
+          "alternativeText": "tramonto baita segantini pale di san martino viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_tra_la_nebbia_dolomiti_a893e681a0.JPG",
+          "alternativeText": "weshooters pale di san martino nebbia viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-0-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooter_fase_di_scatto_dolomiti_8ee01bb5c0.JPG",
+          "alternativeText": "weshooter composizione viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-0-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Paesaggi_e_malghe_dolomiti_620a01530e.jpg",
+          "alternativeText": "Marika Greco malghe e paesaggi viaggio fotografico dolomiti"
+        }
+      ]
     },
     {
-      "start": "2022-09-29",
-      "end": "2022-10-02"
+      "id": "9",
+      "title": "Tre Cime di Lavaredo",
+      "description": "Le Tre Cime di Lavaredo sono le cime più conosciute delle Dolomiti, uno spot fotografico incredibile da ammirare in ogni stagione.",
+      "slug": "tre-cime-di-lavaredo",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "6",
+          "title": "Il giro delle Tre Cime di Lavaredo",
+          "description": "<ul><li>Ore 8:00: colazione (inclusa nella quota)&nbsp;</li><li>Ore 9:00: ci muoveremo verso Pocol, dove raggiungeremo la struttura ricettiva per depositare i bagagli. Trascorreremo le prossime due notti qui.&nbsp;</li><li>Ore 12:00: pranzo (non incluso nella quota)&nbsp;</li><li>Ore 13:00: ci dirigeremo verso le Tre Cime di Lavaredo, per affrontare una piacevole escursione (2 ore circa di trekking di livello \"facile\") per raggiungere il rifugio Locatelli, dove scatteremo le foto al tramonto.&nbsp;</li><li>Ore 21:00: cena al sacco (inclusa nella quota)&nbsp;</li><li>Ore 22:00: ricominceremo la discesa verso il rifugio Auronzo, per poi tornare in struttura a Pocol</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Vista_panoramica_tre_cime_di_lavaredo_5d3e8fb48d.jpg",
+          "alternativeText": "viaggio fotografico dolomiti, tre cime di lavaredo, baita segantini"
+        },
+        {
+          "id": "locpic-1-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooter_in_dolomiti_tre_cime_acd42b289d.jpg",
+          "alternativeText": "WeShooter in gruppo alle tre cime viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-1-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooter_corso_di_post_produzione_in_dolomiti_c5f6e3ced8.jpg",
+          "alternativeText": "WeShooter corso di post produzione viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-1-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Grotta_tre_cime_di_lavaredo_24b57d1fab.jpg",
+          "alternativeText": "fotografo grotta tre cime di lavaredo viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-1-4",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tre_cime_di_Lavaredo_d879297b00.jpg",
+          "alternativeText": "tour fotografico Dolomiti, viaggio fotografico"
+        }
+      ]
     },
     {
-      "start": "2023-06-29",
-      "end": "2023-07-02"
+      "id": "10",
+      "title": "Passo Giau",
+      "description": "Il Passo Giau è uno dei più famosi valichi alpini, a circa 2236mt si possono ammirare alcune delle cime più belle dolomitiche.",
+      "slug": "passo-giau-1",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "7",
+          "title": "Trekking immersi nella natura",
+          "description": "<ul><li>Ore 8:00: colazione (inclusa nella quota)&nbsp;</li><li>Ore 9:00: ci muoveremo verso il Passo Giau dove metteremo in pratica le nozioni apprese durante i due giorni passati.&nbsp;</li><li>Ore 13:00: pausa pranzo (pasto non incluso)</li><li>Ore 17:00: ci sposteremo per il tramonto verso il lago di Limides con una splendida escursione nel bosco (40 minuti circa di cammino) per arrivare al fantastico specchio d'acqua dove si specchiano le Tofane.</li><li>Ore 22:00: cena (inclusa nella quota)</li><li>Ore 22:30: sessione notturna se le previsioni meteo ce lo consentono</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Passo_giau_con_Luna_e3ff8e311d.jpg",
+          "alternativeText": "passo giau illuminato luce lunare viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gruppo_We_Shooters_in_Dolomiti_9b3992f1af.JPG",
+          "alternativeText": "weshooters gruppo viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-2-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooter_scattano_la_Tofana_0d82da9a88.JPG",
+          "alternativeText": "WeShooter fase di scatto Tofana viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-2-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Abete_solitario_dolomiti_d5c18bb25b.jpg",
+          "alternativeText": "montagna Marika Greco viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-2-4",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Passo_giau_24c1d430ba.jpg",
+          "alternativeText": "nuvole e piante passo giau viaggio fotografico dolomiti italia"
+        }
+      ]
     },
     {
-      "start": "2023-07-06",
-      "end": "2023-07-09"
+      "id": "11",
+      "title": "Lago di Limides",
+      "description": "Il lago di Limides è un piccolo specchio d'acqua immerso in un bellissimo scenario paesaggistico.",
+      "slug": "lago-di-limides",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "7",
+          "title": "Trekking immersi nella natura",
+          "description": "<ul><li>Ore 8:00: colazione (inclusa nella quota)&nbsp;</li><li>Ore 9:00: ci muoveremo verso il Passo Giau dove metteremo in pratica le nozioni apprese durante i due giorni passati.&nbsp;</li><li>Ore 13:00: pausa pranzo (pasto non incluso)</li><li>Ore 17:00: ci sposteremo per il tramonto verso il lago di Limides con una splendida escursione nel bosco (40 minuti circa di cammino) per arrivare al fantastico specchio d'acqua dove si specchiano le Tofane.</li><li>Ore 22:00: cena (inclusa nella quota)</li><li>Ore 22:30: sessione notturna se le previsioni meteo ce lo consentono</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lago_di_limides_ghiacciato_a59c061ff6.jpg",
+          "alternativeText": "lago di limides ghiacciato e tofana viaggio fotografico dolomiti"
+        },
+        {
+          "id": "locpic-3-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Passeggiata_lago_Limides_10796f22d9.JPG",
+          "alternativeText": "weshooters trekking limides viaggio fotografico dolomiti"
+        }
+      ]
     },
     {
-      "start": "2024-07-11",
-      "end": "2024-07-14"
-    },
-    {
-      "start": "2024-07-04",
-      "end": "2024-07-07"
-    },
-    {
-      "start": "2025-07-03",
-      "end": "2025-07-06"
+      "id": "124",
+      "title": "Cadini di Misurina",
+      "description": "I Cadini di Misurina sono un gruppo montuoso delle Dolomiti orientali, in provincia di Belluno. Molto da fotografare durante il percorso verso il rifugio Locatelli.",
+      "slug": "cadini-di-misurina",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "6",
+          "title": "Il giro delle Tre Cime di Lavaredo",
+          "description": "<ul><li>Ore 8:00: colazione (inclusa nella quota)&nbsp;</li><li>Ore 9:00: ci muoveremo verso Pocol, dove raggiungeremo la struttura ricettiva per depositare i bagagli. Trascorreremo le prossime due notti qui.&nbsp;</li><li>Ore 12:00: pranzo (non incluso nella quota)&nbsp;</li><li>Ore 13:00: ci dirigeremo verso le Tre Cime di Lavaredo, per affrontare una piacevole escursione (2 ore circa di trekking di livello \"facile\") per raggiungere il rifugio Locatelli, dove scatteremo le foto al tramonto.&nbsp;</li><li>Ore 21:00: cena al sacco (inclusa nella quota)&nbsp;</li><li>Ore 22:00: ricominceremo la discesa verso il rifugio Auronzo, per poi tornare in struttura a Pocol</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/cadini_di_misurina_ddadb8f55a.jpg",
+          "alternativeText": "cadini di misurina alba viaggio fotografico dolomiti"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    }
-  ],
-  "pictures": [
-    {
-      "id": "11",
-      "title": "Lago di Limides",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "12",
-      "title": "Tre Cime di Lavaredo",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "13",
-      "title": "Passo Giau",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "14",
-      "title": "Pale di San Martino",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "127",
-      "title": "Cadini di Misurina",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "154",
-      "title": "Weshooters brindisi in dolomiti",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "157",
-      "title": "WeShooter in dolomiti alle tre cime",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "158",
-      "title": "WeShooter corso di post produzione dolomiti",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "159",
-      "title": "WeShooters alle cinque torri dolomiti",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "136",
+      "title": "Nonostante le avversità del tempo, il workshop è stato davvero fantastico!",
+      "description": "Esperienza davvero bellissima e a dir poco unica visto che abbiamo trovato della neve in piena agosto ahahah. \nMi è piaciuto molto. Ho imparato tanto dai ragazzi e la compagnia è stata piacevole. \nMarco e Ale non si sono limitati solamente a dire come fare una determinata cosa, ma spiegandoci anche il perché di quella particolare scelta nel farlo. I materiali post viaggio fotografico sono sufficienti per poter continuare da soli, ma è comunque meglio prestare attenzioni a dei dettagli durante la lezione teorica o direttamente nella sessione della pratica.\n\nParteciperei sicuramente un altro viaggio fotografico, in particolare quello notturno, perché sarebbe fighissimo poter scattare e parlare con Ale e Marco data la loro enorme conoscenza astronomica!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-09-12T20:10:45.000Z"
     },
     {
       "id": "184",
-      "title": "Gruppo WeShooters in Dolomiti",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Top",
+      "description": "Non è stato il mio primo viaggio fotografico con i ragazzi, che come sempre si sono rivelati super competenti in ogni aspetto del viaggio fotografico. In generale il tempo non è stato molto clemente, ma siamo stati ampiamente ripagati dalla possibilità fotografare le Tre Cime innevate. La conoscenza dei luoghi degli insegnanti permette loro di scegliere gli spot fotografici migliori e, per quanto possibile, adattare l'itinerario alle condizioni meteo e alle esigenze individuali. Le lezioni \"in aula\" permettono di apprendere le tecniche di post produzione e di commentare insieme qualche scatto, in modo da potersi migliorare da subito mettendo in pratica i consigli ricevuti già il giorno successivo, aspetto non di secondo piano nei viaggio fotografico di lunga durata come questo. La compagnia fa il resto!! Bravi!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-14T16:10:48.000Z"
     },
     {
       "id": "185",
+      "title": "Ws Dolomiti",
+      "description": "Workshop fantastico nonostante il tempo poco clemente. Grazie Alessandro e Marco ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-14T18:35:18.000Z"
+    },
+    {
+      "id": "202",
+      "title": "Esperienza incredibile!",
+      "description": "Non sarà una recensione sulle Dolomiti, perchè tutti le consociamo... Scriverò solo di Marco e Alessandro!\nParto dicendo che, metereologicamente parlando, non siamo stati molto fortunati. Nonostante ciò, l'organizzazione di Marco e Alessandro è stata impeccabile. Quando non è stato possibile scattare, abbiamo fatto lezioni molto approfondite partendo dalla composizione in fase di scatto, fino alla post-produzione e salvataggio finale. Questi ragazzi sono preparatissimi, avranno una risposta per ogni vostra domanda (anche se la fate 100 volte ahah). Sono competenti e disponibili! Riescono a trasmettere una fortissima passione per la fotografia, tanto che personalmente, nell'ultimo periodo ero un po \"sperso\", ma tornato dal Workshop sono più carico che mai! Oltre ad essere due ottimi insegnanti, sono due ragazzi estremamente simpatici e di compagnia. Sanno fare gruppo e creare intesa tra i partecipanti! Siamo diventati subito amici! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-07-30T16:30:07.000Z"
+    },
+    {
+      "id": "203",
+      "title": "Workshop fotografico Dolomiti",
+      "description": "Marco e Alessandro sono, oltre che fotografi eccezionali, due persone che non mancheranno di farti divertire! E' il secondo viaggio fotografico a cui partecipo ed in entrambi i casi ho imparato davvero molto sia sulla pianificazione che sulle tecniche fotografiche più idonee per le varie condizioni di luce. Una cosa che ho molto apprezzato è stata la loro capacità di modificare il programma della giornata sulla base delle previsioni meteo... anche in caso di brutto tempo non c'è da preoccuparsi, avranno sempre una soluzione alternativa! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-07-30T21:30:47.000Z"
+    },
+    {
+      "id": "204",
+      "title": "Workshop fotografico dolomiti",
+      "description": "Sono tornata da poco dal viaggio fotografico sulle Dolomiti con Marco e Alessandro. È stata la mia seconda esperienza con loro e ho avuto modo di confermare l'ottima impressione avuta nel precedente viaggio fotografico. L'aspetto più importante è secondo me la loro capacità di creare un'atmosfera amichevole senza mai perdere di vista la professionalità e la cura dei dettagli. Il loro entusiasmo traspare in ogni momento e coinvolge tutti i membri del gruppo. Con il loro atteggiamento hanno contribuito a motivarmi e invogliarmi a migliorare le mie tecniche e conoscenze sulla fotografia paesaggistica.\nConsiglio questa esperienza agli appassionati di fotografia, indipendentemente dalle conoscenze pregresse.\nCi vedremo sicuramente presto!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-08-01T16:31:38.000Z"
+    },
+    {
+      "id": "205",
+      "title": "Workshop fotografico sulle Dolomiti",
+      "description": "Organizzazione perfetta. Professionalità altissima. Spettacolare il modo di trasmettere la loro passione per la fotografia,  le loro conoscenze senza alcun limite dal momento della preparazione dello scatto,  dallo scatto stesso allo sviluppo e poi postproduzione.  Disponibili in ogni momento,  molto seri ma con allegria!! Non abbandonano mai nessun componente del gruppo!!! BRAVI E BASTA!!! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-08-01T18:34:34.000Z"
+    },
+    {
+      "id": "206",
+      "title": "Dolomiti ... e non solo ",
+      "description": "La macchina fotografica è lo strumento che mi permette di regalarmi spazi, di mettermi in “viaggio” per scoprire, sperimentare, confrontarmi, condividere, conoscere e conoscermi, senza approfondire o pianificare in anticipo. Così ho fatto anche in aprile quando attraverso i social mi è apparsa più volte l’opportunità di tornare a vivere per qualche giorno la magica immensità del deserto per fotografare soprattutto il cielo stellato. \nCon Alessandro e Marco ci siamo incontrati per la prima volta in aeroporto ed è stato come ritrovare vecchi amici nonostante la differenza di età.\nDue ragazzi che oltre alla professionalità, all’entusiasmo e all’amore per il proprio lavoro possiedono un valore aggiunto: la capacità di gestire un gruppo in modo armonioso attraverso la disponibilità e l’attenzione alle singole e diversificate necessità.\nCon lo stesso spirito ho aderito al “viaggio” per le Dolomiti, dove, tra maestosità del paesaggio e i cieli che ti mettono in comunione con l’Universo, ho potuto confermare e beneficiare di professionalità e cura.\nBuon meritato “viaggio” ragazzi!!!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-08-05T15:46:01.000Z"
+    },
+    {
+      "id": "241",
+      "title": "Fotografia di paesaggio",
+      "description": "Avvicinarsi alla fotografia di paesaggio con due mostri sacri come Alessandro Cantarelli e Marco Carotenuto non ha prezzo. La loro disponibilità nel seguire gli allievi in ogni fase e nello spiegare con semplicità le tecniche più complesse è l'essenza del loro lavoro e dei loro viaggio fotografico. I percorsi per arrivare alle varie destinazioni sono stati impegnativi, ed a tal proposito si consiglia un minimo di preparazione atletica per seguire i loro passi, ma mai nessuno si è sentito a disagio od in difficoltà. Poi, in quelle zone, le foto, con loro alle spalle, vengono per forza. Grazie ed alla prossima...",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-07-21T11:40:44.000Z"
+    },
+    {
+      "id": "242",
+      "title": "Passione dolomitica",
+      "description": "Marco e Alessandro ancora una volta si sono dimostrati fotografi che trasmettono passione durante i loro viaggio fotografico, a cui aggiungono una conoscenza eccezionale dei vari spot e delle tecniche fotografiche da applicare in ogni singola circostanza.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-07-21T16:37:41.000Z"
+    },
+    {
+      "id": "243",
+      "title": "Mi sono trovato come a casa, anzi meglio!",
+      "description": "Marco ed Alessandro sono due  professionisti molto attenti nell'organizzare eventi di alto contenuto tecnico-fotografico in cui trasmettono sempre a tutti i partecipanti la loro grande passione per la fotografia. Sono sempre attenti ai particolari ed alle persone e fanno si che tutti siano sempre allineati con quanto viene spiegato. Devo dire che il tempo e costo investito per questa 3 giorni nelle Dolomiti è sicuramente valsa la pena!\nALLA PROSSIMA!:-)\n\nUn salutone a tutti e grazie ancora di questa stupenda opportunità che mi avete dato.\nAndrea de Polo\nproject manager beni culturali",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-07-21T21:06:33.000Z"
+    },
+    {
+      "id": "255",
+      "title": "Bellissima esperienza",
+      "description": "In appena tre giorni sulle Dolomiti abbiamo portato a casa delle bellissime foto (complice anche il meteo fortunato), imparato nozioni importanti sulla tecnica fotografica e sulla filosofia che sta dietro alla fotografia di passeggio. Ultimo aspetto, non meno importante, un bellissimo gruppo! Già dalla prima sera sembravamo dei vecchi amici che si ritrovano davanti ad un tavolo da biliardo! ?\nConsiglio sicuramente l’esperienza.\nStefano",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "published_at": "2023-07-17T07:04:06.000Z"
+    },
+    {
+      "id": "256",
+      "title": "Splendido gruppo ed Esperienza Unica",
+      "description": "Esperienza veramente unica sia per gli scatti fatti e sia per i luoghi visitati con Alessandro che si è dimostrato sempre disponibile nei nostri confronti. Indimenticabili le sue lezioni di astronomia sotto le stelle. Si è creato subito un clima da “rimpatriata” con tutti quanti anche se non ci conoscevamo e questo ha contribuito a rendere l’esperienza indimenticabile.",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "published_at": "2023-07-17T07:20:35.000Z"
+    }
+  ],
+  "whats_includeds": [
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Mezza pensione",
+      "description": "La mezza pensione prevede che si possano consumare la colazione e un pasto a scelta tra il pranzo o la cena all'interno della struttura.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/mezza_pensione_3cfc2aa873.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    },
+    {
+      "title": "Supplemento Camera Singola",
+      "description": "Supplemento per prenotare la camera singola",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_person_in_bed_96_717714bbfc.png"
+      }
+    },
+    {
+      "title": "Assicurazione COVID",
+      "description": "Rimborso totale dell'importo per annullamento dovuto alla malattia, alla quarantena, o all'introduzione di nuove restrizioni.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Assicurazione_COVID_026d57d8b3.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "5",
+      "number": 1,
+      "title": "Benvenuto in Dolomiti",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "5",
+          "title": "San Martino di Castrozza",
+          "description": "<ul><li>Ore 14:30: ci incontreremo alla struttura ricettiva Hotel Venezia (o similari), a San Martino di Castrozza (TN), dove faremo base per la prima notte, ci sistemeremo nelle camere e faremo un piccolo briefing sulla pianificazione della fotografia.</li><li>Ore 18:00: ci sposteremo per le luci del tramonto verso le straordinarie Pale di San Martino, presso la Baita Segantini, dove ragioneremo sulla lettura della scena, della composizione e potrai mettere in pratica diverse tecniche fotografiche.</li><li>Ore 21:30: cena (inclusa nella quota)</li><li>Ore 22:30: sessione notturna se le previsioni meteo ce lo consentono</li></ul>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "number": 2,
+      "title": "Tre Cime di Lavaredo",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "6",
+          "title": "Il giro delle Tre Cime di Lavaredo",
+          "description": "<ul><li>Ore 8:00: colazione (inclusa nella quota)&nbsp;</li><li>Ore 9:00: ci muoveremo verso Pocol, dove raggiungeremo la struttura ricettiva per depositare i bagagli. Trascorreremo le prossime due notti qui.&nbsp;</li><li>Ore 12:00: pranzo (non incluso nella quota)&nbsp;</li><li>Ore 13:00: ci dirigeremo verso le Tre Cime di Lavaredo, per affrontare una piacevole escursione (2 ore circa di trekking di livello \"facile\") per raggiungere il rifugio Locatelli, dove scatteremo le foto al tramonto.&nbsp;</li><li>Ore 21:00: cena al sacco (inclusa nella quota)&nbsp;</li><li>Ore 22:00: ricominceremo la discesa verso il rifugio Auronzo, per poi tornare in struttura a Pocol</li></ul>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "number": 3,
+      "title": "Passo Giau e Lago di Limides",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "7",
+          "title": "Trekking immersi nella natura",
+          "description": "<ul><li>Ore 8:00: colazione (inclusa nella quota)&nbsp;</li><li>Ore 9:00: ci muoveremo verso il Passo Giau dove metteremo in pratica le nozioni apprese durante i due giorni passati.&nbsp;</li><li>Ore 13:00: pausa pranzo (pasto non incluso)</li><li>Ore 17:00: ci sposteremo per il tramonto verso il lago di Limides con una splendida escursione nel bosco (40 minuti circa di cammino) per arrivare al fantastico specchio d'acqua dove si specchiano le Tofane.</li><li>Ore 22:00: cena (inclusa nella quota)</li><li>Ore 22:30: sessione notturna se le previsioni meteo ce lo consentono</li></ul>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "number": 4,
+      "title": "Analisi degli scatti e saluti",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "8",
+          "title": "Relax e momenti di condivisione",
+          "description": "<ul><li>Ore 8:00 colazione (inclusa nella quota)</li><li>Ore 9:00 analisi degli scatti fatti in queste giornate</li><li>Ore 10:30: procederemo con il checkout, saluti, fine dell'evento</li></ul>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Fotografia Notturna",
+      "description": "Impara a scattare in luce lunare o con le stelle",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "7",
+      "start": "2022-07-28",
+      "end": "2022-07-31",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 799,
+      "deposit": 100,
+      "balance": 798,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 599,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "76",
+      "start": "2022-09-29",
+      "end": "2022-10-02",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 799,
+      "deposit": 100,
+      "balance": 699,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 699,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "91",
+      "start": "2023-06-29",
+      "end": "2023-07-02",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 849,
+      "deposit": 100,
+      "balance": 749,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 749,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "92",
+      "start": "2023-07-06",
+      "end": "2023-07-09",
+      "status": "confirmed",
+      "maxPax": 8,
+      "price": 849,
+      "deposit": 100,
+      "balance": 749,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 749,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "104",
+      "start": "2024-07-11",
+      "end": "2024-07-14",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 849,
+      "deposit": 100,
+      "balance": 749,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 749,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "105",
+      "start": "2024-07-04",
+      "end": "2024-07-07",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 849,
+      "deposit": 100,
+      "balance": 749,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 749,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/andreacurziph/",
+          "firstName": "Andrea",
+          "lastName": "Curzi",
+          "username": "andreacurzi",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Andre_Curzi_876ef6c363.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>"
+        }
+      ]
+    },
+    {
+      "id": "191",
+      "start": "2025-07-03",
+      "end": "2025-07-06",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 899,
+      "deposit": 269,
+      "balance": 630,
+      "minPax": 4,
+      "currency": null,
+      "priceCompanion": null,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/andreacurziph/",
+          "firstName": "Andrea",
+          "lastName": "Curzi",
+          "username": "andreacurzi",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Andre_Curzi_876ef6c363.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "foto tramonto dolomiti viaggio fotografico italia",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Workshop_photography_events_e2e8e30060d6858ffcd16bd74b9aec7b_1_1d9c708939.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Lago di Limides",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lago_di_limides_ghiacciato_a59c061ff6.jpg",
+      "alt": "lago di limides ghiacciato e tofana viaggio fotografico dolomiti"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Tre Cime di Lavaredo",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Vista_panoramica_tre_cime_di_lavaredo_5d3e8fb48d.jpg",
+      "alt": "viaggio fotografico dolomiti, tre cime di lavaredo, baita segantini"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Passo Giau",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Passo_giau_con_Luna_e3ff8e311d.jpg",
+      "alt": "passo giau illuminato luce lunare viaggio fotografico dolomiti"
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "Pale di San Martino",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_baita_segantini_e_pale_di_san_martino_8e6d0f720c.jpg",
+      "alt": "tramonto baita segantini pale di san martino viaggio fotografico dolomiti"
+    },
+    {
+      "id": "4",
+      "type": "tour",
+      "title": "Cadini di Misurina",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/cadini_di_misurina_ddadb8f55a.jpg",
+      "alt": "cadini di misurina alba viaggio fotografico dolomiti"
+    },
+    {
+      "id": "5",
+      "type": "group",
+      "title": "Weshooters brindisi in dolomiti",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/brindisi_in_dolomiti_fa74f0a82d.jpg",
+      "alt": "weshooters brindisi viaggio fotografico dolomiti"
+    },
+    {
+      "id": "6",
+      "type": "group",
+      "title": "WeShooter in dolomiti alle tre cime",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooter_in_dolomiti_tre_cime_acd42b289d.jpg",
+      "alt": "WeShooter in gruppo alle tre cime viaggio fotografico dolomiti"
+    },
+    {
+      "id": "7",
+      "type": "group",
+      "title": "WeShooter corso di post produzione dolomiti",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooter_corso_di_post_produzione_in_dolomiti_c5f6e3ced8.jpg",
+      "alt": "WeShooter corso di post produzione viaggio fotografico dolomiti"
+    },
+    {
+      "id": "8",
+      "type": "group",
+      "title": "WeShooters alle cinque torri dolomiti",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_alle_cinque_torri_dolomiti_e62a21c665.jpg",
+      "alt": "WeShooters foto gruppo cinque torri viaggio fotografico dolomiti"
+    },
+    {
+      "id": "9",
+      "type": "group",
+      "title": "Gruppo WeShooters in Dolomiti",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gruppo_We_Shooters_in_Dolomiti_9b3992f1af.JPG",
+      "alt": "weshooters gruppo viaggio fotografico dolomiti"
+    },
+    {
+      "id": "10",
+      "type": "group",
       "title": "Passeggiata lago Limides",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Passeggiata_lago_Limides_10796f22d9.JPG",
+      "alt": "weshooters trekking limides viaggio fotografico dolomiti"
     },
     {
-      "id": "186",
+      "id": "11",
+      "type": "group",
       "title": "WeShooter scattano la Tofana",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooter_scattano_la_Tofana_0d82da9a88.JPG",
+      "alt": "WeShooter fase di scatto Tofana viaggio fotografico dolomiti"
     },
     {
-      "id": "187",
+      "id": "12",
+      "type": "group",
       "title": "WeShooters tra la nebbia dolomiti",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_tra_la_nebbia_dolomiti_a893e681a0.JPG",
+      "alt": "weshooters pale di san martino nebbia viaggio fotografico dolomiti"
     },
     {
-      "id": "188",
+      "id": "13",
+      "type": "group",
       "title": "Grotta tre cime di lavaredo",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Grotta_tre_cime_di_lavaredo_24b57d1fab.jpg",
+      "alt": "fotografo grotta tre cime di lavaredo viaggio fotografico dolomiti"
     },
     {
-      "id": "189",
+      "id": "14",
+      "type": "group",
       "title": "WeShooter fase di scatto dolomiti",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooter_fase_di_scatto_dolomiti_8ee01bb5c0.JPG",
+      "alt": "weshooter composizione viaggio fotografico dolomiti"
     },
     {
-      "id": "208",
+      "id": "15",
+      "type": "tour",
       "title": "Genziana Passo Giau",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Passo_giau_24c1d430ba.jpg",
+      "alt": "nuvole e piante passo giau viaggio fotografico dolomiti italia"
+    },
+    {
+      "id": "locpic-0-3",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Paesaggi_e_malghe_dolomiti_620a01530e.jpg",
+      "alt": "Marika Greco malghe e paesaggi viaggio fotografico dolomiti"
+    },
+    {
+      "id": "locpic-1-4",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tre_cime_di_Lavaredo_d879297b00.jpg",
+      "alt": "tour fotografico Dolomiti, viaggio fotografico"
+    },
+    {
+      "id": "locpic-2-3",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Abete_solitario_dolomiti_d5c18bb25b.jpg",
+      "alt": "montagna Marika Greco viaggio fotografico dolomiti"
     }
   ]
 }

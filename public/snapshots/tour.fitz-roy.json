@@ -1,143 +1,882 @@
 {
+  "id": "30",
+  "tour_id": "viaggio-fotografico-patagonia",
   "slug": "fitz-roy",
   "title": "Patagonia: un viaggio fotografico che unisce passione per la fotografia e amore per l'avventura.",
-  "states": {
-    "slug": "argentina"
-  },
+  "description": "<p>La Patagonia argentina, con la sua maestosa bellezza selvaggia, incanta i milioni di fotografi ogni anno con paesaggi epici e imponenti. Nella regione di El Chalten le vette scintillanti dei ghiacciai si ergono contro il cielo azzurro, riflettendo uno spettacolo surreale. Le acque turchesi dei laghi contrastano con il bianco delle cime, creando una tavolozza di colori che non si può trovare in nessun altro posto del pianeta.</p><p>Durante il nostro viaggio fotografico, saremo guidati da Luciano Bacchi, un'esperta guida locale, che ci farà esplorare non solo le location iconiche come la Laguna Capri e la Laguna de los Tres, ma anche angoli più nascosti come le valli remote e i boschi che circondano queste montagne. Cattureremo la luce del mattino che accende le vette più alte ed i tramonti che dipingono il FitzRoy e il Cerro Torre con tonalità calde e avvolgenti. Ogni scatto sarà incredibilmente d'impatto, a qualsiasi ora porteremo a casa un pezzo di questo angolo incontaminato del mondo.</p><p>Foto credits: Giacomo Finotti</p>",
+  "excerpt": "Preparati a vivere un'esperienza fotografica tra i paesaggi più spettacolari del pianeta",
+  "difficulty": "medium",
+  "experience_level": "Sfida",
+  "things_needed": null,
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "fitz-roy"
+    "slug": "fitz-roy",
+    "locale": "it",
+    "name": "Fitz Roy"
   },
-  "sessions": [
+  "states": {
+    "name": "Argentina",
+    "slug": "argentina",
+    "description": "<p>Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia. Scopri paesaggi mozzafiato, colori incredibili e natura incontaminata. Unisciti a noi per catturare la bellezza selvaggia del Sud America attraverso l'obiettivo della tua macchina fotografica. Esperienze indimenticabili e scatti spettacolari ti aspettano</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Patagonia 2025/26",
+    "metaDescription": "Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia, paesaggi mozzafiato e natura incontaminata.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2024-03-16",
-      "end": "2024-03-27"
+      "id": "213",
+      "title": "El Calafate",
+      "description": "El Calafate è una città situata nella regione della Patagonia, nel sud dell'Argentina. È famosa principalmente come porta d'accesso al Parco Nazionale Los Glaciares, un'area di straordinaria bellezza naturale. La città prende il nome dal cespuglio di calafate, tipico della regione.",
+      "slug": "el-calafate",
+      "locale": "it",
+      "state": {
+        "name": "Argentina",
+        "slug": "argentina",
+        "locale": "it",
+        "description": "<p>Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia. Scopri paesaggi mozzafiato, colori incredibili e natura incontaminata. Unisciti a noi per catturare la bellezza selvaggia del Sud America attraverso l'obiettivo della tua macchina fotografica. Esperienze indimenticabili e scatti spettacolari ti aspettano</p>"
+      },
+      "steps": [
+        {
+          "id": "158",
+          "title": "Presentazioni e Preparativi a El Calafate",
+          "description": "<p>Inizia il nostro viaggio fotografico in Patagonia con l'incontro della nostra guida locole all'aeroporto di El Calafate. C i trasferiremo in Hotel per sistemarci e organizzarci per la cena. Preparati per un'avventura unica, dove ogni scatto racconterà una storia affascinante.</p>",
+          "locale": "it"
+        },
+        {
+          "id": "167",
+          "title": "Trasferimento a El Calafate",
+          "description": "<p>Ci trasferiremo verso El Calafate e una volta arrivati, avrai l'intera giornata a tua disposizione per esplorare questa affascinante città a tuo piacimento. Potrai immergerti nella cultura locale, passeggiare per le sue strade caratteristiche, gustare la cucina tipica o semplicemente rilassarti e goderti l'atmosfera unica di questo luogo. La giornata si concluderà con un confortevole pernottamento in hotel o ostello.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/El_Calafate_b4e6868072.jpg",
+          "alternativeText": "Viaggio Fotografico Patagonia argentina"
+        }
+      ]
     },
     {
-      "start": "2025-04-07",
-      "end": "2025-04-21"
+      "id": "214",
+      "title": "El Chalten",
+      "description": "El Chaltén è un piccolo villaggio di montagna situato all'interno del Parco Nazionale Los Glaciares, ai piedi delle imponenti cime del Monte Fitz Roy e del Cerro Torre, nella regione della Patagonia in Argentina. Fondato nel 1985, si è rapidamente affermato come la capitale del trekking in Argentina.",
+      "slug": "el-chalten",
+      "locale": "it",
+      "state": {
+        "name": "Argentina",
+        "slug": "argentina",
+        "locale": "it",
+        "description": "<p>Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia. Scopri paesaggi mozzafiato, colori incredibili e natura incontaminata. Unisciti a noi per catturare la bellezza selvaggia del Sud America attraverso l'obiettivo della tua macchina fotografica. Esperienze indimenticabili e scatti spettacolari ti aspettano</p>"
+      },
+      "steps": [
+        {
+          "id": "159",
+          "title": "Preparazione per l'Outdoor a El Chalten",
+          "description": "<p>Il secondo giorno ci occuperemo di gestire tutta la fase logistica di questo viaggio fotografico in Patagonia; faremo spesa con viveri e gas per i fornelli, faremo un<span style=\"color:hsl(0, 0%, 0%);\"> discorso tecnico sulla preparazione dell'attrezzatura fotografica per il trekking al campo base del Fitz Roy del giorno successivo. Verso le 17 faremo un trekking di 2km per raggiungere Mirador del Paredón, con vista sulla città e sulle Cerro Torre e Fitz Roy al tramonto.&nbsp;</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/El_Chalten_patagonia_argentina_84bd35bb5c.png",
+          "alternativeText": "viaggio fotografico patagonia"
+        }
+      ]
+    },
+    {
+      "id": "215",
+      "title": "Fitz Roy",
+      "description": "Il Monte Fitz Roy, noto anche come Cerro Fitz Roy, è una delle montagne più iconiche e imponenti della Patagonia, situata al confine tra l'Argentina e il Cile. Alto 3.405 metri sopra il livello del mare, il Fitz Roy è noto per le sue pareti verticali di granito e per le sue condizioni meteorologiche estremamente imprevedibili e difficili.",
+      "slug": "fitz-roy",
+      "locale": "it",
+      "state": {
+        "name": "Argentina",
+        "slug": "argentina",
+        "locale": "it",
+        "description": "<p>Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia. Scopri paesaggi mozzafiato, colori incredibili e natura incontaminata. Unisciti a noi per catturare la bellezza selvaggia del Sud America attraverso l'obiettivo della tua macchina fotografica. Esperienze indimenticabili e scatti spettacolari ti aspettano</p>"
+      },
+      "steps": [
+        {
+          "id": "160",
+          "title": "Alla Scoperta del Fitz Roy: Campeggio, Trekking e Scatti ",
+          "description": "<p>Ci sveglieremo all'alba per raggiungere il Mirador con il minivan e fotogrfare l'alba. Dopo essere rientrati in Hotel e aver fatto colazione, ci prepareremo per raggiungere il campeggio Poicenot, sarà il nostro punto strategico per esplorare l'area intorno al Fitz Roy. Faremo un trekking di circa 10km per raggiungere le location di scatto per il tramonto e la notturna. Trascorreremo la notte al campo di Poicenot.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fitz_Roy_e194d2c15f.jpg",
+          "alternativeText": "viaggio fotografico patagonia, campo tenda Poicenot"
+        }
+      ]
+    },
+    {
+      "id": "216",
+      "title": "Poicenot",
+      "description": "Il Campo Base Poincenot sarà il punto di partenza per le nostre escursioni intorno al Monte Fitz Roy. Circondato da panorami mozzafiato della Patagonia, offre un'esperienza immersiva nella natura selvaggia, con accesso a sentieri spettacolari e viste indimenticabili.",
+      "slug": "poicenot",
+      "locale": "it",
+      "state": {
+        "name": "Argentina",
+        "slug": "argentina",
+        "locale": "it",
+        "description": "<p>Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia. Scopri paesaggi mozzafiato, colori incredibili e natura incontaminata. Unisciti a noi per catturare la bellezza selvaggia del Sud America attraverso l'obiettivo della tua macchina fotografica. Esperienze indimenticabili e scatti spettacolari ti aspettano</p>"
+      },
+      "steps": [
+        {
+          "id": "160",
+          "title": "Alla Scoperta del Fitz Roy: Campeggio, Trekking e Scatti ",
+          "description": "<p>Ci sveglieremo all'alba per raggiungere il Mirador con il minivan e fotogrfare l'alba. Dopo essere rientrati in Hotel e aver fatto colazione, ci prepareremo per raggiungere il campeggio Poicenot, sarà il nostro punto strategico per esplorare l'area intorno al Fitz Roy. Faremo un trekking di circa 10km per raggiungere le location di scatto per il tramonto e la notturna. Trascorreremo la notte al campo di Poicenot.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Pranzo_al_Camping_Poicenot_00389621f9.JPG",
+          "alternativeText": "viaggio fotografico patagonia argentina"
+        }
+      ]
+    },
+    {
+      "id": "217",
+      "title": "Laguna de Los Tres",
+      "description": "La Laguna de Los Tres è famosa per le sue acque cristalline e la vista mozzafiato sul Monte Fitz Roy che inevitabilmente ci si specchia dentro.",
+      "slug": "laguna-de-los-tres",
+      "locale": "it",
+      "state": {
+        "name": "Argentina",
+        "slug": "argentina",
+        "locale": "it",
+        "description": "<p>Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia. Scopri paesaggi mozzafiato, colori incredibili e natura incontaminata. Unisciti a noi per catturare la bellezza selvaggia del Sud America attraverso l'obiettivo della tua macchina fotografica. Esperienze indimenticabili e scatti spettacolari ti aspettano</p>"
+      },
+      "steps": [
+        {
+          "id": "161",
+          "title": "Alba sulla Laguna, colori e riflessi magici",
+          "description": "<p>Trekking mattutino alla Laguna de Los Tres per fotografare l'alba sul Fitz Roy. Dopo l'alba rientreremo al camp per riposarci e prepararci ad esplorare e catturare la bellezza incontaminata della Patagonia al tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Laguna_de_Los_Tres_con_Via_Lattea_250e5b5ff9.JPG",
+          "alternativeText": "viaggio fotografico patagonia argentina fitz roy"
+        }
+      ]
+    },
+    {
+      "id": "218",
+      "title": "Foresta Secca",
+      "description": "La foresta secca in Patagonia argentina è un ecosistema unico, caratterizzato da un ambiente arido e ventoso. Queste foreste sono composte principalmente da arbusti e alberi bassi, adattati per sopravvivere in condizioni di scarsa piovosità e suoli spesso poveri.",
+      "slug": "foresta-secca",
+      "locale": "it",
+      "state": {
+        "name": "Argentina",
+        "slug": "argentina",
+        "locale": "it",
+        "description": "<p>Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia. Scopri paesaggi mozzafiato, colori incredibili e natura incontaminata. Unisciti a noi per catturare la bellezza selvaggia del Sud America attraverso l'obiettivo della tua macchina fotografica. Esperienze indimenticabili e scatti spettacolari ti aspettano</p>"
+      },
+      "steps": [
+        {
+          "id": "162",
+          "title": "Scopriamo Foresta Secca e altre Lagune del parco naturale",
+          "description": "<p>Ci alzeremo la mattina presto per lasciare il camp e andare a fotografare l'alba lungo il pendio di Cerro Polo. Incontreremo diverse Lagune fino ad arrivare a Foresta Secca. Dopo l'alba rientreremo al camp per pranzare e ripartire per una nuova sessione fotografica all'interno del parco naturale per immortalare il Fitz Roy al tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fitz_Roy_al_Tramonto_d5b80c58f9.JPG",
+          "alternativeText": "viaggio fotografico patagonia, campo tenda Poicenot"
+        }
+      ]
+    },
+    {
+      "id": "219",
+      "title": "Laguna Sucia",
+      "description": "La Laguna Sucia, situata nel Parco Nazionale Los Glaciares in Patagonia, Argentina, è una meraviglia naturale nascosta. Questa laguna, con le sue acque turchesi e circondata da imponenti ghiacciai e ripide pareti rocciose, offre uno spettacolo naturale mozzafiato.",
+      "slug": "laguna-sucia",
+      "locale": "it",
+      "state": {
+        "name": "Argentina",
+        "slug": "argentina",
+        "locale": "it",
+        "description": "<p>Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia. Scopri paesaggi mozzafiato, colori incredibili e natura incontaminata. Unisciti a noi per catturare la bellezza selvaggia del Sud America attraverso l'obiettivo della tua macchina fotografica. Esperienze indimenticabili e scatti spettacolari ti aspettano</p>"
+      },
+      "steps": [
+        {
+          "id": "163",
+          "title": "Alla scoperta della Laguna Sucia",
+          "description": "<p>Ci alzeremo prima dell'alba per continuare il nostro viaggio fotografico verso Laguna Sucia, un luogo magico dove avrai l'opportunità di fotografare il Monte Fitz Roy sotto le prime luci dell'alba, che si riflette nelle acque turchesi del lago. Più tardi rientreremo al campo per un pranzo ristoratore. Una volta rilassati, ci metteremo in cammino verso il Rio Bianco per le luci del tramonto. Se le condizioni meteorologiche saranno favorevoli, la sera sarà dedicata a catturare la maestosità della via Lattea e lo splendore del cielo stellato, un'esperienza unica per ogni appassionato di fotografia.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Laguna_Sucia_c8530aaa69.png",
+          "alternativeText": "viaggio fotografico patagonia, argentina, fitz roy, cerro torre"
+        }
+      ]
+    },
+    {
+      "id": "225",
+      "title": "Gruppo WeShooters Patagonia",
+      "description": "Foto di gruppo dei ragazzi che hanno partecipato al viaggio fotografico in Patagonia con WeShoot.",
+      "slug": "gruppo-we-shooters-patagonia",
+      "locale": "it",
+      "state": {
+        "name": "Argentina",
+        "slug": "argentina",
+        "locale": "it",
+        "description": "<p>Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia. Scopri paesaggi mozzafiato, colori incredibili e natura incontaminata. Unisciti a noi per catturare la bellezza selvaggia del Sud America attraverso l'obiettivo della tua macchina fotografica. Esperienze indimenticabili e scatti spettacolari ti aspettano</p>"
+      },
+      "steps": [
+        {
+          "id": "168",
+          "title": "Colazione, saluti e trasferimento in aeroporto",
+          "description": "<p>Dopo una ricca colazione ci prepariamo per lasciare la struttura e raggiungere l'aeroporto, dove un lungo viaggio ci attenderà prima di rientrare a casa in Italia.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_gruppo_Patagonia_d0f85cc3c9.JPG",
+          "alternativeText": "viaggio fotografico patagonia laguna torre gruppo"
+        },
+        {
+          "id": "locpic-7-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Briefing_trekking_Fitz_Roy_weshooters_be3633ce45.JPG",
+          "alternativeText": "viaggio fotografico patagonia trekking fitz roy"
+        }
+      ]
     }
   ],
   "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Guida Locale",
+      "description": "Potremo usufruire di una guida turistica locale che ci accompagnerà durante il viaggio fotografico.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_tourist_guide_skin_type_1_96_f5e7901b4f.png"
+      }
+    },
+    {
+      "title": "Volo A/R dall'Italia (Roma)",
+      "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "169",
+      "number": 1,
+      "title": "Benvenuti in Patagonia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "158",
+          "title": "Presentazioni e Preparativi a El Calafate",
+          "description": "<p>Inizia il nostro viaggio fotografico in Patagonia con l'incontro della nostra guida locole all'aeroporto di El Calafate. C i trasferiremo in Hotel per sistemarci e organizzarci per la cena. Preparati per un'avventura unica, dove ogni scatto racconterà una storia affascinante.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "170",
+      "number": 2,
+      "title": "Immersione nella Natura Selvaggia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "159",
+          "title": "Preparazione per l'Outdoor a El Chalten",
+          "description": "<p>Il secondo giorno ci occuperemo di gestire tutta la fase logistica di questo viaggio fotografico in Patagonia; faremo spesa con viveri e gas per i fornelli, faremo un<span style=\"color:hsl(0, 0%, 0%);\"> discorso tecnico sulla preparazione dell'attrezzatura fotografica per il trekking al campo base del Fitz Roy del giorno successivo. Verso le 17 faremo un trekking di 2km per raggiungere Mirador del Paredón, con vista sulla città e sulle Cerro Torre e Fitz Roy al tramonto.&nbsp;</span></p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "171",
+      "number": 3,
+      "title": "Poicenot",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "160",
+          "title": "Alla Scoperta del Fitz Roy: Campeggio, Trekking e Scatti ",
+          "description": "<p>Ci sveglieremo all'alba per raggiungere il Mirador con il minivan e fotogrfare l'alba. Dopo essere rientrati in Hotel e aver fatto colazione, ci prepareremo per raggiungere il campeggio Poicenot, sarà il nostro punto strategico per esplorare l'area intorno al Fitz Roy. Faremo un trekking di circa 10km per raggiungere le location di scatto per il tramonto e la notturna. Trascorreremo la notte al campo di Poicenot.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "172",
+      "number": 4,
+      "title": "Laguna De Los Tres",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "161",
+          "title": "Alba sulla Laguna, colori e riflessi magici",
+          "description": "<p>Trekking mattutino alla Laguna de Los Tres per fotografare l'alba sul Fitz Roy. Dopo l'alba rientreremo al camp per riposarci e prepararci ad esplorare e catturare la bellezza incontaminata della Patagonia al tramonto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "173",
+      "number": 5,
+      "title": "Foresta Secca e Lagune",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "162",
+          "title": "Scopriamo Foresta Secca e altre Lagune del parco naturale",
+          "description": "<p>Ci alzeremo la mattina presto per lasciare il camp e andare a fotografare l'alba lungo il pendio di Cerro Polo. Incontreremo diverse Lagune fino ad arrivare a Foresta Secca. Dopo l'alba rientreremo al camp per pranzare e ripartire per una nuova sessione fotografica all'interno del parco naturale per immortalare il Fitz Roy al tramonto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "174",
+      "number": 6,
+      "title": "Laguna Sucia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "163",
+          "title": "Alla scoperta della Laguna Sucia",
+          "description": "<p>Ci alzeremo prima dell'alba per continuare il nostro viaggio fotografico verso Laguna Sucia, un luogo magico dove avrai l'opportunità di fotografare il Monte Fitz Roy sotto le prime luci dell'alba, che si riflette nelle acque turchesi del lago. Più tardi rientreremo al campo per un pranzo ristoratore. Una volta rilassati, ci metteremo in cammino verso il Rio Bianco per le luci del tramonto. Se le condizioni meteorologiche saranno favorevoli, la sera sarà dedicata a catturare la maestosità della via Lattea e lo splendore del cielo stellato, un'esperienza unica per ogni appassionato di fotografia.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "175",
+      "number": 7,
+      "title": "Río Chorrillo",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "164",
+          "title": "Cascata Nascosta e Laguna Capri",
+          "description": "<p>La giornata si aprirà con un piacevole trekking di 11 km che ci porterà attraverso la zona del Río Chorrillo e della Laguna Capri. Avrai l'opportunità di catturare immagini spettacolari, sia sotto la \"hidden waterfalls\" con il Monte Fitz Roy sullo sfondo, sia ammirando i magnifici riflessi sulla Laguna Capri. Il pomeriggio sarà a tua disposizione: potrai esplorare ulteriormente la zona intorno al camp, dedicarti al backup delle tue foto, lavorare sulla post-produzione di alcune immagini e condividere le tue esperienze con gli altri. Alle 18:00, ci riuniremo per partire con il minivan verso il Patagonia Traveller's Hostel, concludendo così una giornata ricca di avventure fotografiche.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "176",
+      "number": 8,
+      "title": "Cerro Torre e Laguna Torre",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "165",
+          "title": "Laguna Torre e Cerro Torre",
+          "description": "<p>La nostra avventura continua all'alba con una partenza alle 05:00 da El Chaltén verso la Laguna Torre, un viaggio fotografico per immortalare la magia dell'alba e del tramonto sul Cerro Torre, una delle vette più belle della Patagonia. Ci godremo un'alba spettacolare dal belvedere del Cerro Torre, un momento perfetto per scatti unici. Il trekking di 11 km attraverso paesaggi mozzafiato ci porterà in posizioni ideali per fotografare il tramonto e le scene notturne, sia dal fiume Fitz Roy sia direttamente dalla Laguna Torre. Trascorreremo la notte al Thorwood Camp, il campo base vicino alla Laguna Torre, per un'esperienza autentica e indimenticabile nel cuore della Patagonia selvaggia.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "177",
+      "number": 9,
+      "title": "Cerro Torre e Laguna Torre",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "178",
+      "number": 10,
+      "title": "Belvedere maestri e rientro a El Chaltén",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "166",
+          "title": "Alba belvedere dei Maestri e rientro a El Chaltén",
+          "description": "<p>La giornata inizia all'insegna dell'avventura e della fotografia con una partenza all'alba, alle 05:30, per catturare la magia del sorgere del sole sul Cerro Torre e la Laguna Torre dal Belvedere di Maestri. Questo momento unico offre l'opportunità di scattare foto mozzafiato in una luce perfetta. Dopo aver immortalato l'alba, torneremo verso El Chaltén, un trekking di 11 km che ti permetterà di catturare ulteriori immagini suggestive del Cerro Torre lungo il sentiero. Il pomeriggio sarà a tua completa disposizione per rilassarti o esplorare altre attività a tuo piacimento. Sarà anche il momento ideale per dedicarti al download e al backup delle tue foto, oltre che alla loro post-produzione, per conservare e migliorare i ricordi della tua esperienza. La giornata si concluderà con una notte di riposo al Patagonia Traveller's Hostel.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "179",
+      "number": 11,
+      "title": "Trasferimento a El Calafate",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "167",
+          "title": "Trasferimento a El Calafate",
+          "description": "<p>Ci trasferiremo verso El Calafate e una volta arrivati, avrai l'intera giornata a tua disposizione per esplorare questa affascinante città a tuo piacimento. Potrai immergerti nella cultura locale, passeggiare per le sue strade caratteristiche, gustare la cucina tipica o semplicemente rilassarti e goderti l'atmosfera unica di questo luogo. La giornata si concluderà con un confortevole pernottamento in hotel o ostello.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "180",
+      "number": 12,
+      "title": " Saluti Patagonia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "168",
+          "title": "Colazione, saluti e trasferimento in aeroporto",
+          "description": "<p>Dopo una ricca colazione ci prepariamo per lasciare la struttura e raggiungere l'aeroporto, dove un lungo viaggio ci attenderà prima di rientrare a casa in Italia.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Tenda",
+      "description": "Esperienza wild",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    },
+    {
+      "id": "hl-7",
+      "title": "Guida Locale",
+      "description": "Accompagnati da guide locali che parlano inglese/italiano",
+      "locale": "it"
+    },
+    {
+      "id": "hl-8",
+      "title": "Volo Incluso",
+      "description": " In questo viaggio è incluso anche il volo A/R",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "163",
+      "start": "2024-03-16",
+      "end": "2024-03-27",
+      "status": "scheduled",
+      "maxPax": 6,
+      "price": 4760,
+      "deposit": 1430,
+      "balance": 3330,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 4760,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "176",
+      "start": "2025-04-07",
+      "end": "2025-04-21",
+      "status": "scheduled",
+      "maxPax": 6,
+      "price": 4760,
+      "deposit": 1430,
+      "balance": 3330,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 4760,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "viaggio fotografico patagonia argentina",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Laguna_de_Los_Tres_con_Via_Lattea_2466cb5a9f.JPG"
+  },
   "pictures": [
     {
-      "id": "322",
+      "id": "0",
+      "type": "tour",
       "title": "Fitz roy",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fitz_Roy_e194d2c15f.jpg",
+      "alt": "viaggio fotografico patagonia, campo tenda Poicenot"
     },
     {
-      "id": "324",
+      "id": "1",
+      "type": "tour",
       "title": "Laguna de Los Tres",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Laguna_de_Los_Tres_con_Via_Lattea_250e5b5ff9.JPG",
+      "alt": "viaggio fotografico patagonia argentina fitz roy"
     },
     {
-      "id": "325",
+      "id": "2",
+      "type": "tour",
       "title": "Foresta Secca",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fitz_Roy_al_Tramonto_d5b80c58f9.JPG",
+      "alt": "viaggio fotografico patagonia, campo tenda Poicenot"
     },
     {
-      "id": "326",
+      "id": "3",
+      "type": "tour",
       "title": "Laguna Sucia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Laguna_Sucia_c8530aaa69.png",
+      "alt": "viaggio fotografico patagonia, argentina, fitz roy, cerro torre"
     },
     {
-      "id": "327",
+      "id": "4",
+      "type": "tour",
       "title": "Cascata Nascosta Patagonia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Hidden_Waterfalls_Patagonia_8e774c1f4c.png",
+      "alt": "cascata nascosta Río Chorrillo viaggio fotografico Patagonia Argentina"
     },
     {
-      "id": "328",
+      "id": "5",
+      "type": "tour",
       "title": "Laguna Capri",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/laguna_capri_3039e459da.jpg",
+      "alt": "viaggio fotografico patagonia argentina "
     },
     {
-      "id": "329",
+      "id": "6",
+      "type": "tour",
       "title": "Laguna Torre",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Laguna_Torre_di_notte_cfd74d35fc.jpg",
+      "alt": "Panoramica dal viaggio fotografico patagonia"
     },
     {
-      "id": "330",
+      "id": "7",
+      "type": "tour",
       "title": "Cerro Torre",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Cerro_Torre_all_alba_cd3256b5a0.JPG",
+      "alt": "viaggio fotografico patagonia argentina"
     },
     {
-      "id": "331",
+      "id": "8",
+      "type": "tour",
       "title": "Maestri Observation Point",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Maestri_Observation_Point_cerro_torre_b3b648d87c.jpg",
+      "alt": "viaggio fotografico patagonia argentina"
     },
     {
-      "id": "334",
+      "id": "9",
+      "type": "group",
       "title": "Gruppo WeShoot inizio trekking",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Briefing_trekking_Fitz_Roy_weshooters_be3633ce45.JPG",
+      "alt": "viaggio fotografico patagonia trekking fitz roy"
     },
     {
-      "id": "335",
+      "id": "10",
+      "type": "group",
       "title": "WeShooters Patagonia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gruppo_scouting_viaggio_fotografico_patagonia_19a5c15594.JPG",
+      "alt": "weshooters in patagonia"
     },
     {
-      "id": "336",
+      "id": "11",
+      "type": "group",
       "title": "WeShooters  verso Laguna Torre",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_gruppo_Patagonia_d0f85cc3c9.JPG",
+      "alt": "viaggio fotografico patagonia laguna torre gruppo"
     },
     {
-      "id": "337",
+      "id": "12",
+      "type": "group",
       "title": "WeShooters inizio sentiero El Chalten",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_inizio_Sentiero_El_Chalten_839015311a.JPG",
+      "alt": "viaggio fotografico patagonia argentina"
     },
     {
-      "id": "338",
+      "id": "13",
+      "type": "group",
       "title": "Scatti a Laguna Torre",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Scatti_a_Laguna_Torre_0fb6421b45.JPG",
+      "alt": "viaggio fotografico patagonia argentina"
     },
     {
-      "id": "339",
+      "id": "14",
+      "type": "group",
       "title": "WeShooters all'Alba sul Fitz Roy e Cerro Torre",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alba_sul_Fitz_Roy_e_Cerro_Torre_5bda29bc13.JPG",
+      "alt": "viaggio fotografico patagonia argentina"
+    },
+    {
+      "id": "locpic-0-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/El_Calafate_b4e6868072.jpg",
+      "alt": "Viaggio Fotografico Patagonia argentina"
+    },
+    {
+      "id": "locpic-1-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/El_Chalten_patagonia_argentina_84bd35bb5c.png",
+      "alt": "viaggio fotografico patagonia"
+    },
+    {
+      "id": "locpic-3-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Pranzo_al_Camping_Poicenot_00389621f9.JPG",
+      "alt": "viaggio fotografico patagonia argentina"
     }
   ]
 }

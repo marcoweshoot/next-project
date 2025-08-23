@@ -1,70 +1,484 @@
 {
+  "id": "9",
+  "tour_id": "matera-e-la-citta-dei-sassi",
   "slug": "matera",
   "title": "Scopri i paesaggi di Matera, una delle città più antiche al mondo",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p>Quando ti troverai a Matera, con la tua reflex in mano a scattare meravigliose fotografie alle case scavate nella roccia della montagna, allora capirai di aver scelto il giusto modo per trascorrere il tuo weekend.</p><p>Un <strong>viaggio fotografico fotografico</strong> alla scoperta di una delle città più affascinanti d’Italia, diventata patrimonio dell’Unesco e Capitale Europea della Cultura, Matera è famosa per essere uno dei primi insediamenti umani, con le sue caverne preistoriche scavate nella roccia fin dai tempi del Paleolitico.</p><p>Due giorni ricchi di emozioni e colori, immerso nella magia di una delle città più antiche del mondo, da condividere con un altri amici che amano la fotografia proprio come te.</p><p>Quale migliore occasione per prendere di nuovo la tua reflex in mano e imparare nuove tecniche da due professionisti della fotografia di paesaggio?</p><p>Ti insegneremo tutte le tecniche per portare a casa degli scatti che faranno rimanere a bocca aperta i tuoi amici e familiari.<br>&nbsp;</p><p>Una full immersion fotografica tra le grotte sparse lungo le Gravine e perché no, un’occasione per assaporare i piatti della cultura della Basilicata.</p><p>Infatti nel tour abbiamo selezionato per te un ristorante tipico in cui includeremo un buonissimo pasto con le specialità di Matera.<br>&nbsp;</p><p><strong>Insomma cosa stai aspettando a prenotare la tua incredibile esperienza a Matera?</strong></p><p><strong>A chi è rivolto questo viaggio fotografico fotografico?</strong></p><p>Il viaggio fotografico è dedicato a tutti, sia al principiante che vuole imparare sul campo al fotografo più esperto in cerca di scoprire o approfondire nuove tecniche fotografiche.</p><p><strong>Cosa imparerò al viaggio fotografico fotografico?&nbsp;</strong></p><p>Il corso è strutturato in modo tale da farti capire come scattare fotografie di vario genere lungo tutto il percorso, scoprendo a fondo sia attrezzatura che creatività. Per tutta la durata del viaggio fotografico fotografico approfondiremo diverse tematiche, saremo pronti a chiarire ogni dubbio dei partecipanti, suggerendo le tecniche e i trucchi per ottenere immagini da cartolina!</p><ul><li><strong>LA</strong> <strong>LUCE</strong>: come gestire la cosa più importante della nostra disciplina.</li><li><strong>LA CORRETTA</strong> <strong>ESPOSIZIONE</strong>: restituire leggibilità alle ombre ed alle luci della scena, catturare un’immagine equilibrata e corretta.</li><li><strong>LA</strong> <strong>COMPOSIZIONE</strong>: dove posizionare gli elementi della scena per dare forza e dinamismo all’immagine</li><li><strong>LE</strong> <strong>INFORMAZIONI SULLA FOTOCAMERA</strong>, come leggere l’istogramma e capire i settaggi, gli strumenti e le diciture che serve conoscere per padroneggiare il nostro “occhio digitale”</li><li><strong>LE LUNGHE ESPOSIZIONI E UTILIZZO DEI FILTRI</strong>, Ti spiegheremo l'uso dei diversi filtri fotografici: ND, polarizzatori e graduati per rendere l’esperienza didattica completa.</li><li><strong>PIANIFICAZIONE:</strong> Inoltre durante il viaggio fotografico si terrà una sessione teorica sulla pianificazione fotografica delle uscite per ottimizzare e migliorare i tuoi risultati finali.</li><li><strong>SESSIONE CRITICA: </strong>nel corso dell'evento faremo una lezione sull'analisi delle foto scattate per imparare a vederli in anticipo</li></ul><p>Ogni partecipante inoltre riceverà un buono sconto da utilizzare su un altro dei nostri viaggi fotografici.</p>",
+  "excerpt": "Un viaggio fotografico tra le bellissime caverne preistoriche dei famosi \"sassi di Matera\"",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking (comsigliato)</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "basilicata"
+    "slug": "basilicata",
+    "locale": "it",
+    "name": "Basilicata"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Matera 2025 | WeShoot",
+    "metaDescription": "Alla scoperta di Matera e della città dei sassi in un viaggio fotografico dove imparerai nuove tecniche fotografiche insieme a 2 fotografi esperti.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-01-29",
-      "end": "2022-01-30"
-    },
-    {
-      "start": "2023-12-16",
-      "end": "2023-12-17"
+      "id": "20",
+      "title": "Matera",
+      "description": "Matera è una delle città più antiche del mondo. Situata in Basilicata su un affioramento roccioso, famosa per le sue case di grotta scavate nella montagna.",
+      "slug": "matera",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "14",
+          "title": "Zaini pronti, comincia il tour fotografico",
+          "description": "- Ore 14: Incontro a Matera e registrazione partecipanti presso struttura convenzionata\n- Ore 15: Prima sessione fotografica: studio della luce e della composizione, lettura dell’esposizione e dell’istogramma\n- Ore 16:30: Seconda sessione fotografica: ti spiegheremo come utilizzare i filtri ND e GND o come fare la tecnica della doppia esposizione o HDR\n- Ore 17:30: Ci prepareremo per le incredibili luci del tramonto, dopo aver scelto lo spot migliore\n- Ore 18:30: Terza sessione fotografica: trucchi e tecniche per la fotografia notturna dove imparerai a gestire esposizione, messa a fuoco e composizione per ottenere incredibili foto notturne, Star-trail e se vuoi Light-painting.\n- Ore 20: Cena in uno dei caratteristici ristoranti di Matera, dove potrai gustare un ottimo pasto e del buon vino (tutto incluso nel prezzo del viaggio fotografico)\n- Ore 22: Utilizzeremo questo tempo per rivedere insieme gli scatti e spiegare come programmare correttamente un uscita fotografica, utilizzando gli strumenti che abbiamo a disposizione sul web e sulle applicazioni del telefono.",
+          "locale": "it"
+        },
+        {
+          "id": "15",
+          "title": "Le colorate luci dell'Alba, didattica e ottimo cibo!",
+          "description": "Ore 5:30: Sveglia per dirigerci alla location prescelta per immortalare le primissime luci dell'alba\nOre 6.30: Quarta sessione fotografica per sfruttare i colori dell'ora blu e le bellissime luci ed ombre del sorgere del sole\nOre 8:30: Rientreremo in Hotel per fare colazione e discutere della mattinata\nOre 9:30: Lezione di analisi critica, dove rivedremo gli scatti\nOre 11:30: Check out dall'albergo\nOre 12: Avremo modo di scoprire Matera passeggiando per il centro della città, occasione per fotografare i famosi Sassi di Matera, in attesa del pranzo\nOre 13: Ci accomoderemo in un tipico ristorante per concludere questa esperienza assaporando pietanze tipiche.",
+          "locale": "it"
+        },
+        {
+          "id": "83",
+          "title": "Le luci di Matera al tramonto e all'ora blu",
+          "description": "<li>Ore 14: Incontro a Matera e registrazione partecipanti presso struttura convenzionata\n<li>Ore 15: Prima sessione fotografica: studio della luce e della composizione, lettura dell’esposizione e dell’istogramma\n<li>Ore 16:30: Seconda sessione fotografica: ti spiegheremo come utilizzare i filtri ND e GND o come fare la tecnica della doppia esposizione o HDR\n<li>Ore 17:30: Ci prepareremo per le incredibili luci del tramonto, dopo aver scelto lo spot migliore\n<li>Ore 18:30: Terza sessione fotografica: trucchi e tecniche per la fotografia notturna dove imparerai a gestire esposizione, messa a fuoco e composizione per ottenere incredibili foto notturne, Star-trail e se vuoi Light-painting.\n<li>Ore 20: Cena in uno dei caratteristici ristoranti di Matera, dove potrai gustare un ottimo pasto e del buon vino (tutto incluso nel prezzo del viaggio fotografico)\n<li>Ore 22: Utilizzeremo questo tempo per rivedere insieme gli scatti e spiegare come programmare correttamente un uscita fotografica, utilizzando gli strumenti che abbiamo a disposizione sul web e sulle applicazioni del telefono.",
+          "locale": "it"
+        },
+        {
+          "id": "84",
+          "title": "Ora blu, alba e discussione degli scatti",
+          "description": "<li>Ore 5:30: Sveglia per dirigerci alla location prescelta per immortalare le primissime luci dell'alba\n<li>Ore 6.30: Quarta sessione fotografica per sfruttare i colori dell'ora blu e le bellissime luci ed ombre del sorgere del sole\n<li>Ore 8:30: Rientreremo in Hotel per fare colazione e discutere della mattinata\n<li>Ore 9:30: Lezione di analisi critica, dove rivedremo gli scatti\n<li>Ore 11:30: Check out dall'albergo\n<li>Ore 12: Avremo modo di scoprire Matera passeggiando per il centro della città, occasione per fotografare i famosi Sassi di Matera, in attesa del pranzo\n<li>Ore 13: Ci accomoderemo in un tipico ristorante per concludere questa esperienza assaporando pietanze tipiche.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Cornice_naturale_dei_sassi_429b935e20.jpg",
+          "alternativeText": "Foto durante il viaggio fotografico a Matera"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gruppo_We_Shooters_a_Matera_3aaa9c49b7.jpg",
+          "alternativeText": "WeShooters viaggio fotografico a Matera"
+        },
+        {
+          "id": "locpic-0-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Matera_di_notte_be5497dab6.jpg",
+          "alternativeText": "foto dal viaggio fotografico a matera"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "158",
+      "title": "Workshop Fotografico a Matera",
+      "description": "Bellissimo fine settimana, in compagnia  di altri appassionati fotografi e di 2 ottimi insegnanti sempre pronti a dispensare consigli, ottima organizzazione, nulla è lasciato al caso. Si scatta molto, senza tralasciare informazioni sulla post produzione e soprattutto come pianificare le uscite fotografiche. ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-12-04T20:06:42.000Z"
     },
     {
-      "rating": 5
+      "id": "159",
+      "title": "Primo workshop lontano da casa",
+      "description": "Un weekend davvero coinvolgente! Sono molto soddisfatta di questa esperienza che mi è capitata per caso sotto mano e a cui ho partecipato seguendo molto l'impulso del momento.\nMarco e Alessandro sono ragazzi molto disponibili e con una gran voglia di esplorare, osservare e crescere. Sono oltretutto degli ottimi insegnanti perchè condividono la loro più grande passione in modo talmente semplice e concreto che non si può non seguirli ovunque vanno (anche sulle dolomiti lucane!!).\nDi tutte le attività svolte, mi è piaciuta in particolare la sessione di pianificazione che mi ha aperto un mondo che ignoravo. Torno a casa con molti spunti su cui lavorare per migliorare la mia tecnica e soprattutto la mia visione del mondo. Grazie!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-12-04T22:31:16.000Z"
     }
   ],
+  "whats_includeds": [
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Maglietta WeShoot",
+      "description": "Diventa parte della community",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_maglietta_96_1_e8cdbaa701.png"
+      }
+    },
+    {
+      "title": "Camera Singola",
+      "description": "Soggiorni in hotel camera singola",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_person_in_bed_96_717714bbfc.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    },
+    {
+      "title": "Supplemento Camera Singola",
+      "description": "Supplemento per prenotare la camera singola",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_person_in_bed_96_717714bbfc.png"
+      }
+    },
+    {
+      "title": "Assicurazione COVID",
+      "description": "Rimborso totale dell'importo per annullamento dovuto alla malattia, alla quarantena, o all'introduzione di nuove restrizioni.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Assicurazione_COVID_026d57d8b3.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "14",
+      "number": 1,
+      "title": "Benvenuti a Matera",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "83",
+          "title": "Le luci di Matera al tramonto e all'ora blu",
+          "description": "<li>Ore 14: Incontro a Matera e registrazione partecipanti presso struttura convenzionata\n<li>Ore 15: Prima sessione fotografica: studio della luce e della composizione, lettura dell’esposizione e dell’istogramma\n<li>Ore 16:30: Seconda sessione fotografica: ti spiegheremo come utilizzare i filtri ND e GND o come fare la tecnica della doppia esposizione o HDR\n<li>Ore 17:30: Ci prepareremo per le incredibili luci del tramonto, dopo aver scelto lo spot migliore\n<li>Ore 18:30: Terza sessione fotografica: trucchi e tecniche per la fotografia notturna dove imparerai a gestire esposizione, messa a fuoco e composizione per ottenere incredibili foto notturne, Star-trail e se vuoi Light-painting.\n<li>Ore 20: Cena in uno dei caratteristici ristoranti di Matera, dove potrai gustare un ottimo pasto e del buon vino (tutto incluso nel prezzo del viaggio fotografico)\n<li>Ore 22: Utilizzeremo questo tempo per rivedere insieme gli scatti e spiegare come programmare correttamente un uscita fotografica, utilizzando gli strumenti che abbiamo a disposizione sul web e sulle applicazioni del telefono.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "number": 2,
+      "title": "Una mattinata ricca di emozioni",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "84",
+          "title": "Ora blu, alba e discussione degli scatti",
+          "description": "<li>Ore 5:30: Sveglia per dirigerci alla location prescelta per immortalare le primissime luci dell'alba\n<li>Ore 6.30: Quarta sessione fotografica per sfruttare i colori dell'ora blu e le bellissime luci ed ombre del sorgere del sole\n<li>Ore 8:30: Rientreremo in Hotel per fare colazione e discutere della mattinata\n<li>Ore 9:30: Lezione di analisi critica, dove rivedremo gli scatti\n<li>Ore 11:30: Check out dall'albergo\n<li>Ore 12: Avremo modo di scoprire Matera passeggiando per il centro della città, occasione per fotografare i famosi Sassi di Matera, in attesa del pranzo\n<li>Ore 13: Ci accomoderemo in un tipico ristorante per concludere questa esperienza assaporando pietanze tipiche.",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Urbano",
+      "description": "Viaggi fotografici tra borghi e paesaggi urbani",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Fotografia Notturna",
+      "description": "Impara a scattare in luce lunare o con le stelle",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "10",
+      "start": "2022-01-29",
+      "end": "2022-01-30",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 199,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "139",
+      "start": "2023-12-16",
+      "end": "2023-12-17",
+      "status": "waitingList",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 100,
+      "balance": 299,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 199,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "Assicurazione COVID e m/b",
+      "answer": "<p>Al momento della prenotazione si può scegliere di assicurare il viaggio fotografico con un sovra-prezzo che varia dalle 20,60€ fino ad un massimo di 60€ (il prezzo varia a seconda del tour fotografico e della fascia di età del richiedente). Questo tipo di assicurazione copre sia le spese medico/bagaglio, sia <span style=\"background-color:rgb(255,255,255);color:rgb(51,51,51);\">qualsiasi inconveniente causato da COVID-19. La nostra agenzia viaggi resta a disposizione per qualsiasi chiarimento in merito.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Workshop_photography_events_52243eac50fcff8630606baf0025bd8a_eec758f062.jpg"
+  },
   "pictures": [
     {
-      "id": "22",
+      "id": "0",
+      "type": "tour",
       "title": "Matera incorniciata al tramonto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Cornice_naturale_dei_sassi_429b935e20.jpg",
+      "alt": "Foto durante il viaggio fotografico a Matera"
     },
     {
-      "id": "183",
+      "id": "1",
+      "type": "group",
       "title": "Gruppo WeShooters a Matera",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gruppo_We_Shooters_a_Matera_3aaa9c49b7.jpg",
+      "alt": "WeShooters viaggio fotografico a Matera"
     },
     {
-      "id": "205",
+      "id": "2",
+      "type": "tour",
       "title": "Sassi di Matera al tramonto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Matera_vista_dai_sassi_907c73c00d.jpg",
+      "alt": "viaggio fotografico a Matera"
     },
     {
-      "id": "206",
+      "id": "3",
+      "type": "tour",
       "title": "Belvedere Murgia Timone",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Matera_all_ora_blu_9e99035574.jpg",
+      "alt": "viaggio fotografico matera, sassi di matera"
     },
     {
-      "id": "207",
+      "id": "4",
+      "type": "tour",
       "title": "Matera di notte",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Matera_di_notte_be5497dab6.jpg",
+      "alt": "foto dal viaggio fotografico a matera"
     }
   ]
 }

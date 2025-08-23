@@ -1,3 +1,4 @@
+// src/components/tour-detail/GroupGallerySection.tsx
 'use client';
 
 import React from 'react';
@@ -38,6 +39,62 @@ function toAbsoluteUrl(rawUrl: string): string {
   return joinUrl(base, rawUrl);
 }
 
+/** Normalizza qualunque shape di picture in una lista di immagini */
+function normalizeGroupImages(gallery: any[] = []): GalleryImage[] {
+  // 1) tieni SOLO i record con type === 'group'
+  const onlyGroup = gallery.filter(
+    (p) => String(p?.type || '').toLowerCase() === 'group'
+  );
+
+  // 2) estrai immagini sia top-level (url) sia annidate (image / images)
+  const out: GalleryImage[] = [];
+
+  for (const pic of onlyGroup) {
+    // a) formato "nuovo": url a livello top
+    if (pic?.url) {
+      out.push({
+        id: String(pic.id ?? pic.url),
+        url: toAbsoluteUrl(pic.url),
+        alternativeText: pic.alt || pic.alternativeText || '',
+        caption: pic.title || '',
+      });
+    }
+
+    // b) formato "vecchio": image singolo / array, o images[]
+    const rawImages = Array.isArray(pic?.image)
+      ? pic.image
+      : Array.isArray(pic?.images)
+      ? pic.images
+      : pic?.image
+      ? [pic.image]
+      : [];
+
+    for (const img of rawImages) {
+      const url = toAbsoluteUrl(
+        img?.formats?.large?.url || img?.url || img?.formats?.thumbnail?.url || ''
+      );
+      if (!url) continue;
+
+      out.push({
+        id: String(img?.id ?? pic?.id ?? url),
+        url,
+        alternativeText: img?.alternativeText || pic?.title || '',
+        caption: img?.caption || pic?.title || '',
+      });
+    }
+  }
+
+  // 3) filtra invalide e de-duplica per URL
+  const seen = new Set<string>();
+  return out
+    .filter((it) => !!it.url)
+    .filter((img) => {
+      if (seen.has(img.url)) return false;
+      seen.add(img.url);
+      return true;
+    });
+}
+
 const GroupGallerySection: React.FC<GroupGallerySectionProps> = ({
   gallery,
   title = 'E tu sei pronto a viaggiare con nuovi amici come te?',
@@ -48,32 +105,7 @@ const GroupGallerySection: React.FC<GroupGallerySectionProps> = ({
 
   const images: GalleryImage[] = React.useMemo(() => {
     if (!Array.isArray(gallery) || gallery.length === 0) return [];
-
-    // 1) type === 'group' (case-insensitive), fallback a tutto
-    const groupPics = gallery.filter((p) => String(p?.type || '').toLowerCase() === 'group');
-    const pics = groupPics.length ? groupPics : gallery;
-
-    // 2) normalizza `image` / `images`
-    const normalized: GalleryImage[] = pics.flatMap((pic: any) => {
-      const rawImages = Array.isArray(pic?.image)
-        ? pic.image
-        : Array.isArray(pic?.images)
-        ? pic.images
-        : pic?.image
-        ? [pic.image]
-        : [];
-
-      return rawImages
-        .filter(Boolean)
-        .map((img: any) => ({
-          id: String(img?.id ?? pic?.id ?? ''),
-          url: toAbsoluteUrl(img?.url || ''),
-          alternativeText: img?.alternativeText || img?.alternative_text || '',
-          caption: img?.caption || pic?.title || '',
-        }));
-    });
-
-    return normalized.filter((it) => !!it.url);
+    return normalizeGroupImages(gallery);
   }, [gallery]);
 
   const openLightbox = React.useCallback(
@@ -105,8 +137,12 @@ const GroupGallerySection: React.FC<GroupGallerySectionProps> = ({
     [nextImage, prevImage, closeLightbox]
   );
 
+  // 👉 se non ci sono foto "group", puoi:
+  // - mostrare l'empty state (comportamento attuale)
+  // - oppure ritornare null per nascondere completamente la sezione.
   if (images.length === 0) {
-    return <GalleryEmptyState />;
+    //return <GalleryEmptyState />;
+    return null;
   }
 
   return (

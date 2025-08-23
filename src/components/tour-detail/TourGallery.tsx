@@ -48,27 +48,44 @@ const TourGallery: React.FC<TourGalleryProps> = ({
   const images: GalleryImage[] = React.useMemo(() => {
     if (!Array.isArray(gallery) || gallery.length === 0) return [];
 
-    // type === 'tour' (case-insensitive), fallback a tutto
+    // Filtra eventualmente solo quelle di tipo "tour" (fallback: tutto)
     const tourPics = gallery.filter((p) => String(p?.type || '').toLowerCase() === 'tour');
     const pics = tourPics.length ? tourPics : gallery;
 
-    // normalizza image/images
-    const normalized: GalleryImage[] = pics.flatMap((pic: any) => {
-      const rawImages = Array.isArray(pic?.image)
-        ? pic.image
-        : Array.isArray(pic?.images)
-        ? pic.images
-        : pic?.image
-        ? [pic.image]
-        : [];
+    const normalized: GalleryImage[] = [];
 
-      return rawImages.filter(Boolean).map((img: any) => ({
-        id: String(img?.id ?? pic?.id ?? ''),
-        url: toAbsoluteUrl(img?.url || ''),
-        alternativeText: img?.alternativeText || img?.alternative_text || '',
-        caption: img?.caption || pic?.title || '',
-      }));
-    });
+    for (const pic of pics) {
+      // 1) Formato annidato: image[] | images[] | image singolo
+      let rawImages: any[] = [];
+      if (Array.isArray(pic?.images)) rawImages = pic.images;
+      else if (Array.isArray(pic?.image)) rawImages = pic.image;
+      else if (pic?.image) rawImages = [pic.image];
+
+      if (rawImages.length > 0) {
+        for (const img of rawImages) {
+          const url = toAbsoluteUrl(img?.url || '');
+          if (!url) continue;
+          normalized.push({
+            id: String(img?.id ?? pic?.id ?? normalized.length),
+            url,
+            alternativeText: img?.alternativeText || img?.alternative_text || '',
+            caption: img?.caption || pic?.title || '',
+          });
+        }
+        continue; // passa al prossimo pic
+      }
+
+      // 2) Formato piatto: { id, url, alt/alternativeText, title/caption }
+      const flatUrl = toAbsoluteUrl(pic?.url || '');
+      if (flatUrl) {
+        normalized.push({
+          id: String(pic?.id ?? normalized.length),
+          url: flatUrl,
+          alternativeText: pic?.alt || pic?.alternativeText || '',
+          caption: pic?.caption || pic?.title || '',
+        });
+      }
+    }
 
     return normalized.filter((it) => !!it.url);
   }, [gallery]);
@@ -108,7 +125,7 @@ const TourGallery: React.FC<TourGalleryProps> = ({
       <section id="tour-gallery" className="py-16 px-4 md:px-0">
         <div className="max-w-2xl mx-auto text-center mb-8">
           <h2 className="text-3xl font-semibold mb-2">{title}</h2>
-        <p className="text-lg text-gray-600">{subtitle}</p>
+          <p className="text-lg text-gray-600">{subtitle}</p>
         </div>
 
         <GalleryCarousel images={images} onImageClick={openLightbox} />

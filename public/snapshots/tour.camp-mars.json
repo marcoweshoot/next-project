@@ -1,119 +1,903 @@
 {
+  "id": "13",
+  "tour_id": "via-lattea-nel-deserto-del-sahara",
   "slug": "camp-mars",
   "title": "Tunisia: Esperienza unica di un viaggio fotografico nel Sahara",
-  "states": {
-    "slug": "tunisia"
-  },
+  "description": "<p>In questi anni abbiamo esplorato la Tunisia per poter offrire un'<strong>esperienza indimenticabile di viaggio e di fotografia</strong>; ogni tappa sarà ricca di elementi naturali di straordinaria bellezza, ma soprattutto, esclusivi di queste zone così particolari:</p><p>Deserti di sale, la Via Lattea nitida ad occhio nudo, le antenne e le rovine della città dove è stato girato Guerre Stellari... Queste <strong>locations surreali</strong> ospiteranno, all'alba, al tramonto e in notturna, le sessioni fotografiche le nostro lungo viaggio on the road verso il Sahara.</p><p>Giunti al nostro accampamento alloggeremo a Camp Mars, un tipico villaggio Berbero, rispettando le tradizioni ed assaggiando i cibi locali, questa parte del viaggio sarà ricca di confronti con una realtà completamente nuova, di arricchimento personale e di piacevoli scambi culturali.</p><p>Dopo cena, lo spettacolo... Per anni abbiamo viaggiato alla ricerca delle stelle, una volta arrivati qui abbiamo visto davvero quello che cercavamo di fotografare in Italia, ed in tutti i paesi che dove avevamo provato ad ottenere un risultato simile, ma mai con questo dettaglio.</p><p>La <strong>Via Lattea</strong>, qui, è uno spettacolo assoluto, una gioia per gli occhi, si riescono a percepire le nebulosità oscure della nostra galassia senza l'ausilio della fotocamera, c'è una qualità del cielo unica.</p><p>Durante la notte ci perderemo tra le dune intorno al villaggio, ognuno avrà la sua \"intimità di scatto\", di <strong>contatto con la natura ed il silenzio</strong>, le tende del villaggio rimarranno completamente spente per darci la possibilità di includerle nella scena, sarà indimenticabile.</p><p>Il programma del viaggio è qui sotto, il costo è ridotto per via del lavoro fatto dal nostro tour operator e grazie alla nostra esperienza sul territorio, non ti resta che lasciarti guidare da due fotografi professionisti in uno dei luoghi più affascinanti del pianeta.</p>",
+  "excerpt": "In questo Viaggio Fotografico ti porteremo con delle Jeep nel bel mezzo del Sahara e dormiremo nei campi tendati berberi con il cielo più stellato al Mondo.",
+  "difficulty": "easy",
+  "experience_level": "Intenso",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Astroinseguitore (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo per il giorno, maglietta e calzoncini</li><li>Vestiario caldo per la notte, termica, pile e piumino</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li><li>Crema solare</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "sahara"
+    "slug": "sahara",
+    "locale": "it",
+    "name": "Sahara"
   },
-  "sessions": [
+  "states": {
+    "name": "Tunisia",
+    "slug": "tunisia",
+    "description": "<p>La Tunisia offre la possibilità di organizzare un viaggio fotografico come una straordinaria esperienza di vita: il deserto, uno dei posti più emozionanti che l'uomo possa visitare con le sue dune ed il suo silenzio sconfinato. I cieli bui di queste zone permettono di apprezzare l'immensa bellezza della via lattea.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Tunisia 2025 | WeShoot",
+    "metaDescription": "Vivi l'esperienza di un viaggio fotografico in Tunisia: dormire nel deserto del Sahara in un campo tendato sotto miliardi di stelle e la via lattea.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2023-03-18",
-      "end": "2023-03-25"
+      "id": "88",
+      "title": "Tozeur",
+      "description": "Tozeur è una città del sud della Tunisia nonchè una delle porte del deserto del Sahara. Da qui si possono raggiungere diverse punti di interesse tra cui il lago salato Chott el-Jerid o il set di star wars.",
+      "slug": "tozeur",
+      "locale": "it",
+      "state": {
+        "name": "Tunisia",
+        "slug": "tunisia",
+        "locale": "it",
+        "description": "<p>La Tunisia offre la possibilità di organizzare un viaggio fotografico come una straordinaria esperienza di vita: il deserto, uno dei posti più emozionanti che l'uomo possa visitare con le sue dune ed il suo silenzio sconfinato. I cieli bui di queste zone permettono di apprezzare l'immensa bellezza della via lattea.</p>"
+      },
+      "steps": [],
+      "pictures": []
     },
     {
-      "start": "2024-04-06",
-      "end": "2024-04-13"
+      "id": "89",
+      "title": "Tunisi",
+      "description": "Cartagine o più comunemente Tunisi, è la capitale della Tunisia.  Un perfetto mix tra cultura araba, romana ed europea.",
+      "slug": "tunisi",
+      "locale": "it",
+      "state": {
+        "name": "Tunisia",
+        "slug": "tunisia",
+        "locale": "it",
+        "description": "<p>La Tunisia offre la possibilità di organizzare un viaggio fotografico come una straordinaria esperienza di vita: il deserto, uno dei posti più emozionanti che l'uomo possa visitare con le sue dune ed il suo silenzio sconfinato. I cieli bui di queste zone permettono di apprezzare l'immensa bellezza della via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "85",
+          "title": "Presentazioni, check-in e briefing",
+          "description": "Ci incontreremo all'aeroporto di Tunisi e sfrutteremo questa giornata per attendere tutti gli arrivi e rilassarci prima di partire il giorno seguente alla volta di Tozeur. Sarà un lungo viaggio, per cui sarà importante partire riposati, pronti per cominciare al massimo questa avventura. Avremo modo di conoscerci meglio e di introdurvi in questo viaggio fotografico.",
+          "locale": "it"
+        },
+        {
+          "id": "88",
+          "title": "Salutiamo il deserto, si torna alla civiltà",
+          "description": "<p>Torneremo verso Nord, sulla capitale Tunisi. Durante il lungo viaggio di ritorno (3 ore 4x4, sosta per il pranzo, 6 ore di autostrada) avremo modo di discutere e parlare di fotografia e delle emozioni vissute in questa esperienza unica . Trascorreremo l'ultima notte qui, immergendoci nel clima culturale di questa incredibile città, mangiando insieme una squisita cena per l'ultima sera.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/medina_viaggio_fotografico_tunisia_309a0714c7.jpg",
+          "alternativeText": "mercato tunisino al tramonto"
+        }
+      ]
     },
     {
-      "start": "2024-02-03",
-      "end": "2024-02-10"
+      "id": "90",
+      "title": "Chott el-Jerid",
+      "description": "Chott el-Jerid è un enorme lago salato che si trova a sud ovest della Tunisia. Si tratta di una depressione tra le oasi di Tozeur e di Nefta da un lato e tra Kébili e Douz ai confini del deserto del Sahara dall'altro.",
+      "slug": "chott-el-jerid",
+      "locale": "it",
+      "state": {
+        "name": "Tunisia",
+        "slug": "tunisia",
+        "locale": "it",
+        "description": "<p>La Tunisia offre la possibilità di organizzare un viaggio fotografico come una straordinaria esperienza di vita: il deserto, uno dei posti più emozionanti che l'uomo possa visitare con le sue dune ed il suo silenzio sconfinato. I cieli bui di queste zone permettono di apprezzare l'immensa bellezza della via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "86",
+          "title": "Tra laghi salati e dune del Sahara",
+          "description": "Con due auto partiremo alla volta di Tozeur dove pernotteremo 2 notti. Durante il percorso impararei a conoscere molte sfaccettature di questo paese e della sua cultura, popolo educato e rispettoso, soprattutto nei confronti di noi europei. In questi due giorni scoprirai bellissimi posti come il lago di sale Chott el Jerid e il deserto Mos Espa, dove è stato girato il famoso film Guerre Stellari. Per svolgere nel modo migliore l'evento, pianificheremo bene le varie sessioni fotografiche in base alle condizioni meteo e le ore che potremmo trascorrere fino a tarda notte (magari riposando al tardo mattino). Nei momenti di relax avremo modo di fare delle sessioni teoriche sull'uso dell'astro inseguitore, delle tecniche di scatto notturna e perchè no, anche un bel bagno in piscina.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Chott_el_Jerid_al_tramonto_a06c360ce5.jpg",
+          "alternativeText": "Chott el-Jerid lago di sale dal viaggio fotografico Tunisia"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_via_lattea_chott_el_jerid_f8aef1290c.jpg",
+          "alternativeText": "WeShooters via lattea chott el jerid viaggio fotografico tunisia"
+        }
+      ]
+    },
+    {
+      "id": "91",
+      "title": "Deserto di Mos Espa",
+      "description": "Il deserto di Mos Espa è conosciuto per via del set del film Star Wars che è stato girato proprio tra quelle dune. La quasi assenza di inquinamento luminoso, rendono questo posto ottimale per la fotografia notturna.",
+      "slug": "deserto-di-mos-espa",
+      "locale": "it",
+      "state": {
+        "name": "Tunisia",
+        "slug": "tunisia",
+        "locale": "it",
+        "description": "<p>La Tunisia offre la possibilità di organizzare un viaggio fotografico come una straordinaria esperienza di vita: il deserto, uno dei posti più emozionanti che l'uomo possa visitare con le sue dune ed il suo silenzio sconfinato. I cieli bui di queste zone permettono di apprezzare l'immensa bellezza della via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "86",
+          "title": "Tra laghi salati e dune del Sahara",
+          "description": "Con due auto partiremo alla volta di Tozeur dove pernotteremo 2 notti. Durante il percorso impararei a conoscere molte sfaccettature di questo paese e della sua cultura, popolo educato e rispettoso, soprattutto nei confronti di noi europei. In questi due giorni scoprirai bellissimi posti come il lago di sale Chott el Jerid e il deserto Mos Espa, dove è stato girato il famoso film Guerre Stellari. Per svolgere nel modo migliore l'evento, pianificheremo bene le varie sessioni fotografiche in base alle condizioni meteo e le ore che potremmo trascorrere fino a tarda notte (magari riposando al tardo mattino). Nei momenti di relax avremo modo di fare delle sessioni teoriche sull'uso dell'astro inseguitore, delle tecniche di scatto notturna e perchè no, anche un bel bagno in piscina.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Star_Wars_deserto_mos_espa_viaggio_fotografico_tunisia_c4be94ce16.jpg",
+          "alternativeText": "via lattea durante viaggio fotografico tunisia a mos espa"
+        },
+        {
+          "id": "locpic-3-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_sul_set_star_wars_1faca4f15e.jpg",
+          "alternativeText": "weshooters fotografano tramonto nel seti di star wars viaggio fotografico tunisia"
+        },
+        {
+          "id": "locpic-3-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/atooine_mos_espa_set_star_wars_a2231f360e.jpg",
+          "alternativeText": "viaggio fotografico in Tunisia"
+        }
+      ]
+    },
+    {
+      "id": "92",
+      "title": "Camp Mars",
+      "description": "Camp Mars si trova all'interno del parco naturale Djebil, nel bel mezzo del deserto del Sahara. Qui avrai la fortuna di vivere l'esperienza di dormire in un campo tendato insieme ai burberi e godere di un pò di relax lontano da cellulari e corrente.",
+      "slug": "camp-mars",
+      "locale": "it",
+      "state": {
+        "name": "Tunisia",
+        "slug": "tunisia",
+        "locale": "it",
+        "description": "<p>La Tunisia offre la possibilità di organizzare un viaggio fotografico come una straordinaria esperienza di vita: il deserto, uno dei posti più emozionanti che l'uomo possa visitare con le sue dune ed il suo silenzio sconfinato. I cieli bui di queste zone permettono di apprezzare l'immensa bellezza della via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "87",
+          "title": "3 notti in un campo tendato",
+          "description": "Raggiungeremo Douz, dove saremo attesi da due Jeep 4x4 che ci accompagneranno fino a Camp Mars. Il tragitto offrirà un'esperienza di viaggio indimenticabile. Infatti per raggiungere le tende del villaggio, attraverseremo per circa 80 km il deserto del Sahara, superando anche piccole dune di sabbia, che renderanno il tutto ancora più divertente. Trascorreremo tre notti in uno dei luoghi più bui del pianeta, dove ad illuminare le nostre tende e il campo, saranno semplici fiaccole. Vivrai un'esperienza che ti farà unire ancora di più con il gruppo, perchè in assenza di rete cellulare, non ci sarà altro che il momento presente, noi. Ognuno sarà libero di moversi come meglio crede, il campo tendato rimane spento ma aperto durante la notte, ogni partecipante potrà scattare tutta la notte in assolutà tranquillità, senza alcun disturbo ne orario.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_nel_deserto_del_Sahara_5a742b97bf.jpg",
+          "alternativeText": "via lattea ripresa nel deserto del sahara durante viaggio fotografico tunisia"
+        },
+        {
+          "id": "locpic-4-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_Tunisia_5b34c7d16a.jpg",
+          "alternativeText": "gruppo viaggio fotografico Tunisia"
+        },
+        {
+          "id": "locpic-4-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_deserto_sahara_455333d9c4.jpg",
+          "alternativeText": "weshooters fotografano tramonto nel deserto sahara viaggio fotografico tunisia"
+        },
+        {
+          "id": "locpic-4-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/foto_di_gruppo_nel_campo_1fb001d79c.jpg",
+          "alternativeText": "weshooters nel deserto sahara viaggio fotografico tunisia"
+        },
+        {
+          "id": "locpic-4-4",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_nel_deserto_del_sahara_1d5a0df89a.jpg",
+          "alternativeText": "WeShooters nel deserto del sahara viaggio fotografico tunisia"
+        }
+      ]
+    },
+    {
+      "id": "184",
+      "title": "Gruppi Tunisia",
+      "description": "Una raccolta delle migliori immagini dei gruppi weshooters durante i viaggi fotografici Tunisia.",
+      "slug": "gruppi-tunisia",
+      "locale": "it",
+      "state": {
+        "name": "Tunisia",
+        "slug": "tunisia",
+        "locale": "it",
+        "description": "<p>La Tunisia offre la possibilità di organizzare un viaggio fotografico come una straordinaria esperienza di vita: il deserto, uno dei posti più emozionanti che l'uomo possa visitare con le sue dune ed il suo silenzio sconfinato. I cieli bui di queste zone permettono di apprezzare l'immensa bellezza della via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "89",
+          "title": "Check-out e saluti Tunisia",
+          "description": "<p>Fine dell'evento. Vi riporteremo tutti in aeroporto pronti per rientrare in Italia.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/weshooters_viaggio_fotografico_tunisia_f73aac251f.jpg",
+          "alternativeText": "gruppo fotografi tunisia deserto"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "177",
+      "title": "INDIMENTICABILE",
+      "description": "Recensione a 5 stelle, ma non ne basterebbeo infinite per descrivere questa magica esperienza! Vivere il deserto in questo modo è stata un esperienza di quelle che davvero sarà difficile dimenticare. Fotografare la via lattea nel bel mezzo delle dune, contemplando il cielo notturno, assieme ai compagni di viaggio e' stato incredibile. Se poi ci aggiungiamo le capacità di Marco ed Alessandro, bhè, tutto non può essere che perfetto! Non fatevi sfuggire le prossime edizioni!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-02T15:13:23.000Z"
     },
     {
-      "rating": 5
+      "id": "178",
+      "title": "Emozioni allo stato puro",
+      "description": "Non sono di tante parole ma voglio sottolineare che le emozioni bisogna viverle non raccontarle. Qui nel sud della Tunisia grazie a Marco e Ale, senza dimenticare il gruppo, abbiamo vissuto emozioni fortissime. Non si può essere in dubbio davanti alle proposte della Weshoot, si va e basta. Ralf e Diana",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-03T10:09:57.000Z"
     },
     {
-      "rating": 5
+      "id": "179",
+      "title": "Vivere per raccontarla - Gabriel Garzia Marquez",
+      "description": "Nei miei 40 anni di vita sono fortemente convinto, di non aver mai provato emozioni così forti durante un viaggio. Tornare alla realtà dopo aver vissuto un esperienza come questa è ancora oggi molto dura. Non è stato solo un viaggio fotografico, quando ti trovi notti intere nel silenzio \"assordante\" del deserto, davanti alla maestosità di quel cielo stellato, la vita ti scorre davanti e incomincia un viaggio interiore che cambia la tua percezione delle cose e i valori che dai alle stesse. \nHo avuto compagni di viaggio straordinari, di età differenti, ognuno aveva da dare e da raccontare, tutti uniti dall'amore per la fotografia. Sono stati giorni intensi dove, grazie ad Alessandro ( un vulcano di adrenalina) e Marco ( il riferimento e la sicurezza che cerchi in un viaggio come questo) ho potuto conoscere tecniche e metodi per avvicinarmi ancora di più a questa mia passione. Ragazzi e professionisti che hanno saputo comunicare tutto il loro amore e la loro passione per la fotografia. Il deserto ti avvolge in un modo tale che non te ne puoi più liberare, consiglio vivamente a te che stai leggendo di non perdere questa occasione . \" Vivere per raccontarla\"   Grazie ragazzi!            \n",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-03T14:33:22.000Z"
     },
     {
-      "rating": 5
+      "id": "180",
+      "title": "Un viaggio spaziale",
+      "description": "Fare questo viaggio è stata una delle decisioni più impulsive e incoscienti che abbia mai fatto dopo essermi iscritta ad ingegneria aerospaziale! Ho 29 anni e non sono mai stata fuori dall’Europa, ma pensare di andare nel deserto in mezzo al nulla con un gruppo di persone sconosciute non mi ha minimamente preoccupata perché sapevo di avere a fianco due ragazzi affidabili e professionali come Marco e Alessandro, che avevo già conosciuto a Matera. È stata una settimana tosta. Abbiamo attraversato per ore in macchina la Tunisia, abbiamo passato la maggior parte delle notti svegli ad inseguire le stelle, abbiamo soggiornato in alberghi di tutto rispetto e abbiamo sempre mangiato benissimo dovunque siamo andati adeguandoci agli usi e costumi del posto. Sicuramente è stato un viaggio formativo sia dal punto di vista didattico che umano, ho avuto il piacere di stringere amicizia con dei compagni di viaggio che per una settimana sono stati il mio mondo facendomi dimenticare tutto quello che lasciavo in Italia. Tornare alla quotidianità è tuttora difficile dopo che hai vissuto nel deserto. Non si può spiegare, bisogna viverlo. \nHo imparato a fare cose con photoshop che avrei impiegato magari mesi a imparare da sola, ho imparato a fotografare di notte e ad usare degli obiettivi che non avevo mai usato. Ho visto un cielo incredibile, ho visto Giove, ho imparato a riconoscere Saturno.. il tutto sdraiata sulle dune nel silenzio più totale!\nTorno a casa con una lista di upgrade tecnici da fare, la SD piena di foto da sviluppare e il cuore pieno di ricordi. Torno con la consapevolezza di aver aggiunto un altro pezzetto alla mia conoscenza di questo mondo fantastico che è la fotografia in cui siamo tutti costantemente allievi e maestri.\nGrazie quindi ai miei maestri e ai miei compagni di viaggio!\nAlla prossima! :)",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-03T21:07:00.000Z"
     },
     {
-      "rating": 5
+      "id": "182",
+      "title": "Deserto e Via Lattea",
+      "description": "Ho partecipato all'edizione 2018 di questo viaggio fotografico, e sono rimasto più che soddisfatto. Il gruppo, nonostante le svariate differenze tra le singole persone, è stato unito dal forte legame della fotografia notturna: una volta calato il sole, siamo tutti usciti a caccia della Via Lattea, sotto guida di Alessandro e Marco che ci hanno aiutato nei diversi settaggi, tra camera e astroinseguitore. Viaggio davvero ben progettato, tra diverse piccole avventure e enormi emozioni di fronte alla vastità del Sahara e del cielo stellato che si è mostrato di un \"seeing\" davvero strepitoso.\nAssolutamente da consigliare :)\n\n",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-13T23:32:40.000Z"
     },
     {
-      "rating": 5
+      "id": "230",
+      "title": "La maestà del cielo del deserto",
+      "description": "Il viaggio in Tunisia è un'esperienza intensa e incredibile.Tutto del viaggio è organizzato alla perfezione per potersi dedicare alla fotografia e Giorgia si è sempre presa cura di noi tutti in ogni situazione. La natura è di una bellezza che a parole è difficile da descrivere. Si parte con compagni con cui si condivide la passione per la fotografia e si torna una famiglia. Marco e Alessandro sanno trasmettere la loro passione, sempre disponibili e generosi; con loro ho imparato tantissimo... sul cielo notturno e il suo \"movimento\", sulle tecniche per fotografarlo, sulle difficoltà che si incontrano, su come comporre e come trasmettere qualcosa delle emozioni che nascono nel silenzio della notte del deserto. Se puoi parti! Sarai ripagato mille volte!\n",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-03-02T08:31:25.000Z"
     },
     {
-      "rating": 5
+      "id": "231",
+      "title": "viaggio in Tunisia",
+      "description": "Son partito con delle aspettative che sono state soddisfate alla grande. Ottima l'organizzazione, l'assistenza e la formazione data da Alessandro e Marco. E che dire dell'assistenza discreta ma sempre attenta della Giorgia, brava. Un grazie di cuore a tutti i tre organizzatori",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-03-02T17:34:18.000Z"
     },
     {
-      "rating": 5
+      "id": "232",
+      "title": "Il viaggio più epico ed emozionante della mia vita",
+      "description": "Ho conosciuto Marco ed Alessandro nel loro viaggio in Islanda, vedendo di persona come lavorano mi sono reso conto che sono persona d'oro, li ho seguiti in Dolomiti ed infine (per ora) in Tunisia.\nLa scelta più azzeccata della mia vita, la loro competenza e simpatia è a livelli altissimi, mi sono divertito tantissimo ed ho imparato tantissime cose.\nPoi il pezzo forte, 3 notti a camp mars, nel bel mezzo del nulla... Apri la tenda a qualsiasi ora e sei già sullo spot... \nLe emozioni volavano, l'attesa della via lattea ti metteva in circolo un adrenalina assurda (infatti una notte non ho dormito, alle 23 circa si scattava l'arco invernale e alle 3/4 del mattino saliva la lattea estiva...).\nHo provato l'emozione più forte di sempre: salire in piena notte da solo sulle dune, il silenzio assordante, il buio, solo io e le stelle, veramente epico. Tornare nella civiltà è stato veramente un trauma.\nNon vedo l'ora di ripartire con voi, grazie di tutto!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-03-04T08:01:01.000Z"
     },
     {
-      "rating": 5
+      "id": "251",
+      "title": "Organizzazione al top",
+      "description": "Tutto gestito in modo professionale. Viaggio bellissimo in un posto da favola. Lo raccomanfo davvero!",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "published_at": "2023-04-20T08:59:40.000Z"
     }
   ],
-  "pictures": [
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Volo A/R dall'Italia (Milano)",
+      "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Mezza pensione",
+      "description": "La mezza pensione prevede che si possano consumare la colazione e un pasto a scelta tra il pranzo o la cena all'interno della struttura.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/mezza_pensione_3cfc2aa873.png"
+      }
+    },
+    {
+      "title": "Guida Locale",
+      "description": "Potremo usufruire di una guida turistica locale che ci accompagnerà durante il viaggio fotografico.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_tourist_guide_skin_type_1_96_f5e7901b4f.png"
+      }
+    },
+    {
+      "title": "Campo Tendato",
+      "description": "Esperienza all'interno di un campo tendato, organizzato con tutti i confort.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/campo_tendato_06cf7ba881.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [],
+  "days": [
+    {
+      "id": "88",
+      "number": 1,
+      "title": "Benvenuti in Tunisia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "85",
+          "title": "Presentazioni, check-in e briefing",
+          "description": "Ci incontreremo all'aeroporto di Tunisi e sfrutteremo questa giornata per attendere tutti gli arrivi e rilassarci prima di partire il giorno seguente alla volta di Tozeur. Sarà un lungo viaggio, per cui sarà importante partire riposati, pronti per cominciare al massimo questa avventura. Avremo modo di conoscerci meglio e di introdurvi in questo viaggio fotografico.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "89",
+      "number": 2,
+      "title": "Direzione Tozeur",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "86",
+          "title": "Tra laghi salati e dune del Sahara",
+          "description": "Con due auto partiremo alla volta di Tozeur dove pernotteremo 2 notti. Durante il percorso impararei a conoscere molte sfaccettature di questo paese e della sua cultura, popolo educato e rispettoso, soprattutto nei confronti di noi europei. In questi due giorni scoprirai bellissimi posti come il lago di sale Chott el Jerid e il deserto Mos Espa, dove è stato girato il famoso film Guerre Stellari. Per svolgere nel modo migliore l'evento, pianificheremo bene le varie sessioni fotografiche in base alle condizioni meteo e le ore che potremmo trascorrere fino a tarda notte (magari riposando al tardo mattino). Nei momenti di relax avremo modo di fare delle sessioni teoriche sull'uso dell'astro inseguitore, delle tecniche di scatto notturna e perchè no, anche un bel bagno in piscina.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "90",
+      "number": 3,
+      "title": "Direzione Tozeur",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "86",
+          "title": "Tra laghi salati e dune del Sahara",
+          "description": "Con due auto partiremo alla volta di Tozeur dove pernotteremo 2 notti. Durante il percorso impararei a conoscere molte sfaccettature di questo paese e della sua cultura, popolo educato e rispettoso, soprattutto nei confronti di noi europei. In questi due giorni scoprirai bellissimi posti come il lago di sale Chott el Jerid e il deserto Mos Espa, dove è stato girato il famoso film Guerre Stellari. Per svolgere nel modo migliore l'evento, pianificheremo bene le varie sessioni fotografiche in base alle condizioni meteo e le ore che potremmo trascorrere fino a tarda notte (magari riposando al tardo mattino). Nei momenti di relax avremo modo di fare delle sessioni teoriche sull'uso dell'astro inseguitore, delle tecniche di scatto notturna e perchè no, anche un bel bagno in piscina.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "91",
+      "number": 4,
+      "title": "Verso le porte del Sahara",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "87",
+          "title": "3 notti in un campo tendato",
+          "description": "Raggiungeremo Douz, dove saremo attesi da due Jeep 4x4 che ci accompagneranno fino a Camp Mars. Il tragitto offrirà un'esperienza di viaggio indimenticabile. Infatti per raggiungere le tende del villaggio, attraverseremo per circa 80 km il deserto del Sahara, superando anche piccole dune di sabbia, che renderanno il tutto ancora più divertente. Trascorreremo tre notti in uno dei luoghi più bui del pianeta, dove ad illuminare le nostre tende e il campo, saranno semplici fiaccole. Vivrai un'esperienza che ti farà unire ancora di più con il gruppo, perchè in assenza di rete cellulare, non ci sarà altro che il momento presente, noi. Ognuno sarà libero di moversi come meglio crede, il campo tendato rimane spento ma aperto durante la notte, ogni partecipante potrà scattare tutta la notte in assolutà tranquillità, senza alcun disturbo ne orario.",
+          "locale": "it"
+        }
+      ]
+    },
     {
       "id": "92",
-      "title": "Chott el-Jerid",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 5,
+      "title": "Verso le porte del Sahara",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "87",
+          "title": "3 notti in un campo tendato",
+          "description": "Raggiungeremo Douz, dove saremo attesi da due Jeep 4x4 che ci accompagneranno fino a Camp Mars. Il tragitto offrirà un'esperienza di viaggio indimenticabile. Infatti per raggiungere le tende del villaggio, attraverseremo per circa 80 km il deserto del Sahara, superando anche piccole dune di sabbia, che renderanno il tutto ancora più divertente. Trascorreremo tre notti in uno dei luoghi più bui del pianeta, dove ad illuminare le nostre tende e il campo, saranno semplici fiaccole. Vivrai un'esperienza che ti farà unire ancora di più con il gruppo, perchè in assenza di rete cellulare, non ci sarà altro che il momento presente, noi. Ognuno sarà libero di moversi come meglio crede, il campo tendato rimane spento ma aperto durante la notte, ogni partecipante potrà scattare tutta la notte in assolutà tranquillità, senza alcun disturbo ne orario.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "93",
-      "title": "Deserto di Mos Espa",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 6,
+      "title": "Verso le porte del Sahara",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "87",
+          "title": "3 notti in un campo tendato",
+          "description": "Raggiungeremo Douz, dove saremo attesi da due Jeep 4x4 che ci accompagneranno fino a Camp Mars. Il tragitto offrirà un'esperienza di viaggio indimenticabile. Infatti per raggiungere le tende del villaggio, attraverseremo per circa 80 km il deserto del Sahara, superando anche piccole dune di sabbia, che renderanno il tutto ancora più divertente. Trascorreremo tre notti in uno dei luoghi più bui del pianeta, dove ad illuminare le nostre tende e il campo, saranno semplici fiaccole. Vivrai un'esperienza che ti farà unire ancora di più con il gruppo, perchè in assenza di rete cellulare, non ci sarà altro che il momento presente, noi. Ognuno sarà libero di moversi come meglio crede, il campo tendato rimane spento ma aperto durante la notte, ogni partecipante potrà scattare tutta la notte in assolutà tranquillità, senza alcun disturbo ne orario.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "94",
+      "number": 7,
+      "title": "Rientriamo a Tunisi",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "88",
+          "title": "Salutiamo il deserto, si torna alla civiltà",
+          "description": "<p>Torneremo verso Nord, sulla capitale Tunisi. Durante il lungo viaggio di ritorno (3 ore 4x4, sosta per il pranzo, 6 ore di autostrada) avremo modo di discutere e parlare di fotografia e delle emozioni vissute in questa esperienza unica . Trascorreremo l'ultima notte qui, immergendoci nel clima culturale di questa incredibile città, mangiando insieme una squisita cena per l'ultima sera.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "95",
+      "number": 8,
+      "title": "Arrivederci Tunisia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "89",
+          "title": "Check-out e saluti Tunisia",
+          "description": "<p>Fine dell'evento. Vi riporteremo tutti in aeroporto pronti per rientrare in Italia.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Via Lattea",
+      "description": "Immergiti nello splendore dei cieli stellati e della nostra galassia",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    },
+    {
+      "id": "hl-7",
+      "title": "Volo Incluso",
+      "description": " In questo viaggio è incluso anche il volo A/R",
+      "locale": "it"
+    },
+    {
+      "id": "hl-8",
+      "title": "Tenda",
+      "description": "Esperienza wild",
+      "locale": "it"
+    },
+    {
+      "id": "hl-9",
+      "title": "Fotografia Notturna",
+      "description": "Impara a scattare in luce lunare o con le stelle",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "25",
+      "start": "2023-03-18",
+      "end": "2023-03-25",
+      "status": "almostFull",
+      "maxPax": 12,
+      "price": 1849,
+      "deposit": 100,
+      "balance": 1749,
+      "minPax": 5,
+      "currency": "EUR",
+      "priceCompanion": 1749,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "98",
+      "start": "2024-04-06",
+      "end": "2024-04-13",
+      "status": "scheduled",
+      "maxPax": 12,
+      "price": 2615,
+      "deposit": 785,
+      "balance": 1830,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 2615,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "116",
+      "start": "2024-02-03",
+      "end": "2024-02-10",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 2615,
+      "deposit": 785,
+      "balance": 1830,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2615,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Welcome_to_Mars_26ccfe2ea5.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Chott el-Jerid",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Chott_el_Jerid_al_tramonto_a06c360ce5.jpg",
+      "alt": "Chott el-Jerid lago di sale dal viaggio fotografico Tunisia"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Deserto di Mos Espa",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Star_Wars_deserto_mos_espa_viaggio_fotografico_tunisia_c4be94ce16.jpg",
+      "alt": "via lattea durante viaggio fotografico tunisia a mos espa"
+    },
+    {
+      "id": "2",
+      "type": "tour",
       "title": "Camp Mars",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_nel_deserto_del_Sahara_5a742b97bf.jpg",
+      "alt": "via lattea ripresa nel deserto del sahara durante viaggio fotografico tunisia"
     },
     {
-      "id": "135",
+      "id": "3",
+      "type": "group",
       "title": "gruppo al tramonto deserto sahara",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_Tunisia_5b34c7d16a.jpg",
+      "alt": "gruppo viaggio fotografico Tunisia"
     },
     {
-      "id": "148",
+      "id": "4",
+      "type": "group",
       "title": "Tramonto a Mos Espa",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_sul_set_star_wars_1faca4f15e.jpg",
+      "alt": "weshooters fotografano tramonto nel seti di star wars viaggio fotografico tunisia"
     },
     {
-      "id": "149",
+      "id": "5",
+      "type": "group",
       "title": "Gruppo viaggio tunisia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/foto_di_gruppo_nel_campo_1fb001d79c.jpg",
+      "alt": "weshooters nel deserto sahara viaggio fotografico tunisia"
     },
     {
-      "id": "164",
+      "id": "6",
+      "type": "group",
       "title": "WeShooters nel deserto del sahara",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_nel_deserto_del_sahara_1d5a0df89a.jpg",
+      "alt": "WeShooters nel deserto del sahara viaggio fotografico tunisia"
     },
     {
-      "id": "165",
+      "id": "7",
+      "type": "group",
       "title": "WeShooters via lattea chott el jerid",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_via_lattea_chott_el_jerid_f8aef1290c.jpg",
+      "alt": "WeShooters via lattea chott el jerid viaggio fotografico tunisia"
+    },
+    {
+      "id": "locpic-1-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/medina_viaggio_fotografico_tunisia_309a0714c7.jpg",
+      "alt": "mercato tunisino al tramonto"
+    },
+    {
+      "id": "locpic-3-2",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/atooine_mos_espa_set_star_wars_a2231f360e.jpg",
+      "alt": "viaggio fotografico in Tunisia"
+    },
+    {
+      "id": "locpic-4-2",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_deserto_sahara_455333d9c4.jpg",
+      "alt": "weshooters fotografano tramonto nel deserto sahara viaggio fotografico tunisia"
+    },
+    {
+      "id": "locpic-5-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/weshooters_viaggio_fotografico_tunisia_f73aac251f.jpg",
+      "alt": "gruppo fotografi tunisia deserto"
     }
   ]
 }

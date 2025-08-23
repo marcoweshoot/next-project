@@ -1,211 +1,1276 @@
 {
+  "id": "25",
+  "tour_id": "irlanda-isola-di-smeraldo",
   "slug": "isola-smeraldo",
   "title": "Irlanda: angoli nascosti tra scogliere, castelli e fari",
-  "states": {
-    "slug": "irlanda"
-  },
+  "description": "<p><span style=\"background-color:transparent;color:#000000;\">L'isola di Smeraldo. Già solo il soprannome che le è stato dato lascia intendere perchè l'Irlanda è uno dei paesi più affascinanti d'Europa, con i suoi paesaggi naturali che si alternano tra colline e vallate ricche di verde ad impressionanti e suggestive scogliere a picco che faranno impazzire te e la tua macchina fotografica.</span></p><p><span style=\"background-color:transparent;color:#000000;\">In Irlanda il governatore ha rimosso tutte le restrizioni per il covid. Il che ci permetterá di vivere con piú&nbsp;tranquillitá questo bellissimo viaggio fotografico insieme.</span></p><p><span style=\"background-color:transparent;color:#000000;\">Per scoprire l'Irlanda non c'è niente di meglio che partire e vivere questa avventura insieme a noi. Vi faremo entrare in contatto con la natura selvaggia e trascorrere un viaggio fotografico, come sempre, organizzato nei minimi dettagli per garantire a te e agli altri amici fotografi la migliore esperienza che abbiate mai affrontato.</span></p><h3><span style=\"background-color:transparent;color:#000000;\">Perchè scegliere un viaggio fotografico in Irlanda insieme a noi?</span></h3><p><span style=\"background-color:transparent;color:#000000;\">Siamo fotografi professionisti che organizzano viaggi fotografici da più di 5 anni e che hanno progettato personalmente tutto quanto il viaggio fotografico fotografico in Irlanda. Abbiamo pianificato il viaggio per farti vivere 8 giorni intensi di pura fotografia negli spot più emozionanti dell'isola di smeraldo, assaporando e conoscendo la cultura locale.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#000000;\">Nei nostri viaggi fotografici quello a cui teniamo di più è soddisfare il cliente, ecco perchè abbiamo scelto di avere un tour leader ogni 4/6 partecipanti perché questo favorirà un contatto più diretto, un migliore approccio alla didattica e potenzialmente un miglior grado di apprendimento.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#000000;\">Durante tutto il percorso avrai modo di imparare come affrontare al meglio la fotografia di paesaggio ed i suoi aspetti peculiari:</span></p><ul><li><span style=\"background-color:transparent;color:#000000;\">Pianificazione per studiare in anticipo come muoversi</span></li><li><span style=\"background-color:transparent;color:#000000;\">Studio della location per trovare sempre la migliore Composizione fotografica</span></li><li><span style=\"background-color:transparent;color:#000000;\">Scelta delle impostazioni migliori in ogni tipo di occasione/luce</span></li><li><span style=\"background-color:transparent;color:#000000;\">Doppie esposizioni o HDR</span></li><li><span style=\"background-color:transparent;color:#000000;\">Utilizzo dei filtri ND per lunghe esposizioni&nbsp;</span></li><li><span style=\"background-color:transparent;color:#000000;\">Utilizzo dei filtri GND e Polarizzatore</span></li></ul><h3><span style=\"background-color:transparent;color:#000000;\">A chi è rivolto questo viaggio fotografico in Irlanda?</span></h3><p><span style=\"background-color:transparent;color:#000000;\">Il viaggio fotografico fotografico è dedicato a tutti, sia al principiante che vuole imparare sul campo ad usare il proprio mezzo nel migliore dei modi, sia al fotografo più esperto in cerca di scoprire o approfondire nuove tecniche fotografiche, ma soprattutto è dedicato a chi vuole trascorrere 7 giorni a dedicarsi esclusivamente alla fotografia, perchè si sà, i viaggi organizzati con amici e parenti spesso non lasciano mai spazio a quello che si ama.</span></p><h3><span style=\"background-color:transparent;color:#000000;\">Com'è strutturato il viaggio fotografico in Irlanda?</span></h3><p><span style=\"background-color:transparent;color:#000000;\">Il viaggio fotografico è stato pianificato in ogni minimo dettaglio. Abbiamo scelto le migliori strutture alberghiere in camera doppia per garantire un’esperienza avventurosa ma allo stesso tempo rilassante, per farti godere al meglio l'isola e i suoi paesaggi, studiando a puntino gli orari e le location da raggiungere.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#000000;\">Il tour prevede il giro nella parte centro settentrionale dell'isola, a bordo di un van o due auto incluse nel pacchetto del viaggio fotografico. Il centro/nord Irlanda offre i paesaggi più caratteristici e location che ti consentiranno di portare a casa le foto con effetto wow. Avremo la possibilità di unire i paesaggi mozzafiato alle visite di Dublino e qualche cittadina dal sapore altamente irlandese.</span></p>",
+  "excerpt": "Viaggio fotografico in Irlanda alla scoperta dei paesaggi dell'isola smeraldo",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm), medio zoom (24mm-70mm) e tele (70-200mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri Fotografici ND (opzionale)</li><li>Filtro polarizzatore</li></ul><p>&nbsp;</p><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e caldo</li><li>Cappello</li><li>Guanti</li><li>Impermeabile</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "dublino"
+    "slug": "dublino",
+    "locale": "it",
+    "name": "Dublino"
   },
-  "sessions": [
+  "states": {
+    "name": "Irlanda",
+    "slug": "irlanda",
+    "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Irlanda 2025 | WeShoot",
+    "metaDescription": "Immergiti nei paesaggi magici tra scogliere, castelli, fari e bellissime campagne verdeggianti. Il viaggio fotografico in Irlanda ti aspetta.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-06-11",
-      "end": "2022-06-18"
+      "id": "139",
+      "title": "Dublino",
+      "description": "Dublino, capitale dell’isola si trova non lontano dalla costa orientale dell’Irlanda. Offre la modernità di una capitale ad un’importante storia che si ritrova nei suoi palazzi storici.\nSarà il punto di partenza e di arrivo del nostro viaggio fotografico.",
+      "slug": "dublino",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "123",
+          "title": "Presentazioni, briefing e giro in città",
+          "description": "<p>Ci incontreremo all’aeroporto di Dublino e se tutti i voli arriveranno prima di cena sarà una bella occasione per fare un po’ i turisti nella capitale e goderci una buona cena e una rinomata birra irlandese</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/dublino_the_temple_bar_e908e1e3d7.jpg",
+          "alternativeText": "pub e bar a dublino viaggio fotografico irlanda"
+        }
+      ]
     },
     {
-      "start": "2022-09-11",
-      "end": "2022-09-18"
+      "id": "140",
+      "title": "Galway",
+      "description": "Galway, piccola città portuale con una piazza risalente al XVIII secolo, circondata da negozi e pub tradizionali dove si può ascoltare musica folk suonata dal vivo. Sono molto caratteristici anche i caffè rivestiti in pietra, le boutique e i vicoli del quartiere Latino, dove rimangono una parte delle mura medievali della città.",
+      "slug": "galway",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "124",
+          "title": "Paesaggi tra laghi e scogliere",
+          "description": "<p>Il Connemara è una regione selvaggia dell’isola di smeraldo e si trova nella parte occidentale. Il nostro tour inizierà da qui, con una tappa a Galway per un caratteristico pranzo per poi proseguire su laghi, baie e scogliere frastagliate.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Galway_al_tramonto_a5d997876a.jpg",
+          "alternativeText": "città galway viaggio fotografico irlanda"
+        }
+      ]
     },
     {
-      "start": "2023-09-09",
-      "end": "2023-09-16"
+      "id": "141",
+      "title": "Dog’s Bay",
+      "description": "Spiaggia del Connemara che ricorda un po’ i caraibi. Ha una silhouette molto caratteristica a forma di ferro di cavallo con il mare che si presta sia al nuoto che al surf e una bellissima vista sulla costa.",
+      "slug": "dog’s-bay",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "124",
+          "title": "Paesaggi tra laghi e scogliere",
+          "description": "<p>Il Connemara è una regione selvaggia dell’isola di smeraldo e si trova nella parte occidentale. Il nostro tour inizierà da qui, con una tappa a Galway per un caratteristico pranzo per poi proseguire su laghi, baie e scogliere frastagliate.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/spiaggia_dei_cani_Dog_s_Bay_61cacfad5e.jpg",
+          "alternativeText": "spiaggia Dog’s Bay viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "142",
+      "title": "Derryclare Lough",
+      "description": "Caratteristico lago del Connemara. Offre dei piccoli isolotti di alberi molto interessanti fotograficamente.",
+      "slug": "derryclare-lough",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "124",
+          "title": "Paesaggi tra laghi e scogliere",
+          "description": "<p>Il Connemara è una regione selvaggia dell’isola di smeraldo e si trova nella parte occidentale. Il nostro tour inizierà da qui, con una tappa a Galway per un caratteristico pranzo per poi proseguire su laghi, baie e scogliere frastagliate.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_lago_derryclare_irlanda_b70e26a656.jpg",
+          "alternativeText": "Derryclare lough viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "143",
+      "title": "Abbazia Kylemore",
+      "description": "Edificio storico situato nel cuore del Connemara. L'odierna abbazia è ancora utilizzata per il suo scopo originale oltre che attrazione turistica. Ospita un collegio femminile ed al suo interno ha bellissimi giardini e un laboratorio per la lavorazione della ceramica.",
+      "slug": "abbazia-kylemore",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "124",
+          "title": "Paesaggi tra laghi e scogliere",
+          "description": "<p>Il Connemara è una regione selvaggia dell’isola di smeraldo e si trova nella parte occidentale. Il nostro tour inizierà da qui, con una tappa a Galway per un caratteristico pranzo per poi proseguire su laghi, baie e scogliere frastagliate.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Abbazia_kylemore_castello_in_irlanda_d7419b9778.jpg",
+          "alternativeText": "castello Kylemore Abbey viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "144",
+      "title": "Lago Doo",
+      "description": "Il lago nero è un piccolo lago situato nel Mayo, nella penisola del Murrisk. E’ caratterizzato dalla presenza di barche e alberi che offrono spunti paesaggistici interessanti. ",
+      "slug": "lago-doo",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "124",
+          "title": "Paesaggi tra laghi e scogliere",
+          "description": "<p>Il Connemara è una regione selvaggia dell’isola di smeraldo e si trova nella parte occidentale. Il nostro tour inizierà da qui, con una tappa a Galway per un caratteristico pranzo per poi proseguire su laghi, baie e scogliere frastagliate.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lago_nero_con_barca_irlanda_db7a6ac975.jpg",
+          "alternativeText": "Doo lough viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "145",
+      "title": "Westport",
+      "description": "La “città del bue” è la terza cittadina in ordine di grandezza della contea di Mayo. Westport è un piccolo centro in stile georgiano offre scorci pittoreschi di cui, il più famoso, è quello del viale alberato coi ponticelli addobbati con fiori.",
+      "slug": "westport",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "125",
+          "title": "Le luci di alba e tramonto in location pittoresche",
+          "description": "<p>Il Donegal è una delle contee più famose d’Irlanda e sarà teatro per molte location caratteristiche.</p><p>La prima tappa sarà Westport, cittadina dove avremo la possibilità di pranzare per poi recarci alle location di tramonto e alba.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/cittadina_tipica_irlandese_westport_98de21fa9f.jpg",
+          "alternativeText": "ponte vecchio con fiori viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "146",
+      "title": "Downpatrick Head",
+      "description": "Downpatrick Head è un promontorio ricco di particolarmente visitato da osservatori di uccelli e di naturalisti in generale. \nL'attrazione turistica principale di Downpatrick Head rimane comunque il Dun Briste: un pezzo di scogliera rimasto da solo in mezzo al mare.",
+      "slug": "downpatrick-head",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "125",
+          "title": "Le luci di alba e tramonto in location pittoresche",
+          "description": "<p>Il Donegal è una delle contee più famose d’Irlanda e sarà teatro per molte location caratteristiche.</p><p>La prima tappa sarà Westport, cittadina dove avremo la possibilità di pranzare per poi recarci alle location di tramonto e alba.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Downpatrick_Head_tramonto_Andrea_Cerquone_Perpetuini_4da57dda71.jpg",
+          "alternativeText": "irlanda Downpatrick Head foto di Andrea Cerquone Perpetuini"
+        },
+        {
+          "id": "locpic-7-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Downpatrick_Head_59cc619b9f.jpg",
+          "alternativeText": "scogliera al tramonto Downpatrick Head viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "147",
+      "title": "Benbulbin",
+      "description": "Il Benbulbin è una particolarissima montagna che si trova nella contea di Sligo.\nIn realtà, nonostante abbia le sembianze di una grande montagna, che ricorda moltissimo l’australiano Ayers Rock One, è poco più di una collina.",
+      "slug": "benbulbin",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "126",
+          "title": "Cascate e relitti di nave",
+          "description": "<p>Continuiamo a risalire nella contea del Donegal arrivando in quella di Sligo attraversando le coste, ammirando cascate nascoste, relitti di navi e particolari montagne.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-8-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Benbulbin_viaggio_fotografico_irlanda_59c455de13.jpg",
+          "alternativeText": "montagna irlandese al tramonto"
+        }
+      ]
+    },
+    {
+      "id": "148",
+      "title": "Slieve League",
+      "description": "Scogliere tipiche delle coste irlandesi. La Slieve League si trovano ancora nella contea del Donegal e sono meno conosciute delle più famose Cliffs of Moher, ma molto apprezzate da turisti e scalatori. Le cime della Slieve League raggiungono un’altezza massima di 601 metri e nella parte bassa cadono a picco sull’Oceano Atlantico.",
+      "slug": "slieve-league",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "126",
+          "title": "Cascate e relitti di nave",
+          "description": "<p>Continuiamo a risalire nella contea del Donegal arrivando in quella di Sligo attraversando le coste, ammirando cascate nascoste, relitti di navi e particolari montagne.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-9-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_scogliera_Slieve_league_1c39b22a29.jpg",
+          "alternativeText": "tramonto scogliera irlanda viaggio fotografico"
+        }
+      ]
+    },
+    {
+      "id": "149",
+      "title": "Bunbeg wreck Cara Na Mara",
+      "description": "“Cara Na Mara” o il battello di Eddie, è il nome ufficiale del peschereccio abbandonato che ha avuto problemi durante i mari in tempesta all'inizio degli anni '70. I resti della barca si stanno lentamente deteriorando infatti una metà di essa è quasi tornata in mare.",
+      "slug": "bunbeg-wreck-cara-na-mara",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "126",
+          "title": "Cascate e relitti di nave",
+          "description": "<p>Continuiamo a risalire nella contea del Donegal arrivando in quella di Sligo attraversando le coste, ammirando cascate nascoste, relitti di navi e particolari montagne.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-10-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Bunbeg_wreck_Cara_Na_Mara_51f914dd6c.jpg",
+          "alternativeText": "relitto barca tramonto lago viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "150",
+      "title": "Le Cascate Assaranca",
+      "description": "Assaranca (Eas che significa cascata in gaelico) si trova 1 km dopo il villaggio di Leaconnell sulla strada per la spiaggia di Maghera. Indipendentemente dal periodo dell'anno, offre sempre un'opportunità fotografica unica.",
+      "slug": "le-cascate-assaranca",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "126",
+          "title": "Cascate e relitti di nave",
+          "description": "<p>Continuiamo a risalire nella contea del Donegal arrivando in quella di Sligo attraversando le coste, ammirando cascate nascoste, relitti di navi e particolari montagne.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-11-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Assaranca_waterfall_irlanda_18c24f8beb.jpg",
+          "alternativeText": "cascata Assaranca lunga esposizione viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "151",
+      "title": "Crohy Head",
+      "description": "L’arco di Crohy Head è solo una delle tante gemme nascoste che punteggiano la costa del Donegal. Situato al largo della penisola di Mullaghmullan, l’arco di Crohy Head Sea è uno spettacolo magnifico sulla frastagliata costa occidentale del Donegal ed è uno dei più belli d'Irlanda. Ci sono tre archi marini a Crohy Head, ma solo l'arco più prominente, il Bristi Sea Stack, è completamente visibile dal punto di vista laterale della scogliera. Gli altri due archi sono visibili dalla spiaggia rocciosa che circonda gli archi.\n\nCon la bassa marea è possibile fare un'escursione fino alla spiaggia.",
+      "slug": "crohy-head",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "126",
+          "title": "Cascate e relitti di nave",
+          "description": "<p>Continuiamo a risalire nella contea del Donegal arrivando in quella di Sligo attraversando le coste, ammirando cascate nascoste, relitti di navi e particolari montagne.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-12-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Crohy_Head_in_Donegal_6ea967d3df.jpg",
+          "alternativeText": "arco di roccia tramonto scogliere viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "152",
+      "title": "Letterkenny",
+      "description": "Letterkenny racchiude il meglio del Donegal. È una città vivace e piena di storia. Dominata da una bellissima e grande cattedrale offre il perfetto mix di natura, cultura e notti animate.",
+      "slug": "letterkenny",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "127",
+          "title": "Esploriamo le ultime location del Donogal",
+          "description": "<p>Ultimo giorno nel Donegal, visiteremo l’attrazione principale che è il faro di Fanad Head, ammireremo il monte Errigal e gusteremo il cibo locale di Letterkenny.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-13-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Letterkenny_775a250177.jpg",
+          "alternativeText": "cattedrale Letterkenny viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "153",
+      "title": "Mount Errigal",
+      "description": "L'Errigal è un monte che fa parte della catena Derryveagh Mountains. Una delle immagini più caratteristiche lo vede riflesso nel lago Dunlewey",
+      "slug": "mount-errigal",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "127",
+          "title": "Esploriamo le ultime location del Donogal",
+          "description": "<p>Ultimo giorno nel Donegal, visiteremo l’attrazione principale che è il faro di Fanad Head, ammireremo il monte Errigal e gusteremo il cibo locale di Letterkenny.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-14-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Mount_Errigal_34482e4b44.jpg",
+          "alternativeText": "montagna riflessa al tramonto viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "154",
+      "title": "Murder Hole Beach",
+      "description": "Murder Hole Beach è una spiaggia situata sulla penisola di Melmore Head, accanto a Downings, nella contea di Donegal, in Irlanda. Ha scogliere, colline, dune e piccole grotte. Quando la marea è alta, ci sono due spiagge, che si fondono in una quando la marea è bassa.",
+      "slug": "murder-hole-beach",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "127",
+          "title": "Esploriamo le ultime location del Donogal",
+          "description": "<p>Ultimo giorno nel Donegal, visiteremo l’attrazione principale che è il faro di Fanad Head, ammireremo il monte Errigal e gusteremo il cibo locale di Letterkenny.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-15-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Murder_Hole_Beach_b371cfa737.jpg",
+          "alternativeText": "tramonto spiaggia mare viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "155",
+      "title": "Fanad Head Lighthouse",
+      "description": "Attrazione principale della nostra giornata, il faro si trova nella penisola di Fanad Head e domina la scogliera. Sia al tramonto che all’alba ci regalerà delle immagini suggestive.",
+      "slug": "fanad-head-lighthouse",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "127",
+          "title": "Esploriamo le ultime location del Donogal",
+          "description": "<p>Ultimo giorno nel Donegal, visiteremo l’attrazione principale che è il faro di Fanad Head, ammireremo il monte Errigal e gusteremo il cibo locale di Letterkenny.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-16-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/il_faro_di_Fanad_Head_irlanda_dc7a1331db.jpg",
+          "alternativeText": "Fanad Head Lighthouse viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "156",
+      "title": "Dunluce Castle",
+      "description": "Il castello di Dunluce è un maniero in rovina che domina le scogliere delle coste settentrionali dell’Antrim. Siamo nella parte più a nord dell’Irlanda.",
+      "slug": "dunluce-castle",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "128",
+          "title": "Saluti al Donegal e arrivo nel Nord Est tra Castelli, fari e scogliere",
+          "description": "<p>Dopo aver salutato il Donegal ci recheremo nel Nord Est per gli ultimi giorni all’insegna di location misteriose.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-17-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/castello_su_scogliera_irlanda_Dunluce_44493aec27.jpg",
+          "alternativeText": "viaggio fotografico irlanda tra scogliere e castelli"
+        }
+      ]
+    },
+    {
+      "id": "157",
+      "title": "Giant’s Causeway",
+      "description": "Il Selciato del Gigante è una straordinaria formazione rocciosa composta da colonne di basalto unite tra di loro. La loro forma particolare e geometricamente molto regolare conferisce a questo posto un alone di mistero. ",
+      "slug": "giant’s-causeway",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "128",
+          "title": "Saluti al Donegal e arrivo nel Nord Est tra Castelli, fari e scogliere",
+          "description": "<p>Dopo aver salutato il Donegal ci recheremo nel Nord Est per gli ultimi giorni all’insegna di location misteriose.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-18-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giant_s_Causeway_scogliera_irlanda_ora_blu_8fa7580c00.jpg",
+          "alternativeText": "mare, scogliera ora blu viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "158",
+      "title": "The Dark Hedges",
+      "description": "E se proprio vogliamo rimanere in tema di mistero, nulla di meglio che i rami intrecciati del sentiero dei Dark Hedges.\nNegli ultimi tre secoli gli alberi che percorrono il sentiero sono cresciuti fino ad intrecciare i propri rami fra di loro creando un effetto spettacolare. Gli alberi furono piantati dalla famiglia Stuart nel 1700 con l’intento di creare uno scenario mozzafiato, per riuscire a meravigliare gli ospiti della loro tenuta. Hanno raggiunto lo scopo perchè ancora oggi moltissimi visitatori raggiungono il nord dell’Irlanda solo per visitare questo posto magico.",
+      "slug": "the-dark-hedges",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "129",
+          "title": "I boschi misteriosi e le cascate",
+          "description": "<p>Mistero e cascate. Questo l’argomento del giorno in cui saluteremo il nord dell’Irlanda per tornare a Dublino.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-19-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/bosco_di_alberi_tramonto_irlanda_a938cca465.jpg",
+          "alternativeText": "The Dark Hedges al tramonto viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "159",
+      "title": "Cascata Dunseverick",
+      "description": "Uno stretto fiume supera gli ultimi metri in caduta libera verso il mare. Una cascata su una aspra scogliera. Sarà l’ultima tappa che faremo nel nord d’Irlanda, prima di rientrare a Dublino. ",
+      "slug": "cascata-dunseverick",
+      "locale": "it",
+      "state": {
+        "name": "Irlanda",
+        "slug": "irlanda",
+        "locale": "it",
+        "description": "<p>L'Irlanda è un paese tutto da scoprire. Unisciti in uno dei nostri viaggi fotografici per ammirare i paesaggi incredibili delle scogliere come le Cliff of Moher, tra i bellissimi parchi del Connemara con laghi e infinite distese di prati verdi.</p>"
+      },
+      "steps": [
+        {
+          "id": "129",
+          "title": "I boschi misteriosi e le cascate",
+          "description": "<p>Mistero e cascate. Questo l’argomento del giorno in cui saluteremo il nord dell’Irlanda per tornare a Dublino.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-20-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Cascate_Dunseverick_al_tramonto_38e24de4e9.jpg",
+          "alternativeText": "tramonto cascate viaggio fotografico irlanda"
+        }
+      ]
+    },
+    {
+      "id": "175",
+      "title": "Castello dei Duchi di Bretagna",
+      "description": "Il castello dei Duchi di Bretagna è un castello in stile medievale costruito tra il XIII e il XVI secolo nella città francese di Nantes, capoluogo della Loira Atlantica.",
+      "slug": "castello-dei-duchi-di-bretagna",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-21-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Castello_dei_Duchi_di_Bretagna_viaggio_fotografico_bretagna_9cde37bdd2.jpg",
+          "alternativeText": "panoramica Castle of the Dukes of Brittany"
+        }
+      ]
     }
   ],
   "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Volo A/R dall'Italia (Milano)",
+      "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "139",
+      "number": 1,
+      "title": "Benvenuti in Irlanda",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "123",
+          "title": "Presentazioni, briefing e giro in città",
+          "description": "<p>Ci incontreremo all’aeroporto di Dublino e se tutti i voli arriveranno prima di cena sarà una bella occasione per fare un po’ i turisti nella capitale e goderci una buona cena e una rinomata birra irlandese</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "140",
+      "number": 2,
+      "title": "Partenza per il Connemara",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "124",
+          "title": "Paesaggi tra laghi e scogliere",
+          "description": "<p>Il Connemara è una regione selvaggia dell’isola di smeraldo e si trova nella parte occidentale. Il nostro tour inizierà da qui, con una tappa a Galway per un caratteristico pranzo per poi proseguire su laghi, baie e scogliere frastagliate.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "141",
+      "number": 3,
+      "title": "Westport e il Donegal",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "125",
+          "title": "Le luci di alba e tramonto in location pittoresche",
+          "description": "<p>Il Donegal è una delle contee più famose d’Irlanda e sarà teatro per molte location caratteristiche.</p><p>La prima tappa sarà Westport, cittadina dove avremo la possibilità di pranzare per poi recarci alle location di tramonto e alba.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "142",
+      "number": 4,
+      "title": "Benbulbin e le scogliere del Donegal",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "126",
+          "title": "Cascate e relitti di nave",
+          "description": "<p>Continuiamo a risalire nella contea del Donegal arrivando in quella di Sligo attraversando le coste, ammirando cascate nascoste, relitti di navi e particolari montagne.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "143",
+      "number": 5,
+      "title": "Letterkenny, Fanad Head Lighthouse e dintorni",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "127",
+          "title": "Esploriamo le ultime location del Donogal",
+          "description": "<p>Ultimo giorno nel Donegal, visiteremo l’attrazione principale che è il faro di Fanad Head, ammireremo il monte Errigal e gusteremo il cibo locale di Letterkenny.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "144",
+      "number": 6,
+      "title": "Direzione Irlanda del Nord-Est",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "128",
+          "title": "Saluti al Donegal e arrivo nel Nord Est tra Castelli, fari e scogliere",
+          "description": "<p>Dopo aver salutato il Donegal ci recheremo nel Nord Est per gli ultimi giorni all’insegna di location misteriose.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "145",
+      "number": 7,
+      "title": "The Dark Hedges e rientro a Dublino",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "129",
+          "title": "I boschi misteriosi e le cascate",
+          "description": "<p>Mistero e cascate. Questo l’argomento del giorno in cui saluteremo il nord dell’Irlanda per tornare a Dublino.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "146",
+      "number": 8,
+      "title": "Arrivederci Irlanda",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "130",
+          "title": "Saluti e Fine del nostro viaggio",
+          "description": "<p>Dopo una bella colazione e una foto di gruppo ci recheremo in aeroporto e ci saluteremo. Fine del nostro viaggio.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Scogliere",
+      "description": "Viaggi fotografici tra le più alte scogliere",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "64",
+      "start": "2022-06-11",
+      "end": "2022-06-18",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 2099,
+      "deposit": 100,
+      "balance": 1999,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1999,
+      "users": [
+        {
+          "instagram": "lucamicheliphoto",
+          "firstName": "Luca",
+          "lastName": "Micheli",
+          "username": "lucamicheli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/photo_2021_11_15_15_37_30_d5bf5e783f.jpeg"
+          },
+          "bio": "<p>Fotografo paesaggista per passione, Marketer, Startup builder e Co-Founder di WeShoot 🚀</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "start": "2022-09-11",
+      "end": "2022-09-18",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2099,
+      "deposit": 100,
+      "balance": 1999,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1999,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "89",
+      "start": "2023-09-09",
+      "end": "2023-09-16",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 2099,
+      "deposit": 100,
+      "balance": 1999,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1999,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "Perché scegliere un Viaggio fotografico organizzato?",
+      "answer": "<p>I viaggi fotografici hanno un solo obiettivo: viaggiare per fotografare le meraviglie della natura. Ma perchè dovresti scegliere un viaggio fotografico organizzato? Effettivamente potresti anche partire in solitaria alla scoperta del mondo, ma quanto impiegheresti ogni volta per trovare la giusta location, la stagione, il meteo, l'orario, come raggiungerla, le strutture da prenotare, le assicurazioni, i noleggi..? Per ogni viaggio dovresti dedicarci almeno un mese! Purtroppo sappiamo benissimo che al giorno d'oggi abbiamo dei ritmi molto serrati, tra lavoro, famiglia e amici per questo motivo ritagliarsi del tempo da dedicare alla nostra passione diventa difficile. Scegliendo un viaggio fotografico invece avrai la possibilità di liberare la tua mente da tutto, non dovrai preoccuparti di nulla perchè sarà già tutto organizzato e gestito da persone esperte in ogni minimo dettaglio. Tu dovrai solo pensare a preparare lo zaino e scattare più fotografie possibili.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-18",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "faro scogliere viaggio fotografico irlanda",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/irlanda_viaggio_fotografico_59dcbe004c.jpg"
+  },
   "pictures": [
     {
-      "id": "211",
+      "id": "0",
+      "type": "tour",
       "title": "Downpatrick Head al tramonto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Downpatrick_Head_tramonto_Andrea_Cerquone_Perpetuini_4da57dda71.jpg",
+      "alt": "irlanda Downpatrick Head foto di Andrea Cerquone Perpetuini"
     },
     {
-      "id": "227",
+      "id": "1",
+      "type": "tour",
       "title": "Lago Derryclare",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_lago_derryclare_irlanda_b70e26a656.jpg",
+      "alt": "Derryclare lough viaggio fotografico irlanda"
     },
     {
-      "id": "228",
+      "id": "2",
+      "type": "tour",
       "title": "Abbazia Kylemore",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Abbazia_kylemore_castello_in_irlanda_d7419b9778.jpg",
+      "alt": "castello Kylemore Abbey viaggio fotografico irlanda"
     },
     {
-      "id": "229",
+      "id": "3",
+      "type": "tour",
       "title": "Lago Nero",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lago_nero_con_barca_irlanda_db7a6ac975.jpg",
+      "alt": "Doo lough viaggio fotografico irlanda"
     },
     {
-      "id": "230",
+      "id": "4",
+      "type": "tour",
       "title": "Westport",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/cittadina_tipica_irlandese_westport_98de21fa9f.jpg",
+      "alt": "ponte vecchio con fiori viaggio fotografico irlanda"
     },
     {
-      "id": "231",
+      "id": "5",
+      "type": "tour",
       "title": "Downpatrick Head",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Downpatrick_Head_59cc619b9f.jpg",
+      "alt": "scogliera al tramonto Downpatrick Head viaggio fotografico irlanda"
     },
     {
-      "id": "232",
+      "id": "6",
+      "type": "tour",
       "title": "Benbulbin",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Benbulbin_viaggio_fotografico_irlanda_59c455de13.jpg",
+      "alt": "montagna irlandese al tramonto"
     },
     {
-      "id": "233",
+      "id": "7",
+      "type": "tour",
       "title": "Slieve league",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_scogliera_Slieve_league_1c39b22a29.jpg",
+      "alt": "tramonto scogliera irlanda viaggio fotografico"
     },
     {
-      "id": "234",
+      "id": "8",
+      "type": "tour",
       "title": "Bunbeg wreck Cara Na Mara",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Bunbeg_wreck_Cara_Na_Mara_51f914dd6c.jpg",
+      "alt": "relitto barca tramonto lago viaggio fotografico irlanda"
     },
     {
-      "id": "235",
+      "id": "9",
+      "type": "tour",
       "title": "Le Cascate Assaranca",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Assaranca_waterfall_irlanda_18c24f8beb.jpg",
+      "alt": "cascata Assaranca lunga esposizione viaggio fotografico irlanda"
     },
     {
-      "id": "236",
+      "id": "10",
+      "type": "tour",
       "title": "Arco di Crohy",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Crohy_Head_in_Donegal_6ea967d3df.jpg",
+      "alt": "arco di roccia tramonto scogliere viaggio fotografico irlanda"
     },
     {
-      "id": "237",
+      "id": "11",
+      "type": "tour",
       "title": "Letterkenny",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Letterkenny_775a250177.jpg",
+      "alt": "cattedrale Letterkenny viaggio fotografico irlanda"
     },
     {
-      "id": "238",
+      "id": "12",
+      "type": "tour",
       "title": "Mount Errigal",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Mount_Errigal_34482e4b44.jpg",
+      "alt": "montagna riflessa al tramonto viaggio fotografico irlanda"
     },
     {
-      "id": "239",
+      "id": "13",
+      "type": "tour",
       "title": "Murder Hole Beach",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Murder_Hole_Beach_b371cfa737.jpg",
+      "alt": "tramonto spiaggia mare viaggio fotografico irlanda"
     },
     {
-      "id": "240",
+      "id": "14",
+      "type": "tour",
       "title": "Fanad Head Lighthouse",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/il_faro_di_Fanad_Head_irlanda_dc7a1331db.jpg",
+      "alt": "Fanad Head Lighthouse viaggio fotografico irlanda"
     },
     {
-      "id": "241",
+      "id": "15",
+      "type": "tour",
       "title": "Dunluce Castle",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/castello_su_scogliera_irlanda_Dunluce_44493aec27.jpg",
+      "alt": "viaggio fotografico irlanda tra scogliere e castelli"
     },
     {
-      "id": "242",
+      "id": "16",
+      "type": "tour",
       "title": "Giant’s Causeway",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giant_s_Causeway_scogliera_irlanda_ora_blu_8fa7580c00.jpg",
+      "alt": "mare, scogliera ora blu viaggio fotografico irlanda"
     },
     {
-      "id": "243",
+      "id": "17",
+      "type": "tour",
       "title": "The Dark Hedges",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/bosco_di_alberi_tramonto_irlanda_a938cca465.jpg",
+      "alt": "The Dark Hedges al tramonto viaggio fotografico irlanda"
     },
     {
-      "id": "244",
+      "id": "18",
+      "type": "tour",
       "title": "Cascate Dunseverick",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Cascate_Dunseverick_al_tramonto_38e24de4e9.jpg",
+      "alt": "tramonto cascate viaggio fotografico irlanda"
     },
     {
-      "id": "245",
+      "id": "19",
+      "type": "tour",
       "title": "Galway",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Galway_al_tramonto_a5d997876a.jpg",
+      "alt": "città galway viaggio fotografico irlanda"
     },
     {
-      "id": "246",
+      "id": "20",
+      "type": "tour",
       "title": "Dog’s Bay",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/spiaggia_dei_cani_Dog_s_Bay_61cacfad5e.jpg",
+      "alt": "spiaggia Dog’s Bay viaggio fotografico irlanda"
     },
     {
-      "id": "247",
+      "id": "21",
+      "type": "tour",
       "title": "Dublino",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/dublino_the_temple_bar_e908e1e3d7.jpg",
+      "alt": "pub e bar a dublino viaggio fotografico irlanda"
     },
     {
-      "id": "266",
+      "id": "22",
+      "type": "tour",
       "title": "Castello dei Duchi di Bretagna",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Castello_dei_Duchi_di_Bretagna_viaggio_fotografico_bretagna_9cde37bdd2.jpg",
+      "alt": "panoramica Castle of the Dukes of Brittany"
     }
   ]
 }

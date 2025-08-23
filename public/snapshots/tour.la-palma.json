@@ -1,131 +1,836 @@
 {
+  "id": "2",
+  "tour_id": "la-palma-paesaggi-vulcanici-e-via-lattea",
   "slug": "la-palma",
   "title": "La Palma: vieni ad ammirare la via lattea tra paesaggi vulcanici e marini",
-  "states": {
-    "slug": "spagna"
-  },
+  "description": "<p>Vieni ad ammirare uno dei cieli notturni più emozionanti del mondo.<br>Trascorreremo 5 giorni su una delle isole delle Canarie: La Palma. Sarà un viaggio fotografico interamente dedicato alla <strong>fotografia notturna, alla via lattea e agli eventi astronomici</strong> che spesso si verificano in quelle zone, come la luce zodiacale e l' Airglow.<br><br>I percorsi da affrontare sono alla portata di tutti; trattandosi di un isola, oltre alla costa, ci sarà l'occasione di salire per 2 notti fino alla vetta più alta di Roque De Los Muchachos (2.426mt) dove potrai ammirare un paesaggio spettacolare: una gigantesca caldera vulcanica che durante le notti estive può immergersi tra le nuvole e creare condizioni uniche.<br><br>Un'esperienza pensata per chi ha letteralmente il bisogno di evadere e <strong>godersi paesaggi nuovi</strong>, persone da conoscere ed assaggiare nuove ricette locali.<br><br>L'isola di La Palma è uno dei <strong>posti migliori al mondo per la fotografia di paesaggio</strong> e in particolar modo per gli appassionati di quella notturna. Terreni vulcanici, mare, vegetazione, via lattea, airglow, luce zodiacale e tappeti di nuvole saranno gli scenari che potrai vivere, ma soprattutto fotografare.</p>",
+  "excerpt": "Un'avventura fotografica tra stelle e paesaggi incredibili, un viaggio fotografico che non dimenticherai.",
+  "difficulty": "easy",
+  "experience_level": "Intenso",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Astroinseguitore (opzionale)</li></ul><p>&nbsp;</p><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scaldacollo</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "canarie"
+    "slug": "canarie",
+    "locale": "it",
+    "name": "Canarie"
   },
-  "sessions": [
+  "states": {
+    "name": "Spagna",
+    "slug": "spagna",
+    "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico La Palma 2025 | WeShoot",
+    "metaDescription": "Parti per il viaggio fotografico La Palma, alla scoperta di un'isola delle Canarie dove potrai fotografare incredibili paesaggi e la via lattea.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-02-06",
-      "end": "2022-02-10"
-    },
-    {
-      "start": "2022-04-30",
-      "end": "2022-05-04"
-    },
-    {
-      "start": "2022-05-21",
-      "end": "2022-05-28"
-    },
-    {
-      "start": "2023-06-18",
-      "end": "2023-06-22"
-    },
-    {
-      "start": "2024-07-03",
-      "end": "2024-07-07"
-    }
-  ],
-  "reviews": [],
-  "pictures": [
-    {
-      "id": "4",
+      "id": "3",
       "title": "Roque De Los Muchachos",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Roque de los Muchachos è il nome dato alla cresta rocciosa che costituisce il punto più alto dell'isola di La Palma nelle Isole Canarie.",
+      "slug": "roque-de-los-muchachos",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "21",
+          "title": "Iniziamo ad esplorare il paesaggio",
+          "description": "<p>Lasceremo la villa in direzione di Roque De Los Muchachos. Ci prepareremo per esplorare la cresta rocciosa della caldera del Tamburiente da cui è possibile ammirare paesaggi mozzafiato sopra un tappeto di nuvole. Da qui inizieremo a fare un pò di scouting e dopo il tramonto comincerà la sessione fotografica. Questa prima sessione sarà utile per prendere confidenza con le tecniche di scatto astrofotografiche e con il paesaggio lunare che ci circonderà.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Workshop_photography_events_74eab6f794a72323a5cbb056d4753422_e0861ce543.jpg",
+          "alternativeText": "via lattea durante il viaggio fotografico la palma"
+        }
+      ]
     },
     {
-      "id": "27",
-      "title": "Faro de Fuencaliente",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "28",
+      "id": "22",
       "title": "Poris De Candelaria",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "description": "Poris De Candelaria è un vero angolo di paradiso. Un antico villaggio costruito interamente all'interno di una immensa grotta naturale.",
+      "slug": "poris-de-candelaria",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "24",
+          "title": "Il villaggio dei pescatori",
+          "description": "Dopo le prime due intese notti, passate su una delle vette più alte dell'Atlantico orientale, ci porteremo sulla costa occidentale dell'isola, lasciando questo posto dai paesaggi marziani. Raggiungeremo la perla nascosta di Poris De Candelaria un piccolo villaggio di pescatori incastonato in un faraglione a strapiombo sull'oceano.<br>\nIncontreremo paesaggi completamente diversi. Scogliere, calette e questo caratteristico villaggio costruito all interno di un'enorme grotta faranno da cornice al cielo notturno delle canarie.<br>Qui, una perfetta congiunzione rivelerà, nel mese di agosto, la via lattea coricarsi perfettamente allineata con l' apertura di questa grande spelonca, essa risulterà così unicamente illuminata dalla luce della galassia e delle stelle.",
+          "locale": "it"
+        },
+        {
+          "id": "26",
+          "title": "Immergiti in questi paesaggi di pescatori",
+          "description": "Trascorreremo questa giornata alla ricerca di spot incredibili, in questo modo dopo un approfondito scounting, potremo scattare la sera in tutta tranquillità, conoscendo già molto bene la zona ed avendo preventivamente \"salvato\" i posti dove scattare.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Poris_De_Candelaria_e991635eaa.jpg",
+          "alternativeText": "Le particolari casette di Poris De Candelaria, una delle mete del viaggio fotografico"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "title": "Salinas de Fuencaliente",
+      "description": "Le Salinas de Fuencaliente sono delle caratteristiche saline situate nella parte sud dell'isola, da cui potrai fotografare la via lattea che si specchia dentro,",
+      "slug": "salinas-de-fuencaliente",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "25",
+          "title": "Affacciati sull'oceano con naso all'insù",
+          "description": "Giunti ormai al sesto giorno, quasi al termine di questa avventura, ci sposteremo verso sud dell'Isola per raggiungere Fuencaliente De La Palma, dove potremmo rilassarci con il rumore dell'oceano, farci un bagno e visitare le famose Salinas de Fuencaliente.<br>Queste saline che si affacciano direttamente sull'oceano sono caratterizzate dal loro colore rosa pastello. Queste creeranno unici riflessi che potremo sfruttare per le ultime foto alla maestosa villetta di La Palma.<br>Lungo il percorso di ritorno dalle saline avremo ancora qualche spunto per scattare, incontreremo infatti grossi scogli di basalto dalle forme uniche e un caratteristico faro che si presterà per gli ultimi scatti.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/saline_la_palma_69997d7739.jpg",
+          "alternativeText": "via lattea sul mare fotografia notturna"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/weshooters_in_algarve_d76ff02ca2.jpg",
+          "alternativeText": "weshooter sessione tramonto viaggio fotografico la palma"
+        },
+        {
+          "id": "locpic-2-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/coach_e_weshooter_al_tramonto_la_palama_1c017add9a.jpg",
+          "alternativeText": "sessione tramonto coach weshooter viaggio fotografico la palma"
+        }
+      ]
+    },
+    {
+      "id": "114",
+      "title": "Pico de la Cruz",
+      "description": "Scatteremo le fotografie alla volta celeste dal punto più alto dell'Isola, dove avremo modo di godere di una vista a 360 gradi",
+      "slug": "pico-de-la-cruz",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "22",
+          "title": "Tra paesaggi lunari e migliaia di stelle",
+          "description": "Anche questa giornata sarà organizzata in modo tale da esplorare bene la zona di Roque De Los Muchachos e la caldera circostante per trovare differenti tipi di composizioni fotografiche e raggiungere pico de la cruz, il punto più alto dell'isola.",
+          "locale": "it"
+        },
+        {
+          "id": "21",
+          "title": "Iniziamo ad esplorare il paesaggio",
+          "description": "<p>Lasceremo la villa in direzione di Roque De Los Muchachos. Ci prepareremo per esplorare la cresta rocciosa della caldera del Tamburiente da cui è possibile ammirare paesaggi mozzafiato sopra un tappeto di nuvole. Da qui inizieremo a fare un pò di scouting e dopo il tramonto comincerà la sessione fotografica. Questa prima sessione sarà utile per prendere confidenza con le tecniche di scatto astrofotografiche e con il paesaggio lunare che ci circonderà.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/startrail_la_palma_8b68e78203.jpg",
+          "alternativeText": "viaggio fotografico la palma startrail via lattea"
+        },
+        {
+          "id": "locpic-3-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Coach_che_segue_We_Shooters_a_La_Palma_f62b8573ab.jpg",
+          "alternativeText": "coach didattica weshooters viaggio fotografico la palma"
+        }
+      ]
+    },
+    {
+      "id": "115",
+      "title": "Mirador de Los Andenes",
+      "description": "Saliremo al bordo della caldera per sfruttare composizioni interessanti e cercare spunti tra le rocce e la vegetazione. Sfrutteremo le tipiche  Tajinaste come primi piani accattivanti con la Via Lattea di sfondo",
+      "slug": "mirador-de-los-andenes",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "23",
+          "title": "Tra rocce, basalto e guglie",
+          "description": "In questo giorno continueremo ad esplorare le infinite possibilità compositive che circondano la Caldera del Tamburiente.<br>\nPasseggeremo lungo un comodo sentiero che attraversa questo luogo tra incredibili formazioni rocciose, dicchi lavici e lame di basalto che sbucano dalle vertiginose pareti del vulcano. Questo paesaggio brullo, popolato da piccoli alberelli di aghifoglie che dominano le diverse guglie rocciose, offre anche incredibili spunti fotografici che sfrutteremo nelle ore diurne.\n<br>Una volta familiarizzato col paesaggio utilizzeremo il tempo a disposizione per studiare meglio l'ambiente circostante e ricercare composizioni vincenti da fotografare durante la notte.",
+          "locale": "it"
+        },
+        {
+          "id": "20",
+          "title": "Check in struttura e briefing iniziale",
+          "description": "<p>Incontro all'aeroporto di La Palma entro le ore 19:00; dopodichè ci dirigeremo verso A El Paso, dove alloggerete per tutta la durata del tour. Sono dei bellissimi monolocali con bagno privato e cucina, in cui condivideremo i vari spazi disponibili.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_con_tenda_5e13362285.jpg",
+          "alternativeText": "via lattea fotografare tenda la palma"
+        }
+      ]
+    },
+    {
+      "id": "116",
+      "title": "Caldera de Taburiente",
+      "description": "",
+      "slug": "caldera-de-taburiente",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [],
+      "pictures": []
     },
     {
       "id": "117",
-      "title": "Pico de la Cruz",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Faro di Fuencaliente",
+      "description": "Il faro di Fuencaliente si presta tantissimo per fotografare le ultime luci del tramonto tra gli scogli e le salinas è un ottimo soggetto da inserire nelle foto.",
+      "slug": "faro-di-fuencaliente",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "25",
+          "title": "Affacciati sull'oceano con naso all'insù",
+          "description": "Giunti ormai al sesto giorno, quasi al termine di questa avventura, ci sposteremo verso sud dell'Isola per raggiungere Fuencaliente De La Palma, dove potremmo rilassarci con il rumore dell'oceano, farci un bagno e visitare le famose Salinas de Fuencaliente.<br>Queste saline che si affacciano direttamente sull'oceano sono caratterizzate dal loro colore rosa pastello. Queste creeranno unici riflessi che potremo sfruttare per le ultime foto alla maestosa villetta di La Palma.<br>Lungo il percorso di ritorno dalle saline avremo ancora qualche spunto per scattare, incontreremo infatti grossi scogli di basalto dalle forme uniche e un caratteristico faro che si presterà per gli ultimi scatti.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Salinas_de_Fuencaliente_al_tramonto_60f3306903.jpg",
+          "alternativeText": "Tramonto duramente il viaggio fotografico alle Salinas de Fuencaliente"
+        }
+      ]
     },
     {
       "id": "118",
+      "title": "Osservatorio de Roque de Los Muchachos",
+      "description": "Osservatorio de Roque de Los Muchachos è uno dei migliori punti da cui si può fotografare e osservare la via lattea.",
+      "slug": "osservatorio-de-roque-de-los-muchachos",
+      "locale": "it",
+      "state": {
+        "name": "Spagna",
+        "slug": "spagna",
+        "locale": "it",
+        "description": "<p>Alla scoperta della Spagna e delle Isole Canarie tra La Palma e Tenerife. In questi viaggi fotografici vivrai delle avventure incredibili tra i paesaggi lunari, le scogliere e le cime dei vulcani, da cui potrai fotografare splendidi panorami e la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "21",
+          "title": "Iniziamo ad esplorare il paesaggio",
+          "description": "<p>Lasceremo la villa in direzione di Roque De Los Muchachos. Ci prepareremo per esplorare la cresta rocciosa della caldera del Tamburiente da cui è possibile ammirare paesaggi mozzafiato sopra un tappeto di nuvole. Da qui inizieremo a fare un pò di scouting e dopo il tramonto comincerà la sessione fotografica. Questa prima sessione sarà utile per prendere confidenza con le tecniche di scatto astrofotografiche e con il paesaggio lunare che ci circonderà.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/la_palma_3_b715f88d0c.jpg",
+          "alternativeText": "Osservatorio fotografato di notte al viaggio fotografico"
+        }
+      ]
+    }
+  ],
+  "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Monolocale",
+      "description": "Soggiorno in un monolocale condiviso, con cucina e bagno privato",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_dormire_nel_letto_96_9797d16e8e.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Volo A/R dall'Italia (Milano)",
+      "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "20",
+      "number": 1,
+      "title": "Benvenuti a La Palma",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "20",
+          "title": "Check in struttura e briefing iniziale",
+          "description": "<p>Incontro all'aeroporto di La Palma entro le ore 19:00; dopodichè ci dirigeremo verso A El Paso, dove alloggerete per tutta la durata del tour. Sono dei bellissimi monolocali con bagno privato e cucina, in cui condivideremo i vari spazi disponibili.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "number": 2,
+      "title": "Direzione: Roque De Los Muchachos",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "21",
+          "title": "Iniziamo ad esplorare il paesaggio",
+          "description": "<p>Lasceremo la villa in direzione di Roque De Los Muchachos. Ci prepareremo per esplorare la cresta rocciosa della caldera del Tamburiente da cui è possibile ammirare paesaggi mozzafiato sopra un tappeto di nuvole. Da qui inizieremo a fare un pò di scouting e dopo il tramonto comincerà la sessione fotografica. Questa prima sessione sarà utile per prendere confidenza con le tecniche di scatto astrofotografiche e con il paesaggio lunare che ci circonderà.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "number": 3,
+      "title": "Lasciati incantare da Poris De Candelaria tra scogliere e via lattea",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "24",
+          "title": "Il villaggio dei pescatori",
+          "description": "Dopo le prime due intese notti, passate su una delle vette più alte dell'Atlantico orientale, ci porteremo sulla costa occidentale dell'isola, lasciando questo posto dai paesaggi marziani. Raggiungeremo la perla nascosta di Poris De Candelaria un piccolo villaggio di pescatori incastonato in un faraglione a strapiombo sull'oceano.<br>\nIncontreremo paesaggi completamente diversi. Scogliere, calette e questo caratteristico villaggio costruito all interno di un'enorme grotta faranno da cornice al cielo notturno delle canarie.<br>Qui, una perfetta congiunzione rivelerà, nel mese di agosto, la via lattea coricarsi perfettamente allineata con l' apertura di questa grande spelonca, essa risulterà così unicamente illuminata dalla luce della galassia e delle stelle.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "number": 4,
+      "title": "Direzione: Fuencaliente De La Palma",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "25",
+          "title": "Affacciati sull'oceano con naso all'insù",
+          "description": "Giunti ormai al sesto giorno, quasi al termine di questa avventura, ci sposteremo verso sud dell'Isola per raggiungere Fuencaliente De La Palma, dove potremmo rilassarci con il rumore dell'oceano, farci un bagno e visitare le famose Salinas de Fuencaliente.<br>Queste saline che si affacciano direttamente sull'oceano sono caratterizzate dal loro colore rosa pastello. Queste creeranno unici riflessi che potremo sfruttare per le ultime foto alla maestosa villetta di La Palma.<br>Lungo il percorso di ritorno dalle saline avremo ancora qualche spunto per scattare, incontreremo infatti grossi scogli di basalto dalle forme uniche e un caratteristico faro che si presterà per gli ultimi scatti.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "number": 5,
+      "title": "Arrivederci La Palma!",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "27",
+          "title": "Saluti e rientro a casa",
+          "description": "<p>L'ultimo giorno dopo il risveglio e la colazione ci dirigeremo verso l'aeroporto di Santa Cruz per il rientro in Italia. Ci saluteremo carichi di grandi emozioni ed un sacco di foto incredibili da editare!</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Via Lattea",
+      "description": "Immergiti nello splendore dei cieli stellati e della nostra galassia",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Scogliere",
+      "description": "Viaggi fotografici tra le più alte scogliere",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "2",
+      "start": "2022-02-06",
+      "end": "2022-02-10",
+      "status": "waitingList",
+      "maxPax": 10,
+      "price": 1699,
+      "deposit": 100,
+      "balance": 1698,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1499,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "start": "2022-04-30",
+      "end": "2022-05-04",
+      "status": "waitingList",
+      "maxPax": 10,
+      "price": 1699,
+      "deposit": 100,
+      "balance": 1599,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1599,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "62",
+      "start": "2022-05-21",
+      "end": "2022-05-28",
+      "status": "waitingList",
+      "maxPax": 10,
+      "price": 1699,
+      "deposit": 100,
+      "balance": 1599,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1499,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "67",
+      "start": "2023-06-18",
+      "end": "2023-06-22",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 1399,
+      "deposit": 100,
+      "balance": 1299,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1399,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "128",
+      "start": "2024-07-03",
+      "end": "2024-07-07",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 1699,
+      "deposit": 100,
+      "balance": 1599,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1599,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "foto via lattea viaggio fotografico spagna la palma",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_la_palma_spagna_ef7784390f.jpeg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Roque De Los Muchachos",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Workshop_photography_events_74eab6f794a72323a5cbb056d4753422_e0861ce543.jpg",
+      "alt": "via lattea durante il viaggio fotografico la palma"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Faro de Fuencaliente",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Salinas_de_Fuencaliente_al_tramonto_60f3306903.jpg",
+      "alt": "Tramonto duramente il viaggio fotografico alle Salinas de Fuencaliente"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Poris De Candelaria",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Poris_De_Candelaria_e991635eaa.jpg",
+      "alt": "Le particolari casette di Poris De Candelaria, una delle mete del viaggio fotografico"
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "Pico de la Cruz",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/startrail_la_palma_8b68e78203.jpg",
+      "alt": "viaggio fotografico la palma startrail via lattea"
+    },
+    {
+      "id": "4",
+      "type": "tour",
       "title": "Caldera de Taburiente",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_con_tenda_5e13362285.jpg",
+      "alt": "via lattea fotografare tenda la palma"
     },
     {
-      "id": "119",
+      "id": "5",
+      "type": "tour",
       "title": "Saline di La Palma",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/saline_la_palma_69997d7739.jpg",
+      "alt": "via lattea sul mare fotografia notturna"
     },
     {
-      "id": "121",
+      "id": "6",
+      "type": "tour",
       "title": "Osservatorio del Roque de Los Muchachos",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/la_palma_3_b715f88d0c.jpg",
+      "alt": "Osservatorio fotografato di notte al viaggio fotografico"
     },
     {
-      "id": "146",
+      "id": "7",
+      "type": "tour",
       "title": "Tramonto a La Palma",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/weshooters_in_algarve_d76ff02ca2.jpg",
+      "alt": "weshooter sessione tramonto viaggio fotografico la palma"
     },
     {
-      "id": "175",
+      "id": "8",
+      "type": "group",
       "title": "Weshooters a La Palma",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Weshooters_a_La_Palma_2048c47321.jpg",
+      "alt": "Weshooters gruppo viaggio fotografico a La Palma"
     },
     {
-      "id": "176",
+      "id": "9",
+      "type": "group",
       "title": "Gruppo a cena in relax a la palma",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gruppo_a_cena_in_relax_a_la_palma_362aecec18.jpg",
+      "alt": "cena gruppo weshooters viaggio fotografico la palma"
     },
     {
-      "id": "177",
+      "id": "10",
+      "type": "group",
       "title": "coach e weshooter al tramonto la palma",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/coach_e_weshooter_al_tramonto_la_palama_1c017add9a.jpg",
+      "alt": "sessione tramonto coach weshooter viaggio fotografico la palma"
     },
     {
-      "id": "178",
+      "id": "11",
+      "type": "group",
       "title": "Coach che segue WeShooters a La Palma",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Coach_che_segue_We_Shooters_a_La_Palma_f62b8573ab.jpg",
+      "alt": "coach didattica weshooters viaggio fotografico la palma"
     }
   ]
 }

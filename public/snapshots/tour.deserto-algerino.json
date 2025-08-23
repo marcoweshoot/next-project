@@ -1,83 +1,757 @@
 {
+  "id": "38",
+  "tour_id": "viaggio-fotografico-algeria",
   "slug": "deserto-algerino",
   "title": "Viaggio Fotografico in Algeria: l'altra faccia del Sahara",
-  "states": {
-    "slug": "algeria"
-  },
+  "description": "<p><span style=\"background-color:transparent;color:#000000;\">Preparati per vivere un'esperienza unica con questo viaggio fotografico in Algeria. Immagina di esplorare insieme ai Touareg locali la regione di Djanet, situata nel cuore del deserto del Sahara. Questa parte del deserto rappresenta una delle zone più affascinanti e incontaminate del pianeta. Qui, la bellezza selvaggia delle dune dorate, delle formazioni rocciose uniche e dei cieli immensi si fonde con la cultura e le tradizioni millenarie.</span></p><p><span style=\"background-color:transparent;color:#000000;\">Questoviaggio fotografico ti offre l'opportunità di esplorare uno degli ambienti naturali più puri e visivamente suggestivi della Terra, rivelando ogni volta una nuova sfaccettatura di questo paesaggio incantevole. Viaggerai in compagnia di guide Tuareg a bordo di veicoli 4x4 affidabili, vivendo il deserto come hanno fatto per secoli i nomadi, con una navigazione esperta tra le sabbie mutevoli e il terreno accidentato.</span></p><p><span style=\"background-color:transparent;color:#000000;\">Dal campeggio sotto le stelle all’esplorazione di tesori archeologici, questo viaggio ti immergerà nel cuore del Sahara. I pasti tradizionali cucinati su fuochi aperti, accompagnati dalla musica Tuareg, arricchiranno l'esperienza, mentre i cieli notturni, privi di inquinamento luminoso, offriranno un'opportunità unica per fotografare la Luna e il suggestivo cielo stellato del Sahara.</span></p>",
+  "excerpt": "Un'esperienza fotografica nel cuore del Sahara con i Tuareg",
+  "difficulty": "medium",
+  "experience_level": "Sfida",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li><span style=\"color:rgb(0,0,0);\">2 pantaloni da trekking (quelli che si dividono sono ideali per il giorno dove avremo temperature alte)</span></li><li><span style=\"color:rgb(0,0,0);\">Numero di t-shirt e intimo in base alle necessità e 1–2 felpe</span></li><li><span style=\"color:rgb(0,0,0);\">Scarpe estive e ciabatte per il giorno, una scarpa piu pesante per la sera, non necessariamente uno scarpone da trekking</span></li><li><span style=\"color:rgb(0,0,0);\">sacco a pelo (comfort intorno ai 0°C)</span></li><li><span style=\"color:rgb(0,0,0);\">Giacca che tenga caldo anche da fermi con circa 3°C (nel deserto di notte con vento può essere fresco</span></li><li><span style=\"color:rgb(0,0,0);\">Cappello e guanti (dipende da quanto soffri il freddo)</span></li><li><span style=\"color:rgb(0,0,0);\">Torcia frontale&nbsp;</span></li><li><span style=\"color:rgb(0,0,0);\">Occhiali da sole</span></li><li><span style=\"color:rgb(0,0,0);\">Asciugamano (meglio se da viaggio, compatto)</span></li><li><span style=\"color:rgb(0,0,0);\">Valigia per trasportare il vestiario</span></li><li><span style=\"color:rgb(0,0,0);\">Zaino con attrezzatura fotografica personale</span></li><li><span style=\"color:rgb(0,0,0);\">Anche se dormiremo in tenda, saremo sempre vicini all’auto, se hai dei powerbank per caricare la fotocamera ed il cellulare è bene portarli</span></li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "djanet"
+    "slug": "djanet",
+    "locale": "it",
+    "name": "Djanet"
   },
-  "sessions": [
+  "states": {
+    "name": "Algeria",
+    "slug": "algeria",
+    "description": "<p>L'Algeria è un paese incredibile ed ancora poco battuto dal turismo fotografico. Sa Offrire scenari naturali ed emozioni che lasciano il segno: dai paesaggi desertici del Sahara, ai canyon scolpiti dal vento, ai villaggi costieri. Una cultura millenaria che ancora oggi si può vivere insieme alle tradizioni dei nomadi Tuareg.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Algeria 2025",
+    "metaDescription": "Prepara lo zaino e la fotocamera, ti aspettiamo per questo viaggio fotografico in Algeria, sarà un'esperienza incredibile tra le dune del deserto, notti in tenda e l'ospitalità dei Tuareg.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2026-03-21",
-      "end": "2026-03-28"
+      "id": "268",
+      "title": "El Berdj",
+      "description": "Il canyon di El Berdj è una spettacolare gola naturale situata nel sud-est dell'Algeria, all'interno del massiccio del Tassili n'Ajjer, una delle regioni più affascinanti del Sahara. Questo canyon è noto per le sue alte pareti rocciose scolpite dal vento e dall’acqua nel corso dei millenni, che creano paesaggi quasi surreali.",
+      "slug": "el-berdj",
+      "locale": "it",
+      "state": {
+        "name": "Algeria",
+        "slug": "algeria",
+        "locale": "it",
+        "description": "<p>L'Algeria è un paese incredibile ed ancora poco battuto dal turismo fotografico. Sa Offrire scenari naturali ed emozioni che lasciano il segno: dai paesaggi desertici del Sahara, ai canyon scolpiti dal vento, ai villaggi costieri. Una cultura millenaria che ancora oggi si può vivere insieme alle tradizioni dei nomadi Tuareg.</p>"
+      },
+      "steps": [
+        {
+          "id": "190",
+          "title": "Trasferimento al Campeggio a Wan Tabrkat",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">In mattinata ci dirigeremo verso El Berdj, facendo alcune fermate lungo il tragitto per ammirare antichi graffiti rocciosi. Dopo pranzo, proseguiremo il viaggio, arrivando nel pomeriggio a Wan Tabrkat. Dopo aver montato il campo, faremo una passeggiata nel suggestivo canyon di El Berdj, circondato dalle maestose dune. Al tramonto, potremo immortalare paesaggi mozzafiato mentre il deserto si tinge di una luce dorata. La serata si concluderà con una cena tradizionale Tuareg, seguita dalla straordinaria opportunità di fotografare la Via Lattea nel cielo limpido del deserto.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_Algeria_e064c85fec.jpeg",
+          "alternativeText": "deserto sahara tramonto rocce fotografo"
+        }
+      ]
+    },
+    {
+      "id": "272",
+      "title": "Tin Merzouga",
+      "description": "Dedicheremo del tempo alle magnifiche dune di Tin Merzouga, che possono raggiungere altezze davvero imponenti, fino a 600mt. In quest'area potrai fotografare queste bellissime dune che creano giochi di luce ed ombre pazzeschi.",
+      "slug": "tin-merzouga",
+      "locale": "it",
+      "state": {
+        "name": "Algeria",
+        "slug": "algeria",
+        "locale": "it",
+        "description": "<p>L'Algeria è un paese incredibile ed ancora poco battuto dal turismo fotografico. Sa Offrire scenari naturali ed emozioni che lasciano il segno: dai paesaggi desertici del Sahara, ai canyon scolpiti dal vento, ai villaggi costieri. Una cultura millenaria che ancora oggi si può vivere insieme alle tradizioni dei nomadi Tuareg.</p>"
+      },
+      "steps": [
+        {
+          "id": "191",
+          "title": "Esplorazione di Wan Tabrkat, Moula Naga, Tamzdiga, Bouhdian, Wan Nagn e Tin Merzouga",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">Inizieremo la giornata con una camminata indimenticabile tra le dune rosa, perfettamente sincronizzata per assistere ai primi raggi del sole che dipingono il deserto con una luce magica. Dopo una robusta colazione, esploreremo il deserto visitando le magnifiche dune di Tin Merzouga, alte più di 600 metri. Questo paesaggio, con la sua sabbia rossa, è perfetto per la fotografia, specialmente al tramonto, quando la luce e le ombre creano un’atmosfera incantevole. La giornata si concluderà con una cena Tuareg intorno al fuoco, accompagnata da un tè tradizionale mentre il cielo stellato avvolge il deserto.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Dune_di_Tin_Merzouga_4b7359e4f5.jpg",
+          "alternativeText": "tramonto deserto viaggio fotografico algeria"
+        }
+      ]
+    },
+    {
+      "id": "273",
+      "title": "Moula Naga",
+      "description": "Un altro angolo da scoprire del deserto algerino, dove potrai sbizzarrirti a fotografare paesaggi desertici unici tra sabbia e rocce scolpite dal tempo.",
+      "slug": "moula-naga",
+      "locale": "it",
+      "state": {
+        "name": "Algeria",
+        "slug": "algeria",
+        "locale": "it",
+        "description": "<p>L'Algeria è un paese incredibile ed ancora poco battuto dal turismo fotografico. Sa Offrire scenari naturali ed emozioni che lasciano il segno: dai paesaggi desertici del Sahara, ai canyon scolpiti dal vento, ai villaggi costieri. Una cultura millenaria che ancora oggi si può vivere insieme alle tradizioni dei nomadi Tuareg.</p>"
+      },
+      "steps": [
+        {
+          "id": "191",
+          "title": "Esplorazione di Wan Tabrkat, Moula Naga, Tamzdiga, Bouhdian, Wan Nagn e Tin Merzouga",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">Inizieremo la giornata con una camminata indimenticabile tra le dune rosa, perfettamente sincronizzata per assistere ai primi raggi del sole che dipingono il deserto con una luce magica. Dopo una robusta colazione, esploreremo il deserto visitando le magnifiche dune di Tin Merzouga, alte più di 600 metri. Questo paesaggio, con la sua sabbia rossa, è perfetto per la fotografia, specialmente al tramonto, quando la luce e le ombre creano un’atmosfera incantevole. La giornata si concluderà con una cena Tuareg intorno al fuoco, accompagnata da un tè tradizionale mentre il cielo stellato avvolge il deserto.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Notturna_a_Moula_Naga_b131247c09.jpg",
+          "alternativeText": "viaggio fotografico algeria"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_nel_deserto_sahara_algerino_cc1e55ea9b.jpg",
+          "alternativeText": "viaggio fotografico in algeria"
+        }
+      ]
+    },
+    {
+      "id": "274",
+      "title": "Wan Nagn",
+      "description": "Altra location incredibile di questo viaggio fotografico in Algeria, dove si possono catturare paesaggi marziani, immersi nella sabbia e rocce con forme e disegni incantevoli.",
+      "slug": "wan-nagn",
+      "locale": "it",
+      "state": {
+        "name": "Algeria",
+        "slug": "algeria",
+        "locale": "it",
+        "description": "<p>L'Algeria è un paese incredibile ed ancora poco battuto dal turismo fotografico. Sa Offrire scenari naturali ed emozioni che lasciano il segno: dai paesaggi desertici del Sahara, ai canyon scolpiti dal vento, ai villaggi costieri. Una cultura millenaria che ancora oggi si può vivere insieme alle tradizioni dei nomadi Tuareg.</p>"
+      },
+      "steps": [
+        {
+          "id": "195",
+          "title": "Le dune nere di Adjlati",
+          "description": "<p>Oggi attraverseremo il Wadi di Indjaren, un paesaggio punteggiato da pitture e incisioni rupestri. Il viaggio prosegue fino a raggiungere le dune nere di Adjlati, dove monteremo il campo per la notte. Un paesaggio contrastato e affascinante tra sabbia scura e rilievi desertici. Pernottamento in campo tendato</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Wan_Nagn_roccia_cornice_naturale_c56d60da19.jpeg",
+          "alternativeText": "viaggio fotografico algeria"
+        }
+      ]
+    },
+    {
+      "id": "275",
+      "title": "Foresta di Pietra di Adaiq",
+      "description": "Questo spot sarà il luogo dove campeggeremo una notte. Immersi sempre nel deserto del Sahara, esploreremo questa zona fatta di sabbia dorata e rocce imponenti.",
+      "slug": "foresta-di-pietra-di-adaiq",
+      "locale": "it",
+      "state": {
+        "name": "Algeria",
+        "slug": "algeria",
+        "locale": "it",
+        "description": "<p>L'Algeria è un paese incredibile ed ancora poco battuto dal turismo fotografico. Sa Offrire scenari naturali ed emozioni che lasciano il segno: dai paesaggi desertici del Sahara, ai canyon scolpiti dal vento, ai villaggi costieri. Una cultura millenaria che ancora oggi si può vivere insieme alle tradizioni dei nomadi Tuareg.</p>"
+      },
+      "steps": [
+        {
+          "id": "196",
+          "title": "Rientro a Djanet e tramonto sulla valle deli UFO",
+          "description": "<p>Partiremo per <span style=\"color:rgb(0,0,0);\">Djanet, notte in hodel con alba o tramonto sulla valle degli UFO, in una zona vicino la città che ci consentirà di fare una sessione di scatto anche quando abbiamo il pernotto in Hotel.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Erg_Admer_al_tramonto_2563d7731f.jpeg",
+          "alternativeText": "viaggio fotografico algeria"
+        }
+      ]
+    },
+    {
+      "id": "276",
+      "title": "Tilalin, Timghas e Tikobawin",
+      "description": "Tilalin e Timghas e Tikobawin sono 3 delle montagna più conosciute nella zona di djanet. Esploreremo le zone limitrofe per ricercare composizioni e soggetti interessanti.",
+      "slug": "tilalin",
+      "locale": "it",
+      "state": {
+        "name": "Algeria",
+        "slug": "algeria",
+        "locale": "it",
+        "description": "<p>L'Algeria è un paese incredibile ed ancora poco battuto dal turismo fotografico. Sa Offrire scenari naturali ed emozioni che lasciano il segno: dai paesaggi desertici del Sahara, ai canyon scolpiti dal vento, ai villaggi costieri. Una cultura millenaria che ancora oggi si può vivere insieme alle tradizioni dei nomadi Tuareg.</p>"
+      },
+      "steps": [
+        {
+          "id": "197",
+          "title": "Trasferimento verso la foresta di pietra",
+          "description": "<p>Ci sposteremo verso la suggestiva Foresta di Pietra, un paesaggio surreale scolpito dal vento e dal tempo. Monteremo il nostro campo tendato per la notte in un luogo spettacolare, immersi nella natura più remota.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tilalin_f71451978d.jpeg",
+          "alternativeText": "viaggio fotografico algeria"
+        }
+      ]
+    },
+    {
+      "id": "277",
+      "title": "Ibis Airport Hotel Algeri",
+      "description": "Ibis Airport Hotel di Algeri è una delle strutture convenzionate che ci ospitano ormai da anni.",
+      "slug": "ibis-airport-hotel-algeri",
+      "locale": "it",
+      "state": {
+        "name": "Algeria",
+        "slug": "algeria",
+        "locale": "it",
+        "description": "<p>L'Algeria è un paese incredibile ed ancora poco battuto dal turismo fotografico. Sa Offrire scenari naturali ed emozioni che lasciano il segno: dai paesaggi desertici del Sahara, ai canyon scolpiti dal vento, ai villaggi costieri. Una cultura millenaria che ancora oggi si può vivere insieme alle tradizioni dei nomadi Tuareg.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Ibis_Airport_Hotel_algeri_1661114060.jpg",
+          "alternativeText": "viaggio fotografico algeria"
+        }
+      ]
+    },
+    {
+      "id": "278",
+      "title": "Djanet",
+      "description": "Djanet è una città dell'Algeria orientale, incastonata tra le rocce nere del massiccio del Tassili n’Ajjer. Con le sue case in terra cruda, le palme da dattero e l’atmosfera sospesa nel tempo, è il punto di partenza ideale per esplorare i paesaggi straordinari della regione: canyon scolpiti dal vento, archi di pietra giganteschi, pitture rupestri preistoriche e dune dorate che si perdono all’orizzonte.",
+      "slug": "djanet",
+      "locale": "it",
+      "state": {
+        "name": "Algeria",
+        "slug": "algeria",
+        "locale": "it",
+        "description": "<p>L'Algeria è un paese incredibile ed ancora poco battuto dal turismo fotografico. Sa Offrire scenari naturali ed emozioni che lasciano il segno: dai paesaggi desertici del Sahara, ai canyon scolpiti dal vento, ai villaggi costieri. Una cultura millenaria che ancora oggi si può vivere insieme alle tradizioni dei nomadi Tuareg.</p>"
+      },
+      "steps": [
+        {
+          "id": "189",
+          "title": "Arrivo ad Algeri, stopover e ripartenza per Djanet",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">Incontrerai il coach e gli altri partecipanti direttamente all'areoporto di Roma Fiumicino, Durante l'attesa per il volo, il coach ti fornirà una panoramica dell’itinerario e delle informazioni utili per l’avventura che ti attende. Atterreremo ad Algeri e dopo un piccolo stopover all'interno dell'aeroporto ripartiremo con un volo interno per Djanet, dove ci sarà la nostra guida del posto ad accoglierci e portarci in hotel, dove ci aspetta un meritato riposo.</span></p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Djanet_viaggio_fotografico_algeria_30561ec106.jpg",
+          "alternativeText": "viaggio fotografico algeria"
+        }
+      ]
     }
   ],
   "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Camera Singola",
+      "description": "Soggiorni in hotel camera singola",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_person_in_bed_96_717714bbfc.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Guida Locale",
+      "description": "Potremo usufruire di una guida turistica locale che ci accompagnerà durante il viaggio fotografico.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_tourist_guide_skin_type_1_96_f5e7901b4f.png"
+      }
+    },
+    {
+      "title": "Campo Tendato",
+      "description": "Esperienza all'interno di un campo tendato, organizzato con tutti i confort.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/campo_tendato_06cf7ba881.png"
+      }
+    },
+    {
+      "title": "Cuoco",
+      "description": "Cuoco ed equipaggiamento per la cucina",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_chef_cucina_pelle_tipo_2_96_8a1ef8416d.png"
+      }
+    },
+    {
+      "title": "Spettacoli Locali",
+      "description": "Esibizioni musicali private nel deserto",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/spettacoli_nel_deserto_5913b0f2f1.png"
+      }
+    },
+    {
+      "title": "Inverter per ricarica",
+      "description": "Inverter per la ricarica delle attrezzature fotografiche ed elettroniche di prima necessità.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/inverter_per_ricarica_df52cfb844.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Visto di Ingresso",
+      "description": "Visto per entrare nel paese (90€)",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_documento_96_5556f508a4.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "200",
+      "number": 1,
+      "title": "Benvenuti in Algeria",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "189",
+          "title": "Arrivo ad Algeri, stopover e ripartenza per Djanet",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">Incontrerai il coach e gli altri partecipanti direttamente all'areoporto di Roma Fiumicino, Durante l'attesa per il volo, il coach ti fornirà una panoramica dell’itinerario e delle informazioni utili per l’avventura che ti attende. Atterreremo ad Algeri e dopo un piccolo stopover all'interno dell'aeroporto ripartiremo con un volo interno per Djanet, dove ci sarà la nostra guida del posto ad accoglierci e portarci in hotel, dove ci aspetta un meritato riposo.</span></p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "201",
+      "number": 2,
+      "title": "Trasferimento al campo Wan Tabrkat",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "190",
+          "title": "Trasferimento al Campeggio a Wan Tabrkat",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">In mattinata ci dirigeremo verso El Berdj, facendo alcune fermate lungo il tragitto per ammirare antichi graffiti rocciosi. Dopo pranzo, proseguiremo il viaggio, arrivando nel pomeriggio a Wan Tabrkat. Dopo aver montato il campo, faremo una passeggiata nel suggestivo canyon di El Berdj, circondato dalle maestose dune. Al tramonto, potremo immortalare paesaggi mozzafiato mentre il deserto si tinge di una luce dorata. La serata si concluderà con una cena tradizionale Tuareg, seguita dalla straordinaria opportunità di fotografare la Via Lattea nel cielo limpido del deserto.</span></p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "202",
+      "number": 3,
+      "title": "Godiamoci il deserto con delle escursioni in luoghi incredibili",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "191",
+          "title": "Esplorazione di Wan Tabrkat, Moula Naga, Tamzdiga, Bouhdian, Wan Nagn e Tin Merzouga",
+          "description": "<p><span style=\"background-color:transparent;color:#000000;\">Inizieremo la giornata con una camminata indimenticabile tra le dune rosa, perfettamente sincronizzata per assistere ai primi raggi del sole che dipingono il deserto con una luce magica. Dopo una robusta colazione, esploreremo il deserto visitando le magnifiche dune di Tin Merzouga, alte più di 600 metri. Questo paesaggio, con la sua sabbia rossa, è perfetto per la fotografia, specialmente al tramonto, quando la luce e le ombre creano un’atmosfera incantevole. La giornata si concluderà con una cena Tuareg intorno al fuoco, accompagnata da un tè tradizionale mentre il cielo stellato avvolge il deserto.</span></p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "206",
+      "number": 5,
+      "title": "Le dune nere di Adjlati",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "195",
+          "title": "Le dune nere di Adjlati",
+          "description": "<p>Oggi attraverseremo il Wadi di Indjaren, un paesaggio punteggiato da pitture e incisioni rupestri. Il viaggio prosegue fino a raggiungere le dune nere di Adjlati, dove monteremo il campo per la notte. Un paesaggio contrastato e affascinante tra sabbia scura e rilievi desertici. Pernottamento in campo tendato</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "207",
+      "number": 4,
+      "title": "Rientro a Djanet",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "196",
+          "title": "Rientro a Djanet e tramonto sulla valle deli UFO",
+          "description": "<p>Partiremo per <span style=\"color:rgb(0,0,0);\">Djanet, notte in hodel con alba o tramonto sulla valle degli UFO, in una zona vicino la città che ci consentirà di fare una sessione di scatto anche quando abbiamo il pernotto in Hotel.</span></p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "208",
+      "number": 6,
+      "title": "Trasferimento verso la foresta di pietra",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "197",
+          "title": "Trasferimento verso la foresta di pietra",
+          "description": "<p>Ci sposteremo verso la suggestiva Foresta di Pietra, un paesaggio surreale scolpito dal vento e dal tempo. Monteremo il nostro campo tendato per la notte in un luogo spettacolare, immersi nella natura più remota.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "209",
+      "number": 7,
+      "title": "Esploriamo la regione di Tikobawin",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "198",
+          "title": "Tikobawin – Erg Admer – hotel a Djanet",
+          "description": "<p>Oggi esploreremo la regione di Tikobawin, dove l’orizzonte si apre su vasti spazi punteggiati da picchi di arenaria. Visita di un grande arco naturale, tombe neolitiche e pitture rupestri. Dopo il pranzo, rientro in hotel a Djanet. Cena e breve riposo prima del trasferimento in aeroporto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "210",
+      "number": 8,
+      "title": "Arrivederci Algeria!",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "199",
+          "title": "Foto di rito, saluti e rientro a Roma",
+          "description": "<p>Dopo un breve volo da Djanet ad Algeri, faremo uno stopover di qualche ora dentro l'aeroporto per poi ripartire con un nuovo volo per Roma Fiumicino.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Tenda",
+      "description": "Esperienza wild",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Guida Locale",
+      "description": "Accompagnati da guide locali che parlano inglese/italiano",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Fotografia Notturna",
+      "description": "Impara a scattare in luce lunare o con le stelle",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [
+    {
+      "title": "Temperature in Algeria",
+      "description": "<p><span style=\"color:rgb(0,0,0);\">Un aspetto importante da considerare è la temperatura più fresca del deserto di notte. Dopo il tramonto può fare abbastanza freddo, quindi è essenziale portare abbigliamento caldo per la sera. In generale, il tour è progettato per essere accessibile a una vasta gamma di partecipanti, con l'unica prerogativa di una resistenza al freddo e un entusiasmo per esplorare il magnifico Sahara.</span></p>",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/temperature_esterne_algeria_71ac1fe456.png"
+      }
+    },
+    {
+      "title": "Requisiti Fisici per l'Algeria",
+      "description": "<p><span style=\"color:rgb(0,0,0);\">La difficoltà fisica di questo tour fotografico in Algeria è considerata facile-moderata. Durante il viaggio, ti sposterai in comode auto 4x4, con la maggior parte delle destinazioni facilmente accessibili dalla vettura. Nel deserto, l'attività fisica principale consiste in brevi escursioni sulle dune, che possono risultare un po' faticose a causa della sabbia morbida, ma sono gestibili per la maggior parte dei partecipanti. Le passeggiate verso le dune di solito durano circa 30-40 minuti, permettendo di apprezzare il paesaggio e fare fotografie.</span><br><span style=\"color:rgb(0,0,0);\">Sebbene le escursioni possano essere fisicamente impegnative, non richiedono competenze tecniche avanzate o un alto livello di forma fisica. La principale difficoltà sarà camminare sulla sabbia e adattarsi al terreno a volte imprevedibile del deserto, ma l'esperienza è più focalizzata sul godere dell'ambiente piuttosto che sull'attività fisica intensa.</span></p>",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/requisiti_viaggio_fotografico_c1570cd0f3.png"
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "id": "226",
+      "start": "2026-03-21",
+      "end": "2026-03-28",
+      "status": "almostFull",
+      "maxPax": 8,
+      "price": 2299,
+      "deposit": 690,
+      "balance": 1609,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2299,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "deserto sahara tramonto rocce fotografo",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_Algeria_e064c85fec.jpeg"
+  },
   "pictures": [
     {
-      "id": "414",
+      "id": "0",
+      "type": "tour",
       "title": "Canyon di El Berdj",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_Algeria_e064c85fec.jpeg",
+      "alt": "deserto sahara tramonto rocce fotografo"
     },
     {
-      "id": "426",
+      "id": "1",
+      "type": "tour",
       "title": "Tin Merzouga",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Dune_di_Tin_Merzouga_4b7359e4f5.jpg",
+      "alt": "tramonto deserto viaggio fotografico algeria"
     },
     {
-      "id": "427",
+      "id": "2",
+      "type": "tour",
       "title": "Moula Naga",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Notturna_a_Moula_Naga_b131247c09.jpg",
+      "alt": "viaggio fotografico algeria"
     },
     {
-      "id": "428",
+      "id": "3",
+      "type": "tour",
       "title": "Wan Nagn",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Wan_Nagn_roccia_cornice_naturale_c56d60da19.jpeg",
+      "alt": "viaggio fotografico algeria"
     },
     {
-      "id": "429",
+      "id": "4",
+      "type": "tour",
       "title": "Erg Admer",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Erg_Admer_al_tramonto_2563d7731f.jpeg",
+      "alt": "viaggio fotografico algeria"
     },
     {
-      "id": "430",
+      "id": "5",
+      "type": "tour",
       "title": "Tilalin",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tilalin_f71451978d.jpeg",
+      "alt": "viaggio fotografico algeria"
     },
     {
-      "id": "432",
+      "id": "6",
+      "type": "tour",
       "title": "Djanet",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Djanet_viaggio_fotografico_algeria_30561ec106.jpg",
+      "alt": "viaggio fotografico algeria"
     },
     {
-      "id": "433",
+      "id": "7",
+      "type": "tour",
       "title": "Algerian Nights",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_nel_deserto_sahara_algerino_cc1e55ea9b.jpg",
+      "alt": "viaggio fotografico in algeria"
+    },
+    {
+      "id": "locpic-6-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Ibis_Airport_Hotel_algeri_1661114060.jpg",
+      "alt": "viaggio fotografico algeria"
     }
   ]
 }

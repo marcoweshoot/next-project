@@ -1,99 +1,709 @@
 {
+  "id": "31",
+  "tour_id": "le-dolomiti-invernali",
   "slug": "winter-dolomiti",
   "title": "Dolomiti Invernali: Un Paradiso Fotografico Tra Natura e Paesaggi innevati",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p>Le Dolomiti, uno dei posti più affascinanti del pianeta dove tantissimi fotografi vanno a scattare durante i periodi estivi e durante l’autunno, ma quanti… Quanti vanno a scattare in questi meravigliosi luoghi durante l’inverno?</p><p>Le Dolomiti invernali offrono degli spunti affascinanti, si possono scattare delle fotografie incredibili sia con la luna che con le stelle stelle, albe e tramonti infuocati che riflettono sulla neve sono inediti e tremendamente stimolanti, unisciti in questa avventura epica sulle nostre montagne spettacolari.</p><p>Questo viaggio fotografico si svolgerà in alta quota, il clima rigido scenderà sotto lo zero, passeremo del tempo coi piedi nella neve, è bene essere preparati per questo, non è richiesta chi sa quale forma fisica è però richiesta elasticità fisica e mentale; albe, tramonti e notturne potranno essere stancanti, ma sapranno ricompensarci di grandi emozioni. Inoltre ci sarà sempre la possibilità di usufruire di alcune ore di riposo tra una sessione e l’altra.</p><p><strong>A chi è rivolto l'evento?</strong></p><p>Questo specifico foto tour è rivolto agli amanti della montagna, della fotografia di paesaggio nella sua forma più estrema, a prescindere dal livello (seguiremo passo passo i meno esperti)</p><p>Riusciamo a seguire il principiante, che ha bisogno di imparare le linee guida della fotografia di base (composizione, regole, settaggi della fotocamera), fino al fotografo avanzato che cerca di approfondire la sua tecnica ed imparare a gestire al meglio la pianificazione.</p><p><strong>Che tipo di esperienza è?</strong></p><p>Questo viaggio fotografico si svolgerà in alta quota, il clima rigido scenderà sotto lo zero, passeremo del tempo coi piedi nella neve, è bene essere preparati per questo, non è richiesta chi sa quale forma fisica è però richiesta elasticità fisica e mentale; albe, tramonti e notturne potranno essere stancanti, ma sapranno ricompensarci di grandi emozioni. Inoltre ci sarà sempre la possibilità di usufruire di alcune ore di riposo tra una sessione e l’altra.</p><p><strong>Cosa posso imparare in questo viaggio fotografico?</strong></p><ul><li>Il corso è strutturato per apprendere come scattare fotografie di paesaggio padroneggiando sia attrezzatura che creatività. Per tutta la durata del soggiorno approfondiremo diverse tematiche, scambieremo costantemente informazioni per chiarire ogni dubbio dei partecipanti, sviscerando le tecniche e i trucchi per ottenere immagini di grande impatto qualità.</li><li>Tecniche base ed avanzate di scatto, dalla lettura della luce al focus stacking, panoramiche e focal blending</li><li>Postproduzione base ed avanzata in video che riceverai direttamente via mail.</li></ul><p><strong>Cosa riceverà ogni partecipante alla fine del corso</strong></p><ul><li>accesso ad un gruppo whatsapp riservato</li><li>un video sulla postpdroduzione da principiante ad esperto</li><li>uno sconto sul prossimo viaggio</li><li>un estratto del nostro PDF sulla Pianificazione della fotografia di paesaggio</li></ul>",
+  "excerpt": "Vivi l'emozione di immergerti in un avventura fotografica tra le vette più belle d'Europa",
+  "difficulty": "medium",
+  "experience_level": "Intenso",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>&nbsp;</p><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario pesante da montagna impermeabile e traspirante</li><li>Cappello di lana</li><li>Guanti pesanti</li><li>Scarponi isolanti</li><li>Ramponcini</li><li>Ciaspole</li><li>Verrà creato un gruppo whatsapp la settimana prima dei viaggio per coordinare acquisti o noleggi extra</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "veneto"
+    "slug": "veneto",
+    "locale": "it",
+    "name": "Veneto"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Dolomiti Winter 25 | WeShoot",
+    "metaDescription": "Partecipa al nostro esclusivo viaggio fotografico in Dolomiti e vivi un'esperienza unica per immortalare la natura incontaminata, tra vette innevate e panorami da sogno.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2024-01-11",
-      "end": "2024-01-14"
+      "id": "226",
+      "title": "San Martino di Castrozza innevata",
+      "description": "San Martino di Castrozza, una gemma incastonata nel cuore delle Dolomiti. Questa località incantevole offre un mix perfetto di avventure naturalistiche. Circondata da maestose vette, è il luogo ideale per gli amanti della fotografia di apesaggio.",
+      "slug": "san-martino-di-castrozza-innevata",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "169",
+          "title": "Il tour inizia qui: San Martino di Castrozza",
+          "description": "<p>Ore 12:00: ci incontreremo a San Martino di Castrozza (TN), dove faremo base per la prima notte, ci sistemeremo nelle camere e faremo un piccolo briefing sulla pianificazione della fotografia.</p><p>Ore 14:00: ci sposteremo per le luci del tramonto verso le straordinarie Pale di San Martino, dove valuteremo la neve e quale zona raggiungere per ragionare sulla lettura della scena, della composizione e potrai mettere in pratica diverse tecniche fotografiche.</p><p>Ritorno in albergo e valutazione degli scatti</p><p>Ore 19:30: cena (non inclusa nella quota)</p><p>Ore 22:30: sessione notturna se le previsioni meteo e la stanchezza del gruppo ce lo consentono</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Pale_di_San_Martino_dolomiti_phototour_5069bb2a62.jpg",
+          "alternativeText": "Viaggio fotografico Dolomiti "
+        }
+      ]
+    },
+    {
+      "id": "227",
+      "title": "Lagazuoi",
+      "description": "Il Lagazuoi è uno dei gioielli delle Dolomiti, noto per i suoi panorami mozzafiato e la sua ricca storia. Situato nel cuore delle Alpi Venete, il Lagazuoi è famoso per le sue imponenti cime e i sentieri storici, che offrono un viaggio fotografico unico attraverso la natura e la storia. ",
+      "slug": "lagazuoi",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "170",
+          "title": "Lago Antorno ghiacciato o Lagazuoi",
+          "description": "<p>Ore 8:00: colazione</p><p>Ore 9:00: ci muoveremo verso Pocol, dove raggiungeremo la struttura ricettiva per depositare i bagagli. Trascorreremo le prossime due notti qui.&nbsp;</p><p>Ore 12:00: pranzo (non incluso nella quota)&nbsp;</p><p>Ore 14:00: ci dirigeremo verso la nostra destinazione, da valutare in base alle condizioni.</p><p>Blue hours: dopo il tramonto valuteremo le blue Hours in funzione del livello del gruppo</p><p>Ore 19:30 cena&nbsp; (non inclusa nella quota)&nbsp;</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lagazuoi_0185e7368d.jpg",
+          "alternativeText": "panorama innevato lagazuoi viaggio fotografico dolomiti"
+        }
+      ]
+    },
+    {
+      "id": "228",
+      "title": "Passo Giau Innevato",
+      "description": "Il Passo Giau, uno dei passi montani più affascinanti e panoramici delle Dolomiti. Situato a 2.236 metri di altitudine, questo passo offre viste spettacolari sulle cime circostanti, tra cui il Nuvolau e l'Averau. Il Passo Giau è un paradiso per gli appassionati di fotografia.",
+      "slug": "passo-giau-innevato",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "171",
+          "title": "Passo Giau e Falzarego",
+          "description": "<p>Ore 8:00: colazione</p><p>Ore 9:00: ci muoveremo verso il Passo Giau dove metteremo in pratica le nozioni apprese durante i due giorni passati.&nbsp;</p><p>Ore 12:00: pausa pranzo (pasto non incluso)</p><p>Ore 14:00: ci sposteremo per il tramonto verso la zona della Tofana di Rozes, valuteremo degli scatti al Sass De Stria,</p><p>Sessione notturna: se le condizioni ed il gruppo sono ok, valuteremo una sessione notturna in zona passo Giau</p><p>Ore 19:00: cena (non inclusa nella quota)</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Passo_Giau_notturna_15462ac393.jpg",
+          "alternativeText": "viaggio fotografico dolomiti invernali panoramica passo giau"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Dolomiti_Passo_Giau_di_Andrea_Curzi_9a232f8a2d.jpg",
+          "alternativeText": "viaggio fotografico Dolomiti"
+        }
+      ]
+    },
+    {
+      "id": "229",
+      "title": "Nuvolau innevato",
+      "description": "Il Nuvolau, una delle vette più suggestive delle Dolomiti, si erge a 2.574 metri offrendo uno dei panorami più spettacolari della regione. Questa montagna, è famosa per il suo rifugio situato in una delle posizioni più panoramiche delle Alpi.",
+      "slug": "novolau",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "171",
+          "title": "Passo Giau e Falzarego",
+          "description": "<p>Ore 8:00: colazione</p><p>Ore 9:00: ci muoveremo verso il Passo Giau dove metteremo in pratica le nozioni apprese durante i due giorni passati.&nbsp;</p><p>Ore 12:00: pausa pranzo (pasto non incluso)</p><p>Ore 14:00: ci sposteremo per il tramonto verso la zona della Tofana di Rozes, valuteremo degli scatti al Sass De Stria,</p><p>Sessione notturna: se le condizioni ed il gruppo sono ok, valuteremo una sessione notturna in zona passo Giau</p><p>Ore 19:00: cena (non inclusa nella quota)</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Rifugio_Nuvolau_889a58cd9e.jpg",
+          "alternativeText": "Dolomiti tour invernale workshop"
+        }
+      ]
+    },
+    {
+      "id": "230",
+      "title": " Tofana di Rozes",
+      "description": "La Tofana di Rozes, una delle cime più affascinanti delle Dolomiti, si eleva a 3.225 metri, offrendo uno spettacolo naturale di rara bellezza. Caratterizzata dalla sua iconica forma piramidale, questa montagna è un paradiso per i fotografi.",
+      "slug": "tofana-innevata",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "171",
+          "title": "Passo Giau e Falzarego",
+          "description": "<p>Ore 8:00: colazione</p><p>Ore 9:00: ci muoveremo verso il Passo Giau dove metteremo in pratica le nozioni apprese durante i due giorni passati.&nbsp;</p><p>Ore 12:00: pausa pranzo (pasto non incluso)</p><p>Ore 14:00: ci sposteremo per il tramonto verso la zona della Tofana di Rozes, valuteremo degli scatti al Sass De Stria,</p><p>Sessione notturna: se le condizioni ed il gruppo sono ok, valuteremo una sessione notturna in zona passo Giau</p><p>Ore 19:00: cena (non inclusa nella quota)</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tofana_di_Rozes_innevata_194765e6c9.jpg",
+          "alternativeText": "viaggio fotografico dolomiti inverno"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "136",
+      "title": "Nonostante le avversità del tempo, il workshop è stato davvero fantastico!",
+      "description": "Esperienza davvero bellissima e a dir poco unica visto che abbiamo trovato della neve in piena agosto ahahah. \nMi è piaciuto molto. Ho imparato tanto dai ragazzi e la compagnia è stata piacevole. \nMarco e Ale non si sono limitati solamente a dire come fare una determinata cosa, ma spiegandoci anche il perché di quella particolare scelta nel farlo. I materiali post viaggio fotografico sono sufficienti per poter continuare da soli, ma è comunque meglio prestare attenzioni a dei dettagli durante la lezione teorica o direttamente nella sessione della pratica.\n\nParteciperei sicuramente un altro viaggio fotografico, in particolare quello notturno, perché sarebbe fighissimo poter scattare e parlare con Ale e Marco data la loro enorme conoscenza astronomica!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-09-12T20:10:45.000Z"
     },
     {
-      "rating": 5
+      "id": "184",
+      "title": "Top",
+      "description": "Non è stato il mio primo viaggio fotografico con i ragazzi, che come sempre si sono rivelati super competenti in ogni aspetto del viaggio fotografico. In generale il tempo non è stato molto clemente, ma siamo stati ampiamente ripagati dalla possibilità fotografare le Tre Cime innevate. La conoscenza dei luoghi degli insegnanti permette loro di scegliere gli spot fotografici migliori e, per quanto possibile, adattare l'itinerario alle condizioni meteo e alle esigenze individuali. Le lezioni \"in aula\" permettono di apprendere le tecniche di post produzione e di commentare insieme qualche scatto, in modo da potersi migliorare da subito mettendo in pratica i consigli ricevuti già il giorno successivo, aspetto non di secondo piano nei viaggio fotografico di lunga durata come questo. La compagnia fa il resto!! Bravi!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-14T16:10:48.000Z"
     },
     {
-      "rating": 5
+      "id": "185",
+      "title": "Ws Dolomiti",
+      "description": "Workshop fantastico nonostante il tempo poco clemente. Grazie Alessandro e Marco ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-14T18:35:18.000Z"
     },
     {
-      "rating": 5
+      "id": "202",
+      "title": "Esperienza incredibile!",
+      "description": "Non sarà una recensione sulle Dolomiti, perchè tutti le consociamo... Scriverò solo di Marco e Alessandro!\nParto dicendo che, metereologicamente parlando, non siamo stati molto fortunati. Nonostante ciò, l'organizzazione di Marco e Alessandro è stata impeccabile. Quando non è stato possibile scattare, abbiamo fatto lezioni molto approfondite partendo dalla composizione in fase di scatto, fino alla post-produzione e salvataggio finale. Questi ragazzi sono preparatissimi, avranno una risposta per ogni vostra domanda (anche se la fate 100 volte ahah). Sono competenti e disponibili! Riescono a trasmettere una fortissima passione per la fotografia, tanto che personalmente, nell'ultimo periodo ero un po \"sperso\", ma tornato dal Workshop sono più carico che mai! Oltre ad essere due ottimi insegnanti, sono due ragazzi estremamente simpatici e di compagnia. Sanno fare gruppo e creare intesa tra i partecipanti! Siamo diventati subito amici! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-07-30T16:30:07.000Z"
     },
     {
-      "rating": 5
+      "id": "203",
+      "title": "Workshop fotografico Dolomiti",
+      "description": "Marco e Alessandro sono, oltre che fotografi eccezionali, due persone che non mancheranno di farti divertire! E' il secondo viaggio fotografico a cui partecipo ed in entrambi i casi ho imparato davvero molto sia sulla pianificazione che sulle tecniche fotografiche più idonee per le varie condizioni di luce. Una cosa che ho molto apprezzato è stata la loro capacità di modificare il programma della giornata sulla base delle previsioni meteo... anche in caso di brutto tempo non c'è da preoccuparsi, avranno sempre una soluzione alternativa! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-07-30T21:30:47.000Z"
     },
     {
-      "rating": 5
+      "id": "204",
+      "title": "Workshop fotografico dolomiti",
+      "description": "Sono tornata da poco dal viaggio fotografico sulle Dolomiti con Marco e Alessandro. È stata la mia seconda esperienza con loro e ho avuto modo di confermare l'ottima impressione avuta nel precedente viaggio fotografico. L'aspetto più importante è secondo me la loro capacità di creare un'atmosfera amichevole senza mai perdere di vista la professionalità e la cura dei dettagli. Il loro entusiasmo traspare in ogni momento e coinvolge tutti i membri del gruppo. Con il loro atteggiamento hanno contribuito a motivarmi e invogliarmi a migliorare le mie tecniche e conoscenze sulla fotografia paesaggistica.\nConsiglio questa esperienza agli appassionati di fotografia, indipendentemente dalle conoscenze pregresse.\nCi vedremo sicuramente presto!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-08-01T16:31:38.000Z"
     },
     {
-      "rating": 5
+      "id": "205",
+      "title": "Workshop fotografico sulle Dolomiti",
+      "description": "Organizzazione perfetta. Professionalità altissima. Spettacolare il modo di trasmettere la loro passione per la fotografia,  le loro conoscenze senza alcun limite dal momento della preparazione dello scatto,  dallo scatto stesso allo sviluppo e poi postproduzione.  Disponibili in ogni momento,  molto seri ma con allegria!! Non abbandonano mai nessun componente del gruppo!!! BRAVI E BASTA!!! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-08-01T18:34:34.000Z"
     },
     {
-      "rating": 5
+      "id": "206",
+      "title": "Dolomiti ... e non solo ",
+      "description": "La macchina fotografica è lo strumento che mi permette di regalarmi spazi, di mettermi in “viaggio” per scoprire, sperimentare, confrontarmi, condividere, conoscere e conoscermi, senza approfondire o pianificare in anticipo. Così ho fatto anche in aprile quando attraverso i social mi è apparsa più volte l’opportunità di tornare a vivere per qualche giorno la magica immensità del deserto per fotografare soprattutto il cielo stellato. \nCon Alessandro e Marco ci siamo incontrati per la prima volta in aeroporto ed è stato come ritrovare vecchi amici nonostante la differenza di età.\nDue ragazzi che oltre alla professionalità, all’entusiasmo e all’amore per il proprio lavoro possiedono un valore aggiunto: la capacità di gestire un gruppo in modo armonioso attraverso la disponibilità e l’attenzione alle singole e diversificate necessità.\nCon lo stesso spirito ho aderito al “viaggio” per le Dolomiti, dove, tra maestosità del paesaggio e i cieli che ti mettono in comunione con l’Universo, ho potuto confermare e beneficiare di professionalità e cura.\nBuon meritato “viaggio” ragazzi!!!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-08-05T15:46:01.000Z"
     },
     {
-      "rating": 5
+      "id": "241",
+      "title": "Fotografia di paesaggio",
+      "description": "Avvicinarsi alla fotografia di paesaggio con due mostri sacri come Alessandro Cantarelli e Marco Carotenuto non ha prezzo. La loro disponibilità nel seguire gli allievi in ogni fase e nello spiegare con semplicità le tecniche più complesse è l'essenza del loro lavoro e dei loro viaggio fotografico. I percorsi per arrivare alle varie destinazioni sono stati impegnativi, ed a tal proposito si consiglia un minimo di preparazione atletica per seguire i loro passi, ma mai nessuno si è sentito a disagio od in difficoltà. Poi, in quelle zone, le foto, con loro alle spalle, vengono per forza. Grazie ed alla prossima...",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-07-21T11:40:44.000Z"
     },
     {
-      "rating": 5
+      "id": "242",
+      "title": "Passione dolomitica",
+      "description": "Marco e Alessandro ancora una volta si sono dimostrati fotografi che trasmettono passione durante i loro viaggio fotografico, a cui aggiungono una conoscenza eccezionale dei vari spot e delle tecniche fotografiche da applicare in ogni singola circostanza.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-07-21T16:37:41.000Z"
     },
     {
-      "rating": 5
+      "id": "243",
+      "title": "Mi sono trovato come a casa, anzi meglio!",
+      "description": "Marco ed Alessandro sono due  professionisti molto attenti nell'organizzare eventi di alto contenuto tecnico-fotografico in cui trasmettono sempre a tutti i partecipanti la loro grande passione per la fotografia. Sono sempre attenti ai particolari ed alle persone e fanno si che tutti siano sempre allineati con quanto viene spiegato. Devo dire che il tempo e costo investito per questa 3 giorni nelle Dolomiti è sicuramente valsa la pena!\nALLA PROSSIMA!:-)\n\nUn salutone a tutti e grazie ancora di questa stupenda opportunità che mi avete dato.\nAndrea de Polo\nproject manager beni culturali",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-07-21T21:06:33.000Z"
     },
     {
-      "rating": 5
+      "id": "255",
+      "title": "Bellissima esperienza",
+      "description": "In appena tre giorni sulle Dolomiti abbiamo portato a casa delle bellissime foto (complice anche il meteo fortunato), imparato nozioni importanti sulla tecnica fotografica e sulla filosofia che sta dietro alla fotografia di passeggio. Ultimo aspetto, non meno importante, un bellissimo gruppo! Già dalla prima sera sembravamo dei vecchi amici che si ritrovano davanti ad un tavolo da biliardo! ?\nConsiglio sicuramente l’esperienza.\nStefano",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "published_at": "2023-07-17T07:04:06.000Z"
     },
     {
-      "rating": 5
+      "id": "256",
+      "title": "Splendido gruppo ed Esperienza Unica",
+      "description": "Esperienza veramente unica sia per gli scatti fatti e sia per i luoghi visitati con Alessandro che si è dimostrato sempre disponibile nei nostri confronti. Indimenticabili le sue lezioni di astronomia sotto le stelle. Si è creato subito un clima da “rimpatriata” con tutti quanti anche se non ci conoscevamo e questo ha contribuito a rendere l’esperienza indimenticabile.",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "published_at": "2023-07-17T07:20:35.000Z"
     }
   ],
+  "whats_includeds": [
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    },
+    {
+      "title": "Supplemento Camera Singola",
+      "description": "Supplemento per prenotare la camera singola",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_person_in_bed_96_717714bbfc.png"
+      }
+    },
+    {
+      "title": "Assicurazione COVID",
+      "description": "Rimborso totale dell'importo per annullamento dovuto alla malattia, alla quarantena, o all'introduzione di nuove restrizioni.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Assicurazione_COVID_026d57d8b3.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "181",
+      "number": 1,
+      "title": "San Martino di Castrozza",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "169",
+          "title": "Il tour inizia qui: San Martino di Castrozza",
+          "description": "<p>Ore 12:00: ci incontreremo a San Martino di Castrozza (TN), dove faremo base per la prima notte, ci sistemeremo nelle camere e faremo un piccolo briefing sulla pianificazione della fotografia.</p><p>Ore 14:00: ci sposteremo per le luci del tramonto verso le straordinarie Pale di San Martino, dove valuteremo la neve e quale zona raggiungere per ragionare sulla lettura della scena, della composizione e potrai mettere in pratica diverse tecniche fotografiche.</p><p>Ritorno in albergo e valutazione degli scatti</p><p>Ore 19:30: cena (non inclusa nella quota)</p><p>Ore 22:30: sessione notturna se le previsioni meteo e la stanchezza del gruppo ce lo consentono</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "182",
+      "number": 2,
+      "title": "Lago Antorno ghiacciato o Lagazuoi",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "170",
+          "title": "Lago Antorno ghiacciato o Lagazuoi",
+          "description": "<p>Ore 8:00: colazione</p><p>Ore 9:00: ci muoveremo verso Pocol, dove raggiungeremo la struttura ricettiva per depositare i bagagli. Trascorreremo le prossime due notti qui.&nbsp;</p><p>Ore 12:00: pranzo (non incluso nella quota)&nbsp;</p><p>Ore 14:00: ci dirigeremo verso la nostra destinazione, da valutare in base alle condizioni.</p><p>Blue hours: dopo il tramonto valuteremo le blue Hours in funzione del livello del gruppo</p><p>Ore 19:30 cena&nbsp; (non inclusa nella quota)&nbsp;</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "183",
+      "number": 3,
+      "title": "Passo Giau e Falzarego",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "171",
+          "title": "Passo Giau e Falzarego",
+          "description": "<p>Ore 8:00: colazione</p><p>Ore 9:00: ci muoveremo verso il Passo Giau dove metteremo in pratica le nozioni apprese durante i due giorni passati.&nbsp;</p><p>Ore 12:00: pausa pranzo (pasto non incluso)</p><p>Ore 14:00: ci sposteremo per il tramonto verso la zona della Tofana di Rozes, valuteremo degli scatti al Sass De Stria,</p><p>Sessione notturna: se le condizioni ed il gruppo sono ok, valuteremo una sessione notturna in zona passo Giau</p><p>Ore 19:00: cena (non inclusa nella quota)</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "184",
+      "number": 4,
+      "title": "Relax e momenti di condivisione finali",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "172",
+          "title": "Analisi degli scatti e Saluti finali",
+          "description": "<p>Ore 8:00 colazione</p><p>Ore 9:00 analisi degli scatti fatti in queste giornate</p><p>Ore 10:30: procederemo con il checkout, saluti, fine dell'evento</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Fotografia Notturna",
+      "description": "Impara a scattare in luce lunare o con le stelle",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "164",
+      "start": "2024-01-11",
+      "end": "2024-01-14",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 700,
+      "deposit": 210,
+      "balance": 490,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 700,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "Viaggio fotografico Dolomiti ",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Pale_di_San_Martino_dolomiti_phototour_5069bb2a62.jpg"
+  },
   "pictures": [
     {
-      "id": "343",
+      "id": "0",
+      "type": "tour",
       "title": "San Martino di Castrozza Innevata",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Pale_di_San_Martino_dolomiti_phototour_5069bb2a62.jpg",
+      "alt": "Viaggio fotografico Dolomiti "
     },
     {
-      "id": "344",
+      "id": "1",
+      "type": "tour",
       "title": "Lagazuoi",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lagazuoi_0185e7368d.jpg",
+      "alt": "panorama innevato lagazuoi viaggio fotografico dolomiti"
     },
     {
-      "id": "345",
+      "id": "2",
+      "type": "tour",
       "title": "Passo Giau Innevato",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Passo_Giau_notturna_15462ac393.jpg",
+      "alt": "viaggio fotografico dolomiti invernali panoramica passo giau"
     },
     {
-      "id": "346",
+      "id": "3",
+      "type": "tour",
       "title": "Nuvolau",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Rifugio_Nuvolau_889a58cd9e.jpg",
+      "alt": "Dolomiti tour invernale workshop"
     },
     {
-      "id": "347",
+      "id": "4",
+      "type": "tour",
       "title": "Tofana Innevata",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tofana_di_Rozes_innevata_194765e6c9.jpg",
+      "alt": "viaggio fotografico dolomiti inverno"
+    },
+    {
+      "id": "locpic-2-1",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Dolomiti_Passo_Giau_di_Andrea_Curzi_9a232f8a2d.jpg",
+      "alt": "viaggio fotografico Dolomiti"
     }
   ]
 }

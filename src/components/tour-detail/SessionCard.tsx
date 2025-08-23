@@ -14,6 +14,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { getTourLink } from "@/components/tour-card/tourCardUtils";
+import { getFullMediaUrl, DEFAULT_COACH_AVATAR } from "@/utils/TourDataUtilis";
 
 interface SessionCardProps {
   session: {
@@ -62,34 +63,50 @@ const SessionCard: React.FC<SessionCardProps> = ({
   isNext = false,
   ctaLabel = "SCRIVICI ORA",
 }) => {
+  const safeParse = (d: string) => {
+    const x = new Date(d);
+    return isNaN(x.getTime()) ? null : x;
+  };
+
   const formatDateRange = (start: string, end: string) => {
-    const startDate = new Date(start);
-    const endDate = new Date(end);
+    const s = safeParse(start);
+    const e = safeParse(end);
+    if (!s || !e) return { dateRange: "Date TBC", year: "" };
 
-    const startDay = startDate.getDate();
-    const endDay = endDate.getDate();
-    const month = startDate.toLocaleDateString("it-IT", { month: "long" });
-    const year = startDate.getFullYear();
+    const sameMonth = s.getMonth() === e.getMonth();
+    const startDay = s.getDate();
+    const endDay = e.getDate();
+    const startMonth = s.toLocaleDateString("it-IT", { month: "long" });
+    const endMonth = e.toLocaleDateString("it-IT", { month: "long" });
+    const year = s.getFullYear().toString();
 
-    return {
-      dateRange: `${startDay} - ${endDay} ${month}`,
-      year: year.toString(),
-    };
+    const dateRange = sameMonth
+      ? `${startDay} - ${endDay} ${startMonth}`
+      : `${startDay} ${startMonth} - ${endDay} ${endMonth}`;
+
+    return { dateRange, year };
   };
 
   const getDuration = (start: string, end: string) => {
-    const startDate = new Date(start);
-    const endDate = new Date(end);
-    const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return diffDays;
+    const s = safeParse(start);
+    const e = safeParse(end);
+    if (!s || !e) return 0;
+    const diffTime = e.getTime() - s.getTime();
+    // +1 per includere entrambi i giorni (coerente con util calcolo durata)
+    return Math.max(1, Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1);
   };
 
+  const norm = (s?: string) => (s || "").toLowerCase();
+
   const getAvailableSpots = () => {
-    const s = (session.status || "").toLowerCase();
+    const s = norm(session.status);
+    // status che indicano zero posti
     if (["soldout", "sold_out", "closed"].includes(s)) return 0;
-    if (["waitinglist", "waiting_list"].includes(s)) return 0;
-    return session.maxPax || 7;
+    if (["waitinglist", "waiting_list", "waitinglist_open"].includes(s)) return 0;
+
+    const max = session.maxPax ?? 0;
+    const registered = session.users?.length ?? 0;
+    return Math.max(0, max - registered);
   };
 
   const openWhatsApp = () => {
@@ -103,18 +120,26 @@ const SessionCard: React.FC<SessionCardProps> = ({
   const availableSpots = getAvailableSpots();
   const duration = getDuration(session.start, session.end);
   const price = session.price || 0;
+  const currency = session.currency || "EUR";
   const { dateRange, year } = formatDateRange(session.start, session.end);
 
   const tourLink = getTourLink
     ? getTourLink({ slug: tour.slug, states: tour.states || [], places: tour.places || [] })
     : `/viaggi-fotografici/destinazioni/italia/italia/${tour.slug}`;
 
-  const norm = (s?: string) => (s || "").toLowerCase();
+  // Coach sicuro con avatar assoluto
+  const coachAvatarUrl = coach?.avatar?.url
+    ? getFullMediaUrl(coach.avatar.url)
+    : DEFAULT_COACH_AVATAR;
+  const coachAlt = coach?.avatar?.alt || coach?.name || "Coach WeShoot";
+  const coachName = coach?.name || "Coach WeShoot";
 
   const getStatusBadge = (status: string) => {
     switch (norm(status)) {
       case "confirmed":
       case "open":
+      case "scheduled":
+      case "planning":
         return (
           <Badge className="rounded-full px-2.5 py-0.5 bg-primary/10 text-primary flex items-center gap-1">
             <CheckCircle className="w-3 h-3" />
@@ -122,6 +147,9 @@ const SessionCard: React.FC<SessionCardProps> = ({
           </Badge>
         );
       case "almostfull":
+      case "almost_full":
+      case "almostconfirmed":
+      case "almost_confirmed":
         return (
           <Badge className="rounded-full px-2.5 py-0.5 bg-destructive/10 text-destructive flex items-center gap-1">
             <AlertCircle className="w-3 h-3" />
@@ -133,7 +161,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
         return (
           <Badge className="rounded-full px-2.5 py-0.5 bg-muted text-muted-foreground flex items-center gap-1">
             <Users className="w-3 h-3" />
-            Lista d'attesa
+            Lista d&apos;attesa
           </Badge>
         );
       case "soldout":
@@ -200,14 +228,11 @@ const SessionCard: React.FC<SessionCardProps> = ({
             {/* Coach */}
             <div className="flex items-center gap-3">
               <img
-                src={
-                  coach.avatar?.url ||
-                  "https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Coach-WeShoot.avif"
-                }
-                alt={coach.name}
+                src={coachAvatarUrl}
+                alt={coachAlt}
                 className="w-10 h-10 rounded-full object-cover"
               />
-              <span className="text-sm text-foreground font-medium">{coach.name}</span>
+              <span className="text-sm text-foreground font-medium">{coachName}</span>
             </div>
 
             {/* Price and Actions */}
@@ -216,7 +241,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 <div className="text-3xl font-bold text-foreground">
                   {new Intl.NumberFormat("it-IT", {
                     style: "currency",
-                    currency: "EUR",
+                    currency,
                     maximumFractionDigits: 0,
                   }).format(price)}
                 </div>
@@ -227,6 +252,9 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 <Button onClick={openWhatsApp} className="w-full font-medium py-3" size="lg">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {ctaLabel}
+                </Button>
+                <Button asChild variant="outline" className="w-full font-medium py-3" size="lg">
+                  <Link href={tourLink}>SCOPRI VIAGGIO</Link>
                 </Button>
               </div>
             </div>
@@ -252,14 +280,11 @@ const SessionCard: React.FC<SessionCardProps> = ({
               {/* Coach */}
               <div className="flex items-center gap-3 mb-4">
                 <img
-                  src={
-                    coach.avatar?.url ||
-                    "https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Coach-WeShoot.avif"
-                  }
-                  alt={coach.name}
+                  src={coachAvatarUrl}
+                  alt={coachAlt}
                   className="w-8 h-8 rounded-full object-cover"
                 />
-                <span className="text-sm text-foreground">{coach.name}</span>
+                <span className="text-sm text-foreground">{coachName}</span>
               </div>
 
               {/* Available Spots Badge */}
@@ -282,7 +307,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
               <div className="text-3xl font-bold text-foreground mb-4">
                 {new Intl.NumberFormat("it-IT", {
                   style: "currency",
-                  currency: "EUR",
+                  currency,
                   maximumFractionDigits: 0,
                 }).format(price)}
               </div>
@@ -292,6 +317,9 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 <Button onClick={openWhatsApp} className="w-full font-medium">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {ctaLabel}
+                </Button>
+                <Button asChild variant="outline" className="w-full font-medium">
+                  <Link href={tourLink}>SCOPRI VIAGGIO</Link>
                 </Button>
               </div>
             </div>

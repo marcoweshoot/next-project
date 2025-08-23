@@ -16,12 +16,16 @@ export const dynamic = 'force-static'
 export const dynamicParams = true
 
 const CANONICAL_BASE = '/viaggi-fotografici/destinazioni'
+
+// Percorsi snapshot (compat: vecchio formato per-tour + nuovo snapshot unico)
 const SNAPSHOT_DIR = path.join(process.cwd(), 'public', 'snapshots')
+const SNAPSHOT_FILE = path.join(process.cwd(), 'public', 'snapshot.json')
 
 type Params = { stateslug: string; placeslug: string; tourslug: string }
-type Props = { params: Promise<Params> }
+type Props = { params: Params }
 interface TourDetailResponse { tours: any[] }
 
+// Dynamic imports client
 const TourDetailHeaderClient = dynamicImport(
   () => import('@/components/tour-detail/TourDetailHeaderClient'),
   { loading: () => <div className="h-20 bg-gray-100 animate-pulse" /> }
@@ -31,6 +35,7 @@ const TourDetailContentClient = dynamicImport(
   { loading: () => <div className="h-64 bg-gray-100 animate-pulse" /> }
 )
 
+// ---------- piccoli helper ----------
 function toList<T = any>(v: any): T[] {
   return v == null ? [] : (Array.isArray(v) ? v : [v])
 }
@@ -51,7 +56,7 @@ function extractUpcomingCoaches(sessions: any[] = []) {
     new Map(
       sessions
         .filter((s) => { const dt = parseSessionDate(s); return dt && dt.getTime() >= now })
-        .flatMap((s) => s.users || [])
+        .flatMap((s) => s?.users || [])
         .map((u) => [makeCoachKey(u), u])
     ).values()
   )
@@ -63,14 +68,15 @@ function extractPastCoaches(sessions: any[] = []) {
       sessions
         .filter((s) => { const dt = parseSessionDate(s); return dt && dt.getTime() < now })
         .sort((a, b) => parseSessionDate(b)!.getTime() - parseSessionDate(a)!.getTime())
-        .flatMap((s) => s.users || [])
+        .flatMap((s) => s?.users || [])
         .map((u) => [makeCoachKey(u), u])
     ).values()
   )
 }
 
 // ---------- SNAPSHOT HELPERS ----------
-async function readSnapshotTour(slug: string) {
+// (1) vecchio formato per-tour: public/snapshots/tour.{slug}.json
+async function readSnapshotTourFile(slug: string) {
   try {
     const file = path.join(SNAPSHOT_DIR, `tour.${slug}.json`)
     const raw = await fs.readFile(file, 'utf8')
@@ -80,7 +86,25 @@ async function readSnapshotTour(slug: string) {
     return null
   }
 }
+
+// (2) nuovo formato unico: public/snapshot.json { tours: [...], pictures: [...] }
+async function readSnapshotAll(): Promise<{ tours?: any[] } | null> {
+  try {
+    const raw = await fs.readFile(SNAPSHOT_FILE, 'utf8')
+    const data = JSON.parse(raw)
+    return data && typeof data === 'object' ? data : null
+  } catch {
+    return null
+  }
+}
+
 async function readSnapshotList(): Promise<any[]> {
+  // prova nuovo formato
+  const all = await readSnapshotAll()
+  if (all?.tours && Array.isArray(all.tours)) {
+    return all.tours
+  }
+  // fallback vecchio formato aggregato (se mai esistito)
   try {
     const file = path.join(SNAPSHOT_DIR, 'tours.json')
     const raw = await fs.readFile(file, 'utf8')
@@ -93,12 +117,11 @@ async function readSnapshotList(): Promise<any[]> {
 // -------------------------------------
 
 async function fetchTourOnce(slug: string) {
-  // 1) snapshot-first (file di dettaglio se presente)
-  const snap = await readSnapshotTour(slug)
-  if (snap) return snap
+  // 1) snapshot-first (file di dettaglio se presente - vecchio formato)
+  const snapOld = await readSnapshotTourFile(slug)
+  if (snapOld) return snapOld
 
-  // 1-bis) se il dettaglio per-tour non esiste, prova a usare la lista snapshot
-  //        (evita la chiamata al CMS durante il build)
+  // 1-bis) snapshot unico: cerca il tour nello snapshot.json
   const list = await readSnapshotList()
   const fromList = list.find((t: any) => t?.slug === slug)
   if (fromList) return fromList
@@ -115,13 +138,19 @@ async function fetchTourOnce(slug: string) {
 }
 
 function getTourCached(slug: string) {
-  // Nessuna revalidazione: resta statico
+  // In sviluppo: niente cache → leggi sempre gli snapshot aggiornati
+  if (process.env.NODE_ENV === 'development') {
+    return fetchTourOnce(slug);
+  }
+
+  // In produzione: cache soft (es. 1 minuto)
   const runner = nextCache(() => fetchTourOnce(slug), [`tour:${slug}`], {
-    revalidate: false,
+    revalidate: 60, // 60s; evita il "per sempre" che avevi con false
     tags: [`tour:${slug}`],
-  })
-  return runner()
+  });
+  return runner();
 }
+
 
 export async function generateStaticParams(): Promise<Params[]> {
   // 1) snapshot-first
@@ -142,10 +171,11 @@ export async function generateStaticParams(): Promise<Params[]> {
   const seen = new Set<string>()
 
   for (const tour of tours) {
-    const stateSlugs = mapSlugs(tour.states)
-    const placeSlugs = mapSlugs(tour.places)
+    const stateSlugs = mapSlugs(tour?.states)
+    const placeSlugs = mapSlugs(tour?.places)
     const canonicalState = stateSlugs[0] || 'nessuno-stato'
     const canonicalPlace = placeSlugs[0] || 'nessuna-location'
+    if (!tour?.slug) continue
     const key = `${canonicalState}__${canonicalPlace}__${tour.slug}`
     if (seen.has(key)) continue
     seen.add(key)
@@ -158,7 +188,7 @@ export async function generateStaticParams(): Promise<Params[]> {
 
 export default async function TourDetailPage({ params }: Props) {
   try {
-    const { stateslug, placeslug, tourslug } = await params
+    const { stateslug, placeslug, tourslug } = params
     if (!tourslug) {
       return permanentRedirect(CANONICAL_BASE)
     }

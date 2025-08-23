@@ -1,144 +1,810 @@
 {
+  "id": "4",
+  "tour_id": "provenza-tra-campi-di-lavanda-e-via-lattea",
   "slug": "provenza",
   "title": "Provenza: un'esplosione di colori tra campi di lavanda, albe e tramonti",
-  "states": {
-    "slug": "francia"
-  },
+  "description": "<p>Il viaggio fotografico in Provenza ti farà scoprire un angolo di Francia dai colori, sapori e profumi del mediterraneo. I suoi borghi antichi, la vita dei campi, il relax dei Caffè, le vallate che cambiano colore in ogni stagione rendendo sempre accattivante l’atmosfera. Gli sterminati campi di grano che ammaliarono, con il loro giallo intenso, il solitario viandare di Van Gogh.</p><p>I meravigliosi campi di lavanda che da giugno ad agosto rendono lo scenario incantato.</p><p>Ammirare gli infiniti filari di lavanda in fiore è una delle <strong>esperienze più appaganti ed emozionanti</strong> che si possano vivere in Provenza, tra borghi arroccati, colori e i profumi che inebriano i sensi in ogni momento della giornata. Ed è proprio in questi luoghi magici che si trova il Plateau de Valensole, che deve il nome allo splendido borgo antico di Valensole, dove si trova la massima concentrazione di campi di lavanda che si perdono a vista d’occhio da ogni parte, costellati di alberi solitari, casolari, cipressi, fattorie e stradine dove si anima la vita dei contadini, specialmente nelle calde e secche estati provenzali. In questi luoghi domina la lavanda nei colori, nei profumi, nei suoi derivati come il famoso miele, gli olii, i prodotti cosmetici e le essenze.</p><p>Vi accompagneremo in questi luoghi incantati perdendoci negli sconfinati filari di lavanda in fiore dove verremo catturati dai colori intensi, dall’assordante ronzio delle api, dall’indescrivibile profumo, dai colpi d’occhio del giallo dei campi di grano e di girasoli circostanti.</p><p>Ancora una volta vi mostreremo come poter riuscire a <strong>catturare la vera essenza di questa terra attraverso il vostro occhio fotografico</strong>.</p><p>Tutto questo, condito dai piatti tipici del luogo.</p><p>&nbsp;</p><h2>Ok, ma a chi è rivolto questo viaggio fotografico in Provenza?</h2><p>Il viaggio fotografico è <strong>per tutti</strong>. Cuciamo su misura i nostri corsi sul livello dei partecipanti grazie a pochi allievi ed un coach professionista.</p><p>Riusciamo a seguire il principiante, che ha bisogno di imparare le linee guida della fotografia di base (composizione, regole, settaggi della fotocamera), fino al fotografo avanzato che cerca di approfondire la sua tecnica ed imparare a gestire al meglio la pianificazione.</p><p>&nbsp;</p><h2>Di che tipo di esperienza si tratta?</h2><p>Questo viaggio fotografico si svolgerà in Provenza, una terra familiare alle nostre abitudini ma molto generosa dal punto di vista paesaggistico. Le condizioni metereologiche potrebbero subire variazioni tipiche di un clima estivo e, pertanto, non risulterà inusuale trovare improvvisi temporali o rovesci che richiederanno un minimo di adattamento e di abbigliamento adeguato. <strong>Ogni location fotografica è pensata in maniera funzionale</strong> ma può subire variazioni in relazione alle condizioni metereologiche che si incontreranno. Potrebbero esserci quindi cambi di percorso o scelte dei Coach diverse dal programma, per questo è richiesta elasticità fisica e mentale; albe, tramonti e notturne potranno essere stancanti, ma sapranno ricompensarci di <strong>grandi emozioni</strong>. Inoltre ci sarà sempre la possibilità di usufruire di alcune ore diurne di riposo tra una sessione fotografia di alba e di tramonto.<br>&nbsp;</p><h2>Cosa imparerò durante il viaggio fotografico in Provenza?</h2><p>Il corso è strutturato per apprendere come scattare fotografie di paesaggio padroneggiando sia attrezzatura che creatività. Per tutta la durata del soggiorno approfondiremo diverse tematiche, scambieremo costantemente informazioni per chiarire ogni dubbio dei partecipanti, sviscerando le tecniche e i trucchi per ottenere immagini da National Geographic!</p><p>- <strong>LUCE</strong>, come creare ombre e luci che diano forza all’immagine</p><p>- <strong>ESPOSIZIONE</strong>, come misurare correttamente l’esposizione per non perdere informazioni sul file</p><p>- <strong>COMPOSIZIONE</strong>, la suddivisione dei piani, la gestione della profondità di campo e delle grandezze</p><p>- <strong>INFORMAZIONI SULLA FOTOCAMERA</strong>, come leggere l’istogramma e capire i settaggi da utilizzare</p><p>- <strong>LUNGHE ESPOSIZIONI E UTILIZZO DEI FILTRI</strong>, se hai dei filtri fotografici ND, graduati o polarizzanti, portali con te, saremo felici di spiegarti al meglio come usarli.</p><h2>&nbsp;</h2><h2>E per la postproduzione dei nostri scatti?</h2><p>Dopo il viaggio fotografico in Provenza vi invieremo una video lezione in cui verrà spiegato un intero workflow di sviluppo con Camera Raw e Photoshop.</p>",
+  "excerpt": "Immergiti insieme a noi nel viaggio fotografico in Provenza fatto di colori, di profumi e di scorci paesaggistici meravigliosi!",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e tele zoom (24mm-200mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Scarpe comode o da Trekking</li><li>Insetticida</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "valensole"
+    "slug": "valensole",
+    "locale": "it",
+    "name": "Valensole"
   },
-  "sessions": [
+  "states": {
+    "name": "Francia",
+    "slug": "francia",
+    "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Provenza 2025 | WeShoot",
+    "metaDescription": "Un viaggio fotografico Provenza tra i bellissimi campi di lavanda dove potrai ammirare albe, tramonti e via lattea.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-06-30",
-      "end": "2022-07-03"
+      "id": "6",
+      "title": "Valensole",
+      "description": "Valensole è un comune francese noto per i suoi infiniti campi di lavanda, che nei periodi di fioritura regala splendidi colori e profumi. Pianificheremo una volta arrivati in struttura quali sono i campi migliori per alba, tramonto e via lattea. Ogni anno i contadini cambiano il verso dei filari di lavanda, per questo è necessario fare un pò di scouting iniziale.",
+      "slug": "valensole",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "17",
+          "title": "Briefing iniziale e sistemazione nelle camere",
+          "description": "<ul><li>ore 8:30 per chi vuole, l'appuntamento sarà a<strong> </strong>Milano (i dettagli verranno inviati in seguito), dove il coach vi aspetterà con un van per partire alla volta di Manosque. Il viaggio durerà circa 5 ore e 30 minuti.</li><li>ore 16:00 circa ci incontreremo con tutti i partecipanti direttamente all'albergo convenzionato, che si troverà a Manosque, a pochi chilomentri dai campi di lavanda.</li><li>ore 19:30 Briefing introduttivo dove ci conosceremo e capiremo il livello di ognuno per strutturare il viaggio ad hoc per ogni partecipante, ci prepareremo per la cena</li><li>ore 23:00 Se le condizioni meteo lo permettono, ci organizzeremo per la prima sessione fotografica notturna.</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggi_fotografici_campi_fioriti_510597c5d4.jpg",
+          "alternativeText": "alba nel campo di lavanda viaggio fotografico provenza francia"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_all_alba_campi_di_lavanda_796028a135.jpg",
+          "alternativeText": "weshooters alba sui campi di lavanda viaggio fotografico provenza"
+        },
+        {
+          "id": "locpic-0-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Teoria_sul_campo_di_lavanda_e7b7d003d0.jpg",
+          "alternativeText": "fase di scatto viaggio fotografico provenza"
+        }
+      ]
     },
     {
-      "start": "2023-06-29",
-      "end": "2023-07-02"
+      "id": "119",
+      "title": "Alba sul campo di Lavanda",
+      "description": "Torneremo su uno dei campi di lavanda esposti a nord/est in modo da poter fotografare l'ultima alba prima della fine di questo viaggio fotografico.",
+      "slug": "alba-sul-campo-di-lavanda",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "19",
+          "title": "Ultima sessione fotografica sui campi di lavanda",
+          "description": "<ul><li>Ore 05:00 : Sveglia presto per dirigerci sui campi per una sessione di scatto all'Alba</li><li>Ore 09:00 : Rientro in albergo e ricca colazione</li><li>Ore 10:00 : Check Out dalla struttura ricettiva</li><li>Ore 12:00 : Pranzo conclusivo e termine del workshop</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alba_campi_di_lavanda_2201a409f4.jpg",
+          "alternativeText": "alba campi di lavanda valensole viaggio fotografico provenza"
+        },
+        {
+          "id": "locpic-1-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_nei_campi_di_lavanda_8feacaa147.jpg",
+          "alternativeText": "sessione di scatto viaggio fotografico provenza"
+        },
+        {
+          "id": "locpic-1-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Selfie_We_Shooters_in_Provenza_31a1a82dd2.JPG",
+          "alternativeText": "weshooters alba campi di lavanda viaggio fotografico provenza"
+        },
+        {
+          "id": "locpic-1-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Sessione_foto_all_alba_campi_di_lavanda_17b2ebe8ad.jpg",
+          "alternativeText": "weshooter alba campi di lavando viaggio fotografico provenza"
+        }
+      ]
     },
     {
-      "start": "2024-06-27",
-      "end": "2024-06-30"
+      "id": "120",
+      "title": "Tramonto sui campi di lavanda",
+      "description": "Dopo un piccolo scouting per trovare il campo di lavanda più interessante per il tramonto, ci posizioneremo per attendere e fotografare le ultime luci del giorno.",
+      "slug": "tramonto-sui-campi-di-lavanda",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "18",
+          "title": "Una giornata all'insegna della fotografia",
+          "description": "<ul><li>Ore 05:00 : Ci incammineremo verso i lavandeti per fotografare le prime luci dell'alba</li><li>Ore 09:00 : Rientreremo in albergo per gustare la colazione e riposarci</li><li>Ore 12:30 : Pranzo</li><li>Ore 14:00 : Sessione di Post Produzione</li><li>Ore 17:00 : Casting e pianificazione</li><li>Ore 19:00: Sessione di scatto al tramonto</li><li>Ore 22:00: Sessione di scatto notturno (se le condizioni meteo del primo giorno non erano favorevoli)</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alba_campi_di_lavanda_4369abf522.jpg",
+          "alternativeText": "tramonto campi di lavanda viaggio fotografico provenza"
+        }
+      ]
     },
     {
-      "start": "2024-07-04",
-      "end": "2024-07-07"
+      "id": "121",
+      "title": "Via Lattea sui campi di lavanda",
+      "description": "Per fotografare la via lattea nel migliore dei modi, sceglieremo un campo di lavando esposto a sud/est, in modo da sfruttare la profondità dei filari verso la via lattea.",
+      "slug": "via-lattea-sui-campi-di-lavanda",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "18",
+          "title": "Una giornata all'insegna della fotografia",
+          "description": "<ul><li>Ore 05:00 : Ci incammineremo verso i lavandeti per fotografare le prime luci dell'alba</li><li>Ore 09:00 : Rientreremo in albergo per gustare la colazione e riposarci</li><li>Ore 12:30 : Pranzo</li><li>Ore 14:00 : Sessione di Post Produzione</li><li>Ore 17:00 : Casting e pianificazione</li><li>Ore 19:00: Sessione di scatto al tramonto</li><li>Ore 22:00: Sessione di scatto notturno (se le condizioni meteo del primo giorno non erano favorevoli)</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_valensole_viaggio_fotografico_provenza_3ce5ff149c.jpg",
+          "alternativeText": "via lattea valensole viaggio fotografico provenza"
+        }
+      ]
     },
     {
-      "start": "2025-07-03",
-      "end": "2025-07-06"
+      "id": "196",
+      "title": "Gole del Verdon",
+      "description": "Le Gole del Verdon sono una delle esperienze di questo viaggio fotografico, con le acque azzurre del fiume Verdon e i 25km di canyon è uno dei più impressionanti d'Europa.",
+      "slug": "gole-del-verdon",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "150",
+          "title": "Le acque azzurre del Fiume Verdon e il canyon",
+          "description": "<p>Dopo aver fatto una ricca colazione ci prepareremo per raggiungere le Gole del Verdon. Esploreremo un pò la zona in cerca di composizioni interessanti e se le temperature lo permetteranno ci avventureremo in un piccolo trekking tra questi splendidi muraglioni.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gole_del_Verdon_b5f4e3aa88.jpg",
+          "alternativeText": "gole del fiume verdon in provenza"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "114",
+      "title": "Mi aspettavo 10... ho ottenuto 30!! ",
+      "description": "Bellissima esperienza. Tralasciando le alzatacce mattutine (ampiamente ripagate), il viaggio fotografico è stato bello e interessante sotto ogni aspetto. Gli insegnanti hanno messo a disposizione di tutti i corsisti le loro conoscenze, spiegando il tutto in maniera semplice e precisa. Bravi, veramente bravi!! continuate così ragazzi!!! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-03T00:40:02.000Z"
     },
     {
-      "rating": 5
+      "id": "115",
+      "title": "Fantastico ws in Provenza... E non solo paesaggio.",
+      "description": "Alcuni giorni passati nei fantastici lavandeti provenzali. (E non solo). I ragazzi ci hanno fatto fotografare e divertire. Andare con loro piuttosto che da soli ti permette di trovare location insolite e \"studiate\" (non le solite foto da bordo strada). Il clima che si é creato nel gruppo é stato grazie a loro ottimo fin da subito. Abbiamo anche sviluppato il tema del ritratto nei lavandeti che non é cosa da poco.  Da ripetere anche per altri ws. ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-03T21:57:17.000Z"
     },
     {
-      "rating": 5
+      "id": "116",
+      "title": "Immersi nei lavandeti",
+      "description": "Valensole e i suoi lavandeti non hanno bisogno di presentazioni e allora perché non organizzare il viaggio tutto da soli?? Perché nel viaggio fotografico scoprirete quanto sia fondamentale la pianificazione per scattare foto non banali. Troverete dei tutor molto disponibili e competenti che sanno sempre trovare il posto di scatto migliore. Continuate così!!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-07T11:09:17.000Z"
     },
     {
-      "rating": 5
+      "id": "117",
+      "title": "Divertente esperienza fotografica di gruppo ",
+      "description": "Non un banale viaggio fotografico, ma un esperienza appagante ed istruttiva, Paesaggi unici e il tutto accompagnati da insegnanti simpatici e professionali. Ho imparato molto e mi sono divertito. assolutamente consigliato!!\n",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-07T15:09:21.000Z"
     },
     {
-      "rating": 5
+      "id": "118",
+      "title": "WORKSHOP FOTOGRAFICO IN PROVENZA A VALENSOLE",
+      "description": "Ho prenotato il WS insieme ad altre due amiche, poi a causa di un imprevisto famigliare, personalmente, con vero rammarico, non ho potuto partecipare. Questa è però la recensione che le mie amiche Adriana ed Anna mi hanno chiesto di scrivere per loro conto \" Esperienza super positiva, docenti che sanno trasmettere conoscenze e passione, ma anche trasformare in poche ore un gruppo di perfetti sconosciuti, di provenienza, genere ed età diverse in un gruppo di amici che dispiace salutare. Da ripetere assolutamente! \" ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-09T21:18:02.000Z"
     },
     {
-      "rating": 5
+      "id": "119",
+      "title": "Fantastico!",
+      "description": "Workshop meraviglioso sotto ogni aspetto. Gli insegnanti sanno trasmettere,  con tanta passione, competenze e nozioni a tutti i partecipanti, dal principiante al più esperto. La scelta delle location è stata ottima, l'organizzazione logistica impeccabile. Non da ultimo, la capacità di creare da subito un gruppo affiatato, in cui sentirsi come tra vecchi amici, è impagabile. Esperienza da ripetere e consigliare! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-09T21:27:36.000Z"
     },
     {
-      "rating": 5
+      "id": "120",
+      "title": "Meraviglioso",
+      "description": "La scelta delle varie location è stata ottima, lontano dalla bolgia turistica ci siamo trovati da soli in posti meravigliosi.\nLa capacità di creare da subito un gruppo affiatato, in cui sentirsi come tra amici di vecchia data è impagabile. Esperienza da ripetere e consigliare!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-10T09:28:57.000Z"
     },
     {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    }
-  ],
-  "pictures": [
-    {
-      "id": "9",
-      "title": "Valensole",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "121",
+      "title": "Esperienza fantastica",
+      "description": "Da pochissimo ho iniziato a fotografare e questo viaggio fotografico è stato entusiasmante.  Alessandro e Federico spiegano in modo molto chiaro e preciso, seguono e aiutano. Hanno scelto location molto particolari, lontane dalla folla.\nSi è subito creato un gruppo affiatato, allegro, collaborativo.\nSono molto contenta dell’esperienza che voglio sicuramente ripetere e che consiglio a tutti",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-10T18:28:32.000Z"
     },
     {
       "id": "122",
-      "title": "Alba campi di lavanda",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Definitely a must if you want great photos.",
+      "description": "Recommend to anyone who wants to learn more about their camera and  understand the basics of taking a great photo.\nThey will follow you even after the viaggio fotografico.\n Thanks to Alessandro , Federico & Michele very highly professional people.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-10T19:32:34.000Z"
     },
     {
       "id": "123",
+      "title": "Lavanda, stelle... E non solo!",
+      "description": "Workshop stupendo, fotografi preparatissimi, dei grandi professionisti. \nSi riconosce subito chi ama il proprio lavoro!\nGli scatti realizzati parlano da soli; un ringraziamento speciale a Michele che, in mezzo alla lavanda ed al grano, mi ha dedicato molto del suo prezioso tempo per reallizare alcuni miei ritratti, grazie! \nSicuramente è una esperienza tosta, poche ore di sonno e tanto lavoro, ma condividere la passione per la fotografia con persone sconosciute è stato magnifico. \nTutti insieme a fotografare lo stesso orizzonte, sotto lo stesso cielo stellato, wow!\nGrazie! ?",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-11T08:36:13.000Z"
+    },
+    {
+      "id": "187",
+      "title": "La Provenza ",
+      "description": "Deciso all'ultimo di partire il viaggio fotografico ha superato le aspettative. In attesa di partire di nuovo per la Provenza con Alessandro, Marco, Federico e Michele. ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-15T16:52:42.000Z"
+    },
+    {
+      "id": "193",
+      "title": "Esperienza indimenticabile",
+      "description": "Terzo viaggio fotografico con Marco e Alessandro e, come gli altri due, molto soddisfatto. La location parla da sola: uno spettacolo naturale che Marco e Ale ti danno la possibilità di godere nei punti migliori e nei momenti topici per la fotografia. Molto curata la parte di formazione (pianificazione e post) e la logistica. Insomma, ho scelto di partecipare per avere l'opportunità di crescere e devo dire che anche questa volta ho imparato nuove cose e portato a casa bei scatti. Grazie Marco e grazie Alessandro!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-07-09T08:39:36.000Z"
+    }
+  ],
+  "whats_includeds": [
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Volo A/R dall'Italia (Milano)",
+      "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "17",
+      "number": 1,
+      "title": "Benvenuti in Provenza",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "17",
+          "title": "Briefing iniziale e sistemazione nelle camere",
+          "description": "<ul><li>ore 8:30 per chi vuole, l'appuntamento sarà a<strong> </strong>Milano (i dettagli verranno inviati in seguito), dove il coach vi aspetterà con un van per partire alla volta di Manosque. Il viaggio durerà circa 5 ore e 30 minuti.</li><li>ore 16:00 circa ci incontreremo con tutti i partecipanti direttamente all'albergo convenzionato, che si troverà a Manosque, a pochi chilomentri dai campi di lavanda.</li><li>ore 19:30 Briefing introduttivo dove ci conosceremo e capiremo il livello di ognuno per strutturare il viaggio ad hoc per ogni partecipante, ci prepareremo per la cena</li><li>ore 23:00 Se le condizioni meteo lo permettono, ci organizzeremo per la prima sessione fotografica notturna.</li></ul>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "number": 2,
+      "title": "Alla scoperta di Valensole",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "18",
+          "title": "Una giornata all'insegna della fotografia",
+          "description": "<ul><li>Ore 05:00 : Ci incammineremo verso i lavandeti per fotografare le prime luci dell'alba</li><li>Ore 09:00 : Rientreremo in albergo per gustare la colazione e riposarci</li><li>Ore 12:30 : Pranzo</li><li>Ore 14:00 : Sessione di Post Produzione</li><li>Ore 17:00 : Casting e pianificazione</li><li>Ore 19:00: Sessione di scatto al tramonto</li><li>Ore 22:00: Sessione di scatto notturno (se le condizioni meteo del primo giorno non erano favorevoli)</li></ul>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "number": 4,
+      "title": "Un'ultima alba prima di ripartire",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "19",
+          "title": "Ultima sessione fotografica sui campi di lavanda",
+          "description": "<ul><li>Ore 05:00 : Sveglia presto per dirigerci sui campi per una sessione di scatto all'Alba</li><li>Ore 09:00 : Rientro in albergo e ricca colazione</li><li>Ore 10:00 : Check Out dalla struttura ricettiva</li><li>Ore 12:00 : Pranzo conclusivo e termine del workshop</li></ul>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "167",
+      "number": 3,
+      "title": "Esploriamo le Gole del Verdon",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "150",
+          "title": "Le acque azzurre del Fiume Verdon e il canyon",
+          "description": "<p>Dopo aver fatto una ricca colazione ci prepareremo per raggiungere le Gole del Verdon. Esploreremo un pò la zona in cerca di composizioni interessanti e se le temperature lo permetteranno ci avventureremo in un piccolo trekking tra questi splendidi muraglioni.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Via Lattea",
+      "description": "Immergiti nello splendore dei cieli stellati e della nostra galassia",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "5",
+      "start": "2022-06-30",
+      "end": "2022-07-03",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 699,
+      "deposit": 100,
+      "balance": 599,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 599,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "75",
+      "start": "2023-06-29",
+      "end": "2023-07-02",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 699,
+      "deposit": 100,
+      "balance": 599,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 599,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "140",
+      "start": "2024-06-27",
+      "end": "2024-06-30",
+      "status": "waitingList",
+      "maxPax": 12,
+      "price": 699,
+      "deposit": 100,
+      "balance": 599,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 699,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "149",
+      "start": "2024-07-04",
+      "end": "2024-07-07",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 599,
+      "deposit": 180,
+      "balance": 419,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 599,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "203",
+      "start": "2025-07-03",
+      "end": "2025-07-06",
+      "status": "almostFull",
+      "maxPax": 7,
+      "price": 790,
+      "deposit": 240,
+      "balance": 550,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 790,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "alba nel campo di lavanda viaggio fotografico provenza francia",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggi_fotografici_campi_fioriti_510597c5d4.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Valensole",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggi_fotografici_campi_fioriti_510597c5d4.jpg",
+      "alt": "alba nel campo di lavanda viaggio fotografico provenza francia"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Alba campi di lavanda",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alba_campi_di_lavanda_2201a409f4.jpg",
+      "alt": "alba campi di lavanda valensole viaggio fotografico provenza"
+    },
+    {
+      "id": "2",
+      "type": "tour",
       "title": "Tramonto sui campi di Lavanda",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alba_campi_di_lavanda_4369abf522.jpg",
+      "alt": "tramonto campi di lavanda viaggio fotografico provenza"
     },
     {
-      "id": "124",
+      "id": "3",
+      "type": "tour",
       "title": "Via lattea sui campi di lavanda",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/via_lattea_valensole_viaggio_fotografico_provenza_3ce5ff149c.jpg",
+      "alt": "via lattea valensole viaggio fotografico provenza"
     },
     {
-      "id": "145",
+      "id": "4",
+      "type": "group",
       "title": "WeShooters sui campi di lavanda",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_nei_campi_di_lavanda_8feacaa147.jpg",
+      "alt": "sessione di scatto viaggio fotografico provenza"
     },
     {
-      "id": "179",
+      "id": "5",
+      "type": "group",
       "title": "Selfie WeShooters in Provenza",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Selfie_We_Shooters_in_Provenza_31a1a82dd2.JPG",
+      "alt": "weshooters alba campi di lavanda viaggio fotografico provenza"
     },
     {
-      "id": "180",
+      "id": "6",
+      "type": "group",
       "title": "WeShooters all'alba campi di lavanda",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_all_alba_campi_di_lavanda_796028a135.jpg",
+      "alt": "weshooters alba sui campi di lavanda viaggio fotografico provenza"
     },
     {
-      "id": "182",
+      "id": "7",
+      "type": "group",
       "title": "Teoria sul campo di lavanda",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Teoria_sul_campo_di_lavanda_e7b7d003d0.jpg",
+      "alt": "fase di scatto viaggio fotografico provenza"
     },
     {
-      "id": "296",
+      "id": "8",
+      "type": "tour",
       "title": "Gole del Verdon",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gole_del_Verdon_b5f4e3aa88.jpg",
+      "alt": "gole del fiume verdon in provenza"
+    },
+    {
+      "id": "locpic-1-3",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Sessione_foto_all_alba_campi_di_lavanda_17b2ebe8ad.jpg",
+      "alt": "weshooter alba campi di lavando viaggio fotografico provenza"
     }
   ]
 }

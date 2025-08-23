@@ -1,158 +1,1072 @@
 {
+  "id": "24",
+  "tour_id": "cappadocia-tra-le-mongolfiere",
   "slug": "cappadocia",
   "title": "Cappadocia: esperienza fotografica tra i paesaggi della Turchia",
-  "states": {
-    "slug": "turchia"
-  },
+  "description": "<p><span style=\"background-color:transparent;color:#282828;\"><strong>Il viaggio fotografico in Cappadocia</strong> è una delle esperienze ideali per catturare immagini straordinarie e inedite; oltre al discorso delle mongolfiere con la possibilità di ammirare i paesaggi dall'alto, questo luogo si presta particolarmente alla realizzazione di fotografie uniche nel loro genere.</span><br><span style=\"background-color:transparent;color:#282828;\">Scopriremo insieme gli affascinanti massicci rocciosi che si stagliano su queste terre sconfinate, fotograferemo questi faraglioni giganti ed i Canyon profondi scavati nel terreno.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#282828;\">Pernotteremo nella storica cittadina di Goreme e ci muoveremo nei dintorni di essa. Questo viaggio fotografico in Cappadocia sarà una bellissima esperienza formativa. Imparerai ogni aspetto fondamentale della Fotografia di paesaggio:&nbsp;</span></p><ul><li><span style=\"background-color:transparent;color:#282828;\">composizioni classiche e più creative</span></li><li><span style=\"background-color:transparent;color:#282828;\">tecniche di scatto</span></li><li><span style=\"background-color:transparent;color:#282828;\">quali sono gli errori da evitare</span></li><li><span style=\"background-color:transparent;color:#282828;\">come si scatta in condizioni di luce particolari</span></li></ul><p><span style=\"background-color:transparent;color:#282828;\">Durante tutto il viaggio fotografico avrai la possibilità di un confronto continuo con i Coach. Sarai seguito sotto ogni aspetto sia che tua sia un principiante o un fotografo già navigato. I coach si organizzeranno per farti seguire il percorso più adatto alle tue esigenze fotografiche.</span></p><p><span style=\"background-color:transparent;color:#282828;\">Dai un'occhiata al programma ed unisciti a noi, scopriamo insieme questa location incredibile.</span><br>&nbsp;</p>",
+  "excerpt": "Un viaggio fotografico in Cappadocia tra i paesaggi mozzafiato dei massicci rocciosi",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "goreme"
+    "slug": "goreme",
+    "locale": "it",
+    "name": "Goreme"
   },
-  "sessions": [
+  "states": {
+    "name": "Turchia",
+    "slug": "turchia",
+    "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Cappadocia 2025 | WeShoot",
+    "metaDescription": "Unisciti a questo viaggio fotografico in Cappadocia dove potrai fotografare incredibili paesaggi e lo spettacolo delle mongolfiere.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-05-14",
-      "end": "2022-05-21"
+      "id": "132",
+      "title": "Goreme",
+      "description": "Göreme è un cittadina di circa 2.000 abitanti posizionata tra le formazioni di roccia denominate camini delle Fate, è una città della Cappadocia, regione storica della Turchia Si trova nella provincia di Nevserhir nell’Anatolia centrale, 12 chilometri ad est dell’omonima capitale",
+      "slug": "goreme",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_su_Goreme_citta_della_turchia_45ed661f49.jpg",
+          "alternativeText": "viaggio fotografico cappadocia foto tramonto goreme"
+        }
+      ]
     },
     {
-      "start": "2022-09-03",
-      "end": "2022-09-10"
+      "id": "133",
+      "title": "Museo all'aperto di Göreme ",
+      "description": "Questo sito patrimonio mondiale dell'Unesco è una tappa essenziale di qualsiasi itinerario cappadociano. Inizialmente ritenuto un insediamento monastico bizantino che ospitava una ventina di monaci, poi un luogo di pellegrinaggio dal XVII secolo, questo splendido insieme di arte monastica bizantina con le sue chiese scavate nella roccia, le cappelle e i monasteri si trova a 1 km in salita dal centro di Göreme.",
+      "slug": "museo-all'aperto-di-göreme-",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [
+        {
+          "id": "117",
+          "title": "Inizio delle Attività",
+          "description": "<p>Ci svegliamo presto per prendere un volo che ci porterà a Goreme. Una volta sistemati in struttura, cominceremo ad esplorare la zona di Goreme e delle guglie di roccia tipiche di questo luogo meraviglioso, la prima sessione di questo viaggio fotografico preverte una presa di contatto con le zone subito confinanti con Goreme, il luogo dove pernotteremo.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Museo_aria_aperta_Cappadocia_c603d34d17.jpg",
+          "alternativeText": "Göreme Open-Air Museum viaggio fotografico cappadocia"
+        }
+      ]
     },
     {
-      "start": "2023-06-02",
-      "end": "2023-06-09"
+      "id": "134",
+      "title": "Fairy Chimney",
+      "description": "Caratteristica area a nordest di Goreme che ospita enormi formazioni rocciose legate ad attività vulcaniche di 60 milioni di anni fa.",
+      "slug": "fairy-chimney",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [
+        {
+          "id": "118",
+          "title": "Dall'alba al tramonto",
+          "description": "<p>La giornata comincerà presto prima del levare del sole, scatteremo alle ore blu da una vista sopraelevata su tutta la caratteristica città di Goreme ed in mezzo alle caratteristiche formazioni rocciose. Nel resto di questa giornata ci muoveremo verso la parte nord orientale dell'area di Goreme verso l'incredibile distesa degli enormi pilastri di tufo della Fairy chimney valley. &nbsp;Esploreremo l'area tra gli antichi sentieri dei pastori scavati nella roccia, in cerca della location perfetta per la sessione di scatto del tramonto e serale, fino all'attesa delle stelle che cercheremo di immortalare durante la prima parte della notte.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fairy_Chimney_startrail_viaggio_fotografico_Cappadocia_03601e3096.jpg",
+          "alternativeText": "fotografia notturna a Fairy Chimney viaggio fotografico Cappadocia"
+        }
+      ]
     },
     {
-      "start": "2024-06-01",
-      "end": "2024-06-08"
+      "id": "135",
+      "title": "Valle delle Rose",
+      "description": "Meravigliosa valle dal paesaggio marziano, ricca di particolari dettagli e formazioni rocciose che la rendono particolarmente adatta ad essere fotografata.",
+      "slug": "valle-rosa",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [
+        {
+          "id": "119",
+          "title": "Hiking tra canyon, valli e torrenti",
+          "description": "<p>Prima dell'alba ci porteremo verso la Rose Valley per scattare dettagli inediti durante le ore blu alle particolari forme del paesaggio create dell'azione erosiva degli agenti atmosferici.</p><p>Cercheremo poi la composizione perfetta giocando con le classiche formazioni rocciose per scattare l'arrivo dell'alba.<br>Dopo una prima colazione ci prepareremo per dirigerci verso il meraviglioso canyon di Ihlara Valley formato dal torrente Melandiz Stream nel corso dei secolo. Il percorso prevede dei piccoli hike ma comunque facoltativi.</p><p>Aspetteremo il calar del sole per fotografare il paesaggio in luce lunare.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Rose_Valley_viaggio_fotografico_Cappadocia_92194bc65c.jpg",
+          "alternativeText": "Valle rosa al tramonto rocce viaggio fotografico cappadocia"
+        },
+        {
+          "id": "locpic-3-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/valle_della_rosa_cappadocia_turchia_497682e651.jpg",
+          "alternativeText": "viaggio fotografico cappadocia"
+        }
+      ]
     },
     {
-      "start": "2023-09-23",
-      "end": "2023-09-30"
+      "id": "136",
+      "title": "Valle Ihlara",
+      "description": "Avventurosissimo canyon scavato nel corso di migliaia di anni dal torrente Melandiz Stream. Una meta incredibile da non lasciarsi scappare.",
+      "slug": "valle-ihlara",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [
+        {
+          "id": "119",
+          "title": "Hiking tra canyon, valli e torrenti",
+          "description": "<p>Prima dell'alba ci porteremo verso la Rose Valley per scattare dettagli inediti durante le ore blu alle particolari forme del paesaggio create dell'azione erosiva degli agenti atmosferici.</p><p>Cercheremo poi la composizione perfetta giocando con le classiche formazioni rocciose per scattare l'arrivo dell'alba.<br>Dopo una prima colazione ci prepareremo per dirigerci verso il meraviglioso canyon di Ihlara Valley formato dal torrente Melandiz Stream nel corso dei secolo. Il percorso prevede dei piccoli hike ma comunque facoltativi.</p><p>Aspetteremo il calar del sole per fotografare il paesaggio in luce lunare.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_valle_Ihlara_5371a0f03b.jpg",
+          "alternativeText": "valle Ihlara foto al tramonto viaggio fotografico Cappadocia"
+        }
+      ]
     },
     {
-      "start": "2024-09-14",
-      "end": "2024-09-21"
+      "id": "137",
+      "title": "Goreme dalla mongolfiera",
+      "description": "Una bellissima vista della città di Goreme direttamente dalla mongolfiera. Saliremo in alta quota poco prima dell'alba per ammirare le prime luci sulla città da una prospettiva incredibile.",
+      "slug": "goreme-dalla-mongolfiera",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [
+        {
+          "id": "120",
+          "title": "Alba in alta quota",
+          "description": "<p>Ci recheremo allo start dei tour in mongolfiera, alle ore 4:00 per farci portare in quota ed assistere al bellissimo spettacolo dei palloni aerostatici sulla città, imperdibile appuntamento caratteristico di questo meraviglioso territorio (attività opzionale - non inclusa nella quota).</p><p>Dopo aver vissuto questa bellissima esperienza e una buona colazione ci rilasseremo un po’ e poi ci dedicheremo ad un po’ di studio della composizione.</p><p>Nel pomeriggio dopo aver visionato qualche scatto ci recheremo presso una delle location già visitate per una nuova sessione al tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alba_sulla_mongolfiera_fc0172a570.jpg",
+          "alternativeText": "esperienza su mongolfiera all'alba viaggio fotografico cappadocia"
+        }
+      ]
     },
     {
-      "start": "2025-06-14",
-      "end": "2025-06-21"
+      "id": "138",
+      "title": "Canyons Goreme",
+      "description": "Gli affascinanti Canyons intorno alla città di Goreme che alle prime luci dell'alba offrono interessanti spunti fotografici con le mongolfiere colorate in volo.",
+      "slug": "canyons-goreme",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/canyon_goreme_mongolfiera_in_cappadocia_9cc27a3ec4.jpg",
+          "alternativeText": "esperienza tra i canyons all'alba viaggio fotografico cappadocia"
+        }
+      ]
     },
     {
-      "start": "2025-09-06",
-      "end": "2025-09-13"
+      "id": "197",
+      "title": "Tuz Golu",
+      "description": "Tuz Golu è un lago salato situato nell'Anatolia centrale della Turchia. Non è molto profondo ma ciò che lo rende particolare è la spettacolare fioritura delle alghe Dunaliella, che colorano le acque di un rosso intenso.",
+      "slug": "tuz-golu",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [
+        {
+          "id": "151",
+          "title": "Esperienza al lago salato",
+          "description": "<p>In questa giornata faremo un'escursione verso il lago salato Tuz Golu, dove potremo ammirare il colore rosso delle sue acque (solo nel periodo della spettacolare fioritura delle alghe Dunaliella) e se il meteo ce lo permetterà di fotografare la via lattea specchiata al suo interno.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tuz_golu_lago_salato_a4f02da2c4.jpg",
+          "alternativeText": "tramonto lago salato viaggio fotografico cappadocia"
+        }
+      ]
+    },
+    {
+      "id": "198",
+      "title": "Red Valley",
+      "description": "La Red Valley è un parco nazionale della Cappadocia, una location con formazioni rocciose surreali dal colore rosso/rosa che al tramonto si infuocano sotto gli ultimi raggi del sole.",
+      "slug": "red-valley",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [
+        {
+          "id": "121",
+          "title": "Scouting in questo affascinante parco nazionale",
+          "description": "<p>Durante la mattinata faremo una sessione critica sugli scatti effettuati in questi giorni e cominceremo a prepararci per l'ultima sessione di questo viaggio fotografico. Dopo pranzo ci prepareremo per raggiungere la Red Valley. Faremo un pò di scouting in questo parco nazionale per trovare composizioni e soggetti interessanti da accostare alla cornice del tramonto e del paesaggio circostante.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-8-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/red_valley_viaggio_fotografico_cappadocia_b51c48ea8d.jpg",
+          "alternativeText": "tramonto formazioni rocciose parco nazionale"
+        }
+      ]
+    },
+    {
+      "id": "210",
+      "title": "WeShooters in Cappadocia",
+      "description": "Una raccolta di immagini dei gruppi passati che hanno vissuto questa incredibile esperienza al viaggio fotografico Cappadocia.",
+      "slug": "weshooters-in-cappadocia",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [
+        {
+          "id": "122",
+          "title": "Check out e saluti finali",
+          "description": "<p>Ci sveglieremo con comodo per fare una ricca colazione e prepararci a lasciare la stanza e fare il checkout dalla struttura. Transfer in aeroporto e saluti finali.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-9-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shoot_in_viaggio_fotografico_Cappadocia_78045a49b7.png",
+          "alternativeText": "sul lago Tuz Golu, Cappadocia"
+        },
+        {
+          "id": "locpic-9-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_viaggio_fotografico_in_Cappadocia_d3ef6372a7.jpg",
+          "alternativeText": "foto di gruppo nella valle Ihlara"
+        },
+        {
+          "id": "locpic-9-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/weshooters_durante_viaggio_fotografico_in_cappadocia_51e902401e.jpg",
+          "alternativeText": "gruppo cappadocia"
+        }
+      ]
+    },
+    {
+      "id": "233",
+      "title": "Instanbul",
+      "description": "Istanbul offre un'esperienza fotografica senza pari, un viaggio visivo tra passato e presente. La Basilica di Santa Sofia e la Moschea Blu, con le loro imponenti cupole e minareti, rappresentano l'apice dell'architettura bizantina e ottomana, offrendo angolazioni mozzafiato sia all'alba che al tramonto.",
+      "slug": "instanbul",
+      "locale": "it",
+      "state": {
+        "name": "Turchia",
+        "slug": "turchia",
+        "locale": "it",
+        "description": "<p>Lasciati catturare dalla magia dei paesaggi della Turchia, un viaggio fotografico alla scoperta della Cappadocia e delle sue incredibili formazioni rocciose che all'alba e al tramonto si tingono di sfumature bellissime.</p>"
+      },
+      "steps": [
+        {
+          "id": "116",
+          "title": "Presentazioni e briefing iniziale per organizzarsi",
+          "description": "<p>Appuntamento all'Aeroporto di IST Instanbul Airport, meeting con tutti i partecipanti e spostamento verso la struttura ricettiva. Faremo una cassa comune per acquistare beni di prima necessità come pasta, sale, olio, pane ecc. Mentre ognuno provvederà ad acquistare autonomamente le provviste per eventuali cene fuori dalla struttura.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-10-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Instanbul_di_notte_Moschea_Aya_Sofia_4663a2a894.png",
+          "alternativeText": "Moschea Aya Sofia iaggio fotografico cappadocia"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "253",
+      "title": "Organizzazione impeccabile",
+      "description": "Un posto magico… dove le regole visive rinascono … un gruppo di persone splendide … un’organizzazione impeccabile… ed una professionalità estrema da parte delle nostre guide fotografiche di WeShoot. Grazie ?",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "published_at": "2023-06-23T12:45:26.000Z"
     },
     {
-      "rating": 5
+      "id": "254",
+      "title": "Esperienza che consiglio a tutti",
+      "description": "La Cappadocia con WeShoot é stata un'esperienza che consiglio a tutti! Alessandro e Lorenzo sono due fotografi esperti e sensibili che sanno comunicare con grande facilità la loro passione e le conoscenze tecniche che possiedono! Apprendere sul campo in luoghi magici come le valli attorno Göreme e il lago salato di Tüz Golum in cui i tuoi occhi e obiettivi hanno una miriade di immagini e emozioni da cogliere é stato impagabile! Bravi, grazie e buona luce a tutti!",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "published_at": "2023-06-26T06:30:04.000Z"
     }
   ],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Guida Locale",
+      "description": "Potremo usufruire di una guida turistica locale che ci accompagnerà durante il viaggio fotografico.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_tourist_guide_skin_type_1_96_f5e7901b4f.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "131",
+      "number": 1,
+      "title": "Benvenuti in Turchia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "116",
+          "title": "Presentazioni e briefing iniziale per organizzarsi",
+          "description": "<p>Appuntamento all'Aeroporto di IST Instanbul Airport, meeting con tutti i partecipanti e spostamento verso la struttura ricettiva. Faremo una cassa comune per acquistare beni di prima necessità come pasta, sale, olio, pane ecc. Mentre ognuno provvederà ad acquistare autonomamente le provviste per eventuali cene fuori dalla struttura.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "132",
+      "number": 2,
+      "title": "Esploririamo la zona di Goreme",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "117",
+          "title": "Inizio delle Attività",
+          "description": "<p>Ci svegliamo presto per prendere un volo che ci porterà a Goreme. Una volta sistemati in struttura, cominceremo ad esplorare la zona di Goreme e delle guglie di roccia tipiche di questo luogo meraviglioso, la prima sessione di questo viaggio fotografico preverte una presa di contatto con le zone subito confinanti con Goreme, il luogo dove pernotteremo.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "133",
+      "number": 3,
+      "title": "Alla scoperta dei pilastri di tufo",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "118",
+          "title": "Dall'alba al tramonto",
+          "description": "<p>La giornata comincerà presto prima del levare del sole, scatteremo alle ore blu da una vista sopraelevata su tutta la caratteristica città di Goreme ed in mezzo alle caratteristiche formazioni rocciose. Nel resto di questa giornata ci muoveremo verso la parte nord orientale dell'area di Goreme verso l'incredibile distesa degli enormi pilastri di tufo della Fairy chimney valley. &nbsp;Esploreremo l'area tra gli antichi sentieri dei pastori scavati nella roccia, in cerca della location perfetta per la sessione di scatto del tramonto e serale, fino all'attesa delle stelle che cercheremo di immortalare durante la prima parte della notte.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "134",
+      "number": 4,
+      "title": "La zona dei giganti di terra",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "119",
+          "title": "Hiking tra canyon, valli e torrenti",
+          "description": "<p>Prima dell'alba ci porteremo verso la Rose Valley per scattare dettagli inediti durante le ore blu alle particolari forme del paesaggio create dell'azione erosiva degli agenti atmosferici.</p><p>Cercheremo poi la composizione perfetta giocando con le classiche formazioni rocciose per scattare l'arrivo dell'alba.<br>Dopo una prima colazione ci prepareremo per dirigerci verso il meraviglioso canyon di Ihlara Valley formato dal torrente Melandiz Stream nel corso dei secolo. Il percorso prevede dei piccoli hike ma comunque facoltativi.</p><p>Aspetteremo il calar del sole per fotografare il paesaggio in luce lunare.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "135",
+      "number": 5,
+      "title": "L’esperienza delle Mongolfiere in Cappadocia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "120",
+          "title": "Alba in alta quota",
+          "description": "<p>Ci recheremo allo start dei tour in mongolfiera, alle ore 4:00 per farci portare in quota ed assistere al bellissimo spettacolo dei palloni aerostatici sulla città, imperdibile appuntamento caratteristico di questo meraviglioso territorio (attività opzionale - non inclusa nella quota).</p><p>Dopo aver vissuto questa bellissima esperienza e una buona colazione ci rilasseremo un po’ e poi ci dedicheremo ad un po’ di studio della composizione.</p><p>Nel pomeriggio dopo aver visionato qualche scatto ci recheremo presso una delle location già visitate per una nuova sessione al tramonto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "136",
+      "number": 6,
+      "title": "Il deserto bianco del lago Tuz Golu",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "151",
+          "title": "Esperienza al lago salato",
+          "description": "<p>In questa giornata faremo un'escursione verso il lago salato Tuz Golu, dove potremo ammirare il colore rosso delle sue acque (solo nel periodo della spettacolare fioritura delle alghe Dunaliella) e se il meteo ce lo permetterà di fotografare la via lattea specchiata al suo interno.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "137",
+      "number": 7,
+      "title": "Ultimo tramonto nell'incredibile Red Valley",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "121",
+          "title": "Scouting in questo affascinante parco nazionale",
+          "description": "<p>Durante la mattinata faremo una sessione critica sugli scatti effettuati in questi giorni e cominceremo a prepararci per l'ultima sessione di questo viaggio fotografico. Dopo pranzo ci prepareremo per raggiungere la Red Valley. Faremo un pò di scouting in questo parco nazionale per trovare composizioni e soggetti interessanti da accostare alla cornice del tramonto e del paesaggio circostante.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "138",
+      "number": 8,
+      "title": "Arrivederci Cappadocia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "122",
+          "title": "Check out e saluti finali",
+          "description": "<p>Ci sveglieremo con comodo per fare una ricca colazione e prepararci a lasciare la stanza e fare il checkout dalla struttura. Transfer in aeroporto e saluti finali.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Fotografia Notturna",
+      "description": "Impara a scattare in luce lunare o con le stelle",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [
+    {
+      "title": "Regole di Ingresso in Italia",
+      "description": "<p style=\"margin-left:0px;\">Per tutti coloro che hanno soggiornato o transitato nei quattordici giorni antecedenti all’ingresso in Italia in uno o più Stati e territori di cui all’Elenco C, la normativa prevede che&nbsp;all’ingresso in Italia sia obbligatorio:</p><ul><li>compilare prima della partenza il&nbsp;Passenger Locator form&nbsp;e presentarlo a chiunque deputato ai controlli</li><li>presentare la&nbsp;Certificazione verde COVID-19&nbsp;(Green Pass)</li></ul><p>&nbsp;</p><p>La Certificazione deve attestare una delle seguenti condizioni:</p><ul><li>aver completato il ciclo vaccinale prescritto anti-SARS-CoV-2</li><li>esser guariti da COVID-19</li><li>essersi sottoposti ad un&nbsp;<strong>tampone&nbsp;</strong>molecolare (72h&nbsp;precedenti l’ingresso in Italia) o antigenico (48h&nbsp;precedenti l’ingresso in Italia)</li></ul>",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/test_covid19_6922fb3628.png"
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "id": "63",
+      "start": "2022-05-14",
+      "end": "2022-05-21",
+      "status": "confirmed",
+      "maxPax": 8,
+      "price": 1090,
+      "deposit": 100,
+      "balance": 990,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 890,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "72",
+      "start": "2022-09-03",
+      "end": "2022-09-10",
+      "status": "waitingList",
+      "maxPax": 8,
+      "price": 1499,
+      "deposit": 100,
+      "balance": 1399,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1399,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "93",
+      "start": "2023-06-02",
+      "end": "2023-06-09",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 1699,
+      "deposit": 100,
+      "balance": 1599,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1599,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        },
+        {
+          "instagram": null,
+          "firstName": "Daniela",
+          "lastName": "Darduini",
+          "username": "Miss Gattabell",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Daniela_1b0d860cb3.png"
+          },
+          "bio": null
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "start": "2024-06-01",
+      "end": "2024-06-08",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 2390,
+      "deposit": 720,
+      "balance": 1670,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 2390,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "101",
+      "start": "2023-09-23",
+      "end": "2023-09-30",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 1949,
+      "deposit": 100,
+      "balance": 1849,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1949,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "106",
+      "start": "2024-09-14",
+      "end": "2024-09-21",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2390,
+      "deposit": 720,
+      "balance": 1670,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2390,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "108",
+      "start": "2025-06-14",
+      "end": "2025-06-21",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2290,
+      "deposit": 680,
+      "balance": 1610,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2290,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "111",
+      "start": "2025-09-06",
+      "end": "2025-09-13",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 2290,
+      "deposit": 680,
+      "balance": 1610,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2290,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-18",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "tramonto mongolfiera nel canyon dal viaggio fotografico cappadocia",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/canyon_con_mongolfiera_viaggio_fotografico_cappadocia_669624fc3c.jpg"
+  },
   "pictures": [
     {
-      "id": "220",
+      "id": "0",
+      "type": "tour",
       "title": "Goreme",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_su_Goreme_citta_della_turchia_45ed661f49.jpg",
+      "alt": "viaggio fotografico cappadocia foto tramonto goreme"
     },
     {
-      "id": "221",
+      "id": "1",
+      "type": "tour",
       "title": "Museo all'aperto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Museo_aria_aperta_Cappadocia_c603d34d17.jpg",
+      "alt": "Göreme Open-Air Museum viaggio fotografico cappadocia"
     },
     {
-      "id": "222",
+      "id": "2",
+      "type": "tour",
       "title": "Fairy Chimney",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fairy_Chimney_startrail_viaggio_fotografico_Cappadocia_03601e3096.jpg",
+      "alt": "fotografia notturna a Fairy Chimney viaggio fotografico Cappadocia"
     },
     {
-      "id": "223",
+      "id": "3",
+      "type": "tour",
       "title": "Valle delle Rose tramonto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Rose_Valley_viaggio_fotografico_Cappadocia_92194bc65c.jpg",
+      "alt": "Valle rosa al tramonto rocce viaggio fotografico cappadocia"
     },
     {
-      "id": "224",
+      "id": "4",
+      "type": "tour",
       "title": "Valle Ihlara",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_valle_Ihlara_5371a0f03b.jpg",
+      "alt": "valle Ihlara foto al tramonto viaggio fotografico Cappadocia"
     },
     {
-      "id": "225",
+      "id": "5",
+      "type": "tour",
       "title": "Goreme dalla mongolfiera",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alba_sulla_mongolfiera_fc0172a570.jpg",
+      "alt": "esperienza su mongolfiera all'alba viaggio fotografico cappadocia"
     },
     {
-      "id": "226",
+      "id": "6",
+      "type": "tour",
       "title": "Canyon di Goreme",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/canyon_goreme_mongolfiera_in_cappadocia_9cc27a3ec4.jpg",
+      "alt": "esperienza tra i canyons all'alba viaggio fotografico cappadocia"
     },
     {
-      "id": "274",
+      "id": "7",
+      "type": "tour",
       "title": "Valle delle Rose",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/valle_della_rosa_cappadocia_turchia_497682e651.jpg",
+      "alt": "viaggio fotografico cappadocia"
     },
     {
-      "id": "297",
+      "id": "8",
+      "type": "tour",
       "title": "Lago salato Tuz Golu",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tuz_golu_lago_salato_a4f02da2c4.jpg",
+      "alt": "tramonto lago salato viaggio fotografico cappadocia"
     },
     {
-      "id": "316",
+      "id": "9",
+      "type": "tour",
       "title": "Gruppo Cappadocia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shoot_in_viaggio_fotografico_Cappadocia_78045a49b7.png",
+      "alt": "sul lago Tuz Golu, Cappadocia"
     },
     {
-      "id": "317",
+      "id": "10",
+      "type": "tour",
       "title": "Gruppo Cappadocia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_viaggio_fotografico_in_Cappadocia_d3ef6372a7.jpg",
+      "alt": "foto di gruppo nella valle Ihlara"
     },
     {
-      "id": "318",
+      "id": "11",
+      "type": "tour",
       "title": "Gruppo WeShooters Cappadocia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/weshooters_durante_viaggio_fotografico_in_cappadocia_51e902401e.jpg",
+      "alt": "gruppo cappadocia"
     },
     {
-      "id": "354",
+      "id": "12",
+      "type": "tour",
       "title": "Instanbul",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Instanbul_di_notte_Moschea_Aya_Sofia_4663a2a894.png",
+      "alt": "Moschea Aya Sofia iaggio fotografico cappadocia"
+    },
+    {
+      "id": "locpic-8-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/red_valley_viaggio_fotografico_cappadocia_b51c48ea8d.jpg",
+      "alt": "tramonto formazioni rocciose parco nazionale"
     }
   ]
 }

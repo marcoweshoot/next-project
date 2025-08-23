@@ -1,75 +1,518 @@
 {
+  "id": "36",
+  "tour_id": "workshop-fotografico-alla-costa-dei-trabocchi",
   "slug": "costa-dei-trabocchi",
   "title": "Workshop fotografico alla Costa dei Trabocchi",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p>Dalla montagna al mare! Torniamo in Abruzzo per un Workshop dedicato alla Fotografia di Paesaggi Marini dove i soggetti principali saranno i Trabocchi.&nbsp;</p><p>Due giorni alla ricerca della situazione migliore ascoltando il suono del mare e catturando la miglior scena possibile sfruttando anche la tecnica della lunga esposizione.&nbsp;</p><p>Durante le due giornate imparerai a fotografare i paesaggi marini e a sfruttare a tuo vantaggio le lunghe esposizioni, andando a massimizzare le potenzialità del tuo scatto finale. Inoltre imparerai come pianificare un’uscita fotografica con maggior sicurezza di ottenere il risultato previsto.&nbsp;</p><p>Affrettati a prenotare il tuo posto: solo 7 persone potranno partecipare per garantire la migliore esperienza possibile a ciascuno di voi.</p><p>Prima della data del Workshop, avrai accesso a un gruppo WhatsApp riservato ai corsisti per scambi di consigli e organizzazione dell'uscita fotografica, riceverai anche un estratto del nostro PDF sulla Pianificazione e due video corsi per iniziare a muovere i primi passi con la post-produzione con Photoshop.</p>",
+  "excerpt": "Dal tramonto all'alba immersi in questi paesaggi magici.",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Reflex o Mirrorless<br>Obiettivo Grandangolare.<br>Treppiede stabile e preferibilmente senza colonna centrale.<br>Filtro Polarizzatore (molto consigliato)<br>Filtri ND (opzionali ma molto consigliati)<br>Filtri GND (opzionali ma consigliati)<br>Intervallometro/Telecomando di scatto remoto con funzionalità BULB</p><p><br>Abbigliamento e Attrezzatura:<br>Vestiario Primaverile<br>Pantaloni da Trekking o comunque adatti a muoversi, evitare jeans</p>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "abruzzo"
+    "slug": "abruzzo",
+    "locale": "it",
+    "name": "Abruzzo"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Workshop Fotografico Costa Trabocchi 2025",
+    "metaDescription": "Partecipa al workshop di fotografia sulla Costa dei Trabocchi in Abruzzo! Scopri come catturare panorami mozzafiato, trabocchi iconici e tramonti spettacolari. Perfetto per gli amanti della fotografia di paesaggio",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2025-04-26",
-      "end": "2025-04-27"
+      "id": "247",
+      "title": "Trabocco del Turchino",
+      "description": "Il Trabocco del Turchino, situato sulla Costa dei Trabocchi in Abruzzo, è un’antica piattaforma da pesca sospesa tra cielo e mare. Immortalato da Gabriele D’Annunzio, questo trabocco affascina per la sua struttura rustica in legno, perfettamente integrata nel paesaggio costiero.",
+      "slug": "trabocco-del-turchino",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "179",
+          "title": "Alba e lunghe esposizioni al Trabocco del Turchino",
+          "description": "<p>Ore 03:30 | Sveglia presto per dirigerci al Trabocco Turchino. L’alba è il momento migliore per fotografare la maggior parte della Costa dei Trabocchi quindi se il cielo ce lo consentirà potreste portarvi a casa una foto davvero top.</p><p>Ore 06:02 | Il sole sorgerà dal Mare Adriatico. Ma molto probabilmente già a questo punto lo scatto top ce lo saremo portati a casa. Il nostro coach poi vi spiegherà il perchè. Dopo l’alba e dopo la colazione ci sposteremo verso altri Trabocchi per approfondire la Fotografia di Paesaggio Marino e assorbire il più possibile i concetti di teoria che ci serviranno in futuro per portare a casa una foto di seascape il più pronta possibile già in fase di scatto.</p><p>Il Workshop terminerà entro le 13:00 o comunque prima dell’ora di pranzo.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/trabocco_del_turchino_1fa51f92ed.jpg",
+          "alternativeText": "workshop di fotografia lunghe esposizioni"
+        }
+      ]
     },
     {
-      "start": "2025-11-08",
-      "end": "2025-11-09"
+      "id": "248",
+      "title": "Trabocco Punta Torre",
+      "description": "Il Trabocco Punta Torre, situato sulla suggestiva Costa dei Trabocchi in Abruzzo, è un’autentica testimonianza della tradizione marinara locale. Arroccato su una piattaforma di legno che si protende verso il mare, offre uno scenario unico per i fotografi che partecipano al workshop fotogacfico: i dettagli intricati della struttura, le reti sospese e i panorami mozzafiato al tramonto creano composizioni indimenticabili.",
+      "slug": "trabocco-punta-torre",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "179",
+          "title": "Alba e lunghe esposizioni al Trabocco del Turchino",
+          "description": "<p>Ore 03:30 | Sveglia presto per dirigerci al Trabocco Turchino. L’alba è il momento migliore per fotografare la maggior parte della Costa dei Trabocchi quindi se il cielo ce lo consentirà potreste portarvi a casa una foto davvero top.</p><p>Ore 06:02 | Il sole sorgerà dal Mare Adriatico. Ma molto probabilmente già a questo punto lo scatto top ce lo saremo portati a casa. Il nostro coach poi vi spiegherà il perchè. Dopo l’alba e dopo la colazione ci sposteremo verso altri Trabocchi per approfondire la Fotografia di Paesaggio Marino e assorbire il più possibile i concetti di teoria che ci serviranno in futuro per portare a casa una foto di seascape il più pronta possibile già in fase di scatto.</p><p>Il Workshop terminerà entro le 13:00 o comunque prima dell’ora di pranzo.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Trabocco_punta_torre_ec00e88b7b.jpg",
+          "alternativeText": "workshop di fotografia costa dei trabocchi, lunghe esposizioni "
+        }
+      ]
     },
     {
-      "start": "2026-04-11",
-      "end": "2026-04-12"
+      "id": "249",
+      "title": "Punta Le Morge",
+      "description": "Il Trabocco Punta Le Morge, situato lungo la pittoresca Costa dei Trabocchi in Abruzzo, è un gioiello della tradizione marinara abruzzese. Circondato da acque cristalline e immerso in un paesaggio di rara bellezza, questo trabocco regala ai fotografi scenari unici: giochi di luce sull’acqua, l’architettura in legno e l’atmosfera autentica di un passato senza tempo. Ideale per scatti che catturano la magia del mare e la storia della costa.",
+      "slug": "punta-le-morge",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "179",
+          "title": "Alba e lunghe esposizioni al Trabocco del Turchino",
+          "description": "<p>Ore 03:30 | Sveglia presto per dirigerci al Trabocco Turchino. L’alba è il momento migliore per fotografare la maggior parte della Costa dei Trabocchi quindi se il cielo ce lo consentirà potreste portarvi a casa una foto davvero top.</p><p>Ore 06:02 | Il sole sorgerà dal Mare Adriatico. Ma molto probabilmente già a questo punto lo scatto top ce lo saremo portati a casa. Il nostro coach poi vi spiegherà il perchè. Dopo l’alba e dopo la colazione ci sposteremo verso altri Trabocchi per approfondire la Fotografia di Paesaggio Marino e assorbire il più possibile i concetti di teoria che ci serviranno in futuro per portare a casa una foto di seascape il più pronta possibile già in fase di scatto.</p><p>Il Workshop terminerà entro le 13:00 o comunque prima dell’ora di pranzo.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/trabocco_Punta_Le_Morge_b0ceccf107.jpg",
+          "alternativeText": "workshop di fotografia costa dei trabocchi, lunghe esposizioni"
+        }
+      ]
+    },
+    {
+      "id": "250",
+      "title": "Trabocco Spezzacatena",
+      "description": "Il Trabocco Spezzacatena, situato sulla Costa dei Trabocchi in Abruzzo, è uno dei più affascinanti simboli della tradizione marinara locale. Questo trabocco, immerso in un paesaggio suggestivo, si distingue per la sua posizione strategica e la struttura in legno che sembra sfidare il mare.",
+      "slug": "trabocco-spezzacatena",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "179",
+          "title": "Alba e lunghe esposizioni al Trabocco del Turchino",
+          "description": "<p>Ore 03:30 | Sveglia presto per dirigerci al Trabocco Turchino. L’alba è il momento migliore per fotografare la maggior parte della Costa dei Trabocchi quindi se il cielo ce lo consentirà potreste portarvi a casa una foto davvero top.</p><p>Ore 06:02 | Il sole sorgerà dal Mare Adriatico. Ma molto probabilmente già a questo punto lo scatto top ce lo saremo portati a casa. Il nostro coach poi vi spiegherà il perchè. Dopo l’alba e dopo la colazione ci sposteremo verso altri Trabocchi per approfondire la Fotografia di Paesaggio Marino e assorbire il più possibile i concetti di teoria che ci serviranno in futuro per portare a casa una foto di seascape il più pronta possibile già in fase di scatto.</p><p>Il Workshop terminerà entro le 13:00 o comunque prima dell’ora di pranzo.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/trabocco_spezzacatena_4694d3035e.jpg",
+          "alternativeText": "workshop di fotografia costa dei trabocchi, lunghe esposizioni"
+        }
+      ]
     }
   ],
   "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Mezza pensione",
+      "description": "La mezza pensione prevede che si possano consumare la colazione e un pasto a scelta tra il pranzo o la cena all'interno della struttura.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/mezza_pensione_3cfc2aa873.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    },
+    {
+      "title": "Camera Singola",
+      "description": "Soggiorni in hotel camera singola",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_person_in_bed_96_717714bbfc.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "190",
+      "number": 1,
+      "title": "Benvenuti sulla Costa Abruzzese",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "178",
+          "title": "Briefing introduttivo e po subito a Punta Aderci",
+          "description": "<p>Ore 14:00 | Incontro presso la Struttura convenzionata dove affronteremo una parte teorica relativa alla Pianificazione di uno Scatto prendendo proprio come esempio ciò che andremo ad affrontare nelle ore successive.<br>Dalle Ore 16:30 | Spostamento verso lo spot che andremo a dedicare al Tramonto ovvero il Trabocco di Punta Aderci, a Vasto. In una prima parte il nostro coach Samuele vi mostrerà quali sono le impostazioni di scatto da utilizzare per catturare al meglio la scena. Si andrà anche ad approfondire l’utilizzo dei Filtri Fotografici sul campo per la realizzazione di una Lunga Esposizione</p><p>Dopo il Tramonto torneremo in Struttura per un meritato riposo.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "191",
+      "number": 2,
+      "title": "Alba tra scorci suggestivi",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "179",
+          "title": "Alba e lunghe esposizioni al Trabocco del Turchino",
+          "description": "<p>Ore 03:30 | Sveglia presto per dirigerci al Trabocco Turchino. L’alba è il momento migliore per fotografare la maggior parte della Costa dei Trabocchi quindi se il cielo ce lo consentirà potreste portarvi a casa una foto davvero top.</p><p>Ore 06:02 | Il sole sorgerà dal Mare Adriatico. Ma molto probabilmente già a questo punto lo scatto top ce lo saremo portati a casa. Il nostro coach poi vi spiegherà il perchè. Dopo l’alba e dopo la colazione ci sposteremo verso altri Trabocchi per approfondire la Fotografia di Paesaggio Marino e assorbire il più possibile i concetti di teoria che ci serviranno in futuro per portare a casa una foto di seascape il più pronta possibile già in fase di scatto.</p><p>Il Workshop terminerà entro le 13:00 o comunque prima dell’ora di pranzo.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Lunghe Esposizioni",
+      "description": "Ti divertirai a giocare con le lunghe esposizioni per creare effetti unici con acqua, nuvole e scie luminose",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "198",
+      "start": "2025-04-26",
+      "end": "2025-04-27",
+      "status": "almostFull",
+      "maxPax": 7,
+      "price": 349,
+      "deposit": 120,
+      "balance": 229,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/ibuxus/",
+          "firstName": "Samuele",
+          "lastName": "Bucci",
+          "username": "samuelebucci",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+        }
+      ]
+    },
+    {
+      "id": "212",
+      "start": "2025-11-08",
+      "end": "2025-11-09",
+      "status": "almostFull",
+      "maxPax": 7,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": null,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/ibuxus/",
+          "firstName": "Samuele",
+          "lastName": "Bucci",
+          "username": "samuelebucci",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+        }
+      ]
+    },
+    {
+      "id": "238",
+      "start": "2026-04-11",
+      "end": "2026-04-12",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 349,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/ibuxus/",
+          "firstName": "Samuele",
+          "lastName": "Bucci",
+          "username": "samuelebucci",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Cosa succede in caso di maltempo?",
+      "answer": "<p>In caso di maltempo (per maltempo intendiamo scroscioni importanti di pioggia da non permettere gli scatti), il workshop fotografico verrà posticipato a una data successiva. Ti avviseremo via email con tutti i dettagli aggiornati. In tutti gli altri casi il workshop sarà confermato, anche perchè gli scatti migliori si ottengono sempre con il meteo avverso.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "workshop fotografico costa dei trabocchi",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Trabocco_Turchino_cf198d7067.jpg"
+  },
   "pictures": [
     {
-      "id": "358",
+      "id": "0",
+      "type": "user_generated",
       "title": "Trabocco Turchino",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Trabocco_Turchino_di_Samuele_Bucci_d2aeaf66b8.jpg",
+      "alt": "viaggio fotografico costa dei trabocchi"
     },
     {
-      "id": "388",
+      "id": "1",
+      "type": "tour",
       "title": "trabocco Punta Aderci",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Punta_Aderci_df93a202db.jpg",
+      "alt": "workshop fotografico costa dei trabocchi"
     },
     {
-      "id": "389",
+      "id": "2",
+      "type": "tour",
       "title": "trabocco del turchino",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/trabocco_del_turchino_1fa51f92ed.jpg",
+      "alt": "workshop di fotografia lunghe esposizioni"
     },
     {
-      "id": "390",
+      "id": "3",
+      "type": "tour",
       "title": "Trabocco Punta Torre",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Trabocco_punta_torre_ec00e88b7b.jpg",
+      "alt": "workshop di fotografia costa dei trabocchi, lunghe esposizioni "
     },
     {
-      "id": "391",
+      "id": "4",
+      "type": "tour",
       "title": "Trabocco Punta Le Morge",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/trabocco_Punta_Le_Morge_b0ceccf107.jpg",
+      "alt": "workshop di fotografia costa dei trabocchi, lunghe esposizioni"
     },
     {
-      "id": "392",
+      "id": "5",
+      "type": "tour",
       "title": "Trabocco Spezzacatena",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/trabocco_spezzacatena_4694d3035e.jpg",
+      "alt": "workshop di fotografia costa dei trabocchi, lunghe esposizioni"
     }
   ]
 }

@@ -1,124 +1,1000 @@
 {
+  "id": "15",
+  "tour_id": "viaggio-fotografico-scozia-isola-skye",
   "slug": "highlands",
   "title": "Scozia: l'isola di Skye e i paesaggi incantati",
-  "states": {
-    "slug": "scozia"
-  },
+  "description": "<p>A grande richiesta ripetiamo anche quest'anno due viaggi tra le Highlands scozzesi e Skye, dopo aver girato diverse volte queste zone proponiamo nuovamente questa avventura tra le più richieste di fotografiaindigitale</p><p>La parola d'ordine per questo phototour è AVVENTURA, insieme gireremo in libertà per questa terra meravigliosa ed esploreremo laghi, cascate, montagne, vallate, fiumi... L'intento è quello di calarci nella natura incontaminata della Scozia, di perderci nella selvaggia isola di Skye senza limiti di orario, senza dover rendere conto a itinerari obbligati, ci muoveremo solo in funzione del meteo e delle migliori condizioni di scatto.<br><br>Metteremo a tua disposizione le nostre conoscenze sulla pianificazione per scegliere come e quando spostarci sugli spot migliori</p>",
+  "excerpt": "Fotografia di paesaggio in uno dei luoghi più mistici del pianeta",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li><li>Insetticida</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "isola-skye"
+    "slug": "isola-skye",
+    "locale": "it",
+    "name": "Isola di Skye"
   },
-  "sessions": [
+  "states": {
+    "name": "Scozia",
+    "slug": "scozia",
+    "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Scozia e Isola di Skye 2025 | WeShoot",
+    "metaDescription": "Un viaggio fotografico tra i paesaggi mistici della Scozia e dell'Isola di Skye, tra scogliere, fari e luci incredibili.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-11-05",
-      "end": "2022-11-12"
+      "id": "70",
+      "title": "Edimburgo",
+      "description": "Edimburgo si trova sulla costa sud-orientale della Scozia lungo il Firth of Forth, una profonda insenatura creata dall'estuario di un fiume. Sarà il nostro punto di partenza e di arrivo.",
+      "slug": "edimburgo",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "69",
+          "title": "Presentazioni, Briefing e poi giro in città",
+          "description": "Ci incontreremo all'aeroporto di Edimburgo, se tutti i voli arriveranno prima di cena faremo un salto in città per goderci le tradizioni locali, ci conosceremo meglio davanti ad una buona birra scozzese.",
+          "locale": "it"
+        },
+        {
+          "id": "73",
+          "title": "Ultimi scatti durante il percorso",
+          "description": "Ritorneremo a passo lento verso il Glencoe per vedere l'ultimo tramonto, salutare la Scozia e avvicinarci all'aeroporto di Edimburgo, dove il giorno seguente avremo il volo per rientrare a casa.",
+          "locale": "it"
+        },
+        {
+          "id": "74",
+          "title": "Saluti e transfer in aeroporto",
+          "description": "Fine del viaggio fotografico. Ci organizzeremo in base alle varie partenze dei voli i Transfer autonomi verso l'aeroporto per rientrare a casa.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_scozia_isola_di_skye_7245f6244b.jpg",
+          "alternativeText": "Edimburgo nel viaggio fotografico scozia isola di skye"
+        }
+      ]
     },
     {
-      "start": "2023-05-20",
-      "end": "2023-05-27"
+      "id": "71",
+      "title": "Falls of Falloch",
+      "description": "Falls of Falloch è una nota cascata della scozia che si raggiunge con 5 minuti a piedi all'intero del parco nazionale Loch Lomond e Trossachs.",
+      "slug": "falls-of-falloch",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "70",
+          "title": "Falls of Falloch",
+          "description": "Le cascate di Falloch sarà una delle nostre prime tappe. Per raggiungere queste cascate dovremo percorrere un piccolo percorso di circa 5-10 minuti immersi nel bosco. Sarà un ottimo momento per catturare dettagli e giocare con le lunghe esposizioni sull'acqua.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Falls_of_Falloch_scozia_e7da09ca6a.jpg",
+          "alternativeText": "foto delle Falls of Falloch dal viaggio fotografico scozia e isola di skye"
+        }
+      ]
     },
     {
-      "start": "2024-05-25",
-      "end": "2024-06-01"
+      "id": "72",
+      "title": "Buachaille Etive Mor",
+      "description": "il Buachaille Etive Mor è una montagna ai piedi del fiume Etive; il suo significato in gaelico è \"il grande mandriano dell'Etive\" e si estende per circa 8km.",
+      "slug": "buachaille-etive-mor",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "71",
+          "title": "Buachaille Etive Mor",
+          "description": "Al tramonto raggiungeremo Buachaille Etive Mor, il grande mandriano dell'Etive, dove potremo divertirci a fotografare la montagna che si specchia nel fiume che lo circonda, tra le cascate e la natura selvaggia.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fiume_e_Buachaille_Etive_Mor_38f6fd0a6f.jpg",
+          "alternativeText": "tramonto al Buachaille Etive Mor viaggio fotografico scozia "
+        }
+      ]
     },
     {
-      "start": "2025-05-17",
-      "end": "2025-05-24"
+      "id": "73",
+      "title": "Eilean Donan",
+      "description": "Eilean Donan è uno dei castelli più pittoreschi e famosi della Scozia occidentale, costruito su una piccola isola nel Loch Duich, fino al 2001 l'isola (e il castello) contava un solo abitante.",
+      "slug": "eilean-donan",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Castello_di_Eilean_Donan_ecd2c2c0b2.jpg",
+          "alternativeText": "Il castello di Eilean Donan durante viaggio fotografico scozia isola di skye"
+        }
+      ]
+    },
+    {
+      "id": "74",
+      "title": "Neist Point",
+      "description": "Neist point è sicuramente il posto più suggestivo e meraviglioso dell'isola di Skye. Una scogliera enorme dove si può ammirare l'infinita distesa di mare davanti ad uno dei fari più famosi della scozia.",
+      "slug": "neist-point",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Neist_Point_319ca02015.jpg",
+          "alternativeText": "tramonto a Neist point durante viaggio fotografico scozia isola di skye"
+        }
+      ]
+    },
+    {
+      "id": "75",
+      "title": "Old Man of Storr",
+      "description": "The Old Man of Storr fa parte della catena montuosa Storr, si tratta di un monolite di origine basaltica alto circa 55 metri. Secondo i geologi la roccia, insieme agli spunzoni circostanti, sarebbe ciò che resta di un’antica frana.",
+      "slug": "old-man-of-storr",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Workshop_photography_events_297c9ab1a21cca7b381aeb8b139de926_57f46855a5.jpg",
+          "alternativeText": "Old Man of Storr una tappa del viaggio fotografico in scozia e isola di skye"
+        },
+        {
+          "id": "locpic-5-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_all_Old_man_Storr_37c78861d4.jpg",
+          "alternativeText": "WeShooters che fotografano Old man Storr viaggio fotografico scozia"
+        }
+      ]
+    },
+    {
+      "id": "76",
+      "title": "Quiraing",
+      "description": "Il Quiraing è un altopiano vulcanico dell'isola scozzese di Skye, situato nella parte orientale del Meall na Suiramach, nella penisola di Trotternish.",
+      "slug": "quiraing",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Quiraing_al_tramonto_629c6091d4.jpg",
+          "alternativeText": "Quiraing al tramonto durante il viaggio fotografico in scozia e isola di skye"
+        },
+        {
+          "id": "locpic-6-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Quiraing_illuminato_dal_sole_204e888a2b.jpg",
+          "alternativeText": "Marika Greco coach weshoot viaggio fotografico scozia"
+        }
+      ]
+    },
+    {
+      "id": "77",
+      "title": "Sligachan",
+      "description": "Sligachan è un piccolo insediamento a Skye, in Scozia. È vicino alle montagne Cuillin e offre un buon punto di vista per vedere le montagne Black Cuillin e fotografare un antico ponte in roccia.",
+      "slug": "sligachan",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Sligachan_e_il_ponte_antico_63c2e2ec1d.jpg",
+          "alternativeText": "Sligachan al tramondo durante il viaggio fotografico in scozia e isola di skye"
+        }
+      ]
+    },
+    {
+      "id": "78",
+      "title": "Fairy Pools",
+      "description": "Le Fairy Pools sono delle piscine naturali di incredibile bellezza, la loro acqua è di un vivido azzurro che durante tutto il percorso del fiume sfocia in piccole cascate rendendo tutto molto più suggestivo.",
+      "slug": "fairy-pools",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-8-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/fiume_delle_Fairy_Pools_ef7ba6c6f2.jpg",
+          "alternativeText": "le cascate Fairy Pools durante il viaggio fotografico in Scozia e isola di skye"
+        }
+      ]
+    },
+    {
+      "id": "79",
+      "title": "Talisker Bay",
+      "description": "Talisker Bay è una famosa spiaggia dell'isola di Skye piena di grossi sassi e sabbia sia bianca che nera. ",
+      "slug": "talisker-bay",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-9-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Talisker_Bay_all_ora_blu_6cc0fe66b6.jpg",
+          "alternativeText": "Talisker Bay meta del viaggio fotografico scozia e isola di skey"
+        }
+      ]
+    },
+    {
+      "id": "80",
+      "title": "Spiaggia di Elgol",
+      "description": "Un'altra spiaggia incredibile dell'isola di Skye, la Spiaggia di Elgol, tipica per le conformazioni rocciose, le montagne e l'oceano.",
+      "slug": "spiaggia-di-elgol",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-10-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Spiaggia_di_Elgol_al_tramonto_716369ea95.jpg",
+          "alternativeText": "tramonto Spiaggia di Elgol viaggio fotografico scozia e isola di skye"
+        }
+      ]
+    },
+    {
+      "id": "81",
+      "title": "Castello di Dunvegan",
+      "description": "Castello di Dunvegan è il castello più antico della scozia e isola di skye, si erge sulla cima di una spina di basalto a forma di arachide.",
+      "slug": "castello-di-dunvegan",
+      "locale": "it",
+      "state": {
+        "name": "Scozia",
+        "slug": "scozia",
+        "locale": "it",
+        "description": "<p>La Scozia è una terra dai paesaggi montuosi e selvaggi. Man mano che ci si sposta sempre più a nord, specialmente nelle Highlands, potrai incontrare paesaggi aspri, coste frastagliate, pittoreschi villaggi dei pescatori e bellissimi castelli medievali.</p>"
+      },
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-11-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Castello_di_Dunvegan_3c23200ae7.jpg",
+          "alternativeText": "Castello di Dunvegan meta del viaggio fotografico in scozia e isola di skye"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "151",
+      "title": "Esperienza da ripetere assolutamente!",
+      "description": "Non leggo mai le recensioni sono spesso un copia incolla di frasi fatte e referenziali. Ho scelto di fare questo viaggio fotografico senza leggere niente su come era organizzato. Sicuramente mi sarei scoraggiata, perché non sono un paesaggista, non ho lo spirito del campeggiatore e amo viaggiare in modo comodo. Però sono partita....... \nCosa dire? Ho visto posti che lasciano senza fiato per la loro bellezza, mi sono adattata ad orari lontani dai miei e pasti spesso improvvisati ma ho scattato tanto e con piacere. Un viaggio adatto per tutti? Non credo. Ve lo posso consigliare? Non lo so, dipende quanto per voi e' importante la fotografia quando viaggiate. L'unica cosa che vi dico che e' stata un'esperienza unica, particolare, per me estremamente divertente e con compagni di ventura incomparabili.\nAlessandro e' una forza della natura, in questo viaggio non doveva seguire gli altri per le foto, era comunque sempre disponibile per un consiglio ed era un piacere ascoltarlo perché conosce ed ama molto la fotografia.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-11-17T08:43:00.000Z"
     },
     {
-      "rating": 5
+      "id": "188",
+      "title": "La mia prima volta in Scozia... ed in camper ",
+      "description": "Scrivo questa recensione mentre sto tornando a casa ed attendo il volo, quando le sensazioni vissute sono ancora molto forti. \nInnanzitutto la prima cosa da dire è che i posti visitati sono strepitosi, e lo dico dopo essere salito due volte allo Storr con vento e pioggia la mattina presto per fotografarlo con la luce migliore (per quanto anche al tramonto è notevole!). \nDecidere di partire col camper significa sapersi adattare, rinunciare alla doccia è un prezzo insignificante da pagare confrontato con le emozioni che madre natura regala. Che dire...  sono davvero contento, e sono sicuro che rivedrò i miei compagni di viaggio molto presto. È stata una settimana fra sconosciuti, ma si è creato da subito un forte legame. Ringrazio dunque Alessandro, Fabiano, Andrea, Rosario e Tina. \nSee you later. \n\nPaolo",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-25T17:42:46.000Z"
     },
     {
-      "rating": 5
+      "id": "189",
+      "title": "ASSOLUTAMENTE SCONSIGLIATO A CHI :",
+      "description": "non vorrebbe meravigliarsi ad ogni metro di strada percorsi tra scenari magici e poetici quali quelli dell'isola di Skye e rincorrere alba e tramonto in ogni dove con un camperista d'eccezione come Alessandro ed a chi non piace legare e fare nuove amicizie condividendo divertimento e passione fotografica di viaggio e natura... Per coloro che invece sono meglio di così questo è uno di quei viaggi che non si dimenticano in cui troveranno che la sola nota negativa è quella che purtroppo anch'esso ha una fine..  Per me ripartire non è stato un \"addio\" ma il contrario, è stata la certezza che quanto prima uno dei prossimi prenotati per questo fantastico viaggio sarò nuovamente io ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-28T01:33:23.000Z"
     },
     {
-      "rating": 5
+      "id": "224",
+      "title": "Viaggio fantastico, esperienza consigliata!",
+      "description": "Ho partecipato al viaggio fotografico in Scozia con Marco e Alessandro, due ragazzi veramente molto simpatici, sempre disponibili e preparati per chiarire ogni vostro dubbio. Viaggio molto ben organizzato nonostante il meteo non sia stato dalla nostra parte. In ogni caso la Scozia ha posti che meritano sicuramente una visita, rimarrete affascinati da questa nazione!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-11-28T22:23:40.000Z"
     }
   ],
-  "pictures": [
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
     {
       "id": "72",
-      "title": "Edimburgo",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 1,
+      "title": "Benvenuti in Scozia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "69",
+          "title": "Presentazioni, Briefing e poi giro in città",
+          "description": "Ci incontreremo all'aeroporto di Edimburgo, se tutti i voli arriveranno prima di cena faremo un salto in città per goderci le tradizioni locali, ci conosceremo meglio davanti ad una buona birra scozzese.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "73",
-      "title": "Falls of Falloch",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 2,
+      "title": "Partenza per Fort William",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "70",
+          "title": "Falls of Falloch",
+          "description": "Le cascate di Falloch sarà una delle nostre prime tappe. Per raggiungere queste cascate dovremo percorrere un piccolo percorso di circa 5-10 minuti immersi nel bosco. Sarà un ottimo momento per catturare dettagli e giocare con le lunghe esposizioni sull'acqua.",
+          "locale": "it"
+        },
+        {
+          "id": "71",
+          "title": "Buachaille Etive Mor",
+          "description": "Al tramonto raggiungeremo Buachaille Etive Mor, il grande mandriano dell'Etive, dove potremo divertirci a fotografare la montagna che si specchia nel fiume che lo circonda, tra le cascate e la natura selvaggia.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "74",
-      "title": "Buachaille Etive Mor",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 3,
+      "title": "Alla scoperta dell'Isola di Skye",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "75",
-      "title": "Eilean Donan",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 4,
+      "title": "Alla scoperta dell'Isola di Skye",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "76",
-      "title": "Neist Point",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 5,
+      "title": "Alla scoperta dell'Isola di Skye",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "77",
-      "title": "Old Man of Storr",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 6,
+      "title": "Alla scoperta dell'Isola di Skye",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "72",
+          "title": "Paesaggi incantati tra cascate, montagne e natura",
+          "description": "Il percorso che affronteremo in questi giorni è sicuramente il più suggestivo. Immersi in paesaggi maestosi, circondati da Laghi, paludi e cascate. Incontreremo ben pochi centri abitati e vivremo tantissima natura incontaminata, arriveremo a Kyle of Lochalsh, porta di ingresso di Skye e qui visiteremo il castello di Eilean Donan, costruito in uno scenario da fiaba e utilizzato come set per decine di film. La giornata proseguirà con l'ingresso all'isola di Skye, dove rimarremo per le prossime tre e visiteremo i punti più famosi quali: il Neist Point, l'Old Man of Storr (con una camminata in salita di circa un'ora), il Quiraing, lo Sligachan, le Fairy Pools, il Castello di Dunvegan, la distilleria del Rum più famoso al mondo, Talisker Bay e la spiaggia di Elgol.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "78",
-      "title": "Quiraing",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 7,
+      "title": " Rientro ad Edimburgo",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "73",
+          "title": "Ultimi scatti durante il percorso",
+          "description": "Ritorneremo a passo lento verso il Glencoe per vedere l'ultimo tramonto, salutare la Scozia e avvicinarci all'aeroporto di Edimburgo, dove il giorno seguente avremo il volo per rientrare a casa.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "79",
+      "number": 8,
+      "title": "Arrivederci Scozia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "74",
+          "title": "Saluti e transfer in aeroporto",
+          "description": "Fine del viaggio fotografico. Ci organizzeremo in base alle varie partenze dei voli i Transfer autonomi verso l'aeroporto per rientrare a casa.",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Scogliere",
+      "description": "Viaggi fotografici tra le più alte scogliere",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "61",
+      "start": "2022-11-05",
+      "end": "2022-11-12",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 1999,
+      "deposit": 100,
+      "balance": 1998,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1899,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "84",
+      "start": "2023-05-20",
+      "end": "2023-05-27",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2099,
+      "deposit": 100,
+      "balance": 1999,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1999,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "122",
+      "start": "2024-05-25",
+      "end": "2024-06-01",
+      "status": "waitingList",
+      "maxPax": 8,
+      "price": 2540,
+      "deposit": 760,
+      "balance": 1780,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2540,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "152",
+      "start": "2025-05-17",
+      "end": "2025-05-24",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 2299,
+      "deposit": 690,
+      "balance": 1609,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 2299,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-18",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "tramonto a Neist point durante viaggio fotografico scozia isola di skye",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Workshop_photography_events_7b6fbd6dc7a03fcf43cc8b0270a84563_56359c9f7e.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Edimburgo",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_scozia_isola_di_skye_7245f6244b.jpg",
+      "alt": "Edimburgo nel viaggio fotografico scozia isola di skye"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Falls of Falloch",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Falls_of_Falloch_scozia_e7da09ca6a.jpg",
+      "alt": "foto delle Falls of Falloch dal viaggio fotografico scozia e isola di skye"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Buachaille Etive Mor",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fiume_e_Buachaille_Etive_Mor_38f6fd0a6f.jpg",
+      "alt": "tramonto al Buachaille Etive Mor viaggio fotografico scozia "
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "Eilean Donan",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Castello_di_Eilean_Donan_ecd2c2c0b2.jpg",
+      "alt": "Il castello di Eilean Donan durante viaggio fotografico scozia isola di skye"
+    },
+    {
+      "id": "4",
+      "type": "tour",
+      "title": "Neist Point",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Neist_Point_319ca02015.jpg",
+      "alt": "tramonto a Neist point durante viaggio fotografico scozia isola di skye"
+    },
+    {
+      "id": "5",
+      "type": "tour",
+      "title": "Old Man of Storr",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Workshop_photography_events_297c9ab1a21cca7b381aeb8b139de926_57f46855a5.jpg",
+      "alt": "Old Man of Storr una tappa del viaggio fotografico in scozia e isola di skye"
+    },
+    {
+      "id": "6",
+      "type": "tour",
+      "title": "Quiraing",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Quiraing_al_tramonto_629c6091d4.jpg",
+      "alt": "Quiraing al tramonto durante il viaggio fotografico in scozia e isola di skye"
+    },
+    {
+      "id": "7",
+      "type": "tour",
       "title": "Sligachan",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Sligachan_e_il_ponte_antico_63c2e2ec1d.jpg",
+      "alt": "Sligachan al tramondo durante il viaggio fotografico in scozia e isola di skye"
     },
     {
-      "id": "80",
+      "id": "8",
+      "type": "tour",
       "title": "Fairy Pools",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/fiume_delle_Fairy_Pools_ef7ba6c6f2.jpg",
+      "alt": "le cascate Fairy Pools durante il viaggio fotografico in Scozia e isola di skye"
     },
     {
-      "id": "151",
+      "id": "9",
+      "type": "group",
       "title": "WeShooters in Scozia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_all_Old_man_Storr_37c78861d4.jpg",
+      "alt": "WeShooters che fotografano Old man Storr viaggio fotografico scozia"
+    },
+    {
+      "id": "locpic-6-1",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Quiraing_illuminato_dal_sole_204e888a2b.jpg",
+      "alt": "Marika Greco coach weshoot viaggio fotografico scozia"
+    },
+    {
+      "id": "locpic-9-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Talisker_Bay_all_ora_blu_6cc0fe66b6.jpg",
+      "alt": "Talisker Bay meta del viaggio fotografico scozia e isola di skey"
+    },
+    {
+      "id": "locpic-10-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Spiaggia_di_Elgol_al_tramonto_716369ea95.jpg",
+      "alt": "tramonto Spiaggia di Elgol viaggio fotografico scozia e isola di skye"
+    },
+    {
+      "id": "locpic-11-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Castello_di_Dunvegan_3c23200ae7.jpg",
+      "alt": "Castello di Dunvegan meta del viaggio fotografico in scozia e isola di skye"
     }
   ]
 }

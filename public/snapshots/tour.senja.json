@@ -1,63 +1,640 @@
 {
+  "id": "20",
+  "tour_id": "norvegia-tra-gli-incredibili-fiordi-del-nord",
   "slug": "senja",
   "title": "Senja: Tra gli incredibili fiordi del Nord norvegese",
-  "states": {
-    "slug": "norvegia"
-  },
+  "description": "<p><strong>Vuoi vivere un'esperienza esclusiva in una location estrema e selvaggia?&nbsp;</strong></p><p>Allora questo è il viaggio che fa per te: non stai per leggere il programma di un classico viaggio fotografico, dove pernotterai in b&amp;b e scatterai le fotografie classiche degli spot conosciuti facilmente raggiungibili; in questa <strong>spettacolare avventura</strong> potrai andare oltre a quella che è la fotografia di paesaggio più inflazionata, potrai vivere un'esperienza in cui si entra profondamente in contatto con la bellezza della natura, dormendo in tenda, cucinando con fornelli e fuochi da campo; si tratta di un'avventura non per tutti, ma per gli appassionati che vogliono andare \"oltre\" con la Fotografia di paesaggio, questa è la Norvegia, questa è l'<strong>isola di Senja</strong>.</p><p>Il programma è stato definito dando la massima priorità alla fotografia, sacrificando le comodità e scegliendo itinerari di trekking che portano sulle vette più scenografiche, un viaggio itinerante, dove la passione per natura, per le montagne, per la fotografia e per la vita di campeggio regaleranno un'esperienza senza precedenti.</p><p>I punti più belli dell'isola sono stati suddivisi in modo da poter tascorrere la prima notte in Hotel (vicino all'aeroporto), di seguito due notti in tenda, una notte intermedia in Hotel (in un albergo stupendo nel cuore dell'isola), le successive due notti in tenda per concludere con una notte in Hotel (nuovamente vicino all'aeroporto).</p><p>Le notti che passeremo in tenda saranno gestite in questo modo: l'organizzazione fornirà, ove ci sia qualcuno sprovvisto, una tenda per due persone inclusa nel prezzo della quota (si può dormire in una tenda da soli con un sovrapprezzo di €50,00); lasciato l'albergo raggiungeremo la gas station più vicina, dove faremo un pranzo con hamburger o fish&amp;chips e faremo la spesa per il pernotto in questo modo:</p><p>- ogni partecipante acquisterà i viveri per il proprio fabbisogno, provvedendo autonomamente a comprare acqua e cibo (genericamente due bottiglie da 1,5lt e una bustina di cibo liofilizzato da campeggio [pasta, riso...] del tonno, della frutta e dei biscotti per la colazione)</p><p>- faremo una cassa comune con la quale acquisteremo i beni di uso comune come sale, olio, acqua da bollire, carta igienica, sacchetti per la spazzatura ecc...</p><p>Finita la spesa ci avvicineremo al parcheggio della location scelta (in base al meteo) e avremo tutto il tempo di preparare individualmente lo zaino per affrontare un pernotto con:</p><p>- attrezzatura fotografica indispensabile (meglio stare leggeri, si camminerà parecchio);</p><p>- capi di vestiario leggeri per il giorno e caldi ed impermeabili per la notte;</p><p>- cibo per una cena ed una colazione;</p><p>- un minimo indispensabile di acqua (ci sono molti torrenti di montagna potabili, testati, per riempire borracce o bottiglie);</p><p>- attrezzatura per il campeggio: tenda fornita dallo staff o di proprietà (casomai divisa in due zaini tra telo e paletteria), sacco a pelo e materassino (acquistabili con meno di 150 euro e consigliati nelle FAQ di seguito);</p><p>Ogni trekking sarà suddiviso in diverse fasi:</p><p>- dal parcheggio al campo base (dove monteremo le tende, mangeremo e ci riposeremo);</p><p>- dal campo base allo spot fotografico per godere del tramonto;</p><p>- ritorno al campo base per il pernotto;</p><p>- dal campo base allo spot fotografico per godere delle prime luci dell'alba;</p><p>- rientro al campo base per riposo;</p><p>- smontaggio del campo, ritorno al parcheggio e partenza in auto per la location successiva.</p><p>Di seguito il programma dettagliato con la descrizione delle locations (che rivedremo in loco in funzione del meteo) e le FAQ sul viaggio</p>",
+  "excerpt": "Un'esperienza fotografica immersi in un contesto selvaggio, la natura dell'isola di Senja come mai si è vista prima",
+  "difficulty": "hard",
+  "experience_level": "Sfida",
+  "things_needed": "<p>Abbigliamento classico da Trekking, leggero per camminare di giorno (calzoncini, t-shirt), e termico/traspirante per i pernotti (pantaloni lunghi, maglie e completi impermeabili per quando ci saranno piovaschi di passaggio... e ci saranno). Quindi scarponcini in gore-tex, un grande zaino comodo per camminare (ideale 80lt). Sicuramente un buon sacco a pelo ed un materassino isolante per dormire comodi. Per i pernotti all'aperto verrà fornita una tenda doppia (per due persone) dallo staff, ed è inclusa nel prezzo del viaggio. (supplemento per la tenda singola €50,00)</p>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "nord-norge"
+    "slug": "nord-norge",
+    "locale": "it",
+    "name": "Nord Norge"
   },
-  "sessions": [
+  "states": {
+    "name": "Norvegia",
+    "slug": "norvegia",
+    "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Senja 2025 | WeShoot",
+    "metaDescription": "Scopri i fiordi norvegesi in questo viaggio fotografico sull'isola di Senja, trekking e viste sui fiordi da togliere il fiato.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-08-20",
-      "end": "2022-08-27"
+      "id": "93",
+      "title": "Segla",
+      "description": "Segla è una delle montagne più conosciute della Norvegia del nord, la sua forma particolare l'ha sicuramente resa un'icona del posto.",
+      "slug": "segla",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "91",
+          "title": "Dal tramonto all'alba",
+          "description": "Cominceremo le nostre avventure nel classico spot di Senja: la motagna Segla, uno dei fiordi più scenografici al Mondo che fotograferemo al tramonto ed all'alba. [3,7km andata e ritorno, dislivello 520 metri, 1:30h per il campo base, 1:30h per il punto di ripresa]",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Segla_al_tramonto_8ce90a4c9d.jpg",
+          "alternativeText": "viaggio fotografico norvegia senja"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_senja_7da73cb52e.jpg",
+          "alternativeText": "alessandro cantarelli album viaggi fotografici"
+        }
+      ]
     },
     {
-      "start": "2024-08-16",
-      "end": "2024-08-23"
+      "id": "94",
+      "title": "Keipen",
+      "description": "Keipen è la vetta più alta della zona di Senja, con i suoi ben 862 metri. Da qui si potranno scorgere panorami incredibili a picco sul mare.",
+      "slug": "keipen",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "92",
+          "title": "Paesaggi mozzafiato dalla vetta di Keipen",
+          "description": "Ci sposteremo in direzione di Grytetippen, inizieremo il percorso fino alla cima Keipen, la più alta vista di Senja con i suoi 862 metri. Sarà l'ascesa più impegnativa che affronteremo, con un tratto di ghiaione e grandi rocce da risalire (non pericoloso, è un sentiero impegnativo che non richede attrezzatura da arrampicata) [6,8km andata e ritorno, dislivello 820 metri, 2:30h per il campo base, 2:00h per il punto di ripresa]",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Keipen_al_tramonto_dfff4f0b52.jpg",
+          "alternativeText": "vista dalla vetta Keipen durante viaggio fotografico Senja"
+        }
+      ]
     },
-    {
-      "start": "2024-09-02",
-      "end": "2024-09-09"
-    },
-    {
-      "start": "2025-08-24",
-      "end": "2025-08-31"
-    }
-  ],
-  "reviews": [],
-  "pictures": [
     {
       "id": "95",
-      "title": "Segla",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Husfjellet",
+      "description": "Un altro bellissimo trekking che ti porterà in cima a Husfjellet da cui si potranno scattare incredibili fotografie del fiordo norvegese.",
+      "slug": "husfjellet",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "94",
+          "title": "Trekking verso la cima Husfjellet",
+          "description": "Lasciato l'hotel ci sposteremo verso sud, punteremo alla cima Husfjellet, percorrendo uno scenografico sentiero di laghi scorci incredibili. Una volta raggiunta la cima avremo una classica vista sui fiordi che si presta per il tramonto e per l'alba che faremo il giorno successivo. [7,6km andata e ritorno, dislivello 630 metri, 1:40h per il campo base, 1:15h per il punto di ripresa]",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Husfjellet_all_alba_b9ce14a468.jpg",
+          "alternativeText": "alba in cima al Husfjellet durante viaggio fotografico senja"
+        }
+      ]
     },
     {
       "id": "96",
-      "title": "Keipen",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Barden",
+      "description": "Trekking di circa due ore in cu si raggiunge la vetta di Barden, anche qui la vista di fronte al tramonto sul mare lascia davvero senza parole.",
+      "slug": "barden",
+      "locale": "it",
+      "state": {
+        "name": "Norvegia",
+        "slug": "norvegia",
+        "locale": "it",
+        "description": "<p>Incredibili Itinerari di viaggi fotografici sia estivi che invernali tra i fiordi del Nord. D'estate potrai godere di panorami mozzafiato raggiungendo le vette più alte delle isole Lofoten o di Senja; l'inverno, oltre a fotografare delle bellissime albe/tramonti nelle location migliori, andremo alla ricerca dell'aurora boreale che renderà ancora più magici questi luoghi.</p>"
+      },
+      "steps": [
+        {
+          "id": "95",
+          "title": "Trekking verso Barden",
+          "description": "Ultimo fiordo della nostra avventura, saliremo verso la cima Barden, location ideale per un tramonto sul mare, pernotteremo in zona ed eventualmente risaliremo in cima per l'alba. [6,7km andata e ritorno, dislivello 590 metri, 1:15h per il campo base, 1:15h per il punto di ripresa]",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vista_dalla_cima_di_Barden_53b9ec229e.jpg",
+          "alternativeText": "trekking sulla cima di Barden durante viaggio fotografico senja"
+        }
+      ]
+    }
+  ],
+  "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "96",
+      "number": 1,
+      "title": "Benvenuti a Senja",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "90",
+          "title": "Presentazioni e briefing iniziale",
+          "description": "<p>Incontro il giorno 1 con i partecipanti all'aeroporto di Tromso (TOS), ci sistemeremo in una guest house a pochi minuti dall'aeroporto per trascorrere la prima notte e garantire a tutti un arrivo comodo.</p>",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "97",
-      "title": "Husfjellet",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "number": 2,
+      "title": "Trekking per raggiungere Segla",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "91",
+          "title": "Dal tramonto all'alba",
+          "description": "Cominceremo le nostre avventure nel classico spot di Senja: la motagna Segla, uno dei fiordi più scenografici al Mondo che fotograferemo al tramonto ed all'alba. [3,7km andata e ritorno, dislivello 520 metri, 1:30h per il campo base, 1:30h per il punto di ripresa]",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "98",
+      "number": 3,
+      "title": "Scaliamo la vetta più alta di Senja",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "92",
+          "title": "Paesaggi mozzafiato dalla vetta di Keipen",
+          "description": "Ci sposteremo in direzione di Grytetippen, inizieremo il percorso fino alla cima Keipen, la più alta vista di Senja con i suoi 862 metri. Sarà l'ascesa più impegnativa che affronteremo, con un tratto di ghiaione e grandi rocce da risalire (non pericoloso, è un sentiero impegnativo che non richede attrezzatura da arrampicata) [6,8km andata e ritorno, dislivello 820 metri, 2:30h per il campo base, 2:00h per il punto di ripresa]",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "number": 4,
+      "title": "Relax e un pò di didattica",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "93",
+          "title": "Confronti e Analisi degli scatti",
+          "description": "Ci sposteremo nell'albergo più scenografico dell'Isola per poter riposare, idratarci e mangiare in relax. Sarà un buon momento per dedicarci alla teoria, le guide mostreranno il loro flusso di editing ed analizzeremo gli scatti dei partecipanti per confrontarci su dove e come migliorare. Pernotteremo in hotel e, dopo la prima colazione, ripartiremo riposati alla volta dei fiordi.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "100",
+      "number": 5,
+      "title": "Ripartiamo all'avventura",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "94",
+          "title": "Trekking verso la cima Husfjellet",
+          "description": "Lasciato l'hotel ci sposteremo verso sud, punteremo alla cima Husfjellet, percorrendo uno scenografico sentiero di laghi scorci incredibili. Una volta raggiunta la cima avremo una classica vista sui fiordi che si presta per il tramonto e per l'alba che faremo il giorno successivo. [7,6km andata e ritorno, dislivello 630 metri, 1:40h per il campo base, 1:15h per il punto di ripresa]",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "101",
+      "number": 6,
+      "title": "Ultimo tramonto in alta quota",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "95",
+          "title": "Trekking verso Barden",
+          "description": "Ultimo fiordo della nostra avventura, saliremo verso la cima Barden, location ideale per un tramonto sul mare, pernotteremo in zona ed eventualmente risaliremo in cima per l'alba. [6,7km andata e ritorno, dislivello 590 metri, 1:15h per il campo base, 1:15h per il punto di ripresa]",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "number": 7,
+      "title": "Direzione Tromso",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "96",
+          "title": "Analisi e approfondimenti sugli scatti",
+          "description": "Torneremo verso l'aeroporto di Tromso (TOS), dove pernotteremo l'ultima notte per poi salutarci la mattina del giorno successivo.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "103",
+      "number": 8,
+      "title": "Arrivederci Senja",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "97",
+          "title": "Saluti e transfer in Aeroporto",
+          "description": "Dopo la colazione faremo il check-out dall'hotel per dirigerci verso l'aeroporto.",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Tenda",
+      "description": "Esperienza wild",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Esplorativo",
+      "description": "Andremo insieme alla scoperta di nuove location.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-7",
+      "title": "Scogliere",
+      "description": "Viaggi fotografici tra le più alte scogliere",
+      "locale": "it"
+    },
+    {
+      "id": "hl-8",
+      "title": "Lunghe Esposizioni",
+      "description": "Ti divertirai a giocare con le lunghe esposizioni per creare effetti unici con acqua, nuvole e scie luminose",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "26",
+      "start": "2022-08-20",
+      "end": "2022-08-27",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 1699,
+      "deposit": 100,
+      "balance": 1599,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1599,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "132",
+      "start": "2024-08-16",
+      "end": "2024-08-23",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2250,
+      "deposit": 675,
+      "balance": 1575,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2250,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "166",
+      "start": "2024-09-02",
+      "end": "2024-09-09",
+      "status": "soldOut",
+      "maxPax": 6,
+      "price": 2250,
+      "deposit": 675,
+      "balance": 1575,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 2250,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "209",
+      "start": "2025-08-24",
+      "end": "2025-08-31",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 2199,
+      "deposit": 659,
+      "balance": 1540,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2199,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "alba in cima al Husfjellet durante viaggio fotografico senja",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Husfjellet_all_alba_b9ce14a468.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Segla",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Segla_al_tramonto_8ce90a4c9d.jpg",
+      "alt": "viaggio fotografico norvegia senja"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Keipen",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Keipen_al_tramonto_dfff4f0b52.jpg",
+      "alt": "vista dalla vetta Keipen durante viaggio fotografico Senja"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Husfjellet",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Husfjellet_all_alba_b9ce14a468.jpg",
+      "alt": "alba in cima al Husfjellet durante viaggio fotografico senja"
+    },
+    {
+      "id": "3",
+      "type": "tour",
       "title": "Barden",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vista_dalla_cima_di_Barden_53b9ec229e.jpg",
+      "alt": "trekking sulla cima di Barden durante viaggio fotografico senja"
+    },
+    {
+      "id": "locpic-0-1",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_senja_7da73cb52e.jpg",
+      "alt": "alessandro cantarelli album viaggi fotografici"
     }
   ]
 }

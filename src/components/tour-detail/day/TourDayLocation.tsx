@@ -9,6 +9,8 @@ interface RawPicture {
   title?: string;
   type?: string;
   image?: any;
+  url?: string;                // ✅ nuovo: supporto url top-level
+  alternativeText?: string;    // ✅ nuovo: supporto alt top-level
 }
 interface NormalizedPicture {
   id?: string;
@@ -41,11 +43,27 @@ function toAbsolute(rawUrl: string): string {
   const base = process.env.NEXT_PUBLIC_STRAPI_URL || '';
   return joinUrl(base, rawUrl);
 }
+
+/** ✅ ora supporta sia pictures con { url, alternativeText } sia con { image: [...] } */
 function normalizeLocationPictures(pictures: RawPicture[] = []): NormalizedPicture[] {
   return pictures
     .filter((p) => p && (p.type === 'tour' || typeof p.type === 'undefined'))
     .flatMap((p) => {
-      const arr = Array.isArray(p.image) ? p.image : [p.image];
+      // Caso A: shape nuova – url al top-level
+      if (p.url) {
+        const url = toAbsolute(p.url);
+        if (!url) return [];
+        return [
+          {
+            id: p.id,
+            title: p.title || '',
+            url,
+            alternativeText: p.alternativeText || p.title || '',
+          },
+        ];
+      }
+      // Caso B: shape legacy – dentro image / images
+      const arr = Array.isArray(p.image) ? p.image : p.image ? [p.image] : [];
       return arr
         .filter(Boolean)
         .map((img: any) => {
@@ -53,6 +71,7 @@ function normalizeLocationPictures(pictures: RawPicture[] = []): NormalizedPictu
           const thumb = img?.formats?.thumbnail?.url;
           const raw = large || img?.url || thumb || '';
           const url = toAbsolute(raw);
+          if (!url) return null;
           return {
             id: img?.id || p.id,
             title: p.title || '',
@@ -60,7 +79,7 @@ function normalizeLocationPictures(pictures: RawPicture[] = []): NormalizedPictu
             alternativeText: img?.alternativeText || p.title || '',
           };
         })
-        .filter((n: NormalizedPicture) => !!n.url);
+        .filter(Boolean) as NormalizedPicture[];
     });
 }
 
@@ -99,6 +118,7 @@ const TourDayLocation: React.FC<TourDayLocationProps> = ({
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center" aria-hidden="true">
         <Camera className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
+
       {/* titolo visivo nell’overlay, non heading */}
       <div className="absolute bottom-4 left-4 right-4" aria-hidden="true">
         <span className="text-white font-bold text-lg drop-shadow-lg">{location.title}</span>
@@ -168,7 +188,6 @@ const TourDayLocation: React.FC<TourDayLocationProps> = ({
 
       {validPictures.length === 0 && (
         <div className="p-6">
-          {/* Visivo sì, ma non heading */}
           <p className="font-bold text-primary text-lg">{location.title}</p>
           {location.description && <p className="text-gray-600 text-sm mt-2">{location.description}</p>}
         </div>

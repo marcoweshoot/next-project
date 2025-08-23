@@ -1,193 +1,1127 @@
 {
+  "id": "7",
+  "tour_id": "le-cinque-terre-borghi-sul-mare",
   "slug": "cinque-terre",
   "title": "Cinque Terre: lasciati ispirare da questi antichi borghi sul mare",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p><strong>Vuoi scoprire un paradiso naturale tra le incredibili coste liguri e trascorrere due giorni incredibili tra relax e fotografie?</strong></p><p>Le Cinque Terre sono davvero incredibili, l’alba a Manarola, il tramonto a Vernazza, la notte stellata su Riomaggiore…momenti davvero unici.</p><p>Due fotografi di paesaggio professionisti ti guideranno in questa esperienza formativa dove imparerai ad utilizzare la fotocamera, dove capirai le tecniche dei grandi fotografi paesaggisti per realizzare immagini d'impatto e di qualità.</p><p>Il percorso didattico sarà accompagnato da un’organizzazione dettagliata e curata dai tutor, che penseranno al pernotto, ai pasti, e a fornire costante supporto <strong>individuale per tutta la durata dell’evento.</strong></p><p><strong>Vediamo a chi è rivolto questo viaggio fotografico:</strong></p><p>Il viaggio fotografico è per tutti. Cuciamo su misura i nostri corsi sul livello dei partecipanti grazie a pochi allievi e 2 insegnanti.</p><p>Riusciamo a seguire il <strong>PRINCIPIANTE</strong>, che ha bisogno di imparare le linee guida della fotografia di base (composizione, regole, settaggi della fotocamera), fino al <strong>FOTOGRAFO PIU’ NAVIGATO</strong> che cerca di approfondire la sua tecnica ed imparare a gestire al meglio la pianificazione.</p><p><strong>Come verrai seguito dal momento dell’acquisto?</strong></p><p>Nascerà un contatto diretto con i tutor per ragionare sull'attrezzatura e per preparare vestiario e accessori da portare. Dopo il viaggio fotografico verrà mantenuta questa connessione con gli insegnanti che rimarranno costantemente a disposizione degli allievi per domande di natura fotografica o legata all’acquisto di equipment di qualsiasi tipo.</p><p>&nbsp;</p><p><strong>Di che esperienza si tratta?</strong></p><p>Un tour studiato nei minimi dettagli per darti la possibilità di imparare nuove tecniche. Si tratta di un’esperienza <strong>formativa</strong>, dove la mission dei due tutor è la consapevolezza fotografica ed artistica dei partecipanti, ovviamente, in un contesto di relax e di distacco totale dallo stress delle grandi città.</p><p>&nbsp;</p><p><strong>Quali tecniche, attrezzature e tematiche verranno esaminate durante il viaggio fotografico?</strong></p><p>Tutte quelle necessarie per diventare un OTTIMO fotografo paesaggista. Parleremo di fotocamere, di accessori, di pianificazione, di meteo…. Oltre ovviamente ai canoni cardine della fotografia:</p><ul><li><strong>LA</strong> <strong>LUCE</strong>: come gestire la cosa più importante della nostra disciplina.</li><li><strong>LA CORRETTA</strong> <strong>ESPOSIZIONE</strong>: restituire leggibilità alle ombre ed alle luci della scena, catturare un’immagine equilibrata e corretta.</li><li><strong>LA</strong> <strong>COMPOSIZIONE</strong>: dove posizionare gli elementi della scena per dare forza e dinamismo all’immagine</li><li><strong>LE</strong> <strong>INFORMAZIONI SULLA FOTOCAMERA</strong>, come leggere l’istogramma e capire i settaggi, gli strumenti e le diciture che serve conoscere per padroneggiare il nostro “occhio digitale”</li><li><strong>LE LUNGHE ESPOSIZIONI E UTILIZZO DEI FILTRI</strong>, Ti spiegheremo l'uso dei diversi filtri fotografici: ND, polarizzatori e graduati per rendere l’esperienza didattica completa.</li><li><strong>PIANIFICAZIONE:</strong> Inoltre durante il viaggio fotografico si terrà una sessione teorica sulla pianificazione fotografica delle uscite per ottimizzare e migliorare i tuoi risultati finali.</li><li><strong>SESSIONE CRITICA: </strong>nel corso dell'evento faremo una lezione sull'analisi delle foto scattate per imparare a vederli in anticipo</li></ul><p>&nbsp;</p><p>Ogni partecipante inoltre riceverà un buono sconto da utilizzare su un altro dei nostri viaggi fotografici.<br>&nbsp;</p><p>Inoltre prima dell'inizio del corso avrai accesso ad un gruppo whatsapp riservato ai corsisti per scambi di consigli e per l’organizzazione di uscite fotografiche di gruppo con le amicizie che inevitabilmente nascono in queste occasioni e riceverai anche un estratto del nostro PDF sulla Pianificazione.</p>",
+  "excerpt": "Un viaggio fotografico tra questi presepi naturali.",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:</p><ul><li>Vestiario comodo e impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "liguria"
+    "slug": "liguria",
+    "locale": "it",
+    "name": "Liguria"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Cinque Terre 2025 | WeShoot",
+    "metaDescription": "Un viaggio fotografico che ti farà innamorare delle Cinque Terre ed i suoi borghi a picco sul mare, illuminati dalle luci dell'alba e del tramonto.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2021-12-18",
-      "end": "2021-12-19"
+      "id": "14",
+      "title": "Manarola",
+      "description": "Manarola è uno dei 5 borghi delle Cinque terre, molto scenografica per via della sua posizione. Infatti il borgo si trova su uno sperone a picco sul mare da cui si gode un ottimo tramonto.",
+      "slug": "manarola",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "10",
+          "title": "Manarola alle prime luci dell'alba",
+          "description": "<ul><li>Ore 5:00: Ci troveremo prima dell'alba per prendere il treno verso Manarola. Arrivati li, inizieremo la sessione fotografica per sfruttare l'ora blu, prima del sorgere del sole, per poi goderci le splendide luci dell'alba che illuminano il borgo; Successivamente torneremo in stazione per prendere il treno per La Spezia Centrale, in modo tale da rientrare alla struttura per degustare una meritata colazione;</li><li>Ore 10:00: Check out dalla struttura;</li><li>Ore 10:30: faremo una sessione critica, vi mostreremo alcuni scatti per ragionare insieme su come si struttura un'immagine</li><li>Ore 13:00: Fine Tour Fotografico</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/DSC_9588_a5dba58d60.jpg",
+          "alternativeText": "Tramonto manarola cinque terre durante viaggio fotografico"
+        }
+      ]
     },
     {
-      "start": "2022-01-15",
-      "end": "2022-01-16"
+      "id": "15",
+      "title": "Vernazza",
+      "description": "Vernazza è uno dei 5 borghi antichi che costituiscono le Cinque Terre. Dalla terrazza sopra al paese si possono fotografare tramonti incredibili.",
+      "slug": "vernazza",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "9",
+          "title": "Briefing veloce e poi subito a scattare",
+          "description": "<ul><li>Ore 14:00 : Incontro alla struttura ricettiva dove lasceremo tutti i bagagli che non ci serviranno per le sessioni di scatto. Ci dirigeremo alla stazione di La Spezia Centrale, per prendere il treno verso Vernazza dove avverrà la prima sessione introduttiva di scatto, in cui ci conosceremo un po’ meglio e struttureremo il percorso di ogni partecipante in base al suo livello (dal neofita al più preparato); andando verso la Golden Hour, ci appresteremo a fotografarla con l’utilizzo di filtri ND e Graduati, introducendone le caratteristiche tecniche;</li><li>Ore 18:00 circa affronteremo la seconda sessione fotografica spostandoci in uno dei punti più alti della città per studiare lo scatto al tramonto e approfondire le tematiche introdotte nella prima sessione. Una volta finito il tramonto ci sposteremo verso la stazione per prendere il treno che va a Riomaggiore, dove sperimenteremo un po' di fotografia notturna cittadina per imparare a gestire le luci artificiali.&nbsp;</li><li>Ore 20:30 circa: Terminate le operazioni fotografiche ci muoveremo verso il ristorante per una ricca cena di prodotti locali</li><li>Ore 23: Ci ritireremo in albergo per riposarci in vista dell'alba seguente.</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_sul_mare_a_Vernazza_4489c3715d.jpg",
+          "alternativeText": "Tramonto sulla terrazza durante Viaggio fotografico a Vernazza, Cinque Terre"
+        },
+        {
+          "id": "locpic-1-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gruppo_weshooters_alle_cinque_terre_012a14c7a8.jpg",
+          "alternativeText": "weshooters dal viaggio fotografico cinque terre"
+        },
+        {
+          "id": "locpic-1-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gruppo_weshooters_a_vernazza_0e2b34fa94.jpg",
+          "alternativeText": "Gruppo weshooters viaggio fotografico cinque terre"
+        },
+        {
+          "id": "locpic-1-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_in_sessione_a_vernazza_ff6f4d2400.jpg",
+          "alternativeText": "WeShooters tramonto vernazza viaggio fotografico cinque terre"
+        },
+        {
+          "id": "locpic-1-4",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Vernazza_di_Samuele_Bucci_2b301e9f38.jpg",
+          "alternativeText": "viaggio fotografico cinque terre"
+        }
+      ]
     },
     {
-      "start": "2022-02-12",
-      "end": "2022-02-13"
-    },
-    {
-      "start": "2022-03-12",
-      "end": "2022-03-13"
-    },
-    {
-      "start": "2022-10-29",
-      "end": "2022-10-30"
-    },
-    {
-      "start": "2022-11-26",
-      "end": "2022-11-27"
-    },
-    {
-      "start": "2022-12-03",
-      "end": "2022-12-04"
-    },
-    {
-      "start": "2023-01-28",
-      "end": "2023-01-29"
-    },
-    {
-      "start": "2023-10-21",
-      "end": "2023-10-22"
-    },
-    {
-      "start": "2023-11-25",
-      "end": "2023-11-26"
-    },
-    {
-      "start": "2024-01-13",
-      "end": "2024-01-14"
-    },
-    {
-      "start": "2024-03-02",
-      "end": "2024-03-03"
-    },
-    {
-      "start": "2024-05-18",
-      "end": "2024-05-19"
-    },
-    {
-      "start": "2024-11-16",
-      "end": "2024-11-17"
-    },
-    {
-      "start": "2024-02-24",
-      "end": "2024-02-25"
-    },
-    {
-      "start": "2024-12-14",
-      "end": "2024-12-15"
-    },
-    {
-      "start": "2025-01-18",
-      "end": "2025-01-19"
-    },
-    {
-      "start": "2025-12-20",
-      "end": "2025-12-21"
-    },
-    {
-      "start": "2026-01-17",
-      "end": "2026-01-18"
+      "id": "178",
+      "title": "Riomaggiore",
+      "description": "Riomaggiore è la prima delle Cinque Terre che si incontra venendo da La Spezia. Il tipico borgo si presta per essere fotografato in qualsiasi condizione di luce, dall'alba al tramonto, fino a sessioni notturne.",
+      "slug": "riomaggiore",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "9",
+          "title": "Briefing veloce e poi subito a scattare",
+          "description": "<ul><li>Ore 14:00 : Incontro alla struttura ricettiva dove lasceremo tutti i bagagli che non ci serviranno per le sessioni di scatto. Ci dirigeremo alla stazione di La Spezia Centrale, per prendere il treno verso Vernazza dove avverrà la prima sessione introduttiva di scatto, in cui ci conosceremo un po’ meglio e struttureremo il percorso di ogni partecipante in base al suo livello (dal neofita al più preparato); andando verso la Golden Hour, ci appresteremo a fotografarla con l’utilizzo di filtri ND e Graduati, introducendone le caratteristiche tecniche;</li><li>Ore 18:00 circa affronteremo la seconda sessione fotografica spostandoci in uno dei punti più alti della città per studiare lo scatto al tramonto e approfondire le tematiche introdotte nella prima sessione. Una volta finito il tramonto ci sposteremo verso la stazione per prendere il treno che va a Riomaggiore, dove sperimenteremo un po' di fotografia notturna cittadina per imparare a gestire le luci artificiali.&nbsp;</li><li>Ore 20:30 circa: Terminate le operazioni fotografiche ci muoveremo verso il ristorante per una ricca cena di prodotti locali</li><li>Ore 23: Ci ritireremo in albergo per riposarci in vista dell'alba seguente.</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/riomaggiore_ora_blu_viaggio_fotografico_cinque_terre_ac4ef0962d.jpg",
+          "alternativeText": "tour fotografico cinque terre workshop ora blu riomaggiore"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "56",
+      "title": "Cinque Terre",
+      "description": "Da dove cominciare.....bhe Alessandro Marco e Michele sono dei ragazzi molto bravi, simpatici e anche se giovani molto professionali. Ti seguono passo passo consigliandoti bene e mettendoti a tuo agio. Si ha la possibilità, per chi come ed altri partecipanti del gruppo sprovvisti di filtri e cavalletti, di utilizzare i loro. In più ,oltre al tempo passato a fotografare i vari paesaggi a dir poco mozzafiato (ottima la scelta degli orari e degli spot....c'eravamo solo noi del gruppo) con ottimi risultati grazie ai loro consigli...è stato molto interessante il tempo dedicato alla postproduzione di uno degli scatti portati a casa...anche in questo caso seguiti passo passo. In conclusione sono rimasto molto soddisfatto e non vedo l'ora di far un altro viaggio fotografico con loro....Val d'Orcia arrivo...... Per chi ha dei dubbi, fateli sparire e fatevi guidare da loro. ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-01-30T09:21:17.000Z"
     },
     {
-      "rating": 5
+      "id": "57",
+      "title": "Ottima esperienza ",
+      "description": "Gli spot scelti con cura in base alla luce in determinati orari hanno consentito anche a me che sono agli inizi di portare a casa degli ottimi scatti; ho avuto la possibilitá di provare i filtri Nisi e capire il loro funzionamento. Alessandro Marco e Michele ci hanno guidato con entusiasmo e competenza durante le fasi di scatto affinchè ognuno potesse ottenere degli ottimi risultati.Utile e interessante anche l'ultima lezione sulla postproduzione dove ognuno ha potuto elaborare una propria foto con i consigli e suggerimenti degli insegnanti. Consigliato :)",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-01-30T13:52:52.000Z"
     },
     {
-      "rating": 5
+      "id": "58",
+      "title": "Esperienza da ripetere",
+      "description": "Ho partecipato a questo viaggio fotografico decidendo di partecipare il giorno precedente; è stato il mio primo viaggio organizzato e desideravo sperimentare questo tipo di esperienza. Probabilmente la fortuna mi ha assistita perchè ho trovato tre persone fantastiche; Alessandro Marco e Michele oltre ad essere competenti e disponibili sono malati come me di fotografia e sanno trasmettere un entusiasmo ed una carica che uniti alla loro capacità, rendono l'esperienza entusiasmante. E' anche molto positivo trovarsi con persone che per quanto sconosciute condividono la passione della fotografia. Sicuramente l'essere guidati negli spot migliori con perfetta tempistica ed organizzazione permette anche in breve tempo di realizzare ottimi scatti.  Non posso tralasciare di citare le due sessioni d post che hanno arricchito le mie capacità. Grazie ragazzi a prestissimo",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-02-05T21:34:52.000Z"
     },
     {
-      "rating": 5
+      "id": "94",
+      "title": "5 terre 5 stelle",
+      "description": "Ho partecipato al viaggio fotografico alle 5 terre con Alessandro e Marco ( il mio terzo viaggio fotografico con We shoot) e mi sono trovato benissimo. Entrambi i tutor hanno condiviso la loro conoscenza delle tecniche fotografiche e dei segreti della location con pazienza, passione e disponibilità. Molto utile anche una mini lezione teorica pre scatto sull'uso dei vari filtri, filtri che poi vengono messi a nostra disposizione per tutta la durata del viaggio fotografico ( così come le varie ottiche). Ottima anche l'organizzazione logistica, dei tempi e della ricerca del giusto pdr, tutti aspetti fondamentali soprattutto per chi, come il sottoscritto, non era mai stato alle 5 terre. Come ciliegina sulla torta una interessante sessione di post al termine del viaggio fotografico. Grazie a tutti e complimenti, ci vediamo presto!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-04-09T05:28:06.000Z"
     },
     {
-      "rating": 5
+      "id": "95",
+      "title": "Esperienza ottima!",
+      "description": "Tornata ieri da un’esperienza formativa veramente utile e appagante. Alessandro e Marco, oltre ad essere molto competenti e professionali, sono anche ottimi insegnanti, capaci, grazie alla loro passione e generosità, di trasmettere con chiarezza le loro conoscenze e di farti progredire in quest’avventura meravigliosa che è il mondo della fotografia. Ci hanno svelato spot “tattici” dove poter immortalare scenari davvero suggestivi, assistiti individualmente, secondo le diverse esigenze di ognuno di noi. Utilissime anche le spiegazioni sulle tecniche di post produzione e sull’uso dei filtri che abbiamo potuto provare, realizzando scatti veramente soddisfacenti. Workshop consigliatissimo, ottima anche tutta l’organizzazione. Assolutamente consigliato! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-04-09T12:49:59.000Z"
     },
     {
-      "rating": 5
+      "id": "96",
+      "title": "WESHOOT is TOP",
+      "description": "Eccomi qui a recensire il mio secondo viaggio fotografico con questo fantastico gruppo di ragazzi, anche questa volta il DUO Alessandro - Marco ci ha saputo regalare emozioni, avventura, conoscenza, disponibilità, oltre a simpatia e professionalità\nOttimi insegnanti preparati veramente su tutto, dalla pianificazione fino ad arrivare al post produzione, siamo stati assistiti e consigliati su qualsiasi cosa chiedevamo!!! Organizzazione TOPPISSIMA!!!!\nChe altro dire... spero presto di partecipare ad un altra emozione assume e VOI!!!!\n\nGRAZIE!!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-04-09T17:09:03.000Z"
     },
     {
-      "rating": 5
+      "id": "97",
+      "title": "Oltre ogni aspettativa! Top.",
+      "description": "Esperienza indimenticabile alle cinque terre . Indimenticabile perchè la professionalità,la competenza,la conoscenza,la pazienza la simpatia messe in campo da Alessandro e Marco hanno reso questo viaggio fotografico  fotografico super formativo e divertente.\nTutto è stato eccellente, dalla formazione alla scelta dei posti da fotografare senza dimenticare la parte organizzativa curata in ogni minimo dettaglio.\nEsperienza che riproporro' sicuramente.\nBravi,bravi,bravi! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-04-10T09:54:33.000Z"
     },
     {
-      "rating": 5
+      "id": "139",
+      "title": "Ottimo! Bellissima esperienza",
+      "description": "Una grandissima esperienza. Organizzazione impeccabile e location da paura. Marco e Alessandro sono stato veramente gentili e soprattutto preparati! Ottima assistenza sul campo durante lo scatto. Ho imparato molte nuove chicche.\nGrazie mille!\nAltamente consigliato ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-09-25T08:10:25.000Z"
     },
     {
-      "rating": 5
+      "id": "140",
+      "title": "Talmente bello che alla fine vorrai rifarlo",
+      "description": "Esperienza molto formativa sia per i più esperti sia per i meno esperti perché Marco e Alessandro hanno saputo mettermi a mio agio entrando da subito, già dall’organizzazione, in empatia rispondendo ad ogni dubbio e perplessità. Organizzazione valida, sempre presente e disponibile alle esigenze dei partecipanti. Quasi scontato dire che le Cinque Terre offrono cenari magnifici della nostra Italia ma i ragazzi nonostante ciò sono stati superlativi guidandoci nei posti migliori per fotografare. Ho conosciuto delle belle persone e approfondito la mia piccola passione per la fotografia. Bello e interessante anche la possibilità di provare i filtri NISI, non posso che consigliare questo viaggio fotografico! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-09-25T15:23:38.000Z"
     },
     {
-      "rating": 5
+      "id": "141",
+      "title": "E' sempre un piacere!!",
+      "description": "E' il secondo WS a cui partecipo! Come per la prima volta, esperienza fantastica. Consiglio vivamente a tutti di provare un loro viaggio fotografico. Oltre a visitare posti stupendi, imparerete molto su tecniche di scatto e post produzione! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-09-26T00:59:07.000Z"
     },
     {
-      "rating": 5
+      "id": "222",
+      "title": "Fine settimana un po' sfortunato...",
+      "description": "E' il secondo WS con loro a cui partecipo. Purtroppo il tempo e lo sciopero dei treni non ci hanno aiutato, ma abbiamo seguito un interessante pomeriggio di spiegazioni, consigli ed informazioni che, personalmente, non mi ha annoiato per niente. Ho avuto la possibilità di provare i filtri, anche se il mare non era abbastanza \"collaborativo\". Spero di partecipare ad un nuovo WS più fortunato... :-)",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-11-25T15:22:54.000Z"
     },
     {
-      "rating": 5
+      "id": "223",
+      "title": "Un'esperienza a prova di sfortuna",
+      "description": "Nonostante sia stato un weekend in cui ogni possibile fattore esterno ha \"remato contro\" (dal meteo agli scioperi dei treni) sono molto contenta di aver partecipato. Gli istruttori hanno fatto comunque rendere al meglio il nostro tempo con spiegazioni e approfondimenti, oltre ad aver praticamente riorganizzato su due piedi una sessione di scatto che sembrava perduta: grazie a loro e alle loro spiegazioni ho portato a casa un sacco di spunti e concetti importanti per migliorare le mie foto, oltre ovviamente agli scatti veri e propri. \nSoprattutto visto che sono una neofita mi piace avere a che fare con gente come Marco e Alessandro, si vede che conoscono il proprio lavoro, hanno la passione per quello che fanno e sanno trasmetterla ai loro allievi.\n\nMi ritengo pienamente soddisfatta dell'esperienza, lo consiglio e spero di poter partecipare presto ad un altro dei loro viaggio fotografico.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-11-26T20:21:13.000Z"
     },
     {
-      "rating": 5
+      "id": "229",
+      "title": "Esperienza valida ed entusiasmante",
+      "description": "Marco e Alessandro: due temperamenti opposti ma uniti da una grandissima professionalità !\nWorkshop interessante da ogni punto di vista: tecnica, locations, disponibilità che invogliano a continuare l approfondimento con altri viaggio fotografico, anzi meglio...altri viaggi fotografici !\nNadia",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2020-02-11T10:18:38.000Z"
     },
     {
-      "rating": 5
+      "id": "247",
+      "title": "Esperienza alle 5 Terre pazzesca",
+      "description": "Siamo appena tornati dal viaggio fotografico 5 terre con Alessandro e Giorgia. Che dire:persone ben organizzate e dalle grandi competenze fotografiche. Ti seguono in tutto e per tutto, ringraziamo Giorgia per la pazienza avuta sulle 1000 domande fatte... E alessandro x la simpatia e per averci preso letteralmente x mano in questo percorso.. Grazie mille e a presto",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "published_at": "2022-03-25T09:29:32.000Z"
     },
     {
-      "rating": 5
+      "id": "248",
+      "title": "Ottima compagnia e Insegnamenti",
+      "description": "Un workshop fotografico in luoghi romantici in ottima compagnia e con i nostri accompagnatori Alessandro e Marco che hanno saputo creare un clima familiare ",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "published_at": "2022-03-25T10:16:22.000Z"
     }
   ],
-  "pictures": [
+  "whats_includeds": [
     {
-      "id": "17",
-      "title": "Manarola, Cinque Terre",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
     },
     {
-      "id": "18",
-      "title": "Vernazza",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
     },
     {
-      "id": "155",
-      "title": "Gruppo Weshooters alle cinque terre",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
     },
     {
-      "id": "156",
-      "title": "WeShooters a Vernazza",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
     },
     {
-      "id": "166",
-      "title": "WeShooters fotografano Vernazza",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Assicurazione COVID",
+      "description": "Rimborso totale dell'importo per annullamento dovuto alla malattia, alla quarantena, o all'introduzione di nuove restrizioni.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Assicurazione_COVID_026d57d8b3.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "9",
+      "number": 1,
+      "title": "Benvenuto alle Cinque Terre",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "9",
+          "title": "Briefing veloce e poi subito a scattare",
+          "description": "<ul><li>Ore 14:00 : Incontro alla struttura ricettiva dove lasceremo tutti i bagagli che non ci serviranno per le sessioni di scatto. Ci dirigeremo alla stazione di La Spezia Centrale, per prendere il treno verso Vernazza dove avverrà la prima sessione introduttiva di scatto, in cui ci conosceremo un po’ meglio e struttureremo il percorso di ogni partecipante in base al suo livello (dal neofita al più preparato); andando verso la Golden Hour, ci appresteremo a fotografarla con l’utilizzo di filtri ND e Graduati, introducendone le caratteristiche tecniche;</li><li>Ore 18:00 circa affronteremo la seconda sessione fotografica spostandoci in uno dei punti più alti della città per studiare lo scatto al tramonto e approfondire le tematiche introdotte nella prima sessione. Una volta finito il tramonto ci sposteremo verso la stazione per prendere il treno che va a Riomaggiore, dove sperimenteremo un po' di fotografia notturna cittadina per imparare a gestire le luci artificiali.&nbsp;</li><li>Ore 20:30 circa: Terminate le operazioni fotografiche ci muoveremo verso il ristorante per una ricca cena di prodotti locali</li><li>Ore 23: Ci ritireremo in albergo per riposarci in vista dell'alba seguente.</li></ul>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "number": 2,
+      "title": "Pronti per fotografare l'alba a Manarola",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "10",
+          "title": "Manarola alle prime luci dell'alba",
+          "description": "<ul><li>Ore 5:00: Ci troveremo prima dell'alba per prendere il treno verso Manarola. Arrivati li, inizieremo la sessione fotografica per sfruttare l'ora blu, prima del sorgere del sole, per poi goderci le splendide luci dell'alba che illuminano il borgo; Successivamente torneremo in stazione per prendere il treno per La Spezia Centrale, in modo tale da rientrare alla struttura per degustare una meritata colazione;</li><li>Ore 10:00: Check out dalla struttura;</li><li>Ore 10:30: faremo una sessione critica, vi mostreremo alcuni scatti per ragionare insieme su come si struttura un'immagine</li><li>Ore 13:00: Fine Tour Fotografico</li></ul>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Scogliere",
+      "description": "Viaggi fotografici tra le più alte scogliere",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Fotografia Notturna",
+      "description": "Impara a scattare in luce lunare o con le stelle",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "8",
+      "start": "2021-12-18",
+      "end": "2021-12-19",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 5,
+      "currency": "EUR",
+      "priceCompanion": 199,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "start": "2022-01-15",
+      "end": "2022-01-16",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 100,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "start": "2022-02-12",
+      "end": "2022-02-13",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 100,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "start": "2022-03-12",
+      "end": "2022-03-13",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 100,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "start": "2022-10-29",
+      "end": "2022-10-30",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 299,
+      "deposit": 100,
+      "balance": 199,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "start": "2022-11-26",
+      "end": "2022-11-27",
+      "status": "almostConfirmed",
+      "maxPax": 10,
+      "price": 299,
+      "deposit": 100,
+      "balance": 199,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "start": "2022-12-03",
+      "end": "2022-12-04",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 299,
+      "deposit": 100,
+      "balance": 199,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "83",
+      "start": "2023-01-28",
+      "end": "2023-01-29",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "95",
+      "start": "2023-10-21",
+      "end": "2023-10-22",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 120,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "96",
+      "start": "2023-11-25",
+      "end": "2023-11-26",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 120,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "123",
+      "start": "2024-01-13",
+      "end": "2024-01-14",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 379,
+      "deposit": 100,
+      "balance": 279,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "129",
+      "start": "2024-03-02",
+      "end": "2024-03-03",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 379,
+      "deposit": 100,
+      "balance": 279,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "148",
+      "start": "2024-05-18",
+      "end": "2024-05-19",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 100,
+      "balance": 299,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "153",
+      "start": "2024-11-16",
+      "end": "2024-11-17",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 379,
+      "deposit": 100,
+      "balance": 279,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "154",
+      "start": "2024-02-24",
+      "end": "2024-02-25",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 379,
+      "deposit": 100,
+      "balance": 279,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
     },
     {
       "id": "167",
-      "title": "WeShooters studiano Post produzione",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "start": "2024-12-14",
+      "end": "2024-12-15",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 379,
+      "deposit": 115,
+      "balance": 264,
+      "minPax": 7,
+      "currency": "EUR",
+      "priceCompanion": 80,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
     },
     {
-      "id": "271",
+      "id": "169",
+      "start": "2025-01-18",
+      "end": "2025-01-19",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 379,
+      "deposit": 115,
+      "balance": 264,
+      "minPax": 7,
+      "currency": "EUR",
+      "priceCompanion": 80,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "202",
+      "start": "2025-12-20",
+      "end": "2025-12-21",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 379,
+      "deposit": 115,
+      "balance": 264,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 130,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "230",
+      "start": "2026-01-17",
+      "end": "2026-01-18",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 379,
+      "deposit": 115,
+      "balance": 264,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 379,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "Assicurazione COVID e m/b",
+      "answer": "<p>Al momento della prenotazione si può scegliere di assicurare il viaggio fotografico con un sovra-prezzo che varia dalle 20,60€ fino ad un massimo di 60€ (il prezzo varia a seconda del tour fotografico e della fascia di età del richiedente). Questo tipo di assicurazione copre sia le spese medico/bagaglio, sia <span style=\"background-color:rgb(255,255,255);color:rgb(51,51,51);\">qualsiasi inconveniente causato da COVID-19. La nostra agenzia viaggi resta a disposizione per qualsiasi chiarimento in merito.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "Viaggio fotografico cinque terre, foto vernazza al tramonto",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Vernazza_al_Tramonto_42b41cd132.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Manarola, Cinque Terre",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/DSC_9588_a5dba58d60.jpg",
+      "alt": "Tramonto manarola cinque terre durante viaggio fotografico"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Vernazza",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Tramonto_sul_mare_a_Vernazza_4489c3715d.jpg",
+      "alt": "Tramonto sulla terrazza durante Viaggio fotografico a Vernazza, Cinque Terre"
+    },
+    {
+      "id": "2",
+      "type": "group",
+      "title": "Gruppo Weshooters alle cinque terre",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gruppo_weshooters_alle_cinque_terre_012a14c7a8.jpg",
+      "alt": "weshooters dal viaggio fotografico cinque terre"
+    },
+    {
+      "id": "3",
+      "type": "group",
+      "title": "WeShooters a Vernazza",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Gruppo_weshooters_a_vernazza_0e2b34fa94.jpg",
+      "alt": "Gruppo weshooters viaggio fotografico cinque terre"
+    },
+    {
+      "id": "4",
+      "type": "group",
+      "title": "WeShooters fotografano Vernazza",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_in_sessione_a_vernazza_ff6f4d2400.jpg",
+      "alt": "WeShooters tramonto vernazza viaggio fotografico cinque terre"
+    },
+    {
+      "id": "5",
+      "type": "group",
+      "title": "WeShooters studiano Post produzione",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_studiano_Post_produzione_982af01050.jpg",
+      "alt": "WeShooters Post produzione photoshop viaggio fotografico cinque terre"
+    },
+    {
+      "id": "6",
+      "type": "tour",
       "title": "Riomaggiore",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/riomaggiore_ora_blu_viaggio_fotografico_cinque_terre_ac4ef0962d.jpg",
+      "alt": "tour fotografico cinque terre workshop ora blu riomaggiore"
+    },
+    {
+      "id": "locpic-1-4",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Vernazza_di_Samuele_Bucci_2b301e9f38.jpg",
+      "alt": "viaggio fotografico cinque terre"
     }
   ]
 }

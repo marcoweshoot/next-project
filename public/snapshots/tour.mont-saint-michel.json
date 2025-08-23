@@ -1,139 +1,906 @@
 {
+  "id": "27",
+  "tour_id": "scopri-la-bretagna-e-mont-saint-michel",
   "slug": "mont-saint-michel",
   "title": "Viaggio Fotografico in Bretagna e Mont Saint-Michel:  tra fari e coste frastagliate",
-  "states": {
-    "slug": "francia"
-  },
+  "description": "<p>Un viaggio fotografico tra i paesaggi più iconici e selvaggi della Bretagna.<br>Scogliere che si tuffano nell’oceano, fari solitari, villaggi di pietra e l’inconfondibile profilo di Mont Saint-Michel all’orizzonte: questo viaggio fotografico ti porterà alla scoperta della Bretagna più autentica e fotogenica.<br>Accompagnato dal nostro team, esplorerai luoghi selezionati per offrire il massimo impatto visivo in ogni condizione di luce. Un’avventura pensata per chi ama la fotografia e vuole raccontare la forza di una terra antica, affacciata sull’Atlantico.</p><h2>Cosa fotograferemo – Fari, coste frastagliate e l’anima della Bretagna</h2><p>Dai paesaggi drammatici dell’entroterra alle magie della costa.<br>Il nostro itinerario fotografico toccherà alcune delle location più affascinanti della Bretagna: Mont Saint-Michel, ovviamente, ma anche scogliere spettacolari, fari tra le onde, spiagge deserte, villaggi bretoni senza tempo.<br>Ci muoveremo seguendo la luce: albe, tramonti e, se saremo fortunati, anche nebbie e cieli tempestosi, perfetti per creare immagini potenti ed evocative.</p><h2>Per chi è questo viaggio – Aperto a tutti, dal principiante al fotografo esperto</h2><p>C’è sempre qualcosa da imparare, quando si viaggia con lo sguardo giusto.<br>Che tu stia ancora prendendo confidenza con la tua macchina fotografica, o che tu voglia spingerti oltre nel tuo linguaggio visivo, questo viaggio fa per te. Il supporto sul campo sarà continuo, personalizzato, con consigli pratici e spunti compositivi in ogni location.</p><h2>Cosa imparerai durante il viaggio fotografico in Bretagna</h2><p>Questo viaggio fotografico è molto più di una semplice occasione per scattare: è un’esperienza formativa a cielo aperto.<br>Imparerai a leggere la luce naturale in condizioni diverse, a comporre immagini efficaci in scenari complessi come coste rocciose, cieli dinamici e architetture storiche. Approfondirai tecniche come la lunga esposizione, l’uso dei filtri ND e polarizzatori, il controllo della profondità di campo e la gestione del colore in fase di scatto.<br>In ogni location riceverai suggerimenti personalizzati, feedback sul campo e spunti per sviluppare un occhio fotografico più consapevole, che ti accompagnerà ben oltre la fine del viaggio.</p><h2>Come funziona – Logistica flessibile, pensata per la luce</h2><p>Un viaggio fotografico dove ogni spostamento ha un solo obiettivo: portarti nel posto giusto al momento giusto.<br>Dormiremo in punti strategici lungo il nostro itinerario per avere accesso rapido alle location all’alba o al tramonto. Le giornate saranno intense, ma mai frenetiche: la priorità sarà sempre la luce, la composizione, e la possibilità di fermarsi a osservare.</p><h2>Perché il viaggio fotografico in Bretagna è una terra perfetta per i fotografi</h2><p>Perché qui la natura ha carattere, la luce è imprevedibile, e ogni scorcio ha qualcosa da dire.<br>La Bretagna è una delle regioni più fotogeniche d’Europa. Il suo fascino ruvido, i colori mutevoli dell’oceano, le architetture semplici e potenti, la rendono un palcoscenico ideale per affinare il tuo sguardo fotografico.</p>",
+  "excerpt": "Scatta la magia della Bretagna in questa esperienza fotografica insieme ad un fotografo esperto.",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm), medio zoom (24mm-70mm) e tele (70-200mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri Fotografici ND (opzionale)</li><li>Filtro polarizzatore</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e caldo</li><li>Cappello</li><li>Impermeabile</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "bretagna"
+    "slug": "bretagna",
+    "locale": "it",
+    "name": "Bretagna"
   },
-  "sessions": [
+  "states": {
+    "name": "Francia",
+    "slug": "francia",
+    "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Bretagna e Mont Saint Michel 2025 | WeShoot",
+    "metaDescription": "Vivi un viaggio fotografico indimenticabile in Bretagna e Mont Saint-Michel: maree, luce epica e guida sul campo. Posti limitati, iscriviti ora con WeShoot.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-07-25",
-      "end": "2022-07-31"
+      "id": "167",
+      "title": "Vista dall'alto di Nantes",
+      "description": "La splendida città di Nantes nella regione nord-occidentale della Bretagna, ha una lunga storia come centro portuale e industriale. È in questa città che ha sede il castello medievale dove un tempo vivevano i Duchi di Bretagna.",
+      "slug": "vista-dall-alto-di-nantes",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "135",
+          "title": "Raduno, Briefing e Pernotto a Nantes",
+          "description": "<p>Ritrovo tra tutti i partecipanti a Nantes, per noleggiare l'auto e raggiungere la struttura che ci ospiterà entro le 23:00.<br>Piccolo briefing iniziale per pianificare l'itinerario di viaggio.</p>",
+          "locale": "it"
+        },
+        {
+          "id": "139",
+          "title": "Rientro a Nantes e fine del nostro viaggio fotografico",
+          "description": "<p>Al mattino presto faremo un’ultima sessione all’alba e poi partiremo per rientrare a Nantes. Lungo il tragitto avremo modo di fermarci ad ammirare altri bellissimi spot che questa regione offre.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Nantes_vista_dall_alto_ee1b53cfcc.jpg",
+          "alternativeText": "viaggio fotografico bretagna e mont saint michel"
+        }
+      ]
     },
     {
-      "start": "2022-09-10",
-      "end": "2022-09-17"
+      "id": "168",
+      "title": "Mont Saint Michel",
+      "description": "Mont Saint Michel è una tappa immancabile del viaggio fotografico in Bretagna. Una location incredibile che a seconda delle maree si trasforma in un isolotto o in una collina.",
+      "slug": "mont-saint-michel",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "136",
+          "title": "La baia che cambia con le maree",
+          "description": "<p>Partiremo subito dopo la colazione alla volta di Mont Saint Michel. Lasceremo i bagagli e dopo un briefing iniziale entreremo nel pieno del nostro viaggio fotografico. Scopriremo il paesaggio prima e dopo l’arrivo della marea e passeremo 2 giorni ad esplorare tutta la zona intorno all’isolotto. Visiteremo il monte e la sua abbazia che offrono spunti fotografici anche dall’alto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_Bretagna_e_Mont_Saint_Michel_3bb380f16c.jpg",
+          "alternativeText": "tramonto a mont saint michel viaggio fotografico bretagna"
+        }
+      ]
     },
     {
-      "start": "2023-08-31",
-      "end": "2023-09-07"
+      "id": "169",
+      "title": "Castello Meur",
+      "description": "Durante il tragitto avremo la possibilità di visitare e fotografare una piccola casa incastonata tra due enormi rocce frastagliate, che si trova a bordo del mare nel piccolo paese di Plougrescant.",
+      "slug": "castello-meur",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "137",
+          "title": "Alla ricerca dei Fari e dei piccoli Castelli",
+          "description": "<p>Subito dopo l’alba partiremo per proseguire il nostro viaggio che ci porterà da quelle che sono le attrazioni principali di questa regione francese: i fari.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/castello_meur_viaggio_fotografico_Bretagna_8bedcb3d0b.jpg",
+          "alternativeText": "castelli e fari dal viaggio fotografico bretagna"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Bretagna_Castel_Meur_0c6740fac6.jpg",
+          "alternativeText": "viaggio fotografico bretagna e mont saint michel"
+        }
+      ]
     },
     {
-      "start": "2024-10-17",
-      "end": "2024-10-24"
+      "id": "170",
+      "title": "Faro Ploumanac’h",
+      "description": "E’ l’attrazione principale di tutta la costa del Granito Rosa ed è una torre piramidale di circa 15 metri. Avremo modo di studiare questa location e catturarlo nei migliori momenti della giornata.",
+      "slug": "faro-ploumanac-h",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "137",
+          "title": "Alla ricerca dei Fari e dei piccoli Castelli",
+          "description": "<p>Subito dopo l’alba partiremo per proseguire il nostro viaggio che ci porterà da quelle che sono le attrazioni principali di questa regione francese: i fari.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_Faro_Ploumanac_h_71143dfc9d.jpg",
+          "alternativeText": "Faro Ploumanac’h viaggio fotografico bretagna"
+        },
+        {
+          "id": "locpic-3-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alba_Faro_di_Ploumanac_h_aa8c4c417e.jpg",
+          "alternativeText": "viaggio fotografico bretagna e mont saint michel"
+        }
+      ]
     },
     {
-      "start": "2025-10-05",
-      "end": "2025-10-11"
+      "id": "171",
+      "title": "Faro Kermorvan",
+      "description": "E’ considerato il faro più occidentale di Francia e sarà l’attrazione principale di queste giornate. Dalla sua caratteristica forma quadrata, costruito su una roccia di granito, è collegato alla terraferma da un lungo ponte di granito.",
+      "slug": "faro-kermorvan",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "138",
+          "title": "Fari di Kermorvan, Pontusval, Minou e Saint Mathieu",
+          "description": "<p>Dopo la sessione dell’alba a Mont Saint Michel, faremo colazione e partiremo per proseguire il nostro viaggio. Faremo tappa al faro Pontusval e poi proseguiremo il nostro viaggio per arrivare al faro Kermorvan dove faremo la sessione al tramonto.<br><br>L'alba del 6 Giorno faremo la sessione all’alba al faro Petit Minou. Torneremo in hotel per riposarci un po’. Nel pomeriggio visiteremo il piccolo villaggio di Le Conquet e poi ci sposteremo al point Saint Mathieu dove faremo la sessione al tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/faro_di_kermorvan_viaggio_fotografico_bretagna_30a6b12e19.jpg",
+          "alternativeText": "tramonto faro bretagna"
+        }
+      ]
+    },
+    {
+      "id": "172",
+      "title": "Faro di Pontusval",
+      "description": "Costruito nella seconda metà del XIX secolo è classificato Monumento Storico. Alto più di quattordici metri e sarà una location molto suggestiva al tramonto. E’ uno dei fari più fotografati d'Europa, affascina i visitatori con il suo ambiente naturale unico circondato da spiagge sabbiose e rocce.",
+      "slug": "faro-di-pontusval",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "138",
+          "title": "Fari di Kermorvan, Pontusval, Minou e Saint Mathieu",
+          "description": "<p>Dopo la sessione dell’alba a Mont Saint Michel, faremo colazione e partiremo per proseguire il nostro viaggio. Faremo tappa al faro Pontusval e poi proseguiremo il nostro viaggio per arrivare al faro Kermorvan dove faremo la sessione al tramonto.<br><br>L'alba del 6 Giorno faremo la sessione all’alba al faro Petit Minou. Torneremo in hotel per riposarci un po’. Nel pomeriggio visiteremo il piccolo villaggio di Le Conquet e poi ci sposteremo al point Saint Mathieu dove faremo la sessione al tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/faro_di_pontusval_viaggio_fotografico_bretagna_51378218d7.jpg",
+          "alternativeText": "faro pontusval ora blu viaggio fotografico bretagna"
+        },
+        {
+          "id": "locpic-5-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alba_al_Faro_di_Pontusval_bee6fa2e5f.jpg",
+          "alternativeText": "viaggio fotografico bretagna e mont saint michel"
+        }
+      ]
+    },
+    {
+      "id": "173",
+      "title": "Faro di Petit Minou",
+      "description": "il faro di Petit Minou si trova sulla costa settentrionale, non lontano da Brest, su una roccia a picco sul mare, di fronte all'omonimo forte, ed è collegato alla terraferma da un ponte di pietra",
+      "slug": "faro-di-petit-minou",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "138",
+          "title": "Fari di Kermorvan, Pontusval, Minou e Saint Mathieu",
+          "description": "<p>Dopo la sessione dell’alba a Mont Saint Michel, faremo colazione e partiremo per proseguire il nostro viaggio. Faremo tappa al faro Pontusval e poi proseguiremo il nostro viaggio per arrivare al faro Kermorvan dove faremo la sessione al tramonto.<br><br>L'alba del 6 Giorno faremo la sessione all’alba al faro Petit Minou. Torneremo in hotel per riposarci un po’. Nel pomeriggio visiteremo il piccolo villaggio di Le Conquet e poi ci sposteremo al point Saint Mathieu dove faremo la sessione al tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/faro_di_Petit_Minou_viaggio_fotografico_bretagna_9de5e5c1ad.jpg",
+          "alternativeText": "tramonto al faro di Petit Minou "
+        },
+        {
+          "id": "locpic-6-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alba_Faro_di_Petit_Minou_6b8d199397.jpg",
+          "alternativeText": "viaggio fotografico bretagna e mont saint michel"
+        }
+      ]
+    },
+    {
+      "id": "174",
+      "title": "Faro Pointe Saint Mathieu",
+      "description": "Scogliere ripide spazzate dai venti e dal mare dominate da un imponente faro a guardia delle rovine di un’antica abbazia. Il faro di Pointe Saint Mathieu è un concentrato di Bretagna. A due passi da lui un porto e un piccolo villaggio che rendono questa zona realmente autentica. ",
+      "slug": "faro-pointe-saint-mathieu",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [
+        {
+          "id": "138",
+          "title": "Fari di Kermorvan, Pontusval, Minou e Saint Mathieu",
+          "description": "<p>Dopo la sessione dell’alba a Mont Saint Michel, faremo colazione e partiremo per proseguire il nostro viaggio. Faremo tappa al faro Pontusval e poi proseguiremo il nostro viaggio per arrivare al faro Kermorvan dove faremo la sessione al tramonto.<br><br>L'alba del 6 Giorno faremo la sessione all’alba al faro Petit Minou. Torneremo in hotel per riposarci un po’. Nel pomeriggio visiteremo il piccolo villaggio di Le Conquet e poi ci sposteremo al point Saint Mathieu dove faremo la sessione al tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Faro_Pointe_Saint_Mathieu_viaggio_fotografico_bretagna_5dabd12ed6.jpg",
+          "alternativeText": "lunga esposizione al faro Pointe Saint Mathieu"
+        },
+        {
+          "id": "locpic-7-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Faro_Pointe_Saint_Mathieu_ec14487c12.jpg",
+          "alternativeText": "viaggio fotografico bretagna e mont saint michel"
+        }
+      ]
+    },
+    {
+      "id": "175",
+      "title": "Castello dei Duchi di Bretagna",
+      "description": "Il castello dei Duchi di Bretagna è un castello in stile medievale costruito tra il XIII e il XVI secolo nella città francese di Nantes, capoluogo della Loira Atlantica.",
+      "slug": "castello-dei-duchi-di-bretagna",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-8-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Castello_dei_Duchi_di_Bretagna_viaggio_fotografico_bretagna_9cde37bdd2.jpg",
+          "alternativeText": "panoramica Castle of the Dukes of Brittany"
+        }
+      ]
+    },
+    {
+      "id": "199",
+      "title": "Rennes",
+      "description": "Rennes è il capoluogo della Bretagna. La sua caratteristica principale sono le case medievali in legno e muratura.",
+      "slug": "rennes",
+      "locale": "it",
+      "state": {
+        "name": "Francia",
+        "slug": "francia",
+        "locale": "it",
+        "description": "<p>La Francia offre degli scenari incredibili da fotografare, come ad esempio i campi di lavanda che durante il periodo della fioritura regalano emozioni e colori a non finire. Partecipa ad un viaggio fotografico per scoprire questa meravigliosa terra.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-9-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/rennes_viaggio_fotografico_3d5967f32a.jpg",
+          "alternativeText": "tramonto città rennes francia bretagna"
+        },
+        {
+          "id": "locpic-9-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/case_medievali_a_rennes_d09877c4e0.jpg",
+          "alternativeText": "case medievali rennes bretagna viaggio fotografico"
+        }
+      ]
     }
   ],
   "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "151",
+      "number": 1,
+      "title": "Benvenuti in Normandia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "135",
+          "title": "Raduno, Briefing e Pernotto a Nantes",
+          "description": "<p>Ritrovo tra tutti i partecipanti a Nantes, per noleggiare l'auto e raggiungere la struttura che ci ospiterà entro le 23:00.<br>Piccolo briefing iniziale per pianificare l'itinerario di viaggio.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "152",
+      "number": 2,
+      "title": "Esploriamo la zona di Mont Saint Michel",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "136",
+          "title": "La baia che cambia con le maree",
+          "description": "<p>Partiremo subito dopo la colazione alla volta di Mont Saint Michel. Lasceremo i bagagli e dopo un briefing iniziale entreremo nel pieno del nostro viaggio fotografico. Scopriremo il paesaggio prima e dopo l’arrivo della marea e passeremo 2 giorni ad esplorare tutta la zona intorno all’isolotto. Visiteremo il monte e la sua abbazia che offrono spunti fotografici anche dall’alto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "153",
+      "number": 3,
+      "title": "Esploriamo la zona di Mont Saint Michel",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "154",
+      "number": 4,
+      "title": "Castel Meur e il faro Ploumanac’h",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "137",
+          "title": "Alla ricerca dei Fari e dei piccoli Castelli",
+          "description": "<p>Subito dopo l’alba partiremo per proseguire il nostro viaggio che ci porterà da quelle che sono le attrazioni principali di questa regione francese: i fari.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "155",
+      "number": 5,
+      "title": "Ancora tra splendide coste e fari a picco",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "138",
+          "title": "Fari di Kermorvan, Pontusval, Minou e Saint Mathieu",
+          "description": "<p>Dopo la sessione dell’alba a Mont Saint Michel, faremo colazione e partiremo per proseguire il nostro viaggio. Faremo tappa al faro Pontusval e poi proseguiremo il nostro viaggio per arrivare al faro Kermorvan dove faremo la sessione al tramonto.<br><br>L'alba del 6 Giorno faremo la sessione all’alba al faro Petit Minou. Torneremo in hotel per riposarci un po’. Nel pomeriggio visiteremo il piccolo villaggio di Le Conquet e poi ci sposteremo al point Saint Mathieu dove faremo la sessione al tramonto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "156",
+      "number": 6,
+      "title": "Ancora tra splendide coste e fari a picco",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "157",
+      "number": 7,
+      "title": "Ultima alba e rientro a Nantes",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "139",
+          "title": "Rientro a Nantes e fine del nostro viaggio fotografico",
+          "description": "<p>Al mattino presto faremo un’ultima sessione all’alba e poi partiremo per rientrare a Nantes. Lungo il tragitto avremo modo di fermarci ad ammirare altri bellissimi spot che questa regione offre.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "168",
+      "number": 8,
+      "title": "Arrivederci Bretagna e Normandia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "152",
+          "title": "Saluti e foto di gruppo finali, transfer in aeroporto",
+          "description": "<p>Dopo una bella colazione e la classica foto di gruppo, ci recheremo in aeroporto per il rientro a casa. Saluti e fine del nostro viaggio.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Esplorativo",
+      "description": "Andremo insieme alla scoperta di nuove location.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Scogliere",
+      "description": "Viaggi fotografici tra le più alte scogliere",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "66",
+      "start": "2022-07-25",
+      "end": "2022-07-31",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 1499,
+      "deposit": 100,
+      "balance": 1399,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1499,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "71",
+      "start": "2022-09-10",
+      "end": "2022-09-17",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 1499,
+      "deposit": 100,
+      "balance": 1399,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1499,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "78",
+      "start": "2023-08-31",
+      "end": "2023-09-07",
+      "status": "almostConfirmed",
+      "maxPax": 8,
+      "price": 1699,
+      "deposit": 100,
+      "balance": 1599,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1399,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "130",
+      "start": "2024-10-17",
+      "end": "2024-10-24",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2230,
+      "deposit": 670,
+      "balance": 1560,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2230,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "210",
+      "start": "2025-10-05",
+      "end": "2025-10-11",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 1799,
+      "deposit": 539,
+      "balance": 1260,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1799,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/andreacurziph/",
+          "firstName": "Andrea",
+          "lastName": "Curzi",
+          "username": "andreacurzi",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Andre_Curzi_876ef6c363.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Perché scegliere un Viaggio fotografico organizzato?",
+      "answer": "<p>I viaggi fotografici hanno un solo obiettivo: viaggiare per fotografare le meraviglie della natura. Ma perchè dovresti scegliere un viaggio fotografico organizzato? Effettivamente potresti anche partire in solitaria alla scoperta del mondo, ma quanto impiegheresti ogni volta per trovare la giusta location, la stagione, il meteo, l'orario, come raggiungerla, le strutture da prenotare, le assicurazioni, i noleggi..? Per ogni viaggio dovresti dedicarci almeno un mese! Purtroppo sappiamo benissimo che al giorno d'oggi abbiamo dei ritmi molto serrati, tra lavoro, famiglia e amici per questo motivo ritagliarsi del tempo da dedicare alla nostra passione diventa difficile. Scegliendo un viaggio fotografico invece avrai la possibilità di liberare la tua mente da tutto, non dovrai preoccuparti di nulla perchè sarà già tutto organizzato e gestito da persone esperte in ogni minimo dettaglio. Tu dovrai solo pensare a preparare lo zaino e scattare più fotografie possibili.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "tramonto, fari, scogliere Viaggio fotografico bretagna e mont saint michel",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_bretagna_e_mont_saint_michel_b6ff2978ff.jpg"
+  },
   "pictures": [
     {
-      "id": "258",
+      "id": "0",
+      "type": "tour",
       "title": "Nantes vista dall'alto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Nantes_vista_dall_alto_ee1b53cfcc.jpg",
+      "alt": "viaggio fotografico bretagna e mont saint michel"
     },
     {
-      "id": "259",
+      "id": "1",
+      "type": "tour",
       "title": "Mont Saint Michel",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_Bretagna_e_Mont_Saint_Michel_3bb380f16c.jpg",
+      "alt": "tramonto a mont saint michel viaggio fotografico bretagna"
     },
     {
-      "id": "260",
+      "id": "2",
+      "type": "tour",
       "title": "Castello Meur",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/castello_meur_viaggio_fotografico_Bretagna_8bedcb3d0b.jpg",
+      "alt": "castelli e fari dal viaggio fotografico bretagna"
     },
     {
-      "id": "261",
+      "id": "3",
+      "type": "tour",
       "title": "Faro Ploumanac’h",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_Faro_Ploumanac_h_71143dfc9d.jpg",
+      "alt": "Faro Ploumanac’h viaggio fotografico bretagna"
     },
     {
-      "id": "262",
+      "id": "4",
+      "type": "tour",
       "title": "Faro Kermorvan",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/faro_di_kermorvan_viaggio_fotografico_bretagna_30a6b12e19.jpg",
+      "alt": "tramonto faro bretagna"
     },
     {
-      "id": "263",
+      "id": "5",
+      "type": "tour",
       "title": "Faro di Pontusval",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/faro_di_pontusval_viaggio_fotografico_bretagna_51378218d7.jpg",
+      "alt": "faro pontusval ora blu viaggio fotografico bretagna"
     },
     {
-      "id": "264",
+      "id": "6",
+      "type": "tour",
       "title": "Faro di Petit Minou",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/faro_di_Petit_Minou_viaggio_fotografico_bretagna_9de5e5c1ad.jpg",
+      "alt": "tramonto al faro di Petit Minou "
     },
     {
-      "id": "265",
+      "id": "7",
+      "type": "tour",
       "title": "Faro Pointe Saint Mathieu",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Faro_Pointe_Saint_Mathieu_viaggio_fotografico_bretagna_5dabd12ed6.jpg",
+      "alt": "lunga esposizione al faro Pointe Saint Mathieu"
     },
     {
-      "id": "299",
+      "id": "8",
+      "type": "tour",
       "title": "Rennes",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/rennes_viaggio_fotografico_3d5967f32a.jpg",
+      "alt": "tramonto città rennes francia bretagna"
     },
     {
-      "id": "417",
+      "id": "9",
+      "type": "tour",
       "title": "Castello Meur",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Bretagna_Castel_Meur_0c6740fac6.jpg",
+      "alt": "viaggio fotografico bretagna e mont saint michel"
     },
     {
-      "id": "418",
+      "id": "10",
+      "type": "tour",
       "title": "Alba al Faro Ploumanac’h",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alba_Faro_di_Ploumanac_h_aa8c4c417e.jpg",
+      "alt": "viaggio fotografico bretagna e mont saint michel"
     },
     {
-      "id": "419",
+      "id": "11",
+      "type": "tour",
       "title": "Pointe Saint Mathieu",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Faro_Pointe_Saint_Mathieu_ec14487c12.jpg",
+      "alt": "viaggio fotografico bretagna e mont saint michel"
     },
     {
-      "id": "420",
+      "id": "12",
+      "type": "tour",
       "title": "Petit Minou",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alba_Faro_di_Petit_Minou_6b8d199397.jpg",
+      "alt": "viaggio fotografico bretagna e mont saint michel"
+    },
+    {
+      "id": "locpic-5-1",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alba_al_Faro_di_Pontusval_bee6fa2e5f.jpg",
+      "alt": "viaggio fotografico bretagna e mont saint michel"
+    },
+    {
+      "id": "locpic-8-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Castello_dei_Duchi_di_Bretagna_viaggio_fotografico_bretagna_9cde37bdd2.jpg",
+      "alt": "panoramica Castle of the Dukes of Brittany"
+    },
+    {
+      "id": "locpic-9-1",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/case_medievali_a_rennes_d09877c4e0.jpg",
+      "alt": "case medievali rennes bretagna viaggio fotografico"
     }
   ]
 }

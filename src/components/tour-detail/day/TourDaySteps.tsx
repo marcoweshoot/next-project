@@ -4,17 +4,19 @@ import React from 'react';
 import { Camera, MapPin } from 'lucide-react';
 import TourDayLocation from './TourDayLocation';
 
-interface DayStep {
-  id: string;
-  title: string;
-  description: string;
-  locations?: DayLocation[];
+function slugify(input: string | number | undefined | null) {
+  return String(input ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '') || 'item';
 }
 
 interface DayLocation {
-  id: string;
+  id?: string | number | null;
   title: string;
-  slug: string;
+  slug?: string;
   description?: string;
   pictures?: Array<{
     id: string;
@@ -22,6 +24,13 @@ interface DayLocation {
     url: string;
     alternativeText: string;
   }>;
+}
+
+interface DayStep {
+  id?: string | number | null;
+  title: string;
+  description?: string;
+  locations?: DayLocation[];
 }
 
 interface TourDayStepsProps {
@@ -32,85 +41,105 @@ interface TourDayStepsProps {
   ) => void;
   /** livello base dell’intestazione per lo step (default: 3 => h3) */
   baseLevel?: 2 | 3 | 4 | 5 | 6;
+  /** ✅ nuovo: usa queste location se lo step non ne ha */
+  fallbackLocations?: DayLocation[];
 }
 
-const TourDaySteps: React.FC<TourDayStepsProps> = ({ steps, onOpenLightbox, baseLevel = 3 }) => {
+const TourDaySteps: React.FC<TourDayStepsProps> = ({
+  steps,
+  onOpenLightbox,
+  baseLevel = 3,
+  fallbackLocations = [],
+}) => {
   if (!steps || steps.length === 0) return null;
 
-  // heading dinamici: Step -> H, sottotitolo -> Hsub (H+1)
   const H = (`h${baseLevel}` as keyof JSX.IntrinsicElements);
   const Hsub = (`h${Math.min(6, baseLevel + 1)}` as keyof JSX.IntrinsicElements);
 
   return (
     <section className="space-y-6">
-      {steps.map((step, index) => (
-        <article
-          key={step.id}
-          className="relative overflow-hidden rounded-2xl border border-zinc-200/70 bg-white shadow-[0_6px_22px_rgba(0,0,0,0.06)] p-6 md:p-8"
-          aria-labelledby={`step-title-${step.id}`}
-        >
-          {/* Accento sinistro decorativo */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 left-0 w-[3px] bg-gradient-to-b from-primary to-orange-400"
-          />
+      {steps.map((step, index) => {
+        const stepKey = `${slugify(step.id ?? step.title)}-${index}`;
+        const headingId = `step-title-${stepKey}`;
 
-          {/* Chip in testa alla card */}
-          <div className="mb-3">
-            {index === 0 ? (
-              <span className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-gray-900">
-                <Camera className="h-4 w-4" aria-hidden="true" />
-                Programma fotografico del giorno
-              </span>
-            ) : (
-              <span className="inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-xs font-semibold text-zinc-700 ring-1 ring-inset ring-zinc-200">
-                Step {index + 1}
-              </span>
-            )}
-          </div>
+        // ✅ se lo step non ha locations, mostriamo le tour.locations
+        const locationsToShow =
+          (step.locations && step.locations.length > 0) ? step.locations : (fallbackLocations || []);
 
-          {/* Titolo dello step: H3 di default */}
-          {React.createElement(
-            H,
-            { id: `step-title-${step.id}`, className: 'text-2xl font-semibold tracking-tight text-zinc-900' },
-            step.title
-          )}
-
-          {step.description && (
+        return (
+          <article
+            key={stepKey}
+            className="relative overflow-hidden rounded-2xl border border-zinc-200/70 bg-white shadow-[0_6px_22px_rgba(0,0,0,0.06)] p-6 md:p-8"
+            aria-labelledby={headingId}
+          >
+            {/* Accento sinistro decorativo */}
             <div
-              className="prose prose-zinc max-w-none text-zinc-700 mt-3"
-              // Attenzione: se nel rich text ci sono <h1..h6> possono alterare l'ordine titoli
-              // Meglio limitarli in CMS o normalizzare lato codice.
-              dangerouslySetInnerHTML={{ __html: step.description }}
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 left-0 w-[3px] bg-gradient-to-b from-primary to-orange-400"
             />
-          )}
 
-          {step.locations?.length ? (
-            <section className="mt-6" aria-labelledby={`loc-title-${step.id}`}>
-              <div className="mb-3 flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-primary" aria-hidden="true" />
-                {React.createElement(
-                  Hsub,
-                  { id: `loc-title-${step.id}`, className: 'text-base font-semibold text-zinc-900' },
-                  'Location fotografiche'
-                )}
-                <div className="ml-2 h-px flex-1 bg-zinc-200" aria-hidden="true" />
-              </div>
+            {/* Chip in testa alla card */}
+            <div className="mb-3">
+              {index === 0 ? (
+                <span className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-gray-900">
+                  <Camera className="h-4 w-4" aria-hidden="true" />
+                  Programma fotografico del giorno
+                </span>
+              ) : (
+                <span className="inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-xs font-semibold text-zinc-700 ring-1 ring-inset ring-zinc-200">
+                  Step {index + 1}
+                </span>
+              )}
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {step.locations.map((location) => (
-                  <TourDayLocation
-                    key={location.id}
-                    location={location}
-                    onOpenLightbox={onOpenLightbox}
-                    headingLevel={Math.min(6, baseLevel + 2) as 3 | 4 | 5 | 6} // es: step=h3 → loc=h5
-                  />
-                ))}
-              </div>
-            </section>
-          ) : null}
-        </article>
-      ))}
+            {/* Titolo dello step */}
+            {React.createElement(
+              H,
+              { id: headingId, className: 'text-2xl font-semibold tracking-tight text-zinc-900' },
+              step.title
+            )}
+
+            {step.description && (
+              <div
+                className="prose prose-zinc max-w-none text-zinc-700 mt-3"
+                dangerouslySetInnerHTML={{ __html: step.description }}
+              />
+            )}
+
+            {locationsToShow.length > 0 && (
+              <section className="mt-6" aria-labelledby={`loc-title-${stepKey}`}>
+                <div className="mb-3 flex items-center gap-2">
+                  <MapPin className="h-5 w-5 text-primary" aria-hidden="true" />
+                  {React.createElement(
+                    Hsub,
+                    { id: `loc-title-${stepKey}`, className: 'text-base font-semibold text-zinc-900' },
+                    'Location fotografiche'
+                  )}
+                  <div className="ml-2 h-px flex-1 bg-zinc-200" aria-hidden="true" />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {locationsToShow.map((location, li) => {
+                    const locKey = `${slugify(location.id ?? location.title)}-${li}`;
+                    return (
+                      <TourDayLocation
+                        key={locKey}
+                        location={{
+                          ...location,
+                          id: String(location.id || location.title || `location-${li}`),
+                          slug: location.slug || slugify(location.title),
+                        }}
+                        onOpenLightbox={onOpenLightbox}
+                        headingLevel={Math.min(6, baseLevel + 2) as 3 | 4 | 5 | 6}
+                      />
+                    );
+                  })}
+                </div>
+              </section>
+            )}
+          </article>
+        );
+      })}
     </section>
   );
 };

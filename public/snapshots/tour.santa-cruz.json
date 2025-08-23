@@ -1,123 +1,854 @@
 {
+  "id": "16",
+  "tour_id": "scopri-madeira-tra-foreste-e-scogliere",
   "slug": "santa-cruz",
   "title": "Madeira: scopriamo l’Isola tra selvagge foreste e scogliere",
-  "states": {
-    "slug": "portogallo"
-  },
+  "description": "<p>Il viaggio fotografico a Madeira ti farà scoprire un meraviglioso arcipelago di origine vulcanica, dove il clima è sempre mite e i paesaggi sono mozzafiato, le immense scogliere, i faraglioni, le foreste immerse nella nebbia e i giganti massicci rocciosi della caldera avvolti nelle nuvole creano atmosfere incredibilmente suggestive. In questo viaggio fotografico sarai accompagnato da fotografi professionisti che ti faranno visitare e fotografare i posti più incantati di quest’isola e ti sveleranno i segreti per scattare fotografie straordinarie.&nbsp;<br>Il percorso prevede alcuni trekking di media difficoltà (generalmente intorno ad un’ora / un’ora e mezza di cammino con circa 300 m di dislivello massimo) che ci consentiranno di raggiungere locations mozzafiato per scattare fotografie incredibili; qui di seguito trovi tutte le informazioni del viaggio.</p>",
+  "excerpt": "Unisciti al viaggio fotografico a Madeira per scoprire le migliori locations dove scattare la via lattea, gli alberi immersi nella nebbia e le scogliere a picco sul mare.",
+  "difficulty": "easy",
+  "experience_level": "Intenso",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "madeira"
+    "slug": "madeira",
+    "locale": "it",
+    "name": "Madeira"
   },
-  "sessions": [
+  "states": {
+    "name": "Portogallo",
+    "slug": "portogallo",
+    "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Madeira 2025 | WeShoot",
+    "metaDescription": "Vieni a fotografare le foreste incantate e le scogliere incredibili in questo viaggio fotografico sulla bellissima isola di Madeira.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2022-04-03",
-      "end": "2022-04-10"
+      "id": "40",
+      "title": "Santa Cruz",
+      "description": "Comune situato sulla costa orientale dell'isola di Madeira.",
+      "slug": "santa-cruz",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "37",
+          "title": "Presentazioni e transfer verso la struttura",
+          "description": "Appuntamento all’aeroporto di Funchal, a Santa Cruz, meeting con tutti i partecipanti e spostamento verso la struttura ricettiva. Faremo una cassa comune per acquistare beni di prima necessità come pasta, sale, olio, pane ecc. Mentre ognuno provvederà ad acquistare autonomamente le provviste per eventuali cene fuori dalla struttura.",
+          "locale": "it"
+        },
+        {
+          "id": "56",
+          "title": "Presentazioni, check-in e briefing iniziale",
+          "description": "<p>Appuntamento all’aeroporto di Funchal, a Santa Cruz, meeting con tutti i partecipanti e spostamento verso la struttura ricettiva.&nbsp;<br>Briefing iniziale sul programma di queste giornate e compatibilmente con gli orari di arrivo dei voli cominceremo il nostro viaggio fotografico a Madeira con un piccolo giro della zona e per fotografare il tramonto.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Santa_Cruz_afdf6ba13b.jpg",
+          "alternativeText": "Viaggio Fotografico Madeira"
+        }
+      ]
     },
     {
-      "start": "2022-09-17",
-      "end": "2022-09-24"
+      "id": "41",
+      "title": "Fanal Pond",
+      "description": "Fanal Pond è un altopiano famoso per via delle nebbie fitte che si formano spesso creando atmosfere incredibili, grazie anche alle foreste e agli alberi particolari.",
+      "slug": "fanal-pond",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "58",
+          "title": "La foresta di Fanal Pond immersa nella nebbia",
+          "description": "<p>La giornata sarà dedicata ai maestosi alberi di Fanal Pond. Cercheremo di individuare il momento in cui ci potrà essere anche la nebbia in modo da immortalarli nel loro fascino misterioso.<br>Dedicheremo due giornate a questa foresta per avere più tempo e possibilità di fotografare nelle condizioni migliori.</p><p>Al termine del terzo giorno di viaggio, una volta ripresa la foresta, ci sposteremo sulla parte alta dell’isola per la sessione notturna della via lattea tra gli alberi color madreperla di Pico Ruivo (prevista un'ora di cammino).</p><p>La sera del quarto giorno, invece torneremo in struttura per prepararci per la sessione di scatto l'alba dell’indomani.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fanal_pond_fc73798e65.jpg",
+          "alternativeText": "fanal pond viaggio fotografico madeira"
+        },
+        {
+          "id": "locpic-1-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Foresta_di_Fanal_Pond_826b9ce883.jpg",
+          "alternativeText": "albero nella nebbia viaggio fotografico madeira"
+        },
+        {
+          "id": "locpic-1-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fanal_Pond_1cf21e3328.jpg",
+          "alternativeText": "Viaggio Fotografico Madeira Portogallo"
+        },
+        {
+          "id": "locpic-1-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fanal_Forest_di_Samuele_Bucci_664ec1318e.jpg",
+          "alternativeText": "viaggio fotorgafico madeira"
+        }
+      ]
     },
     {
-      "start": "2023-10-21",
-      "end": "2023-10-28"
+      "id": "42",
+      "title": "Parco Naturale di Madeira",
+      "description": "Il Parco Naturale di Madeira è una riserva biologica creata appositamente per salvaguardare il patrimonio naturale del paese.",
+      "slug": "parco-naturale-di-madeira",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "59",
+          "title": "Alla scoperta del parco nazionale di Madeira",
+          "description": "<p>Questa sarà l’ultima giornata dedicata alla ricerca del cielo notturno migliore, continueremo le attività di trekking verso il Madeira National Park, esplorando zone nuove per poi scattare la notte (non fino a tardi che il giorno dopo avremo il cambio struttura).</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_Madeira_parco_naturale_d37af5c38b.jpg",
+          "alternativeText": "parco naturale di madeira"
+        }
+      ]
     },
     {
-      "start": "2024-10-19",
-      "end": "2024-10-26"
+      "id": "43",
+      "title": "Canical",
+      "description": "Con il suo terreno roccioso ed arido, Canical offre ai fotografi uno dei più bei paesaggi di Madeira.",
+      "slug": "canical",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_Madeira_8_3e61950f96.jpg",
+          "alternativeText": "canical scogliere viaggio fotografico madeira"
+        }
+      ]
     },
     {
-      "start": "2026-04-11",
-      "end": "2026-04-18"
+      "id": "44",
+      "title": "Ponta do Rosto",
+      "description": "Ponta do Rosto è un bellissimo punto panoramico da cui si possono ammirare la costa frastagliata e le formazioni rocciose al largo.",
+      "slug": "ponta-do-rosto",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Ponta_do_Rosto_9ab74ff8fc.jpg",
+          "alternativeText": "Ponta do Rosto alba durante viaggio fotografico"
+        }
+      ]
     },
     {
-      "start": "2024-08-18",
-      "end": "2024-08-25"
+      "id": "45",
+      "title": "Ponta de Sao Lourenco",
+      "description": "Ponta de Sao Lourenco è il punto più orientale della costa di Madeira, qui incontreremo una delle aree più incontaminate e selvagge dell'isola.",
+      "slug": "ponta-de-sao-lourenco",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "57",
+          "title": "La prima alba verso le scogliere di Ponta de São Lourenço",
+          "description": "<p>Sveglia presto per raggiungere la location che scatteremo all’alba. Da qui decideremo in base al meteo ed alle condizioni del gruppo il punto di ripresa ottimale da cui scattare questo istmo di terra &nbsp;che si estende frastagliato con scogliere vertiginose verso l’oceano atlantico.<br>Torneremo a riposare in struttura, faremo il pranzo, prepareremo i panini per la cena e ci muoveremo verso lo spot per il tramonto e per la sessione notturna della via lattea.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_Madeira_4_13c4008546.jpg",
+          "alternativeText": "tramonto panorama viaggio fotografico Madeira"
+        }
+      ]
     },
     {
-      "start": "2025-04-26",
-      "end": "2025-05-03"
+      "id": "176",
+      "title": "Pico do Areiro",
+      "description": "l Pico do Arieiro è una montagna di 1.818 metri dell'isola portoghese di Madera. È la terza vetta più elevata dell'isola, dopo il Pico Ruivo e il Pico das Torres. Da qui potrai ammirare uno dei paesaggi più suggestivi di questo paese, tra vallate e mare di nuvole.",
+      "slug": "pico-do-areiro",
+      "locale": "it",
+      "state": {
+        "name": "Portogallo",
+        "slug": "portogallo",
+        "locale": "it",
+        "description": "<p>Viaggi fotografici all'insegna dell'avventura tra scogliere e spiagge che si affacciano sull'Oceano Atlantico. Il Portogallo ti saprà stupire con le sue luci incredibili dell'alba e del tramonto tra questi scenari mozzafiato.</p>"
+      },
+      "steps": [
+        {
+          "id": "62",
+          "title": "Sessione critica sugli scatti fatti ed ultimo tramonto a Pico do Areiro",
+          "description": "<p>Faremo una sessione di critica degli scatti, una valutazione del lavoro svolto dai partecipanti con analisi e considerazioni da parte di tutto il gruppo e dell’insegnante, prima di prepararci per l'ultima sessione di scatto di fronte ad un bellissimo tramonto a Pico do Areiro. Successivamente rientreremo in struttura per preparare i bagagli e gustarci un'ottima cena.</p>",
+          "locale": "it"
+        },
+        {
+          "id": "61",
+          "title": "Le ultime luci nella Caldera di Pico de Areeiro",
+          "description": "<p>Riposeremo fino al pomeriggio per poi uscire per una sessione fotografica al tramonto nella location più suggestiva per gli amanti della montagna. Sarà un momento epico, fotograferemo in luce calda questo luogo incredibile per rientrare per cena. (prevista un'ora di cammino in saliscendi, 200 m di dislivello max).</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Pico_do_Areiro_viaggio_fotografico_madeira_2a8fd8c41e.jpg",
+          "alternativeText": "paesaggio montano portogallo sentiero pico areiro"
+        }
+      ]
     }
   ],
   "reviews": [],
-  "pictures": [
+  "whats_includeds": [
     {
-      "id": "64",
-      "title": "Santa Cruz",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
     },
     {
-      "id": "65",
-      "title": "Fanal pond",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
     },
     {
-      "id": "66",
-      "title": "Parco naturale di Madeira",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
     },
     {
-      "id": "67",
-      "title": "Canical",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "40",
+      "number": 1,
+      "title": "Benvenuti a Madeira",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "56",
+          "title": "Presentazioni, check-in e briefing iniziale",
+          "description": "<p>Appuntamento all’aeroporto di Funchal, a Santa Cruz, meeting con tutti i partecipanti e spostamento verso la struttura ricettiva.&nbsp;<br>Briefing iniziale sul programma di queste giornate e compatibilmente con gli orari di arrivo dei voli cominceremo il nostro viaggio fotografico a Madeira con un piccolo giro della zona e per fotografare il tramonto.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "number": 2,
+      "title": "La prima alba verso le scogliere di Ponta de São Lourenço",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "57",
+          "title": "La prima alba verso le scogliere di Ponta de São Lourenço",
+          "description": "<p>Sveglia presto per raggiungere la location che scatteremo all’alba. Da qui decideremo in base al meteo ed alle condizioni del gruppo il punto di ripresa ottimale da cui scattare questo istmo di terra &nbsp;che si estende frastagliato con scogliere vertiginose verso l’oceano atlantico.<br>Torneremo a riposare in struttura, faremo il pranzo, prepareremo i panini per la cena e ci muoveremo verso lo spot per il tramonto e per la sessione notturna della via lattea.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "number": 3,
+      "title": "Gli alberi incantati di Fanal Pond",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "58",
+          "title": "La foresta di Fanal Pond immersa nella nebbia",
+          "description": "<p>La giornata sarà dedicata ai maestosi alberi di Fanal Pond. Cercheremo di individuare il momento in cui ci potrà essere anche la nebbia in modo da immortalarli nel loro fascino misterioso.<br>Dedicheremo due giornate a questa foresta per avere più tempo e possibilità di fotografare nelle condizioni migliori.</p><p>Al termine del terzo giorno di viaggio, una volta ripresa la foresta, ci sposteremo sulla parte alta dell’isola per la sessione notturna della via lattea tra gli alberi color madreperla di Pico Ruivo (prevista un'ora di cammino).</p><p>La sera del quarto giorno, invece torneremo in struttura per prepararci per la sessione di scatto l'alba dell’indomani.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "number": 4,
+      "title": "Gli alberi incantati di Fanal Pond",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "44",
+      "number": 5,
+      "title": "Esploriamo una dei luoghi più emozionanti",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "60",
+          "title": "I faraglioni di Praia da Ribeira da Janela",
+          "description": "<p>Faremo la sessione di scatto all’alba dove fotograferemo uno degli spot più belli di Madeira, compatibilmente con le condizioni, faremo anche una lezione sulle lunghe esposizioni diurne (filtri, stacking).&nbsp;<br>Tornati in struttura, dopo pranzo, ci sposteremo nuovamente verso l’istmo di Ponta de São Lourenço, dove affronteremo una sessione pratica e teorica di fotografia notturna. Ci porteremo una cena al sacco e rimarremo a fotografare durante le ore blu in attesa dell'uscita della Via Lattea. (prevista un'ora di cammino in falso piano).</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "number": 6,
+      "title": "Un tramonto in alta quota",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "61",
+          "title": "Le ultime luci nella Caldera di Pico de Areeiro",
+          "description": "<p>Riposeremo fino al pomeriggio per poi uscire per una sessione fotografica al tramonto nella location più suggestiva per gli amanti della montagna. Sarà un momento epico, fotograferemo in luce calda questo luogo incredibile per rientrare per cena. (prevista un'ora di cammino in saliscendi, 200 m di dislivello max).</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "number": 7,
+      "title": "Tramonto a Pico do Areiro",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "62",
+          "title": "Sessione critica sugli scatti fatti ed ultimo tramonto a Pico do Areiro",
+          "description": "<p>Faremo una sessione di critica degli scatti, una valutazione del lavoro svolto dai partecipanti con analisi e considerazioni da parte di tutto il gruppo e dell’insegnante, prima di prepararci per l'ultima sessione di scatto di fronte ad un bellissimo tramonto a Pico do Areiro. Successivamente rientreremo in struttura per preparare i bagagli e gustarci un'ottima cena.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "number": 8,
+      "title": "Arrivederci Madeira",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "63",
+          "title": "Ultima alba prima dei saluti",
+          "description": "Il giorno della partenza potremo sfruttare le prime luci del mattino per scattare l’alba nella zona di scogliera, catturare le ultime luci del viaggio e tornare in struttura per finire il bagaglio e spostarci verso l’aeroporto dopo il check out.",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Via Lattea",
+      "description": "Immergiti nello splendore dei cieli stellati e della nostra galassia",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Esplorativo",
+      "description": "Andremo insieme alla scoperta di nuove location.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "16",
+      "start": "2022-04-03",
+      "end": "2022-04-10",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 1659,
+      "deposit": 100,
+      "balance": 1559,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1659,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
     },
     {
       "id": "68",
+      "start": "2022-09-17",
+      "end": "2022-09-24",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 1299,
+      "deposit": 100,
+      "balance": 1199,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1199,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "97",
+      "start": "2023-10-21",
+      "end": "2023-10-28",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 1649,
+      "deposit": 100,
+      "balance": 1549,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1599,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "107",
+      "start": "2024-10-19",
+      "end": "2024-10-26",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2260,
+      "deposit": 680,
+      "balance": 1580,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2260,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/giacomo_finotti/",
+          "firstName": "Giacomo",
+          "lastName": "Finotti",
+          "username": "giacomofinotti",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
+          },
+          "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+        }
+      ]
+    },
+    {
+      "id": "112",
+      "start": "2026-04-11",
+      "end": "2026-04-18",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2260,
+      "deposit": 680,
+      "balance": 1580,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2260,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "151",
+      "start": "2024-08-18",
+      "end": "2024-08-25",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 2260,
+      "deposit": 680,
+      "balance": 1580,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2260,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/giacomo_finotti/",
+          "firstName": "Giacomo",
+          "lastName": "Finotti",
+          "username": "giacomofinotti",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
+          },
+          "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+        }
+      ]
+    },
+    {
+      "id": "197",
+      "start": "2025-04-26",
+      "end": "2025-05-03",
+      "status": "confirmed",
+      "maxPax": 7,
+      "price": 1899,
+      "deposit": 570,
+      "balance": 1329,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 1899,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/giacomo_finotti/",
+          "firstName": "Giacomo",
+          "lastName": "Finotti",
+          "username": "giacomofinotti",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
+          },
+          "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "tramonto panorama viaggio fotografico Madeira",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_Madeira_4_13c4008546.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Santa Cruz",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_Madeira_2b4b6f1cf2.jpg",
+      "alt": "santa cruz madeira viaggio fotografico"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Fanal pond",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fanal_pond_fc73798e65.jpg",
+      "alt": "fanal pond viaggio fotografico madeira"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Parco naturale di Madeira",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_Madeira_parco_naturale_d37af5c38b.jpg",
+      "alt": "parco naturale di madeira"
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "Canical",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_Madeira_8_3e61950f96.jpg",
+      "alt": "canical scogliere viaggio fotografico madeira"
+    },
+    {
+      "id": "4",
+      "type": "tour",
       "title": "Ponta do Rosto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Ponta_do_Rosto_9ab74ff8fc.jpg",
+      "alt": "Ponta do Rosto alba durante viaggio fotografico"
     },
     {
-      "id": "267",
+      "id": "5",
+      "type": "tour",
       "title": "Pico do Areiro",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Pico_do_Areiro_viaggio_fotografico_madeira_2a8fd8c41e.jpg",
+      "alt": "paesaggio montano portogallo sentiero pico areiro"
     },
     {
-      "id": "269",
+      "id": "6",
+      "type": "tour",
       "title": "Albero Fanal Pond",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Foresta_di_Fanal_Pond_826b9ce883.jpg",
+      "alt": "albero nella nebbia viaggio fotografico madeira"
     },
     {
-      "id": "270",
+      "id": "7",
+      "type": "tour",
       "title": "Praia da Ribeira da Janela",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_Praia_da_Ribeira_da_Janela_2bea38aa2f.jpg",
+      "alt": "spiaggia sassi Praia da Ribeira da Janela viaggio fotografico madeira"
     },
     {
-      "id": "350",
+      "id": "8",
+      "type": "tour",
       "title": "Whispering Glade",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fanal_Pond_1cf21e3328.jpg",
+      "alt": "Viaggio Fotografico Madeira Portogallo"
     },
     {
-      "id": "352",
+      "id": "9",
+      "type": "tour",
       "title": "Day one",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Santa_Cruz_afdf6ba13b.jpg",
+      "alt": "Viaggio Fotografico Madeira"
+    },
+    {
+      "id": "locpic-1-3",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fanal_Forest_di_Samuele_Bucci_664ec1318e.jpg",
+      "alt": "viaggio fotorgafico madeira"
+    },
+    {
+      "id": "locpic-5-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_fotografico_Madeira_4_13c4008546.jpg",
+      "alt": "tramonto panorama viaggio fotografico Madeira"
     }
   ]
 }

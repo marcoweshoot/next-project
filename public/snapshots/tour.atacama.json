@@ -1,99 +1,889 @@
 {
+  "id": "21",
+  "tour_id": "atacama-il-cielo-piu-buio-del-pianeta-nel-deserto",
   "slug": "atacama",
   "title": "Atacama: Il cielo piu' buio del pianeta nel Deserto",
-  "states": {
-    "slug": "cile"
-  },
+  "description": "<p>Se anche tu hai una passione profonda verso la fotografia landscape e ami visitare e fotografare i luoghi più belli del pianeta, beh, questo è il viaggio che fa per te. Se poi sei affascinato dalla fotografia notturna e cerchi i cieli più scuri per poter godere della straordinaria bellezza delle stelle e della nostra galassia allora questo è decisamente il viaggio che fa per te.</p><p>Volerai oltre oceano per raggiungere un paese incredibile, il Cile, luogo completamente diverso dalla realtà dove sei abituato a vivere, conoscerai nuovi sapori, culture e vedrai paesaggi che sembrano essere di un altro pianeta.??Giunto nella regione di Atacama potrai entrare all’interno del più grande telescopio mai costruito dall’uomo, vivrai l’emozione di essere nel posto che che crea contatto tra il nostro pianeta ed il cosmo, in una location talmente particolare da non sembrare nemmeno reale.</p><p>Poi, dopo diversi chilometri tra paesaggi aridi e sterminati, arriverai nella zona più incredibile del Deserto di Atacama, scoprirai formazioni rocciose, lagune dall’acqua cristallina dove farai il bagno, deserti di sale, montagne alte oltre 5.000 metri, geyser in quota e, soprattutto, il cielo più buio al Mondo.</p><p>Trascorrerai 2 settimane di viaggio e fotografia attraverso la bellezza del Sud America, fotografando la Via Lattea, le nubi di Magellano, le costellazioni e la Luce Zodiacale in un contesto unico.</p><p>Il viaggio è in offerta per un tempo limitato, i posti sono pochi per poter offrire un’esperienza esclusiva ai ragazzi che vivranno questa spettacolare avventura. Se anche tu hai rimandato questo sogno troppo a lungo, oggi è il momento per realizzarlo.</p>",
+  "excerpt": "Il posto migliore al Mondo dove osservare e fotografare la Via Lattea, un deserto a più di 3000mt di quota",
+  "difficulty": "medium",
+  "experience_level": "Intenso",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm) e tele (70-200mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Astroinseguitore (opzionale)</li></ul><p>Abbigliamento:</p><ul><li>Vestiario comodo e impermeabile</li><li>Maglia termica</li><li>Pile</li><li>Piumino</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "antofagasta"
+    "slug": "antofagasta",
+    "locale": "it",
+    "name": "Antofagasta"
   },
-  "sessions": [
+  "states": {
+    "name": "Cile",
+    "slug": "cile",
+    "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Atacama 2025 | WeShoot",
+    "metaDescription": "Unisciti a questa esperienza unica, sarà un viaggio fotografico dedicato alla via lattea nel deserto di Atacama, luogo migliore per questo tipo di foto.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2023-05-11",
-      "end": "2023-05-25"
+      "id": "97",
+      "title": "Santiago del Cile",
+      "description": "Santiago del Cile è la capitale del paese, sorge in una valle circondata dalle cime innevate della Cordigliera delle Ande uno spettacolo unico per gli occhi e le macchine fotografiche.",
+      "slug": "santiago-del-cile",
+      "locale": "it",
+      "state": {
+        "name": "Cile",
+        "slug": "cile",
+        "locale": "it",
+        "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "98",
+          "title": "Presentazioni, check-in e briefing",
+          "description": "Appuntamento in aeroporto (in funzione dei voli dei partecipanti organizzeremo un appuntamento generale), disbrigo di tutte la pratiche di immigrazione, trasferimento nella struttura che ci ospiterà per questa prima notte, check in e infine un pò di relax in giro per la capitale Santiago. Se il tempo ce lo consentirà, avremo modo di raggiungere il punto panoramico \"Terrace Bellavista\", da cui ammirare un incredibile tramonto su Santiago.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_a_Santiago_del_Cile_bcfc402595.jpg",
+          "alternativeText": "punto panoramico di santiago al tramonto ripreso durante viaggio fotografico atacama"
+        }
+      ]
     },
     {
-      "start": "2024-04-04",
-      "end": "2024-04-18"
+      "id": "98",
+      "title": "Antofagasta",
+      "description": "Antofagasta è una città portuale del Cile settentrionale che si affaccia sull'Oceano Pacifico. Da qui si potranno raggiungere alcune delle principali location del viaggio fotografico.",
+      "slug": "antofagasta",
+      "locale": "it",
+      "state": {
+        "name": "Cile",
+        "slug": "cile",
+        "locale": "it",
+        "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "99",
+          "title": "Alla scoperta di Antofagasta",
+          "description": "Dopo un'ottima colazione ci trasferiremo verso l'aeroporto per prendere un volo interno con destinazione Calama. Una volta atterrati andremo a fare il pick up delle auto 4x4 e ci sposteremo verso la struttura ricettiva ad Antofagasta. Disbrigo delle pratiche del Check in e dopo un piccolo riposo ci incontreremo per una lezione di teoria che vi preparerà per i giorni avvenire. A cena andremo in uno dei ristoranti tipici del luogo per assaporare delle ottime pietanze.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/antofagasta_viaggio_fotografici_atacama_1e3c9422a6.jpg",
+          "alternativeText": "tramonto spiaggia antofagasta"
+        }
+      ]
     },
-    {
-      "start": "2025-03-20",
-      "end": "2025-04-04"
-    }
-  ],
-  "reviews": [],
-  "pictures": [
     {
       "id": "99",
-      "title": "Santiago del Cile",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "La mano del Deserto",
+      "description": "La mano del deserto è una scultura in pietra alta 30 metri; si tratta proprio di una mano che sbuca dal nulla in mezzo al deserto; l'opera è dell'artista cileno Mario Irarrázabal e rappresenta le vittime dell'ingiustizia e tortura durante il regime militare in Cile.",
+      "slug": "la-mano-del-deserto",
+      "locale": "it",
+      "state": {
+        "name": "Cile",
+        "slug": "cile",
+        "locale": "it",
+        "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "100",
+          "title": "La Mano del Deserto,  Cerro Paranal e VLT",
+          "description": "In questi 3 giorni avremo modo di visitare diverse location nella regione di Antofagasta. Prime su tutte la famosa \"mano del deserto\" e il VLT (very large telescope) il telescopio più grande al mondo. In queste zone, assolutamente prive di inquinamento luminoso, avremo modo di pianificare diverse sessioni di scatto al tramonto, ma soprattutto alla via lattea. Sfrutteremo la luce del giorno per fare scouting della zona e arrivare pronti per la notturna.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/La_mano_del_deserto_arco_via_lattea_54d76a72c6.jpg",
+          "alternativeText": "via lattea ripresa sopra la la mano del deserto durante viaggio fotografico atacama"
+        }
+      ]
     },
     {
       "id": "100",
-      "title": "La mano del Deserto",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Cerro Paranal",
+      "description": "Il Cerro Paranal è una montagna alta 2635 metri, situata a 12 km dalla costa sull'oceano Pacifico; si trova in una delle zone più secche di tutto il pianeta e non a caso ospita il più grande telescopio del mondo: il VLT dell'ESO.",
+      "slug": "cerro-paranal",
+      "locale": "it",
+      "state": {
+        "name": "Cile",
+        "slug": "cile",
+        "locale": "it",
+        "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "100",
+          "title": "La Mano del Deserto,  Cerro Paranal e VLT",
+          "description": "In questi 3 giorni avremo modo di visitare diverse location nella regione di Antofagasta. Prime su tutte la famosa \"mano del deserto\" e il VLT (very large telescope) il telescopio più grande al mondo. In queste zone, assolutamente prive di inquinamento luminoso, avremo modo di pianificare diverse sessioni di scatto al tramonto, ma soprattutto alla via lattea. Sfrutteremo la luce del giorno per fare scouting della zona e arrivare pronti per la notturna.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vista_da_Cerro_Paranal_4d974c6b92.jpg",
+          "alternativeText": "Cerro Paranal panorama dal viaggio fotografico atacama"
+        }
+      ]
     },
     {
       "id": "101",
-      "title": "Cerro Paranal",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Very Large Telescope",
+      "description": "Il Very Large Telescope (VLT) è il più grande osservatorio al mondo mai costruito prima. Situato su di una montagna alta 2635 m nel deserto di Atacama, nel Cile settentrionale è uno dei sistemi più all'avanguardia che l'essere umano abbia costruito.",
+      "slug": "very-large-telescope",
+      "locale": "it",
+      "state": {
+        "name": "Cile",
+        "slug": "cile",
+        "locale": "it",
+        "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "100",
+          "title": "La Mano del Deserto,  Cerro Paranal e VLT",
+          "description": "In questi 3 giorni avremo modo di visitare diverse location nella regione di Antofagasta. Prime su tutte la famosa \"mano del deserto\" e il VLT (very large telescope) il telescopio più grande al mondo. In queste zone, assolutamente prive di inquinamento luminoso, avremo modo di pianificare diverse sessioni di scatto al tramonto, ma soprattutto alla via lattea. Sfrutteremo la luce del giorno per fare scouting della zona e arrivare pronti per la notturna.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/cielo_notturno_sul_telescopio_42c13f1601.jpg",
+          "alternativeText": "foto notturna del VLT durante viaggio fotografico atacama"
+        }
+      ]
     },
     {
       "id": "102",
-      "title": "VLT",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Valle Arcobaleno",
+      "description": "La valle arcobaleno viene chiamata cosi per via della moltitudine di colori che hanno le rocce. Questo particolare fenomeno è dovuto ai minerali presenti all'interno, provocando una colorazione dal rosso, verde, bianco. Sarà un luogo perfetto per trascorrere una nottata sotto le stelle.",
+      "slug": "valle-arcobaleno",
+      "locale": "it",
+      "state": {
+        "name": "Cile",
+        "slug": "cile",
+        "locale": "it",
+        "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "101",
+          "title": "Lagune, vulcani, geyser e valli incredibili",
+          "description": "Dopo essere arrivati a San Pedro di Atacama e fatto il check-in nella struttura convenzionata cominceremo a pianificare i vari giorni che verranno, per iniziare a conoscere le varie location che saranno meta del viaggio fotografico. Visiteremo gli spot più incredibili che questa deserto può offrirci: dalle lagune di sale popolate dai fenicotteri (stagionale) alla Valle Della Luna e quella di Arcoiris che assomigliano a paesaggi marziani. Faremo un'escursione sopra El Tatio, una caldera vulcanica a più di 4300mt di altezza dove troveremo oltre 80 geyser e una piscina naturale dove potersi rilassare immersi nell'acqua bollente.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-5-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Corona_boreale_nella_valle_arcobaleno_17aaa2d74a.jpg",
+          "alternativeText": "via lattea nella valle arcobaleno durante viaggio fotografico atacama"
+        }
+      ]
     },
     {
       "id": "103",
-      "title": "Valle Arcobaleno",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Geyser El Tatio",
+      "description": "El Tatio è un campo geotermico con molti geyser situato nelle Ande del Cile settentrionale a 4.320 metri sul livello medio del mare. È il terzo campo di geyser più grande del mondo e il più grande dell'emisfero australe.",
+      "slug": "geyser-el-tatio",
+      "locale": "it",
+      "state": {
+        "name": "Cile",
+        "slug": "cile",
+        "locale": "it",
+        "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "101",
+          "title": "Lagune, vulcani, geyser e valli incredibili",
+          "description": "Dopo essere arrivati a San Pedro di Atacama e fatto il check-in nella struttura convenzionata cominceremo a pianificare i vari giorni che verranno, per iniziare a conoscere le varie location che saranno meta del viaggio fotografico. Visiteremo gli spot più incredibili che questa deserto può offrirci: dalle lagune di sale popolate dai fenicotteri (stagionale) alla Valle Della Luna e quella di Arcoiris che assomigliano a paesaggi marziani. Faremo un'escursione sopra El Tatio, una caldera vulcanica a più di 4300mt di altezza dove troveremo oltre 80 geyser e una piscina naturale dove potersi rilassare immersi nell'acqua bollente.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-6-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Geyser_El_Tatio_cfbf7545a7.jpg",
+          "alternativeText": "Geyser El Tatio dal viaggio fotografico in atacama"
+        }
+      ]
     },
     {
       "id": "104",
-      "title": "Geyser El Tatio",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Valle della Luna",
+      "description": "A pochi kilometri da San Pedro di Atacama, troviamo la valle della Luna, una zona del deserto che assomiglia proprio a un cratere lunare. Le sue rocce sono molto friabili e hanno diversi colori per via del solfato di calcio , del gesso e del sale.",
+      "slug": "valle-della-luna",
+      "locale": "it",
+      "state": {
+        "name": "Cile",
+        "slug": "cile",
+        "locale": "it",
+        "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "101",
+          "title": "Lagune, vulcani, geyser e valli incredibili",
+          "description": "Dopo essere arrivati a San Pedro di Atacama e fatto il check-in nella struttura convenzionata cominceremo a pianificare i vari giorni che verranno, per iniziare a conoscere le varie location che saranno meta del viaggio fotografico. Visiteremo gli spot più incredibili che questa deserto può offrirci: dalle lagune di sale popolate dai fenicotteri (stagionale) alla Valle Della Luna e quella di Arcoiris che assomigliano a paesaggi marziani. Faremo un'escursione sopra El Tatio, una caldera vulcanica a più di 4300mt di altezza dove troveremo oltre 80 geyser e una piscina naturale dove potersi rilassare immersi nell'acqua bollente.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-7-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_alla_Valle_della_luna_f2ccdedf4a.jpg",
+          "alternativeText": "Valle della luna al tramonto durante viaggio fotografico in atacama"
+        }
+      ]
     },
     {
       "id": "105",
-      "title": "Valle della Luna",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Laguna Chaxa",
+      "description": "In questa laguna potrai ammirare da vicini centinaia di fenicotteri e fotografare il paesaggio circostante delle montagne che si specchiano dentro le acque blu intenso della laguna.",
+      "slug": "laguna-chaxa",
+      "locale": "it",
+      "state": {
+        "name": "Cile",
+        "slug": "cile",
+        "locale": "it",
+        "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "101",
+          "title": "Lagune, vulcani, geyser e valli incredibili",
+          "description": "Dopo essere arrivati a San Pedro di Atacama e fatto il check-in nella struttura convenzionata cominceremo a pianificare i vari giorni che verranno, per iniziare a conoscere le varie location che saranno meta del viaggio fotografico. Visiteremo gli spot più incredibili che questa deserto può offrirci: dalle lagune di sale popolate dai fenicotteri (stagionale) alla Valle Della Luna e quella di Arcoiris che assomigliano a paesaggi marziani. Faremo un'escursione sopra El Tatio, una caldera vulcanica a più di 4300mt di altezza dove troveremo oltre 80 geyser e una piscina naturale dove potersi rilassare immersi nell'acqua bollente.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-8-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fenicotteri_in_Laguna_Chaxa_d415473d35.jpg",
+          "alternativeText": "Laguna Chaxa  e i fenicotteri al tramonto viaggio fotografico atacama"
+        }
+      ]
     },
     {
       "id": "106",
-      "title": "Laguna Chaxa",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "title": "Laguna Miscanti",
+      "description": "La Laguna Miscanti è un lago di origine vulcanica di acqua salmastra situato nell'altopiano della regione di Antofagasta nel nord del Cile. Particolare interessante sono le montagne che specchiano nelle sue acque.",
+      "slug": "laguna-miscanti",
+      "locale": "it",
+      "state": {
+        "name": "Cile",
+        "slug": "cile",
+        "locale": "it",
+        "description": "<p>Unisciti in uno dei nostri viaggi fotografici per esplorare il Cile e il deserto di Atacama. Paesaggi marziani o lunari, albe, tramonti, ma soprattutto, potrai godere di uno dei cieli più scuri del pianeta ed ammirare la nostra galassia: la via lattea.</p>"
+      },
+      "steps": [
+        {
+          "id": "101",
+          "title": "Lagune, vulcani, geyser e valli incredibili",
+          "description": "Dopo essere arrivati a San Pedro di Atacama e fatto il check-in nella struttura convenzionata cominceremo a pianificare i vari giorni che verranno, per iniziare a conoscere le varie location che saranno meta del viaggio fotografico. Visiteremo gli spot più incredibili che questa deserto può offrirci: dalle lagune di sale popolate dai fenicotteri (stagionale) alla Valle Della Luna e quella di Arcoiris che assomigliano a paesaggi marziani. Faremo un'escursione sopra El Tatio, una caldera vulcanica a più di 4300mt di altezza dove troveremo oltre 80 geyser e una piscina naturale dove potersi rilassare immersi nell'acqua bollente.",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-9-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Laguna_Miscanti_0967bebed8.jpg",
+          "alternativeText": "Laguna Miscanti tappa del viaggio fotografico in atacama"
+        }
+      ]
+    }
+  ],
+  "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Villa Privata",
+      "description": "Soggiorno in una villa privata.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alloggio_in_villa_b5499fc6eb.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "104",
+      "number": 1,
+      "title": "Benvenuti in Cile",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "98",
+          "title": "Presentazioni, check-in e briefing",
+          "description": "Appuntamento in aeroporto (in funzione dei voli dei partecipanti organizzeremo un appuntamento generale), disbrigo di tutte la pratiche di immigrazione, trasferimento nella struttura che ci ospiterà per questa prima notte, check in e infine un pò di relax in giro per la capitale Santiago. Se il tempo ce lo consentirà, avremo modo di raggiungere il punto panoramico \"Terrace Bellavista\", da cui ammirare un incredibile tramonto su Santiago.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "105",
+      "number": 2,
+      "title": "Trasferimento a Calama con volo interno",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "99",
+          "title": "Alla scoperta di Antofagasta",
+          "description": "Dopo un'ottima colazione ci trasferiremo verso l'aeroporto per prendere un volo interno con destinazione Calama. Una volta atterrati andremo a fare il pick up delle auto 4x4 e ci sposteremo verso la struttura ricettiva ad Antofagasta. Disbrigo delle pratiche del Check in e dopo un piccolo riposo ci incontreremo per una lezione di teoria che vi preparerà per i giorni avvenire. A cena andremo in uno dei ristoranti tipici del luogo per assaporare delle ottime pietanze.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "106",
+      "number": 3,
+      "title": "Alla scoperta della regione di Antofagasta",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "100",
+          "title": "La Mano del Deserto,  Cerro Paranal e VLT",
+          "description": "In questi 3 giorni avremo modo di visitare diverse location nella regione di Antofagasta. Prime su tutte la famosa \"mano del deserto\" e il VLT (very large telescope) il telescopio più grande al mondo. In queste zone, assolutamente prive di inquinamento luminoso, avremo modo di pianificare diverse sessioni di scatto al tramonto, ma soprattutto alla via lattea. Sfrutteremo la luce del giorno per fare scouting della zona e arrivare pronti per la notturna.",
+          "locale": "it"
+        }
+      ]
     },
     {
       "id": "107",
+      "number": 4,
+      "title": "Alla scoperta della regione di Antofagasta",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "100",
+          "title": "La Mano del Deserto,  Cerro Paranal e VLT",
+          "description": "In questi 3 giorni avremo modo di visitare diverse location nella regione di Antofagasta. Prime su tutte la famosa \"mano del deserto\" e il VLT (very large telescope) il telescopio più grande al mondo. In queste zone, assolutamente prive di inquinamento luminoso, avremo modo di pianificare diverse sessioni di scatto al tramonto, ma soprattutto alla via lattea. Sfrutteremo la luce del giorno per fare scouting della zona e arrivare pronti per la notturna.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "108",
+      "number": 5,
+      "title": "Alla scoperta della regione di Antofagasta",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "100",
+          "title": "La Mano del Deserto,  Cerro Paranal e VLT",
+          "description": "In questi 3 giorni avremo modo di visitare diverse location nella regione di Antofagasta. Prime su tutte la famosa \"mano del deserto\" e il VLT (very large telescope) il telescopio più grande al mondo. In queste zone, assolutamente prive di inquinamento luminoso, avremo modo di pianificare diverse sessioni di scatto al tramonto, ma soprattutto alla via lattea. Sfrutteremo la luce del giorno per fare scouting della zona e arrivare pronti per la notturna.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "109",
+      "number": 6,
+      "title": "Entriamo nel cuore del deserto di Atacama",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "101",
+          "title": "Lagune, vulcani, geyser e valli incredibili",
+          "description": "Dopo essere arrivati a San Pedro di Atacama e fatto il check-in nella struttura convenzionata cominceremo a pianificare i vari giorni che verranno, per iniziare a conoscere le varie location che saranno meta del viaggio fotografico. Visiteremo gli spot più incredibili che questa deserto può offrirci: dalle lagune di sale popolate dai fenicotteri (stagionale) alla Valle Della Luna e quella di Arcoiris che assomigliano a paesaggi marziani. Faremo un'escursione sopra El Tatio, una caldera vulcanica a più di 4300mt di altezza dove troveremo oltre 80 geyser e una piscina naturale dove potersi rilassare immersi nell'acqua bollente.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "110",
+      "number": 7,
+      "title": "Entriamo nel cuore del deserto di Atacama",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "111",
+      "number": 8,
+      "title": "Entriamo nel cuore del deserto di Atacama",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "112",
+      "number": 9,
+      "title": "Entriamo nel cuore del deserto di Atacama",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "113",
+      "number": 10,
+      "title": "Entriamo nel cuore del deserto di Atacama",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "114",
+      "number": 11,
+      "title": "Entriamo nel cuore del deserto di Atacama",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "115",
+      "number": 12,
+      "title": "Entriamo nel cuore del deserto di Atacama",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "116",
+      "number": 13,
+      "title": "Entriamo nel cuore del deserto di Atacama",
+      "locale": "it",
+      "steps": []
+    },
+    {
+      "id": "117",
+      "number": 14,
+      "title": "Rientriamo a Santiago del Cile",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "102",
+          "title": "Gli ultimi paesaggi per la strada del ritorno",
+          "description": "Dopo aver fatto colazione e aver fatto il check-out dalla struttura, ci dirigeremo verso l'aeroporto di Calama, dove prenderemo il volo interno che ci riporta alla base, Santiago del Cile. avremo modo di discutere di queste giornate trascorse nel deserto di Atacama, rivedere gli scatti e incrociare ancora qualche paesaggio da immortalare.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "118",
+      "number": 15,
+      "title": " Arrivederci Cile",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "103",
+          "title": "Saluti e transfer in Aeroporto",
+          "description": "Facciamo una ricca colazione e dopo aver effettuato il check-out dalla struttura ci dirigeremo verso l'aeroporto di Santiago, per prepararci al rientro in Italia.",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Avventura",
+      "description": "Per gli amanti delle avventure",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Montagna",
+      "description": "Esperienza in alta quota",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Via Lattea",
+      "description": "Immergiti nello splendore dei cieli stellati e della nostra galassia",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "27",
+      "start": "2023-05-11",
+      "end": "2023-05-25",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 3599,
+      "deposit": 100,
+      "balance": 3499,
+      "minPax": 5,
+      "currency": "EUR",
+      "priceCompanion": 3599,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "100",
+      "start": "2024-04-04",
+      "end": "2024-04-18",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 5730,
+      "deposit": 1720,
+      "balance": 4010,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 5730,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "160",
+      "start": "2025-03-20",
+      "end": "2025-04-04",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 3999,
+      "deposit": 1200,
+      "balance": 2799,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 3999,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/giacomo_finotti/",
+          "firstName": "Giacomo",
+          "lastName": "Finotti",
+          "username": "giacomofinotti",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
+          },
+          "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Posso Pagare il viaggio fotografico a rate?",
+      "answer": "<p>Assolutamente sì, offriamo l'opzione di pagamento rateizzato per rendere il tuo viaggio fotografico più accessibile. Una volta che hai preso contatto con la nostra agenzia, Time Travel Bag, il nostro team sarà lieto di assisterti nel definire un piano di pagamento rateizzato adeguato alle tue esigenze. Questo ti permetterà di suddividere l'importo restante del saldo in rate, facilitando la gestione dei tuoi pagamenti e permettendoti di pianificare il tuo viaggio con maggiore tranquillità.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Quando mi vengono forniti i documenti di viaggio?",
+      "answer": "<p>I documenti necessari per il vostro viaggio saranno inviati tramite e-mail una settimana prima della data di partenza. Nel pacchetto fornito, troverete tutti i dettagli importanti, inclusi i voucher per le strutture alberghiere, il certificato di assicurazione e le conferme delle prenotazioni aeree.</p><p>Le carte d'imbarco saranno consegnate direttamente a voi via e-mail o WhatsApp da 48 a 24 ore prima della partenza, secondo le specifiche procedure della compagnia aerea con cui viaggerete.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-16",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-17",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "via lattea valle della luna Viaggio Fotografico Atacama",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Viaggio_Fotografico_Atacama_9ab6062fe0.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Santiago del Cile",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_a_Santiago_del_Cile_bcfc402595.jpg",
+      "alt": "punto panoramico di santiago al tramonto ripreso durante viaggio fotografico atacama"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "La mano del Deserto",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/La_mano_del_deserto_arco_via_lattea_54d76a72c6.jpg",
+      "alt": "via lattea ripresa sopra la la mano del deserto durante viaggio fotografico atacama"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Cerro Paranal",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/vista_da_Cerro_Paranal_4d974c6b92.jpg",
+      "alt": "Cerro Paranal panorama dal viaggio fotografico atacama"
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "VLT",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/cielo_notturno_sul_telescopio_42c13f1601.jpg",
+      "alt": "foto notturna del VLT durante viaggio fotografico atacama"
+    },
+    {
+      "id": "4",
+      "type": "tour",
+      "title": "Valle Arcobaleno",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Corona_boreale_nella_valle_arcobaleno_17aaa2d74a.jpg",
+      "alt": "via lattea nella valle arcobaleno durante viaggio fotografico atacama"
+    },
+    {
+      "id": "5",
+      "type": "tour",
+      "title": "Geyser El Tatio",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Geyser_El_Tatio_cfbf7545a7.jpg",
+      "alt": "Geyser El Tatio dal viaggio fotografico in atacama"
+    },
+    {
+      "id": "6",
+      "type": "tour",
+      "title": "Valle della Luna",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/tramonto_alla_Valle_della_luna_f2ccdedf4a.jpg",
+      "alt": "Valle della luna al tramonto durante viaggio fotografico in atacama"
+    },
+    {
+      "id": "7",
+      "type": "tour",
+      "title": "Laguna Chaxa",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Fenicotteri_in_Laguna_Chaxa_d415473d35.jpg",
+      "alt": "Laguna Chaxa  e i fenicotteri al tramonto viaggio fotografico atacama"
+    },
+    {
+      "id": "8",
+      "type": "tour",
       "title": "Laguna Miscanti",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Laguna_Miscanti_0967bebed8.jpg",
+      "alt": "Laguna Miscanti tappa del viaggio fotografico in atacama"
+    },
+    {
+      "id": "locpic-1-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/antofagasta_viaggio_fotografici_atacama_1e3c9422a6.jpg",
+      "alt": "tramonto spiaggia antofagasta"
     }
   ]
 }

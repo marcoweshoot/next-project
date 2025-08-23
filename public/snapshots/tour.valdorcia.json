@@ -1,384 +1,2113 @@
 {
+  "id": "3",
+  "tour_id": "le-colline-della-toscana",
   "slug": "valdorcia",
   "title": "Immergiti nei paesaggi sinuosi della Val D'Orcia e Crete Senesi",
-  "states": {
-    "slug": "italia"
-  },
+  "description": "<p style=\"margin-left:0px;\"><strong>Stanco dei ritmi lavorativi o della routine settimanale?</strong></p><p style=\"margin-left:0px;\">Passa un weekend in compagnia della tua migliore amica: <strong>la tua macchina fotografica</strong>.</p><p style=\"margin-left:0px;\">Abbiamo organizzato per te <strong>un fantastico weekend di relax e incredibili momenti di arte</strong> allo stato puro immerso nei giochi di luci dei tramonti sulle Crete Senesi ai colori e curve della magica Val d’Orcia.</p><p style=\"margin-left:0px;\">Scoprirai tutti i trucchi del mestiere <strong>per creare delle foto da National Geographic.</strong></p><p style=\"margin-left:0px;\">Se ti piace stare in mezzo la natura, fotografare la volta stellata in compagnia di amici come te allora amerai il Workshop che abbiamo pensato per te.</p><p style=\"margin-left:0px;\">Immagina di contornare il meraviglioso tempo, passato ad alimentare la tua passione fotografica, con una cena per assaporare la Toscana in tutti i sensi. SI, è incluso anche un pasto completo nel ristorante del posto.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>A chi è rivolto il corso?</strong></p><p style=\"margin-left:0px;\">Il <strong>viaggio fotografico in Val d'Orcia è indicato a tutti</strong>, sia al fotografo amatoriale che vuole imparare le tecniche della composizione e esposizione, sia al fotografo professionista che è in cerca di bellissimi paesaggi e un’ottima compagnia.</p><p style=\"margin-left:0px;\"><strong>Cosa imparerai al viaggio fotografico fotografico in Val d'Orcia?</strong></p><p style=\"margin-left:0px;\">Essendo un viaggio fotografico di fotografia dove vengono toccati molti argomenti e tecniche potrai imparare davvero molto. Due giorni di full-immersion nello studio della fotografia di paesaggio in tutti i suoi aspetti, approfondiremo con consigli ed esperienza sul campo, tecniche per la fotografia notturna.</p><p style=\"margin-left:0px;\">Fotografia di paesaggio diurno e notturno:</p><ul><li><strong>LUCE</strong>: come creare ombre e luci che diano forza all’immagine</li><li><strong>ESPOSIZIONE</strong>: come misurare correttamente l’esposizione per non perdere informazioni sul file</li><li><strong>COMPOSIZIONE</strong>: la suddivisione dei piani, la gestione della profondità di campo e delle grandezze degli elementi presenti nella scena</li><li><strong>INFORMAZIONI SULLA FOTOCAMERA:</strong> come leggere l’istogramma e capire i settaggi da utilizzare</li><li><strong>LUNGHE ESPOSIZIONI E UTILIZZO DEI FILTRI:</strong> spiegheremo l'uso dei vari filtri fotografici Polarizzatori, ND e GND</li><li><strong>PIANIFICAZIONE:</strong> della fotografia di paesaggio</li><li><strong>SESSIONE CRITICA:</strong> in loco delle foto scattate</li><li><strong>POST-PRODUZIONE:</strong> con Lightroom e Photoshop</li></ul><p style=\"margin-left:0px;\"><strong>Ogni partecipante alla fine del corso riceverà tramite email:</strong></p><ul><li>La mappa di tutti i luoghi visitati, più altri fantastici spot</li><li>Accesso ad un gruppo whatsapp riservato</li><li>Uno sconto sul prossimo viaggio prenotato</li><li>Un estratto del nostro PDF sulla Pianificazione della fotografia di paesaggio</li></ul>",
+  "excerpt": "Un viaggio fotografico Val d'Orcia insieme a due coach professionisti che ti accompagneranno nel meraviglioso viaggio della fotografia di paesaggio",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e tele zoom (100mm-400mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Cappello (periodo invernale)</li><li>Guanti (periodo invernale)</li><li>Scarpe da Trekking (consigliate)</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "toscana"
+    "slug": "toscana",
+    "locale": "it",
+    "name": "Toscana"
   },
-  "sessions": [
+  "states": {
+    "name": "Italia",
+    "slug": "italia",
+    "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico Val d'Orcia 2025 | WeShoot",
+    "metaDescription": "Vieni a scoprire questo viaggio fotografico Val d'Orcia e le Crete Senesi dove impererai nuove tecniche fotografiche.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2021-12-18",
-      "end": "2021-12-19"
+      "id": "5",
+      "title": "Podere Belvedere",
+      "description": "Uno dei luoghi iconici della Val d'orcia, il podere belvedere regala sempre immense emozioni durante l'alba.",
+      "slug": "podere-belvedere",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "4",
+          "title": "I colori e le forme delle colline",
+          "description": "<ul><li>Ore 6:30: Sveglia e incontro per partire verso le prime luci dell'alba (alba opzionale nella stagione della via lattea)</li><li>Ore 7:30: Quarta sessione fotografica per fotografare le bellissime luci dell’alba (alba opzionale nella stagione della via lattea)</li><li>Ore 9:00: Rientro in Hotel per gustare una meritata colazione</li><li>Ore 10: Revisione degli scatti (lo decideremo in base anche alle condizioni meteo)</li><li>Ore 13: Fine tour Fotografico e saluti</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_valdorcia_2c736ef8d6.jpg",
+          "alternativeText": "alba al podere belvedere dal viaggio fotografico val d'orcia"
+        },
+        {
+          "id": "locpic-0-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alba_in_val_d_orcia_a5b3a10a2c.jpg",
+          "alternativeText": "alunni che fotografano alba viaggio fotografico val d'orcia"
+        },
+        {
+          "id": "locpic-0-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/luci_e_ombre_colline_val_d_orcia_8dc90d5c08.jpg",
+          "alternativeText": "Marika Greco luci e ombre colline viaggio fotografico  val d'orcia"
+        },
+        {
+          "id": "locpic-0-3",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Colline_Val_d_orcia_tramonto_4d2d90a2f1.jpg",
+          "alternativeText": "Marika Greco colline toscana viaggio fotografico val d'orcia"
+        }
+      ]
     },
     {
-      "start": "2022-01-08",
-      "end": "2022-01-09"
+      "id": "12",
+      "title": "Podere Baccoleno",
+      "description": "Uno dei più noti e bellissimi poderi della toscana e crete senesi.",
+      "slug": "podere-baccoleno",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "3",
+          "title": "Briefing iniziale e poi subito a scattare",
+          "description": "<ul><li>Ore 14: incontro a San Quirico D’Orcia e registrazione partecipanti presso l'hotel convenzionato \"Il Garibaldi\" (o similare)</li><li>Ore 15:30: utilizzeremo questo tempo per spiegare come programmare correttamente un uscita fotografica, utilizzando gli strumenti che abbiamo a disposizione sul web e sulle applicazioni del telefono (a fine workshop riceverai anche un PDF).</li><li>Ore 17 seconda sessione fotografica: ti spiegheremo come utilizzare i filtri ND e GND o come fare la tecnica della doppia esposizione o HDR.</li><li>Ore 18 terza sessione fotografica: Ci dirigiamo verso Asciano per raggiungere la location dove ci apposteremo per fotografare le incredibili luci del tramonto e scoprirai tutti i segreti per foto vincenti.</li><li>Ore 20: cena nel ristorante dell'albergo, dove potrai gustare un ottimo pasto e del buon vino (tutto incluso nel prezzo del tour).</li><li>Ore 22: introduzione e pianificazione per lo studio e la realizzazione degli scatti notturni; sessione fotografica nei pressi dei famosi cipressini toscani; scoprirai trucchi e tecniche per la fotografia notturna e imparerai a gestire esposizione, messa a fuoco e composizione per ottenere incredibili foto notturne, Star-trail e se vuoi Light-painting. (In base alla stagione e alla luna sarà possibile fotografare la via lattea nei periodi da Marzo a Settembre.)</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Podere_Baccoleno_al_tramnto_58b4f15a0f.jpg",
+          "alternativeText": "Viaggio Fotografico nelle crete senesi, podere baccoleno"
+        },
+        {
+          "id": "locpic-1-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/ragazzi_al_baccoleno_al_tramonto_0c3010b52d.jpg",
+          "alternativeText": "tramonto crete senesi viaggio fotografico val d'orcia"
+        },
+        {
+          "id": "locpic-1-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/gruppo_weshooters_sui_campi_fioriti_toscana_b7b97e6a06.jpg",
+          "alternativeText": "weshooters sui campi fioriti toscana viaggio fotografico val d'orcia"
+        }
+      ]
     },
     {
-      "start": "2022-02-05",
-      "end": "2022-02-06"
+      "id": "13",
+      "title": "Cipressini",
+      "description": "Una delle icone della toscana e val d'orcia, i cipressini sono la principale attrazione, diventati anche patrimonio dell'Unesco",
+      "slug": "cipressini",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "3",
+          "title": "Briefing iniziale e poi subito a scattare",
+          "description": "<ul><li>Ore 14: incontro a San Quirico D’Orcia e registrazione partecipanti presso l'hotel convenzionato \"Il Garibaldi\" (o similare)</li><li>Ore 15:30: utilizzeremo questo tempo per spiegare come programmare correttamente un uscita fotografica, utilizzando gli strumenti che abbiamo a disposizione sul web e sulle applicazioni del telefono (a fine workshop riceverai anche un PDF).</li><li>Ore 17 seconda sessione fotografica: ti spiegheremo come utilizzare i filtri ND e GND o come fare la tecnica della doppia esposizione o HDR.</li><li>Ore 18 terza sessione fotografica: Ci dirigiamo verso Asciano per raggiungere la location dove ci apposteremo per fotografare le incredibili luci del tramonto e scoprirai tutti i segreti per foto vincenti.</li><li>Ore 20: cena nel ristorante dell'albergo, dove potrai gustare un ottimo pasto e del buon vino (tutto incluso nel prezzo del tour).</li><li>Ore 22: introduzione e pianificazione per lo studio e la realizzazione degli scatti notturni; sessione fotografica nei pressi dei famosi cipressini toscani; scoprirai trucchi e tecniche per la fotografia notturna e imparerai a gestire esposizione, messa a fuoco e composizione per ottenere incredibili foto notturne, Star-trail e se vuoi Light-painting. (In base alla stagione e alla luna sarà possibile fotografare la via lattea nei periodi da Marzo a Settembre.)</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_valdorcia_cipressini_887a551909.jpg",
+          "alternativeText": "i cipressi al tramonto viaggio fotografico val d'orcia toscana"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_in_notturna_in_Toscana_edc1b2f04a.jpg",
+          "alternativeText": "WeShooters sessione notturna viaggio fotografico val d'orcia"
+        },
+        {
+          "id": "locpic-2-2",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Val_d_Orcia_cipressi_con_via_lattea_9ac54536e2.jpg",
+          "alternativeText": "viaggio fotografico val d'orcia"
+        }
+      ]
     },
     {
-      "start": "2022-03-05",
-      "end": "2022-03-06"
+      "id": "66",
+      "title": "Cappella della Madonna di Vitaleta",
+      "description": "La Cappella della Madonna di Vitaleta è una piccola chiesa posizionata tra le colline della Val d'Orcia, in Toscana. Diventata Patrimonio dell'UNESCO è uno dei luoghi iconici da fotografare specialmente alle prime luci dell'alba immersa nella foschia.",
+      "slug": "cappella-della-madonna-di-vitaleta",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "4",
+          "title": "I colori e le forme delle colline",
+          "description": "<ul><li>Ore 6:30: Sveglia e incontro per partire verso le prime luci dell'alba (alba opzionale nella stagione della via lattea)</li><li>Ore 7:30: Quarta sessione fotografica per fotografare le bellissime luci dell’alba (alba opzionale nella stagione della via lattea)</li><li>Ore 9:00: Rientro in Hotel per gustare una meritata colazione</li><li>Ore 10: Revisione degli scatti (lo decideremo in base anche alle condizioni meteo)</li><li>Ore 13: Fine tour Fotografico e saluti</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Chiesa_di_Vitaleta_nella_nebbia_a467c5882a.jpg",
+          "alternativeText": "Cappella della Madonna di Vitaleta coperta da nebbia viaggio fotografico val dorcia"
+        },
+        {
+          "id": "locpic-3-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Drone_vitaleta_d4aebec3bc.jpg",
+          "alternativeText": "gruppo weshooters vitaleta toscana viaggio fotografico val d'orcia"
+        }
+      ]
     },
     {
-      "start": "2022-04-09",
-      "end": "2022-04-10"
-    },
-    {
-      "start": "2022-05-14",
-      "end": "2022-05-15"
-    },
-    {
-      "start": "2022-06-04",
-      "end": "2022-06-05"
-    },
-    {
-      "start": "2022-07-09",
-      "end": "2022-07-10"
-    },
-    {
-      "start": "2022-08-06",
-      "end": "2022-08-07"
-    },
-    {
-      "start": "2022-09-24",
-      "end": "2022-09-25"
-    },
-    {
-      "start": "2022-10-22",
-      "end": "2022-10-23"
-    },
-    {
-      "start": "2022-11-19",
-      "end": "2022-11-20"
-    },
-    {
-      "start": "2022-12-17",
-      "end": "2022-12-18"
-    },
-    {
-      "start": "2023-01-07",
-      "end": "2023-01-08"
-    },
-    {
-      "start": "2023-03-25",
-      "end": "2023-03-26"
-    },
-    {
-      "start": "2023-06-17",
-      "end": "2023-06-18"
-    },
-    {
-      "start": "2023-09-16",
-      "end": "2023-09-17"
-    },
-    {
-      "start": "2023-11-04",
-      "end": "2023-11-05"
-    },
-    {
-      "start": "2024-01-20",
-      "end": "2024-01-21"
-    },
-    {
-      "start": "2023-12-15",
-      "end": "2023-12-16"
-    },
-    {
-      "start": "2024-03-23",
-      "end": "2024-03-24"
-    },
-    {
-      "start": "2024-02-17",
-      "end": "2024-02-18"
-    },
-    {
-      "start": "2024-04-13",
-      "end": "2024-04-14"
-    },
-    {
-      "start": "2024-10-12",
-      "end": "2024-10-13"
-    },
-    {
-      "start": "2024-06-08",
-      "end": "2024-06-09"
-    },
-    {
-      "start": "2024-09-14",
-      "end": "2024-09-15"
-    },
-    {
-      "start": "2024-11-09",
-      "end": "2024-11-10"
-    },
-    {
-      "start": "2025-01-04",
-      "end": "2025-01-05"
-    },
-    {
-      "start": "2025-03-22",
-      "end": "2025-03-23"
-    },
-    {
-      "start": "2025-04-26",
-      "end": "2025-04-27"
-    },
-    {
-      "start": "2025-06-14",
-      "end": "2025-06-15"
-    },
-    {
-      "start": "2025-09-06",
-      "end": "2025-09-07"
-    },
-    {
-      "start": "2025-11-15",
-      "end": "2025-11-16"
-    },
-    {
-      "start": "2025-10-18",
-      "end": "2025-10-19"
-    },
-    {
-      "start": "2025-07-05",
-      "end": "2025-07-06"
-    },
-    {
-      "start": "2026-01-24",
-      "end": "2026-01-25"
-    },
-    {
-      "start": "2026-02-21",
-      "end": "2026-02-22"
-    },
-    {
-      "start": "2026-03-28",
-      "end": "2026-03-29"
+      "id": "195",
+      "title": "Poggio Covili",
+      "description": "Poggio Covili è un tipico casale della Val d'Orcia in Toscana, il filare di cipressi è sicuramente un bel colpo d'occhio da vedere e fotografare.",
+      "slug": "poggio-covili",
+      "locale": "it",
+      "state": {
+        "name": "Italia",
+        "slug": "italia",
+        "locale": "it",
+        "description": "<p>Incredibili viaggi fotografici tra le più belle location che il nostro paese ci regala. Da Nord a Sud unisciti in uno di questi tour per vivere incredibili esperienze fotografiche tra paesaggi montani, collinari o urbani.</p>"
+      },
+      "steps": [
+        {
+          "id": "3",
+          "title": "Briefing iniziale e poi subito a scattare",
+          "description": "<ul><li>Ore 14: incontro a San Quirico D’Orcia e registrazione partecipanti presso l'hotel convenzionato \"Il Garibaldi\" (o similare)</li><li>Ore 15:30: utilizzeremo questo tempo per spiegare come programmare correttamente un uscita fotografica, utilizzando gli strumenti che abbiamo a disposizione sul web e sulle applicazioni del telefono (a fine workshop riceverai anche un PDF).</li><li>Ore 17 seconda sessione fotografica: ti spiegheremo come utilizzare i filtri ND e GND o come fare la tecnica della doppia esposizione o HDR.</li><li>Ore 18 terza sessione fotografica: Ci dirigiamo verso Asciano per raggiungere la location dove ci apposteremo per fotografare le incredibili luci del tramonto e scoprirai tutti i segreti per foto vincenti.</li><li>Ore 20: cena nel ristorante dell'albergo, dove potrai gustare un ottimo pasto e del buon vino (tutto incluso nel prezzo del tour).</li><li>Ore 22: introduzione e pianificazione per lo studio e la realizzazione degli scatti notturni; sessione fotografica nei pressi dei famosi cipressini toscani; scoprirai trucchi e tecniche per la fotografia notturna e imparerai a gestire esposizione, messa a fuoco e composizione per ottenere incredibili foto notturne, Star-trail e se vuoi Light-painting. (In base alla stagione e alla luna sarà possibile fotografare la via lattea nei periodi da Marzo a Settembre.)</li></ul>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-4-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/poggio_covili_fila_di_cipressi_535d8faef6.jpg",
+          "alternativeText": "viaggio fotografico val d'orcia toscana worskhop"
+        }
+      ]
     }
   ],
   "reviews": [
     {
-      "rating": 5
+      "id": "3",
+      "title": "Val d'orcia",
+      "description": "Il sogno di ogni fotografo e appassionato che grazie alla competenza degli istruttori è diventato realtà. Ho visto e fotografato posti che da solo non avrei mai scoerto imparando tecniche fotografiche che mi saranno molto utili in futuro. Consigliatissimo!!! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2015-07-19T15:40:59.000Z"
     },
     {
-      "rating": 5
+      "id": "11",
+      "title": "10 ",
+      "description": "E' stata un'esperienza fantastica, che mi ha permesso di scoprire come sia possibile e divertente fotografare il cielo stellato, in tanti modi diversi. Veramente rare anche la gentilezza, disponibilità e competenza degli insegnanti...Lo consiglio a tutti ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2015-07-23T12:05:47.000Z"
     },
     {
-      "rating": 5
+      "id": "13",
+      "title": "Hills Landscape Val D'Orcia 8 agosto 2015",
+      "description": "Luca e Marco due ottimi maestri che mi hanno fatto scoprire con occhi diversi questi luoghi a me cari. Competenti, cordiali e disponibili; il viaggio fotografico è da consigliare vivamente!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2015-08-09T17:00:56.000Z"
     },
     {
-      "rating": 5
+      "id": "14",
+      "title": "workshop Val d'Orcia",
+      "description": "Il viaggio fotografico è stato interessante e divertente. Ho imparato la tecnica per fotografare le stelle, ora non mi resta che fare degli scatti. I due tutor sono molto preparati e simpatici per cui è stato facile entrare sintonia.Bravi continuerò a seguirvi e perchè no fare altri viaggio fotografico con voi.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2015-08-10T16:48:08.000Z"
     },
     {
-      "rating": 5
+      "id": "19",
+      "title": "Feeling good",
+      "description": "Prima esperienza di viaggio fotografico fotografico \" sul campo\" ( e che campo !!!! ). Gruppo simpatico e open mind ovviamente eterogeneo ma, altrettanto ovviamente, con una passione comune : la fotografia. Due insegnanti / capo gruppo diversi ma complementari, competenti, entusiasti, con tanta voglia e disponibilità ad insegnare ed ascoltare che non si sono mai sottratti a nessuna richiesta. Simpatia e convivialità hanno contribuito a rendere il viaggio fotografico molto gradevole ( qualche ora di jogging in più ci aiuterà a riequilibrare il fisico provato da nostrane libagioni !!!! ). Direi che in un giorno e mezzo non sarebbe stato possibile fare molto altro. Grazie anche a chi aveva ordinato una splendida nottata stellata ed è stato esaudito ! Purtroppo il clima di novembre  non ci ha potuto permettere una notturna prolungata .",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2016-11-13T21:24:56.000Z"
     },
     {
-      "rating": 5
+      "id": "27",
+      "title": "Bellissima esperienza!",
+      "description": "Marco è stato paziente e bravissimo a darci i giusti suggerimenti e consigli!Le location fantastiche e ispiranti!Se posso dare un piccolo consiglio è quello di specificare di che filtri disponete prima della partenza così magari ci si può organizzare meglio ;)Però tutto davvero bellissimo! Alla prossima! :)",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2017-05-26T12:20:15.000Z"
     },
     {
-      "rating": 5
+      "id": "28",
+      "title": "Fantastica esperienza.",
+      "description": "Marco è preparatissimo e molto paziente, di qualsiasi cosa abbiate bisogno vi sa dare le giuste spiegazioni, ho imparato molto grazie a lui!La location è fantastica! Ci son stati proposti tantissimi spunti fotografici, uno più bello dell'altro! Peccato che in qualche occasione il meteo non abbia accompagnato molto, ma comunque con i consigli che Marco ci ha dato per la post, vengono fuori ottime foto!Organizzazione in generale ottima! Punto di ritrovo facile da raggiungere e comodo per parcheggiare, albergo a pochi passi in centro al paese, pasti di qualità compresi nel prezzo in ottime strutture.Che dire.... DA RIFARE!!!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2017-06-27T07:55:24.000Z"
     },
     {
-      "rating": 5
+      "id": "29",
+      "title": "Esperienza unica. ",
+      "description": "Workshop stupendo, posti meravigliosi, organizzato nei minimi dettagli e cosa che fa davvero la differenza è che Marco ha una conoscenza dettagliata del posto, ciò contribuisce a vivere un'esperienza unica e tornare a casa con foto meravigliose. Personalmente ho percorso 1200km per assistere, sono valsi la pena! Grazie a presto. ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2017-06-30T08:08:11.000Z"
     },
     {
-      "rating": 5
+      "id": "30",
+      "title": "Val d'Orcia ,giugno 2017",
+      "description": "E stato bellissimo...Sono anni che guardo il cielo stellato,ora ho imparato a fotografarlo, grazie a voi..!!!Imparare e condividere é stato bellissimo immersi in un paesaggio unico come la Val d'Orcia..Spero di tornarci..!!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2017-07-04T15:12:56.000Z"
     },
     {
-      "rating": 5
+      "id": "32",
+      "title": "Io vi ci manderei......100.000 Mila persone (anzi no perché altrimenti. Imparano tutte)",
+      "description": "Divertito, impressionato dalla mole di nozioni ricevute, immerso nel mettere in pratica quello che si riceve:la Toscana più bella, la notte stellata, le onde delle colline, le macchine fotografiche, i pochi allievi, gli obiettivi, i filtri , i cavalletti, il vento caldo notturno, i PICI senesi, i posti a quell'ora, il tramonto, l alba, il sonno, il caldo, il freddo, gli scatti, i controluce, i colori, VOI e gli altri allievi. Non so cosa ho lasciato ma credo che tutto questo sia già sufficiente. Ci si vede prossimamente.....di sicuro",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2017-08-29T12:54:15.000Z"
     },
     {
-      "rating": 5
+      "id": "48",
+      "title": "Ottima organizzazione",
+      "description": "Piacevole e stimolante fine settimana tra le colline della Val d'Orcia! Complimenti a Marco e ad Alessandro per la vostra competenza, disponibilità ed organizzazione. Due giornate intense, ricche di nuovi spunti e interessanti nozioni! Grazie di tutto :)",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2017-11-29T11:07:05.000Z"
     },
     {
-      "rating": 5
+      "id": "51",
+      "title": "Val D'Orcia ",
+      "description": "Come passare un piacevole fine settimana immersi nella fotografia. Due insegnanti pazienti e preparati ci hanno guidato tra le colline della Val D'Orcia, ci hanno seguito dallo scatto fino alla post produzione per farci portare a casa bellissime foto. Si impara tanto, è un viaggio fotografico per tutti esperti e principianti. Anche l'atmosfera che si crea tra i partecipanti è piacevole e rilassata, lo consiglio a tutti!! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2017-12-26T11:09:00.000Z"
     },
     {
-      "rating": 5
+      "id": "53",
+      "title": "Sicuramente da fare",
+      "description": "Sono stati due giorni decisamente intensi e piacevoli, coronati da un'alba spettacolare con spiegazioni sull' uso dei filtri, sulla fotografia di paesaggio e su quella notturna molto chiare e dettagliate. Marco e Alessandro si sono dimostrati un mix di simpatia, competenza, professionalità e passione. Esperienza sicuramente da ripetere e da consigliare. Molto interessante anche la parte di post produzione. Sarebbe sicuramente bello se poteste preparare qualche video tutorial per poter ripassare tutti i trucchi di post imparati (dopo una notte di fotografia, di calciatori vocianti ed una sveglia prima dell'alba diventa difficile ricordare tutti i passaggi). Spero di riuscire a rincontravi in  altri viaggio fotografico ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-01-21T17:40:00.000Z"
     },
     {
-      "rating": 5
+      "id": "60",
+      "title": "Val d'Orcia 2018",
+      "description": "..Io son di poche parole agrazziate, di conseguenza  ho anche  poco da dire.... i ragazzacci son simpatici e bravi se fosse, sicuramente ci tornerei, a fare un giro con loro. Si, perchè sanno teasformare una lezione in qualcosa di naturale, quasi scontato, facile e divertente. Quindi un Super Ok.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-02-10T19:44:19.000Z"
     },
     {
-      "rating": 5
+      "id": "99",
+      "title": "Workshop Val d'Orcia ",
+      "description": "Buongiorno a tutti, visto l'ottima esperienza avuta con il viaggio fotografico alle cinque terre fatto nei mesi successivi non mi sono lasciato scappare la possibilità di quest'altro viaggio fotografico in una terra fantastica quale la Val d'Orcia. Come al solito organizzazzione impeccabile. Alessandro lo conoscevo già dal corso prima mentre Marco ho avuto il piacere di conoscerlo in questo corso. I ragazzi sono molto preparati e sono molto bravi nello spiegarti le cose. Molto positivo il  fatto di poter utilizzare l'attrezzatura che mettono a disposizione come filtri a lastra cavalletti ed anche obiettivi. Beh che dire, Lo consiglio a tutti. Aspetteremi per la Provenza che sarò dei vostri!!!!!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-04-16T14:57:10.000Z"
     },
     {
-      "rating": 5
+      "id": "100",
+      "title": "Val d'Orcia",
+      "description": "Il meteo non ci ha assistito ma Marco e Alessandro sono veramente preparati, simpatici e pazienti.\nInteressante poter provare il materiale che ti mettono a disposizione.\nMolto soddisfatto",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-04-16T18:07:24.000Z"
     },
     {
-      "rating": 5
+      "id": "101",
+      "title": "alla ricerca di scatti fotografici in Val d'Orcia",
+      "description": "Ottima esperienza, siamo diventati da subito un gruppo di amici appassionati. Marco e Alessandro si sono dimostrati anche degli ottimi insegnanti sempre disposti a darti il consiglio giusto sia in fase di scatto, sia nella post produzione.\nSperiamo sicuramente di poter ripetere l'esperienza alla scoperta di nuovi fantastici paesaggi!!\nGrazie di tutto e buon lavoro!\n\nMichele e Rosita",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-04-16T19:34:55.000Z"
     },
     {
-      "rating": 5
+      "id": "108",
+      "title": " ricerca di scatti fotografici in Val d'Orcia",
+      "description": "Sono stati due giorni decisamente intensi e piacevoli, coronati da un'alba spettacolare con spiegazioni sull' uso dei filtri, sulla fotografia di paesaggio e su quella notturna molto chiare e dettagliate. Marco e Alessandro si sono dimostrati un mix di simpatia, competenza, professionalità e passione. Esperienza sicuramente da ripetere e da consigliare. Molto interessante anche la parte di post produzione. Sarebbe sicuramente bello se poteste preparare qualche video tutorial per poter ripassare tutti i trucchi di post imparati (dopo una notte di fotografia, di calciatori vocianti ed una sveglia prima dell'alba diventa difficile ricordare tutti i passaggi). Spero di riuscire a rincontravi in altri viaggio fotografico\n\n",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-05-22T11:19:56.000Z"
     },
     {
-      "rating": 5
+      "id": "109",
+      "title": "Work in Val’Dorcia ",
+      "description": "Poche parole per dire che è stata una bellissima esperienza , Marco e Alessandro ci hanno guidato con professionalità passione e simpatia , sicuramente la notturna è stato il momento più emozionante del work , ho portato a casa nozioni che cercherò di mettere in pratica , il post produzione è stato breve ma capisco dato il poco tempo a disposizione . Spero di poter condividere ancora un altro work con voi !!! Bravi bravissimi ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-05-23T22:24:03.000Z"
     },
     {
-      "rating": 5
+      "id": "111",
+      "title": "Una bella esperienza!!! Da non perdere",
+      "description": "Due giorni che sono volati in modo piacevole, organizzati in modo impeccabile tra sessioni fotografiche, spiegazioni sulle tecniche fotografiche, splendidi paesaggi e buona cucina.\nMarco e Alessandro oltre a essere due belle persone sono anche esperti e hanno il merito di trasmetterti l'entusiasmo e di rendere alla portata di tutti le cose difficili.\nSempre disponibili e attenti: anche se non fai domande vengono vicino a te per sapere come va e se hai bisogno di aiuto.\nBravi, complimenti. A presto.\nPaolo Zaccagnini\n",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-06-10T19:07:16.000Z"
     },
     {
-      "rating": 5
+      "id": "112",
+      "title": "Esperienza favolosa.",
+      "description": "Workshop organizzato in modo perfetto. Sessioni di scatto, chiacchierate e buon cibo. Complimenti ad Alessandro e Marco per la professionalità e la disponibilità dimostrata. Aiutati anche da condizioni meteo perfette ho potuto finalmente ammirare una meravigliosa via lattea a pochi chilometri da Roma. Consigliato a tutti gli amanti della fotografia paesaggistica.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-06-12T07:52:07.000Z"
     },
     {
-      "rating": 5
+      "id": "129",
+      "title": "Riconferma",
+      "description": "Grazie.\nE' il secondo viaggio fotografico che faccio con FotografiainDigitale, e ho chiesto espressamente di poter venire perchè c'era Alessandro. Ho avuto modo di conoscere Marco, che si è mostrato disponibilissimo e l'organizzazione è stata come sempre impeccabile. Miriade di filtri NiSi disponibili, obiettivi dai grandangolari ai medi ai supertele, moltiplicatori. E poi la magia degli astroinseguitori, della via Lattea e dell'introduzione al cosmo. Ho ritenuto magnifica la possibilità di aver ricevuto un'introduzione sulla pianificazione della fotografia di paesaggio, davvero uno strumento fondamentale. \nSono ritornato con loro ed esclusivamente con loro perchè il viaggio in Islanda resta ancora una delle cose migliori che ho fatto nella mia vita. Più che per la Val D'Orcia sono ritornato per vedere degli amici, poi passare del tempo scattando.\nE' molto più di un viaggio fotografico.  ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-23T12:25:28.000Z"
     },
     {
-      "rating": 5
+      "id": "130",
+      "title": "Bella Esperienza",
+      "description": "Simpatia, intraprendenza, passione e competenza alla ricerca di un evoluzione continua.\nIn questa frase un po' troppo asettica posso riassumere le impressioni che mi hanno lasciato i due, tre \"foto-ciceroni\" che ci hanno schiuso di fronte agli occhi le bellezze della Val d'Orcia, sussurrandoci nelle orecchie preziosi consigli fotografici.\nUna esperienza appagante. Sia a livello fotografico che umano.\nLa dimostrazione che così come nella vita, nella fotografia tutto é frutto di meticolosa programmazione, sete di conoscenza e studio continuo, il tutto condito da una forte passione che ci guida a sostenere i propri sforzi.\nMarco, Alessandro e Federico (aggregatosi al gruppo docente per l'occasione) sono ragazzi capaci, che alimentano i propri e nostri sogni fotografici. La risposta più concreta a qualsiasi vetusto solone, che ogni tanto si sveglia e ci racconta la favola che i giovani di oggi non hanno voglia di fare nulla.\n\nAlla prossima.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-24T08:42:08.000Z"
     },
     {
-      "rating": 5
+      "id": "131",
+      "title": "Non si finisce mai di imparare",
+      "description": "Ragazzi grazie per il vostro impegno costantemente alto, senza mai cadute di attenzione, per i tanti accorgimenti / strumenti / siti / mezzi da usare  che ci avete mostrato per meglio programmare l'uscita per scattare, per evitare di tornare a casa a scheda vuota o insoddisfatti; tutto nuovo ed utilissimo per me che comunque scatto da qualche anno.\nGrazie per averci sempre indicato la tecnica migliore e l'impostazione migliore della macchinetta per ottenere più originalità ed efficacia nella composizione dello scatto e nell'uso della luce. \nGrazie per i contributi pdf e per tutti i link che ora ci state inviando , mantenendo veramente fede alla vostra parola .\nComplessivamente , alloggio e organizzazione compresi, è stato tutto ottimo perché ho trovato in voi grande passione , correttezza , bravura, capacità di stabilire subito empatia con ognuno di noi, e capacità di insegnare ovvero trasmettere nozioni e tecnica : si puòanche  chiamare professionalità , ma con l’aggiunta di grandi dosi di allegria, entusiasmo  buon umore serenità e flessibilità . A presto Patrizia",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-07-26T09:34:49.000Z"
     },
     {
-      "rating": 5
+      "id": "132",
+      "title": "Un WEEKEND intenso",
+      "description": "La Location si commenta da sola, ma abbiamo avuto modo di confrontarci con 2 istruttori che, nonostante la giovane età, sono molto disponibili  competenti e preparati. Ci vorrebbe almeno una settimana per apprezzare tutte le situazioni e le sfumature della Val D'Orcia ma siamo riusciti a concentrare gli sforzi e portare a casa degli scatti interessanti  nei  momenti e nell'orario in cui ci trovavamo sul posto.... esperienza interessante e, sicuramente, da ripetere....alzando l'asticella",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-08-20T11:49:52.000Z"
     },
     {
-      "rating": 5
+      "id": "133",
+      "title": "Esperienza Fantastica",
+      "description": "Marco e Federico sono stati molto gentili e disponibili, oltre che impeccabili nella selezione delle location, degli orari e nelle spiegazioni tecniche. Ci hanno accompagnato in tantissimi spot fotografici, uno più bello dell'altro! Punto di ritrovo facile da raggiungere e comodo per raggiungere le diverse località, pasti di ottima qualità compresi nel prezzo",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-08-22T11:21:36.000Z"
     },
     {
-      "rating": 5
+      "id": "134",
+      "title": "Molto utile! ",
+      "description": "Ho partecipato al viaggio fotografico in Val d’Orcia ad agosto con Marco e Federico e ne sono felice! Entrambe sono stati molto disponibili e mi hanno dato consigli per ogni scatto. In 24hr ho imparato molto più di quanto potessi immaginare. Grazie ragazzi!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-08-26T13:14:30.000Z"
     },
     {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    },
-    {
-      "rating": 5
-    }
-  ],
-  "pictures": [
-    {
-      "id": "8",
-      "title": "Podere belvedere in Val d'Orcia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "15",
-      "title": "Podere Baccoleno",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "16",
-      "title": "Cipressini in Val d'Orcia",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
-    },
-    {
-      "id": "63",
-      "title": "Cappella della Madonna di Vitaleta",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "id": "135",
+      "title": "Esperienza Fantastica!",
+      "description": "Ho fatto questo viaggio fotografico a metà Gennaio 2018. Essendo pieno inverno, eravamo solamente 4 persone più i due fotografi. Marco e Alessandro ci hanno seguiro uno ad uno ed essendo in pochi era quasi una lezione privata. Nonostante il freddo, la natura ci ha stupito con un’alba con dei colori  veramente incredibile e la notte è stata limpida senza neanche una nuvola. Insomma tra le nozioni e gli aiuti da parte dei fotografi e il meteo a nostro favore, è stato un weekend indimenticabile e sono tornata a casa con un un sacco di nuove conoscenze fotografiche. \nI pranzi e le cene tutto rigorosamente toscano hanno reso il tutto ancora più piacevole. Grazie mille!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-08-29T10:13:24.000Z"
     },
     {
       "id": "137",
+      "title": "COINVOLGENTE",
+      "description": "Fin dai primi istanti ci hanno immerso nel loro mondo, riuscendo a farci capire che mettendo in pratica le nozioni apprese durante il Workshop, potrebbe diventare anche il nostro.\nMarco ed Alessandro oltre che essere due Bravi fotografi degni di Nota, sono due ottimi insegnanti (qualità non da tutti), che con semplicità, nel tempo a disposizione, ci hanno trasmesso sapere e coscienza per scattare e post-produrre una bella foto.\nLocation Favolosa, un dipinto a cielo aperto.\nCi Rivedremo sicuramente.\n\nRoberto",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-09-21T07:15:02.000Z"
+    },
+    {
+      "id": "138",
+      "title": "A quando il prossimo?",
+      "description": "Esperienza unica, dove anche chi è alle prime armi può sentirsi a suo agio grazie alla pazienza, alla professionalità e alla simpatia di Marco e Alessandro, che ti proiettano fin da subito tra i paesaggi meravigliosi che aspettano soltanto di essere fotografati...\nNozioni di fotografia di paesaggio, astrofotografia, post-produzione..\nIl tutto accompagnato da un’ottima cucina...\nA quando il prossimo? ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-09-23T17:53:51.000Z"
+    },
+    {
+      "id": "154",
+      "title": "Val d'orcia ",
+      "description": "2 giornate con Alessandro piene di competenza, di informazioni preziose e di grande passione. Avrò modo di conoscerli meglio in Islanda a Marzo, ma già posso assicurare preparazione e grande soddisfazione! A presto! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2018-11-25T16:49:51.000Z"
+    },
+    {
+      "id": "166",
+      "title": "VAL D'ORCIA marzo 2019",
+      "description": "Location meravigliosa. Organizzazione perfetta. Marco e Alessandro strepitosi. Oltre a professionalità e serietà,  ragazzi che   mettono passione in ciò che fanno e che con calma e molto modo, ti affiancano in tutto ciò che hai bisogno: dalla teoria alla pratica e incredibile one to one!  Mi sono sentita accolta e accettata con semplicità e capita nei miei limiti, seguita passo passo senza mai sentirmi a disagio.  Tornata a casa con un bagaglio di conoscenze ricchissimo, felicissima di aver fatto questa esperienza,  che spero di ripetere in qualche altra meta da loro proposta!  Grazie Marco! Grazie Alessandro! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-03-11T21:32:43.000Z"
+    },
+    {
+      "id": "171",
+      "title": "Val D'Orcia aprile 2019",
+      "description": "Rispondendo direttamente alla domanda sopra dico, Benissimo. Anche mia moglie è stata entusiasta. Se la val D'Orcia fa parte dell'Unesco c'è un perché. Ora ci dobbiamo mettere anche Marco e Alessandro che con la loro esperienza fotografica, la buona didattica, la pazienza nel seguirci e la conoscenza del saper vivere in questo territorio ci hanno fatto trascorrere un perfetto fine settimana. Grazie ragazzi e grazie anche a chi sta dietro le quinte, come in una buona fotografia. I due della RADISA.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-04-08T14:16:31.000Z"
+    },
+    {
+      "id": "174",
+      "title": "Grandiosi ",
+      "description": "Bellissimo Workshop, bravi Marco e Alessandro  in tutto, sia nella organizzazione e sia come insegnanti . Ci tornerò quasi sicuramente x un ultrà tour con loro. \nGrazie . ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-04-09T08:01:16.000Z"
+    },
+    {
+      "id": "175",
+      "title": "Grazie a tutti!",
+      "description": "Con le reflex da poco più di un anno, per cui principianti, ho trascinato consorte 'buttandoci' in quest'avventura per unire due giorni di stacco dalla quotidianità a bei paesaggi, possibilmente, imparando qualcosa.\nAbbiamo trovato un gruppo di persone fantastiche che, assieme ai due coach, non ci hanno mai fatto sentire a disagio e ci hanno trasmesso tutta la passione che ognuno ha per questa arte.\nTorniamo a casa con un bagaglio umano e di apprendimento arricchito!\n",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-04-10T06:05:23.000Z"
+    },
+    {
+      "id": "181",
+      "title": "Avventurosa!",
+      "description": "Prima esperienza di ws fuori dalla mia città, Roma.\nBellissima. \nGruppo di lavoro affiatato e grande sinergia. \nOttima organizzazione.\nGrazie Alessandro e Marco per aver trasmesso la vostra passione, la vostra esperienza e aver insegnato sul campo come realizzare scatti fotografici professionali.\nÈ stata una bellissima avventura a caccia della via lattea! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-05-07T06:36:51.000Z"
+    },
+    {
+      "id": "190",
+      "title": "Professionale",
+      "description": "Professionale mi sembra la parola giusta per definire questo corso, perché  Marco e Alessandro incarnano la mia idea di  ciò che un professionista dovrebbe essere: appassionato, preparato, modesto ma soprattutto generoso nel condividere un sapere conquistato in anni di studio e fatica. Un approccio che si trasmette automaticamente al gruppo così che si lavora bene, in armonia, concentrandosi su ciò che è davvero importante: l'amore per la fotografia e per la natura. Un ottimo investimento (il loro e il nostro) che ritorna tutto e molto di più.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-06-11T07:41:32.000Z"
+    },
+    {
+      "id": "207",
+      "title": "Coppia di fotografi professionali ed affiatati",
+      "description": "Mi sono trovato a mio agio. Molta disponibilità e cortesia. Grazie a Marco ed Alessandro",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-10-01T16:29:44.000Z"
+    },
+    {
+      "id": "208",
+      "title": "Workshop fotografico nella Val D'Orcia",
+      "description": "Direi nel complesso assolutamente soddisfatto.\nMarco e Alessandro sempre disponibili a qualsiasi domanda e sempre con una risposta pronta.\nGiovani ma molto seri e preparati.\nGrazie ancora.\n",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-10-21T14:08:25.000Z"
+    },
+    {
+      "id": "213",
+      "title": "Ottima esperienza in Val D'Orcia",
+      "description": "È stata la mia prima partecipazione ad un viaggio fotografico fotografico, mi sono trovata molto bene e posso dire che gli insegnanti Marco e Alessandro sono stati subito molto disponibili, professionali e ci hanno aiutato durante tutto lo svolgimento del viaggio fotografico dandoci consigli molto utili sia per la fase di scatto che di postproduzione. Disponibili anche dopo per qualsiasi consiglio o chiarimento. Consigliatissimo!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "published_at": "2019-11-03T13:21:21.000Z"
+    }
+  ],
+  "whats_includeds": [
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    },
+    {
+      "title": "Mezza pensione",
+      "description": "La mezza pensione prevede che si possano consumare la colazione e un pasto a scelta tra il pranzo o la cena all'interno della struttura.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/mezza_pensione_3cfc2aa873.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Assicurazione COVID",
+      "description": "Rimborso totale dell'importo per annullamento dovuto alla malattia, alla quarantena, o all'introduzione di nuove restrizioni.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Assicurazione_COVID_026d57d8b3.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "3",
+      "number": 1,
+      "title": "Benvenuto in Val d'Orcia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "3",
+          "title": "Briefing iniziale e poi subito a scattare",
+          "description": "<ul><li>Ore 14: incontro a San Quirico D’Orcia e registrazione partecipanti presso l'hotel convenzionato \"Il Garibaldi\" (o similare)</li><li>Ore 15:30: utilizzeremo questo tempo per spiegare come programmare correttamente un uscita fotografica, utilizzando gli strumenti che abbiamo a disposizione sul web e sulle applicazioni del telefono (a fine workshop riceverai anche un PDF).</li><li>Ore 17 seconda sessione fotografica: ti spiegheremo come utilizzare i filtri ND e GND o come fare la tecnica della doppia esposizione o HDR.</li><li>Ore 18 terza sessione fotografica: Ci dirigiamo verso Asciano per raggiungere la location dove ci apposteremo per fotografare le incredibili luci del tramonto e scoprirai tutti i segreti per foto vincenti.</li><li>Ore 20: cena nel ristorante dell'albergo, dove potrai gustare un ottimo pasto e del buon vino (tutto incluso nel prezzo del tour).</li><li>Ore 22: introduzione e pianificazione per lo studio e la realizzazione degli scatti notturni; sessione fotografica nei pressi dei famosi cipressini toscani; scoprirai trucchi e tecniche per la fotografia notturna e imparerai a gestire esposizione, messa a fuoco e composizione per ottenere incredibili foto notturne, Star-trail e se vuoi Light-painting. (In base alla stagione e alla luna sarà possibile fotografare la via lattea nei periodi da Marzo a Settembre.)</li></ul>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "number": 2,
+      "title": "Le prime luci dell'alba al belvedere",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "4",
+          "title": "I colori e le forme delle colline",
+          "description": "<ul><li>Ore 6:30: Sveglia e incontro per partire verso le prime luci dell'alba (alba opzionale nella stagione della via lattea)</li><li>Ore 7:30: Quarta sessione fotografica per fotografare le bellissime luci dell’alba (alba opzionale nella stagione della via lattea)</li><li>Ore 9:00: Rientro in Hotel per gustare una meritata colazione</li><li>Ore 10: Revisione degli scatti (lo decideremo in base anche alle condizioni meteo)</li><li>Ore 13: Fine tour Fotografico e saluti</li></ul>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Collina",
+      "description": "Viaggio fotografici le forme sinuose del terreno",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Fotografia Notturna",
+      "description": "Impara a scattare in luce lunare o con le stelle",
+      "locale": "it"
+    },
+    {
+      "id": "hl-6",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [
+    {
+      "title": "Requisiti Fisici",
+      "description": "<p>Il viaggio fotografico o workshop è adatto a tutti, non serve avere una particolare preparazione fisica. L'esperienza è stata pensata per essere accessibile e piacevole per chiunque.</p>",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/requisiti_viaggio_fotografico_c1570cd0f3.png"
+      }
+    },
+    {
+      "title": "Esperienza Fotografica",
+      "description": "<p>Per partecipare a questo viaggio fotografico (o workshop) non servono grandi competenze tecniche. È sufficiente avere familiarità con le basi della fotografia per l'uso di ISO, tempi e diaframmi e le pricipali funzioni della tua fotocamera. Ti consigliamo di portare con te il libretto di istruzioni in forma digitale per eventuali consultazioni durante l'evento.</p>",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/esperienza_fotografica_83043837b8.png"
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "id": "4",
+      "start": "2021-12-18",
+      "end": "2021-12-19",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 190,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "start": "2022-01-08",
+      "end": "2022-01-09",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 190,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "start": "2022-02-05",
+      "end": "2022-02-06",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 190,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "start": "2022-03-05",
+      "end": "2022-03-06",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 190,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "start": "2022-04-09",
+      "end": "2022-04-10",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 190,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "start": "2022-05-14",
+      "end": "2022-05-15",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 399,
+      "deposit": 1,
+      "balance": 398,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 190,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "start": "2022-06-04",
+      "end": "2022-06-05",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 369,
+      "deposit": 100,
+      "balance": 269,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 190,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "start": "2022-07-09",
+      "end": "2022-07-10",
+      "status": "waitingList",
+      "maxPax": 10,
+      "price": 369,
+      "deposit": 100,
+      "balance": 269,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 190,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "start": "2022-08-06",
+      "end": "2022-08-07",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 299,
+      "deposit": 100,
+      "balance": 199,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "start": "2022-09-24",
+      "end": "2022-09-25",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 299,
+      "deposit": 100,
+      "balance": 199,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "start": "2022-10-22",
+      "end": "2022-10-23",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 299,
+      "deposit": 100,
+      "balance": 199,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "start": "2022-11-19",
+      "end": "2022-11-20",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 299,
+      "deposit": 100,
+      "balance": 199,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "start": "2022-12-17",
+      "end": "2022-12-18",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 299,
+      "deposit": 100,
+      "balance": 199,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "79",
+      "start": "2023-01-07",
+      "end": "2023-01-08",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "81",
+      "start": "2023-03-25",
+      "end": "2023-03-26",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "82",
+      "start": "2023-06-17",
+      "end": "2023-06-18",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 150,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "start": "2023-09-16",
+      "end": "2023-09-17",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 40,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "103",
+      "start": "2023-11-04",
+      "end": "2023-11-05",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "114",
+      "start": "2024-01-20",
+      "end": "2024-01-21",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "115",
+      "start": "2023-12-15",
+      "end": "2023-12-16",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "124",
+      "start": "2024-03-23",
+      "end": "2024-03-24",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "125",
+      "start": "2024-02-17",
+      "end": "2024-02-18",
+      "status": "waitingList",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 59,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "146",
+      "start": "2024-04-13",
+      "end": "2024-04-14",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 59,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "147",
+      "start": "2024-10-12",
+      "end": "2024-10-13",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 59,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/giacomo_finotti/",
+          "firstName": "Giacomo",
+          "lastName": "Finotti",
+          "username": "giacomofinotti",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
+          },
+          "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+        }
+      ]
+    },
+    {
+      "id": "156",
+      "start": "2024-06-08",
+      "end": "2024-06-09",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "157",
+      "start": "2024-09-14",
+      "end": "2024-09-15",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "159",
+      "start": "2024-11-09",
+      "end": "2024-11-10",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 100,
+      "balance": 249,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/giacomo_finotti/",
+          "firstName": "Giacomo",
+          "lastName": "Finotti",
+          "username": "giacomofinotti",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
+          },
+          "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+        }
+      ]
+    },
+    {
+      "id": "168",
+      "start": "2025-01-04",
+      "end": "2025-01-05",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "173",
+      "start": "2025-03-22",
+      "end": "2025-03-23",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 7,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "175",
+      "start": "2025-04-26",
+      "end": "2025-04-27",
+      "status": "confirmed",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "178",
+      "start": "2025-06-14",
+      "end": "2025-06-15",
+      "status": "almostFull",
+      "maxPax": 10,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 50,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/giacomo_finotti/",
+          "firstName": "Giacomo",
+          "lastName": "Finotti",
+          "username": "giacomofinotti",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
+          },
+          "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+        }
+      ]
+    },
+    {
+      "id": "200",
+      "start": "2025-09-06",
+      "end": "2025-09-07",
+      "status": "confirmed",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 130,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "201",
+      "start": "2025-11-15",
+      "end": "2025-11-16",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 130,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "224",
+      "start": "2025-10-18",
+      "end": "2025-10-19",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 100,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "225",
+      "start": "2025-07-05",
+      "end": "2025-07-06",
+      "status": "confirmed",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 100,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "231",
+      "start": "2026-01-24",
+      "end": "2026-01-25",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 120,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "233",
+      "start": "2026-02-21",
+      "end": "2026-02-22",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 349,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "236",
+      "start": "2026-03-28",
+      "end": "2026-03-29",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 120,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "Assicurazione COVID e m/b",
+      "answer": "<p>Al momento della prenotazione si può scegliere di assicurare il viaggio fotografico con un sovra-prezzo che varia dalle 20,60€ fino ad un massimo di 60€ (il prezzo varia a seconda del tour fotografico e della fascia di età del richiedente). Questo tipo di assicurazione copre sia le spese medico/bagaglio, sia <span style=\"background-color:rgb(255,255,255);color:rgb(51,51,51);\">qualsiasi inconveniente causato da COVID-19. La nostra agenzia viaggi resta a disposizione per qualsiasi chiarimento in merito.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Conferma del Tour Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 10 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "alba al belvedere in val d'orcia",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_valdorcia_482205674f.jpg"
+  },
+  "pictures": [
+    {
+      "id": "0",
+      "type": "tour",
+      "title": "Podere belvedere in Val d'Orcia",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_valdorcia_2c736ef8d6.jpg",
+      "alt": "alba al podere belvedere dal viaggio fotografico val d'orcia"
+    },
+    {
+      "id": "1",
+      "type": "tour",
+      "title": "Podere Baccoleno",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Podere_Baccoleno_al_tramnto_58b4f15a0f.jpg",
+      "alt": "Viaggio Fotografico nelle crete senesi, podere baccoleno"
+    },
+    {
+      "id": "2",
+      "type": "tour",
+      "title": "Cipressini in Val d'Orcia",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_valdorcia_cipressini_887a551909.jpg",
+      "alt": "i cipressi al tramonto viaggio fotografico val d'orcia toscana"
+    },
+    {
+      "id": "3",
+      "type": "tour",
+      "title": "Cappella della Madonna di Vitaleta",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Chiesa_di_Vitaleta_nella_nebbia_a467c5882a.jpg",
+      "alt": "Cappella della Madonna di Vitaleta coperta da nebbia viaggio fotografico val dorcia"
+    },
+    {
+      "id": "4",
+      "type": "group",
       "title": "Alunni fotografano alba in toscana",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alba_in_val_d_orcia_a5b3a10a2c.jpg",
+      "alt": "alunni che fotografano alba viaggio fotografico val d'orcia"
     },
     {
-      "id": "143",
+      "id": "5",
+      "type": "group",
       "title": "WeShooters nel viaggio in Toscana",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/foto_gruppo_dei_ragazzi_in_toscana_ed2c5123a2.jpg",
+      "alt": "foto di gruppo dal viaggio fotografico val d'orcia e crete senesi"
     },
     {
-      "id": "152",
+      "id": "6",
+      "type": "group",
       "title": "WeShooters in notturna in Toscana",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/We_Shooters_in_notturna_in_Toscana_edc1b2f04a.jpg",
+      "alt": "WeShooters sessione notturna viaggio fotografico val d'orcia"
     },
     {
-      "id": "153",
+      "id": "7",
+      "type": "group",
       "title": "WeShooters al tramonto podere baccoleno",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/ragazzi_al_baccoleno_al_tramonto_0c3010b52d.jpg",
+      "alt": "tramonto crete senesi viaggio fotografico val d'orcia"
     },
     {
-      "id": "160",
+      "id": "8",
+      "type": "group",
       "title": "Drone weshooters vitaleta",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Drone_vitaleta_d4aebec3bc.jpg",
+      "alt": "gruppo weshooters vitaleta toscana viaggio fotografico val d'orcia"
     },
     {
-      "id": "161",
+      "id": "9",
+      "type": "group",
       "title": "WeShooters sui campi fioriti toscana",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/gruppo_weshooters_sui_campi_fioriti_toscana_b7b97e6a06.jpg",
+      "alt": "weshooters sui campi fioriti toscana viaggio fotografico val d'orcia"
     },
     {
-      "id": "162",
+      "id": "10",
+      "type": "group",
       "title": "weshooters sui campi di grano",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/weshooters_sui_campi_di_grano_7cccc279ae.jpg",
+      "alt": "fotografo campo di grano viaggio fotografico val d'orcia"
     },
     {
-      "id": "295",
+      "id": "11",
+      "type": "tour",
       "title": "Poggio Covili",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/poggio_covili_fila_di_cipressi_535d8faef6.jpg",
+      "alt": "viaggio fotografico val d'orcia toscana worskhop"
+    },
+    {
+      "id": "locpic-0-2",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/luci_e_ombre_colline_val_d_orcia_8dc90d5c08.jpg",
+      "alt": "Marika Greco luci e ombre colline viaggio fotografico  val d'orcia"
+    },
+    {
+      "id": "locpic-0-3",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Colline_Val_d_orcia_tramonto_4d2d90a2f1.jpg",
+      "alt": "Marika Greco colline toscana viaggio fotografico val d'orcia"
+    },
+    {
+      "id": "locpic-2-2",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Val_d_Orcia_cipressi_con_via_lattea_9ac54536e2.jpg",
+      "alt": "viaggio fotografico val d'orcia"
     }
   ]
 }

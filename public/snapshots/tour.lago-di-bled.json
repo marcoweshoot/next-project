@@ -1,71 +1,570 @@
 {
+  "id": "8",
+  "tour_id": "lago-di-bled-e-paesaggi-sloveni",
   "slug": "lago-di-bled",
   "title": "Slovenia: viaggio  fotografico sulle sponde del Lago di Bled",
-  "states": {
-    "slug": "slovenia"
-  },
+  "description": "<p>Preparati a vivere un viaggio tra luci, riflessi e colori unici, dove ogni scatto racconterà una storia. Un Viaggio fotografico dedicato a raccontare l’Autunno in uno dei luoghi più suggestivi d’Europa: il lago di Bled e le sue colline circostanti.<br>La magia della Slovenia si estende per centinaia di chilometri, le <strong>colline e le chiesette</strong> tipiche di questi luoghi affascinanti regalano atmosfere suggestive che difficilmente si trovano in altri paesi; è per questo che abbiamo scelto questa spettacolare location per un'avventura fotografica.<br>In questa esperienza ti porteremo alla scoperta di questi luoghi mistici, partendo dal <strong>lago di Bled</strong>, famoso e straordinario luogo di ispirazione, fino ad arrivare alle iconiche chiese che si ergono sulle colline slovene.<br>Saranno quattro giorni ricchi di informazioni e nozioni tecniche per la tua ricerca fotografica; svolgeremo delle sessioni di pratica e di teoria al fine di migliorare le tue competenze e ti invieremo dei video di postproduzione al termine dell'evento. Unisciti a questa straordinaria avventura alla scoperta di questi paesaggi incantati.<br>Affrettati a prenotare il tuo posto: solo 7 persone potranno partecipare per garantire la migliore esperienza possibile a ciascuno di voi.<br>Prima dell'inizio del corso, avrai accesso a un gruppo WhatsApp riservato ai corsisti per scambi di consigli e organizzazione dell'uscita fotografica, riceverai anche un estratto del nostro PDF sulla Pianificazione e un video corso per iniziare a muovere i primi passi con la post-produzione con Photoshop.</p>",
+  "excerpt": "Scopri la magia del lago di Bled con le sui luci morbide dell'alba e del tramonto.",
+  "difficulty": "easy",
+  "experience_level": "Dinamico",
+  "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e tele zoom (dai 24mm a 300mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Scarpe da Trekking</li></ul>",
+  "video_url": null,
+  "locale": "it",
   "places": {
-    "slug": "alpi-giulie"
+    "slug": "alpi-giulie",
+    "locale": "it",
+    "name": "Alpi Giulie"
   },
-  "sessions": [
+  "states": {
+    "name": "Slovenia",
+    "slug": "slovenia",
+    "description": "<p>La Slovenia è nota sicuramente per il lago di Bled e il piccolo isolotto al centro con il castello che alle prime luci dell'alba o al tramonto regala forti emozioni. Nei nostri viaggi fotografici imparerai a scoprire una nazione ricca di paesaggi variegati, tra laghi, montagne e morbide colline.</p>",
+    "locale": "it"
+  },
+  "SEO": {
+    "metaTitle": "Viaggio Fotografico lago di Bled 2025 | WeShoot",
+    "metaDescription": "Un viaggio fotografico interamente dedicato al lago di Bled ed ai paesaggi incantati delle colline slovene circostanti.",
+    "structuredData": null
+  },
+  "locations": [
     {
-      "start": "2021-11-26",
-      "end": "2021-11-28"
+      "id": "16",
+      "title": "Lago di Bled",
+      "description": "Il lago di Bled è un lago di origine glaciale, situato nella zona delle Alpi Giulie della Slovenia. Al suo interno ha una piccola isola dove sorgono alcune edifici tra cui un castello medievale e una chiesa.",
+      "slug": "lago-di-bled",
+      "locale": "it",
+      "state": {
+        "name": "Slovenia",
+        "slug": "slovenia",
+        "locale": "it",
+        "description": "<p>La Slovenia è nota sicuramente per il lago di Bled e il piccolo isolotto al centro con il castello che alle prime luci dell'alba o al tramonto regala forti emozioni. Nei nostri viaggi fotografici imparerai a scoprire una nazione ricca di paesaggi variegati, tra laghi, montagne e morbide colline.</p>"
+      },
+      "steps": [
+        {
+          "id": "13",
+          "title": "Paesaggi fiabeschi riflessi sul lago",
+          "description": "<p>Alba: Jamnik – The Church of St. Primož and Felicijan.<br>Tornare in questo spot la mattina presto offre una luce completamente diversa, con possibilità di nebbie basse nella valle e un’atmosfera unica. Focus su contrasto tra luce e ombre, dettagli della chiesa e sfondo montuoso. Rientro a Bled per colazione. Mattina &amp; Pomeriggio: Esplorazione delle rive del Lago di Bled. Passeggiata lungo il lago, esplorando diversi angoli e punti di vista. Composizioni con alberi autunnali, pontili e dettagli d’atmosfera. Pausa pranzo e relax.&nbsp;<br>Tramonto: Castello di Bled e vista dall’alto Sessione di fotografia panoramica dal Castello di Bled, con vista spettacolare sull’intero lago e sulle Alpi Giulie. Tecniche di bilanciamento della luce in condizioni di forte contrasto.&nbsp;<br>Notturna: Lago di Bled – Fotografia in blue hour e notturna. Sessione di fotografia notturna con la chiesa illuminata sull’isola di Bled. Tecniche di lunga esposizione, gestione delle alte luci e fotografia atmosferica. Rientro in hotel e riposo.</p>",
+          "locale": "it"
+        },
+        {
+          "id": "12",
+          "title": "Tra laghi e splendide colline slovene",
+          "description": "<p>Alba: Lago di Bled – Vista panoramica dalla collina Ojstrica&nbsp;<br>Escursione breve fino al punto panoramico di Ojstrica per catturare il lago con la chiesa al centro, immerso nei colori autunnali. Tecniche di focus stacking e gestione della profondità di campo con il grandangolo. Possibilità di scattare riflessi perfetti, se l’acqua è calma.<br>Ritorno in hotel per colazione. Mattina &amp; Pomeriggio: Lago di Bohinj &amp; (opzionale) Vogel Ski Center. Trasferimento al Lago di Bohinj, il più grande della Slovenia, incorniciato dalle Alpi Giulie. Sessione fotografica con focus su riflessi, profondità e dettagli autunnali.<br>Uso del teleobiettivo per comprimere le montagne e il lago in un’unica composizione potente.<br>Se il tempo lo permette: Salita in funivia al Vogel Ski Center, per una vista spettacolare sulle montagne e sul Triglav. Rientro a Bled nel tardo pomeriggio.<br>Tramonto: Chiesetta di Santa Maria sull’Isola di Bled. Shooting dalla riva del lago, sfruttando il crepuscolo e le luci che iniziano ad accendersi sulla chiesa. Possibilità di utilizzare il drone per scatti dall’alto, con il lago che si illumina nei toni del blu e dell’oro.<br>Rientro in struttura e cena.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-0-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lago_di_bled_alba_9aa730ebb0.jpg",
+          "alternativeText": "viaggio fotografico lago di bled, slovenia"
+        }
+      ]
     },
     {
-      "start": "2022-10-28",
-      "end": "2022-10-30"
+      "id": "17",
+      "title": "Chiesa Sveti Tomaz",
+      "description": "Una chiesa tipica slovena, posizionata in cima ad una collina con attorno un paesaggio incredibile.",
+      "slug": "chiesa-sveti-tomaz",
+      "locale": "it",
+      "state": {
+        "name": "Slovenia",
+        "slug": "slovenia",
+        "locale": "it",
+        "description": "<p>La Slovenia è nota sicuramente per il lago di Bled e il piccolo isolotto al centro con il castello che alle prime luci dell'alba o al tramonto regala forti emozioni. Nei nostri viaggi fotografici imparerai a scoprire una nazione ricca di paesaggi variegati, tra laghi, montagne e morbide colline.</p>"
+      },
+      "steps": [],
+      "pictures": [
+        {
+          "id": "locpic-1-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Chiesa_Sveti_Tomaz_4e8eecd8a1.jpg",
+          "alternativeText": "Chiesa Sveti Tomaz al tramonto viaggio fotografico lago di bled"
+        }
+      ]
     },
     {
-      "start": "2022-12-16",
-      "end": "2022-12-18"
+      "id": "18",
+      "title": "Villaggio di Jamnik",
+      "description": "Il villaggio di Jamnik con la sua chiesa di San Primus e Felicianus è uno dei luoghi più fotografati in Slovenia. ",
+      "slug": "villaggio-di-jamnik",
+      "locale": "it",
+      "state": {
+        "name": "Slovenia",
+        "slug": "slovenia",
+        "locale": "it",
+        "description": "<p>La Slovenia è nota sicuramente per il lago di Bled e il piccolo isolotto al centro con il castello che alle prime luci dell'alba o al tramonto regala forti emozioni. Nei nostri viaggi fotografici imparerai a scoprire una nazione ricca di paesaggi variegati, tra laghi, montagne e morbide colline.</p>"
+      },
+      "steps": [
+        {
+          "id": "11",
+          "title": "Briefing iniziale e subito a scattare il tramonto a Jamnik",
+          "description": "<p>Incontro nel pomeriggio (orario e luogo verranno rivelati in fase di prenotazione) a Bled e sistemazione in hotel con vista lago. Briefing fotografico con il nostro Coach, dove analizzeremo il programma, le tecniche da utilizzare e le previsioni meteo per pianificare al meglio gli shooting.<br>Tramonto a Jamnik – The Church of St. Primož and Felicijan<br>Sessione fotografica nella chiesetta sulla collina più iconica della Slovenia. Focus su composizione minimalista, uso del grandangolo e gestione della luce dorata.<br>Scatto in blue hour, con il contrasto tra le luci artificiali della chiesa e il cielo che sfuma nel blu profondo.<br>Rientro a Bled e cena tipica slovena.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-2-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Chiesa_San_Primus_e_Felicianus_5ce62cc6d8.jpg",
+          "alternativeText": "Viaggio fotografico lago di bled e villaggio di Jamnik"
+        },
+        {
+          "id": "locpic-2-1",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/The_Church_of_St_Primoz_and_Felicijan_b5e02215ea.jpg",
+          "alternativeText": "viaggio fotografico lago di bled, slovenia"
+        }
+      ]
     },
     {
-      "start": "2026-10-22",
-      "end": "2026-10-25"
+      "id": "19",
+      "title": "Lago Bohinj",
+      "description": "Il Lago Bohinj è il più esteso della Slovenia, il percorso offrirà tanti spunti fotografici di paesaggio e non solo!",
+      "slug": "lago-bohinj",
+      "locale": "it",
+      "state": {
+        "name": "Slovenia",
+        "slug": "slovenia",
+        "locale": "it",
+        "description": "<p>La Slovenia è nota sicuramente per il lago di Bled e il piccolo isolotto al centro con il castello che alle prime luci dell'alba o al tramonto regala forti emozioni. Nei nostri viaggi fotografici imparerai a scoprire una nazione ricca di paesaggi variegati, tra laghi, montagne e morbide colline.</p>"
+      },
+      "steps": [
+        {
+          "id": "12",
+          "title": "Tra laghi e splendide colline slovene",
+          "description": "<p>Alba: Lago di Bled – Vista panoramica dalla collina Ojstrica&nbsp;<br>Escursione breve fino al punto panoramico di Ojstrica per catturare il lago con la chiesa al centro, immerso nei colori autunnali. Tecniche di focus stacking e gestione della profondità di campo con il grandangolo. Possibilità di scattare riflessi perfetti, se l’acqua è calma.<br>Ritorno in hotel per colazione. Mattina &amp; Pomeriggio: Lago di Bohinj &amp; (opzionale) Vogel Ski Center. Trasferimento al Lago di Bohinj, il più grande della Slovenia, incorniciato dalle Alpi Giulie. Sessione fotografica con focus su riflessi, profondità e dettagli autunnali.<br>Uso del teleobiettivo per comprimere le montagne e il lago in un’unica composizione potente.<br>Se il tempo lo permette: Salita in funivia al Vogel Ski Center, per una vista spettacolare sulle montagne e sul Triglav. Rientro a Bled nel tardo pomeriggio.<br>Tramonto: Chiesetta di Santa Maria sull’Isola di Bled. Shooting dalla riva del lago, sfruttando il crepuscolo e le luci che iniziano ad accendersi sulla chiesa. Possibilità di utilizzare il drone per scatti dall’alto, con il lago che si illumina nei toni del blu e dell’oro.<br>Rientro in struttura e cena.</p>",
+          "locale": "it"
+        }
+      ],
+      "pictures": [
+        {
+          "id": "locpic-3-0",
+          "title": null,
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lago_Bohinj_45664e8cf9.jpg",
+          "alternativeText": "viaggio fotografico lago di bled e Lago Bohinj"
+        }
+      ]
     }
   ],
   "reviews": [],
+  "whats_includeds": [
+    {
+      "title": "Assicurazione m/b",
+      "description": "Assicurazione medico/bagaglio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_rescue_workers_helmet_96_3eece5d34e.png"
+      }
+    },
+    {
+      "title": "Coach Professionisti",
+      "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_garanzia_96_c27f18e0c9.png"
+      }
+    },
+    {
+      "title": "Gruppo Whatsapp",
+      "description": "Per preparare al meglio il viaggio",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_whatsapp_144_21e832c3df.png"
+      }
+    },
+    {
+      "title": "Corso di Photoshop",
+      "description": "Accesso riservato ai tutorial di post-produzione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_video_96_8d6a199618.png"
+      }
+    },
+    {
+      "title": "Soggiorno in Hotel",
+      "description": "Pernotti con prima colazione in camera doppia e bagno privato.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_13332e60e3.png"
+      }
+    }
+  ],
+  "whats_not_includeds": [
+    {
+      "title": "Noleggio Auto con Autisti",
+      "description": "Noleggio auto, 4x4 o van con assicurazione",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_oncoming_automobile_96_eb8daaa911.png"
+      }
+    },
+    {
+      "title": "Carburante",
+      "description": null,
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_fuel_pump_96_91c74576a9.png"
+      }
+    },
+    {
+      "title": "Pedaggi/Parcheggi",
+      "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+      }
+    },
+    {
+      "title": "Tutti i Pasti",
+      "description": "Colazioni, pranzi e cene.",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+      }
+    }
+  ],
+  "days": [
+    {
+      "id": "11",
+      "number": 1,
+      "title": "Benvenuto in Slovenia",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "11",
+          "title": "Briefing iniziale e subito a scattare il tramonto a Jamnik",
+          "description": "<p>Incontro nel pomeriggio (orario e luogo verranno rivelati in fase di prenotazione) a Bled e sistemazione in hotel con vista lago. Briefing fotografico con il nostro Coach, dove analizzeremo il programma, le tecniche da utilizzare e le previsioni meteo per pianificare al meglio gli shooting.<br>Tramonto a Jamnik – The Church of St. Primož and Felicijan<br>Sessione fotografica nella chiesetta sulla collina più iconica della Slovenia. Focus su composizione minimalista, uso del grandangolo e gestione della luce dorata.<br>Scatto in blue hour, con il contrasto tra le luci artificiali della chiesa e il cielo che sfuma nel blu profondo.<br>Rientro a Bled e cena tipica slovena.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "number": 2,
+      "title": "Pronti per immergersi nei paesaggi Sloveni",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "12",
+          "title": "Tra laghi e splendide colline slovene",
+          "description": "<p>Alba: Lago di Bled – Vista panoramica dalla collina Ojstrica&nbsp;<br>Escursione breve fino al punto panoramico di Ojstrica per catturare il lago con la chiesa al centro, immerso nei colori autunnali. Tecniche di focus stacking e gestione della profondità di campo con il grandangolo. Possibilità di scattare riflessi perfetti, se l’acqua è calma.<br>Ritorno in hotel per colazione. Mattina &amp; Pomeriggio: Lago di Bohinj &amp; (opzionale) Vogel Ski Center. Trasferimento al Lago di Bohinj, il più grande della Slovenia, incorniciato dalle Alpi Giulie. Sessione fotografica con focus su riflessi, profondità e dettagli autunnali.<br>Uso del teleobiettivo per comprimere le montagne e il lago in un’unica composizione potente.<br>Se il tempo lo permette: Salita in funivia al Vogel Ski Center, per una vista spettacolare sulle montagne e sul Triglav. Rientro a Bled nel tardo pomeriggio.<br>Tramonto: Chiesetta di Santa Maria sull’Isola di Bled. Shooting dalla riva del lago, sfruttando il crepuscolo e le luci che iniziano ad accendersi sulla chiesa. Possibilità di utilizzare il drone per scatti dall’alto, con il lago che si illumina nei toni del blu e dell’oro.<br>Rientro in struttura e cena.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "number": 3,
+      "title": "Le prime luci sul lago di Bled",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "13",
+          "title": "Paesaggi fiabeschi riflessi sul lago",
+          "description": "<p>Alba: Jamnik – The Church of St. Primož and Felicijan.<br>Tornare in questo spot la mattina presto offre una luce completamente diversa, con possibilità di nebbie basse nella valle e un’atmosfera unica. Focus su contrasto tra luce e ombre, dettagli della chiesa e sfondo montuoso. Rientro a Bled per colazione. Mattina &amp; Pomeriggio: Esplorazione delle rive del Lago di Bled. Passeggiata lungo il lago, esplorando diversi angoli e punti di vista. Composizioni con alberi autunnali, pontili e dettagli d’atmosfera. Pausa pranzo e relax.&nbsp;<br>Tramonto: Castello di Bled e vista dall’alto Sessione di fotografia panoramica dal Castello di Bled, con vista spettacolare sull’intero lago e sulle Alpi Giulie. Tecniche di bilanciamento della luce in condizioni di forte contrasto.&nbsp;<br>Notturna: Lago di Bled – Fotografia in blue hour e notturna. Sessione di fotografia notturna con la chiesa illuminata sull’isola di Bled. Tecniche di lunga esposizione, gestione delle alte luci e fotografia atmosferica. Rientro in hotel e riposo.</p>",
+          "locale": "it"
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-0",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it"
+    },
+    {
+      "id": "hl-1",
+      "title": "Comodo",
+      "description": "Esperienze per tutti, da punta e scatta.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-2",
+      "title": "Didattica",
+      "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
+      "locale": "it"
+    },
+    {
+      "id": "hl-3",
+      "title": "Collina",
+      "description": "Viaggio fotografici le forme sinuose del terreno",
+      "locale": "it"
+    },
+    {
+      "id": "hl-4",
+      "title": "Hotel",
+      "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
+      "locale": "it"
+    },
+    {
+      "id": "hl-5",
+      "title": "Piccoli Gruppi",
+      "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
+      "locale": "it"
+    }
+  ],
+  "things2know": [],
+  "sessions": [
+    {
+      "id": "9",
+      "start": "2021-11-26",
+      "end": "2021-11-28",
+      "status": "soldOut",
+      "maxPax": 10,
+      "price": 499,
+      "deposit": 1,
+      "balance": 498,
+      "minPax": 6,
+      "currency": "EUR",
+      "priceCompanion": 299,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        },
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha Italia.</p>"
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "start": "2022-10-28",
+      "end": "2022-10-30",
+      "status": "scheduled",
+      "maxPax": 10,
+      "price": 489,
+      "deposit": 100,
+      "balance": 389,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 399,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "start": "2022-12-16",
+      "end": "2022-12-18",
+      "status": "waitingList",
+      "maxPax": 10,
+      "price": 659,
+      "deposit": 100,
+      "balance": 559,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 659,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marikagrecofotografie/",
+          "firstName": "Marika",
+          "lastName": "Greco",
+          "username": "marikagreco",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+          },
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+        }
+      ]
+    },
+    {
+      "id": "136",
+      "start": "2026-10-22",
+      "end": "2026-10-25",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 890,
+      "deposit": 270,
+      "balance": 620,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 890,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/ibuxus/",
+          "firstName": "Samuele",
+          "lastName": "Bucci",
+          "username": "samuelebucci",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+          },
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-0",
+      "question": "Pagamento",
+      "answer": "<p>Per riservare il posto è sufficiente prenotare il viaggio fotografico versando un acconto pari al 30% (il prezzo può variare in base al viaggio o alle offerte) a Time Travel Bag; il pagamento può essere effettuato tramite carta di credito o bonifico bancario attraverso il sicuro sistema di pagamenti con Stripe.</p><p>Il link di pagamento verrà inviato direttamente da un responsabile di Weshoot tramite mail o whatsapp.</p><p>Il saldo del rimanente andrà versato entro e non oltre i 30gg dalla data della partenza.</p><p>Tutte le istruzioni di pagamento verranno accuratamente spiegate durante la prenotazione e successivamente al versamento dell'acconto tramite email, compilando il contratto di adesione che il consumatore dovrà firmare e rimandare indietro alla nostra agenzia.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-1",
+      "question": "Può accompagnarmi qualcuno che non fa fotografia?",
+      "answer": "Assolutamente si!. Oltre al pacchetto classico, la nostra agenzia di viaggi può creare dei pacchetti ad hoc per qualsiasi tipo di esigenza. Per conoscere tutte le offerte possibili, contatta direttamente gli organizzatori.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-2",
+      "question": "Come posso avere consigli su attrezzatura e vestiario da portare?",
+      "answer": "<p>Oltre al costante supporto degli organizzatori in privato, creeremo qualche giorno prima della partenza un gruppo WhatsApp per scambiarci le ultime info e gli ultimi consigli per avere tutto sotto controllo</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-3",
+      "question": "Ritardo nell'arrivo dell'appuntamento",
+      "answer": "<p>Nel caso in cui il fotografo che ha acquistato il pacchetto non riesca ad arrivare in orario all'appuntamento previsto per l'inizio dell'evento, dovrà occuparsi autonomamente (o mediante la nostra agenzia) di raggiungere il gruppo o con la propria auto o con un transfer organizzato aeroporto/struttura hotel.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-4",
+      "question": "Il Viaggio Fotografico è fatturabile?",
+      "answer": "Si, se vuoi potrai richiedere alla nostra agenzia una fattura del viaggio direttamente via email.",
+      "locale": "it"
+    },
+    {
+      "id": "faq-5",
+      "question": "La mia domanda non è nell'elenco, come posso farla?",
+      "answer": "<p>Puoi contattarci facilmente attraverso la live chat oppure inviandoci direttamente una mail a info@weshoot.it, risponderemo nel più breve tempo possibile.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-6",
+      "question": "Voglio acquistare il viaggio fotografico come regalo, come funziona?",
+      "answer": "<p>Per poter regalare uno dei nostri viaggi fotografici sarà sufficiente prenotare il viaggio tramite la piattaforma di WeShoot e comunicare tramite live chat, telefono o email alla nostra agenzia il destinatario del regalo. In questo modo il nostro team preparerà un voucher in pdf che potrai personalizzare a tuo piacimento con un messaggio o una frase di auguri. Chi riceverà il regalo non vedrà in nessun modo informazioni relative al prezzo e verrà contattato da noi solamente una volta che lo avrà ricevuto, cosi da concordare gli ultimi dettagli. Il saldo restante del viaggio fotografico verrà organizzato in totale riservatezza con la nostra agenzia di viaggio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-7",
+      "question": "Il viaggio fotografico è rivolto solo ad esperti?",
+      "answer": "<p>Tutti i nostri viaggi fotografici sono adatti ad ogni livello fotografico. per partecipare sarà sufficiente conoscere le basi della fotografia. I nostri coach sono preparati a supportare tutto il gruppo, senza fare distinzioni. Per questo motivo organizziamo i nostri viaggi fotografici con gruppi piccoli. In questo modo ogni coach avrà un massimo di 5 partecipanti e potrà rispondere alle diverse esigenze di ognuno.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-8",
+      "question": "Qual è l'età media dei partecipanti?",
+      "answer": "<p>I gruppi fotografici che si vengono a creare durante i viaggi fotografici di WeShoot sono di ogni genere di età. Quello che ci accomuna sono due grandi passioni: i viaggi e la fotografia! Quando si partecipa a queste esperienze di viaggio e si condividono intensi momenti davanti a paesaggi straordinari, l'età è l'ultimo dei pensieri.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-9",
+      "question": "Informazioni importanti sull'Assicurazione",
+      "answer": "<p>I contratti assicurativi che vengono creati e stipulati attraverso la nostra agenzia sono validi esclusivamente per tutti i residenti o i domiciliati in Italia. Coloro che non posseggono questi requisiti saranno tenuti a comunicarlo tempestivamente all'agenzia in modo che provvederà a detrarla dalla quota finale del pacchetto.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-10",
+      "question": "[GDPR] Riscontro dei problemi nella prenotazione, che succede?",
+      "answer": "<p>Il GDPR <span style=\"background-color:rgb(255,255,255);color:rgb(22,34,42);\">è il nuovo regolamento entrato in vigore da qualche anno che disciplina il modo in cui le aziende e le altre organizzazioni trattano i dati personali dei clienti.</span></p><p>WeShoot e tutti i siti web annessi si impegnano a rispettare al 100% questo regolamento previsto dall'UE, e lo stesso vale anche per l'utilizzo dei cookies. Ci teniamo ad informarti che alcune delle funzioni del sito potrebbero non funzionare correttamente a causa delle preferenze che scegli di impostare.&nbsp;</p><p>Se riscontri delle anomalie al momento della prenotazione del viaggio fotografico (ad esempio la chat di assistenza non si apre), la causa potrebbe dipendere da questi fattori:</p><ul><li>Non aver dato il consenso al trattamento dei cookies</li><li>Gli aggiornamenti dei sistemi operativi degli smartphone che introducono nuovi sistemi di privacy (Apple)</li><li>Il browser che stai utilizzando</li></ul><p>Nel caso ti servissero maggiori informazioni, ti invitiamo a contattarci via email a info@weshoot.it</p><p>&nbsp;</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-11",
+      "question": "E se non posso più partire? (Assicurazione Annullamento)",
+      "answer": "<p>Al momento della prenotazione è possibile richiedere e sottoscrivere una polizza extra che copre l’eventuale annullamento della partenza. Per fare la richiesta basterà inviare una mail a prenotazioni@weshoot.it.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-12",
+      "question": "Conferma del Viaggio Fotografico",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-13",
+      "question": "Politica di Cancellazione/Rimborso",
+      "answer": "<p>In caso di cancellazione o annullamento di un pacchetto turistico realizzato appositamente dalla nostra agenzia viaggi e NON COPERTO da assicurazione aggiuntiva “annullamento viaggio”*, è diritto della sopracitata società applicare una penale sul servizio acquistato e più specificatamente:</p><ul><li>Se viene richiesta la cancellazione o anullamento entro 30 gg dalla partenza la penale sarà da considerarsi del valore dell'acconto versato</li><li>A partire dai 30 giorni prima della partenza la penale sarà del 100% del costo del viaggio</li><li>La quota de viaggio verrà completamente rimborsata (o spostata su un'altra sessione/viaggio) in caso di annullamento da parte degli organizzatori</li></ul><p>&nbsp;</p><p>*WeShoot, sotto richiesta del cliente, può provvedere a offrire l’assicurazione per annullamento.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-14",
+      "question": "Direzione Tecnica dell'Agenzia Partner",
+      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-15",
+      "question": "Coach WeShoot e Guide Locali",
+      "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    }
+  ],
+  "image": {
+    "alternativeText": "viaggio fotografico lago di bled, slovenia",
+    "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lago_di_bled_alba_9aa730ebb0.jpg"
+  },
   "pictures": [
     {
-      "id": "19",
+      "id": "0",
+      "type": "tour",
       "title": "Lago di Bled",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lago_di_bled_alba_9aa730ebb0.jpg",
+      "alt": "viaggio fotografico lago di bled, slovenia"
     },
     {
-      "id": "20",
+      "id": "1",
+      "type": "tour",
       "title": "Chiesa di San Primus e Felicianus",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Chiesa_San_Primus_e_Felicianus_5ce62cc6d8.jpg",
+      "alt": "Viaggio fotografico lago di bled e villaggio di Jamnik"
     },
     {
-      "id": "21",
+      "id": "2",
+      "type": "tour",
       "title": "Lago Bohinj",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lago_Bohinj_45664e8cf9.jpg",
+      "alt": "viaggio fotografico lago di bled e Lago Bohinj"
     },
     {
-      "id": "415",
+      "id": "3",
+      "type": "tour",
       "title": "The Church of St. Primož",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/The_Church_of_St_Primoz_and_Felicijan_b5e02215ea.jpg",
+      "alt": "viaggio fotografico lago di bled, slovenia"
     },
     {
-      "id": "416",
+      "id": "4",
+      "type": "tour",
       "title": "Bled Drone",
-      "url": null,
-      "width": null,
-      "height": null,
-      "alt": null
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Lago_di_Bled_drone_b8c5d85a23.jpg",
+      "alt": "viaggio fotografico slovenia"
+    },
+    {
+      "id": "locpic-1-0",
+      "type": "location",
+      "title": null,
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Chiesa_Sveti_Tomaz_4e8eecd8a1.jpg",
+      "alt": "Chiesa Sveti Tomaz al tramonto viaggio fotografico lago di bled"
     }
   ]
 }
