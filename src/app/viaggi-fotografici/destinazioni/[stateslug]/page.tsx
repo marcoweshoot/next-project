@@ -1,3 +1,4 @@
+type PageProps<T = any> = { params: Promise<T> };
 import { notFound } from 'next/navigation';
 import { gql } from 'graphql-request';
 import { getClient } from '@/lib/graphqlClient';
@@ -18,13 +19,8 @@ const GET_DESTINATION_STATE_PAGE = gql`
       name
       slug
       description
-      image {
-        url
-      }
-      seo {
-        metaTitle
-        metaDescription
-      }
+      image { url }
+      seo { metaTitle metaDescription }
     }
 
     locations(locale: $locale, where: { state: { slug: $slug } }) {
@@ -32,11 +28,7 @@ const GET_DESTINATION_STATE_PAGE = gql`
       title
       slug
       description
-      pictures {
-        image {
-          url
-        }
-      }
+      pictures { image { url } }
     }
 
     tours(locale: $locale, where: { states: { slug: $slug } }) {
@@ -45,20 +37,9 @@ const GET_DESTINATION_STATE_PAGE = gql`
       slug
       description
       difficulty
-      image {
-        url
-        alternativeText
-      }
-      states {
-        id
-        name
-        slug
-      }
-      places {
-        id
-        name
-        slug
-      }
+      image { url alternativeText }
+      states { id name slug }
+      places { id name slug }
       sessions {
         id
         start
@@ -71,11 +52,7 @@ const GET_DESTINATION_STATE_PAGE = gql`
           username
           firstName
           lastName
-          profilePicture {
-            id
-            url
-            alternativeText
-          }
+          profilePicture { id url alternativeText }
         }
       }
     }
@@ -84,29 +61,24 @@ const GET_DESTINATION_STATE_PAGE = gql`
 
 const GET_ALL_STATE_SLUGS = gql`
   query GetAllStates {
-    states {
-      slug
-    }
+    states { slug }
   }
 `;
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<Array<{ stateslug: string }>> {
   const client = getClient();
   try {
     const data = await client.request(GET_ALL_STATE_SLUGS);
-    const states = (data as { states: { slug: string }[] }).states;
-    return states.map((state) => ({ stateslug: state.slug }));
+    const states = (data as { states?: { slug: string }[] }).states ?? [];
+    return states.map((s) => ({ stateslug: s.slug }));
   } catch {
     return [];
   }
 }
 
-type Params = { stateslug: string };
-interface Props {
-  params: Promise<Params>;
-}
+type RouteParams = { stateslug: string };
 
-export default async function StatePage({ params }: Props) {
+export default async function StatePage({ params }: PageProps<RouteParams>) {
   const { stateslug } = await params;
   const client = getClient();
 
@@ -116,16 +88,18 @@ export default async function StatePage({ params }: Props) {
       slug: stateslug,
     });
 
-    const { states, locations, tours } = response as {
-      states: any[];
-      locations: any[];
-      tours: any[];
+    const { states, locations, tours } = (response ?? {}) as {
+      states?: any[];
+      locations?: any[];
+      tours?: any[];
     };
 
     const destination = states?.[0];
+    const locs = locations ?? [];
+    const trs = tours ?? [];
     const loading = false;
 
-    if (!destination && locations.length === 0 && tours.length === 0) {
+    if (!destination && locs.length === 0 && trs.length === 0) {
       notFound();
     }
 
@@ -151,18 +125,18 @@ export default async function StatePage({ params }: Props) {
         />
 
         <DestinationDetailLocations
-          locations={locations}
+          locations={locs}
           destination={destination}
           loading={loading}
         />
 
         <DestinationDetailTours
-          tours={tours}
+          tours={trs}
           destination={destination}
           loading={loading}
         />
 
-        {!loading && locations.length === 0 && tours.length === 0 && (
+        {!loading && locs.length === 0 && trs.length === 0 && (
           <DestinationDetailEmptyState destinationName={destination?.name} />
         )}
 
