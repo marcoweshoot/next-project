@@ -63,9 +63,6 @@ const TourItinerary: React.FC<TourItineraryProps> = ({ itinerary, tour }) => {
                 title: day.title,
                 description: day.description,
                 steps: day.steps,
-                activities: day.activities,
-                accommodation: day.accommodation,
-                meals: day.meals,
               }}
               tour={tour}
             />
