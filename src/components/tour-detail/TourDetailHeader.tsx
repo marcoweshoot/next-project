@@ -111,6 +111,7 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({
             <PageBreadcrumbs
               elements={breadcrumbElements}
               className="flex justify-center text-xs"
+              prefetch={false}
             />
           </div>
         )}
