@@ -3,15 +3,14 @@ import CalendarMonthContent from '@/components/calendar-month/CalendarMonthConte
 import { getFutureSessionsGroupedByMonth } from '@/utils/getFutureSessionsGroupedByMonth';
 import type { Metadata } from 'next';
 
-type Params = { year: string; month: string };
-type PageProps = { params: Params };
+type RouteParams = { year: string; month: string };
 
 export const dynamic = 'error';
 export const dynamicParams = false;
 export const fetchCache = 'force-cache';
 export const revalidate = false;
 
-export async function generateStaticParams(): Promise<Params[]> {
+export async function generateStaticParams(): Promise<RouteParams[]> {
   try {
     const { groupedSessions } = await getFutureSessionsGroupedByMonth();
     const paths = Object.values(groupedSessions).map(g => ({
@@ -21,11 +20,14 @@ export async function generateStaticParams(): Promise<Params[]> {
     return paths.sort((a, b) =>
       a.year === b.year ? a.month.localeCompare(b.month, 'it-IT') : a.year.localeCompare(b.year)
     );
-  } catch { return []; }
+  } catch {
+    return [];
+  }
 }
 
-// ✅ niente Promise nei params, niente await
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata(
+  { params }: { params: RouteParams }
+): Promise<Metadata> {
   const { year, month } = params;
   const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
 
@@ -38,7 +40,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description,
     alternates: { canonical: `/viaggi-fotografici/calendario/${year}/${month}` },
     openGraph: {
-      title, description,
+      title,
+      description,
       url: `/viaggi-fotografici/calendario/${year}/${month}`,
       type: 'website',
       images: [{ url: ogImage }],
@@ -47,7 +50,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function Page({ params }: PageProps) {
+export default function Page({ params }: { params: RouteParams }) {
   const { year, month } = params;
   return <CalendarMonthContent year={year} month={month} />;
 }
