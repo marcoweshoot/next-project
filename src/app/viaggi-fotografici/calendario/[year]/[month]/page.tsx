@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
   const title = `Viaggi Fotografici ${capitalizedMonth} ${year} | WeShoot`;
   const description = `Scopri tutti i viaggi fotografici in programma per ${capitalizedMonth} ${year}. Date, destinazioni e posti disponibili.`;
-  const ogImage = '/lovable-uploads/hero-calendar.jpg';
+  const ogImage = 'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/hero-calendar.jpg';
 
   return {
     title,
