@@ -51,8 +51,8 @@
         {
           "id": "locpic-0-0",
           "title": null,
-          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/islanda_aurora_boreale_eb6e0a7c73.avif",
-          "alternativeText": "viaggio_fotografico_weshoot_workshop"
+          "url": "https://s3.eu-west-1.amazonaws.com/weshoot.it/viaggio_fotografico_weshoot_workshop_4_8a79caf37f.jpg",
+          "alternativeText": "viaggi fotografici aurora boreale"
         },
         {
           "id": "locpic-0-1",
@@ -220,7 +220,7 @@
         {
           "id": "locpic-4-0",
           "title": null,
-          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Arnarstapi_al_tramonto_ea10d80754.avif",
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/DSC_6857_HDR_Modifica_Modifica_fe1e6b5cec.jpg",
           "alternativeText": "Arnarstapi viaggio fotografico islanda"
         }
       ]
@@ -1527,8 +1527,8 @@
       "id": "0",
       "type": "group",
       "title": "Vestrahorn",
-      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/islanda_aurora_boreale_eb6e0a7c73.avif",
-      "alt": "viaggio_fotografico_weshoot_workshop"
+      "url": "https://s3.eu-west-1.amazonaws.com/weshoot.it/viaggio_fotografico_weshoot_workshop_4_8a79caf37f.jpg",
+      "alt": "viaggi fotografici aurora boreale"
     },
     {
       "id": "1",
@@ -1555,7 +1555,7 @@
       "id": "4",
       "type": "tour",
       "title": "Arnarstapi",
-      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Arnarstapi_al_tramonto_ea10d80754.avif",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/DSC_6857_HDR_Modifica_Modifica_fe1e6b5cec.jpg",
       "alt": "Arnarstapi viaggio fotografico islanda"
     },
     {

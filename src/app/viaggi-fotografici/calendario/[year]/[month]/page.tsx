@@ -3,12 +3,15 @@ import CalendarMonthContent from '@/components/calendar-month/CalendarMonthConte
 import { getFutureSessionsGroupedByMonth } from '@/utils/getFutureSessionsGroupedByMonth';
 import type { Metadata } from 'next';
 
-type RouteParams = { year: string; month: string };
-
 export const dynamic = 'error';
 export const dynamicParams = false;
 export const fetchCache = 'force-cache';
 export const revalidate = false;
+
+type RouteParams = { year: string; month: string };
+async function unwrapParams(p: RouteParams | Promise<RouteParams>): Promise<RouteParams> {
+  return (p && typeof (p as any).then === 'function') ? await (p as Promise<RouteParams>) : (p as RouteParams);
+}
 
 export async function generateStaticParams(): Promise<RouteParams[]> {
   try {
@@ -25,10 +28,10 @@ export async function generateStaticParams(): Promise<RouteParams[]> {
   }
 }
 
-export async function generateMetadata(
-  { params }: { params: RouteParams }
-): Promise<Metadata> {
-  const { year, month } = params;
+// 👇 non tipizzare col tuo PageProps: lascia che Next usi il suo.
+//    Gestiamo sia params Promise sia oggetto.
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+  const { year, month } = await unwrapParams(params);
   const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
 
   const title = `Viaggi Fotografici ${capitalizedMonth} ${year} | WeShoot`;
@@ -50,7 +53,7 @@ export async function generateMetadata(
   };
 }
 
-export default function Page({ params }: { params: RouteParams }) {
-  const { year, month } = params;
+export default async function Page({ params }: any) {
+  const { year, month } = await unwrapParams(params);
   return <CalendarMonthContent year={year} month={month} />;
 }
