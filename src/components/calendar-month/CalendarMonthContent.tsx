@@ -4,7 +4,7 @@ import PageHeader from '@/components/PageHeader';
 import CalendarMonthEmpty from './CalendarMonthEmpty';
 import CalendarMonthToursGrid from './CalendarMonthToursGrid';
 import { fetchCalendarData } from '@/lib/api/calendar';
-const hero = '/lovable-uploads/hero-calendar.avif';
+const hero = '/lovable-uploads/hero-calendar.jpg';
 
 interface Props { year: string; month: string; }
 
