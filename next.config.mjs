@@ -41,7 +41,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'wxoodcdxscxazjkoqhsg.supabase.co', pathname: '/storage/v1/object/public/**' },
     ],
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 768, 1024, 1280],
+    deviceSizes: [640, 768, 1024, 1080, 1280],
     imageSizes: [16, 20, 24, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 31536000,
   },

@@ -13,24 +13,23 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'viaggi fotografici nel mondo e workshop',
+  metadataBase: new URL('https://www.weshoot.it'),
+  title: {
+    default: 'WeShoot – Viaggi e corsi di fotografia',
+    template: '%s | WeShoot',
+  },
   description:
-    'itinerari pensati per fotografi, coach professionisti e esperienze immersive.',
+    'Viaggi fotografici e workshop di paesaggio con coach professionisti. Calendario aggiornato, destinazioni e date.',
+  robots: { index: true, follow: true },
+  other: {
+    'color-scheme': 'light dark', // 👈 qui, non nel <head>
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="it"
-      className={montserrat.variable}
-      suppressHydrationWarning
-    >
-      <head>
-        {/* aiuta a prevenire flicker tra light/dark */}
-        <meta name="color-scheme" content="light dark" />
-      </head>
+    <html lang="it" className={montserrat.variable} suppressHydrationWarning>
       <body className="font-sans antialiased">
-        {/* Provider di stato per i toast (nostro) + UI Toaster (shadcn) */}
         <ToastStateProvider>
           <ClientProviders>{children}</ClientProviders>
           <Toaster />

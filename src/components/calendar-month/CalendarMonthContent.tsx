@@ -4,30 +4,24 @@ import PageHeader from '@/components/PageHeader';
 import CalendarMonthEmpty from './CalendarMonthEmpty';
 import CalendarMonthToursGrid from './CalendarMonthToursGrid';
 import { fetchCalendarData } from '@/lib/api/calendar';
+const hero = '/lovable-uploads/hero-calendar.avif';
 
-interface Props {
-  year: string;
-  month: string;
-}
+interface Props { year: string; month: string; }
 
 const CalendarMonthContent = async ({ year, month }: Props) => {
-  const { groupedSessions, coverImage } = await fetchCalendarData();
+  const { groupedSessions /*, coverImage*/ } = await fetchCalendarData();
 
   const normalizedMonth = month.toLowerCase();
   const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
   const key = `${year}-${normalizedMonth}`;
   const monthData = groupedSessions[key];
 
-  if (!monthData) {
-    console.warn(`Nessun dato trovato per la chiave: ${key}`);
-  }
-
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
 
-      <PageHeader backgroundImage={coverImage}>
+      {/* usa direttamente l'hero statica */}
+      <PageHeader backgroundImage={hero}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Viaggi Fotografici {capitalizedMonth} {year}

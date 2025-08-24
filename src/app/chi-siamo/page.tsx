@@ -93,6 +93,7 @@ export default function ChiSiamo() {
                     className="mx-auto rounded-full mb-4 shadow-md object-cover"
                     loading="lazy"
                     sizes="128px"
+                    unoptimized
                   />
                   <h3 className="text-xl font-semibold">{member.name}</h3>
                   <p className="text-gray-500">{member.role}</p>

@@ -23,12 +23,13 @@ export default function GiftCardPage() {
       <section className="relative h-[60vh] md:h-[70vh] text-white overflow-hidden">
         {/* Sfondo immagine ottimizzata */}
         <Image
-          src="https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//viaggi-fotografici-e-workshop.avif"
+          src="https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/viaggi-fotografici-e-workshop.avif"
           alt="Carte regalo WeShoot"
           fill
           priority
           sizes="100vw"
           className="object-cover object-center brightness-75"
+          unoptimized
         />
         {/* Overlay scuro */}
         <div className="absolute inset-0 bg-black/50 z-10" />

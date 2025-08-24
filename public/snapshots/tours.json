@@ -28368,7 +28368,7 @@
     "excerpt": "Cattura la magia di Roma",
     "difficulty": "easy",
     "experience_level": "Dinamico",
-    "things_needed": "<p>Attrezzatura fotografica:</p><ul style=\"list-style-type:disc;\"><li>Treppiede</li><li>Relfex, Mirrorless o cellulare</li><li>Grandangolo (tra i 10mm e 18mm) e medio zoom (fino a 100mm)</li><li>Filtri fotografici come polarizzatore e ND (opzionali)</li><li>Scatto remoto (opzionale)<br><br>Abbigliamento:</li><li>Vestiario comodo e fresco (impermeabile in caso di pioggia)</li><li>Scarpe comode per camminare</li></ul>",
+    "things_needed": "<p>Fotografica:</p><ul style=\"list-style-type:disc;\"><li>Treppiede</li><li>Relfex, Mirrorless o cellulare</li><li>Grandangolo (tra i 10mm e 18mm) e medio zoom (fino a 100mm)</li><li>Filtri fotografici come polarizzatore e ND (opzionali)</li><li>Scatto remoto (opzionale)<br><br>Abbigliamento:</li><li>Vestiario comodo e fresco (impermeabile in caso di pioggia)</li><li>Scarpe comode per camminare</li></ul>",
     "video_url": null,
     "locale": "it",
     "places": {
@@ -28624,8 +28624,8 @@
         "ratingKnowledge": null,
         "created_at": "2018-04-06T18:37:17.000Z",
         "user": {
-          "firstName": "Davide Damato",
-          "lastName": "",
+          "firstName": "Davide",
+          "lastName": "Damato",
           "username": "davide-damato@libero.it",
           "instagram": "",
           "bio": "",
@@ -28645,7 +28645,7 @@
         "created_at": "2018-10-01T17:58:34.000Z",
         "user": {
           "firstName": "Camilla",
-          "lastName": "",
+          "lastName": "Iaquone",
           "username": "camilla.iaquone@gmail.com",
           "instagram": "",
           "bio": "",
@@ -28665,7 +28665,7 @@
         "created_at": "2019-01-14T10:01:27.000Z",
         "user": {
           "firstName": "Christian",
-          "lastName": "",
+          "lastName": "Amorelli",
           "username": "christian.amorelli@gmail.com",
           "instagram": "",
           "bio": "",
@@ -28684,7 +28684,7 @@
         "ratingKnowledge": null,
         "created_at": "2019-04-01T18:52:03.000Z",
         "user": {
-          "firstName": "Massimiliano Neri",
+          "firstName": "Massimiliano",
           "lastName": "Neri",
           "username": "massimiliano.neri@tim.it",
           "instagram": "",
@@ -28704,7 +28704,7 @@
         "ratingKnowledge": null,
         "created_at": "2019-06-17T11:21:19.000Z",
         "user": {
-          "firstName": "Eli Mirabella",
+          "firstName": "Eli",
           "lastName": "Mirabella",
           "username": "pois304@gmail.com",
           "instagram": "",
@@ -28724,7 +28724,7 @@
         "ratingKnowledge": null,
         "created_at": "2019-06-21T13:28:00.000Z",
         "user": {
-          "firstName": "Valentina Mannella",
+          "firstName": "Valentina",
           "lastName": "Mannella",
           "username": "vale.mannella@libero.it",
           "instagram": "",
@@ -28744,8 +28744,8 @@
         "ratingKnowledge": null,
         "created_at": "2019-10-31T12:14:25.000Z",
         "user": {
-          "firstName": "alessio arto",
-          "lastName": "",
+          "firstName": "Alessio",
+          "lastName": " Arto",
           "username": "alessio.arto1987@gmail.com",
           "instagram": "",
           "bio": "",
@@ -28800,7 +28800,24 @@
         }
       }
     ],
-    "whats_not_includeds": [],
+    "whats_not_includeds": [
+      {
+        "title": "Pedaggi/Parcheggi",
+        "description": "Soste a pagamento, pedaggi, ingresso ai parchi e mezzi di trasporto pubblici.",
+        "locale": "it",
+        "icon": {
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_p_button_96_6d813b07ee.png"
+        }
+      },
+      {
+        "title": "Tutti i Pasti",
+        "description": "Colazioni, pranzi e cene.",
+        "locale": "it",
+        "icon": {
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+        }
+      }
+    ],
     "days": [
       {
         "id": "185",
@@ -28847,9 +28864,24 @@
         "title": "Fotografia Notturna",
         "description": "Impara a scattare in luce lunare o con le stelle",
         "locale": "it"
+      },
+      {
+        "id": "hl-5",
+        "title": "Lunghe Esposizioni",
+        "description": "Ti divertirai a giocare con le lunghe esposizioni per creare effetti unici con acqua, nuvole e scie luminose",
+        "locale": "it"
       }
     ],
-    "things2know": [],
+    "things2know": [
+      {
+        "title": "Esperienza Fotografica",
+        "description": "<p>Per partecipare a questo viaggio fotografico (o workshop) non servono grandi competenze tecniche. È sufficiente avere familiarità con le basi della fotografia per l'uso di ISO, tempi e diaframmi e le pricipali funzioni della tua fotocamera. Ti consigliamo di portare con te il libretto di istruzioni in forma digitale per eventuali consultazioni durante l'evento.</p>",
+        "locale": "it",
+        "icon": {
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/esperienza_fotografica_83043837b8.png"
+        }
+      }
+    ],
     "sessions": [
       {
         "id": "179",

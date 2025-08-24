@@ -18,10 +18,6 @@ interface TourReviewsProps {
     rating: number;
     user: {
       firstName?: string;
-      lastName?: string;
-      /** fallback possibili da CMS diversi */
-      username?: string;
-      name?: string;
       profilePicture?: {
         url: string;
         alternativeText?: string;
@@ -47,17 +43,12 @@ const makeReviewKey = (
 
 function fullNameOf(review: TourReviewsProps['reviews'][number]): string {
   const fn = review.user?.firstName?.trim();
-  const ln = review.user?.lastName?.trim();
-  const fallback = review.user?.username || review.user?.name;
-  return [fn, ln].filter(Boolean).join(' ') || fallback || 'Utente';
+  return fn || 'Utente';
 }
 
 function initialsOf(review: TourReviewsProps['reviews'][number]): string {
-  const fnI = review.user?.firstName?.[0] ?? '';
-  const lnI = review.user?.lastName?.[0] ?? '';
-  const fromUser = (review.user?.username || review.user?.name || 'U').slice(0, 2);
-  const res = (fnI + lnI) || fromUser;
-  return res.toUpperCase();
+  const fnI = review.user?.firstName?.[0] ?? 'U';
+  return fnI.toUpperCase();
 }
 
 function parseDateLabel(review: TourReviewsProps['reviews'][number]): string | null {
