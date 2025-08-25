@@ -33,7 +33,7 @@ export function middleware(req: NextRequest) {
   ].join("; ");
 
   // Parti in Report-Only per test; poi passa a 'Content-Security-Policy'
-  res.headers.set("Content-Security-Policy-Report-Only", csp);
+  res.headers.set("Content-Security-Policy", csp);
   return res;
 }
 
