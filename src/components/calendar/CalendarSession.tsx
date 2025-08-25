@@ -25,7 +25,7 @@ interface TourSession {
     id: string;
     title: string;
     slug: string;
-    duration: number;
+    duration: number; // non più usato per la UI "X giorni", ma lo lascio per compatibilità
     difficulty?: string;
     experience_level?: string;
     places: { slug: string }[];
@@ -46,20 +46,110 @@ interface CalendarSessionProps {
   isLast: boolean;
 }
 
-const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) => {
-  const safeDate = (d: string) => {
-    const x = new Date(d);
-    return isNaN(x.getTime()) ? null : x;
-  };
+/** Helpers fuso Europe/Rome (stabili tra SSR e client) */
+const ROME_TZ = "Europe/Rome";
 
-  const formatDate = (dateString: string) => {
-    const date = safeDate(dateString) || new Date();
-    return {
-      day: date.getDate(),
-      month: date.toLocaleDateString("it-IT", { month: "short" }).toUpperCase(),
-      fullDate: date.toLocaleDateString("it-IT", { day: "numeric", month: "short" }),
-    };
-  };
+/** Estrae Y/M/D della data secondo il fuso Europe/Rome */
+function getRomeYMD(date: Date) {
+  const parts = new Intl.DateTimeFormat("it-IT", {
+    timeZone: ROME_TZ,
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  }).formatToParts(date);
+
+  const y = Number(parts.find((p) => p.type === "year")!.value);
+  const m = Number(parts.find((p) => p.type === "month")!.value);
+  const d = Number(parts.find((p) => p.type === "day")!.value);
+  return { y, m, d };
+}
+
+/** Ritorna il timestamp UTC della mezzanotte "Rome" di quella Y/M/D */
+function romeYMDToUTCMidnight({ y, m, d }: { y: number; m: number; d: number }) {
+  return Date.UTC(y, m - 1, d);
+}
+
+/** Converte ISO string in Date valida oppure null */
+function safeDate(iso: string) {
+  const x = new Date(iso);
+  return isNaN(x.getTime()) ? null : x;
+}
+
+/** Calcola il numero di giorni inclusivo nel fuso Europe/Rome */
+function inclusiveDaysRome(startISO: string, endISO: string) {
+  const start = safeDate(startISO);
+  const end = safeDate(endISO);
+  if (!start || !end) return 1;
+
+  const sKey = romeYMDToUTCMidnight(getRomeYMD(start));
+  const eKey = romeYMDToUTCMidnight(getRomeYMD(end));
+
+  let days = Math.round((eKey - sKey) / 86400000) + 1; // +1 inclusivo
+  if (days < 1) days = 1;
+  return days;
+}
+
+/** Ritorna true se la sessione è "nel futuro" rispetto alla mezzanotte di oggi (Rome) */
+function isFutureByRomeMidnight(startISO: string) {
+  const start = safeDate(startISO);
+  if (!start) return false;
+
+  // oggi (ora) -> Y/M/D Rome -> mezzanotte Rome in UTC
+  const now = new Date();
+  const todayRomeKey = romeYMDToUTCMidnight(getRomeYMD(now));
+  const startRomeKey = romeYMDToUTCMidnight(getRomeYMD(start));
+
+  return startRomeKey >= todayRomeKey;
+}
+
+/** Formattazione date (giorno e mese) nel fuso Europe/Rome */
+function formatDateRome(dateString: string) {
+  const date = safeDate(dateString);
+  if (!date) {
+    return { day: 1, month: "GEN", fullDate: "1 gen" };
+  }
+
+  const { d } = getRomeYMD(date);
+  const monthShort = new Intl.DateTimeFormat("it-IT", {
+    timeZone: ROME_TZ,
+    month: "short",
+  })
+    .format(date)
+    .toUpperCase();
+
+  const fullDate = new Intl.DateTimeFormat("it-IT", {
+    timeZone: ROME_TZ,
+    day: "numeric",
+    month: "short",
+  }).format(date);
+
+  return { day: d, month: monthShort, fullDate };
+}
+
+const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) => {
+  const startDateInfo = formatDateRome(session.startDate);
+  const endDateInfo = formatDateRome(session.endDate);
+
+  const isFutureSession = isFutureByRomeMidnight(session.startDate);
+
+  const durationDays = inclusiveDaysRome(session.startDate, session.endDate);
+  const durationLabel = `${durationDays} ${durationDays === 1 ? "giorno" : "giorni"}`;
+
+  const tourLink = getTourLink(session.tour);
+
+  const coachAvatarUrl = session.tour.coach?.avatar?.url
+    ? getFullMediaUrl(session.tour.coach.avatar.url)
+    : DEFAULT_COACH_AVATAR;
+  const coachAlt = session.tour.coach?.avatar?.alt || session.tour.coach.name;
+
+  const formattedPrice =
+    session.price > 0
+      ? new Intl.NumberFormat("it-IT", {
+          style: "currency",
+          currency: session.currency || "EUR",
+          maximumFractionDigits: 0,
+        }).format(session.price)
+      : "Scopri";
 
   const norm = (s?: string) =>
     (s || "").toLowerCase().replace(/\s+/g, "").replace(/_/g, "");
@@ -94,7 +184,11 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
         );
       case "soldout":
       case "closed":
-        return <Badge className="bg-red-100 text-red-800 flex items-center gap-1">tutto pieno</Badge>;
+        return (
+          <Badge className="bg-red-100 text-red-800 flex items-center gap-1">
+            tutto pieno
+          </Badge>
+        );
       default:
         return availableSpots && availableSpots > 0 ? (
           <Badge className="bg-blue-100 text-blue-800 flex items-center gap-1">
@@ -138,29 +232,6 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
     }
   };
 
-  const startDateInfo = formatDate(session.startDate);
-  const endDateInfo = formatDate(session.endDate);
-
-  const now = new Date();
-  const start = safeDate(session.startDate);
-  const isFutureSession = !!start && start > now;
-
-  const tourLink = getTourLink(session.tour);
-
-  const coachAvatarUrl = session.tour.coach?.avatar?.url
-    ? getFullMediaUrl(session.tour.coach.avatar.url)
-    : DEFAULT_COACH_AVATAR;
-  const coachAlt = session.tour.coach?.avatar?.alt || session.tour.coach.name;
-
-  const formattedPrice =
-    session.price > 0
-      ? new Intl.NumberFormat("it-IT", {
-          style: "currency",
-          currency: session.currency || "EUR",
-          maximumFractionDigits: 0,
-        }).format(session.price)
-      : "Scopri";
-
   return (
     <div
       className={`flex flex-col md:flex-row md:items-center p-4 md:p-6 ${
@@ -168,6 +239,7 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
       } hover:bg-gray-50 transition-colors`}
     >
       <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8">
+        {/* Desktop */}
         <div className="hidden sm:block">
           <div className="flex items-center gap-3">
             <div className="text-center">
@@ -177,7 +249,7 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
             <div className="flex flex-col items-center">
               <ArrowRight className="w-4 h-4 text-red-600 mb-1" />
               <div className="text-xs font-medium text-red-600 whitespace-nowrap">
-                {session.tour.duration} giorni
+                {durationLabel}
               </div>
             </div>
             <div className="text-center">
@@ -191,6 +263,7 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
           </div>
         </div>
 
+        {/* Mobile */}
         <div className="block sm:hidden">
           <div className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
             <div className="flex items-center gap-3">
@@ -205,9 +278,7 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
               </div>
             </div>
             <div className="text-right">
-              <div className="text-xs font-medium text-red-600">
-                {session.tour.duration} giorni
-              </div>
+              <div className="text-xs font-medium text-red-600">{durationLabel}</div>
             </div>
           </div>
           <div className="text-center mt-1 text-xs text-gray-500">

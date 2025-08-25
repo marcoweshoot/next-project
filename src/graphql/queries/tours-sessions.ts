@@ -67,6 +67,8 @@ export const GET_FUTURE_SESSIONS = gql`
       title
       slug
       currency
+      difficulty
+      experience_level
       places {
         slug
       }

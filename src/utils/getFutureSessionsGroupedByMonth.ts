@@ -4,115 +4,130 @@ import { GET_CALENDAR_PAGE } from '@/graphql/queries/calendar-page';
 export async function getFutureSessionsGroupedByMonth() {
   const API_URL = process.env.STRAPI_GRAPHQL_API! || 'https://api.weshoot.it/graphql';
 
-  // Fetch dati delle sessioni
+  // --- FETCH ---
   const futureSessionsRes = await fetch(API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ query: GET_FUTURE_SESSIONS.loc?.source.body }),
-    next: { revalidate: 60 } // opzionale per ISR
+    next: { revalidate: 60 },
   });
 
-  // Fetch dati della pagina (inclusi SEO)
   const calendarPageRes = await fetch(API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ query: GET_CALENDAR_PAGE.loc?.source.body }),
-    next: { revalidate: 60 }
+    next: { revalidate: 60 },
   });
 
   const futureSessionsData = await futureSessionsRes.json();
   const calendarPageData = await calendarPageRes.json();
 
-  const allSessions = [];
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  // --- DATE STABILI ---
+  const now = new Date();
+  const utcMidnight = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const TZ = 'Europe/Rome';
+  const monthLabelFmt = new Intl.DateTimeFormat('it-IT', { timeZone: TZ, month: 'long', year: 'numeric' });
+  const partsFmt = new Intl.DateTimeFormat('it-IT', { timeZone: TZ, year: 'numeric', month: 'numeric' });
+
+  const allSessions: any[] = [];
 
   futureSessionsData?.data?.tours?.forEach((tour: any) => {
     tour.sessions?.forEach((session: any) => {
-      const sessionDate = new Date(session.start);
-      if (sessionDate >= today) {
-        const startDate = new Date(session.start);
-        const endDate = new Date(session.end);
-        const duration = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+      const start = new Date(session.start);
+      if (start.getTime() >= utcMidnight) {
+        const end = new Date(session.end);
+        const duration = Math.ceil((end.getTime() - start.getTime()) / 86400000);
 
+        // Coach
         const coach = session.users?.[0]
           ? {
               id: session.users[0].id,
               name: session.users[0].firstName
                 ? `${session.users[0].firstName} ${session.users[0].lastName || ''}`.trim()
-                : session.users[0].username,
+                : session.users[0].firstName || session.users[0].lastName || '',
               avatar: {
                 url: session.users[0].profilePicture?.url || '',
-                alt: session.users[0].firstName || session.users[0].username
-              }
+                alt: session.users[0].firstName || session.users[0].lastName || 'Coach',
+              },
             }
           : {
               id: '1',
               name: 'WeShoot Team',
               avatar: {
                 url: tour.image?.url || '',
-                alt: 'WeShoot Team'
-              }
+                alt: 'WeShoot Team',
+              },
             };
 
-            allSessions.push({
-              id: session.id,
-              startDate: session.start,
-              endDate: session.end,
-              status: session.status,
-              price: session.price,
-              currency: session.currency || 'EUR',
-              availableSpots: session.maxPax,
-              tour: {
-                id: tour.id,
-                title: tour.title,
-                slug: tour.slug,
-                duration,
-                coach,
-                places: tour.places,  // ✅ aggiungi questi
-                states: tour.states   // ✅ aggiungi questi
-          }
+        // 👇 Propaga difficulty/experience_level dal TOUR (come da tuo schema)
+        const difficulty = tour.difficulty ?? null;
+        const experience_level = tour.experience_level ?? null;
+
+        allSessions.push({
+          id: session.id,
+          startDate: session.start,
+          endDate: session.end,
+          status: session.status,
+          price: session.price,
+          currency: session.currency || 'EUR',
+          availableSpots: session.maxPax ?? null,
+          tour: {
+            id: tour.id,
+            title: tour.title,
+            slug: tour.slug,
+            duration,               // non usato a UI per i “giorni”, ma utile se serve altrove
+            difficulty,             // ✅ ora disponibile a CalendarSession
+            experience_level,       // ✅ idem
+            coach,
+            places: tour.places,
+            states: tour.states,
+          },
         });
       }
     });
   });
 
-  const groupedSessions: {
-    [key: string]: {
-      month: string;
-      year: number;
-      tours: typeof allSessions;
-    };
-  } = {};
+  // --- GROUP BY MESE (YYYY-MM) ---
+  type Group = {
+    month: string;   // "agosto"
+    year: number;    // 2025
+    label: string;   // "agosto 2025"
+    tours: typeof allSessions;
+  };
+
+  const groupedSessions: Record<string, Group> = {};
 
   allSessions
     .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
-    .forEach((session) => {
-      const date = new Date(session.startDate);
-      const year = date.getFullYear();
-      const month = date.toLocaleDateString('it-IT', { month: 'long' });
-      const key = `${year}-${month}`;
+    .forEach((s) => {
+      const d = new Date(s.startDate);
+      const parts = partsFmt.formatToParts(d);
+      const y = Number(parts.find((p) => p.type === 'year')!.value);
+      const m = Number(parts.find((p) => p.type === 'month')!.value); // 1-12
+      const monthKey = `${y}-${String(m).padStart(2, '0')}`;
+      const label = monthLabelFmt.format(d);
+      const monthOnly = new Intl.DateTimeFormat('it-IT', { timeZone: TZ, month: 'long' }).format(d);
 
-      if (!groupedSessions[key]) {
-        groupedSessions[key] = {
-          month,
-          year,
-          tours: []
+      if (!groupedSessions[monthKey]) {
+        groupedSessions[monthKey] = {
+          month: monthOnly,
+          year: y,
+          label,
+          tours: [],
         };
       }
-
-      groupedSessions[key].tours.push(session);
+      groupedSessions[monthKey].tours.push(s);
     });
 
   const coverImage =
     calendarPageData?.data?.calendarPage?.cover?.url ||
-    'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Viaggi%20Fotografici.avif';
+    'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/calendar.avif';
 
   const seoData = calendarPageData?.data?.calendarPage?.SEO || null;
 
   return {
     groupedSessions,
     coverImage,
-    seoData
+    seoData,
   };
 }
