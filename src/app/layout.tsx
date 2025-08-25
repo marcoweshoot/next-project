@@ -5,6 +5,7 @@ import { Montserrat } from 'next/font/google';
 import ClientProviders from '@/components/providers/ClientProviders';
 import { ToastStateProvider } from '@/components/ui/toast-provider';
 import { Toaster } from '@/components/ui/toaster';
+import { headers } from 'next/headers';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -22,14 +23,24 @@ export const metadata: Metadata = {
     'Viaggi fotografici e workshop di paesaggio con coach professionisti. Calendario aggiornato, destinazioni e date.',
   robots: { index: true, follow: true },
   other: {
-    'color-scheme': 'light dark', // 👈 qui, non nel <head>
+    'color-scheme': 'light dark', // meglio qui che in <head>
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Nonce passato dal middleware (usalo per eventuali <Script nonce={...}> in futuro)
+  const nonce = (await headers()).get('x-nonce') || undefined;
+
   return (
     <html lang="it" className={montserrat.variable} suppressHydrationWarning>
-      <body className="font-sans antialiased">
+      <head>
+        {/* Preconnect per velocizzare immagini/asset */}
+        <link rel="preconnect" href="https://s3.eu-west-1.amazonaws.com" crossOrigin="" />
+        <link rel="preconnect" href="https://wxoodcdxscxazjkoqhsg.supabase.co" crossOrigin="" />
+        {/* Se/quando userai un CDN tipo cdn.weshoot.it, aggiungi anche: */}
+        {/* <link rel="preconnect" href="https://cdn.weshoot.it" crossOrigin="" /> */}
+      </head>
+      <body className="font-sans antialiased" data-nonce={nonce}>
         <ToastStateProvider>
           <ClientProviders>{children}</ClientProviders>
           <Toaster />

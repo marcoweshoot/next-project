@@ -26,8 +26,8 @@ const QUICK_LINKS = [
   { href: '/gift-card', label: '🎁 Carte Regalo' }
 ];
 const SUPPORT_LINKS = [
-  { href: '/chi-siamo', label: '💬 Chi Siamo' },
-  { href: '/contatti', label: '💬 Contattaci' },
+  { href: '/chi-siamo', label: '👨‍💻 Chi Siamo' },
+  { href: '/contatti', label: '📱 Contattaci' },
   { href: '/terms', label: '📄 Termini e Condizioni' },
   { href: '/gdpr', label: '🔒 Privacy Policy' },
 ];
