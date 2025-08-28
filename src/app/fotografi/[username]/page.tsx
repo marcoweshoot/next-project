@@ -1,3 +1,4 @@
+// src/app/fotografi/[username]/page.tsx
 import { notFound } from "next/navigation";
 import { getClient } from "@/lib/apolloClient";
 import {
@@ -15,22 +16,28 @@ import PhotographerTours from "@/components/photographer-detail/PhotographerTour
 export const dynamic = "force-static"; // SSG puro
 // Se vuoi ISR, aggiungi: export const revalidate = 60;
 
-const abs = (u?: string) =>
+const abs = (u?: string | null) =>
   u ? (u.startsWith("http") ? u : `https://api.weshoot.it${u}`) : undefined;
 
 // Pre-genera tutti gli username disponibili
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<Array<{ username: string }>> {
   const client = getClient();
   const { data } = await client.query({ query: GET_COACHES });
-  const list = data?.coaches || data?.users || [];
-  return list.map((coach: any) => ({ username: coach.username }));
+  const list = (data?.coaches ?? data?.users ?? []) as Array<{
+    username?: string | null;
+  }>;
+
+  return list
+    .map((coach) => coach.username)
+    .filter((u): u is string => !!u)
+    .map((username) => ({ username }));
 }
 
-type PageProps = {
+type RouteParams = {
   params: { username: string };
 };
 
-export default async function PhotographerPage({ params }: PageProps) {
+export default async function PhotographerPage({ params }: RouteParams) {
   const { username } = params;
   const client = getClient();
 
