@@ -53,7 +53,7 @@ const TourCardCoaches: React.FC<TourCardCoachesProps> = ({ sessionCoaches }) => 
 
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-gray-900 truncate">
-          {sessionCoaches.map(getCoachFullName).filter(Boolean).join(', ')}
+          {sessionCoaches.map(getCoachFullName).filter(Boolean).join(', ') || 'Coach WeShoot'}
         </p>
       </div>
     </div>
