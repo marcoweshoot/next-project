@@ -1,59 +1,56 @@
-export const dynamicConfig = 'force-static';
-
+// src/app/viaggi-fotografici/page.tsx
 import { Metadata } from 'next';
 import { request } from 'graphql-request';
 import { GET_TOURS, GET_TOURS_PAGE } from '@/graphql/queries';
 import { transformTours } from '@/utils/TourDataUtilis';
+import ToursList from '@/components/tours/ToursList.client';
+import ToursFAQ from '@/components/tours/ToursFAQServer';
 import type { Tour } from '@/types';
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import ToursQuickLinks from '@/components/tours/ToursQuickLinks';
-import ToursInfoSection from '@/components/tours/ToursInfoSection';
-import ToursFAQ from '@/components/tours/ToursFAQServer'; // versione con <span> nel trigger
-import dynamic from 'next/dynamic';
+// ✅ SSG con ISR: pagina statica rigenerata ogni 10 minuti
+export const dynamic = 'force-static';
+export const revalidate = false; // 600s = 10m
 
-// carica l’isola client separata
-const ToursList = dynamic(() => import('@/components/tours/ToursList.client'));
+export const metadata: Metadata = {
+  title: 'Viaggi Fotografici - WeShoot.it',
+  description:
+    "Scopri i nostri viaggi fotografici nel mondo. Destinazioni uniche, coach esperti e piccoli gruppi per un'esperienza fotografica indimenticabile.",
+  alternates: {
+    canonical: 'https://www.weshoot.it/viaggi-fotografici/',
+  },
+};
 
 const GRAPHQL_ENDPOINT = process.env.STRAPI_GRAPHQL_API!;
 
-export const metadata: Metadata = {
-  title: 'Viaggi Fotografici 2025-2026 | Tour e Workshop di Paesaggio - WeShoot',
-  description:
-    "Scopri i nostri viaggi fotografici nel mondo. Destinazioni uniche, coach esperti e piccoli gruppi per un'esperienza fotografica indimenticabile.",
-  alternates: { canonical: 'https://www.weshoot.it/viaggi-fotografici/' },
+type GetToursResponse = { tours: unknown[] };
+type GetToursPageResponse = {
+  toursPage: {
+    cover?: unknown;
+    faqs?: Array<{ id: string; question: string; answer: string }>;
+  } | null;
 };
-
-type GetToursResponse = { tours: any[] };
-type GetToursPageResponse = { toursPage: { cover?: any | null; faqs?: any[] | null } | null };
 
 export default async function Page() {
   const [toursData, toursPageData] = await Promise.all([
-    request<GetToursResponse>(GRAPHQL_ENDPOINT, GET_TOURS, { locale: 'it', limit: 6, start: 0 }),
-    request<GetToursPageResponse>(GRAPHQL_ENDPOINT, GET_TOURS_PAGE, { locale: 'it' }),
+    request<GetToursResponse>(GRAPHQL_ENDPOINT, GET_TOURS, {
+      locale: 'it',
+      limit: 6,
+      start: 0,
+    }),
+    request<GetToursPageResponse>(GRAPHQL_ENDPOINT, GET_TOURS_PAGE, {
+      locale: 'it',
+    }),
   ]);
 
-  const initialTours: Tour[] = transformTours(toursData.tours);
+  const initialTours = transformTours(toursData.tours) as Tour[];
   const heroImage = toursPageData.toursPage?.cover ?? null;
   const faqs = toursPageData.toursPage?.faqs ?? [];
 
   return (
     <>
-      {/* niente <SEO/>: ci pensa `metadata` */}
-      <div className="min-h-screen bg-white">
-        <Header />
-
-        {/* se vuoi mantenere l’ordine originale (Hero poi QuickLinks),
-            lascia QuickLinks QUI sotto l’isola client */}
-        <ToursList initialTours={initialTours} heroImage={heroImage} />
-        <ToursQuickLinks />
-
-        <ToursInfoSection />
-        <ToursFAQ faqs={faqs as any[]} />
-      </div>
-
-      <Footer />
+      <ToursList initialTours={initialTours} heroImage={heroImage} />
+      {/* FAQ sotto la lista */}
+      {faqs?.length ? <ToursFAQ faqs={faqs as any} /> : null}
     </>
   );
 }
