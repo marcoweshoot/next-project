@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import {
   Accordion,
@@ -17,9 +19,7 @@ interface ToursFAQProps {
 }
 
 const ToursFAQ: React.FC<ToursFAQProps> = ({ faqs }) => {
-  if (!faqs?.length) {
-    return null;
-  }
+  if (!faqs?.length) return null;
 
   return (
     <section className="py-16 bg-gray-50">
@@ -37,12 +37,16 @@ const ToursFAQ: React.FC<ToursFAQProps> = ({ faqs }) => {
                 className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
               >
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-50 transition-colors">
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                  {/* <h3> ❌ non valido dentro <button> */}
+                  <span
+                    className="text-lg font-semibold text-gray-900 pr-4"
+                    role="heading"
+                    aria-level={3}
+                  >
                     {faq.question}
-                  </h3>
+                  </span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4">
-                  {/* Assumiamo che `faq.answer` sia HTML sicuro generato lato CMS */}
                   <div
                     className="text-gray-700 leading-relaxed prose max-w-none"
                     dangerouslySetInnerHTML={{ __html: faq.answer }}

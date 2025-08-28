@@ -1,20 +1,14 @@
-// src/components/gallery/GalleryGrid.tsx
+'use client';
+
 import React from 'react';
 import NextImage from 'next/image';
 import type { GalleryGridProps } from '@/components/home/gallery/types';
 
 const GalleryGrid: React.FC<GalleryGridProps> = ({ images, onImageClick }) => {
   return (
-    <ul
-      role="list"
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-    >
+    <ul role="list" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {images.map((img, idx) => (
-        <li
-          key={img.id}
-          role="listitem"
-          className="overflow-hidden rounded-lg shadow-lg"
-        >
+        <li key={img.id} role="listitem" className="overflow-hidden rounded-lg shadow-lg">
           <button
             type="button"
             onClick={() => onImageClick?.(idx)}

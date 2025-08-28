@@ -6,9 +6,11 @@ import ClientProviders from '@/components/providers/ClientProviders';
 import { ToastStateProvider } from '@/components/ui/toast-provider';
 import { Toaster } from '@/components/ui/toaster';
 
+// Precarica SOLO i pesi realmente usati above-the-fold (es. 400 e 700)
 const montserrat = Montserrat({
   subsets: ['latin'],
-  variable: '--font-montserrat',
+  weight: ['400', '700'],
+  display: 'swap',
   preload: true,
 });
 
@@ -21,21 +23,18 @@ export const metadata: Metadata = {
   description:
     'Viaggi fotografici e workshop di paesaggio con coach professionisti. Calendario aggiornato, destinazioni e date.',
   robots: { index: true, follow: true },
-  other: {
-    'color-scheme': 'light dark',
-  },
+  other: { 'color-scheme': 'light dark' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="it" className={montserrat.variable} suppressHydrationWarning>
+    <html lang="it" suppressHydrationWarning>
       <head>
-        {/* Preconnect opzionali (non rendono dinamico) */}
         <link rel="preconnect" href="https://s3.eu-west-1.amazonaws.com" crossOrigin="" />
         <link rel="preconnect" href="https://wxoodcdxscxazjkoqhsg.supabase.co" crossOrigin="" />
-        {/* Se usi un CDN: <link rel="preconnect" href="https://cdn.weshoot.it" crossOrigin="" /> */}
       </head>
-      <body className="font-sans antialiased">
+      {/* ✅ Applica direttamente la classe del font: viene usato subito */}
+      <body className={`${montserrat.className} antialiased`}>
         <ToastStateProvider>
           <ClientProviders>{children}</ClientProviders>
           <Toaster />

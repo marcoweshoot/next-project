@@ -1,4 +1,3 @@
-import React from 'react';
 import { Users, Star, MapPin } from 'lucide-react';
 
 export default function ToursInfoSection() {
