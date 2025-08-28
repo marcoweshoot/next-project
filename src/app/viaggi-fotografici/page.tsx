@@ -7,9 +7,13 @@ import ToursList from '@/components/tours/ToursList.client';
 import ToursFAQ from '@/components/tours/ToursFAQServer';
 import type { Tour } from '@/types';
 
-// ✅ SSG con ISR: pagina statica rigenerata ogni 10 minuti
+// ⬇️ Navbar / Footer
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
+// ✅ SSG (pagina statica). Metti un numero se vuoi ISR (es. 600)
 export const dynamic = 'force-static';
-export const revalidate = false; // 600s = 10m
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: 'Viaggi Fotografici - WeShoot.it',
@@ -48,9 +52,14 @@ export default async function Page() {
 
   return (
     <>
-      <ToursList initialTours={initialTours} heroImage={heroImage} />
-      {/* FAQ sotto la lista */}
-      {faqs?.length ? <ToursFAQ faqs={faqs as any} /> : null}
+      <Header />
+
+      <div className="min-h-screen bg-white">
+        <ToursList initialTours={initialTours} heroImage={heroImage} />
+        {faqs?.length ? <ToursFAQ faqs={faqs as any} /> : null}
+      </div>
+
+      <Footer />
     </>
   );
 }
