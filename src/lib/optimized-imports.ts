@@ -28,7 +28,7 @@ export const UIComponents = {
 // Componenti di business - lazy loading
 export const BusinessComponents = {
   TourCard: () => import('@/components/tour-card/TourCard').then(m => ({ default: m.default })),
-  TourDetail: () => import('@/components/tour-detail/TourDetail').then(m => ({ default: m.default })),
+  TourDetail: () => import('@/components/tour-detail/TourDetailContentClient').then(m => ({ default: m.default })),
   GalleryLightbox: () => import('@/components/tour-detail/gallery/GalleryLightbox').then(m => ({ default: m.default })),
 };
 
