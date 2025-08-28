@@ -17,7 +17,7 @@ function dedupeTours(list: Tour[]) {
   const seen = new Set<string>();
   const out: Tour[] = [];
   for (const t of list) {
-    const key = (t as any).slug ?? String((t as any).id);
+    const key = (t as any).slug ?? String((t as any).id ?? Math.random());
     if (!seen.has(key)) {
       seen.add(key);
       out.push(t);
