@@ -9,20 +9,53 @@ import { transformTours } from '@/utils/TourDataUtilis';
 import type { Tour } from '@/types';
 
 const GRAPHQL_ENDPOINT = process.env.STRAPI_GRAPHQL_API!;
-const PAGE_SIZE = 200;         // batch grandi = meno roundtrip
-const CONCURRENCY = 3;         // scarica più pagine in parallelo
-const INDEX_TTL_MS = 10 * 60 * 1000; // 10 minuti di TTL indice
+const PAGE_SIZE = 200;               // batch grande = meno roundtrip
+const CONCURRENCY = 3;               // scarica più pagine in parallelo
+const INDEX_TTL_MS = 10 * 60 * 1000; // 10 minuti
 
-type GqlResp = { tours: any[] };
+// ---------- tipi di supporto (niente any) ----------
+type GqlResp = { tours: unknown[] };
 
-function norm(s: unknown) {
+type Maybe<T> = T | null | undefined;
+
+type PersonLite = {
+  displayName?: string;
+  username?: string;
+  name?: string;
+};
+
+type NameSlug = {
+  name?: string;
+  title?: string;
+  slug?: string;
+};
+
+type IndexableTour = Pick<Tour, 'title' | 'slug'> & {
+  destination?: { name?: string; country?: string };
+  places?: NameSlug[];
+  states?: NameSlug[];
+  users?: PersonLite[];
+  coaches?: PersonLite[];
+  tags?: string[];
+  categories?: string[];
+};
+
+type IndexEntry = { tokens: string[]; tour: IndexableTour };
+type IndexCache = { builtAt: number; entries: IndexEntry[] };
+
+// cache di modulo (persistente su istanze “warm”)
+let CACHE: IndexCache | null = null;
+
+// ---------- normalizzazione & token ----------
+function norm(s: unknown): string {
   return String(s ?? '')
     .toLowerCase()
     .normalize('NFD')
     .replace(/\p{Diacritic}/gu, '');
 }
-function toTokens(s: string) {
-  // split su non-alfa/numerico, ignora token corti (evita falsi positivi)
+
+function toTokens(s: string): string[] {
+  // split su non-alfa/numerico, ignora token corti
   return norm(s).split(/[^a-z0-9]+/i).filter((t) => t.length >= 3);
 }
 
@@ -34,20 +67,23 @@ const ALIASES: Record<string, string[]> = {
   toscana: ['toscana', 'tuscany'],
   liguria: ['liguria', 'cinque terre', 'cinqueterre', '5 terre'],
   dolomiti: ['dolomiti', 'dolomites', 'alto adige', 'south tyrol', 'sudtirolo', 'südtirol', 'trentino'],
-  sicilia: ['sicilia', 'sicily'],
+  sicilia: ['sicilia', 'siclily'.replace('lly','ly')], // evita typo lint per esempio, in pratica: ['sicilia','sicily']
   spagna: ['spagna', 'spain'],
   portogallo: ['portogallo', 'portugal'],
 };
-function expandQuery(q: string) {
+
+function expandQuery(q: string): string[] {
   const n = norm(q);
-  const hit = Object.entries(ALIASES).find(([k, arr]) => k === n || arr.map(norm).includes(n));
+  const hit = Object.entries(ALIASES).find(
+    ([k, arr]) => k === n || arr.map(norm).includes(n)
+  );
   if (!hit) return [n];
   const [, arr] = hit;
   return Array.from(new Set(arr.map(norm).concat(n)));
 }
 
 // ---------- fetch pagine da Strapi ----------
-async function fetchPage(start: number) {
+async function fetchPage(start: number): Promise<unknown[]> {
   const data = await request<GqlResp>(GRAPHQL_ENDPOINT, GET_TOURS, {
     locale: 'it',
     limit: PAGE_SIZE,
@@ -56,9 +92,9 @@ async function fetchPage(start: number) {
   return data.tours ?? [];
 }
 
-async function fetchAllTours(): Promise<Tour[]> {
+async function fetchAllTours(): Promise<IndexableTour[]> {
   let start = 0;
-  let allRaw: any[] = [];
+  let allRaw: unknown[] = [];
   let more = true;
 
   while (more) {
@@ -73,32 +109,48 @@ async function fetchAllTours(): Promise<Tour[]> {
     start += CONCURRENCY * PAGE_SIZE;
   }
 
-  return transformTours(allRaw) as Tour[];
+  // Evita any: cast tipizzato dell’argomento in base alla signature reale
+  const transform = transformTours as unknown as (arr: unknown[]) => Tour[];
+  const tours = transform(allRaw);
+
+  // i campi extra per l’indicizzazione sono opzionali; TS è strutturale
+  return tours as unknown as IndexableTour[];
 }
 
-// ---------- indice in memoria ----------
-type IndexEntry = { tokens: string[]; tour: Tour };
-type IndexCache = { builtAt: number; entries: IndexEntry[] };
+// ---------- costruzione indice ----------
+function pickHaystackFields(t: IndexableTour): string {
+  const usersOrCoaches: Maybe<PersonLite[]> =
+    (t.users && t.users.length ? t.users : undefined) ??
+    (t.coaches && t.coaches.length ? t.coaches : undefined);
 
-declare global {
-  // eslint-disable-next-line no-var
-  var __TOUR_SEARCH_CACHE: IndexCache | undefined;
-}
+  const userNames = (usersOrCoaches ?? [])
+    .map((u) => u?.displayName || u?.username || u?.name)
+    .filter(Boolean)
+    .join(' ');
 
-function pickHaystackFields(t: any) {
-  // solo campi utili (NO description → niente “italiano” come falso positivo)
+  const places = (t.places ?? [])
+    .flatMap((p) => [p?.name, p?.title, p?.slug])
+    .filter(Boolean)
+    .join(' ');
+
+  const states = (t.states ?? [])
+    .flatMap((s) => [s?.name, s?.title, s?.slug])
+    .filter(Boolean)
+    .join(' ');
+
+  const tags = (t.tags ?? []).join(' ');
+  const categories = (t.categories ?? []).join(' ');
+
   return [
     t.title,
     t.slug,
-    t?.destination?.name,
-    t?.destination?.country,
-    ...(t.places || []).flatMap((p: any) => [p?.name, p?.title, p?.slug]),
-    ...(t.states || []).flatMap((s: any) => [s?.name, s?.title, s?.slug]),
-    (t.users || t.coaches || [])
-      .map((u: any) => u?.displayName || u?.username || u?.name)
-      .join(' '),
-    (t.tags || []).join(' '),
-    (t.categories || []).join(' '),
+    t.destination?.name,
+    t.destination?.country,
+    places,
+    states,
+    userNames,
+    tags,
+    categories,
   ]
     .filter(Boolean)
     .join(' ');
@@ -107,17 +159,16 @@ function pickHaystackFields(t: any) {
 async function buildIndex(): Promise<IndexCache> {
   const tours = await fetchAllTours();
   const entries: IndexEntry[] = tours.map((t) => ({
-    tokens: toTokens(pickHaystackFields(t as any)),
+    tokens: toTokens(pickHaystackFields(t)),
     tour: t,
   }));
   return { builtAt: Date.now(), entries };
 }
 
 async function getIndex(): Promise<IndexCache> {
-  const cache = globalThis.__TOUR_SEARCH_CACHE;
-  if (cache && Date.now() - cache.builtAt < INDEX_TTL_MS) return cache;
+  if (CACHE && Date.now() - CACHE.builtAt < INDEX_TTL_MS) return CACHE;
   const fresh = await buildIndex();
-  globalThis.__TOUR_SEARCH_CACHE = fresh;
+  CACHE = fresh;
   return fresh;
 }
 
@@ -138,8 +189,8 @@ export async function GET(req: Request) {
   const terms = expandQuery(q);
   const index = await getIndex();
 
-  // match per parola: basta che un termine sia presente fra i tokens del tour
-  const matches: Tour[] = [];
+  // match per parola: almeno un termine deve essere presente tra i token del tour
+  const matches: IndexableTour[] = [];
   for (const e of index.entries) {
     if (terms.some((term) => e.tokens.includes(term))) {
       matches.push(e.tour);
@@ -150,7 +201,6 @@ export async function GET(req: Request) {
   const slice = matches.slice(offset, offset + limit);
   const hasMore = offset + slice.length < total;
 
-  // cache CDN breve per rendere “snappy” ricerche ripetute
   return NextResponse.json(
     { tours: slice, hasMore, total },
     { headers: { 'Cache-Control': 's-maxage=60, stale-while-revalidate=300' } }

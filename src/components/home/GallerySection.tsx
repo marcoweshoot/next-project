@@ -8,6 +8,10 @@ import type { GallerySectionProps } from '@/components/home/gallery/types';
 import { processGalleryImages } from '@/utils/TourDataUtilis';
 
 const GallerySection: React.FC<GallerySectionProps> = ({ pictures = [], loading }) => {
+  // ✅ Gli hook DEVONO stare sempre qui, in cima (mai dentro/prima di return condizionali)
+  const [lbOpen, setLbOpen] = useState(false);
+  const [lbIndex, setLbIndex] = useState(0);
+
   if (loading) {
     return (
       <section className="py-16 bg-white" aria-label="Caricamento galleria" role="status">
@@ -17,10 +21,6 @@ const GallerySection: React.FC<GallerySectionProps> = ({ pictures = [], loading 
       </section>
     );
   }
-
-  // stato per controllare la lightbox
-  const [lbOpen, setLbOpen] = useState(false);
-  const [lbIndex, setLbIndex] = useState(0);
 
   const safePictures = Array.isArray(pictures) ? pictures : [];
   const allProcessed = processGalleryImages(safePictures);
@@ -34,10 +34,13 @@ const GallerySection: React.FC<GallerySectionProps> = ({ pictures = [], loading 
         {/* 👉 collega il click delle anteprime all’apertura della lightbox */}
         <GalleryGrid
           images={galleryImages}
-          onImageClick={(idx) => { setLbIndex(idx); setLbOpen(true); }}
+          onImageClick={(idx) => {
+            setLbIndex(idx);
+            setLbOpen(true);
+          }}
         />
 
-        {/* Bottone + Lightbox (ora controllata da fuori) */}
+        {/* Bottone + Lightbox (controllata da questo componente) */}
         <div className="text-center mt-12">
           <GalleryLightboxClient
             pictures={safePictures}
