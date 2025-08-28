@@ -10,11 +10,11 @@ import TourCardCoaches from './TourCardCoaches';
 import { formatDateRange } from '@/utils/TourDataUtilis';
 import TourCardPricing from './TourCardPricing';
 
-interface Props {
+export interface TourCardProps {
   tour: Tour;
 }
 
-const TourCard: React.FC<Props> = ({ tour }) => {
+const TourCard: React.FC<TourCardProps> = ({ tour }) => {
   const {
     title,
     startDate,

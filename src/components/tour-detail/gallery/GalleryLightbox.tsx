@@ -2,14 +2,18 @@
 
 import React from 'react';
 import {
-  Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 // opzionale: puoi anche usare VisuallyHidden
 // import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
-interface GalleryLightboxProps {
+export interface GalleryLightboxProps {
   isOpen: boolean;
   onClose: () => void;
   images: Array<{ url: string; alternativeText?: string; caption?: string }>;
@@ -29,12 +33,15 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
   onKeyDown,
 }) => {
   const total = images.length;
-  const currentImage = images[currentIndex] || { url: '', alternativeText: '', caption: '' };
+  const currentImage =
+    images[currentIndex] || { url: '', alternativeText: '', caption: '' };
 
   return (
     <Dialog
       open={isOpen}
-      onOpenChange={(open) => { if (!open) onClose(); }} // chiudi solo quando viene richiesto
+      onOpenChange={(open) => {
+        if (!open) onClose();
+      }}
     >
       <DialogContent
         className="max-w-[95vw] max-h-[95vh] p-0 bg-black/95 border-none"
@@ -46,7 +53,9 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
         {/* Titolo/descrizione richiesti da Radix (possono essere nascosti) */}
         <DialogHeader className="sr-only">
           <DialogTitle>Galleria immagini</DialogTitle>
-          <DialogDescription>Lightbox del tour. Usa frecce per navigare.</DialogDescription>
+          <DialogDescription>
+            Lightbox del tour. Usa frecce per navigare.
+          </DialogDescription>
         </DialogHeader>
         {/* In alternativa:
         <VisuallyHidden>
@@ -94,7 +103,11 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
           <div className="relative max-w-full max-h-full p-8 flex items-center justify-center">
             <img
               src={currentImage.url}
-              alt={currentImage.alternativeText || `Gallery image ${currentIndex + 1}`}
+              alt={
+                currentImage.alternativeText ||
+                `Gallery image ${currentIndex + 1}`
+              }
+              loading="lazy"
               className="max-w-full max-h-full object-contain"
             />
 

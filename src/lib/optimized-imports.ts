@@ -1,5 +1,9 @@
+// src/lib/optimized-imports.ts
 // Importazioni ottimizzate per ridurre il bundle JavaScript
 // Questo file centralizza le importazioni più pesanti
+
+import { createElement, type ComponentType } from 'react';
+import dynamic from 'next/dynamic';
 
 // Icons - importazione selettiva
 export const Icons = {
@@ -29,11 +33,11 @@ export const BusinessComponents = {
 };
 
 // Utilità per il lazy loading
-export const createLazyComponent = (importFn: () => Promise<any>) => {
-  return import('next/dynamic').then(({ default: dynamic }) => 
-    dynamic(importFn, {
-      loading: () => <div className="animate-pulse bg-gray-200 rounded" />,
-      ssr: true,
-    })
-  );
-};
+// Nota: niente JSX in un file .ts; usiamo createElement
+export const createLazyComponent = <T extends ComponentType<unknown>>(
+  importFn: () => Promise<{ default: T }>
+) =>
+  dynamic(importFn, {
+    loading: () => createElement('div', { className: 'animate-pulse bg-gray-200 rounded' }),
+    ssr: true,
+  });

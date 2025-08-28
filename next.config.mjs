@@ -77,9 +77,6 @@ const config = {
     minimumCacheTTL: 31536000,
   },
   
-  // Ottimizzazioni per il build
-  swcMinify: true,
-  
   // Compressione
   compress: true,
   
