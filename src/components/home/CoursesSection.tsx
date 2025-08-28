@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { FC } from "react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { GraduationCap } from "lucide-react";
 import CourseCard from "@/components/CourseCard";
 
@@ -19,41 +18,37 @@ interface CoursesSectionProps {
 const CoursesSection: FC<CoursesSectionProps> = ({ courses }) => {
   return (
     <section
-      className="py-20 bg-gradient-to-br from-gray-50 to-white"
+      className="py-20 bg-background bg-gradient-to-br from-muted/60 to-background"
       aria-labelledby="courses-section-title"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-4">
-          </div>
+        <div className="mb-16 text-center">
           <h2
             id="courses-section-title"
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="mb-6 text-4xl font-bold text-foreground md:text-5xl"
           >
-            Prima di partire, impara con i {" "}
+            Prima di partire, impara con i{" "}
             <span className="text-primary">corsi di fotografia</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted-foreground">
             Impara da vincitori di contest internazionali e sviluppa il tuo
             stile fotografico con i nostri video corsi professionali.
           </p>
         </div>
 
         {/* Courses */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {courses.length > 0 ? (
-            courses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))
+            courses.map((course) => <CourseCard key={course.id} course={course} />)
           ) : (
-            <div className="col-span-full text-center py-12">
-              <div className="bg-white rounded-xl p-8 shadow-lg max-w-md mx-auto">
-                <GraduationCap className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 mb-2 text-lg font-medium">
+            <div className="col-span-full py-12 text-center">
+              <div className="mx-auto max-w-md rounded-xl border bg-card p-8 text-card-foreground shadow-sm">
+                <GraduationCap className="mx-auto mb-4 h-12 w-12 text-muted-foreground" />
+                <p className="mb-2 text-lg font-medium text-foreground">
                   I corsi saranno presto disponibili
                 </p>
-                <p className="text-gray-500 text-sm">
+                <p className="text-sm text-muted-foreground">
                   Stiamo preparando contenuti di alta qualità per te.
                 </p>
               </div>
@@ -65,8 +60,8 @@ const CoursesSection: FC<CoursesSectionProps> = ({ courses }) => {
         <div className="text-center">
           <Button
             size="lg"
-            className="bg-red-600 hover:bg-primary/90 text-white px-8 py-3 text-lg font-semibold shadow-lg transition-all duration-200"
             asChild
+            className="bg-primary text-primary-foreground hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <Link href="/corsi-di-fotografia">Scopri Tutti i Corsi</Link>
           </Button>

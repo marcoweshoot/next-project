@@ -42,14 +42,14 @@ export default function PhotographerHero({ photographer }: PhotographerHeroProps
           fetchPriority="high"
           sizes="(max-width:640px) 100vw, (max-width:1024px) 100vw, 1200px"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/60 dark:bg-black/70" aria-hidden="true" />
       </div>
 
       {/* Foreground */}
-      <div className="relative z-10 h-full flex items-center justify-center">
-        <div className="text-center text-white px-4 max-w-4xl mx-auto">
-          {/* Avatar (server-friendly) */}
-          <div className="mb-8 mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+      <div className="relative z-10 flex h-full items-center justify-center">
+        <div className="mx-auto max-w-4xl px-4 text-center text-primary-foreground">
+          {/* Avatar */}
+          <div className="mx-auto mb-8 h-32 w-32 overflow-hidden rounded-full shadow-2xl ring-4 ring-primary-foreground ring-opacity-80 ring-offset-2 ring-offset-transparent">
             <Image
               src={profilePictureUrl}
               alt={`${photographer.firstName} ${photographer.lastName}`}
@@ -61,14 +61,14 @@ export default function PhotographerHero({ photographer }: PhotographerHeroProps
           </div>
 
           {/* Nome */}
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl">
             {photographer.firstName} {photographer.lastName}
           </h2>
 
           {/* Bio */}
           {photographer.bio && (
             <div
-              className="text-xl md:text-2xl font-light leading-relaxed mb-8 max-w-3xl mx-auto"
+              className="mx-auto mb-8 max-w-3xl text-xl font-light leading-relaxed md:text-2xl"
               dangerouslySetInnerHTML={{ __html: photographer.bio }}
             />
           )}
@@ -85,30 +85,30 @@ export default function PhotographerHero({ photographer }: PhotographerHeroProps
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Segui ${photographer.instagram} su Instagram`}
-                className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-red-500 transition-all duration-300 hover:scale-110"
                 title={`Segui @${photographer.instagram}`}
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary-foreground/20 backdrop-blur-sm text-primary-foreground transition-all duration-300 hover:scale-110 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
               >
-                <Instagram className="w-6 h-6" />
+                <Instagram className="h-6 w-6" />
               </a>
             </div>
           )}
 
           {/* Breadcrumbs */}
-          <nav className="mt-12 text-sm text-gray-300">
+          <nav className="mt-12 text-sm text-muted-foreground">
             <ul className="inline-flex items-center space-x-2">
               <li>
-                <Link href="/" className="hover:underline">
+                <Link href="/" className="hover:underline hover:text-primary">
                   WeShoot
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/fotografi" className="hover:underline">
+                <Link href="/fotografi" className="hover:underline hover:text-primary">
                   Fotografi
                 </Link>
               </li>
               <li>/</li>
-              <li className="text-white">
+              <li className="text-foreground">
                 {photographer.firstName} {photographer.lastName}
               </li>
             </ul>

@@ -25,15 +25,15 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
 
   return (
     <nav
-      className="lg:hidden border-t border-border bg-background shadow-lg dark:shadow-none"
+      className="lg:hidden border-t border-border bg-background shadow-lg"
       aria-label="Menu principale mobile"
     >
-      <div className="px-4 pt-2 pb-4 space-y-1 max-h-[90vh] overflow-y-auto">
+      <div className="max-h-[90vh] overflow-y-auto space-y-1 px-4 pt-2 pb-4">
         {/* Viaggi Fotografici */}
         <div>
           <button
             type="button"
-            className="flex items-center justify-between w-full px-3 text-foreground hover:text-primary hover:bg-muted transition-colors font-medium rounded-md touch-target tap-highlight-none"
+            className="flex w-full items-center justify-between rounded-md px-3 py-2 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background tap-highlight-none"
             onClick={() => toggleDropdown('mobile-viaggi')}
             aria-expanded={activeDropdown === 'mobile-viaggi'}
             aria-controls="mobile-viaggi-menu"
@@ -46,57 +46,25 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
           </button>
 
           {activeDropdown === 'mobile-viaggi' && (
-            <ul id="mobile-viaggi-menu" className="pl-1 mt-1 space-y-1">
-              <li>
-                <Link
-                  href="/viaggi-fotografici/"
-                  className="block text-base text-muted-foreground hover:text-primary rounded-md hover:bg-muted touch-target touch-pad"
-                  onClick={handleLinkClick}
-                  aria-label="Tutti i Viaggi Fotografici"
-                >
-                  Tutti i Viaggi Fotografici
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/viaggi-fotografici/destinazioni/"
-                  className="block text-base text-muted-foreground hover:text-primary rounded-md hover:bg-muted touch-target touch-pad"
-                  onClick={handleLinkClick}
-                  aria-label="Destinazioni dei Viaggi Fotografici"
-                >
-                  Destinazioni
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/viaggi-fotografici/calendario/"
-                  className="block text-base text-muted-foreground hover:text-primary rounded-md hover:bg-muted touch-target touch-pad"
-                  onClick={handleLinkClick}
-                  aria-label="Calendario dei Viaggi Fotografici"
-                >
-                  Calendario Viaggi
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/viaggi-fotografici/collezioni/"
-                  className="block text-base text-muted-foreground hover:text-primary rounded-md hover:bg-muted touch-target touch-pad"
-                  onClick={handleLinkClick}
-                  aria-label="Collezioni di Viaggi Fotografici"
-                >
-                  Collezioni
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/viaggi-fotografici/storie/"
-                  className="block text-base text-muted-foreground hover:text-primary rounded-md hover:bg-muted touch-target touch-pad"
-                  onClick={handleLinkClick}
-                  aria-label="Storie di Viaggio Fotografico"
-                >
-                  Storie di viaggio
-                </Link>
-              </li>
+            <ul id="mobile-viaggi-menu" className="mt-1 space-y-1 pl-1">
+              {[
+                ['/viaggi-fotografici/', 'Tutti i Viaggi Fotografici', 'Tutti i Viaggi Fotografici'],
+                ['/viaggi-fotografici/destinazioni/', 'Destinazioni', 'Destinazioni dei Viaggi Fotografici'],
+                ['/viaggi-fotografici/calendario/', 'Calendario Viaggi', 'Calendario dei Viaggi Fotografici'],
+                ['/viaggi-fotografici/collezioni/', 'Collezioni', 'Collezioni di Viaggi Fotografici'],
+                ['/viaggi-fotografici/storie/', 'Storie di viaggio', 'Storie di Viaggio Fotografico'],
+              ].map(([href, label, aria]) => (
+                <li key={href as string}>
+                  <Link
+                    href={href as string}
+                    className="block rounded-md text-base text-muted-foreground hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target touch-pad tap-highlight-none"
+                    onClick={handleLinkClick}
+                    aria-label={aria as string}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           )}
         </div>
@@ -105,7 +73,7 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
         <div>
           <button
             type="button"
-            className="flex items-center justify-between w-full px-3 text-foreground hover:text-primary hover:bg-muted transition-colors font-medium rounded-md touch-target tap-highlight-none"
+            className="flex w-full items-center justify-between rounded-md px-3 py-2 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background tap-highlight-none"
             onClick={() => toggleDropdown('mobile-accademia')}
             aria-expanded={activeDropdown === 'mobile-accademia'}
             aria-controls="mobile-accademia-menu"
@@ -118,11 +86,11 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
           </button>
 
           {activeDropdown === 'mobile-accademia' && (
-            <ul id="mobile-accademia-menu" className="pl-1 mt-1 space-y-1">
+            <ul id="mobile-accademia-menu" className="mt-1 space-y-1 pl-1">
               <li>
                 <Link
                   href="/corsi-di-fotografia/"
-                  className="block text-base text-muted-foreground hover:text-primary rounded-md hover:bg-muted touch-target touch-pad"
+                  className="block rounded-md text-base text-muted-foreground hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target touch-pad tap-highlight-none"
                   onClick={handleLinkClick}
                   aria-label="Corsi di Fotografia"
                 >
@@ -134,7 +102,7 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
                   href="https://accademia.weshoot.it/wp-login"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-base text-muted-foreground hover:text-primary rounded-md hover:bg-muted touch-target touch-pad"
+                  className="block rounded-md text-base text-muted-foreground hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target touch-pad tap-highlight-none"
                   onClick={handleLinkClick}
                   aria-label="Accesso Membri Accademia WeShoot (si apre in una nuova scheda)"
                 >
@@ -145,9 +113,10 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
           )}
         </div>
 
+        {/* Link singoli */}
         <Link
           href="/fotografi/"
-          className="block px-3 text-foreground hover:text-primary hover:bg-muted transition-colors font-medium rounded-md touch-target"
+          className="block rounded-md px-3 py-2 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target tap-highlight-none"
           onClick={handleLinkClick}
           aria-label="Pagina dei Coach WeShoot"
         >
@@ -158,7 +127,7 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
           href="https://www.weshoot.it/blog"
           target="_blank"
           rel="noopener noreferrer"
-          className="block px-3 text-foreground hover:text-primary hover:bg-muted transition-colors font-medium rounded-md touch-target"
+          className="block rounded-md px-3 py-2 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target tap-highlight-none"
           onClick={handleLinkClick}
           aria-label="Apri il Blog di WeShoot in una nuova finestra"
         >
@@ -167,19 +136,18 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
 
         <Link
           href="/recensioni/"
-          className="block px-3 text-foreground hover:text-primary hover:bg-muted transition-colors font-medium rounded-md touch-target"
+          className="block rounded-md px-3 py-2 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target tap-highlight-none"
           onClick={handleLinkClick}
           aria-label="Recensioni dei Clienti"
         >
           Dicono di Noi
         </Link>
 
+        {/* CTA */}
         <div className="px-3 py-3">
-          {/* shadcn Button asChild: il link eredita le classi e resta l’unico elemento interattivo */}
           <Button
             asChild
-            style={{ backgroundColor: '#E25141' }}
-            className="w-full h-12 text-base rounded-xl"
+            className="h-12 w-full rounded-xl bg-primary text-primary-foreground hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background text-base"
           >
             <Link
               href="/viaggi-fotografici/"
@@ -192,9 +160,9 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
           </Button>
         </div>
 
+        {/* Theme toggle */}
         <div className="flex justify-center pt-2">
-          {/* Assicurati che ThemeToggle rispetti 48x48 */}
-          <div className="w-12 h-12 touch-target">
+          <div className="h-12 w-12 touch-target">
             <ThemeToggle aria-label="Cambia tema (chiaro/scuro)" />
           </div>
         </div>

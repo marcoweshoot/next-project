@@ -10,15 +10,15 @@ const ToursSectionHeader: React.FC<ToursSectionHeaderProps> = ({
   subtitle = "Esplora le nostre destinazioni più popolari con i migliori coach fotografici professionali",
 }) => {
   return (
-    <header className="text-center mb-12 px-4" aria-labelledby="tours-heading">
+    <header className="mb-12 px-4 text-center" aria-labelledby="tours-heading">
       <h2
         id="tours-heading"
-        className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4"
+        className="mb-4 text-3xl font-extrabold text-foreground sm:text-4xl text-balance"
       >
         {title}
       </h2>
 
-      <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+      <p className="mx-auto max-w-2xl text-base text-muted-foreground sm:text-lg">
         {subtitle}
       </p>
     </header>

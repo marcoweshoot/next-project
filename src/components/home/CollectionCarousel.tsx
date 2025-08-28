@@ -31,9 +31,7 @@ interface CollectionCarouselProps {
 }
 
 const CollectionCarousel: React.FC<CollectionCarouselProps> = ({ collections }) => {
-  const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
-  );
+  const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
 
   return (
     <Carousel
@@ -41,62 +39,63 @@ const CollectionCarousel: React.FC<CollectionCarouselProps> = ({ collections }) 
       className="w-full"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
-      opts={{
-        align: 'start',
-        loop: true,
-      }}
+      opts={{ align: 'start', loop: true }}
     >
       <CarouselContent className="-ml-2 md:-ml-4">
         {collections.map((collection) => (
           <CarouselItem
             key={collection.id}
-            className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+            className="basis-full pl-2 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 md:pl-4"
           >
             <Link
               href={`/viaggi-fotografici/collezioni/${collection.slug}`}
-              className="group cursor-pointer block"
+              className="group block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+              <div className="relative h-80 overflow-hidden rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                   <Image
                     src={collection.image?.url || FALLBACKS.COLLECTION_IMAGE}
-                    alt={
-                      collection.image?.alternativeText ||
-                      collection.name
-                    }
+                    alt={collection.image?.alternativeText || collection.name}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 rounded-2xl"
+                    className="rounded-2xl object-cover transition-transform duration-700 group-hover:scale-110"
+                    priority={false}
                   />
                 </div>
 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                {/* Gradient Overlay (più denso in dark) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent dark:from-black/85 dark:via-black/30 dark:to-transparent" />
 
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <h3 className="text-white text-xl md:text-2xl font-bold mb-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="mb-2 translate-y-2 text-xl font-bold text-primary-foreground transition-transform duration-300 group-hover:translate-y-0 md:text-2xl">
                     {collection.name}
                   </h3>
 
-                  <div className="flex items-center text-white opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
-                    <span className="text-sm font-medium mr-2">
-                      Esplora
-                    </span>
-                    <ArrowRight className="w-4 h-4" />
+                  <div className="flex translate-x-4 items-center text-primary-foreground opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                    <span className="mr-2 text-sm font-medium">Esplora</span>
+                    <ArrowRight className="h-4 w-4" />
                   </div>
                 </div>
 
                 {/* Corner accent */}
-                <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute right-4 top-4 h-8 w-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100 border-t-2 border-r-2 border-primary-foreground/40" />
               </div>
             </Link>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="hidden md:flex -left-12 bg-white/80 backdrop-blur-sm hover:bg-white border-gray-200" />
-      <CarouselNext className="hidden md:flex -right-12 bg-white/80 backdrop-blur-sm hover:bg-white border-gray-200" />
+
+      {/* Controls tema-aware */}
+      <CarouselPrevious
+        className="hidden md:flex -left-12 border bg-card/80 text-foreground backdrop-blur transition-colors hover:bg-card focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        aria-label="Precedente"
+      />
+      <CarouselNext
+        className="hidden md:flex -right-12 border bg-card/80 text-foreground backdrop-blur transition-colors hover:bg-card focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        aria-label="Successivo"
+      />
     </Carousel>
   );
 };

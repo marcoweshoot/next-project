@@ -42,61 +42,66 @@ export default async function TermsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-24 text-white overflow-hidden">
-        {/* Immagine di sfondo ottimizzata */}
+      <section className="relative overflow-hidden py-24 text-primary-foreground">
+        {/* Immagine di sfondo */}
         <Image
           src="https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/photo-1469474968028-56623f02e42e.avif"
           alt="Termini e Condizioni"
           fill
           priority
           sizes="(max-width:1200px) 100vw, 1200px"
-          className="object-cover object-center brightness-50"
+          className="object-cover object-center"
         />
-        {/* Overlay scuro */}
-        <div className="absolute inset-0 bg-black/60 z-10" />
+        {/* Overlay gradiente (più intenso in dark) */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/60 via-black/40 to-black/60 dark:from-black/70 dark:via-black/55 dark:to-black/70" />
 
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            {termsData?.title || 'Termini e Condizioni'}
-          </h1>
-          {termsData?.subtitle && (
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              {termsData.subtitle}
-            </p>
-          )}
-          <div className="flex justify-center mb-8">
-            <Breadcrumb>
-              <BreadcrumbList className="text-white">
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="/" className="text-gray-300 hover:text-white">
-                      WeShoot
-                    </Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-gray-400" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="text-white">
-                    Termini e Condizioni
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
+        <div className="relative z-20">
+          <div className="container text-center">
+            <h1 className="mb-6 text-4xl font-bold md:text-5xl">
+              {termsData?.title || 'Termini e Condizioni'}
+            </h1>
+            {termsData?.subtitle && (
+              <p className="mx-auto mb-8 max-w-3xl text-xl text-primary-foreground/80">
+                {termsData.subtitle}
+              </p>
+            )}
+            <div className="mb-8 flex justify-center">
+              <Breadcrumb>
+                <BreadcrumbList className="text-primary-foreground">
+                  <BreadcrumbItem>
+                    <BreadcrumbLink asChild>
+                      <Link
+                        href="/"
+                        className="text-primary-foreground/80 hover:text-primary-foreground"
+                      >
+                        WeShoot
+                      </Link>
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator className="text-primary-foreground/70" />
+                  <BreadcrumbItem>
+                    <BreadcrumbPage className="text-primary-foreground">
+                      Termini e Condizioni
+                    </BreadcrumbPage>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+      <section className="bg-muted py-16">
+        <div className="container max-w-4xl">
+          <div className="rounded-lg border bg-card p-8 text-card-foreground shadow-sm md:p-12">
             {termsData?.body ? (
               <div
-                className="prose prose-lg max-w-none"
+                className="prose prose-lg max-w-none dark:prose-invert prose-a:text-primary"
                 dangerouslySetInnerHTML={{ __html: termsData.body }}
               />
             ) : (
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg max-w-none dark:prose-invert">
                 <p>Contenuto non disponibile al momento.</p>
               </div>
             )}

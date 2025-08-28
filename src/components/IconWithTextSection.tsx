@@ -1,39 +1,38 @@
-import React from "react";
+// IconWithTextSection.tsx
+import * as React from "react";
+import type { LucideIcon } from "lucide-react";
 
-interface ColumnItem {
-  icon: React.ElementType;
+type Column = {
+  icon: LucideIcon;
   title: string;
   subtitle: string;
-}
+};
 
 interface Props {
-  columns: ColumnItem[];
+  columns: Column[];
+  align?: "center" | "left";
 }
 
-const IconWithTextSection: React.FC<Props> = ({ columns }) => {
+export default function IconWithTextSection({ columns, align = "center" }: Props) {
   return (
     <div
-      role="list"
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+      className={`grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 ${
+        align === "center" ? "text-center" : "text-left"
+      }`}
     >
-      {columns.map(({ icon: Icon, title, subtitle }, index) => (
-        <div
-          key={index}
-          role="listitem"
-          className="text-center flex flex-col items-center px-4"
-        >
-          <div
-            className="mb-4 rounded-full bg-red-100 p-4"
-            aria-hidden="true"
-          >
-            <Icon className="w-8 h-8 text-red-500" />
+      {columns.map(({ icon: Icon, title, subtitle }, i) => (
+        <div key={i} className="mx-auto max-w-md">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full
+                          bg-primary/15 text-primary ring-1 ring-primary/20">
+            <Icon className="h-6 w-6" />
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-          <p className="text-base text-gray-600">{subtitle}</p>
+
+          <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            {subtitle}
+          </p>
         </div>
       ))}
     </div>
   );
-};
-
-export default IconWithTextSection;
+}

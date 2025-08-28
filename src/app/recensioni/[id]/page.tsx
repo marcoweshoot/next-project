@@ -1,3 +1,4 @@
+// app/recensioni/[id]/page.tsx
 import { getClient } from '@/lib/apolloClient';
 import { GET_REVIEW_BY_ID, GET_REVIEWS } from '@/graphql/queries/reviews';
 import { notFound } from 'next/navigation';
@@ -21,23 +22,19 @@ export async function generateStaticParams() {
   });
 
   const reviews = data?.reviews || [];
-  return reviews.map((review: any) => ({
-    id: review.id.toString(),
-  }));
+  return reviews.map((review: any) => ({ id: review.id.toString() }));
 }
 
 type PageProps = {
-  params: Promise<{ id: string }>;
+  params: { id: string }; // fix: non è una Promise
 };
 
 export default async function ReviewPage({ params }: PageProps) {
-  const { id } = await params;
+  const { id } = params;
   const client = getClient();
   const reviewId = id;
 
-  if (!reviewId) {
-    return notFound();
-  }
+  if (!reviewId) return notFound();
 
   const { data: allReviewsData } = await client.query({
     query: GET_REVIEWS,
@@ -59,50 +56,44 @@ export default async function ReviewPage({ params }: PageProps) {
   const review = data?.review;
   if (!review) return notFound();
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('it-IT', {
+  const formatDate = (dateString: string) =>
+    new Date(dateString).toLocaleDateString('it-IT', {
       day: 'numeric',
       month: 'short',
       year: 'numeric',
     });
-  };
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <Star
-        key={i}
-        className={`h-5 w-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
-      />
-    ));
-  };
+  const renderStars = (rating: number) => (
+    <div className="flex items-center" aria-label={`Valutazione ${rating} su 5`}>
+      {Array.from({ length: 5 }, (_, i) => (
+        <Star
+          key={i}
+          className={
+            i < rating
+              ? 'h-5 w-5 text-yellow-400 fill-yellow-400'
+              : 'h-5 w-5 text-muted-foreground fill-transparent'
+          }
+          aria-hidden="true"
+        />
+      ))}
+    </div>
+  );
 
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Review',
-    author: {
-      '@type': 'Person',
-      name: review.user?.firstName ?? 'Utente',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: review.rating,
-      bestRating: 5,
-      worstRating: 1,
-    },
+    author: { '@type': 'Person', name: review.user?.firstName ?? 'Utente' },
+    reviewRating: { '@type': 'Rating', ratingValue: review.rating, bestRating: 5, worstRating: 1 },
     reviewBody: review.description,
     datePublished: review.created_at,
-    itemReviewed: {
-      '@type': 'Product',
-      name: 'Tour WeShoot',
-    },
+    itemReviewed: { '@type': 'Product', name: 'Tour WeShoot' },
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background text-foreground font-sans">
       <SEO
         title={`Recensione di ${review.user?.firstName ?? 'Utente'}`}
-        description={review.description.slice(0, 160)}
+        description={(review.description || '').slice(0, 160)}
         url={`https://www.weshoot.it/recensioni/${review.id}`}
       />
       <Script
@@ -113,63 +104,70 @@ export default async function ReviewPage({ params }: PageProps) {
 
       <Header />
 
-      {/* Sezione Hero */}
+      {/* Hero */}
       <ReviewsHero totalReviews={allReviews.length} />
 
-      <main className="max-w-3xl mx-auto px-4 py-16">
-        <div className="bg-white p-8 shadow rounded-lg">
-          <div className="flex items-center gap-4 mb-6">
+      <main className="container max-w-3xl py-16">
+        <div className="rounded-lg border bg-card p-8 text-card-foreground shadow">
+          <div className="mb-6 flex items-center gap-4">
             <Avatar className="h-14 w-14">
               <AvatarImage
                 src={review.user?.profilePicture?.url || ''}
-                alt={review.user?.profilePicture?.alternativeText || review.user?.firstName || 'Utente'}
+                alt={
+                  review.user?.profilePicture?.alternativeText ||
+                  review.user?.firstName ||
+                  'Utente'
+                }
               />
               <AvatarFallback className="bg-orange-500 text-white font-bold">
                 {review.user?.firstName?.charAt(0) ?? 'U'}
               </AvatarFallback>
             </Avatar>
             <div>
-              <h2 className="text-lg font-semibold text-gray-900">
+              <h2 className="text-lg font-semibold text-foreground">
                 {review.user?.firstName ?? 'Utente'}
               </h2>
-              <p className="text-sm text-gray-500">{formatDate(review.created_at)}</p>
-              <div className="flex items-center mt-1">{renderStars(review.rating || 5)}</div>
+              <p className="text-sm text-muted-foreground">{formatDate(review.created_at)}</p>
+              <div className="mt-1">{renderStars(review.rating || 5)}</div>
             </div>
           </div>
 
           {review.title && (
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">{review.title}</h3>
+            <h3 className="mb-4 text-xl font-semibold text-foreground">{review.title}</h3>
           )}
 
-          <p className="text-gray-700 text-base leading-relaxed whitespace-pre-line">
+          <p className="whitespace-pre-line text-base leading-relaxed text-muted-foreground">
             {review.description}
           </p>
         </div>
 
         {/* Navigazione */}
-        <div className="flex flex-col sm:flex-row justify-between mt-10 gap-4">
+        <div className="mt-10 flex flex-col justify-between gap-4 sm:flex-row">
           <Link
             href="/recensioni"
-            className="inline-flex items-center gap-2 text-sm text-orange-500 hover:text-orange-600 font-medium"
+            className="inline-flex items-center gap-2 rounded font-medium text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
           >
-            <ArrowLeft className="h-4 w-4" /> Torna a tutte le recensioni
+            <ArrowLeft className="h-4 w-4" />
+            Torna a tutte le recensioni
           </Link>
 
-          <div className="flex gap-4 justify-end">
+          <div className="flex justify-end gap-4">
             {previous && (
               <Link
                 href={`/recensioni/${previous.id}`}
-                className="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800"
+                className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
               >
-                <ArrowLeft className="h-4 w-4" /> Precedente
+                <ArrowLeft className="h-4 w-4" />
+                Precedente
               </Link>
             )}
             {next && (
               <Link
                 href={`/recensioni/${next.id}`}
-                className="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800"
+                className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
               >
-                Successiva <ArrowRight className="h-4 w-4" />
+                Successiva
+                <ArrowRight className="h-4 w-4" />
               </Link>
             )}
           </div>

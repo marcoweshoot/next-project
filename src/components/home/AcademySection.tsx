@@ -14,53 +14,53 @@ const AcademySection: FC = () => {
   const imageUrl = FALLBACKS.ACADEMY_SECTION;
 
   return (
-    <section className="py-16 bg-white" aria-labelledby="academy-section-title">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <header className="text-center mb-12">
+    <section className="py-16 bg-background" aria-labelledby="academy-section-title">
+      <div className="container">
+        <header className="mb-12 text-center">
           <h2
             id="academy-section-title"
-            className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+            className="mb-4 text-balance text-3xl font-bold text-foreground sm:text-4xl"
           >
             La più completa accademia online di fotografia paesaggistica
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Già oltre <strong>2880 studenti</strong> hanno studiato con WeShoot
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl">
+            Già oltre <strong className="text-foreground">2880 studenti</strong> hanno studiato con WeShoot
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <div className="w-full overflow-hidden rounded-xl shadow-md">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16">
+          <div className="w-full overflow-hidden rounded-xl border shadow-md">
             <Image
               src={imageUrl}
               alt="Accademia fotografica online"
               width={800}
               height={600}
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="w-full h-auto object-cover"
+              className="h-auto w-full object-cover"
               priority
             />
           </div>
 
           <div>
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-              Accedi all'<span className="text-red-500">accademia fotografica</span>
+            <h3 className="mb-4 text-2xl font-bold sm:text-3xl">
+              Accedi all'<span className="text-primary">accademia fotografica</span>
             </h3>
-            <p className="text-lg text-gray-700 font-medium mb-6">
+            <p className="mb-6 text-lg font-medium text-muted-foreground">
               Migliora le tue foto con i consigli dei professionisti.
             </p>
 
-            <ul className="space-y-4 mb-8">
+            <ul className="mb-8 space-y-4">
               {features.map((text, i) => (
                 <li key={i} className="flex items-start">
-                  <div className="h-8 w-8 flex items-center justify-center rounded-full bg-red-500 text-white font-bold mr-3">
+                  <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
                     {i + 1}
                   </div>
-                  <p className="text-base text-gray-800">{text}</p>
+                  <p className="text-base text-foreground">{text}</p>
                 </li>
               ))}
             </ul>
 
-            <Button asChild size="lg" className="bg-red-600 text-white">
+            <Button asChild size="lg" variant="default">
               <Link
                 href="https://accademia.weshoot.it/"
                 target="_blank"

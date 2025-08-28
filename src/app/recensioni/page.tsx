@@ -11,15 +11,15 @@ import ReviewsError from '@/components/reviews/ReviewsError';
 export const dynamic = 'force-static';
 
 export default async function ReviewsPage() {
-  let reviews = [];
-  let error = null;
+  let reviews: any[] = [];
+  let error: unknown = null;
 
   try {
     const client = getClient();
     const { data } = await client.query({
       query: GET_REVIEWS,
       variables: { limit: 50 },
-      fetchPolicy: 'no-cache'
+      fetchPolicy: 'no-cache',
     });
     reviews = data?.reviews || [];
   } catch (err) {
@@ -28,7 +28,7 @@ export default async function ReviewsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background text-foreground font-sans">
       <SEO
         title="Recensioni - Dicono di noi"
         description={`${reviews.length}+ recensioni non possono sbagliare...`}
@@ -41,8 +41,8 @@ export default async function ReviewsPage() {
       <ReviewsHero totalReviews={reviews.length} />
 
       {/* Sezione con griglia recensioni */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-background">
+        <div className="container">
           {error ? (
             <ReviewsError />
           ) : reviews.length === 0 ? (

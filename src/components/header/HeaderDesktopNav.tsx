@@ -18,30 +18,31 @@ type HeaderDesktopNavProps = {
 };
 
 const menuPanelClasses =
-  'absolute top-full left-0 w-64 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 ' +
-  'shadow-xl rounded-lg opacity-0 invisible translate-y-2 transition-opacity transition-transform duration-150 ' +
+  'absolute top-full left-0 w-64 rounded-lg border bg-popover text-popover-foreground ' +
+  'shadow-xl opacity-0 invisible translate-y-2 transition-opacity transition-transform duration-150 ' +
   'z-50 group-hover/drop:opacity-100 group-hover/drop:visible group-hover/drop:translate-y-0 ' +
   'group-focus-within/drop:opacity-100 group-focus-within/drop:visible hover:opacity-100 hover:visible hover:translate-y-0';
 
 const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
-  const linkColor = isScrolled ? 'text-gray-800 dark:text-white' : 'text-white';
+  // Link chiari su hero scuro, normali quando la header è “attaccata” allo sfondo della pagina
+  const linkColor = isScrolled ? 'text-foreground' : 'text-primary-foreground';
 
   return (
-    <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+    <nav className="hidden items-center space-x-6 xl:space-x-8 lg:flex">
       {/* Viaggi Fotografici */}
-      <div className="relative group/drop">
+      <div className="group/drop relative">
         <button
           type="button"
           aria-haspopup="true"
           aria-expanded={false}
-          className={`flex items-center gap-1 font-medium transition-colors duration-200 py-2 ${linkColor} hover:text-primary`}
+          className={`flex items-center gap-1 py-2 font-medium transition-colors duration-200 ${linkColor} hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md`}
         >
           <span>Viaggi Fotografici</span>
           <ChevronDown className="h-4 w-4" aria-hidden="true" />
         </button>
 
-        {/* Hover bridge: copre il gap tra bottone e menu */}
-        <div className="absolute left-0 top-full w-64 h-2" aria-hidden="true" />
+        {/* Hover bridge */}
+        <div className="absolute left-0 top-full h-2 w-64" aria-hidden="true" />
 
         <div className={menuPanelClasses}>
           <ul className="py-2">
@@ -56,9 +57,9 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
                 <Link
                   href={item.href}
                   prefetch={false}
-                  className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition-colors"
+                  className="block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                 >
-                  <span className="text-sm font-medium">{item.label}</span>
+                  {item.label}
                 </Link>
               </li>
             ))}
@@ -67,19 +68,18 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
       </div>
 
       {/* Accademia */}
-      <div className="relative group/drop">
+      <div className="group/drop relative">
         <button
           type="button"
           aria-haspopup="true"
           aria-expanded={false}
-          className={`flex items-center gap-1 font-medium transition-colors duration-200 py-2 ${linkColor} hover:text-primary`}
+          className={`flex items-center gap-1 py-2 font-medium transition-colors duration-200 ${linkColor} hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md`}
         >
           <span>Accademia fotografia</span>
           <ChevronDown className="h-4 w-4" aria-hidden="true" />
         </button>
 
-        {/* Hover bridge */}
-        <div className="absolute left-0 top-full w-64 h-2" aria-hidden="true" />
+        <div className="absolute left-0 top-full h-2 w-64" aria-hidden="true" />
 
         <div className={menuPanelClasses}>
           <ul className="py-2">
@@ -87,9 +87,9 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
               <Link
                 href="/corsi-di-fotografia/"
                 prefetch={false}
-                className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition-colors"
+                className="block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
               >
-                <span className="text-sm font-medium">Corsi di fotografia</span>
+                Corsi di fotografia
               </Link>
             </li>
             <li>
@@ -97,9 +97,9 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
                 href="https://accademia.weshoot.it/wp-login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition-colors"
+                className="block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
               >
-                <span className="text-sm font-medium">Accesso membri</span>
+                Accesso membri
               </a>
             </li>
           </ul>
@@ -135,7 +135,10 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
       <ThemeToggleLazy />
 
       <div className="flex items-center">
-        <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
+        <Button
+          asChild
+          className="bg-primary text-primary-foreground hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        >
           <Link href="/viaggi-fotografici/" prefetch={false}>
             Scopri i Viaggi
           </Link>

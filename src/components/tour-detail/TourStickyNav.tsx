@@ -9,10 +9,7 @@ interface TourStickyNavProps {
   tour?: {
     title: string;
     duration: number;
-    image?: {
-      url: string;
-      alternativeText?: string;
-    };
+    image?: { url: string; alternativeText?: string };
     sessions?: any[];
   };
 }
@@ -21,41 +18,30 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsVisible(scrollPosition > 200);
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsVisible(window.scrollY > 200);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Helper: estrai prezzo dalla sessione (con alcuni path comuni)
+  // Helper: estrai prezzo dalla sessione
   const extractPrice = (session: any): number | null => {
     if (!session) return null;
     if (typeof session.price === 'number') return session.price;
     if (typeof session.price === 'string' && !isNaN(Number(session.price))) return Number(session.price);
     if (session.pricing?.from && typeof session.pricing.from === 'number') return session.pricing.from;
-    if (
-      session.pricePerPerson?.amount &&
-      (typeof session.pricePerPerson.amount === 'number' ||
-        (typeof session.pricePerPerson.amount === 'string' && !isNaN(Number(session.pricePerPerson.amount))))
-    ) {
-      return Number(session.pricePerPerson.amount);
+    const amt = session.pricePerPerson?.amount;
+    if (amt && (typeof amt === 'number' || (typeof amt === 'string' && !isNaN(Number(amt))))) {
+      return Number(amt);
     }
     return null;
   };
 
-  const formatPrice = (amount: number | null | undefined) => {
-    if (amount == null) return '—';
-    return new Intl.NumberFormat('it-IT', {
-      style: 'currency',
-      currency: 'EUR',
-      minimumFractionDigits: 0,
-    }).format(amount);
-  };
+  const formatPrice = (amount: number | null | undefined) =>
+    amount == null
+      ? '—'
+      : new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', minimumFractionDigits: 0 }).format(amount);
 
-  // Calcolo della prossima sessione (futura) o fallback alla prima
+  // Prossima sessione (o fallback)
   const nextSessionData = useMemo(() => {
     const now = new Date();
     const sessions = tour?.sessions;
@@ -64,15 +50,14 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
       .filter((s: any) => s?.start && new Date(s.start) >= now)
       .sort((a: any, b: any) => new Date(a.start).getTime() - new Date(b.start).getTime());
     const chosen = future[0] || sessions[0];
-    const extractedPrice = extractPrice(chosen);
-    return { session: chosen, price: extractedPrice };
+    return { session: chosen, price: extractPrice(chosen) };
   }, [tour]);
 
   const displayPrice = nextSessionData.price != null ? nextSessionData.price : fallbackPrice;
 
   return (
     <div
-      className={`fixed w-full h-[60px] left-0 right-0 bg-white z-50 flex items-center justify-between px-2 shadow-lg transition-all duration-200 ease-out ${
+      className={`fixed left-0 right-0 z-50 flex h-[60px] w-full items-center justify-between border-b bg-background/80 px-2 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-200 ease-out ${
         isVisible ? 'top-0' : '-top-20'
       }`}
     >
@@ -82,21 +67,21 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
           <img
             src={tour.image.url}
             alt={tour.image.alternativeText || tour.title}
-            className="w-11 h-11 rounded-lg object-cover hidden sm:block"
+            className="hidden h-11 w-11 rounded-lg object-cover sm:block"
           />
         )}
-        <div className="flex flex-col justify-center w-[200px] sm:w-[120px]">
-          <div className="text-xs font-extrabold h-4 overflow-hidden text-ellipsis whitespace-nowrap capitalize">
+        <div className="flex w-[200px] flex-col justify-center sm:w-[120px]">
+          <div className="h-4 overflow-hidden text-ellipsis whitespace-nowrap text-xs font-extrabold capitalize">
             {tour?.title || 'Tour'}
           </div>
-          <div className="text-xs font-semibold text-gray-500 uppercase">
+          <div className="text-xs font-semibold uppercase text-muted-foreground">
             {tour?.duration || 7} giorni
           </div>
         </div>
       </div>
 
       {/* Center section - Navigation buttons */}
-      <div className="hidden sm:flex items-center gap-1">
+      <div className="hidden items-center gap-1 sm:flex">
         <Button variant="ghost" size="sm" onClick={() => onScrollToSection('gallery')} className="text-xs font-semibold">
           Galleria
         </Button>
@@ -120,12 +105,12 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
       {/* Right section */}
       <div className="flex items-center gap-2">
         <div className="flex flex-col items-end">
-          <div className="text-xs text-gray-600">Da</div>
-          <div className="text-sm font-bold">{formatPrice(displayPrice)}</div>
+          <div className="text-xs text-muted-foreground">Da</div>
+          <div className="text-sm font-bold text-foreground">{formatPrice(displayPrice)}</div>
         </div>
         <Button
           onClick={() => onScrollToSection('sessions')}
-          className="px-4 py-3 sm:px-2 sm:py-3.5 sm:text-xs sm:min-w-fit"
+          className="px-4 py-3 sm:min-w-fit sm:px-2 sm:py-3.5 sm:text-xs"
         >
           Prenota
         </Button>

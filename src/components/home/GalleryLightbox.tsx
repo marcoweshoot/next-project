@@ -32,16 +32,18 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
   const [autoplay, setAutoplay] = useState(false);
 
   // Flatten and map images
-  const allImages = useMemo(() => {
-    return pictures.flatMap((picture) =>
-      picture.map((img) => ({
-        id: img.id,
-        title: img.title,
-        url: img.url,
-        alt: img.alt,
-      }))
-    );
-  }, [pictures]);
+  const allImages = useMemo(
+    () =>
+      pictures.flatMap((picture) =>
+        picture.map((img) => ({
+          id: img.id,
+          title: img.title,
+          url: img.url,
+          alt: img.alt,
+        })),
+      ),
+    [pictures],
+  );
 
   const total = allImages.length;
 
@@ -59,7 +61,7 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
       if (e.key === 'ArrowLeft') handlePrev();
       if (e.key === 'Escape') onClose();
     },
-    [handleNext, handlePrev, onClose]
+    [handleNext, handlePrev, onClose],
   );
 
   // Clamp dell'indice quando si apre o cambiano input/numero immagini
@@ -99,23 +101,23 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent
-        className="max-w-[95vw] max-h-[95vh] p-0 bg-black/95 border-none"
+        className="max-w-[95vw] max-h-[95vh] p-0 border-none bg-black/90 dark:bg-black/95 focus:outline-none"
         onKeyDown={handleKeyDown}
         tabIndex={0}
         autoFocus
         role="dialog"
         aria-label="Galleria immagini a tutto schermo"
       >
-        <div className="relative w-full h-full flex items-center justify-center">
+        <div className="relative flex h-full w-full items-center justify-center">
           {/* Close button */}
           <Button
             variant="ghost"
             size="icon"
             onClick={onClose}
-            className="absolute top-4 right-4 z-10 text-white hover:bg-white/20"
+            className="absolute right-4 top-4 z-10 text-primary-foreground hover:bg-primary-foreground/20 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
             aria-label="Chiudi galleria"
           >
-            <X className="w-6 h-6" />
+            <X className="h-6 w-6" />
           </Button>
 
           {/* Autoplay */}
@@ -123,10 +125,10 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
             variant="ghost"
             size="icon"
             onClick={() => setAutoplay((prev) => !prev)}
-            className="absolute top-4 left-4 z-10 text-white hover:bg-white/20"
+            className="absolute left-4 top-4 z-10 text-primary-foreground hover:bg-primary-foreground/20 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
             aria-label={autoplay ? 'Ferma autoplay' : 'Avvia autoplay'}
           >
-            {autoplay ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
+            {autoplay ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
           </Button>
 
           {/* Navigation Arrows */}
@@ -136,46 +138,47 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
                 variant="ghost"
                 size="icon"
                 onClick={handlePrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                className="absolute left-4 top-1/2 z-10 -translate-y-1/2 text-primary-foreground hover:bg-primary-foreground/20 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
                 aria-label="Immagine precedente"
               >
-                <ChevronLeft className="w-8 h-8" />
+                <ChevronLeft className="h-8 w-8" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={handleNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                className="absolute right-4 top-1/2 z-10 -translate-y-1/2 text-primary-foreground hover:bg-primary-foreground/20 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
                 aria-label="Immagine successiva"
               >
-                <ChevronRight className="w-8 h-8" />
+                <ChevronRight className="h-8 w-8" />
               </Button>
             </>
           )}
 
           {/* Current Image */}
-          <div
-            {...swipeHandlers}
-            className="relative max-w-full max-h-full p-8 touch-pan-x"
-          >
+          <div {...swipeHandlers} className="relative max-h-full max-w-full touch-pan-x p-8">
             <img
               src={currentImage.url}
               alt={altText}
               loading="lazy"
-              className="max-w-full max-h-full object-contain transition-transform duration-300"
+              className="max-h-full max-w-full object-contain transition-transform duration-300"
               onError={(e) => {
                 e.currentTarget.src =
                   'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/viaggi-fotografici-e-workshop.avif';
               }}
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 text-center">
-              <p className="text-lg">{currentImage.title || ' '}</p>
+
+            {/* Caption */}
+            <div className="absolute bottom-0 left-0 right-0 bg-black/75 px-4 py-3 text-center">
+              <p className="text-base text-primary-foreground">
+                {currentImage.title || ' '}
+              </p>
             </div>
           </div>
 
           {/* Counter */}
           {total > 1 && (
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-sm text-primary-foreground">
               {currentIndex + 1} / {total}
             </div>
           )}

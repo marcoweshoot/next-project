@@ -22,34 +22,40 @@ const LastMinuteTourCard: React.FC<LastMinuteTourCardProps> = ({ tour }) => {
   const imageUrl = tour.cover?.url || FALLBACKS.LAST_MINUTE_IMAGE;
   const altText = tour.cover?.alt || tour.title;
 
+  const formatPrice = (val?: number) =>
+    val == null
+      ? '—'
+      : new Intl.NumberFormat('it-IT', {
+          style: 'currency',
+          currency: 'EUR',
+          minimumFractionDigits: 0,
+        }).format(val);
+
   const renderStatusBadge = () => {
-    const badgeMap: Record<string, { text: string; color: string }> = {
-      confirmed: { text: 'Confermato', color: 'bg-green-100 text-green-800' },
-      soldOut: { text: 'Tutto esaurito', color: 'bg-red-100 text-red-800' },
-      waitingList: { text: "Lista d'attesa", color: 'bg-gray-200 text-gray-800' },
-      almostConfirmed: { text: 'Quasi confermato', color: 'bg-blue-100 text-blue-800' },
+    const base = 'text-sm py-1.5 px-3 rounded-md font-semibold';
+    const map: Record<string, { text: string; cls: string }> = {
+      confirmed:      { text: 'Confermato',       cls: 'bg-emerald-600/15 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-300' },
+      soldOut:        { text: 'Tutto esaurito',   cls: 'bg-rose-600/15    text-rose-700    dark:bg-rose-400/15    dark:text-rose-300' },
+      waitingList:    { text: "Lista d'attesa",   cls: 'bg-slate-600/15   text-slate-700   dark:bg-slate-400/15   dark:text-slate-300' },
+      almostConfirmed:{ text: 'Quasi confermato', cls: 'bg-sky-600/15     text-sky-700     dark:bg-sky-400/15     dark:text-sky-300' },
     };
 
-    if (tour.status && badgeMap[tour.status]) {
-      const { text, color } = badgeMap[tour.status];
-      return (
-        <span className={`text-sm py-1.5 px-3 rounded-md font-semibold ${color}`}>
-          {text}
-        </span>
-      );
+    if (tour.status && map[tour.status]) {
+      const { text, cls } = map[tour.status];
+      return <span className={`${base} ${cls}`}>{text}</span>;
     }
 
-    const spots = tour.availableSpots;
+    const spots = tour.availableSpots ?? 0;
     if (spots > 0) {
       return (
-        <span className="bg-yellow-100 text-yellow-800 text-sm py-1.5 px-3 rounded-md font-semibold">
+        <span className={`${base} bg-amber-600/15 text-amber-700 dark:bg-amber-400/15 dark:text-amber-300`}>
           Solo {spots} {spots === 1 ? 'posto' : 'posti'} disponibili!
         </span>
       );
     }
 
     return (
-      <span className="bg-red-100 text-red-800 text-sm py-1.5 px-3 rounded-md font-semibold">
+      <span className={`${base} bg-rose-600/15 text-rose-700 dark:bg-rose-400/15 dark:text-rose-300`}>
         Tutto esaurito
       </span>
     );
@@ -59,31 +65,33 @@ const LastMinuteTourCard: React.FC<LastMinuteTourCardProps> = ({ tour }) => {
     <Link
       href={tourLink}
       aria-label={`Vai al tour: ${tour.title}`}
-      className="block group"
+      // 👇 forza il colore del link (e disabilita l’underline/visited blu)
+      className="group block rounded-2xl text-foreground visited:text-foreground no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
-      <Card className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1.5 bg-white flex flex-col h-full">
+      <Card className="flex h-full flex-col overflow-hidden rounded-2xl border bg-card text-card-foreground shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
         <div className="relative h-48 w-full">
           <Image
             src={imageUrl}
             alt={altText}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-t-2xl"
+            className="rounded-t-2xl object-cover transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 33vw"
           />
         </div>
 
-        <CardContent className="p-5 flex flex-col flex-grow">
-          <h3 className="text-lg font-semibold text-gray-900 leading-tight mb-3 line-clamp-2 min-h-[3.6rem]">
+        <CardContent className="flex flex-grow flex-col p-5">
+          <h3 className="mb-3 min-h-[3.6rem] line-clamp-2 text-lg font-semibold leading-tight text-foreground">
             {tour.title}
           </h3>
 
-          <div className="flex justify-between text-sm text-gray-600 mb-3">
+          <div className="mb-3 flex justify-between text-sm text-muted-foreground">
             <div>
               <p>Partenza: {tour.startDate}</p>
               <p>Durata: {tour.duration}</p>
             </div>
-            <div className="text-right text-lg font-bold text-gray-900">
-              €{tour.price.toLocaleString()}
+            {/* 👇 important per evitare qualunque cascata dall'anchor */}
+            <div className="text-right text-lg font-bold !text-foreground font-variant-numeric tabular-nums">
+              {formatPrice(tour.price)}
             </div>
           </div>
 

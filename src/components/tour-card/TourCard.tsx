@@ -1,14 +1,14 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { CalendarDays } from 'lucide-react';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { CalendarDays } from "lucide-react";
 
-import { Tour } from '@/types';
-import { FALLBACKS } from '@/constants/fallbacks';
-import { getDifficultyBadge } from './tourCardUtils';
-import TourCardCoaches from './TourCardCoaches';
-import { formatDateRange } from '@/utils/TourDataUtilis';
-import TourCardPricing from './TourCardPricing';
+import { Tour } from "@/types";
+import { FALLBACKS } from "@/constants/fallbacks";
+import { getDifficultyBadge } from "./tourCardUtils";
+import TourCardCoaches from "./TourCardCoaches";
+import { formatDateRange } from "@/utils/TourDataUtilis"; // <-- fix import
+import TourCardPricing from "./TourCardPricing";
 
 export interface TourCardProps {
   tour: Tour;
@@ -20,7 +20,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour }) => {
     startDate,
     duration,
     price,
-    difficulty = 'medium',
+    difficulty = "medium",
     cover,
     slug,
     destination,
@@ -32,43 +32,34 @@ const TourCard: React.FC<TourCardProps> = ({ tour }) => {
   const difficultyBadge = getDifficultyBadge(difficulty);
 
   // === URL: gestisci sia array che oggetto singolo per states/places ===
-  const pick = (v?: string) =>
-    typeof v === 'string' && v.trim() ? v.trim() : undefined;
-
+  const pick = (v?: string) => (typeof v === "string" && v.trim() ? v.trim() : undefined);
   const rawState = (tour as any)?.states;
   const rawPlace = (tour as any)?.places;
 
   const stateSlug =
     pick(Array.isArray(rawState) ? rawState?.[0]?.slug : rawState?.slug) ||
     pick(destination?.country) ||
-    'stato';
+    "stato";
 
   const placeSlug =
     pick(Array.isArray(rawPlace) ? rawPlace?.[0]?.slug : rawPlace?.slug) ||
     pick(destination?.slug) ||
-    'luogo';
+    "luogo";
 
   const href = `/viaggi-fotografici/destinazioni/${stateSlug}/${placeSlug}/${slug}`;
 
-  // 🔍 Filtra e ordina le sessioni future per ottenere la prossima sessione
+  // 🔍 Filtra/ordina le sessioni future per ottenere la prossima
   const now = new Date().toISOString();
-  const futureSessions = sessions.filter((session) => session.start > now);
-  const sortedFuture = futureSessions.sort((a, b) =>
-    a.start.localeCompare(b.start)
-  );
+  const futureSessions = sessions.filter((s) => s.start > now);
+  const sortedFuture = futureSessions.sort((a, b) => a.start.localeCompare(b.start));
   const nextSession = sortedFuture[0];
 
   // ☂️ Fallback coach
   let coachesToShow = nextSession?.users || [];
   if (!coachesToShow.length) {
-    const sortedAll = sessions
-      .filter((s) => s.start)
-      .sort((a, b) => b.start.localeCompare(a.start));
-    const lastSession = sortedAll[0];
-    const lastUsers = lastSession?.users || [];
-    if (lastUsers.length) {
-      coachesToShow = [lastUsers[lastUsers.length - 1]];
-    }
+    const sortedAll = sessions.filter((s) => s.start).sort((a, b) => b.start.localeCompare(a.start));
+    const lastUsers = sortedAll[0]?.users || [];
+    if (lastUsers.length) coachesToShow = [lastUsers[lastUsers.length - 1]];
   }
 
   const hasFutureSessions = futureSessions.length > 0;
@@ -76,20 +67,20 @@ const TourCard: React.FC<TourCardProps> = ({ tour }) => {
   return (
     <Link
       href={href}
-      className="flex flex-col bg-white rounded-3xl shadow-md overflow-hidden transition hover:shadow-lg cursor-pointer"
+      className="group flex cursor-pointer flex-col overflow-hidden rounded-3xl border bg-card text-card-foreground shadow-md transition hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
       {/* Cover */}
-      <div className="relative h-48 sm:h-56 md:h-64 w-full overflow-hidden">
+      <div className="relative h-48 w-full overflow-hidden sm:h-56 md:h-64">
         <Image
           src={coverUrl}
           alt={coverAlt}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
-        <div className="absolute top-3 right-3 z-10">
+        <div className="absolute right-3 top-3 z-10">
           <span
-            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold ${difficultyBadge.className}`}
+            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold ring-1 ring-border ${difficultyBadge.className}`}
           >
             {difficultyBadge.text}
           </span>
@@ -97,15 +88,15 @@ const TourCard: React.FC<TourCardProps> = ({ tour }) => {
       </div>
 
       {/* Content */}
-      <div className="p-4 flex flex-col h-[calc(100%-12rem)] sm:h-[calc(100%-14rem)] md:h-[calc(100%-16rem)]">
+      <div className="flex h-[calc(100%-12rem)] flex-col p-4 sm:h-[calc(100%-14rem)] md:h-[calc(100%-16rem)]">
         {/* Titolo */}
-        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 leading-snug line-clamp-2 min-h-[3.5rem]">
+        <h3 className="min-h-[3.5rem] leading-snug line-clamp-2 text-lg font-semibold text-foreground sm:text-xl">
           {title}
         </h3>
 
         {/* Data */}
-        <div className="flex items-center gap-2 text-gray-500 text-sm sm:text-base mt-2">
-          <CalendarDays className="w-4 h-4 shrink-0" />
+        <div className="mt-2 flex items-center gap-2 text-sm text-muted-foreground sm:text-base">
+          <CalendarDays className="h-4 w-4 shrink-0" />
           <span>{formatDateRange(startDate, duration)}</span>
         </div>
 

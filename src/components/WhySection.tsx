@@ -1,4 +1,3 @@
-
 import React from 'react';
 import IconWithTextSection from './IconWithTextSection';
 import { Users, Star, MapPin, Camera, Heart, Award } from 'lucide-react';
@@ -38,17 +37,17 @@ const WhySection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-background">
+      <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Perché scegliere WeShoot?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             La nostra esperienza e passione ti garantiscono un viaggio fotografico indimenticabile
           </p>
         </div>
-        
+
         <IconWithTextSection columns={whyColumns} />
       </div>
     </section>

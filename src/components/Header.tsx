@@ -56,14 +56,16 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+      className={`fixed left-0 right-0 top-0 z-50 transition-colors duration-300 ${
         isScrolled
-          ? 'bg-white/95 md:backdrop-blur-md shadow-sm border-b border-gray-100'
-          : 'bg-transparent'
+          ? // tema-aware: sfondo della navbar quando è attaccata
+            'border-b border-border shadow-sm supports-[backdrop-filter]:bg-background/60 bg-background/80 backdrop-blur'
+          : // sopra l’hero: trasparente
+            'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 lg:h-20">
+      <div className="container">
+        <div className="flex h-16 items-center justify-between lg:h-20">
           <HeaderLogoDynamic />
 
           {/* Desktop nav — non SSR, non idratata su mobile */}

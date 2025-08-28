@@ -19,19 +19,19 @@ const ToursGrid: React.FC<ToursGridProps> = memo(
 
     return (
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12"
+        className="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3"
         aria-live="polite"
       >
         {loading &&
           Array.from({ length: 6 }).map((_, index) => (
             <div key={`skeleton-${index}`} className="animate-pulse">
-              <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+              <div className="overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm">
                 <Skeleton className="h-48 w-full" />
-                <div className="p-4 space-y-3">
+                <div className="space-y-3 p-4">
                   <Skeleton className="h-6 w-3/4" />
                   <Skeleton className="h-4 w-full" />
                   <Skeleton className="h-4 w-1/2" />
-                  <div className="flex justify-between items-center mt-4">
+                  <div className="mt-4 flex items-center justify-between">
                     <Skeleton className="h-8 w-20" />
                     <Skeleton className="h-8 w-24" />
                   </div>
@@ -52,16 +52,12 @@ const ToursGrid: React.FC<ToursGridProps> = memo(
           ))}
 
         {!loading && tours.length === 0 && searchTerm && (
-          <div className="col-span-full text-center py-12">
-            <p className="text-gray-600 text-lg mb-4">
+          <div className="col-span-full py-12 text-center">
+            <p className="mb-4 text-lg text-muted-foreground">
               Nessun viaggio trovato per &quot;{searchTerm}&quot;
             </p>
             {onResetSearch && (
-              <Button
-                variant="outline"
-                onClick={onResetSearch}
-                className="text-sm"
-              >
+              <Button variant="outline" onClick={onResetSearch} className="text-sm">
                 Cancella ricerca
               </Button>
             )}

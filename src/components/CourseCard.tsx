@@ -20,32 +20,33 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, children }) => {
   const teacherImage = course.teacher?.profilePicture?.url || FALLBACKS.TEACHER_AVATAR;
 
   return (
-    <Card className="h-full flex flex-col overflow-hidden hover:shadow-xl transition-all duration-300 group bg-white border-0 shadow-lg">
-      <div className="relative w-full aspect-[4/3] overflow-hidden">
+    <Card className="group flex h-full flex-col overflow-hidden rounded-2xl border bg-card text-card-foreground shadow-lg transition-all duration-300 hover:shadow-xl">
+      {/* Cover */}
+      <div className="relative aspect-[4/3] w-full overflow-hidden">
         <Image
           src={coverUrl}
           alt={`Copertina del corso: ${course.title}`}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           priority={false}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-        <div className="absolute top-4 right-4">
-          <Badge className="bg-red-600 text-white shadow-lg">Video Corso</Badge>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+        <div className="absolute right-4 top-4">
+          <Badge className="bg-primary text-primary-foreground shadow-lg">Video Corso</Badge>
         </div>
       </div>
 
       <CardContent className="flex-1 p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-4 line-clamp-2 leading-tight">
+        <h3 className="mb-4 line-clamp-2 text-xl font-bold leading-tight text-foreground">
           {course.title}
         </h3>
 
         {course.excerpt && (
-          <p className="text-gray-600 text-sm mb-4 line-clamp-3">{course.excerpt}</p>
+          <p className="mb-4 line-clamp-3 text-sm text-muted-foreground">{course.excerpt}</p>
         )}
 
-        <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+        <div className="mb-4 flex items-center gap-4 text-sm text-muted-foreground">
           {course.totalLessons && (
             <div className="flex items-center gap-1">
               <BookOpen className="h-4 w-4" />
@@ -62,7 +63,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, children }) => {
           </div>
         </div>
 
-        <div className="flex items-center gap-3 mb-4 pb-4 border-b border-gray-100">
+        <div className="mb-4 flex items-center gap-3 border-b pb-4">
           <Image
             src={teacherImage}
             alt={`Foto di ${course.teacher?.firstName || 'Istruttore'}`}
@@ -71,17 +72,17 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, children }) => {
             className="rounded-full object-cover"
           />
           <div>
-            <p className="text-sm font-medium text-gray-900">
+            <p className="text-sm font-medium text-foreground">
               {course.teacher?.firstName || 'Istruttore'}
             </p>
-            <p className="text-xs text-gray-500">Istruttore</p>
+            <p className="text-xs text-muted-foreground">Istruttore</p>
           </div>
         </div>
 
         {course.price && (
-          <div className="text-center mb-6">
-            <div className="text-3xl font-bold text-red-600 mb-1">€{course.price}</div>
-            <p className="text-sm text-gray-500">Prezzo unico</p>
+          <div className="mb-6 text-center">
+            <div className="mb-1 text-3xl font-bold text-primary">€{course.price}</div>
+            <p className="text-sm text-muted-foreground">Prezzo unico</p>
           </div>
         )}
 
@@ -90,7 +91,10 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, children }) => {
 
       <CardFooter className="p-6 pt-0">
         <Link href={`/corsi-di-fotografia/${course.slug}`} className="w-full">
-          <Button className="w-full bg-red-600 hover:bg-primary/90 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl">
+          <Button
+            variant="default"
+            className="w-full py-3 font-semibold shadow-lg hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
             Scopri il Corso
           </Button>
         </Link>

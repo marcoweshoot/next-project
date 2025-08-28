@@ -10,7 +10,10 @@ const LastMinuteToursGrid: React.FC<Props> = ({ tours }) => {
   if (!tours?.length) return null;
 
   return (
-    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <ul
+      className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8"
+      aria-label="Griglia viaggi last minute"
+    >
       {tours.map((tour, index) => (
         <li
           key={tour.id}

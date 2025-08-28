@@ -1,13 +1,12 @@
-
 import React from 'react';
 
 const LastMinuteSectionHeader: React.FC = () => {
   return (
-    <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <div className="mb-12 text-center">
+      <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl text-balance">
         Viaggi Last Minute
       </h2>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
         Ultime disponibilità su viaggi fotografici in partenza a breve
       </p>
     </div>

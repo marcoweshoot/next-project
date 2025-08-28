@@ -2,74 +2,113 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base: token chiari + mapping universale dei border */
 @layer base {
   :root {
+    /* Palette chiara */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
+
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
+
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
+
+    /* Primario (il tuo rosso/rosa) */
     --primary: 7 75% 58%;
     --primary-foreground: 0 0% 100%;
+
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
+
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
+
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
+
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
+    /* Ring tinto al primario, ok anche su light */
     --ring: 346.8 77.2% 49.8%;
+
     --radius: 0.5rem;
+
+    /* NEW: fa sì che UI native e scrollbar seguano il tema */
+    color-scheme: light;
   }
 
   .dark {
+    /* Palette scura */
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
+
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
+
     --popover: 0 0% 9%;
     --popover-foreground: 0 0% 95%;
+
+    /* Primario invariato (così hai consistenza brand) */
     --primary: 346.8 77.2% 49.8%;
     --primary-foreground: 355.7 100% 97.3%;
+
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
+
     --muted: 0 0% 15%;
     --muted-foreground: 240 5% 64.9%;
+
     --accent: 12 6.5% 15.1%;
     --accent-foreground: 0 0% 98%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
+
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
+
+    /* Ring sul primario anche in dark: visibile e coerente */
     --ring: 346.8 77.2% 49.8%;
+
+    /* NEW: abilita UI/scrollbar scure dove supportate */
+    color-scheme: dark;
   }
 
-  *,::before,::after { border-color: hsl(var(--border)); }
+  /* Mapping universale del colore bordo sulle utility Tailwind */
+  *, ::before, ::after { border-color: hsl(var(--border)); }
+
+  /* Base body, no flicker se usi next-themes con disableTransitionOnChange */
   body { @apply bg-background text-foreground font-sans antialiased; }
+
+  /* NEW: colori della selezione testo, leggibili in entrambi i temi */
+  ::selection {
+    background: hsl(var(--primary) / 0.25);
+    color: hsl(var(--foreground));
+  }
 }
 
-
-
+/* Utility extra */
 @layer utilities {
-  /* WCAG min 44x44; su dispositivi touch saliamo a 48x48 come Lighthouse */
+  /* WCAG min 44x44; su touch saliamo a 48x48 (Lighthouse) */
   .touch-target { min-width: 44px; min-height: 44px; }
   @media (pointer: coarse) {
     .touch-target { min-width: 48px; min-height: 48px; }
   }
 
-  /* espande l'area clic senza cambiare il layout (padding positivo + margin negativo) */
+  /* Espande l'area clic senza cambiare il layout */
   .touch-pad { padding: .5rem .625rem; margin: -.5rem -.625rem; }
 
-  /* link che copre tutta la card (evita micro-link multipli) */
+  /* Link che copre tutta la card (evita micro-link multipli) */
   .stretched-link { position: absolute; inset: 0; }
 
-  /* per sezioni lunghe fuori viewport */
+  /* Per sezioni lunghe fuori viewport */
   .cvis { content-visibility: auto; contain-intrinsic-size: 1000px; }
 
-  /* elimina il lampeggio blu su iOS/Android */
+  /* Elimina il lampeggio blu su iOS/Android */
   .tap-highlight-none { -webkit-tap-highlight-color: transparent; }
 }

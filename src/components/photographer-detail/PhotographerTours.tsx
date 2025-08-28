@@ -1,6 +1,6 @@
 import React from "react";
 import { filterToursByPhotographer } from "./utils/tourFilters";
-import { transformTourForCard } from "@/utils/TourDataUtilis";
+import { transformTourForCard } from "@/utils/TourDataUtilis"; // <-- fix refuso
 import PhotographerToursEmpty from "./components/PhotographerToursEmpty";
 import PhotographerToursGrid from "./components/PhotographerToursGrid";
 
@@ -60,7 +60,14 @@ const PhotographerTours: React.FC<PhotographerToursProps> = ({
     transformTourForCard(tour, photographerUsername, photographerName),
   );
 
-  return <PhotographerToursGrid tours={transformedTours} />;
+  // Wrapper a token per coerenza light/dark; rimuovi se Grid già include container/padding
+  return (
+    <section className="bg-background py-16">
+      <div className="container">
+        <PhotographerToursGrid tours={transformedTours} />
+      </div>
+    </section>
+  );
 };
 
 export default PhotographerTours;

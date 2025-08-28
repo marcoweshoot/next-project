@@ -27,11 +27,11 @@ export async function generateStaticParams() {
 }
 
 type PageProps = {
-  params: Promise<{ username: string }>;
+  params: { username: string };
 };
 
 export default async function PhotographerPage({ params }: PageProps) {
-  const { username } = await params;
+  const { username } = params;
   const client = getClient();
 
   // Fetch al build-time
@@ -64,23 +64,26 @@ export default async function PhotographerPage({ params }: PageProps) {
         type="profile"
       />
 
-      <div className="min-h-screen bg-white">
+      {/* Wrapper a token: ora segue light/dark */}
+      <div className="min-h-screen bg-background text-foreground font-sans">
         <Header />
 
-        <PhotographerHero photographer={photographer} />
+        <main>
+          <PhotographerHero photographer={photographer} />
 
-        {photographer.pictures?.length > 0 && (
-          <PhotographerGallery
-            pictures={photographer.pictures}
+          {photographer.pictures?.length > 0 && (
+            <PhotographerGallery
+              pictures={photographer.pictures}
+              photographerName={`${photographer.firstName} ${photographer.lastName}`}
+            />
+          )}
+
+          <PhotographerTours
+            tours={tours}
             photographerName={`${photographer.firstName} ${photographer.lastName}`}
+            photographerUsername={photographer.username}
           />
-        )}
-
-        <PhotographerTours
-          tours={tours}
-          photographerName={`${photographer.firstName} ${photographer.lastName}`}
-          photographerUsername={photographer.username}
-        />
+        </main>
 
         <Footer />
       </div>
