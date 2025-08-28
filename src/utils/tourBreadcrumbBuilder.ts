@@ -5,8 +5,14 @@ export interface BreadcrumbElement {
 
 const BASE = '/viaggi-fotografici/destinazioni';
 
+interface Tour {
+  slug?: string;
+  states?: Array<{ slug?: string; name?: string }>;
+  places?: Array<{ slug?: string; name?: string }>;
+}
+
 export const buildTourBreadcrumbs = (
-  tour: any,
+  tour: Tour | null | undefined,
   stateSlug?: string,
   placeSlug?: string
 ): BreadcrumbElement[] => {
@@ -23,7 +29,7 @@ export const buildTourBreadcrumbs = (
 
   // Stato
   if (stateSlug) {
-    const state = states.find((s: any) => s?.slug === stateSlug);
+    const state = states.find((s) => s?.slug === stateSlug);
     crumbs.push({ name: state?.name || stateSlug, path: `${BASE}/${stateSlug}` });
   } else if (states[0]?.slug) {
     crumbs.push({ name: states[0].name, path: `${BASE}/${states[0].slug}` });
@@ -33,7 +39,7 @@ export const buildTourBreadcrumbs = (
   const effectiveState = stateSlug || states[0]?.slug;
   if (effectiveState) {
     if (placeSlug) {
-      const place = places.find((p: any) => p?.slug === placeSlug);
+      const place = places.find((p) => p?.slug === placeSlug);
       crumbs.push({
         name: place?.name || placeSlug,
         path: `${BASE}/${effectiveState}/posti/${placeSlug}`,

@@ -34,11 +34,11 @@ export async function generateStaticParams(): Promise<Array<{ username: string }
 }
 
 type RouteParams = {
-  params: { username: string };
+  params: Promise<{ username: string }>;
 };
 
 export default async function PhotographerPage({ params }: RouteParams) {
-  const { username } = params;
+  const { username } = await params;
   const client = getClient();
 
   // Fetch al build-time
