@@ -25,7 +25,7 @@ export default function ToursFAQServer({ faqs }: { faqs: FAQ[] }) {
                 <div className="px-6 pb-4">
                   <div
                     className="text-gray-700 leading-relaxed prose max-w-none"
-                    dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    dangerouslySetInnerHTML={{ __html: faq.answer || '' }}
                   />
                 </div>
               </details>

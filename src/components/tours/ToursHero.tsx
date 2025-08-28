@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useCallback, useRef, useState, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import PageBreadcrumbs from '@/components/PageBreadcrumbs';
 import { MapPin, Users, Star, Search } from 'lucide-react';
@@ -32,22 +32,67 @@ const ToursHero: React.FC<ToursHeroProps> = ({
   const videoUrl =
     'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/videos/weshoot-viaggi-fotografici-destinazioni.mp4';
 
-  const scrollToResults = () => {
+  // Debouncing interno per evitare chiamate eccessive
+  const [localSearchTerm, setLocalSearchTerm] = useState(searchTerm);
+  const debounceRef = useRef<NodeJS.Timeout>();
+
+  const scrollToResults = useCallback(() => {
     const el =
       resultsRef?.current ??
       (resultsId ? (document.getElementById(resultsId) as HTMLElement | null) : null);
     if (!el) return;
     const top = el.getBoundingClientRect().top + window.scrollY - (resultsOffsetPx ?? 0);
     window.scrollTo({ top, behavior: 'smooth' });
-  };
+  }, [resultsRef, resultsId, resultsOffsetPx]);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // 1) se previsto, carica più pagine finché trovi risultati
     if (onSubmitSearch) await onSubmitSearch();
     // 2) poi scrolla ai risultati
     requestAnimationFrame(scrollToResults);
-  };
+  }, [onSubmitSearch, scrollToResults]);
+
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setLocalSearchTerm(value); // Aggiorna immediatamente l'input locale
+    
+    // Debounce la chiamata al parent
+    if (debounceRef.current) {
+      clearTimeout(debounceRef.current);
+    }
+    
+    debounceRef.current = setTimeout(() => {
+      onSearchChange(value);
+    }, 150); // 150ms di debounce
+  }, [onSearchChange]);
+
+  const handleKeyDown = useCallback(async (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      // Cancella il debounce e chiama immediatamente
+      if (debounceRef.current) {
+        clearTimeout(debounceRef.current);
+      }
+      onSearchChange(localSearchTerm);
+      if (onSubmitSearch) await onSubmitSearch();
+      scrollToResults();
+    }
+  }, [onSubmitSearch, scrollToResults, localSearchTerm, onSearchChange]);
+
+  // Cleanup del timeout quando il componente si smonta
+  useEffect(() => {
+    return () => {
+      if (debounceRef.current) {
+        clearTimeout(debounceRef.current);
+      }
+    };
+  }, []);
+
+  // Sincronizza localSearchTerm con searchTerm dal parent
+  useEffect(() => {
+    setLocalSearchTerm(searchTerm);
+  }, [searchTerm]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -98,15 +143,9 @@ const ToursHero: React.FC<ToursHeroProps> = ({
                 type="search"
                 inputMode="search"
                 placeholder="Cerca destinazione, tour..."
-                value={searchTerm}
-                onChange={(e) => onSearchChange(e.target.value)}
-                onKeyDown={async (e) => {
-                  if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    if (onSubmitSearch) await onSubmitSearch();
-                    scrollToResults();
-                  }
-                }}
+                value={localSearchTerm}
+                onChange={handleInputChange}
+                onKeyDown={handleKeyDown}
                 className="h-12 pl-14 pr-4 text-lg bg-white/90 backdrop-blur-sm text-gray-900 border-0 focus:ring-2 focus:ring-white/20"
               />
             </form>

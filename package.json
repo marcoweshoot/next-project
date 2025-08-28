@@ -7,8 +7,10 @@
     "dev": "next dev",
     "snapshot": "DOTENV_CONFIG_PATH=.env.local node -r dotenv/config ./src/scripts/snapshot.mjs",
     "build": "next build",
+    "build:analyze": "ANALYZE=true next build",
     "start": "next start",
-    "lint": "eslint . --cache"
+    "lint": "eslint . --cache",
+    "analyze": "node analyze-bundle.js"
   },
   "dependencies": {
     "@apollo/client": "3.13.9",

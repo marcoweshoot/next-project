@@ -3,9 +3,23 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import PageBreadcrumbs from '@/components/PageBreadcrumbs';
+import dynamicImport from 'next/dynamic';
+
+// Lazy load dei componenti pesanti
+const Header = dynamicImport(() => import('@/components/Header'), {
+  loading: () => <div className="h-16 bg-white animate-pulse" />,
+  ssr: true,
+});
+
+const Footer = dynamicImport(() => import('@/components/Footer'), {
+  loading: () => <div className="h-64 bg-gray-900 animate-pulse" />,
+  ssr: true,
+});
+
+const PageBreadcrumbs = dynamicImport(() => import('@/components/PageBreadcrumbs'), {
+  loading: () => <div className="h-6 bg-gray-200 animate-pulse rounded" />,
+  ssr: true,
+});
 
 const NotFound: React.FC = () => {
   const pathname = usePathname();

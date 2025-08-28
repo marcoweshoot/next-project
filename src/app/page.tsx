@@ -9,14 +9,48 @@ import { GET_COURSES } from "@/graphql/queries/courses";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroVideoSection from "@/components/home/HeroVideoSection";
-import CollectionSection from "@/components/home/CollectionSection";
-import ToursSection from "@/components/home/ToursSection";
-import WhySection from "@/components/WhySection";
-import GallerySection from "@/components/home/GallerySection";
-import LastMinuteSection from "@/components/home/LastMinuteSection";
-import WhatsWeShootSection from "@/components/home/WhatsWeShootSection";
-import CoursesSection from "@/components/home/CoursesSection";
-import AcademySection from "@/components/home/AcademySection";
+import dynamicImport from "next/dynamic";
+
+// Lazy load dei componenti pesanti
+const CollectionSection = dynamicImport(() => import("@/components/home/CollectionSection"), {
+  loading: () => <div className="py-16 bg-gray-50 animate-pulse" />,
+  ssr: true,
+});
+
+const ToursSection = dynamicImport(() => import("@/components/home/ToursSection"), {
+  loading: () => <div className="py-16 bg-gray-50 animate-pulse" />,
+  ssr: true,
+});
+
+const WhySection = dynamicImport(() => import("@/components/WhySection"), {
+  loading: () => <div className="py-16 bg-gray-50 animate-pulse" />,
+  ssr: true,
+});
+
+const GallerySection = dynamicImport(() => import("@/components/home/GallerySection"), {
+  loading: () => <div className="py-16 bg-gray-50 animate-pulse" />,
+  ssr: true,
+});
+
+const LastMinuteSection = dynamicImport(() => import("@/components/home/LastMinuteSection"), {
+  loading: () => <div className="py-16 bg-gray-50 animate-pulse" />,
+  ssr: true,
+});
+
+const WhatsWeShootSection = dynamicImport(() => import("@/components/home/WhatsWeShootSection"), {
+  loading: () => <div className="py-16 bg-gray-50 animate-pulse" />,
+  ssr: true,
+});
+
+const CoursesSection = dynamicImport(() => import("@/components/home/CoursesSection"), {
+  loading: () => <div className="py-16 bg-gray-50 animate-pulse" />,
+  ssr: true,
+});
+
+const AcademySection = dynamicImport(() => import("@/components/home/AcademySection"), {
+  loading: () => <div className="py-16 bg-gray-50 animate-pulse" />,
+  ssr: true,
+});
 
 import { transformTours, getFullMediaUrl } from "@/utils/TourDataUtilis";
 

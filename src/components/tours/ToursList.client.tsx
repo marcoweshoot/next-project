@@ -14,15 +14,31 @@ const TOURS_PER_PAGE = 6;
 
 /** Deduplica per slug (fallback su id) */
 function dedupeTours(list: Tour[]) {
+  if (!Array.isArray(list)) return [];
+  
   const seen = new Set<string>();
   const out: Tour[] = [];
+  
   for (const t of list) {
-    const key = (t as any).slug ?? String((t as any).id ?? Math.random());
+    if (!t || typeof t !== 'object') continue;
+    
+    // Genera una chiave stabile e sicura
+    let key: string;
+    if ((t as any).slug && typeof (t as any).slug === 'string') {
+      key = (t as any).slug;
+    } else if ((t as any).id !== undefined && (t as any).id !== null) {
+      key = `id-${String((t as any).id)}`;
+    } else {
+      // Fallback con timestamp + indice per evitare collisioni
+      key = `fallback-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    }
+    
     if (!seen.has(key)) {
       seen.add(key);
       out.push(t);
     }
   }
+  
   return out;
 }
 
@@ -149,6 +165,17 @@ export default function ToursList({
     }
   }, [deferredSearch, searchTours]);
 
+  // Ottimizzazione: ricerca automatica solo dopo un delay
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (deferredSearch.trim()) {
+        runSearch(deferredSearch);
+      }
+    }, 300); // 300ms delay
+
+    return () => clearTimeout(timeoutId);
+  }, [deferredSearch, runSearch]);
+
   const visibleTours = searchTours ?? browseTours;
   const loading = searchLoading;
   const loadingMore = (searchTours ? searchLoadingMore : browseLoadingMore) || isFetching;
@@ -163,7 +190,8 @@ export default function ToursList({
         resultsRef={resultsRef}
         resultsOffsetPx={96}
         onSubmitSearch={async () => {
-          await runSearch(searchTerm); // fa la fetch server
+          // Ricerca immediata solo su submit esplicito
+          await runSearch(searchTerm);
         }}
       />
 

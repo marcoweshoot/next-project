@@ -3,13 +3,23 @@ import { Metadata } from 'next';
 import { request } from 'graphql-request';
 import { GET_TOURS, GET_TOURS_PAGE } from '@/graphql/queries';
 import { transformTours } from '@/utils/TourDataUtilis';
-import ToursList from '@/components/tours/ToursList.client';
-import ToursFAQ from '@/components/tours/ToursFAQServer';
 import type { Tour } from '@/types';
+import dynamicImport from 'next/dynamic';
 
 // ⬇️ Navbar / Footer
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+
+// Lazy load dei componenti pesanti
+const ToursList = dynamicImport(() => import('@/components/tours/ToursList.client'), {
+  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />,
+  ssr: true,
+});
+
+const ToursFAQ = dynamicImport(() => import('@/components/tours/ToursFAQServer'), {
+  loading: () => <div className="py-16 bg-gray-50 animate-pulse" />,
+  ssr: true,
+});
 
 // ✅ SSG (pagina statica). Metti un numero se vuoi ISR (es. 600)
 export const dynamic = 'force-static';
