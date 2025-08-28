@@ -26,11 +26,11 @@ export async function generateStaticParams() {
 }
 
 type PageProps = {
-  params: { id: string }; // fix: non è una Promise
+  params: Promise<{ id: string }>;
 };
 
 export default async function ReviewPage({ params }: PageProps) {
-  const { id } = params;
+  const { id } = await params;
   const client = getClient();
   const reviewId = id;
 
