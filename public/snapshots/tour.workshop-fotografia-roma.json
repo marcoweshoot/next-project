@@ -801,14 +801,14 @@
       "id": "220",
       "start": "2025-10-11",
       "end": "2025-10-11",
-      "status": "almostFull",
+      "status": "soldOut",
       "maxPax": 8,
       "price": 69,
       "deposit": 69,
       "balance": 0,
       "minPax": 2,
       "currency": "EUR",
-      "priceCompanion": 0,
+      "priceCompanion": 69,
       "users": [
         {
           "instagram": "https://www.instagram.com/marco_carotenuto",
@@ -951,6 +951,31 @@
       "id": "235",
       "start": "2026-03-14",
       "end": "2026-03-14",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 69,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "240",
+      "start": "2025-09-27",
+      "end": "2025-09-27",
       "status": "scheduled",
       "maxPax": 8,
       "price": 69,
