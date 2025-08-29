@@ -118,12 +118,12 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
 
   // Componente Coming Soon per quando non ci sono sessioni future
   const ComingSoonCard = () => (
-    <div className="bg-white rounded-lg border border-gray-200 p-8 text-center">
+    <div className="bg-card rounded-lg border border-border p-8 text-center text-card-foreground">
       <div className="mb-4">
-        <Calendar className="mx-auto h-16 w-16 text-gray-300" />
+        <Calendar className="mx-auto h-16 w-16 text-muted-foreground" />
       </div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">Coming Soon</h3>
-      <p className="text-gray-600 mb-6">
+      <h3 className="text-xl font-semibold text-foreground mb-2">Coming Soon</h3>
+      <p className="text-muted-foreground mb-6">
         Nuove date per questo viaggio saranno presto disponibili.
         <br />
         Contattaci per essere informato sulle prossime partenze!
@@ -133,13 +133,13 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
           href="https://wa.me/393495269093"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors"
         >
           Contattaci su WhatsApp
         </a>
         <a
           href="mailto:info@weshoot.it"
-          className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium border border-border text-foreground bg-card hover:bg-muted transition-colors"
         >
           Scrivici via Email
         </a>
@@ -151,10 +151,10 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
     <section id="sessions" className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {futureSessions.length > 0 ? 'Prossime Partenze' : 'Partenze'}
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-muted-foreground">
             {futureSessions.length > 0
               ? 'Scegli la data che preferisci per il tuo viaggio fotografico'
               : 'Nuove date saranno presto disponibili per questo viaggio'}
@@ -167,10 +167,10 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
               <div key={`${tour.id}-${year}`} className={yearIndex > 0 ? 'mt-12' : ''}>
                 {sortedYears.length > 1 && (
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    <h3 className="text-2xl font-bold text-foreground mb-2">
                       {year}
                     </h3>
-                    <div className="h-px bg-gray-200"></div>
+                    <div className="h-px bg-border"></div>
                   </div>
                 )}
 

@@ -8,10 +8,10 @@ import { StarIcon } from "@/components/icons/StarIcon";
 
 const HeroVideoSection: React.FC = () => {
   const stats = [
-    { icon: <CameraIcon />, label: "Viaggi Fotografici", value: "50+" },
+    { icon: <CameraIcon />, label: "Viaggi Fotografici", value: "150+" },
     { icon: <MapPinIcon />, label: "Destinazioni", value: "25+" },
-    { icon: <UsersIcon />, label: "Partecipanti Felici", value: "1000+" },
-    { icon: <StarIcon />, label: "Recensioni 5 Stelle", value: "98%" },
+    { icon: <UsersIcon />, label: "Partecipanti Felici", value: "1200+" },
+    { icon: <StarIcon />, label: "Recensioni 5 Stelle", value: "99%" },
   ];
 
   return (
@@ -50,7 +50,7 @@ const HeroVideoSection: React.FC = () => {
         <div className="mb-20">
           <Button
             size="lg"
-            className="text-lg px-12 py-4 bg-red-600 text-white font-semibold rounded-lg shadow-xl"
+            className="text-lg px-12 py-4 bg-red-600 text-white font-semibold rounded-lg shadow-xl hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
             asChild
           >
             <Link href="/viaggi-fotografici">Vedi partenze</Link>
@@ -61,13 +61,15 @@ const HeroVideoSection: React.FC = () => {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-lg"
+              className="text-center p-4 rounded-lg backdrop-blur-sm bg-white/10 dark:bg-white/10 ring-1 ring-white/10"
             >
               {stat.icon}
               <div className="text-2xl md:text-3xl font-bold text-white">
                 {stat.value}
               </div>
-              <div className="text-sm text-gray-300">{stat.label}</div>
+              <div className="text-sm text-gray-300 dark:text-gray-200">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>

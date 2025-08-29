@@ -51,19 +51,19 @@ interface TourDescriptionProps {
 
 const TourDescription: React.FC<TourDescriptionProps> = ({ tour, onViewSessions, onOpenWhatsApp }) => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Description */}
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl font-bold text-foreground mb-6">
               Descrizione del Viaggio
             </h2>
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none dark:prose-invert">
               {tour.description && (
-                <div 
+                <div
                   dangerouslySetInnerHTML={{ __html: tour.description }}
-                  className="text-base leading-relaxed text-gray-700"
+                  className="text-base leading-relaxed text-muted-foreground"
                 />
               )}
             </div>
@@ -76,7 +76,7 @@ const TourDescription: React.FC<TourDescriptionProps> = ({ tour, onViewSessions,
 
           {/* Summary Card */}
           <div className="lg:col-span-1">
-            <TourSummaryCard 
+            <TourSummaryCard
               tour={tour}
               onViewSessions={onViewSessions}
               onOpenWhatsApp={onOpenWhatsApp}

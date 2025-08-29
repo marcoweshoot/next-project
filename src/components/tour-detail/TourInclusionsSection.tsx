@@ -33,11 +33,14 @@ const InclusionList: React.FC<{
   title: string;
 }> = ({ items, iconType, title }) => {
   const Icon = iconType === 'include' ? CheckCircle : XCircle;
-  const iconColor = iconType === 'include' ? 'text-green-600' : 'text-red-600';
+  const iconColor =
+    iconType === 'include'
+      ? 'text-green-600 dark:text-green-400'
+      : 'text-red-600 dark:text-red-400';
 
   return (
-    <div className="p-6 border-b">
-      <h3 className="font-bold text-gray-900 mb-4 flex items-center">
+    <div className="p-6 border-b border-border bg-card text-card-foreground">
+      <h3 className="font-bold text-foreground mb-4 flex items-center">
         <Icon className={`w-5 h-5 ${iconColor} mr-2`} />
         {title}
       </h3>
@@ -50,9 +53,9 @@ const InclusionList: React.FC<{
               <Icon className={`w-5 h-5 ${iconColor} flex-shrink-0 mt-0.5`} />
             )}
             <div>
-              <div className="text-sm font-medium text-gray-900">{item.title}</div>
+              <div className="text-sm font-medium text-foreground">{item.title}</div>
               {item.description && (
-                <div className="text-xs text-gray-600 mt-1">{item.description}</div>
+                <div className="text-xs text-muted-foreground mt-1">{item.description}</div>
               )}
             </div>
           </div>
@@ -64,8 +67,12 @@ const InclusionList: React.FC<{
 
 const TourInclusionsSection: React.FC<TourInclusionsSectionProps> = ({ includes, excludes }) => (
   <>
-    {!!includes?.length && <InclusionList items={includes} iconType="include" title="Cosa include" />}
-    {!!excludes?.length && <InclusionList items={excludes} iconType="exclude" title="Cosa non include" />}
+    {!!includes?.length && (
+      <InclusionList items={includes} iconType="include" title="Cosa include" />
+    )}
+    {!!excludes?.length && (
+      <InclusionList items={excludes} iconType="exclude" title="Cosa non include" />
+    )}
   </>
 );
 

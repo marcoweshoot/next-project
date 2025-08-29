@@ -108,8 +108,8 @@ export default async function ThankYouPage() {
       </PageHeader>
 
       {/* Contenuti testuali */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg text-gray-600">
+      <section className="py-20 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg dark:prose-invert text-muted-foreground">
           <p>
             Hai appena fatto il primo passo verso un’avventura fotografica che
             cambierà il tuo modo di vedere il mondo…
@@ -118,39 +118,39 @@ export default async function ThankYouPage() {
             Nelle prossime ore riceverai una mail di conferma con tutti i
             dettagli: itinerario, consigli e info pratiche.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 mb-16 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 mb-16 text-center text-foreground">
             <div>
               <Users className="h-10 w-10 text-primary mx-auto mb-2" />
               <div className="text-2xl font-bold">1200+</div>
-              <div>Viaggiatori Felici</div>
+              <div className="text-muted-foreground">Viaggiatori Felici</div>
             </div>
             <div>
               <Camera className="h-10 w-10 text-primary mx-auto mb-2" />
               <div className="text-2xl font-bold">200+</div>
-              <div>Viaggi Organizzati</div>
+              <div className="text-muted-foreground">Viaggi Organizzati</div>
             </div>
             <div>
               <Star className="h-10 w-10 text-primary mx-auto mb-2" />
               <div className="text-2xl font-bold">22.000+</div>
-              <div>WeShooters</div>
+              <div className="text-muted-foreground">WeShooters</div>
             </div>
             <div>
               <CheckCircle className="h-10 w-10 text-primary mx-auto mb-2" />
               <div className="text-2xl font-bold">98%</div>
-              <div>Soddisfazione</div>
+              <div className="text-muted-foreground">Soddisfazione</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Offerte */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Prima di partire…
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Approfitta dell’offerta limitata sul nostro corso di fotografia.
             </p>
           </div>
@@ -158,22 +158,22 @@ export default async function ThankYouPage() {
             {offers.map((offer) => (
               <Card
                 key={offer.id}
-                className="overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                className="overflow-hidden border border-border bg-card text-card-foreground hover:shadow-lg transition-shadow duration-300"
               >
                 <CardContent className="p-8">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-primary/10">
                       <offer.icon className="h-6 w-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <h3 className="text-xl font-bold text-foreground mb-2">
                         {offer.title}
                       </h3>
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-muted-foreground mb-4">
                         {offer.description}
                       </p>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-500 line-through">
+                        <span className="text-sm text-muted-foreground line-through">
                           {offer.originalPrice}
                         </span>
                         <span className="text-2xl font-bold text-primary">

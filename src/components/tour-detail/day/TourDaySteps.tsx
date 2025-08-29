@@ -69,7 +69,7 @@ const TourDaySteps: React.FC<TourDayStepsProps> = ({
         return (
           <article
             key={stepKey}
-            className="relative overflow-hidden rounded-2xl border border-zinc-200/70 bg-white shadow-[0_6px_22px_rgba(0,0,0,0.06)] p-6 md:p-8"
+            className="relative overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-[0_6px_22px_rgba(0,0,0,0.06)] p-6 md:p-8"
             aria-labelledby={headingId}
           >
             {/* Accento sinistro decorativo */}
@@ -81,12 +81,12 @@ const TourDaySteps: React.FC<TourDayStepsProps> = ({
             {/* Chip in testa alla card */}
             <div className="mb-3">
               {index === 0 ? (
-                <span className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-gray-900">
+                <span className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-foreground">
                   <Camera className="h-4 w-4" aria-hidden="true" />
                   Programma fotografico del giorno
                 </span>
               ) : (
-                <span className="inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-xs font-semibold text-zinc-700 ring-1 ring-inset ring-zinc-200">
+                <span className="inline-flex items-center rounded-full bg-muted px-2.5 py-1 text-xs font-semibold text-muted-foreground ring-1 ring-inset ring-border">
                   Step {index + 1}
                 </span>
               )}
@@ -95,13 +95,13 @@ const TourDaySteps: React.FC<TourDayStepsProps> = ({
             {/* Titolo dello step */}
             {React.createElement(
               H,
-              { id: headingId, className: 'text-2xl font-semibold tracking-tight text-zinc-900' },
+              { id: headingId, className: 'text-2xl font-semibold tracking-tight text-foreground' },
               step.title
             )}
 
             {step.description && (
               <div
-                className="prose prose-zinc max-w-none text-zinc-700 mt-3"
+                className="prose max-w-none text-muted-foreground mt-3 dark:prose-invert"
                 dangerouslySetInnerHTML={{ __html: step.description }}
               />
             )}
@@ -112,10 +112,10 @@ const TourDaySteps: React.FC<TourDayStepsProps> = ({
                   <MapPin className="h-5 w-5 text-primary" aria-hidden="true" />
                   {React.createElement(
                     Hsub,
-                    { id: `loc-title-${stepKey}`, className: 'text-base font-semibold text-zinc-900' },
+                    { id: `loc-title-${stepKey}`, className: 'text-base font-semibold text-foreground' },
                     'Location fotografiche'
                   )}
-                  <div className="ml-2 h-px flex-1 bg-zinc-200" aria-hidden="true" />
+                  <div className="ml-2 h-px flex-1 bg-border" aria-hidden="true" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

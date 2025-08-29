@@ -61,7 +61,7 @@ export default function GalleryCarousel({ images, onImageClick }: GalleryCarouse
                         onImageClick(index);
                       }
                     }}
-                    className="relative group overflow-hidden rounded-lg cursor-pointer h-64 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="relative group overflow-hidden rounded-lg cursor-pointer h-64 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     aria-label={`Apri immagine ${index + 1}`}
                   >
                     <Image
@@ -77,7 +77,7 @@ export default function GalleryCarousel({ images, onImageClick }: GalleryCarouse
 
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
+                        <div className="w-12 h-12 rounded-full bg-white/90 dark:bg-black/70 flex items-center justify-center">
                           <span className="text-xl">🔍</span>
                         </div>
                       </div>
@@ -99,7 +99,7 @@ export default function GalleryCarousel({ images, onImageClick }: GalleryCarouse
         </Carousel>
 
         <div className="text-center mt-6">
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             {images.length} foto disponibili – scorri per vederne altre
           </p>
         </div>

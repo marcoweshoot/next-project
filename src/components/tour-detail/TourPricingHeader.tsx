@@ -60,37 +60,39 @@ const TourPricingHeader: React.FC<TourPricingHeaderProps> = ({
 
   return (
     <header
-      className="bg-white text-gray-900 p-4 md:p-6 rounded-t-lg border-b border-gray-200"
+      className="bg-white dark:bg-card text-gray-900 dark:text-card-foreground p-4 md:p-6 rounded-t-lg border-b border-gray-200 dark:border-border"
       aria-label="Informazioni sul prezzo"
     >
       <div className="text-center mb-4">
-        <p className="text-xs md:text-sm uppercase tracking-wide text-gray-600 mb-1">
+        <p className="text-xs md:text-sm uppercase tracking-wide text-gray-600 dark:text-muted-foreground mb-1">
           {hasAvailableSessions ? 'Prezzo del viaggio' : 'Prossime partenze'}
         </p>
-        <p className="text-3xl font-bold text-gray-900">
+        <p className="text-3xl font-bold text-gray-900 dark:text-foreground">
           {hasAvailableSessions ? formatCurrency(price) : 'In arrivo'}
         </p>
         {hasAvailableSessions && (
-          <p className="text-sm text-gray-600">per persona</p>
+          <p className="text-sm text-gray-600 dark:text-muted-foreground">per persona</p>
         )}
       </div>
 
       {hasAvailableSessions && deposit && deposit > 0 && (
-        <div className="border-t border-gray-200 pt-4 mb-4">
+        <div className="border-t border-gray-200 dark:border-border pt-4 mb-4">
           <div className="flex items-center justify-between text-sm">
-            <span className="text-gray-600">Acconto richiesto:</span>
-            <span className="font-semibold text-gray-900">{formatCurrency(deposit)}</span>
+            <span className="text-gray-600 dark:text-muted-foreground">Acconto richiesto:</span>
+            <span className="font-semibold text-gray-900 dark:text-foreground">
+              {formatCurrency(deposit)}
+            </span>
           </div>
         </div>
       )}
 
       {hasAvailableSessions && nextSession?.start && (
-        <div className="border-t border-gray-200 pt-4">
+        <div className="border-t border-gray-200 dark:border-border pt-4">
           <div className="text-center">
-            <p className="text-xs md:text-sm text-gray-600 mb-1">
+            <p className="text-xs md:text-sm text-gray-600 dark:text-muted-foreground mb-1">
               Prima partenza disponibile
             </p>
-            <p className="font-semibold text-gray-900 text-sm md:text-base">
+            <p className="font-semibold text-gray-900 dark:text-foreground text-sm md:text-base">
               {formatDate(nextSession.start)}
             </p>
           </div>
@@ -98,10 +100,10 @@ const TourPricingHeader: React.FC<TourPricingHeaderProps> = ({
       )}
 
       {/* Durata, max partecipanti, difficoltà */}
-      <div className="grid grid-cols-3 text-center mt-6 text-sm text-gray-600">
+      <div className="grid grid-cols-3 text-center mt-6 text-sm text-gray-600 dark:text-muted-foreground">
         <div>
-          <Clock className="mx-auto w-5 h-5 text-gray-400 mb-1" />
-          <strong className="block text-lg text-gray-900">
+          <Clock className="mx-auto w-5 h-5 text-gray-400 dark:text-muted-foreground mb-1" />
+          <strong className="block text-lg text-gray-900 dark:text-foreground">
             {nextSession?.start && nextSession?.end
               ? `${getDurationDays(nextSession.start, nextSession.end)}`
               : '—'}
@@ -109,15 +111,15 @@ const TourPricingHeader: React.FC<TourPricingHeaderProps> = ({
           giorni
         </div>
         <div>
-          <Users className="mx-auto w-5 h-5 text-gray-400 mb-1" />
-          <strong className="block text-lg text-gray-900">
+          <Users className="mx-auto w-5 h-5 text-gray-400 dark:text-muted-foreground mb-1" />
+          <strong className="block text-lg text-gray-900 dark:text-foreground">
             {nextSession?.maxPax ?? '—'}
           </strong>
           max partecipanti
         </div>
         <div>
-          <AlertTriangle className="mx-auto w-5 h-5 text-gray-400 mb-1" />
-          <strong className="block text-lg text-gray-900">
+          <AlertTriangle className="mx-auto w-5 h-5 text-gray-400 dark:text-muted-foreground mb-1" />
+          <strong className="block text-lg text-gray-900 dark:text-foreground">
             {getDifficultyLabel(difficulty)}
           </strong>
           difficoltà

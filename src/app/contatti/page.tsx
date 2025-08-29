@@ -15,11 +15,14 @@ export default function ContactsPage() {
         url="https://www.weshoot.it/contatti"
       />
       <Header />
-      {/* Aggiunto solo un id per accessibilità (non cambia il layout) */}
-      <main id="main-content">
-        <ContactsHero />
-        <ContactsSection />
-      </main>
+      {/* Wrapper tema-aware per dark mode */}
+      <div className="min-h-screen bg-background">
+        {/* Aggiunto solo un id per accessibilità (non cambia il layout) */}
+        <main id="main-content">
+          <ContactsHero />
+          <ContactsSection />
+        </main>
+      </div>
       <Footer />
     </>
   );

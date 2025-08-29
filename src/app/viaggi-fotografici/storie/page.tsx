@@ -37,7 +37,7 @@ export default async function StoriesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <SEO
         title="Storie di viaggio"
         description="Le storie di viaggio raccontante attraverso le nostre foto"
@@ -46,7 +46,7 @@ export default async function StoriesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 pt-20">
+      <section className="relative pt-20 bg-gradient-to-r from-gray-900 to-gray-700">
         <div className="absolute inset-0 bg-black/40" />
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -56,12 +56,12 @@ export default async function StoriesPage() {
           }}
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="mb-6 text-4xl font-bold text-primary-foreground md:text-5xl lg:text-6xl">
               Storie di viaggio
             </h1>
-            <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
+            <p className="mb-8 mx-auto max-w-2xl text-lg text-primary-foreground/80">
               Le storie di viaggio raccontante attraverso le nostre foto
             </p>
             <div className="flex justify-center">
@@ -72,28 +72,28 @@ export default async function StoriesPage() {
       </section>
 
       {/* Stories Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-background">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           {stories.length > 0 ? (
             <div className="space-y-8">
               {stories.map((story) => (
                 <Link
                   key={story.id}
                   href={`/viaggi-fotografici/storie/${story.slug}`}
-                  className="block group"
+                  className="group block"
                 >
-                  <div className="relative overflow-hidden rounded-lg h-80 bg-gray-900">
+                  <div className="relative h-80 overflow-hidden rounded-lg bg-gray-900">
                     <img
                       src={
                         story.photo?.url ||
                         'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//viaggi-fotografici-e-workshop.avif'
                       }
                       alt={story.photo?.alternativeText || story.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute bottom-6 left-6">
-                      <h2 className="text-white text-xl md:text-2xl font-bold uppercase tracking-wider">
+                      <h2 className="text-xl font-bold tracking-wider text-white md:text-2xl uppercase">
                         {story.name}
                       </h2>
                     </div>
@@ -102,16 +102,16 @@ export default async function StoriesPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <div className="py-12 text-center">
+              <h2 className="mb-4 text-2xl font-bold text-foreground">
                 Nessuna storia disponibile
               </h2>
-              <p className="text-gray-600 mb-8">
+              <p className="mb-8 text-muted-foreground">
                 Le nostre storie di viaggio saranno presto disponibili.
               </p>
               <Link
                 href="/viaggi-fotografici/"
-                className="inline-flex items-center px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-medium rounded-lg transition-colors"
+                className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:opacity-90"
               >
                 Scopri tutti i viaggi
               </Link>

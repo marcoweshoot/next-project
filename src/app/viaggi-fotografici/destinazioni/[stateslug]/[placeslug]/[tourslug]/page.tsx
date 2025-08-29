@@ -25,11 +25,11 @@ interface TourDetailResponse { tours: any[] }
 
 const TourDetailHeaderClient = dynamicImport(
   () => import('@/components/tour-detail/TourDetailHeaderClient'),
-  { loading: () => <div className="h-20 bg-gray-100 animate-pulse" /> }
+  { loading: () => <div className="h-20 bg-muted animate-pulse" /> }
 )
 const TourDetailContentClient = dynamicImport(
   () => import('@/components/tour-detail/TourDetailContentClient'),
-  { loading: () => <div className="h-64 bg-gray-100 animate-pulse" /> }
+  { loading: () => <div className="h-64 bg-muted animate-pulse" /> }
 )
 
 function toList<T = any>(v: any): T[] {
@@ -190,7 +190,7 @@ export default async function TourDetailPage({ params }: Props) {
       : 0
 
     return (
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-background">
         <Header />
 
         <TourDetailHeaderClient

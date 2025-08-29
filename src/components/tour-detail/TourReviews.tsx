@@ -67,7 +67,7 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
-        className={`h-4 w-4 ${i < safeRating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+        className={`h-4 w-4 ${i < safeRating ? 'text-yellow-400 fill-current' : 'text-gray-300 dark:text-zinc-600'}`}
       />
     ));
   };
@@ -80,7 +80,7 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
 
   return (
     <>
-      <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-gray-200">
+      <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-border bg-card text-card-foreground">
         <CardContent className="p-6">
           <div className="flex items-center space-x-3 mb-4">
             <Avatar className="h-12 w-12">
@@ -95,27 +95,27 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
               </AvatarFallback>
             </Avatar>
             <div>
-              <h3 className="font-semibold text-gray-900">{name}</h3>
+              <h3 className="font-semibold text-foreground">{name}</h3>
               <div className="flex items-center space-x-1">
                 {renderStars(review.rating || 5)}
               </div>
             </div>
           </div>
 
-          <p className="text-gray-700 text-sm leading-relaxed whitespace-pre-wrap mb-2">
+          <p className="text-sm leading-relaxed whitespace-pre-wrap mb-2 text-muted-foreground">
             {truncated}
           </p>
 
           {text.length > 300 && (
             <button
               onClick={() => setOpen(true)}
-              className="text-sm text-blue-600 hover:underline"
+              className="text-sm text-primary hover:underline"
             >
               Continua a leggere
             </button>
           )}
 
-          <div className="flex items-center justify-between text-xs text-gray-500 mt-3">
+          <div className="flex items-center justify-between text-xs text-muted-foreground mt-3">
             {dateLabel ? <span>{dateLabel}</span> : <span>&nbsp;</span>}
           </div>
         </CardContent>
@@ -123,15 +123,15 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-xl">
-          <DialogTitle className="text-lg font-semibold text-gray-900 mb-2">
+          <DialogTitle className="text-lg font-semibold text-foreground mb-2">
             Recensione di {name}
           </DialogTitle>
 
-          <DialogDescription className="text-sm text-gray-500 mb-4">
+          <DialogDescription className="text-sm text-muted-foreground mb-4">
             Valutazione: {review.rating}/5{dateLabel ? ` · ${dateLabel}` : ''}
           </DialogDescription>
 
-          <p className="text-sm text-gray-700 whitespace-pre-wrap">{text}</p>
+          <p className="text-sm text-foreground whitespace-pre-wrap">{text}</p>
         </DialogContent>
       </Dialog>
     </>
@@ -147,13 +147,13 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
     reviews.length;
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="reviews" className="py-16 bg-background">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
             <Quote className="w-8 h-8 text-primary mr-3" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Le esperienze dei nostri viaggiatori
             </h2>
           </div>
@@ -173,13 +173,13 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
                 />
               ))}
             </div>
-            <span className="text-lg font-semibold text-gray-900">
+            <span className="text-lg font-semibold text-foreground">
               {averageRating.toFixed(1)}
             </span>
-            <span className="text-gray-600">({reviews.length} recensioni)</span>
+            <span className="text-muted-foreground">({reviews.length} recensioni)</span>
           </div>
 
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Scopri cosa pensano i fotografi che hanno già vissuto questa esperienza unica
           </p>
         </div>
@@ -212,7 +212,7 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
           <div className="text-center mt-8">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="text-neutral-900 font-semibold hover:underline"
+              className="text-foreground font-semibold hover:underline"
             >
               Vedi tutte le recensioni
             </button>

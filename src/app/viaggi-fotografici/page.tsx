@@ -12,12 +12,12 @@ import Footer from '@/components/Footer';
 
 // Lazy load dei componenti pesanti
 const ToursList = dynamicImport(() => import('@/components/tours/ToursList.client'), {
-  loading: () => <div className="min-h-screen bg-gray-50 animate-pulse" />,
+  loading: () => <div className="min-h-screen bg-muted animate-pulse" />,
   ssr: true,
 });
 
 const ToursFAQ = dynamicImport(() => import('@/components/tours/ToursFAQServer'), {
-  loading: () => <div className="py-16 bg-gray-50 animate-pulse" />,
+  loading: () => <div className="py-16 bg-muted animate-pulse" />,
   ssr: true,
 });
 
@@ -64,7 +64,7 @@ export default async function Page() {
     <>
       <Header />
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-background">
         <ToursList initialTours={initialTours} heroImage={heroImage} />
         {faqs?.length ? <ToursFAQ faqs={faqs as any} /> : null}
       </div>

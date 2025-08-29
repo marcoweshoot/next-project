@@ -80,10 +80,10 @@ const TourCoach: React.FC<TourCoachProps> = ({
 }) => {
   if (!coaches || coaches.length === 0) {
     return (
-      <section id="coach" className="py-16 bg-gray-50">
+      <section id="coach" className="py-16 bg-muted">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">I nostri Coaches</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">I nostri Coaches</h2>
+          <p className="text-lg text-muted-foreground mb-4">
             {isFallbackPast
               ? 'Non ci sono coach attivi nelle prossime sessioni, questi sono coach delle sessioni passate.'
               : 'Coach non ancora assegnati per le prossime sessioni.'}
@@ -111,7 +111,7 @@ const TourCoach: React.FC<TourCoachProps> = ({
     const imgSrc = coach.profilePicture?.url || fallbackAvatarSrc;
 
     return (
-      <Card key={key} className="h-full">
+      <Card key={key} className="h-full bg-card text-card-foreground border border-border">
         <CardContent className="p-6 flex flex-col items-center text-center">
           <Avatar className="w-20 h-20 mb-4">
             {imgSrc ? (
@@ -138,7 +138,7 @@ const TourCoach: React.FC<TourCoachProps> = ({
             )}
           </Avatar>
 
-          <h3 className="text-lg font-bold mb-2">{coachName}</h3>
+          <h3 className="text-lg font-bold mb-2 text-foreground">{coachName}</h3>
 
           <div className="flex items-center justify-center gap-2 mb-3">
             <div className="w-5 h-5 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center">
@@ -149,7 +149,7 @@ const TourCoach: React.FC<TourCoachProps> = ({
 
           {coach.bio && (
             <div
-              className="text-sm text-gray-600 leading-relaxed line-clamp-3 mb-4 text-center"
+              className="text-sm text-muted-foreground leading-relaxed line-clamp-3 mb-4 text-center"
               // Assicurati che la bio sia sanificata lato CMS (es. con DOMPurify) se contiene HTML
               dangerouslySetInnerHTML={{ __html: coach.bio }}
             />
@@ -163,7 +163,7 @@ const TourCoach: React.FC<TourCoachProps> = ({
                 href={igUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full hover:scale-110 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-pink-500 mt-auto"
+                className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full hover:scale-110 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background mt-auto"
                 aria-label={`Apri Instagram di ${coachName}`}
                 title={`Segui ${coachName} su Instagram`}
               >
@@ -177,13 +177,13 @@ const TourCoach: React.FC<TourCoachProps> = ({
   };
 
   return (
-    <section id="coach" className="py-16 bg-gray-50">
+    <section id="coach" className="py-16 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
-          <p className="text-lg text-gray-600">{subtitle}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{title}</h2>
+          <p className="text-lg text-muted-foreground">{subtitle}</p>
           {isFallbackPast && (
-            <p className="text-sm text-gray-500 mt-1">
+            <p className="text-sm text-muted-foreground mt-1">
               Questi coach fanno parte di sessioni passate perché non ce ne sono di future al momento.
             </p>
           )}

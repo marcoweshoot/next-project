@@ -76,7 +76,7 @@ export default function TourDetailContentClient({
 
       <TourItinerary itinerary={Array.isArray(tour.days) ? tour.days : []} tour={tour} />
 
-      <section id="details" className="py-16 bg-gray-50 border-t border-gray-100">
+      <section id="details" className="py-16 bg-background border-t border-border transition-colors">
         <div className="container mx-auto px-4">
           <TourEquipment
             thingsNeeded={tour.things_needed}
@@ -121,7 +121,7 @@ export default function TourDetailContentClient({
         <TourReviews reviews={tour.reviews} />
       )}
 
-      <section id="faq" className="py-16 bg-gray-50 border-t border-gray-100">
+      <section id="faq" className="py-16 bg-background border-t border-border transition-colors">
         <div className="container mx-auto px-4">
           <TourFAQ faqs={Array.isArray(tour.faqs) ? tour.faqs : []} />
         </div>

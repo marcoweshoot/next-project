@@ -62,7 +62,6 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({
 
   const extractPrice = (session: any): number | null => {
     if (!session) return null;
-    // tentativi comuni di path per prezzo
     if (typeof session.price === 'number') return session.price;
     if (typeof session.price === 'string' && !isNaN(Number(session.price))) return Number(session.price);
     if (session.pricing?.from && typeof session.pricing.from === 'number') return session.pricing.from;
@@ -78,7 +77,6 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({
 
   const formatPrice = (amount: number | null) => {
     if (amount == null) return '—';
-    // se fosse in centesimi, adattare qui (es. amount / 100)
     return new Intl.NumberFormat('it-IT', {
       style: 'currency',
       currency: 'EUR',
@@ -89,6 +87,11 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({
   const nextSessionPrice = extractPrice(nextSession);
   const nextSessionDate = nextSession?.start ? new Date(nextSession.start) : null;
 
+  // 👉 classi riutilizzabili per i “pill” senza contorno rosa
+  const pillClasses =
+    'bg-white/20 text-white border border-white/30 backdrop-blur-sm ' +
+    'ring-0 ring-offset-0 focus:ring-0 focus-visible:ring-0 outline-none';
+
   return (
     <PageHeader
       backgroundImage={
@@ -97,8 +100,8 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({
       }
       size="medium"
       className="pt-20"
-      priority                 // ← true solo qui: migliora il LCP
-      sizes="100vw"            // ← hero full-width responsive
+      priority
+      sizes="100vw"
       alt={tour?.image?.alternativeText || tour?.title || 'Hero tour'}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -120,20 +123,20 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({
           <>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               {duration && (
-                <Badge variant="secondary" className="bg-white/20 text-white">
+                <Badge variant="secondary" className={pillClasses}>
                   <Clock className="w-4 h-4 mr-2" />
                   Durata {duration} giorni
                 </Badge>
               )}
 
               {typeof maxPax === 'number' && (
-                <Badge variant="secondary" className="bg-white/20 text-white">
+                <Badge variant="secondary" className={pillClasses}>
                   <Users className="w-4 h-4 mr-2" />
                   Max {maxPax} partecipanti
                 </Badge>
               )}
 
-              <Badge variant="secondary" className="bg-white/20 text-white">
+              <Badge variant="secondary" className={pillClasses}>
                 <Star className="w-4 h-4 mr-2" />
                 {tour.difficulty === 'easy'
                   ? 'Facile'
@@ -143,11 +146,13 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({
               </Badge>
             </div>
 
-            <Button onClick={onScrollToSessions} className="text-white shadow-lg mb-6 font-bold">
+            <Button
+              onClick={onScrollToSessions}
+              className="text-white shadow-lg mb-6 font-bold ring-0 ring-offset-0 focus:ring-0 focus-visible:ring-0"
+            >
               Vedi Partenze
             </Button>
 
-            {/* Se ci sono recensioni */}
             {reviewsCount > 0 && (
               <div className="flex items-center justify-center gap-3">
                 <div className="flex items-center space-x-1">{renderStars(averageRating)}</div>

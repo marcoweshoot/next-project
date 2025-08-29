@@ -102,7 +102,7 @@ export default async function StoryPage({ params }: { params: Promise<Params> })
       : null;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Header />
       <StoryHero
         story={story}

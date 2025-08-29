@@ -29,49 +29,75 @@ const TourThingsToKnow: React.FC<TourThingsToKnowProps> = ({
   const getDifficultyInfo = (level?: string) => {
     switch (level) {
       case 'easy':
-        return { label: 'Facile', desc: 'Adatto a tutti...', color: 'text-green-600', bg: 'bg-green-100' };
+        return {
+          label: 'Facile',
+          desc: 'Adatto a tutti...',
+          color: 'text-green-600 dark:text-green-400',
+          bg: 'bg-green-100 dark:bg-green-400/20',
+        };
       case 'medium':
-        return { label: 'Medio', desc: 'Richiede una buona forma fisica...', color: 'text-yellow-600', bg: 'bg-yellow-100' };
+        return {
+          label: 'Medio',
+          desc: 'Richiede una buona forma fisica...',
+          color: 'text-yellow-600 dark:text-yellow-400',
+          bg: 'bg-yellow-100 dark:bg-yellow-400/20',
+        };
       case 'hard':
-        return { label: 'Difficile', desc: 'Richiede ottima forma fisica...', color: 'text-red-600', bg: 'bg-red-100' };
+        return {
+          label: 'Difficile',
+          desc: 'Richiede ottima forma fisica...',
+          color: 'text-red-600 dark:text-red-400',
+          bg: 'bg-red-100 dark:bg-red-400/20',
+        };
       default:
-        return { label: 'Da valutare', desc: 'Contattaci per maggiori informazioni...', color: 'text-gray-600', bg: 'bg-gray-100' };
+        return {
+          label: 'Da valutare',
+          desc: 'Contattaci per maggiori informazioni...',
+          color: 'text-muted-foreground',
+          bg: 'bg-muted',
+        };
     }
   };
 
   const difficultyInfo = getDifficultyInfo(difficulty);
 
   return (
-    <section id="things-to-know" className="py-16 bg-gray-50">
+    <section id="things-to-know" className="py-16 bg-background">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Cose da Sapere</h2>
-          <p className="text-lg text-gray-600">Informazioni importanti per il tuo viaggio fotografico</p>
+          <h2 className="text-3xl font-bold mb-4 text-foreground">Cose da Sapere</h2>
+          <p className="text-lg text-muted-foreground">
+            Informazioni importanti per il tuo viaggio fotografico
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Difficulty */}
-          <Card>
+          <Card className="bg-card text-card-foreground">
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
-                <div className={`w-10 h-10 ${difficultyInfo.bg} rounded-lg flex items-center justify-center`}>
+                <div
+                  className={`w-10 h-10 ${difficultyInfo.bg} rounded-lg flex items-center justify-center`}
+                >
                   <AlertTriangle className={`w-5 h-5 ${difficultyInfo.color}`} />
                 </div>
                 Livello di Difficoltà
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className={`text-lg font-semibold ${difficultyInfo.color} mb-2`}>{difficultyInfo.label}</div>
-              <p className="text-gray-600">{difficultyInfo.desc}</p>
+              <div className={`text-lg font-semibold ${difficultyInfo.color} mb-2`}>
+                {difficultyInfo.label}
+              </div>
+              <p className="text-muted-foreground">{difficultyInfo.desc}</p>
             </CardContent>
           </Card>
 
           {/* Consigli */}
-          <Card>
+          <Card className="bg-card text-card-foreground">
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Info className="w-5 h-5 text-blue-600" />
+                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-400/20 rounded-lg flex items-center justify-center">
+                  <Info className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
                 Consigli Generali
               </CardTitle>
@@ -91,9 +117,11 @@ const TourThingsToKnow: React.FC<TourThingsToKnowProps> = ({
                         />
                       )}
                       <div>
-                        <h4 className="text-sm font-semibold text-gray-900 mb-1">{item.title}</h4>
+                        <h4 className="text-sm font-semibold text-foreground mb-1">
+                          {item.title}
+                        </h4>
                         <div
-                          className="text-sm text-gray-600 prose prose-sm max-w-none"
+                          className="text-sm text-muted-foreground prose prose-sm dark:prose-invert max-w-none"
                           dangerouslySetInnerHTML={{ __html: item.description }}
                         />
                       </div>
@@ -101,7 +129,9 @@ const TourThingsToKnow: React.FC<TourThingsToKnowProps> = ({
                   ))}
                 </ul>
               ) : (
-                <p className="text-gray-600 text-sm">Nessun consiglio specifico disponibile.</p>
+                <p className="text-muted-foreground text-sm">
+                  Nessun consiglio specifico disponibile.
+                </p>
               )}
             </CardContent>
           </Card>

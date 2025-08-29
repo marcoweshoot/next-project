@@ -9,8 +9,8 @@ interface RawPicture {
   title?: string;
   type?: string;
   image?: any;
-  url?: string;                // ✅ nuovo: supporto url top-level
-  alternativeText?: string;    // ✅ nuovo: supporto alt top-level
+  url?: string;
+  alternativeText?: string;
 }
 interface NormalizedPicture {
   id?: string;
@@ -44,7 +44,7 @@ function toAbsolute(rawUrl: string): string {
   return joinUrl(base, rawUrl);
 }
 
-/** ✅ ora supporta sia pictures con { url, alternativeText } sia con { image: [...] } */
+/** ✅ supporta sia shape nuova ({ url, alternativeText }) sia legacy ({ image: [...] }) */
 function normalizeLocationPictures(pictures: RawPicture[] = []): NormalizedPicture[] {
   return pictures
     .filter((p) => p && (p.type === 'tour' || typeof p.type === 'undefined'))
@@ -128,7 +128,7 @@ const TourDayLocation: React.FC<TourDayLocationProps> = ({
 
   return (
     <article
-      className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200"
+      className="bg-card text-card-foreground rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-border"
       aria-labelledby={headingId}
     >
       {/* Heading semantico SR-only per la gerarchia */}
@@ -140,7 +140,10 @@ const TourDayLocation: React.FC<TourDayLocationProps> = ({
         <>
           <div className="relative">
             {renderMainImage(validPictures[0])}
-            <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium z-10 flex items-center gap-1" aria-hidden="true">
+            <div
+              className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium z-10 flex items-center gap-1"
+              aria-hidden="true"
+            >
               <Camera className="w-4 h-4 inline" />
               <span>{validPictures.length} foto</span>
             </div>
@@ -172,11 +175,11 @@ const TourDayLocation: React.FC<TourDayLocationProps> = ({
               {validPictures.length > 4 && (
                 <button
                   type="button"
-                  className="aspect-square rounded-lg bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300 transition-colors"
+                  className="aspect-square rounded-lg bg-muted text-muted-foreground flex items-center justify-center cursor-pointer hover:bg-muted/80 transition-colors"
                   onClick={() => onOpenLightbox(validPictures, 4)}
                   aria-label={`Apri altre ${validPictures.length - 4} foto di ${location.title}`}
                 >
-                  <span className="text-sm font-medium text-gray-600">
+                  <span className="text-sm font-medium">
                     +{validPictures.length - 4}
                   </span>
                 </button>
@@ -189,7 +192,9 @@ const TourDayLocation: React.FC<TourDayLocationProps> = ({
       {validPictures.length === 0 && (
         <div className="p-6">
           <p className="font-bold text-primary text-lg">{location.title}</p>
-          {location.description && <p className="text-gray-600 text-sm mt-2">{location.description}</p>}
+          {location.description && (
+            <p className="text-sm mt-2 text-muted-foreground">{location.description}</p>
+          )}
         </div>
       )}
     </article>

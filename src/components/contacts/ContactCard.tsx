@@ -24,15 +24,15 @@ const ContactCard: React.FC<ContactCardProps> = ({ section }) => {
   const { title, description, icon: SectionIcon, contacts } = section;
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+    <div className="rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border bg-card text-card-foreground">
       <div className="text-center mb-6">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
           <SectionIcon className="w-8 h-8 text-primary" />
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-3">
+        <h3 className="text-xl font-bold text-foreground mb-3">
           {title}
         </h3>
-        <p className="text-gray-600">
+        <p className="text-muted-foreground">
           {description}
         </p>
       </div>
@@ -46,7 +46,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ section }) => {
             <a
               key={index}
               href={contact.href}
-              className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 group"
+              className="flex items-center p-4 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               target={isExternal ? '_blank' : undefined}
               rel={isExternal ? 'noopener noreferrer' : undefined}
               aria-label={`${contact.label}: ${contact.value}`}
@@ -55,10 +55,10 @@ const ContactCard: React.FC<ContactCardProps> = ({ section }) => {
                 <Icon className="w-5 h-5 text-primary" />
               </div>
               <div className="ml-4">
-                <div className="text-sm font-medium text-gray-900">
+                <div className="text-sm font-medium text-foreground">
                   {contact.label}
                 </div>
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-muted-foreground">
                   {contact.value}
                 </div>
               </div>

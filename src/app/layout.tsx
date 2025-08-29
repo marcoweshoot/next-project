@@ -6,12 +6,13 @@ import ClientProviders from '@/components/providers/ClientProviders';
 import { ToastStateProvider } from '@/components/ui/toast-provider';
 import { Toaster } from '@/components/ui/toaster';
 
-// Precarica SOLO i pesi realmente usati above-the-fold (es. 400 e 700)
+// Usa la CSS variable così font-sans del tema funziona ovunque
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '700'],
   display: 'swap',
   preload: true,
+  variable: '--font-montserrat',
 });
 
 export const metadata: Metadata = {
@@ -33,10 +34,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://s3.eu-west-1.amazonaws.com" crossOrigin="" />
         <link rel="preconnect" href="https://wxoodcdxscxazjkoqhsg.supabase.co" crossOrigin="" />
       </head>
-      {/* ✅ Applica direttamente la classe del font: viene usato subito */}
-      <body className={`${montserrat.className} antialiased`}>
+
+      {/* Applica i token del tema subito per evitare bordi bianchi in dark */}
+      <body
+        className={`${montserrat.variable} min-h-screen bg-background text-foreground font-sans antialiased`}
+      >
         <ToastStateProvider>
-          <ClientProviders>{children}</ClientProviders>
+          <ClientProviders>
+            {children}
+          </ClientProviders>
           <Toaster />
         </ToastStateProvider>
       </body>

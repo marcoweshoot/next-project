@@ -135,18 +135,18 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-muted">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
             Foto scattata durante questo viaggio
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-muted-foreground">
             Scopri il viaggio fotografico che ha ispirato questa storia
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tours.map((tour, index) => {
             console.log('StoryRelatedTours - Processing tour for render:', tour);
             const transformedTour = transformStoryTourData(tour);

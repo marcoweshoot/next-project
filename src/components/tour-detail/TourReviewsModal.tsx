@@ -42,13 +42,15 @@ const SingleReviewCard: React.FC<{ review: TourReviewsModalProps['reviews'][0] }
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
-        className={`h-4 w-4 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+        className={`h-4 w-4 ${
+          i < rating ? 'text-yellow-400 fill-current' : 'text-muted-foreground'
+        }`}
       />
     ));
   };
 
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+    <Card className="hover:shadow-lg transition-shadow duration-300 bg-card text-card-foreground border border-border">
       <CardContent className="p-6">
         <div className="flex items-center space-x-3 mb-4">
           <Avatar className="h-12 w-12">
@@ -63,7 +65,7 @@ const SingleReviewCard: React.FC<{ review: TourReviewsModalProps['reviews'][0] }
             </AvatarFallback>
           </Avatar>
           <div>
-            <h3 className="font-semibold text-gray-900">
+            <h3 className="font-semibold text-foreground">
               {review.user?.firstName || 'Utente'}
             </h3>
             <div className="flex items-center space-x-1">
@@ -72,11 +74,11 @@ const SingleReviewCard: React.FC<{ review: TourReviewsModalProps['reviews'][0] }
           </div>
         </div>
 
-        <p className="text-gray-700 text-sm leading-relaxed mb-4">
+        <p className="text-sm leading-relaxed mb-4 text-muted-foreground">
           {review.description}
         </p>
 
-        <div className="flex items-center justify-between text-xs text-gray-500">
+        <div className="flex items-center justify-between text-xs text-muted-foreground">
           <span>{formatDate(review.created_at)}</span>
         </div>
       </CardContent>
@@ -97,14 +99,14 @@ const TourReviewsModal: React.FC<TourReviewsModalProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden bg-background text-foreground border border-border">
         <DialogHeader>
-          <DialogTitle className="text-center text-2xl font-bold">
+          <DialogTitle className="text-center text-2xl font-bold text-foreground">
             {title} {hasReviews && `(${reviews.length})`}
           </DialogTitle>
           {hasReviews && (
-            <div className="flex justify-center items-center text-sm text-gray-500 mt-1">
-              <span className="font-medium text-gray-700 mr-1">
+            <div className="flex justify-center items-center text-sm text-muted-foreground mt-1">
+              <span className="font-medium text-foreground mr-1">
                 {averageRating.toFixed(1)}
               </span>
               <span>valutazione media</span>
@@ -122,7 +124,7 @@ const TourReviewsModal: React.FC<TourReviewsModalProps> = ({
               ))}
             </div>
           ) : (
-            <div className="text-center text-gray-500 text-sm py-12">
+            <div className="text-center text-sm py-12 text-muted-foreground">
               Nessuna recensione disponibile per questo viaggio.
             </div>
           )}

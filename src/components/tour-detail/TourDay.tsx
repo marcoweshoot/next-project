@@ -17,9 +17,8 @@ interface DayLocation {
     title?: string;
     url?: string;
     alternativeText?: string;
-    image?: any; // per sicurezza: alcuni tour possono avere ancora il formato vecchio
+    image?: any;
   }>;
-  // NB: nel JSON delle location c'è anche steps[] (usato nel matching)
   steps?: Array<{ id?: string | number | null; title?: string | null }>;
 }
 
@@ -27,7 +26,7 @@ interface DayStep {
   id?: string | number | null;
   title: string;
   description?: string;
-  locations?: DayLocation[]; // verrà popolato da noi
+  locations?: DayLocation[];
 }
 
 interface DayProps {
@@ -69,8 +68,7 @@ function locationsForStep(all: DayLocation[] = [], step: DayStep): DayLocation[]
   const byTitle = all.filter((loc) =>
     Array.isArray(loc.steps) &&
     loc.steps.some(
-      (s) =>
-        (s?.title || '').trim().toLowerCase() === stepTitle
+      (s) => (s?.title || '').trim().toLowerCase() === stepTitle
     )
   );
 
@@ -82,21 +80,22 @@ const TourDay: React.FC<TourDayProps> = ({ day, tour }) => {
   const [lightboxImages, setLightboxImages] = useState<LightboxImage[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // 🔗 Collega ad ogni step SOLO le location pertinenti (in base a location.steps[])
+  // 🔗 Collega ad ogni step SOLO le location pertinenti
   const stepsWithLocations = useMemo(() => {
     const allLocations = tour?.locations || [];
     const steps = day.steps || [];
     return steps.map((s) => ({
       ...s,
-      locations: locationsForStep(allLocations, s).map(location => ({
+      locations: locationsForStep(allLocations, s).map((location) => ({
         ...location,
-        pictures: location.pictures?.map(pic => ({
-          id: String(pic.id || ''),
-          title: pic.title || '',
-          url: pic.url || '',
-          alternativeText: pic.alternativeText || ''
-        })) || []
-      }))
+        pictures:
+          location.pictures?.map((pic) => ({
+            id: String(pic.id || ''),
+            title: pic.title || '',
+            url: pic.url || '',
+            alternativeText: pic.alternativeText || '',
+          })) || [],
+      })),
     }));
   }, [day.steps, tour?.locations]);
 
@@ -115,9 +114,7 @@ const TourDay: React.FC<TourDayProps> = ({ day, tour }) => {
     if (!images.length) return;
 
     setLightboxImages(images);
-    setCurrentImageIndex(
-      startIndex >= 0 && startIndex < images.length ? startIndex : 0
-    );
+    setCurrentImageIndex(startIndex >= 0 && startIndex < images.length ? startIndex : 0);
     setLightboxOpen(true);
   };
 
@@ -137,7 +134,7 @@ const TourDay: React.FC<TourDayProps> = ({ day, tour }) => {
 
   return (
     <>
-      <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-500">
+      <div className="rounded-2xl border border-border bg-card text-card-foreground shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500">
         <TourDayHeader number={day.number} title={day.title} />
 
         <div className="p-8">

@@ -36,7 +36,7 @@ const HighlightCard = React.memo(({ highlight }: { highlight: HighlightItem }) =
     (highlight?.icon?.alternativeText || highlight?.title || 'Icona').toString();
 
   return (
-    <Card className="border-0 shadow-sm hover:shadow-md transition-shadow duration-200">
+    <Card className="bg-card text-card-foreground border border-border shadow-sm hover:shadow-md transition-shadow duration-200">
       <CardContent className="p-5">
         <div className="flex items-start space-x-4">
           <div className="flex-shrink-0">
@@ -50,11 +50,11 @@ const HighlightCard = React.memo(({ highlight }: { highlight: HighlightItem }) =
             />
           </div>
           <div className="flex-1 min-w-0">
-            <h4 className="text-base font-semibold text-gray-900 mb-1">
+            <h4 className="text-base font-semibold text-foreground mb-1">
               {highlight.title || 'Senza titolo'}
             </h4>
             {highlight.description ? (
-              <p className="text-sm text-gray-600 leading-relaxed">{highlight.description}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{highlight.description}</p>
             ) : null}
           </div>
         </div>
@@ -71,7 +71,7 @@ const TourHighlights: React.FC<TourHighlightsProps> = ({ highlights }) => {
     <section className="mt-12" aria-labelledby="tour-highlights-title">
       <h3
         id="tour-highlights-title"
-        className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center"
+        className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center"
       >
         Punti Salienti del Viaggio
       </h3>
