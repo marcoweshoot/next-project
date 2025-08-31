@@ -26,13 +26,13 @@ const iconColumns = [
 
 const CoursesFeatures: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-muted transition-colors">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
             Perché Scegliere i Nostri Corsi
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             L'Accademia WeShoot offre un percorso completo per diventare un fotografo professionista
           </p>
         </div>

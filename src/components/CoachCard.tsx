@@ -1,101 +1,67 @@
-import Link from "next/link";
-import Image from "next/image";
-import React from "react";
-import { Instagram } from "lucide-react";
+// src/components/coaches/CoachCard.tsx
+import React from 'react';
+import Image from 'next/image';
+import { Instagram } from 'lucide-react';
+import type { Coach } from './CoachesList'; // o aggiorna il path dell'interfaccia se diverso
 
-const abs = (u?: string | null) =>
-  u ? (u.startsWith("http") ? u : `https://api.weshoot.it${u}`) : undefined;
-
-interface CoachCardProps {
-  coach: {
-    id: string;
-    firstName?: string | null;
-    lastName?: string | null;
-    username: string;
-    bio?: string | null;
-    profilePicture?: {
-      id: string;
-      url: string;
-      alternativeText?: string | null;
-    } | null;
-    instagram?: string | null;
-  };
+function normalizeInstagramUrl(raw?: string) {
+  if (!raw) return undefined;
+  let s = raw.trim();
+  if (!s) return undefined;
+  if (s.startsWith('@')) s = s.slice(1);
+  if (/^[A-Za-z0-9._]+$/.test(s)) return `https://instagram.com/${s}`;
+  if (!/^https?:\/\//i.test(s)) return `https://${s}`;
+  return s;
 }
 
-const CoachCard: React.FC<CoachCardProps> = ({ coach }) => {
-  const initial = (s?: string | null) => s?.trim()?.[0]?.toUpperCase() ?? "";
-  const displayName =
-    [coach.firstName, coach.lastName].filter(Boolean).join(" ") || coach.username;
+export default function CoachCard({ coach }: { coach: Coach }) {
+  const name = [coach.firstName, coach.lastName].filter(Boolean).join(' ') || coach.username;
+  const initials =
+    (coach.firstName?.[0] || coach.username?.[0] || 'C').toUpperCase() +
+    (coach.lastName?.[0] || '');
 
-  const initials = (() => {
-    const a = initial(coach.firstName);
-    const b = initial(coach.lastName);
-    if (a || b) return `${a}${b}`.trim() || a || b;
-    const parts = displayName.trim().split(/\s+/);
-    return parts.slice(0, 2).map(p => p[0]?.toUpperCase() ?? "").join("") || "?";
-  })();
-
-  const ig = coach.instagram
-    ? coach.instagram
-        .replace(/^https?:\/\/(www\.)?instagram\.com\//i, "")
-        .replace(/\/+$/, "")
-        .replace(/^@/, "")
-    : null;
-
-  const imgSrc = abs(coach.profilePicture?.url);
+  const igUrl = normalizeInstagramUrl(coach.instagram);
 
   return (
-    <div className="text-center group">
-      {/* Profile Picture */}
-      <div className="relative mb-4">
-        {imgSrc ? (
-          <div className="relative mx-auto h-32 w-32 border-4 border-white rounded-full shadow-lg overflow-hidden group-hover:shadow-xl">
-            <Image
-              src={imgSrc}
-              alt={coach.profilePicture?.alternativeText || displayName}
-              width={128}
-              height={128}
-              className="object-cover h-full w-full"
-              loading="lazy"
-              sizes="128px"
-            />
-          </div>
+    <article className="flex flex-col items-center text-center rounded-3xl border bg-card text-card-foreground p-6 shadow-sm">
+      {/* Avatar */}
+      <div className="relative h-40 w-40 overflow-hidden rounded-full ring-4 ring-white dark:ring-white/80">
+        {coach.profilePicture?.url ? (
+          <Image
+            src={coach.profilePicture.url}
+            alt={coach.profilePicture.alternativeText || name}
+            fill
+            sizes="160px"
+            className="object-cover"
+          />
         ) : (
-          <div
-            className="h-32 w-32 rounded-full mx-auto bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white text-2xl font-bold border-4 border-white shadow-lg group-hover:shadow-xl"
-            aria-label={displayName}
-          >
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary/20 to-primary/40 text-2xl font-bold text-primary">
             {initials}
           </div>
         )}
       </div>
 
-      {/* Coach Info */}
-      <div className="space-y-2">
-        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
-          {coach.username ? (
-            <Link href={`/fotografi/${coach.username}`}>{displayName}</Link>
-          ) : (
-            <span>{displayName}</span>
-          )}
-        </h3>
+      {/* Nome */}
+      <h3 className="mt-6 text-xl font-bold leading-snug text-foreground">{name}</h3>
 
-        {ig && (
-          <div className="flex justify-center">
-            <a
-              href={`https://www.instagram.com/${ig}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full hover:from-pink-600 hover:to-purple-700 transition-all hover:scale-110"
-              title={`Segui ${displayName} su Instagram`}
-            >
-              <Instagram className="h-4 w-4" />
-            </a>
-          </div>
-        )}
-      </div>
-    </div>
+      {/* Username (se utile) */}
+      {coach.username && (
+        <p className="mt-1 text-sm text-muted-foreground">@{coach.username}</p>
+      )}
+
+      {/* Instagram */}
+      {igUrl && (
+        <a
+          href={igUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-md transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          aria-label={`Apri Instagram di ${name}`}
+          title={`Segui ${name} su Instagram`}
+        >
+          <Instagram className="h-5 w-5" />
+        </a>
+      )}
+    </article>
   );
-};
-
-export default CoachCard;
+}

@@ -23,7 +23,7 @@ export default async function CorsiFotografiaPage() {
   const courses = data?.courses || [];
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       {/* Meta tags per SEO */}
       <SEO
         title="Corsi di Fotografia – WeShoot"
@@ -51,6 +51,6 @@ export default async function CorsiFotografiaPage() {
 
       {/* Footer globale */}
       <Footer />
-    </>
+    </div>
   );
 }

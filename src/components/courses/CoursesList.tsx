@@ -9,13 +9,13 @@ interface CoursesListProps {
 
 const CoursesList: React.FC<CoursesListProps> = ({ courses }) => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-background transition-colors">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
             I Nostri Corsi
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-muted-foreground">
             Scegli il corso più adatto al tuo livello e ai tuoi obiettivi
           </p>
         </div>
@@ -28,7 +28,7 @@ const CoursesList: React.FC<CoursesListProps> = ({ courses }) => {
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-gray-600 text-lg">
+            <p className="text-muted-foreground text-lg">
               I nostri corsi saranno disponibili presto. Torna a trovarci!
             </p>
           </div>

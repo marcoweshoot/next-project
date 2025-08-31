@@ -19,7 +19,7 @@ const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPric
   const { toast } = useToast();
 
   const handlePurchase = async () => {
-    if (isLoading) return; // evita doppi click
+    if (isLoading) return;
     setIsLoading(true);
     try {
       const { data, error } = await supabase.functions.invoke<PaymentResponse>(
@@ -30,23 +30,17 @@ const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPric
       if (!data?.url) throw new Error("URL di pagamento non ricevuto");
 
       const w = window.open(data.url, "_blank", "noopener,noreferrer");
-      if (!w) {
-        // se il popup viene bloccato, fai fallback sulla stessa tab
-        window.location.href = data.url;
-      }
+      if (!w) window.location.href = data.url;
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : "Si è verificato un errore";
-      toast({
-        title: "Errore nel pagamento",
-        description: message,
-      });
+      toast({ title: "Errore nel pagamento", description: message });
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+    <div className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
       <div className={`${color} p-6 text-white relative`}>
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-2">
@@ -65,12 +59,14 @@ const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPric
 
       <div className="p-4">
         <div className="text-center mb-4">
-          <div className="text-gray-600 text-sm">Prezzo originale: €{originalPrice}</div>
+          <div className="text-sm text-muted-foreground">
+            Prezzo originale: €{originalPrice}
+          </div>
         </div>
         <Button
           onClick={handlePurchase}
           disabled={isLoading}
-          className="w-full bg-[#E25141] hover:bg-[#cf4637]"
+          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
         >
           {isLoading ? (
             <>

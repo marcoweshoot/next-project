@@ -15,8 +15,7 @@ const CourseTeacherPhotos: React.FC<CourseTeacherPhotosProps> = ({ pictures }) =
     .slice(0, 6)
     .flatMap((picture) =>
       // Su Strapi, picture.image è l'array delle immagini
-    (picture.image || []).map((img, idx) => {
-
+      (picture.image || []).map((img, idx) => {
         if (!img?.url) return null;
 
         const src = getFullMediaUrl(img.url);
@@ -32,13 +31,13 @@ const CourseTeacherPhotos: React.FC<CourseTeacherPhotosProps> = ({ pictures }) =
     .filter((img): img is { id: string; src: string; alt: string } => Boolean(img));
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-background">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
             Alcune delle mie foto
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-muted-foreground">
             Nei miei corsi di fotografia ti insegnerò a fare fotografie come queste
           </p>
         </div>

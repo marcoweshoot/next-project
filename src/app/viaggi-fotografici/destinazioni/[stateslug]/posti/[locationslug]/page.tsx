@@ -97,7 +97,7 @@ const GET_DESTINATION_PLACE_PAGE = gql`
           id
           name
           slug
-  }
+        }
       }
     }
   }
@@ -180,7 +180,7 @@ export default async function Page({ params }: Props) {
     };
 
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-background">
         <SEO
           title={`${location.title} - Viaggi Fotografici ${destination.name}`}
           description={`Scopri ${location.title} in ${destination.name}. Una delle location più belle per i tuoi scatti fotografici.`}

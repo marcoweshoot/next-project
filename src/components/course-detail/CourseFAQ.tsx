@@ -17,21 +17,31 @@ const CourseFAQ: React.FC<CourseFAQProps> = ({ faqs }) => {
   }
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-background">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+        <h2 className="text-3xl font-bold text-foreground text-center mb-12">
           Domande Frequenti
         </h2>
-        
-        <Accordion type="single" collapsible className="w-full">
+
+        <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
-            <AccordionItem key={faq.id} value={`item-${index}`} className="mb-4">
-              <AccordionTrigger className="text-left hover:no-underline bg-white px-6 py-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <span className="font-semibold text-gray-900">{faq.question}</span>
+            <AccordionItem
+              key={faq.id}
+              value={`item-${index}`}
+              className="rounded-lg shadow-sm border border-border overflow-hidden bg-card text-card-foreground"
+            >
+              <AccordionTrigger
+                className="px-6 py-4 text-left hover:no-underline hover:bg-muted transition-colors
+                           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring
+                           focus-visible:ring-offset-2 focus-visible:ring-offset-background
+                           data-[state=open]:bg-muted"
+              >
+                <span className="font-semibold text-foreground">{faq.question}</span>
               </AccordionTrigger>
-              <AccordionContent className="bg-white px-6 pb-4 rounded-b-lg">
-                <div 
-                  className="prose prose-gray max-w-none pt-4"
+              <AccordionContent className="px-6 pb-4">
+                <div
+                  className="prose max-w-none leading-relaxed text-muted-foreground dark:prose-invert
+                             prose-headings:text-foreground prose-strong:text-foreground prose-a:text-primary"
                   dangerouslySetInnerHTML={{ __html: faq.answer }}
                 />
               </AccordionContent>

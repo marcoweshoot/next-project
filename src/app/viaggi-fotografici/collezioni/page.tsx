@@ -25,14 +25,14 @@ export default async function CollectionsPage() {
   } catch (error) {
     console.error('Errore nel caricamento delle collezioni:', error);
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-background">
         <Header />
         <div className="pt-24 px-4">
           <div className="max-w-7xl mx-auto text-center py-12">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            <h1 className="text-2xl font-bold text-foreground mb-4">
               Errore nel caricamento delle collezioni
             </h1>
-            <p className="text-gray-600">
+            <p className="text-muted-foreground">
               Si è verificato un errore durante il caricamento. Riprova più tardi.
             </p>
           </div>
@@ -43,7 +43,7 @@ export default async function CollectionsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <SEO 
         title="Collezioni Viaggi Fotografici"
         description="Scopri le nostre collezioni tematiche di viaggi fotografici. Esperienze uniche organizzate per tema e stile fotografico."
@@ -92,10 +92,10 @@ export default async function CollectionsPage() {
             </div>
           ) : (
             <div className="text-center py-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl font-bold text-foreground mb-4">
                 Nessuna collezione disponibile
               </h2>
-              <p className="text-gray-600 mb-8">
+              <p className="text-muted-foreground mb-8">
                 Le nostre collezioni tematiche saranno presto disponibili.
               </p>
             </div>

@@ -119,7 +119,7 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-background transition-colors">
         <CourseDetailHero course={course} />
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">

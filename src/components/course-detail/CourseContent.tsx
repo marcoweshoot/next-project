@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Course } from '@/types';
 
@@ -11,14 +10,14 @@ const CourseContent: React.FC<CourseContentProps> = ({ course }) => {
   if (!course.presentation) {
     return (
       <div className="prose prose-lg max-w-none">
-        <p className="text-gray-600">Contenuto del corso in caricamento...</p>
+        <p className="text-muted-foreground">Contenuto del corso in caricamento...</p>
       </div>
     );
   }
 
   return (
-    <div 
-      className="prose prose-lg max-w-none"
+    <div
+      className="prose prose-lg max-w-none text-foreground dark:prose-invert prose-headings:text-foreground prose-strong:text-foreground prose-a:text-primary"
       dangerouslySetInnerHTML={{ __html: course.presentation }}
     />
   );

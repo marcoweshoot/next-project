@@ -60,10 +60,10 @@ const LocationGallery: React.FC<LocationGalleryProps> = ({ pictures, locationTit
       <div className="space-y-6">
         {/* Gallery title */}
         <div className="text-center">
-          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
+          <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
             Galleria di {locationTitle}
           </h3>
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             {len === 1 ? '1 foto disponibile' : `${len} foto disponibili`}
           </p>
         </div>

@@ -59,7 +59,9 @@ const Page = async () => {
   return (
     <>
       <Header />
-      <CalendarContent groupedSessions={groupedSessions} coverImage={coverImage} />
+      <main className="min-h-screen bg-background transition-colors">
+        <CalendarContent groupedSessions={groupedSessions} coverImage={coverImage} />
+      </main>
       <Footer />
     </>
   );

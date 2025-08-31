@@ -5,7 +5,7 @@ interface TourCardPricingProps {
   duration: number;
   hasFutureSessions: boolean;
   price: number;
-  href: string; // rimane per prop drilling ma non usato internamente
+  href: string; // mantenuto per compatibilità, non usato qui
 }
 
 const TourCardPricing: React.FC<TourCardPricingProps> = ({
@@ -16,12 +16,13 @@ const TourCardPricing: React.FC<TourCardPricingProps> = ({
   const formattedPrice = price.toLocaleString('it-IT');
 
   return (
-    <div className="flex items-end justify-between mt-auto">
+    <div className="mt-auto flex items-end justify-between">
       <div>
-        <div className="text-gray-600 mb-1 text-sm">
+        <div className="mb-1 text-sm text-muted-foreground">
           {duration} Giorni
         </div>
-        <div className="text-2xl font-bold text-gray-900">
+
+        <div className="text-2xl font-extrabold text-foreground sm:text-3xl">
           {hasFutureSessions ? (
             price > 0 ? (
               <>€{formattedPrice}</>
@@ -29,7 +30,7 @@ const TourCardPricing: React.FC<TourCardPricingProps> = ({
               <>Scopri</>
             )
           ) : (
-            <span className="text-lg text-red-600 font-semibold">
+            <span className="text-base font-semibold text-primary">
               Coming Soon
             </span>
           )}
@@ -39,7 +40,7 @@ const TourCardPricing: React.FC<TourCardPricingProps> = ({
       {hasFutureSessions && (
         <Button
           asChild
-          className="px-4 py-2 text-xs uppercase tracking-wide flex-shrink-0"
+          className="flex-shrink-0 px-4 py-2 text-xs uppercase tracking-wide"
         >
           <span>Vedi viaggio</span>
         </Button>

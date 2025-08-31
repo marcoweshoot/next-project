@@ -15,12 +15,12 @@ interface CollectionDetailToursProps {
 const CollectionDetailTours: React.FC<CollectionDetailToursProps> = ({ tours }) => {
   if (!tours || tours.length === 0) {
     return (
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-foreground mb-6">
             Viaggi di questa Collezione
           </h2>
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             Non ci sono viaggi disponibili per questa collezione al momento.
           </p>
         </div>
@@ -29,13 +29,13 @@ const CollectionDetailTours: React.FC<CollectionDetailToursProps> = ({ tours }) 
   }
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-foreground mb-6">
             Viaggi di questa Collezione
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-muted-foreground">
             Scopri tutti i viaggi fotografici disponibili
           </p>
         </div>

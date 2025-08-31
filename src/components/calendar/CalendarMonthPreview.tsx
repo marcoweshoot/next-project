@@ -47,7 +47,7 @@ const CalendarMonthPreview: React.FC<CalendarMonthProps> = ({
   return (
     <div key={monthKey}>
       {/* Month Header */}
-      <div className="bg-black text-white px-6 py-4 rounded-t-lg flex items-center justify-between">
+      <div className="px-6 py-4 rounded-t-lg flex items-center justify-between bg-neutral-900 text-white dark:bg-neutral-800 transition-colors">
         <h2 className="text-2xl font-bold capitalize">
           {monthData.month} {monthData.year}
         </h2>
@@ -59,8 +59,9 @@ const CalendarMonthPreview: React.FC<CalendarMonthProps> = ({
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
+
       {/* Sessions */}
-      <div className="bg-white rounded-b-lg border border-gray-200">
+      <div className="rounded-b-lg border border-border bg-card text-card-foreground transition-colors">
         {monthData.tours.map((session, index) => (
           <CalendarSession 
             key={session.id}

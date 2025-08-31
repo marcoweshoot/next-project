@@ -41,13 +41,13 @@ const DestinationDetailLocations: React.FC<DestinationDetailLocationsProps> = ({
   if (locations.length === 0 && !loading) return null;
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Location da Fotografare
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Scopri i luoghi più fotografici e iconici di {destination?.name}
           </p>
         </div>
@@ -55,7 +55,7 @@ const DestinationDetailLocations: React.FC<DestinationDetailLocationsProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {loading
             ? [...Array(6)].map((_, i) => (
-                <Card key={i} className="overflow-hidden">
+                <Card key={i} className="overflow-hidden bg-card text-card-foreground">
                   <Skeleton className="h-64 w-full" />
                   <CardContent className="p-4">
                     <Skeleton className="h-6 w-3/4 mb-2" />
@@ -66,7 +66,7 @@ const DestinationDetailLocations: React.FC<DestinationDetailLocationsProps> = ({
             : locations.map((location) => (
                 <Card
                   key={location.id}
-                  className="overflow-hidden group hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  className="overflow-hidden group hover:shadow-xl transition-all duration-300 cursor-pointer bg-card text-card-foreground"
                 >
                   <Link
                     href={`/viaggi-fotografici/destinazioni/${destination?.slug}/posti/${location.slug}`}
@@ -86,7 +86,7 @@ const DestinationDetailLocations: React.FC<DestinationDetailLocationsProps> = ({
                           {location.title}
                         </h3>
                         {location.description && (
-                          <p className="text-gray-200 text-sm line-clamp-2">
+                          <p className="text-white/80 text-sm line-clamp-2">
                             {location.description}
                           </p>
                         )}

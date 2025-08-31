@@ -21,10 +21,10 @@ const CalendarContent: React.FC<CalendarContentProps> = ({
   coverImage 
 }) => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background transition-colors">
       <CalendarHero coverImage={coverImage} />
 
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-background transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {Object.keys(groupedSessions).length > 0 ? (
             <div className="space-y-8">

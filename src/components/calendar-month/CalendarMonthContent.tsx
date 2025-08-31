@@ -16,12 +16,12 @@ const CalendarMonthContent = async ({ year, month }: Props) => {
   const monthData = groupedSessions[key];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Header />
 
       <CalendarMonthHero monthName={capitalizedMonth} year={year} />
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {monthData?.tours?.length > 0 ? (
             <CalendarMonthToursGrid

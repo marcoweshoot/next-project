@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import SEO from '@/components/SEO';
 import Header from '@/components/Header';
@@ -39,13 +38,13 @@ export default function GiftCardPage() {
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
             Carte regalo WeShoot
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl">
             Regala un viaggio fotografico indimenticabile ai tuoi amici e familiari.
           </p>
         </div>
       </section>
 
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-background">
         {/* Qui i tuoi componenti di sezione */}
         <div className="pt-16">
           <GiftCardGrid />

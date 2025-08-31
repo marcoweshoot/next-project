@@ -50,7 +50,7 @@ export default async function CollectionDetailPage({ params }: Props) {
     }
 
     return (
-      <>
+      <div className="min-h-screen bg-background">
         <SEO
           title={collection.seo?.metaTitle || `${collection.name} - Collezioni WeShoot`}
           description={collection.seo?.metaDescription || collection.excerpt}
@@ -74,7 +74,7 @@ export default async function CollectionDetailPage({ params }: Props) {
         </div>
 
         <Footer />
-      </>
+      </div>
     );
   } catch (error) {
     return <CollectionDetailError error={error} />;

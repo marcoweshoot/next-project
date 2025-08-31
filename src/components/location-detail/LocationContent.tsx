@@ -28,7 +28,7 @@ const LocationContent: React.FC<LocationContentProps> = ({ location, loading }) 
       {/* Description */}
       {description && (
         <div className="text-center mb-12">
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {description}
           </p>
         </div>

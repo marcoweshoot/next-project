@@ -1,64 +1,67 @@
-import Link from 'next/link'
-import { Skeleton } from '@/components/ui/skeleton'
-import CoachCard from './CoachCard'
+import Link from 'next/link';
+import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import CoachCard from './CoachCard';
 
 export interface Coach {
-  id: string
-  firstName: string
-  lastName: string
-  username: string
+  id: string;
+  firstName: string;
+  lastName: string;
+  username: string;
   profilePicture?: {
-    id: string
-    url: string
-    alternativeText?: string
-  }
-  instagram?: string
+    id: string;
+    url: string;
+    alternativeText?: string;
+  };
+  instagram?: string;
 }
 
 interface CoachesListProps {
-  coaches: Coach[]
-  loading: boolean
+  coaches: Coach[];
+  loading: boolean;
 }
 
 export default function CoachesList({ coaches, loading }: CoachesListProps) {
   if (loading) {
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div
+        className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        aria-busy="true"
+      >
         {[...Array(8)].map((_, i) => (
           <div key={i} className="text-center">
-            <Skeleton className="h-32 w-32 rounded-full mx-auto mb-4" />
-            <Skeleton className="h-6 w-32 mx-auto mb-2" />
-            <Skeleton className="h-4 w-8 mx-auto" />
+            <Skeleton className="mx-auto mb-4 h-32 w-32 rounded-full" />
+            <Skeleton className="mx-auto mb-2 h-6 w-32" />
+            <Skeleton className="mx-auto h-4 w-8" />
           </div>
         ))}
       </div>
-    )
+    );
   }
 
   if (!coaches || coaches.length === 0) {
     return (
-      <div className="text-center py-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+      <div className="py-12 text-center">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">
           Nessun coach disponibile
         </h2>
-        <p className="text-gray-600 mb-8">
+        <p className="mb-8 text-muted-foreground">
           I nostri coach saranno presto disponibili.
         </p>
-        <Link
-          href="/viaggi-fotografici/"
-          className="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition-colors"
-        >
-          Scopri tutti i viaggi
-        </Link>
+        <Button asChild>
+          <Link href="/viaggi-fotografici/">Scopri tutti i viaggi</Link>
+        </Button>
       </div>
-    )
+    );
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div className="grid grid-cols-1 gap-8 text-foreground sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {coaches.map((coach, index) => (
-        <CoachCard key={coach.id || `coach-${index}`} coach={coach} />
+        <div key={coach.id || `coach-${index}`} className="min-w-0">
+          <CoachCard coach={coach} />
+        </div>
       ))}
     </div>
-  )
+  );
 }

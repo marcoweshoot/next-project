@@ -104,7 +104,7 @@ export default async function StatePage({ params }: PageProps<RouteParams>) {
     }
 
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-background">
         {destination && (
           <SEO
             title={destination.seo?.metaTitle || `${destination.name} - Viaggi Fotografici`}

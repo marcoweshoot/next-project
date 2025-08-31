@@ -22,7 +22,7 @@ const CalendarMonthToursGrid: React.FC<CalendarMonthToursGridProps> = ({
   return (
     <section aria-labelledby="month-results" className="w-full">
       <header className="text-center mb-12">
-        <h2 id="month-results" className="text-xl font-medium text-gray-700">
+        <h2 id="month-results" className="text-xl font-medium text-muted-foreground">
           {tours.length}{' '}
           {tours.length === 1 ? 'viaggio trovato' : 'viaggi trovati'} per {monthName} {year}
         </h2>

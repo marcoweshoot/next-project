@@ -1,7 +1,7 @@
 import React from 'react';
 import NextImage from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { AvatarFallback } from '@/components/ui/avatar';
 import { Instagram } from 'lucide-react';
 import { Course } from '@/types';
 
@@ -13,21 +13,19 @@ const CourseTeacher: React.FC<CourseTeacherProps> = ({ course }) => {
   const teacher = course.teacher;
   if (!teacher) return null;
 
-  // Logica inline
   const fullName = `${teacher.firstName}${teacher.lastName ? ` ${teacher.lastName}` : ''}`;
   const initials = (
-    teacher.firstName.charAt(0) +
-    (teacher.lastName?.charAt(0) || '')
+    teacher.firstName.charAt(0) + (teacher.lastName?.charAt(0) || '')
   ).toUpperCase();
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-background">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+        <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
           Il Tuo Insegnante
         </h2>
 
-        <Card className="bg-white shadow-lg border-0">
+        <Card className="bg-card text-card-foreground shadow-lg border border-border">
           <CardContent className="p-8">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
               {/* Photo */}
@@ -51,7 +49,7 @@ const CourseTeacher: React.FC<CourseTeacherProps> = ({ course }) => {
               {/* Info */}
               <div className="flex-1 text-center md:text-left">
                 <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
-                  <h3 className="text-2xl font-bold text-gray-900">{fullName}</h3>
+                  <h3 className="text-2xl font-bold text-foreground">{fullName}</h3>
                   {teacher.instagram && (
                     <a
                       href={`${teacher.instagram}`}
@@ -67,8 +65,8 @@ const CourseTeacher: React.FC<CourseTeacherProps> = ({ course }) => {
 
                 {teacher.bio && (
                   <div
-                    className="prose prose-gray max-w-none"
-                    // Assicurati di aver già sanitizzato teacher.bio in fase di fetch
+                    className="prose max-w-none text-muted-foreground dark:prose-invert prose-headings:text-foreground prose-strong:text-foreground prose-a:text-primary"
+                    // Assicurati che la bio sia sanificata lato CMS
                     dangerouslySetInnerHTML={{ __html: teacher.bio }}
                   />
                 )}
