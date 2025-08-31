@@ -53,7 +53,9 @@ interface SessionCardProps {
     };
   };
   isNext?: boolean;
-  ctaLabel?: string; // default: SCRIVICI ORA
+  ctaLabel?: string; // default: WHATSAPP
+  /** Mostra/nasconde il bottone "PRENOTA SUBITO" (default: false = nascosto) */
+  showBookingButton?: boolean;
 }
 
 const SessionCard: React.FC<SessionCardProps> = ({
@@ -61,7 +63,8 @@ const SessionCard: React.FC<SessionCardProps> = ({
   tour,
   coach,
   isNext = false,
-  ctaLabel = "SCRIVICI ORA",
+  ctaLabel = "WHATSAPP",
+  showBookingButton = false, // <- nascosto di default
 }) => {
   const safeParse = (d: string) => {
     const x = new Date(d);
@@ -92,7 +95,6 @@ const SessionCard: React.FC<SessionCardProps> = ({
     const e = safeParse(end);
     if (!s || !e) return 0;
     const diffTime = e.getTime() - s.getTime();
-    // +1 per includere entrambi i giorni (coerente con util calcolo durata)
     return Math.max(1, Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1);
   };
 
@@ -100,7 +102,6 @@ const SessionCard: React.FC<SessionCardProps> = ({
 
   const getAvailableSpots = () => {
     const s = norm(session.status);
-    // status che indicano zero posti
     if (["soldout", "sold_out", "closed"].includes(s)) return 0;
     if (["waitinglist", "waiting_list", "waitinglist_open"].includes(s)) return 0;
 
@@ -127,7 +128,6 @@ const SessionCard: React.FC<SessionCardProps> = ({
     ? getTourLink({ slug: tour.slug, states: tour.states || [], places: tour.places || [] })
     : `/viaggi-fotografici/destinazioni/italia/italia/${tour.slug}`;
 
-  // Coach sicuro con avatar assoluto
   const coachAvatarUrl = coach?.avatar?.url
     ? getFullMediaUrl(coach.avatar.url)
     : DEFAULT_COACH_AVATAR;
@@ -187,7 +187,6 @@ const SessionCard: React.FC<SessionCardProps> = ({
         isNext ? "ring-2 ring-primary/50" : ""
       }`}
     >
-      {/* gradient top bar */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/60 via-primary to-primary/60" />
 
       <CardContent className="p-0">
@@ -253,9 +252,13 @@ const SessionCard: React.FC<SessionCardProps> = ({
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {ctaLabel}
                 </Button>
-                <Button asChild variant="outline" className="w-full font-medium py-3" size="lg">
-                  <Link href={tourLink}>SCOPRI VIAGGIO</Link>
-                </Button>
+
+                {/* PRENOTA SUBITO - nascosto per ora */}
+                {showBookingButton && (
+                  <Button asChild variant="outline" className="w-full font-medium py-3" size="lg">
+                    <Link href={tourLink}>PRENOTA SUBITO</Link>
+                  </Button>
+                )}
               </div>
             </div>
           </div>
@@ -263,7 +266,6 @@ const SessionCard: React.FC<SessionCardProps> = ({
           {/* Desktop Layout */}
           <div className="hidden md:flex md:items-start md:justify-between md:gap-6">
             <div className="flex-1">
-              {/* Date Range */}
               <div className="flex items-center gap-2 text-foreground mb-2">
                 <Calendar className="w-5 h-5" />
                 <span className="text-lg font-semibold">
@@ -271,13 +273,11 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 </span>
               </div>
 
-              {/* Duration */}
               <div className="flex items-center gap-2 text-muted-foreground mb-3">
                 <Clock className="w-4 h-4" />
                 <span className="text-sm">{duration} giorni</span>
               </div>
 
-              {/* Coach */}
               <div className="flex items-center gap-3 mb-4">
                 <img
                   src={coachAvatarUrl}
@@ -287,7 +287,6 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 <span className="text-sm text-foreground">{coachName}</span>
               </div>
 
-              {/* Available Spots Badge */}
               <div className="flex items-center gap-2">
                 <Badge
                   className={`rounded-full px-2.5 py-0.5 flex items-center gap-1 ${
@@ -318,9 +317,13 @@ const SessionCard: React.FC<SessionCardProps> = ({
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {ctaLabel}
                 </Button>
-                <Button asChild variant="outline" className="w-full font-medium">
-                  <Link href={tourLink}>SCOPRI VIAGGIO</Link>
-                </Button>
+
+                {/* PRENOTA SUBITO - nascosto per ora */}
+                {showBookingButton && (
+                  <Button asChild variant="outline" className="w-full font-medium">
+                    <Link href={tourLink}>PRENOTA SUBITO</Link>
+                  </Button>
+                )}
               </div>
             </div>
           </div>
