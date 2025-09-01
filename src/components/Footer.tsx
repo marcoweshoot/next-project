@@ -125,11 +125,8 @@ const Footer: React.FC = () => (
           © {currentYear} WeShoot.it. Tutti i diritti riservati - P.IVA IT14945891001
         </p>
         <div className="flex space-x-6 mt-4 md:mt-0">
-          <Link href="/cookie-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
+          <Link href="https://www.iubenda.com/privacy-policy/43774671/cookie-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
             Cookie Policy
-          </Link>
-          <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">
-            Sitemap
           </Link>
         </div>
       </div>

@@ -1,31 +1,39 @@
-// src/components/coaches/CoachCard.tsx
-import React from 'react';
-import Image from 'next/image';
-import { Instagram } from 'lucide-react';
-import type { Coach } from './CoachesList'; // o aggiorna il path dell'interfaccia se diverso
+"use client";
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Instagram } from "lucide-react";
+import type { Coach } from "./CoachesList";
 
-function normalizeInstagramUrl(raw?: string) {
+function normalizeInstagramUrl(raw?: string | null) {
   if (!raw) return undefined;
   let s = raw.trim();
   if (!s) return undefined;
-  if (s.startsWith('@')) s = s.slice(1);
+  if (s.startsWith("@")) s = s.slice(1);
   if (/^[A-Za-z0-9._]+$/.test(s)) return `https://instagram.com/${s}`;
   if (!/^https?:\/\//i.test(s)) return `https://${s}`;
   return s;
 }
 
 export default function CoachCard({ coach }: { coach: Coach }) {
-  const name = [coach.firstName, coach.lastName].filter(Boolean).join(' ') || coach.username;
+  const name =
+    [coach.firstName, coach.lastName].filter(Boolean).join(" ") ||
+    coach.username;
   const initials =
-    (coach.firstName?.[0] || coach.username?.[0] || 'C').toUpperCase() +
-    (coach.lastName?.[0] || '');
+    (coach.firstName?.[0] || coach.username?.[0] || "C").toUpperCase() +
+    (coach.lastName?.[0] || "");
 
   const igUrl = normalizeInstagramUrl(coach.instagram);
+  const href = coach.href || `/fotografi/${coach.slug || coach.username}`;
 
   return (
     <article className="flex flex-col items-center text-center rounded-3xl border bg-card text-card-foreground p-6 shadow-sm">
-      {/* Avatar */}
-      <div className="relative h-40 w-40 overflow-hidden rounded-full ring-4 ring-white dark:ring-white/80">
+      {/* Avatar (cliccabile) */}
+      <Link
+        href={href}
+        className="relative h-40 w-40 overflow-hidden rounded-full ring-4 ring-white dark:ring-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        aria-label={`Apri la pagina di ${name}`}
+      >
         {coach.profilePicture?.url ? (
           <Image
             src={coach.profilePicture.url}
@@ -39,17 +47,24 @@ export default function CoachCard({ coach }: { coach: Coach }) {
             {initials}
           </div>
         )}
-      </div>
+      </Link>
 
-      {/* Nome */}
-      <h3 className="mt-6 text-xl font-bold leading-snug text-foreground">{name}</h3>
+      {/* Nome (cliccabile) */}
+      <h3 className="mt-6 text-xl font-bold leading-snug text-foreground">
+        <Link
+          href={href}
+          className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
+        >
+          {name}
+        </Link>
+      </h3>
 
-      {/* Username (se utile) */}
+      {/* Username */}
       {coach.username && (
         <p className="mt-1 text-sm text-muted-foreground">@{coach.username}</p>
       )}
 
-      {/* Instagram */}
+      {/* Instagram (separato, niente nesting) */}
       {igUrl && (
         <a
           href={igUrl}

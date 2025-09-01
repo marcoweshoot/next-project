@@ -1,19 +1,22 @@
-import Link from 'next/link';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import CoachCard from './CoachCard';
+import Link from "next/link";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import CoachCard from "./CoachCard";
 
 export interface Coach {
   id: string;
-  firstName: string;
-  lastName: string;
   username: string;
+  firstName?: string | null;
+  lastName?: string | null;
+  slug: string;
+  href: string;
   profilePicture?: {
     id: string;
     url: string;
-    alternativeText?: string;
-  };
-  instagram?: string;
+    alternativeText?: string | null;
+  } | null;
+  instagram?: string | null;
+  bio?: string | null;
 }
 
 interface CoachesListProps {
@@ -57,11 +60,20 @@ export default function CoachesList({ coaches, loading }: CoachesListProps) {
 
   return (
     <div className="grid grid-cols-1 gap-8 text-foreground sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      {coaches.map((coach, index) => (
-        <div key={coach.id || `coach-${index}`} className="min-w-0">
-          <CoachCard coach={coach} />
-        </div>
-      ))}
+      {coaches.map((coach, index) => {
+        const base =
+          (coach.id && coach.id !== "undefined" ? coach.id : undefined) ??
+          coach.slug ??
+          coach.username ??
+          "coach";
+        const key = `${base}-${index}`; // ✅ unico anche se due slug uguali
+  
+        return (
+          <div key={key} className="min-w-0">
+            <CoachCard coach={coach} />
+          </div>
+        );
+      })}
     </div>
-  );
+  );  
 }

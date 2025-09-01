@@ -37,7 +37,10 @@ export function middleware(req: NextRequest) {
   return res;
 }
 
-// Escludi asset statici
+// middleware.ts (in fondo)
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+  matcher: [
+    // escludi asset + robots + sitemap (anche gli shard tipo sitemap-0.xml)
+    '/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap\\.xml|sitemap-.*\\.xml).*)',
+  ],
 };
