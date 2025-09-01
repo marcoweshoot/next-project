@@ -18,9 +18,8 @@ interface TourCardCoachesProps {
 const TourCardCoaches: React.FC<TourCardCoachesProps> = ({ sessionCoaches }) => {
   if (!sessionCoaches || sessionCoaches.length === 0) return null;
 
-  const getCoachFullName = (coach: Coach) => {
-    return [coach.firstName, coach.lastName].filter(Boolean).join(' ').trim();
-  };
+  const getCoachFullName = (coach: Coach) =>
+    [coach.firstName, coach.lastName].filter(Boolean).join(' ').trim();
 
   return (
     <div className="flex items-center space-x-3 mb-6 h-12">
@@ -31,20 +30,21 @@ const TourCardCoaches: React.FC<TourCardCoachesProps> = ({ sessionCoaches }) => 
           const initials = coach.firstName?.[0] || '?';
 
           return (
-            <Avatar key={coach.id || index} className="w-10 h-10 border-2 border-white flex-shrink-0">
-              <AvatarImage
-                src={imageUrl}
-                alt={altText}
-              />
-              <AvatarFallback className="bg-gray-300 text-gray-700 font-medium text-xs">
+            <Avatar
+              key={coach.id || index}
+              className="w-10 h-10 border-2 border-white dark:border-neutral-800 flex-shrink-0"
+            >
+              <AvatarImage src={imageUrl} alt={altText} />
+              <AvatarFallback className="bg-gray-300 text-gray-700 dark:bg-neutral-700 dark:text-neutral-200 font-medium text-xs">
                 {initials}
               </AvatarFallback>
             </Avatar>
           );
         })}
+
         {sessionCoaches.length > 3 && (
-          <Avatar className="w-10 h-10 border-2 border-white flex-shrink-0">
-            <AvatarFallback className="bg-gray-300 text-gray-700 font-medium text-xs">
+          <Avatar className="w-10 h-10 border-2 border-white dark:border-neutral-800 flex-shrink-0">
+            <AvatarFallback className="bg-gray-300 text-gray-700 dark:bg-neutral-700 dark:text-neutral-200 font-medium text-xs">
               +{sessionCoaches.length - 3}
             </AvatarFallback>
           </Avatar>
@@ -52,7 +52,8 @@ const TourCardCoaches: React.FC<TourCardCoachesProps> = ({ sessionCoaches }) => 
       </div>
 
       <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium text-gray-900 truncate">
+        {/* 👇 adesso è leggibile anche in dark */}
+        <p className="text-sm font-medium text-gray-900 dark:text-gray-100 truncate">
           {sessionCoaches.map(getCoachFullName).filter(Boolean).join(', ') || 'Coach WeShoot'}
         </p>
       </div>

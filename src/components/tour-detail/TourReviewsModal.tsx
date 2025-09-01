@@ -74,7 +74,7 @@ const SingleReviewCard: React.FC<{ review: TourReviewsModalProps['reviews'][0] }
           </div>
         </div>
 
-        <p className="text-sm leading-relaxed mb-4 text-muted-foreground">
+        <p className="text-sm leading-relaxed mb-4 text-muted-foreground break-words">
           {review.description}
         </p>
 
@@ -99,7 +99,7 @@ const TourReviewsModal: React.FC<TourReviewsModalProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden bg-background text-foreground border border-border">
+      <DialogContent className="max-w-4xl max-h-[90svh] sm:max-h-[85vh] overflow-y-auto bg-background text-foreground border border-border">
         <DialogHeader>
           <DialogTitle className="text-center text-2xl font-bold text-foreground">
             {title} {hasReviews && `(${reviews.length})`}
@@ -114,7 +114,7 @@ const TourReviewsModal: React.FC<TourReviewsModalProps> = ({
           )}
         </DialogHeader>
 
-        <ScrollArea className="max-h-[70vh] pr-4 pb-6 mt-4">
+        <ScrollArea className="pr-4 pb-6 mt-4">
           {hasReviews ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pr-2">
               {reviews.map((review) => (

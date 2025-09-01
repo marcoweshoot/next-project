@@ -102,7 +102,7 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
             </div>
           </div>
 
-          <p className="text-sm leading-relaxed whitespace-pre-wrap mb-2 text-muted-foreground">
+          <p className="text-sm leading-relaxed whitespace-pre-wrap break-words mb-2 text-muted-foreground">
             {truncated}
           </p>
 
@@ -121,8 +121,16 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
         </CardContent>
       </Card>
 
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-xl">
+      <Dialog open={open} onOpenChange={setOpen} modal={false}>
+        <DialogContent
+          onOpenAutoFocus={(e) => e.preventDefault()}
+          className="
+            w-[min(100vw-1.5rem,42rem)]
+            max-h-[90svh] sm:max-h-[85vh]
+            overflow-y-auto
+            bg-background text-foreground
+          "
+        >
           <DialogTitle className="text-lg font-semibold text-foreground mb-2">
             Recensione di {name}
           </DialogTitle>
@@ -131,7 +139,7 @@ const SingleReviewCard: React.FC<{ review: TourReviewsProps['reviews'][0] }> = (
             Valutazione: {review.rating}/5{dateLabel ? ` · ${dateLabel}` : ''}
           </DialogDescription>
 
-          <p className="text-sm text-foreground whitespace-pre-wrap">{text}</p>
+          <p className="text-sm text-foreground whitespace-pre-wrap break-words">{text}</p>
         </DialogContent>
       </Dialog>
     </>
