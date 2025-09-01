@@ -13,34 +13,30 @@ import type { Tour } from '@/types';
 const TOURS_PER_PAGE = 6;
 
 /** Deduplica per slug (fallback su id) */
+/** Deduplica per slug (fallback su id, poi indice) */
 function dedupeTours(list: Tour[]) {
   if (!Array.isArray(list)) return [];
-  
+
   const seen = new Set<string>();
   const out: Tour[] = [];
-  
-  for (const t of list) {
-    if (!t || typeof t !== 'object') continue;
-    
-    // Genera una chiave stabile e sicura
-    let key: string;
-    if ((t as any).slug && typeof (t as any).slug === 'string') {
-      key = (t as any).slug;
-    } else if ((t as any).id !== undefined && (t as any).id !== null) {
-      key = `id-${String((t as any).id)}`;
-    } else {
-      // Fallback con timestamp + indice per evitare collisioni
-      key = `fallback-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-    }
-    
+
+  for (let i = 0; i < list.length; i++) {
+    const t = list[i];
+    if (!t || typeof t !== "object") continue;
+
+    // 👇 chiave stabile: id → slug → indice
+    const keyBase = (t as any).id ?? (t as any).slug ?? `i-${i}`;
+    const key = String(keyBase);
+
     if (!seen.has(key)) {
       seen.add(key);
       out.push(t);
     }
   }
-  
+
   return out;
 }
+
 
 async function fetchMore(start: number) {
   const data = await request<{ tours: any[] }>(

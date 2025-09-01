@@ -24,7 +24,7 @@ interface ReviewsListProps {
 export default function ReviewsList({ reviews }: ReviewsListProps) {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('it-IT', { day: 'numeric', month: 'short', year: 'numeric' });
+    return date.toLocaleDateString('it-IT', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Europe/Rome' });
   };
 
   const renderStars = (rating: number) => {

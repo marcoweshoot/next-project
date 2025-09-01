@@ -61,6 +61,7 @@ export default async function ReviewPage({ params }: PageProps) {
       day: 'numeric',
       month: 'short',
       year: 'numeric',
+      timeZone: 'Europe/Rome',
     });
 
   const renderStars = (rating: number) => (

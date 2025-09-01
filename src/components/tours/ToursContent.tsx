@@ -66,13 +66,13 @@ const ToursContent: React.FC<ToursContentProps> = ({
   )}`;
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-background transition-colors">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {searchTerm ? `Risultati per "${searchTerm}"` : 'I Nostri Viaggi Fotografici'}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {searchTerm
               ? countLine
               : "Ogni viaggio è un'opportunità unica per migliorare le tue competenze fotografiche esplorando alcune delle destinazioni più spettacolari del mondo."}
