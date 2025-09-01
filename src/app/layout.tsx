@@ -5,7 +5,6 @@ import { Montserrat } from 'next/font/google';
 import ClientProviders from '@/components/providers/ClientProviders';
 import { ToastStateProvider } from '@/components/ui/toast-provider';
 import { Toaster } from '@/components/ui/toaster';
-
 // Usa la CSS variable così font-sans del tema funziona ovunque
 const montserrat = Montserrat({
   subsets: ['latin'],

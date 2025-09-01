@@ -53,7 +53,7 @@ const GallerySection: React.FC<GallerySectionProps> = ({ pictures = [], loading 
         {/* Bottone + Lightbox (controllata da questo componente) */}
         <div className="mt-12 text-center">
           <GalleryLightboxClient
-            pictures={safePictures}
+            pictures={allProcessed}
             allImagesCount={allProcessed.length}
             startIndex={lbIndex}
             isOpen={lbOpen}

@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import GalleryLightbox from '../GalleryLightbox';
+import { processGalleryImages } from '@/utils/TourDataUtilis';
 
 export type GalleryLightboxClientProps = {
   pictures: any[];
@@ -26,29 +27,27 @@ const GalleryLightboxClient: React.FC<GalleryLightboxClientProps> = ({
   const setOpen = onOpenChange ?? setInternalOpen;
 
   const [currentIndex, setCurrentIndex] = useState(startIndex);
-  useEffect(() => { setCurrentIndex(startIndex); }, [startIndex]);
+  useEffect(() => {
+    setCurrentIndex(startIndex);
+  }, [startIndex]);
 
-  const handleOpen = (index: number = 0) => { setCurrentIndex(index); setOpen(true); };
+  const handleOpen = (index: number = 0) => {
+    setCurrentIndex(index);
+    setOpen(true);
+  };
   const handleClose = () => setOpen(false);
 
+  // ✅ Usa lo stesso normalizzatore della griglia: accetta sia picture.url che image?.[0]?.url
   const processedPictures = useMemo(() => {
-    return pictures
-      .filter((pic) =>
-        Array.isArray(pic.image) ? pic.image.length > 0 : Boolean(pic.image)
-      )
-      .map((pic, i) => {
-        const imagesArray = Array.isArray(pic.image) ? pic.image : [pic.image];
-        const rawImage = imagesArray[0] ?? {};
-        const thumbnailUrl = rawImage?.formats?.thumbnail?.url;
-        const largeUrl = rawImage?.formats?.large?.url;
-        return {
-          id: pic.id || `pic-${i}`,
-          title: pic.title ?? rawImage?.alternativeText ?? '',
-          url: largeUrl || thumbnailUrl || rawImage?.url || '',
-          alt: rawImage?.alternativeText ?? pic.title ?? '',
-        };
-      })
-      .map((flatImg) => [flatImg]); // mantiene la firma attesa dalla Lightbox
+    const flat = processGalleryImages(pictures); // => { id, title, url, alt }[]
+    return flat.map((img, i) => [
+      {
+        id: img.id ?? `pic-${i}`,
+        title: img.title ?? '',
+        url: img.url,
+        alt: img.alt ?? img.title ?? 'Immagine galleria',
+      },
+    ]);
   }, [pictures]);
 
   return (
@@ -58,6 +57,7 @@ const GalleryLightboxClient: React.FC<GalleryLightboxClientProps> = ({
         size="lg"
         onClick={() => handleOpen(0)}
         aria-label={`Apri galleria completa con ${allImagesCount} foto`}
+        disabled={processedPictures.length === 0}
       >
         {allImagesCount === 1 ? 'Vedi la foto' : `Vedi tutte le ${allImagesCount} foto`}
       </Button>

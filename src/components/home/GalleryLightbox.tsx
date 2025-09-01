@@ -1,24 +1,18 @@
 'use client';
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { useSwipeable } from 'react-swipeable';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, X, Play, Pause } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
 interface GalleryLightboxProps {
   isOpen: boolean;
-  /** chiamato da Radix sia per aprire che per chiudere */
-  onOpenChange: (open: boolean) => void;
-  /** chiamato solo dal pulsante “X” */
-  onClose: () => void;
-  pictures: {
-    id: string;
-    title?: string;
-    url: string;
-    alt?: string;
-  }[][];
+  onOpenChange: (open: boolean) => void; // Radix open/close
+  onClose: () => void;                   // ESC o bottone custom
+  pictures: { id: string; title?: string; url: string; alt?: string }[][];
   startIndex: number;
+  dialogTitle?: string;
 }
 
 const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
@@ -27,32 +21,32 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
   onClose,
   pictures,
   startIndex,
+  dialogTitle,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(startIndex);
-  const [autoplay, setAutoplay] = useState(false);
 
-  // Flatten and map images
+  // Flatten immagini
   const allImages = useMemo(
     () =>
-      pictures.flatMap((picture) =>
-        picture.map((img) => ({
+      pictures.flatMap((group) =>
+        group.map((img) => ({
           id: img.id,
-          title: img.title,
+          title: img.title ?? '',
           url: img.url,
-          alt: img.alt,
+          alt: img.alt ?? img.title ?? '',
         })),
       ),
-    [pictures],
+    [pictures]
   );
 
   const total = allImages.length;
 
   const handleNext = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % total);
+    setCurrentIndex((p) => (p + 1) % Math.max(total, 1));
   }, [total]);
 
   const handlePrev = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + total) % total);
+    setCurrentIndex((p) => (p - 1 + Math.max(total, 1)) % Math.max(total, 1));
   }, [total]);
 
   const handleKeyDown = useCallback(
@@ -61,124 +55,93 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
       if (e.key === 'ArrowLeft') handlePrev();
       if (e.key === 'Escape') onClose();
     },
-    [handleNext, handlePrev, onClose],
+    [handleNext, handlePrev, onClose]
   );
 
-  // Clamp dell'indice quando si apre o cambiano input/numero immagini
+  // Allinea l'indice quando si apre/cambia lista
   useEffect(() => {
     if (!isOpen) return;
-    if (total === 0) {
-      setCurrentIndex(0);
-      return;
-    }
-    const next = Math.min(Math.max(0, startIndex), total - 1);
-    setCurrentIndex(next);
+    if (!total) return setCurrentIndex(0);
+    setCurrentIndex(Math.min(Math.max(0, startIndex), total - 1));
   }, [isOpen, startIndex, total]);
-
-  // Autoplay
-  useEffect(() => {
-    if (!autoplay || !isOpen) return;
-    const interval = setInterval(handleNext, 4000);
-    return () => clearInterval(interval);
-  }, [autoplay, handleNext, isOpen]);
-
-  // Stop autoplay alla chiusura
-  useEffect(() => {
-    if (!isOpen && autoplay) setAutoplay(false);
-  }, [isOpen, autoplay]);
-
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: handleNext,
-    onSwipedRight: handlePrev,
-    trackMouse: true,
-  });
 
   if (!total) return null;
 
   const currentImage = allImages[currentIndex];
-  const altText = currentImage?.alt || currentImage?.title || 'Immagine galleria';
+  const altText = currentImage.alt || currentImage.title || 'Immagine galleria';
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent
-        className="max-w-[95vw] max-h-[95vh] p-0 border-none bg-black/90 dark:bg-black/95 focus:outline-none"
+        className="w-[95vw] h-[95vh] max-w-none p-0 bg-black/90 overflow-hidden"
         onKeyDown={handleKeyDown}
-        tabIndex={0}
-        autoFocus
-        role="dialog"
-        aria-label="Galleria immagini a tutto schermo"
       >
-        <div className="relative flex h-full w-full items-center justify-center">
-          {/* Close button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={onClose}
-            className="absolute right-4 top-4 z-10 text-primary-foreground hover:bg-primary-foreground/20 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-            aria-label="Chiudi galleria"
-          >
-            <X className="h-6 w-6" />
-          </Button>
+        {/* Titolo A11y nascosto: elimina il warning */}
+        <VisuallyHidden>
+  <DialogTitle>{dialogTitle || currentImage?.title || 'Galleria immagini'}</DialogTitle>
+  <DialogDescription>
+    Immagine {currentIndex + 1} di {total}. Usa ←/→ per navigare, Esc per chiudere.
+  </DialogDescription>
+</VisuallyHidden>
 
-          {/* Autoplay */}
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setAutoplay((prev) => !prev)}
-            className="absolute left-4 top-4 z-10 text-primary-foreground hover:bg-primary-foreground/20 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-            aria-label={autoplay ? 'Ferma autoplay' : 'Avvia autoplay'}
-          >
-            {autoplay ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
-          </Button>
 
-          {/* Navigation Arrows */}
-          {total > 1 && (
-            <>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={handlePrev}
-                className="absolute left-4 top-1/2 z-10 -translate-y-1/2 text-primary-foreground hover:bg-primary-foreground/20 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-                aria-label="Immagine precedente"
-              >
-                <ChevronLeft className="h-8 w-8" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={handleNext}
-                className="absolute right-4 top-1/2 z-10 -translate-y-1/2 text-primary-foreground hover:bg-primary-foreground/20 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-                aria-label="Immagine successiva"
-              >
-                <ChevronRight className="h-8 w-8" />
-              </Button>
-            </>
-          )}
+        {/* X custom, sempre visibile */}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onClose}
+          className="absolute right-4 top-4 z-20 text-white/90 hover:bg-white/10"
+          aria-label="Chiudi galleria"
+        >
+          <X className="h-6 w-6" />
+        </Button>
 
-          {/* Current Image */}
-          <div {...swipeHandlers} className="relative max-h-full max-w-full touch-pan-x p-8">
-            <img
-              src={currentImage.url}
-              alt={altText}
-              loading="lazy"
-              className="max-h-full max-w-full object-contain transition-transform duration-300"
-              onError={(e) => {
-                e.currentTarget.src =
-                  'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/viaggi-fotografici-e-workshop.avif';
-              }}
-            />
+        {/* Frecce */}
+        {total > 1 && (
+          <>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handlePrev}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-white/90 hover:bg-white/10"
+              aria-label="Immagine precedente"
+            >
+              <ChevronLeft className="h-8 w-8" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-white/90 hover:bg-white/10"
+              aria-label="Immagine successiva"
+            >
+              <ChevronRight className="h-8 w-8" />
+            </Button>
+          </>
+        )}
 
-            {/* Caption */}
-            <div className="absolute bottom-0 left-0 right-0 bg-black/75 px-4 py-3 text-center">
-              <p className="text-base text-primary-foreground">
-                {currentImage.title || ' '}
-              </p>
-            </div>
+        {/* Area immagine: riempie tutto e centra, l'immagine NON esce mai */}
+        <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-8">
+          <img
+            src={currentImage.url}
+            alt={altText}
+            loading="lazy"
+            className="max-h-full max-w-full object-contain select-none"
+            draggable={false}
+            onError={(e) => {
+              e.currentTarget.src =
+                'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/viaggi-fotografici-e-workshop.avif';
+            }}
+          />
+
+          {/* Caption sovrapposta (non spinge fuori l'immagine) */}
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 bg-black/70 px-4 py-3 text-center">
+            <p className="text-base text-white">{currentImage.title || ' '}</p>
           </div>
 
-          {/* Counter */}
+          {/* Counter in alto */}
           {total > 1 && (
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-sm text-primary-foreground">
+            <div className="pointer-events-none absolute top-3 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-sm text-white z-20">
               {currentIndex + 1} / {total}
             </div>
           )}

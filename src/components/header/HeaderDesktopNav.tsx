@@ -28,7 +28,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
   const linkColor = isScrolled ? 'text-foreground' : 'text-primary-foreground';
 
   return (
-    <nav className="hidden items-center space-x-6 xl:space-x-8 lg:flex">
+    <nav className="hidden lg:flex items-center flex-nowrap gap-x-4 xl:gap-x-8">
       {/* Viaggi Fotografici */}
       <div className="group/drop relative">
         <button
@@ -137,7 +137,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
       <div className="flex items-center">
         <Button
           asChild
-          className="bg-primary text-primary-foreground hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="bg-red-600 text-primary-foreground hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           <Link href="/viaggi-fotografici/" prefetch={false}>
             Scopri i Viaggi
