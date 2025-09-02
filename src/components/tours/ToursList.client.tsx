@@ -1,7 +1,7 @@
 // app/viaggi-fotografici/ToursList.client.tsx
 'use client';
 
-import { useCallback, useDeferredValue, useEffect, useRef, useState } from 'react';
+import { useCallback, useDeferredValue, useEffect, useRef, useState, useTransition } from 'react';
 import ToursHero from '@/components/tours/ToursHero';
 import ToursContent from '@/components/tours/ToursContent';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
@@ -12,31 +12,23 @@ import type { Tour } from '@/types';
 
 const TOURS_PER_PAGE = 6;
 
-/** Deduplica per slug (fallback su id) */
 /** Deduplica per slug (fallback su id, poi indice) */
 function dedupeTours(list: Tour[]) {
   if (!Array.isArray(list)) return [];
-
   const seen = new Set<string>();
   const out: Tour[] = [];
-
   for (let i = 0; i < list.length; i++) {
     const t = list[i];
-    if (!t || typeof t !== "object") continue;
-
-    // 👇 chiave stabile: id → slug → indice
+    if (!t || typeof t !== 'object') continue;
     const keyBase = (t as any).id ?? (t as any).slug ?? `i-${i}`;
     const key = String(keyBase);
-
     if (!seen.has(key)) {
       seen.add(key);
       out.push(t);
     }
   }
-
   return out;
 }
-
 
 async function fetchMore(start: number) {
   const data = await request<{ tours: any[] }>(
@@ -47,11 +39,12 @@ async function fetchMore(start: number) {
   return transformTours(data.tours) as Tour[];
 }
 
-async function searchApi(q: string, offset = 0, limit = TOURS_PER_PAGE) {
-  const res = await fetch(`/api/search?q=${encodeURIComponent(q)}&offset=${offset}&limit=${limit}`, {
-    method: 'GET',
-    cache: 'no-store',
-  });
+// Supporto AbortSignal
+async function searchApi(q: string, offset = 0, limit = TOURS_PER_PAGE, signal?: AbortSignal) {
+  const res = await fetch(
+    `/api/search?q=${encodeURIComponent(q)}&offset=${offset}&limit=${limit}`,
+    { method: 'GET', cache: 'no-store', signal }
+  );
   if (!res.ok) throw new Error('Search API error');
   return (await res.json()) as { tours: Tour[]; hasMore: boolean; total?: number };
 }
@@ -73,33 +66,79 @@ export default function ToursList({
   const deferredSearch = useDeferredValue(searchTerm);
   const [searchTours, setSearchTours] = useState<Tour[] | null>(null);
   const [searchHasMore, setSearchHasMore] = useState(false);
+  // 🔁 contatore richieste attive per evitare "loading infinito"
+  const searchActiveCountRef = useRef(0);
   const [searchLoading, setSearchLoading] = useState(false);
   const [searchLoadingMore, setSearchLoadingMore] = useState(false);
 
+  const [isPending, startTransition] = useTransition();
+  const searchAbortRef = useRef<AbortController | null>(null);
+  const loadMoreAbortRef = useRef<AbortController | null>(null);
+  const querySeqRef = useRef(0); // id sequenziale della query corrente
+
   // àncora results per scroll
   const resultsRef = useRef<HTMLElement | null>(null);
+
+  // 🔥 Warm-up dell’endpoint (cold start)
+  useEffect(() => {
+    const ctrl = new AbortController();
+    fetch(`/api/search?q=__warmup&limit=1`, { signal: ctrl.signal, cache: 'no-store' }).catch(() => {});
+    return () => ctrl.abort();
+  }, []);
 
   // esegue la ricerca su /api/search (prima pagina)
   const runSearch = useCallback(
     async (q: string) => {
       const term = q.trim();
+
+      // Cancella eventuale richiesta precedente
+      if (searchAbortRef.current) {
+        searchAbortRef.current.abort();
+      }
+
       if (!term) {
-        setSearchTours(null);
-        setSearchHasMore(false);
-        setSearchLoading(false);
+        // reset ricerca
+        startTransition(() => {
+          setSearchTours(null);
+          setSearchHasMore(false);
+          setSearchLoading(false);
+        });
         return;
       }
+
+      const seq = ++querySeqRef.current;
+      const controller = new AbortController();
+      searchAbortRef.current = controller;
+
+      // gestione contatore loading
+      searchActiveCountRef.current += 1;
       setSearchLoading(true);
+
       try {
-        const { tours, hasMore } = await searchApi(term, 0, TOURS_PER_PAGE);
-        setSearchTours(dedupeTours(tours));
-        setSearchHasMore(hasMore);
+        const { tours, hasMore } = await searchApi(term, 0, TOURS_PER_PAGE, controller.signal);
+
+        // ignora risposte vecchie o abortite
+        if (seq !== querySeqRef.current || controller.signal.aborted) return;
+
+        startTransition(() => {
+          setSearchTours(dedupeTours(tours));
+          setSearchHasMore(hasMore);
+        });
       } catch (e) {
-        console.error(e);
-        setSearchTours([]);
-        setSearchHasMore(false);
+        if ((e as any)?.name !== 'AbortError') {
+          console.error(e);
+          // mostriamo risultato vuoto solo se è la query corrente
+          if (seq === querySeqRef.current) {
+            startTransition(() => {
+              setSearchTours([]);
+              setSearchHasMore(false);
+            });
+          }
+        }
       } finally {
-        setSearchLoading(false);
+        // decrementa contatore e aggiorna stato loading
+        searchActiveCountRef.current = Math.max(0, searchActiveCountRef.current - 1);
+        if (searchActiveCountRef.current === 0) setSearchLoading(false);
       }
     },
     []
@@ -110,15 +149,32 @@ export default function ToursList({
     // ---- ricerca attiva ----
     if (searchTours) {
       if (!searchHasMore || searchLoadingMore) return;
+
+      // Cancella eventuale "load more" precedente in ricerca
+      if (loadMoreAbortRef.current) {
+        loadMoreAbortRef.current.abort();
+      }
+      const controller = new AbortController();
+      loadMoreAbortRef.current = controller;
+
       setSearchLoadingMore(true);
       try {
-        const { tours, hasMore } = await searchApi(deferredSearch, searchTours.length, TOURS_PER_PAGE);
-        setSearchTours(prev =>
-          prev ? dedupeTours([...prev, ...tours]) : dedupeTours(tours)
+        const { tours, hasMore } = await searchApi(
+          deferredSearch,
+          searchTours.length,
+          TOURS_PER_PAGE,
+          controller.signal
         );
-        setSearchHasMore(hasMore);
+        if (controller.signal.aborted) return;
+
+        startTransition(() => {
+          setSearchTours(prev => (prev ? dedupeTours([...prev, ...tours]) : dedupeTours(tours)));
+          setSearchHasMore(hasMore);
+        });
       } catch (e) {
-        console.error(e);
+        if ((e as any)?.name !== 'AbortError') {
+          console.error(e);
+        }
       } finally {
         setSearchLoadingMore(false);
       }
@@ -131,8 +187,10 @@ export default function ToursList({
     try {
       const page = await fetchMore(browseTours.length);
       const next = dedupeTours([...browseTours, ...page]);
-      setBrowseTours(next);
-      setBrowseHasMore(page.length === TOURS_PER_PAGE);
+      startTransition(() => {
+        setBrowseTours(next);
+        setBrowseHasMore(page.length === TOURS_PER_PAGE);
+      });
     } finally {
       setBrowseLoadingMore(false);
     }
@@ -156,21 +214,36 @@ export default function ToursList({
   // quando si cancella la ricerca (input vuoto), torna alla modalità sfoglia
   useEffect(() => {
     if (deferredSearch.trim() === '' && searchTours) {
-      setSearchTours(null);
-      setSearchHasMore(false);
+      // annulla fetch pendenti della ricerca
+      if (searchAbortRef.current) searchAbortRef.current.abort();
+      if (loadMoreAbortRef.current) loadMoreAbortRef.current.abort();
+
+      // azzera contatore e stato
+      searchActiveCountRef.current = 0;
+      startTransition(() => {
+        setSearchTours(null);
+        setSearchHasMore(false);
+        setSearchLoading(false);
+      });
     }
   }, [deferredSearch, searchTours]);
 
-  // Ottimizzazione: ricerca automatica solo dopo un delay
+  // ⏱️ RIMOSSO il debounce extra: parte subito quando cambia deferredSearch
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      if (deferredSearch.trim()) {
-        runSearch(deferredSearch);
-      }
-    }, 300); // 300ms delay
+    if (deferredSearch.trim()) {
+      runSearch(deferredSearch);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deferredSearch]);
 
-    return () => clearTimeout(timeoutId);
-  }, [deferredSearch, runSearch]);
+  // pulizia: aborta richieste quando il componente si smonta
+  useEffect(() => {
+    return () => {
+      if (searchAbortRef.current) searchAbortRef.current.abort();
+      if (loadMoreAbortRef.current) loadMoreAbortRef.current.abort();
+      searchActiveCountRef.current = 0;
+    };
+  }, []);
 
   const visibleTours = searchTours ?? browseTours;
   const loading = searchLoading;
@@ -186,14 +259,14 @@ export default function ToursList({
         resultsRef={resultsRef}
         resultsOffsetPx={96}
         onSubmitSearch={async () => {
-          // Ricerca immediata solo su submit esplicito
+          // Ricerca immediata su submit
           await runSearch(searchTerm);
         }}
       />
 
       <section id="tours-list" ref={resultsRef} className="scroll-mt-24">
         <ToursContent
-          tours={visibleTours}   // 👉 niente filtro interno
+          tours={visibleTours}
           loading={loading}
           loadingMore={loadingMore}
           error={null}

@@ -60,7 +60,7 @@ export default async function DestinationsPage() {
       <Header />
       <DestinationsHero />
 
-      <section className="py-16">
+      <section id="contenuti" className="-mt-2 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {error ? (
             <div className="text-center py-12">

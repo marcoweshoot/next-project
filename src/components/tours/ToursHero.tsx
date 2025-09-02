@@ -12,7 +12,7 @@ interface ToursHeroProps {
   resultsRef?: React.RefObject<HTMLElement>;
   resultsOffsetPx?: number;
   resultsId?: string;
-  onSubmitSearch?: () => Promise<void> | void; // ✅ nuovo
+  onSubmitSearch?: () => Promise<void> | void;
 }
 
 const ToursHero: React.FC<ToursHeroProps> = ({
@@ -32,7 +32,7 @@ const ToursHero: React.FC<ToursHeroProps> = ({
   const videoUrl =
     'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/videos/weshoot-viaggi-fotografici-destinazioni.mp4';
 
-  // Debouncing interno per evitare chiamate eccessive
+  // Debounce per input
   const [localSearchTerm, setLocalSearchTerm] = useState(searchTerm);
   const debounceRef = useRef<NodeJS.Timeout>();
 
@@ -45,58 +45,48 @@ const ToursHero: React.FC<ToursHeroProps> = ({
     window.scrollTo({ top, behavior: 'smooth' });
   }, [resultsRef, resultsId, resultsOffsetPx]);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // 1) se previsto, carica più pagine finché trovi risultati
-    if (onSubmitSearch) await onSubmitSearch();
-    // 2) poi scrolla ai risultati
-    requestAnimationFrame(scrollToResults);
-  }, [onSubmitSearch, scrollToResults]);
-
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setLocalSearchTerm(value); // Aggiorna immediatamente l'input locale
-    
-    // Debounce la chiamata al parent
-    if (debounceRef.current) {
-      clearTimeout(debounceRef.current);
-    }
-    
-    debounceRef.current = setTimeout(() => {
-      onSearchChange(value);
-    }, 150); // 150ms di debounce
-  }, [onSearchChange]);
-
-  const handleKeyDown = useCallback(async (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      // Cancella il debounce e chiama immediatamente
-      if (debounceRef.current) {
-        clearTimeout(debounceRef.current);
-      }
-      onSearchChange(localSearchTerm);
       if (onSubmitSearch) await onSubmitSearch();
-      scrollToResults();
-    }
-  }, [onSubmitSearch, scrollToResults, localSearchTerm, onSearchChange]);
+      requestAnimationFrame(scrollToResults);
+    },
+    [onSubmitSearch, scrollToResults]
+  );
 
-  // Cleanup del timeout quando il componente si smonta
-  useEffect(() => {
-    return () => {
-      if (debounceRef.current) {
-        clearTimeout(debounceRef.current);
+  const handleInputChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const value = e.target.value;
+      setLocalSearchTerm(value);
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+      debounceRef.current = setTimeout(() => onSearchChange(value), 150);
+    },
+    [onSearchChange]
+  );
+
+  const handleKeyDown = useCallback(
+    async (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        if (debounceRef.current) clearTimeout(debounceRef.current);
+        onSearchChange(localSearchTerm);
+        if (onSubmitSearch) await onSubmitSearch();
+        scrollToResults();
       }
-    };
-  }, []);
+    },
+    [onSubmitSearch, scrollToResults, localSearchTerm, onSearchChange]
+  );
 
-  // Sincronizza localSearchTerm con searchTerm dal parent
-  useEffect(() => {
-    setLocalSearchTerm(searchTerm);
-  }, [searchTerm]);
+  useEffect(() => () => debounceRef.current && clearTimeout(debounceRef.current), []);
+  useEffect(() => setLocalSearchTerm(searchTerm), [searchTerm]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
+    <section
+      // 3 righe: [spazio elastico] [CONTENUTO CENTRALE] [spazio elastico]
+      className="relative min-h-[88svh] md:min-h-[92svh] grid grid-rows-[1fr_auto_1fr] overflow-hidden pb-[env(safe-area-inset-bottom)]"
+      aria-label="Tours Hero"
+    >
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60 z-10" />
         <video
@@ -104,31 +94,34 @@ const ToursHero: React.FC<ToursHeroProps> = ({
           muted
           loop
           playsInline
-          poster="https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//photo-1469474968028-56623f02e42e.avif"
+          poster={
+            heroImage?.url ??
+            'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//photo-1469474968028-56623f02e42e.avif'
+          }
           className="w-full h-full object-cover"
         >
           <source src={videoUrl} type="video/mp4" />
         </video>
       </div>
 
-      {/* Content */}
-      <div className="relative z-20 container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg text-white">
+      {/* Riga centrale: TITOLO + TESTO + SEARCH + BREADCRUMBS + QUICK STATS */}
+      <div className="relative z-20 row-start-2 w-full">
+        <div className="container mx-auto px-4 text-center flex flex-col items-center gap-6 md:gap-8">
+          <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg text-white">
             Viaggi Fotografici
           </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 drop-shadow-md text-white">
-          Esplora il mondo attraverso l&apos;obiettivo della tua fotocamera.
-          Destinazioni mozzafiato, coach esperti e piccoli gruppi per un&apos;esperienza unica.
-        </p>
+
+          <p className="text-lg md:text-2xl max-w-3xl mx-auto opacity-90 drop-shadow-md text-white">
+            Esplora il mondo attraverso l&apos;obiettivo della tua fotocamera. Destinazioni
+            mozzafiato, coach esperti e piccoli gruppi per un&apos;esperienza unica.
+          </p>
 
           {/* Search Field */}
-          <div className="max-w-lg mx-auto mb-8">
+          <div className="w-full max-w-lg">
             <form onSubmit={handleSubmit} className="relative">
               <label htmlFor="tour-search" className="sr-only">
                 Cerca destinazione o tour
               </label>
-
               <button
                 type="submit"
                 aria-label="Cerca"
@@ -137,7 +130,6 @@ const ToursHero: React.FC<ToursHeroProps> = ({
               >
                 <Search className="w-5 h-5 text-gray-500" />
               </button>
-
               <Input
                 id="tour-search"
                 type="search"
@@ -152,33 +144,41 @@ const ToursHero: React.FC<ToursHeroProps> = ({
           </div>
 
           {/* Breadcrumbs */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center">
             <PageBreadcrumbs elements={breadcrumbElements} />
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-2xl w-full">
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg py-3 px-4">
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-5 h-5 text-white" />
               <span className="drop-shadow text-white">Destinazioni Uniche</span>
             </div>
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg py-3 px-4">
-              <Users className="w-5 h-5" />
+              <Users className="w-5 h-5 text-white" />
               <span className="drop-shadow text-white">Piccoli Gruppi</span>
             </div>
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg py-3 px-4">
-              <Star className="w-5 h-5" />
+              <Star className="w-5 h-5 text-white" />
               <span className="drop-shadow text-white">Coach Esperti</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
-        </div>
+      {/* Scroll indicator centrato + cliccabile */}
+      <div className="absolute inset-x-0 bottom-3 z-20 flex justify-center pb-[env(safe-area-inset-bottom)]">
+        <button
+          type="button"
+          onClick={scrollToResults}
+          aria-label="Scorri per vedere i risultati"
+          className="flex flex-col items-center"
+        >
+          <span className="text-[10px] tracking-wide uppercase text-white/90">Scorri</span>
+          <div className="mt-1 w-6 h-10 border-2 border-white rounded-full flex justify-center items-start">
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce" />
+          </div>
+        </button>
       </div>
     </section>
   );

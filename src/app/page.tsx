@@ -108,7 +108,9 @@ const HomePage = async () => {
       <main>
         <HeroVideoSection />
 
+      <section id="contenuti" className="-mt-2">
         <CollectionSection collections={collections} loading={false} />
+      </section>
 
         <ToursSection homePageTours={homePageTours} />
 

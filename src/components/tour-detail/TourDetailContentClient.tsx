@@ -44,7 +44,7 @@ export default function TourDetailContentClient({
   };
 
   const openWhatsApp = (tourData: any) => {
-    const phone = '+393331234567';
+    const phone = '+393495269093';
     const message = `Ciao! Vorrei avere informazioni sul tour: ${tourData?.title || ''}`;
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
   };
