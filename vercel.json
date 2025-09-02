@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/blog/:path*",
+      "destination": "https://blog.weshoot.it/:path*",
+      "permanent": true
+    }
+  ]
+}
