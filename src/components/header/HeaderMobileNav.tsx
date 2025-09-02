@@ -124,7 +124,7 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
         </Link>
 
         <a
-          href="https://www.weshoot.it/blog"
+          href="https://blog.weshoot.it/"
           target="_blank"
           rel="noopener noreferrer"
           className="block rounded-md px-3 py-2 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target tap-highlight-none"

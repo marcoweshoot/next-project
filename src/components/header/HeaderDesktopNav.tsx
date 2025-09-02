@@ -116,7 +116,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
       </Link>
 
       <a
-        href="https://www.weshoot.it/blog"
+        href="https://blog.weshoot.it/"
         target="_blank"
         rel="noopener noreferrer"
         className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor}`}
