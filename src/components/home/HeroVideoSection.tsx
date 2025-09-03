@@ -1,6 +1,8 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { CameraIcon } from "@/components/icons/CameraIcon";
 import { MapPinIcon } from "@/components/icons/MapPinIcon";
@@ -21,40 +23,87 @@ const HeroVideoSection: React.FC = () => {
     { icon: <StarIcon />, label: "Recensioni 5 Stelle", value: "99%" },
   ];
 
+  // --- Fallback autoplay robusto ---
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+
+    // requisiti per autoplay mobile/safari
+    v.muted = true;
+    v.playsInline = true;
+    v.setAttribute("muted", ""); // safari iOS require attribute presence
+
+    const tryPlay = () => {
+      // Evita errori non catturati in console
+      return v.play().catch(() => {});
+    };
+
+    // 1) tenta subito
+    tryPlay();
+
+    // 2) ritenta quando torna visibile (es. da tab in background)
+    const onVisibility = () => {
+      if (document.visibilityState === "visible") tryPlay();
+    };
+
+    // 3) prima interazione utente ⇒ ritenta e poi smonta i listener
+    const onFirstInteract = () => {
+      tryPlay();
+      window.removeEventListener("pointerdown", onFirstInteract, true);
+      window.removeEventListener("keydown", onFirstInteract, true);
+      window.removeEventListener("touchstart", onFirstInteract, { capture: true } as any);
+    };
+
+    document.addEventListener("visibilitychange", onVisibility);
+    window.addEventListener("pointerdown", onFirstInteract, true);
+    window.addEventListener("keydown", onFirstInteract, true);
+    window.addEventListener("touchstart", onFirstInteract, { passive: true, capture: true });
+
+    return () => {
+      document.removeEventListener("visibilitychange", onVisibility);
+      window.removeEventListener("pointerdown", onFirstInteract, true);
+      window.removeEventListener("keydown", onFirstInteract, true);
+      window.removeEventListener("touchstart", onFirstInteract, { capture: true } as any);
+    };
+  }, []);
+
   return (
     <section
-      // 3 righe: [spazio elastico][CONTENUTO CENTRALE][spazio elastico]
       className="relative min-h-[88svh] md:min-h-[92svh] grid grid-rows-[1fr_auto_1fr] overflow-hidden pb-[env(safe-area-inset-bottom)]"
       aria-label="Video Hero Section"
     >
-      {/* Background: poster prioritario su mobile + video da md+ */}
+      {/* Background: poster su mobile, video da md+ */}
       <div className="absolute inset-0 z-0" aria-hidden>
-        {/* Poster come LCP su mobile */}
+        {/* Poster LCP solo mobile */}
         <Image
           src={POSTER_URL}
           alt=""
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 767px) 100vw, 0px"
           className="object-cover md:hidden"
         />
-        {/* Video solo da md+, senza preload */}
+
+        {/* Video solo da md+, senza preload aggressivo */}
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          preload="none"
+          preload="metadata"
           poster={POSTER_URL}
           className="hidden md:block w-full h-full object-cover absolute z-0"
         >
           <source src={VIDEO_URL} type="video/mp4" />
         </video>
+
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60 z-10" />
       </div>
 
-      {/* Riga centrale: H1 + CTA + CARD come blocco unico, centrato verticalmente */}
+      {/* Contenuto centrale */}
       <div className="relative z-20 row-start-2 w-full">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6 md:gap-8">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight tracking-tight">
@@ -92,13 +141,9 @@ const HeroVideoSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Scroll indicator centrato + cliccabile (fuori dal blocco centrale) */}
+      {/* Scroll indicator */}
       <div className="absolute inset-x-0 bottom-3 z-20 flex justify-center pb-[env(safe-area-inset-bottom)]">
-        <a
-          href="#contenuti"
-          aria-label="Scorri per scoprire"
-          className="flex flex-col items-center"
-        >
+        <a href="#contenuti" aria-label="Scorri per scoprire" className="flex flex-col items-center">
           <span className="text-[10px] tracking-wide uppercase text-white/90">Scorri</span>
           <div className="mt-1 w-6 h-10 border-2 border-white rounded-full flex justify-center items-start">
             <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce" />
