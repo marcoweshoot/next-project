@@ -109,7 +109,6 @@ const TourDayLocation: React.FC<TourDayLocationProps> = ({
           alt={picture.alternativeText || picture.title || `Immagine ${index + 1}`}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          quality={70}
           className="object-cover group-hover:scale-110 transition-transform duration-700"
         />
       </div>
@@ -165,7 +164,6 @@ const TourDayLocation: React.FC<TourDayLocationProps> = ({
                       alt={picture.alternativeText || picture.title || `Foto ${idx + 2}`}
                       fill
                       sizes="(max-width: 768px) 33vw, 16vw"
-                      quality={65}
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>

@@ -71,7 +71,6 @@ export default function GalleryCarousel({ images, onImageClick }: GalleryCarouse
                       // 👇 solo le prime N (visibili) sono eager, tutte le altre lazy
                       loading={index < initialVisible ? 'eager' : 'lazy'}
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      quality={70}
                       className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                     />
 

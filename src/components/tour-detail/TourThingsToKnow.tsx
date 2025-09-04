@@ -103,10 +103,10 @@ const TourThingsToKnow: React.FC<TourThingsToKnowProps> = ({
               </CardTitle>
             </CardHeader>
             <CardContent>
-              {things2know.length > 0 ? (
+            {things2know.length > 0 ? (
                 <ul className="space-y-6">
-                  {things2know.map((item) => (
-                    <li key={item.id} className="flex items-start gap-3">
+                  {things2know.map((item, index) => (
+                    <li key={item.id || `thing-${index}`} className="flex items-start gap-3">
                       {item.icon?.url && (
                         <Image
                           src={item.icon.url}

@@ -34,7 +34,6 @@ export default function SocialProofSection() {
               className={`h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity
                 ${l.invertInDark ? 'dark:invert' : 'dark:brightness-125 dark:contrast-110'}`}
               sizes="(max-width: 768px) 33vw, 20vw"
-              quality={60}
               loading="lazy"
               decoding="async"
             />

@@ -21,7 +21,6 @@ function IconImg({ src, alt }: { src: string; alt?: string }) {
       height={20}
       loading="lazy"
       sizes="20px"
-      quality={70}
       className="mt-0.5 flex-shrink-0 opacity-70"
     />
   );
