@@ -52,7 +52,7 @@
           {
             "id": "locpic-0-0",
             "title": null,
-            "url": "https://s3.eu-west-1.amazonaws.com/weshoot.it/viaggio_fotografico_weshoot_workshop_4_8a79caf37f.jpg",
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_weshoot_workshop_588690622a.avif",
             "alternativeText": "viaggi fotografici aurora boreale"
           },
           {
@@ -566,9 +566,9 @@
       },
       {
         "id": "113",
-        "title": "Gardur ",
+        "title": "Gardur",
         "description": "Visiteremo il faro più bello del sud dell'Isola, se saremo fortunati fotograferemo l'aurora danzare sullo spot",
-        "slug": "gardur-",
+        "slug": "gardur",
         "locale": "it",
         "state": {
           "name": "Islanda",
@@ -1242,7 +1242,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -1267,7 +1267,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           },
@@ -1302,7 +1302,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -1327,7 +1327,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -1352,7 +1352,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -1377,7 +1377,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -1402,7 +1402,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -1528,7 +1528,7 @@
         "id": "0",
         "type": "group",
         "title": "Vestrahorn",
-        "url": "https://s3.eu-west-1.amazonaws.com/weshoot.it/viaggio_fotografico_weshoot_workshop_4_8a79caf37f.jpg",
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_weshoot_workshop_588690622a.avif",
         "alt": "viaggi fotografici aurora boreale"
       },
       {
@@ -2286,7 +2286,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -2321,7 +2321,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -2356,7 +2356,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -2381,7 +2381,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -2406,7 +2406,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -3848,7 +3848,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           },
@@ -3893,7 +3893,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           },
@@ -3938,7 +3938,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           },
@@ -3998,7 +3998,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4098,7 +4098,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -4123,7 +4123,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           },
@@ -4168,7 +4168,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4193,7 +4193,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           },
@@ -4238,7 +4238,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4263,7 +4263,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           },
@@ -4323,7 +4323,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -4348,7 +4348,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4373,7 +4373,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4398,7 +4398,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4423,7 +4423,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4448,7 +4448,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4473,7 +4473,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4498,7 +4498,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4548,7 +4548,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4573,7 +4573,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4623,7 +4623,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4648,7 +4648,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4673,7 +4673,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4723,7 +4723,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4748,7 +4748,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4773,7 +4773,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4798,7 +4798,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4823,7 +4823,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4848,7 +4848,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -4873,7 +4873,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -5714,7 +5714,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -5739,7 +5739,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -5789,7 +5789,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -5814,7 +5814,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -6013,7 +6013,7 @@
     "tour_id": "algarve-tra-scogliere-e-via-lattea",
     "slug": "faro",
     "title": "Algarve: un posto unico tra mare, scogliere e via lattea",
-    "description": "<p><span style=\"color:rgb(40,40,40);\">Se sei entrato su questa pagina vuol dire che sei appassionato di <strong>fotografia di paesaggio</strong> e di <strong>seascape</strong>, la fotografia di paesaggio con lunghe esposizioni, scogliere, colori del mare e composizioni articolate tra i faraglioni... Bene, Algarve è il posto giusto per scattare fotografie così speciali.&nbsp;</span></p><p><span style=\"color:rgb(40,40,40);\">Le scogliere di questa costa si espandono per decine e decine di chilometri, creando grotte, archi, insenature, faraglioni, paesaggi mozzafiato. Avrai la possibilità di scendere direttamente in spiaggia ed entrare nelle bellissime calette dall'acqua cristallina, usare i coralli come primo piano e le luci di alba e tramonto che illumineranno la roccia brillante tipica di queste zone.&nbsp;</span></p><p><span style=\"color:rgb(40,40,40);\">Ogni appassionato di fotografia di paesaggio potrà godere di queste meraviglie da vicino, portando a casa scatti pazzeschi che altrove sarebbe impossibile fare. Le locations sono abbastanza semplici da raggiungere, i meno avvezzi rimarranno sulla parte alta delle scogliere mentre i più smaliziati avranno modo di calarsi nelle guglie con corde e scarponi da trekking, ogni partecipante porterà a casa delle fotografie uniche, supportato dai due tour leaders che guideranno le sessioni di scatto.&nbsp;</span></p><p><span style=\"color:rgb(40,40,40);\">Pernotterai in un'unica struttura ricettiva a poche centinaia di metri dalle locations principali, con cucina comune dove potrai godere di buona compagnia e grandi risate con altri (pochi) appassionati come te. I posti sono limitati, blocca il tuo ed immergiti in una settimana incredibile di luci, colori e relax.</span></p>",
+    "description": "<p>Se sei entrato su questa pagina vuol dire che sei appassionato di fotografia di paesaggio e di seascape, la fotografia di paesaggio con lunghe esposizioni, scogliere, colori del mare e composizioni articolate tra i faraglioni... Bene, Algarve è il posto giusto per scattare fotografie così speciali.</p><p>Le scogliere di questa costa si espandono per decine e decine di chilometri, creando grotte, archi, insenature, faraglioni, paesaggi mozzafiato. Avrai la possibilità di scendere direttamente in spiaggia ed entrare nelle bellissime calette dall'acqua cristallina, usare i coralli come primo piano e le luci di alba e tramonto che illumineranno la roccia brillante tipica di queste zone.</p><p>Ogni appassionato di fotografia di paesaggio potrà godere di queste meraviglie da vicino, portando a casa scatti pazzeschi che altrove sarebbe impossibile fare. Le locations sono abbastanza semplici da raggiungere, i meno avvezzi rimarranno sulla parte alta delle scogliere mentre i più smaliziati avranno modo di calarsi nelle guglie con corde e scarponi da trekking, ogni partecipante porterà a casa delle fotografie uniche, supportato dai due tour leaders che guideranno le sessioni di scatto.</p><p>Pernotterai in un'unica struttura ricettiva a poche centinaia di metri dalle locations principali, con cucina comune dove potrai godere di buona compagnia e grandi risate con altri (pochi) appassionati come te. I posti sono limitati, blocca il tuo ed immergiti in una settimana incredibile di luci, colori e relax</p>",
     "excerpt": "Un viaggio alla scoperta di una nuova location",
     "difficulty": "medium",
     "experience_level": "Intenso",
@@ -6520,7 +6520,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -6555,7 +6555,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -6580,7 +6580,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           },
@@ -6615,7 +6615,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -6640,7 +6640,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -7641,7 +7641,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -8651,7 +8651,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -8686,7 +8686,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           },
@@ -8771,7 +8771,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -8796,7 +8796,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -8821,7 +8821,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -8846,7 +8846,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -8871,7 +8871,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -8896,7 +8896,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -8921,7 +8921,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -8946,7 +8946,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -8971,7 +8971,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -8996,7 +8996,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -9021,7 +9021,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -9046,7 +9046,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -9071,7 +9071,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -9096,7 +9096,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -9121,7 +9121,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -9630,7 +9630,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -9705,7 +9705,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -10185,7 +10185,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           },
@@ -10639,7 +10639,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -10664,7 +10664,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -10689,7 +10689,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -11172,7 +11172,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -12160,7 +12160,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -12185,7 +12185,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -12210,7 +12210,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -12235,7 +12235,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           },
@@ -12270,7 +12270,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -12295,7 +12295,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -12345,7 +12345,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -12370,7 +12370,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           },
@@ -12380,7 +12380,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -12405,7 +12405,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -12430,7 +12430,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -12455,7 +12455,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -12480,7 +12480,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -12505,7 +12505,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -13494,7 +13494,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -13519,7 +13519,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -14551,7 +14551,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -16479,7 +16479,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -16504,7 +16504,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -16529,7 +16529,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -16579,7 +16579,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -17347,7 +17347,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -17372,7 +17372,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -17397,7 +17397,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -18918,7 +18918,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -18943,7 +18943,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -20125,7 +20125,7 @@
     "tour_id": "cappadocia-tra-le-mongolfiere",
     "slug": "cappadocia",
     "title": "Cappadocia: esperienza fotografica tra i paesaggi della Turchia",
-    "description": "<p><span style=\"background-color:transparent;color:#282828;\"><strong>Il viaggio fotografico in Cappadocia</strong> è una delle esperienze ideali per catturare immagini straordinarie e inedite; oltre al discorso delle mongolfiere con la possibilità di ammirare i paesaggi dall'alto, questo luogo si presta particolarmente alla realizzazione di fotografie uniche nel loro genere.</span><br><span style=\"background-color:transparent;color:#282828;\">Scopriremo insieme gli affascinanti massicci rocciosi che si stagliano su queste terre sconfinate, fotograferemo questi faraglioni giganti ed i Canyon profondi scavati nel terreno.&nbsp;</span></p><p><span style=\"background-color:transparent;color:#282828;\">Pernotteremo nella storica cittadina di Goreme e ci muoveremo nei dintorni di essa. Questo viaggio fotografico in Cappadocia sarà una bellissima esperienza formativa. Imparerai ogni aspetto fondamentale della Fotografia di paesaggio:&nbsp;</span></p><ul><li><span style=\"background-color:transparent;color:#282828;\">composizioni classiche e più creative</span></li><li><span style=\"background-color:transparent;color:#282828;\">tecniche di scatto</span></li><li><span style=\"background-color:transparent;color:#282828;\">quali sono gli errori da evitare</span></li><li><span style=\"background-color:transparent;color:#282828;\">come si scatta in condizioni di luce particolari</span></li></ul><p><span style=\"background-color:transparent;color:#282828;\">Durante tutto il viaggio fotografico avrai la possibilità di un confronto continuo con i Coach. Sarai seguito sotto ogni aspetto sia che tua sia un principiante o un fotografo già navigato. I coach si organizzeranno per farti seguire il percorso più adatto alle tue esigenze fotografiche.</span></p><p><span style=\"background-color:transparent;color:#282828;\">Dai un'occhiata al programma ed unisciti a noi, scopriamo insieme questa location incredibile.</span><br>&nbsp;</p>",
+    "description": "<p>Il viaggio fotografico in Cappadocia è una delle esperienze ideali per catturare immagini straordinarie e inedite; oltre al discorso delle mongolfiere con la possibilità di ammirare i paesaggi dall'alto, questo luogo si presta particolarmente alla realizzazione di fotografie uniche nel loro genere.<br>Scopriremo insieme gli affascinanti massicci rocciosi che si stagliano su queste terre sconfinate, fotograferemo questi faraglioni giganti ed i Canyon profondi scavati nel terreno.</p><p>Pernotteremo nella storica cittadina di Goreme e ci muoveremo nei dintorni di essa. Questo viaggio fotografico in Cappadocia sarà una bellissima esperienza formativa. Imparerai ogni aspetto fondamentale della Fotografia di paesaggio:</p><p>composizioni classiche e più creative<br>tecniche di scatto<br>quali sono gli errori da evitare<br>come si scatta in condizioni di luce particolari</p><p>Durante tutto il viaggio fotografico avrai la possibilità di un confronto continuo con i Coach. Sarai seguito sotto ogni aspetto sia che tua sia un principiante o un fotografo già navigato. I coach si organizzeranno per farti seguire il percorso più adatto alle tue esigenze fotografiche.</p><p>Dai un'occhiata al programma ed unisciti a noi, scopriamo insieme questa location incredibile.</p>",
     "excerpt": "Un viaggio fotografico in Cappadocia tra i paesaggi mozzafiato dei massicci rocciosi",
     "difficulty": "easy",
     "experience_level": "Dinamico",
@@ -20800,7 +20800,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -20825,7 +20825,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -20850,7 +20850,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           },
@@ -20885,7 +20885,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -20910,7 +20910,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -20935,7 +20935,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -20960,7 +20960,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -20985,7 +20985,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -25192,7 +25192,7 @@
           {
             "id": "locpic-0-0",
             "title": null,
-            "url": "https://s3.eu-west-1.amazonaws.com/weshoot.it/viaggio_fotografico_weshoot_workshop_4_8a79caf37f.jpg",
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_weshoot_workshop_588690622a.avif",
             "alternativeText": "viaggi fotografici aurora boreale"
           },
           {
@@ -25706,9 +25706,9 @@
       },
       {
         "id": "113",
-        "title": "Gardur ",
+        "title": "Gardur",
         "description": "Visiteremo il faro più bello del sud dell'Isola, se saremo fortunati fotograferemo l'aurora danzare sullo spot",
-        "slug": "gardur-",
+        "slug": "gardur",
         "locale": "it",
         "state": {
           "name": "Islanda",
@@ -26244,7 +26244,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -26370,7 +26370,7 @@
         "id": "0",
         "type": "group",
         "title": "Vestrahorn",
-        "url": "https://s3.eu-west-1.amazonaws.com/weshoot.it/viaggio_fotografico_weshoot_workshop_4_8a79caf37f.jpg",
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_weshoot_workshop_588690622a.avif",
         "alt": "viaggi fotografici aurora boreale"
       },
       {
@@ -27280,7 +27280,7 @@
             "lastName": "Ranieri Tenti",
             "username": "lorenzoranieri",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
@@ -28902,7 +28902,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -28927,7 +28927,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -28952,7 +28952,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -28977,7 +28977,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29002,7 +29002,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29027,7 +29027,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29052,7 +29052,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29077,7 +29077,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29102,7 +29102,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29127,7 +29127,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29152,7 +29152,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29177,7 +29177,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29202,7 +29202,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29227,7 +29227,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29252,7 +29252,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29277,7 +29277,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29302,7 +29302,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29327,7 +29327,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29352,7 +29352,7 @@
             "lastName": "Carotenuto",
             "username": "marcocarotenuto",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_f48246baa4.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
@@ -29664,7 +29664,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -29689,7 +29689,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -29989,7 +29989,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -30014,7 +30014,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -30400,7 +30400,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -30425,7 +30425,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -30450,7 +30450,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -30899,7 +30899,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -30924,7 +30924,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -30949,7 +30949,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -31801,7 +31801,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -33002,7 +33002,7 @@
             "lastName": "Bucci",
             "username": "samuelebucci",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_7851fad193.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
@@ -33461,7 +33461,7 @@
             "lastName": "Alò",
             "username": "Antonelloalo",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/coach_Antonello_Alo_01741f2027.jpg"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
             },
             "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>"
           }

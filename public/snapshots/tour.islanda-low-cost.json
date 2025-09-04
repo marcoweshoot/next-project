@@ -51,7 +51,7 @@
         {
           "id": "locpic-0-0",
           "title": null,
-          "url": "https://s3.eu-west-1.amazonaws.com/weshoot.it/viaggio_fotografico_weshoot_workshop_4_8a79caf37f.jpg",
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_weshoot_workshop_588690622a.avif",
           "alternativeText": "viaggi fotografici aurora boreale"
         },
         {
@@ -565,9 +565,9 @@
     },
     {
       "id": "113",
-      "title": "Gardur ",
+      "title": "Gardur",
       "description": "Visiteremo il faro più bello del sud dell'Isola, se saremo fortunati fotograferemo l'aurora danzare sullo spot",
-      "slug": "gardur-",
+      "slug": "gardur",
       "locale": "it",
       "state": {
         "name": "Islanda",
@@ -1103,7 +1103,7 @@
           "lastName": "Ranieri Tenti",
           "username": "lorenzoranieri",
           "profilePicture": {
-            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_coach_weshoot_8d9b717501_b9c6a99556.jpeg"
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
           "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
         }
@@ -1229,7 +1229,7 @@
       "id": "0",
       "type": "group",
       "title": "Vestrahorn",
-      "url": "https://s3.eu-west-1.amazonaws.com/weshoot.it/viaggio_fotografico_weshoot_workshop_4_8a79caf37f.jpg",
+      "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/viaggio_fotografico_weshoot_workshop_588690622a.avif",
       "alt": "viaggi fotografici aurora boreale"
     },
     {
