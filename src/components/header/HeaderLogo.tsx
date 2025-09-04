@@ -14,7 +14,6 @@ export default function HeaderLogo({ logoSrc }: HeaderLogoProps) {
   width={120}
   height={35}
   priority
-  className="w-auto h-auto"
 />
     </Link>
   );

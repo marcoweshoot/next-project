@@ -3,8 +3,7 @@ import { getClient } from '@/lib/apolloClient';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CollectionsHero from '@/components/collections/CollectionsHero';
-import { Card, CardContent } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Card } from '@/components/ui/card';
 import SEO from '@/components/SEO';
 import Link from 'next/link';
 

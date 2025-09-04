@@ -51,88 +51,46 @@ const config = {
     
     return config;
   },
-  
-  // Compressione delle immagini
+
+  // 👉 Disattiva l'Image Optimization di Next/Vercel
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "s3.eu-west-1.amazonaws.com",
-        pathname: "/mars.weshoot.it/**",
-      },
-      {
-        protocol: "https",
-        hostname: "s3.eu-west-1.amazonaws.com",
-        pathname: "/weshoot.it/**",
-      },
-      {
-        protocol: "https",
-        hostname: "wxoodcdxscxazjkoqhsg.supabase.co",
-        pathname: "/storage/v1/object/public/**",
-      },
-    ],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
+    unoptimized: true,
   },
   
   // Compressione
   compress: true,
   
-  // Headers per cache e sicurezza
+  // Headers per cache e sicurezza (restano invariati)
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Cross-Origin-Opener-Policy',
-            value: 'same-origin',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'geolocation=(), microphone=(), camera=(), payment=(), usb=()',
-          },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'geolocation=(), microphone=(), camera=(), payment=(), usb=()' },
         ],
       },
       {
         source: '/static/(.*)',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
     ];
   },
 
-  // Redirects
+  // Redirects (invariati)
   async redirects() {
     return [
       {
         // vecchio schema: /destinazioni/:stateslug/:placeslug
         source: "/viaggi-fotografici/destinazioni/:stateslug/:placeslug",
         // nuovo schema:  /destinazioni/:stateslug/posti/:placeslug
-        destination:
-          "/viaggi-fotografici/destinazioni/:stateslug/posti/:placeslug",
+        destination: "/viaggi-fotografici/destinazioni/:stateslug/posti/:placeslug",
         permanent: true, // 308 (SEO-friendly)
       },
     ];
