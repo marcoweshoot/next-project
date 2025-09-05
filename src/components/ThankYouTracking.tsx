@@ -12,23 +12,22 @@ type Item = {
 };
 
 type Purchase = {
-  transaction_id: string;   // un ID univoco (ordine)
-  value: number;            // totale ordine
-  currency: string;         // es. 'EUR'
+  transaction_id: string;
+  value: number;
+  currency: string;
   items: Item[];
 };
 
-export default function ThankYouTracking({
-  orderId,
-  value = 100,
-}: {
-  orderId: string;          // passalo dalla tua thank-you page
-  value?: number;
-}) {
+export default function ThankYouTracking(props: { orderId?: string; value?: number }) {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    // evita doppi invii ricaricando la thank-you
+    // fallback: leggi da URL se non passati come prop
+    const sp = new URLSearchParams(window.location.search);
+    const orderId = props.orderId ?? sp.get('orderId') ?? 'unknown';
+    const value = props.value ?? (Number(sp.get('value') ?? 0) || 0);
+
+    // evita doppi invii
     const key = `purchase_sent_${orderId}`;
     if (sessionStorage.getItem(key)) return;
     sessionStorage.setItem(key, '1');
@@ -39,7 +38,7 @@ export default function ThankYouTracking({
       currency: 'EUR',
       items: [
         {
-          item_id: 'deposit',              // ID prodotto
+          item_id: 'deposit',
           item_name: 'Tour Deposit',
           price: value,
           quantity: 1,
@@ -49,11 +48,10 @@ export default function ThankYouTracking({
       ],
     };
 
-    // GA4 e Pixel passeranno da GTM: spingiamo SOLO nel dataLayer
     (window as any).dataLayer = (window as any).dataLayer || [];
-    window.dataLayer.push({ ecommerce: null });       // pulizia precedente
+    window.dataLayer.push({ ecommerce: null });
     window.dataLayer.push({ event: 'purchase', ecommerce: payload });
-  }, [orderId, value]);
+  }, [props.orderId, props.value]);
 
   return null;
 }
