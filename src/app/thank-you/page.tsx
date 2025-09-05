@@ -90,7 +90,7 @@ export default async function ThankYouPage() {
 
       {/* Header + Tracking */}
       <Header />
-      <ThankYouTracking />
+      <ThankYouTracking orderId="thank-you-page" />
 
       {/* Hero */}
       <PageHeader backgroundImage="https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/viaggi-fotografici-e-workshop.avif" theme="dark" size="big">
