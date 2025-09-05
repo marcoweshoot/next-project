@@ -6,6 +6,7 @@ import CollectionsHero from '@/components/collections/CollectionsHero';
 import { Card } from '@/components/ui/card';
 import SEO from '@/components/SEO';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const dynamic = 'force-static'; // SSG puro
 
@@ -65,13 +66,15 @@ export default async function CollectionsPage() {
                     className="block"
                   >
                     <div className="relative overflow-hidden h-64">
-                      <img
+                      <Image
                         src={
                           collection.image?.url ||
                           'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Viaggi%20Fotografici.avif'
                         }
                         alt={collection.image?.alternativeText || collection.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -226,9 +227,11 @@ const SessionCard: React.FC<SessionCardProps> = ({
 
             {/* Coach */}
             <div className="flex items-center gap-3">
-              <img
+              <Image
                 src={coachAvatarUrl}
                 alt={coachAlt}
+                width={40}
+                height={40}
                 className="w-10 h-10 rounded-full object-cover"
               />
               <span className="text-sm text-foreground font-medium">{coachName}</span>
@@ -279,9 +282,11 @@ const SessionCard: React.FC<SessionCardProps> = ({
               </div>
 
               <div className="flex items-center gap-3 mb-4">
-                <img
+                <Image
                   src={coachAvatarUrl}
                   alt={coachAlt}
+                  width={32}
+                  height={32}
                   className="w-8 h-8 rounded-full object-cover"
                 />
                 <span className="text-sm text-foreground">{coachName}</span>

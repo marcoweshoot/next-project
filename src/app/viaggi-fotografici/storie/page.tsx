@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageBreadcrumbs from '@/components/PageBreadcrumbs';
 import SEO from '@/components/SEO';
+import Image from 'next/image';
 
 export const dynamic = 'force-static';
 export const revalidate = 60;
@@ -83,13 +84,16 @@ export default async function StoriesPage() {
                   className="group block"
                 >
                   <div className="relative h-80 overflow-hidden rounded-lg bg-gray-900">
-                    <img
+                    <Image
                       src={
                         story.photo?.url ||
                         'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//viaggi-fotografici-e-workshop.avif'
                       }
                       alt={story.photo?.alternativeText || story.name}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 768px"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      // niente priority qui: non è LCP, resta lazy di default
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute bottom-6 left-6">

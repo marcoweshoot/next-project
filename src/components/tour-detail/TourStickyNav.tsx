@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 interface TourStickyNavProps {
@@ -64,10 +65,13 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
       {/* Left section */}
       <div className="flex items-center gap-2">
         {tour?.image?.url && (
-          <img
+          <Image
             src={tour.image.url}
             alt={tour.image.alternativeText || tour.title}
+            width={44}
+            height={44}
             className="hidden h-11 w-11 rounded-lg object-cover sm:block"
+            // niente priority: appare solo dopo scroll; lasciamo il browser decidere
           />
         )}
         <div className="flex w-[200px] flex-col justify-center sm:w-[120px]">

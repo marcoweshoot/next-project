@@ -1,6 +1,7 @@
 import React from 'react';
 import PageBreadcrumbs from '@/components/PageBreadcrumbs';
 import { MapPin, Users, Star } from 'lucide-react';
+import Image from 'next/image';
 
 const CollectionsHero: React.FC = () => {
   const breadcrumbElements = [
@@ -17,27 +18,41 @@ const CollectionsHero: React.FC = () => {
 
   return (
     <section
-      // 3 righe: [spazio elastico][CONTENUTO CENTRALE][spazio elastico]
       className="relative min-h-[88svh] md:min-h-[92svh] grid grid-rows-[1fr_auto_1fr] overflow-hidden pb-[env(safe-area-inset-bottom)]"
       aria-label="Collections Hero"
     >
-      {/* Background video + overlay */}
+      {/* Background layer: fallback image + video + overlay */}
       <div className="absolute inset-0 z-0" aria-hidden>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60 z-10" />
+        {/* Fallback image always present sotto il video */}
+        <Image
+          src={posterUrl}
+          alt="Sfondo collezioni viaggi fotografici"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          className="object-cover"
+        />
+
+        {/* Video sopra all'immagine */}
         <video
           autoPlay
           muted
           loop
           playsInline
           poster={posterUrl}
-          className="w-full h-full object-cover"
+          preload="none"
+          className="absolute inset-0 w-full h-full object-cover z-10"
         >
           <source src={videoUrl} type="video/mp4" />
         </video>
+
+        {/* Overlay sopra al video per leggibilità del testo */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60 z-20" />
       </div>
 
       {/* Riga centrale: titolo + testo + breadcrumbs + quick stats */}
-      <div className="relative z-20 row-start-2 w-full">
+      <div className="relative z-30 row-start-2 w-full">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6 md:gap-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
             Collezioni Tematiche
@@ -72,7 +87,7 @@ const CollectionsHero: React.FC = () => {
       </div>
 
       {/* Scroll indicator centrato + cliccabile */}
-      <div className="absolute inset-x-0 bottom-3 z-20 flex justify-center pb-[env(safe-area-inset-bottom)]">
+      <div className="absolute inset-x-0 bottom-3 z-30 flex justify-center pb-[env(safe-area-inset-bottom)]">
         <a
           href="#contenuti"
           aria-label="Scorri per scoprire"

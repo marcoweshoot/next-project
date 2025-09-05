@@ -1,6 +1,7 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
 
 interface SinglePhotoLayoutProps {
   picture: {
@@ -13,19 +14,25 @@ interface SinglePhotoLayoutProps {
 }
 
 const SinglePhotoLayout: React.FC<SinglePhotoLayoutProps> = ({ picture, openLightbox }) => {
-  const fallbackImage = 'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Viaggi%20Fotografici.avif';
+  const fallbackImage =
+    'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Viaggi%20Fotografici.avif';
+
+  const [failed, setFailed] = useState(false);
+
+  const src = failed ? fallbackImage : picture.url || fallbackImage;
 
   return (
     <div className="relative group cursor-pointer" onClick={openLightbox}>
       <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-        <img
-          src={picture.url || fallbackImage}
+        <Image
+          src={src}
           alt={picture.alternativeText || picture.title || 'Location image'}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          onError={(e) => {
-            console.error("🔍 LocationGallery - Image failed to load:", picture.url);
-            const target = e.target as HTMLImageElement;
-            target.src = fallbackImage;
+          fill
+          sizes="100vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          onError={() => {
+            console.error('🔍 LocationGallery - Image failed to load:', picture.url);
+            setFailed(true);
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

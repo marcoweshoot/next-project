@@ -10,6 +10,8 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import Image from 'next/image';
+
 // opzionale: puoi anche usare VisuallyHidden
 // import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
@@ -100,16 +102,21 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
           )}
 
           {/* Current Image */}
-          <div className="relative max-w-full max-h-full p-8 flex items-center justify-center">
-            <img
-              src={currentImage.url}
-              alt={
-                currentImage.alternativeText ||
-                `Gallery image ${currentIndex + 1}`
-              }
-              loading="lazy"
-              className="max-w-full max-h-full object-contain"
-            />
+          <div className="relative max-w-full max-h-full p-8 flex items-center justify-center w-full h-full">
+            <div className="relative w-full h-full">
+              <Image
+                src={currentImage.url}
+                alt={
+                  currentImage.alternativeText ||
+                  `Gallery image ${currentIndex + 1}`
+                }
+                fill
+                sizes="100vw"
+                className="object-contain"
+                draggable={false}
+                loading="lazy"
+              />
+            </div>
 
             {/* Bottom bar */}
             <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 flex justify-between items-center gap-4">

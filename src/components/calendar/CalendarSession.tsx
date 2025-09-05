@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, AlertCircle, Users, ArrowRight } from "lucide-react";
@@ -294,9 +295,11 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
         </h3>
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
           <div className="flex items-center gap-2">
-            <img
+            <Image
               src={coachAvatarUrl}
               alt={coachAlt}
+              width={24}
+              height={24}
               className="w-6 h-6 rounded-full object-cover"
             />
             <span>{session.tour.coach.name}</span>

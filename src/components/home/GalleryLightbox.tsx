@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/compone
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+import Image from 'next/image';
 
 interface GalleryLightboxProps {
   isOpen: boolean;
@@ -15,6 +16,9 @@ interface GalleryLightboxProps {
   dialogTitle?: string;
 }
 
+const FALLBACK_SRC =
+  'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/viaggi-fotografici-e-workshop.avif';
+
 const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
   isOpen,
   onOpenChange,
@@ -24,6 +28,7 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
   dialogTitle,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(startIndex);
+  const [hadError, setHadError] = useState(false);
 
   // Flatten immagini
   const allImages = useMemo(
@@ -42,10 +47,12 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
   const total = allImages.length;
 
   const handleNext = useCallback(() => {
+    setHadError(false);
     setCurrentIndex((p) => (p + 1) % Math.max(total, 1));
   }, [total]);
 
   const handlePrev = useCallback(() => {
+    setHadError(false);
     setCurrentIndex((p) => (p - 1 + Math.max(total, 1)) % Math.max(total, 1));
   }, [total]);
 
@@ -63,12 +70,14 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
     if (!isOpen) return;
     if (!total) return setCurrentIndex(0);
     setCurrentIndex(Math.min(Math.max(0, startIndex), total - 1));
+    setHadError(false);
   }, [isOpen, startIndex, total]);
 
   if (!total) return null;
 
   const currentImage = allImages[currentIndex];
   const altText = currentImage.alt || currentImage.title || 'Immagine galleria';
+  const src = hadError ? FALLBACK_SRC : currentImage.url;
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
@@ -76,14 +85,13 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
         className="w-[95vw] h-[95vh] max-w-none p-0 bg-black/90 overflow-hidden"
         onKeyDown={handleKeyDown}
       >
-        {/* Titolo A11y nascosto: elimina il warning */}
+        {/* Titolo A11y nascosto */}
         <VisuallyHidden>
-  <DialogTitle>{dialogTitle || currentImage?.title || 'Galleria immagini'}</DialogTitle>
-  <DialogDescription>
-    Immagine {currentIndex + 1} di {total}. Usa ←/→ per navigare, Esc per chiudere.
-  </DialogDescription>
-</VisuallyHidden>
-
+          <DialogTitle>{dialogTitle || currentImage?.title || 'Galleria immagini'}</DialogTitle>
+          <DialogDescription>
+            Immagine {currentIndex + 1} di {total}. Usa ←/→ per navigare, Esc per chiudere.
+          </DialogDescription>
+        </VisuallyHidden>
 
         {/* X custom, sempre visibile */}
         <Button
@@ -120,21 +128,23 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
           </>
         )}
 
-        {/* Area immagine: riempie tutto e centra, l'immagine NON esce mai */}
+        {/* Area immagine */}
         <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-8">
-          <img
-            src={currentImage.url}
-            alt={altText}
-            loading="lazy"
-            className="max-h-full max-w-full object-contain select-none"
-            draggable={false}
-            onError={(e) => {
-              e.currentTarget.src =
-                'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture/viaggi-fotografici-e-workshop.avif';
-            }}
-          />
+          {/* Container relativo per <Image fill /> */}
+          <div className="relative w-full h-full">
+            <Image
+              src={src}
+              alt={altText}
+              fill
+              sizes="100vw"
+              className="object-contain select-none"
+              draggable={false}
+              loading="lazy"
+              onError={() => setHadError(true)}
+            />
+          </div>
 
-          {/* Caption sovrapposta (non spinge fuori l'immagine) */}
+          {/* Caption sovrapposta */}
           <div className="pointer-events-none absolute bottom-0 left-0 right-0 bg-black/70 px-4 py-3 text-center">
             <p className="text-base text-white">{currentImage.title || ' '}</p>
           </div>

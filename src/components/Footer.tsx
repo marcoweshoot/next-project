@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Instagram,
   Facebook,
@@ -25,6 +26,7 @@ const QUICK_LINKS = [
   { href: 'https://accademia.weshoot.it/', label: '🏫 Accademia WeShoot' },
   { href: '/gift-card', label: '🎁 Carte Regalo' }
 ];
+
 const SUPPORT_LINKS = [
   { href: '/chi-siamo', label: '👨‍💻 Chi Siamo' },
   { href: '/contatti', label: '📱 Contattaci' },
@@ -38,13 +40,14 @@ const Footer: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Brand */}
         <div className="space-y-4">
-          <Link href="/" className="flex items-center space-x-2">
-            <img
+          <Link href="/" className="flex items-center space-x-2" aria-label="WeShoot Home">
+            <Image
               src="/lovable-uploads/759cd14e-fb23-4e8f-ad1a-d8a690a28a83.png"
               alt="WeShoot - viaggi fotografici e workshop"
               width={120}
               height={48}
               className="h-12 w-auto"
+              // niente priority: non è LCP
             />
           </Link>
           <p className="text-gray-300">

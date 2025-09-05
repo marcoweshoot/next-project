@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useCallback, useRef } from 'react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import Image from 'next/image';
 
 interface LocationGalleryLightboxProps {
   pictures: Array<{
@@ -23,7 +24,7 @@ const LocationGalleryLightbox: React.FC<LocationGalleryLightboxProps> = ({
   currentIndex,
   onClose,
   onNext,
-  onPrev
+  onPrev,
 }) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const total = Array.isArray(pictures) ? pictures.length : 0;
@@ -62,13 +63,13 @@ const LocationGalleryLightbox: React.FC<LocationGalleryLightboxProps> = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
-  // Preload immagini adiacenti per transizioni fluide
+  // Preload immagini adiacenti
   useEffect(() => {
     if (!total) return;
     const preload = (i: number) => {
       const url = pictures[i]?.url;
       if (url) {
-        const img = new Image();
+        const img = new window.Image();
         img.src = url;
       }
     };
@@ -80,9 +81,7 @@ const LocationGalleryLightbox: React.FC<LocationGalleryLightboxProps> = ({
 
   return (
     <Dialog open onOpenChange={(open) => { if (!open) onClose(); }}>
-      <DialogContent
-        className="max-w-[95vw] max-h-[95vh] p-0 bg-black/95 border-none focus:outline-none"
-      >
+      <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 bg-black/95 border-none focus:outline-none">
         <div
           ref={contentRef}
           tabIndex={-1}
@@ -125,14 +124,22 @@ const LocationGalleryLightbox: React.FC<LocationGalleryLightboxProps> = ({
           )}
 
           {/* Immagine corrente */}
-          <div className="relative max-w-full max-h-full p-8">
-            <img
-              src={currentPicture.url}
-              alt={currentPicture.alternativeText || currentPicture.title || 'Immagine della galleria'}
-              className="max-w-full max-h-full object-contain select-none"
-              decoding="async"
-              draggable={false}
-            />
+          <div className="relative max-w-full max-h-full p-8 w-full h-full flex items-center justify-center">
+            <div className="relative w-full h-full">
+              <Image
+                src={currentPicture.url}
+                alt={
+                  currentPicture.alternativeText ||
+                  currentPicture.title ||
+                  'Immagine della galleria'
+                }
+                fill
+                className="object-contain select-none"
+                draggable={false}
+                sizes="100vw"
+                priority
+              />
+            </div>
             {(currentPicture.title || currentPicture.alternativeText) && (
               <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 text-center">
                 <p className="text-lg font-medium">
@@ -162,8 +169,6 @@ function arePropsEqual(
   next: LocationGalleryLightboxProps
 ) {
   if (prev.currentIndex !== next.currentIndex) return false;
-
-  // se cambiano le callback, rerender (per evitare chiusure stale)
   if (prev.onClose !== next.onClose) return false;
   if (prev.onNext !== next.onNext) return false;
   if (prev.onPrev !== next.onPrev) return false;
