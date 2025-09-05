@@ -37,7 +37,7 @@ const AcademySection: FC = () => {
               height={600}
               sizes="(max-width: 768px) 100vw, 50vw"
               className="h-auto w-full object-cover"
-              priority
+              loading="lazy"
             />
           </div>
 

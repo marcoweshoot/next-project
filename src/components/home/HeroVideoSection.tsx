@@ -78,7 +78,7 @@ const HeroVideoSection: React.FC = () => {
         {/* Poster LCP solo mobile */}
         <Image
           src={POSTER_URL}
-          alt=""
+          alt="viaggi fotografici e workshop"
           fill
           priority
           sizes="(max-width: 767px) 100vw, 0px"

@@ -5,6 +5,8 @@ import { Montserrat } from 'next/font/google';
 import ClientProviders from '@/components/providers/ClientProviders';
 import { ToastStateProvider } from '@/components/ui/toast-provider';
 import { Toaster } from '@/components/ui/toaster';
+import IubendaScripts from "@/integrations/IubendaScripts";
+import ConsentLoaders from "@/integrations/ConsentLoaders";
 // Usa la CSS variable così font-sans del tema funziona ovunque
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -40,7 +42,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       >
         <ToastStateProvider>
           <ClientProviders>
-            {children}
+          <IubendaScripts />
+          <ConsentLoaders />
+          <div suppressHydrationWarning>
+          {children}
+          </div>
           </ClientProviders>
           <Toaster />
         </ToastStateProvider>
