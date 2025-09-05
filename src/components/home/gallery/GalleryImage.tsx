@@ -47,8 +47,7 @@ const GalleryImage: React.FC<GalleryImageProps> = ({ image, index, onClick }) =>
         height={400}
         className="object-cover group-hover:scale-110 transition-transform duration-500"
         sizes="(max-width: 768px) 100vw, 33vw"
-        loading={index > 5 ? 'lazy' : 'eager'}
-        priority={index < 6}
+        loading="lazy"
       />
 
       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

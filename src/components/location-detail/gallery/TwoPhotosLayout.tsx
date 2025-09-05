@@ -24,10 +24,21 @@ const TwoPhotosLayout: React.FC<TwoPhotosLayoutProps> = ({
   const fallbackImage =
     'https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//Viaggi%20Fotografici.avif';
 
+  // ✅ Tracciamo le immagini che hanno fallito il load (per id)
+  const [failedIds, setFailedIds] = useState<Set<string>>(new Set());
+
+  const markFailed = (id: string) => {
+    setFailedIds(prev => {
+      const next = new Set(prev);
+      next.add(id);
+      return next;
+    });
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {pictures.map((picture, index) => {
-        const [failed, setFailed] = useState(false);
+        const failed = failedIds.has(picture.id);
         const src = failed ? fallbackImage : picture.url || fallbackImage;
 
         return (
@@ -46,8 +57,9 @@ const TwoPhotosLayout: React.FC<TwoPhotosLayoutProps> = ({
                 sizes="50vw"
                 className="object-cover transition-all duration-500 group-hover:scale-110"
                 onError={() => {
-                  console.error('🔍 LocationGallery - Image failed to load:', picture.url);
-                  setFailed(true);
+                  // Log opzionale per debug
+                  // console.error('🔍 LocationGallery - Image failed to load:', picture.url);
+                  markFailed(picture.id);
                 }}
               />
               <div
