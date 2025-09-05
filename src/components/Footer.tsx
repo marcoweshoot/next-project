@@ -46,7 +46,6 @@ const Footer: React.FC = () => (
               alt="WeShoot - viaggi fotografici e workshop"
               width={120}
               height={48}
-              className="h-12 w-auto"
               // niente priority: non è LCP
             />
           </Link>
