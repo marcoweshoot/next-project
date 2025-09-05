@@ -11,6 +11,7 @@ type IubApi = {
 declare global {
   interface Window {
     _iub?: { cs?: { api?: IubApi } };
+    dataLayer: any[]; // dichiarata non opzionale nel tuo window.d.ts
   }
 }
 
@@ -18,21 +19,11 @@ function ensureDL() {
   window.dataLayer = window.dataLayer || [];
 }
 
-function loadScriptOnce(src: string, id: string) {
-  if (document.getElementById(id)) return;
-  const s = document.createElement("script");
-  s.id = id;
-  s.src = src;
-  s.async = true;
-  document.head.appendChild(s);
-}
-
 function getIubApi(): IubApi | null {
   return (window._iub && window._iub.cs && window._iub.cs.api) || null;
 }
 
 function readPurposes(api: IubApi) {
-  // copriamo le varianti più comuni di nomi/ID
   const analytics =
     !!api.getConsentForPurpose?.("statistics") ||
     !!api.getConsentForPurpose?.("measurement") ||
@@ -45,34 +36,29 @@ function readPurposes(api: IubApi) {
   return { analytics, marketing, any };
 }
 
-function pushConsentToDataLayer(cons: { analytics: boolean; marketing: boolean }) {
+function pushConsent(cons: { analytics: boolean; marketing: boolean }) {
   ensureDL();
-  // Default negato
-  window.dataLayer!.push({
+  window.dataLayer.push({
     event: "default_consent",
     analytics_storage: "denied",
     ad_storage: "denied",
     ad_user_data: "denied",
     ad_personalization: "denied",
   });
-  // Aggiornamento in base a Iubenda
-  window.dataLayer!.push({
+  window.dataLayer.push({
     event: "iubenda_consent_update",
     analytics_storage: cons.analytics ? "granted" : "denied",
     ad_storage: cons.marketing ? "granted" : "denied",
     ad_user_data: cons.marketing ? "granted" : "denied",
     ad_personalization: cons.marketing ? "granted" : "denied",
   });
-  // Per compatibilità con trigger esistenti
-  window.dataLayer!.push({ event: "iubenda_consent_given" });
+  window.dataLayer.push({ event: "iubenda_consent_given" });
 }
 
-function initGTM(containerId: string) {
-  if (!containerId) return;
+function loadGTM(containerId: string) {
   if (document.getElementById("gtm-lib")) return;
   ensureDL();
-  // Evento di bootstrap standard di GTM
-  window.dataLayer!.push({ "gtm.start": Date.now(), event: "gtm.js" });
+  window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
   const s = document.createElement("script");
   s.id = "gtm-lib";
   s.async = true;
@@ -81,60 +67,68 @@ function initGTM(containerId: string) {
 }
 
 export default function ConsentLoaders() {
-  const gtmLoadedRef = useRef(false);
+  const gtmLoaded = useRef(false);
 
   useEffect(() => {
     if (!GTM_ID) {
-      if (process.env.NODE_ENV !== "production") {
+      if (process.env.NODE_ENV !== "production")
         console.warn("[ConsentLoaders] NEXT_PUBLIC_GTM_ID mancante");
-      }
       return;
     }
 
-    const apply = () => {
+    const log = (...args: unknown[]) =>
+      process.env.NODE_ENV !== "production" && console.log("[ConsentLoaders]", ...args);
+
+    const applyFromApi = (source: string) => {
       const api = getIubApi();
-      if (!api) return;
+      if (!api) {
+        log("API non pronta", source);
+        return false;
+      }
       const cons = readPurposes(api);
-
-      if (process.env.NODE_ENV !== "production") {
-        console.log("[ConsentLoaders] consent:", cons);
+      log("consenso", cons, "via", source);
+      pushConsent({ analytics: cons.analytics, marketing: cons.marketing });
+      if (!gtmLoaded.current && cons.any) {
+        loadGTM(GTM_ID);
+        gtmLoaded.current = true;
+        log("GTM caricato (API)", source);
       }
-
-      pushConsentToDataLayer(cons);
-
-      // Carica GTM se l’utente ha dato qualsiasi consenso utile
-      if (!gtmLoadedRef.current && cons.any) {
-        initGTM(GTM_ID);
-        gtmLoadedRef.current = true;
-      }
+      return cons.any;
     };
 
-    // 1) tenta subito (per chi ha già dato consenso in passato)
-    apply();
+    // 1) prova subito (consenso persistito)
+    if (!applyFromApi("immediate")) {
+      // 2) poll leggero finché l’API è pronta (max ~10s)
+      let tries = 0;
+      const iv = setInterval(() => {
+        if (applyFromApi("poll")) clearInterval(iv);
+        else if (++tries > 40) clearInterval(iv);
+      }, 250);
 
-    // 2) aspetta che l’API Iubenda sia pronta (poll leggero, max ~10s)
-    let tries = 0;
-    const iv = setInterval(() => {
-      if (getIubApi()) {
+      // 3) eventi iubenda: se l’API ancora non risponde, carica GTM in fallback
+      const onChange = () => {
+        const ok = applyFromApi("event");
+        if (!ok && !gtmLoaded.current) {
+          // fallback: l’utente ha dato consenso, ma l’API tarda -> carica GTM
+          ensureDL();
+          window.dataLayer.push({ event: "iubenda_consent_given" });
+          loadGTM(GTM_ID);
+          gtmLoaded.current = true;
+          log("GTM caricato (fallback)", "event");
+        }
+      };
+
+      document.addEventListener("iubenda_consent_given", onChange as EventListener);
+      document.addEventListener("iubenda_preference_given", onChange as EventListener);
+      document.addEventListener("iubenda_preference_updated", onChange as EventListener);
+
+      return () => {
         clearInterval(iv);
-        apply();
-      } else if (++tries > 40) {
-        clearInterval(iv);
-      }
-    }, 250);
-
-    // 3) reagisci ai cambi di preferenze
-    const onChange = () => apply();
-    document.addEventListener("iubenda_consent_given", onChange as EventListener);
-    document.addEventListener("iubenda_preference_given", onChange as EventListener);
-    document.addEventListener("iubenda_preference_updated", onChange as EventListener);
-
-    return () => {
-      clearInterval(iv);
-      document.removeEventListener("iubenda_consent_given", onChange as EventListener);
-      document.removeEventListener("iubenda_preference_given", onChange as EventListener);
-      document.removeEventListener("iubenda_preference_updated", onChange as EventListener);
-    };
+        document.removeEventListener("iubenda_consent_given", onChange as EventListener);
+        document.removeEventListener("iubenda_preference_given", onChange as EventListener);
+        document.removeEventListener("iubenda_preference_updated", onChange as EventListener);
+      };
+    }
   }, []);
 
   return null;
