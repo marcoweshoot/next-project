@@ -1,23 +1,16 @@
-// src/integrations/ConsentLoaders.tsx
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;     // es: G-XXXXXX
-const FB_ID = process.env.NEXT_PUBLIC_FB_PIXEL;  // es: 1234567890
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID; // es. GTM-XXXXXXX
+
+type IubApi = {
+  isConsentGiven?: () => boolean;
+  getConsentForPurpose?: (p: string | number) => boolean;
+};
 
 declare global {
   interface Window {
-    _iub?: {
-      cs?: { consent?: unknown };
-      push?: (tuple: unknown[]) => void;
-    } & any; // Iubenda non ha tipi pubblici stabili
-    gtag?: (...args: unknown[]) => void;
-    fbq?: ((...args: unknown[]) => void) & {
-      queue?: unknown[];
-      loaded?: boolean;
-      version?: string;
-      callMethod?: (...args: unknown[]) => void;
-    };
+    _iub?: { cs?: { api?: IubApi } };
   }
 }
 
@@ -30,74 +23,102 @@ function loadScriptOnce(src: string, id: string) {
   document.head.appendChild(s);
 }
 
-// -------- GA4: init senza 'arguments' / '.apply()' ----------
-function initGA() {
-  if (!GA_ID) return;
-
-  if (!window.dataLayer) window.dataLayer = [];
-  if (!window.gtag) {
-    // Evita 'arguments' -> usa rest params e pusha l'array
-    window.gtag = (...args: unknown[]) => {
-      (window.dataLayer as unknown[]).push(args);
-    };
-  }
-
-  loadScriptOnce(
-    `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`,
-    "ga4-lib"
-  );
-  window.gtag("js", new Date());
-  window.gtag("config", GA_ID, { anonymize_ip: true });
+function getIubApi(): IubApi | null {
+  return (window._iub && window._iub.cs && window._iub.cs.api) || null;
 }
 
-// -------- Meta Pixel: riscrittura moderna (niente IIFE minificata) ----------
-function initFB() {
-  if (!FB_ID) return;
+function readPurposes(api: IubApi) {
+  // Copre varianti comuni dei nomi/ID delle finalità
+  const analytics =
+    !!api.getConsentForPurpose?.("statistics") ||
+    !!api.getConsentForPurpose?.("measurement") ||
+    !!api.getConsentForPurpose?.(5) ||
+    !!api.isConsentGiven?.();
 
-  if (!window.fbq) {
-    const q: any[] = [];
-    const fbq: any = (...args: unknown[]) => {
-      if (fbq.callMethod) fbq.callMethod(...(args as []));
-      else q.push(args);
-    };
-    fbq.queue = q;
-    fbq.loaded = true;
-    fbq.version = "2.0";
-    window.fbq = fbq;
-    loadScriptOnce(
-      "https://connect.facebook.net/en_US/fbevents.js",
-      "fb-pixel-lib"
-    );
-  }
+  const marketing =
+    !!api.getConsentForPurpose?.("marketing") ||
+    !!api.getConsentForPurpose?.("targeting") ||
+    !!api.getConsentForPurpose?.(4);
 
-  window.fbq("init", FB_ID);
-  window.fbq("track", "PageView");
+  return { analytics, marketing };
 }
 
-// -------- Bridge col consenso Iubenda ----------
+function pushConsentToDataLayer(cons: { analytics: boolean; marketing: boolean }) {
+  window.dataLayer = window.dataLayer || [];
+
+  // Consent Mode: default "denied" (nel dubbio)
+  window.dataLayer.push({
+    event: "default_consent",
+    analytics_storage: "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  });
+
+  // Aggiornamento in base al consenso Iubenda
+  window.dataLayer.push({
+    event: "iubenda_consent_update",
+    analytics_storage: cons.analytics ? "granted" : "denied",
+    ad_storage: cons.marketing ? "granted" : "denied",
+    ad_user_data: cons.marketing ? "granted" : "denied",
+    ad_personalization: cons.marketing ? "granted" : "denied",
+  });
+
+  // Per compatibilità con vecchi trigger in GTM
+  window.dataLayer.push({ event: "iubenda_consent_given" });
+}
+
+function initGTM(containerId: string) {
+  loadScriptOnce(`https://www.googletagmanager.com/gtm.js?id=${containerId}`, "gtm-lib");
+}
+
 export default function ConsentLoaders() {
+  const gtmLoadedRef = useRef(false);
+
   useEffect(() => {
-    const onConsent = (e?: any) => {
-      const analytics = e?.purposes?.statistics ?? false;
-      const marketing = e?.purposes?.marketing ?? false;
-      if (analytics) initGA();
-      if (marketing) initFB();
+    if (!GTM_ID) return;
+
+    const apply = () => {
+      const api = getIubApi();
+      if (!api) return;
+      const cons = readPurposes(api);
+
+      // Pubblica lo stato di consenso su dataLayer:
+      pushConsentToDataLayer(cons);
+
+      // Carica GTM se non è già stato caricato e c'è almeno una finalità utile
+      if (!gtmLoadedRef.current && (cons.analytics || cons.marketing)) {
+        initGTM(GTM_ID);
+        gtmLoadedRef.current = true;
+      }
     };
 
-    window._iub = window._iub || ({} as any);
-    window._iub.push?.([
-      "csConfiguration",
-      {
-        callback: {
-          onConsentGiven: onConsent,
-          onConsentFirstGiven: onConsent,
-          onPreferenceExpressed: onConsent,
-        },
-      },
-    ]);
+    // 1) tenta subito (consenso già presente)
+    apply();
 
-    // se l'utente aveva già dato consenso in passato
-    setTimeout(() => onConsent(window._iub?.cs?.consent || {}), 0);
+    // 2) aspetta che l’API Iubenda sia pronta (poll leggero)
+    let tries = 0;
+    const iv = setInterval(() => {
+      if (getIubApi()) {
+        clearInterval(iv);
+        apply();
+      } else if (++tries > 40) {
+        clearInterval(iv); // ~10s max
+      }
+    }, 250);
+
+    // 3) reagisci ai cambi di preferenze
+    const onChange = () => apply();
+    document.addEventListener("iubenda_consent_given", onChange as EventListener);
+    document.addEventListener("iubenda_preference_given", onChange as EventListener);
+    document.addEventListener("iubenda_preference_updated", onChange as EventListener);
+
+    return () => {
+      clearInterval(iv);
+      document.removeEventListener("iubenda_consent_given", onChange as EventListener);
+      document.removeEventListener("iubenda_preference_given", onChange as EventListener);
+      document.removeEventListener("iubenda_preference_updated", onChange as EventListener);
+    };
   }, []);
 
   return null;
