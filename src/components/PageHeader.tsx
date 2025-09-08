@@ -9,22 +9,19 @@ interface PageHeaderProps {
   children: React.ReactNode;
   plain?: boolean;
   theme?: 'light' | 'dark';
-  videoUrl?: string;
-  backgroundImage?: string | StaticImageData; // supporta stringa o import statico
+  backgroundImage?: string | StaticImageData;
   size?: 'small' | 'medium' | 'big';
   className?: string;
   alt?: string;
   priority?: boolean;
   sizes?: string;
   quality?: number;
-  /** Se true, al primo gesto sblocca l’audio e riprova il play */
-  unmuteOnFirstGesture?: boolean;
 }
 
 const isHttp = (s: string) => /^https?:\/\//i.test(s);
 const isLocalPath = (s: string) => s.startsWith('/');
 const isStaticImport = (x: unknown): x is StaticImageData =>
-  !!x && typeof x === 'object' && 'src' in (x as any);
+  !!x && typeof x === 'object' && 'src' in (x as Record<string, unknown>);
 
 function normalizeMedia(input?: string | StaticImageData) {
   if (!input) return undefined;
@@ -37,7 +34,6 @@ const PageHeader = ({
   children,
   plain = false,
   theme = 'dark',
-  videoUrl,
   backgroundImage,
   size = 'medium',
   className,
@@ -45,70 +41,25 @@ const PageHeader = ({
   priority = false,
   sizes = '100vw',
   quality,
-  unmuteOnFirstGesture = false,
 }: PageHeaderProps) => {
   const heightClasses = {
     small: 'min-h-[40vh]',
     medium: 'min-h-[60vh]',
     big: 'min-h-[75vh]',
-  };
+  } as const;
 
   if (plain) return <div className={cn('py-20', className)}>{children}</div>;
 
-  const normalizedVideoUrl =
-    typeof videoUrl === 'string'
-      ? (isLocalPath(videoUrl) || isHttp(videoUrl)) ? videoUrl : getFullMediaUrl(videoUrl)
-      : undefined;
-
   const normalizedBg = normalizeMedia(backgroundImage);
-
-  const [videoError, setVideoError] = React.useState(false);
-  const videoRef = React.useRef<HTMLVideoElement | null>(null);
-
-  const showVideo = Boolean(normalizedVideoUrl) && !videoError;
-  const showImage = !showVideo && Boolean(normalizedBg);
 
   const overlayClass =
     theme === 'dark'
       ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent'
       : 'bg-gradient-to-t from-black/40 via-black/20 to-transparent';
 
-  // Scelte di rendering:
   const bgIsStatic = isStaticImport(normalizedBg);
   const bgIsLocalString = typeof normalizedBg === 'string' && isLocalPath(normalizedBg);
   const bgIsRemoteString = typeof normalizedBg === 'string' && !isLocalPath(normalizedBg);
-
-  // Gestione autoplay sicura: prova play() in muto; se bloccato, ritenta al primo gesto
-  React.useEffect(() => {
-    if (!showVideo) return;
-    const v = videoRef.current;
-    if (!v) return;
-
-    const tryPlay = () =>
-      v.play().catch(() => {
-        // Ignoriamo NotAllowedError finché non c'è un gesto dell’utente
-      });
-
-    tryPlay();
-
-    const onFirstGesture = () => {
-      if (unmuteOnFirstGesture) v.muted = false;
-      tryPlay();
-      window.removeEventListener('pointerdown', onFirstGesture);
-      window.removeEventListener('keydown', onFirstGesture);
-      window.removeEventListener('touchstart', onFirstGesture);
-    };
-
-    window.addEventListener('pointerdown', onFirstGesture, { once: true });
-    window.addEventListener('keydown', onFirstGesture, { once: true });
-    window.addEventListener('touchstart', onFirstGesture, { once: true });
-
-    return () => {
-      window.removeEventListener('pointerdown', onFirstGesture);
-      window.removeEventListener('keydown', onFirstGesture);
-      window.removeEventListener('touchstart', onFirstGesture);
-    };
-  }, [showVideo, unmuteOnFirstGesture, normalizedVideoUrl]);
 
   return (
     <div
@@ -118,31 +69,8 @@ const PageHeader = ({
         className
       )}
     >
-      {/* Video di sfondo */}
-      {showVideo && (
-        <div className="absolute inset-0 z-0 h-full w-full">
-          <video
-            ref={videoRef}
-            className="w-full h-full object-cover"
-            loop
-            muted
-            autoPlay
-            playsInline
-            preload="metadata"
-            poster={bgIsLocalString ? (normalizedBg as string) : undefined}
-            onError={() => setVideoError(true)}
-            aria-hidden="true"
-          >
-            <source src={normalizedVideoUrl!} type="video/mp4" />
-          </video>
-        </div>
-      )}
-
-      {/* Immagine di sfondo:
-          - StaticImport => <Image> (ottimizzato)
-          - Stringa locale (/public) => CSS background
-          - Stringa remota => <Image> (optimizer) */}
-      {showImage && bgIsStatic && (
+      {/* Immagine di sfondo */}
+      {bgIsStatic && (
         <div className="absolute inset-0 z-0 h-full w-full">
           <Image
             src={normalizedBg as StaticImageData}
@@ -156,7 +84,7 @@ const PageHeader = ({
         </div>
       )}
 
-      {showImage && bgIsLocalString && (
+      {bgIsLocalString && (
         <div
           className="absolute inset-0 z-0 h-full w-full bg-cover bg-center"
           style={{ backgroundImage: `url('${normalizedBg as string}')` }}
@@ -165,7 +93,7 @@ const PageHeader = ({
         />
       )}
 
-      {showImage && bgIsRemoteString && (
+      {bgIsRemoteString && (
         <div className="absolute inset-0 z-0 h-full w-full">
           <Image
             src={normalizedBg as string}
