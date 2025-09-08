@@ -26,7 +26,7 @@ export const dynamic = 'force-static';
 export const revalidate = false;
 
 export const metadata: Metadata = {
-  title: 'Viaggi Fotografici - WeShoot.it',
+  title: 'Viaggi Fotografici e Workshop con Coach Esperti',
   description:
     "Scopri i nostri viaggi fotografici nel mondo. Destinazioni uniche, coach esperti e piccoli gruppi per un'esperienza fotografica indimenticabile.",
   alternates: {

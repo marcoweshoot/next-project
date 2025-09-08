@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     'Viaggi fotografici e workshop di paesaggio con coach professionisti. Calendario aggiornato, destinazioni e date.',
   robots: { index: true, follow: true },
   other: { 'color-scheme': 'light dark' },
+  openGraph: {
+    siteName: 'WeShoot',
+    type: 'website',
+    url: 'https://www.weshoot.it',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

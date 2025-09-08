@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from '@/lib/utils';
 import { getFullMediaUrl } from '@/utils/TourDataUtilis';
 import Image, { type StaticImageData } from 'next/image';
@@ -15,6 +17,8 @@ interface PageHeaderProps {
   priority?: boolean;
   sizes?: string;
   quality?: number;
+  /** Se true, al primo gesto sblocca l’audio e riprova il play */
+  unmuteOnFirstGesture?: boolean;
 }
 
 const isHttp = (s: string) => /^https?:\/\//i.test(s);
@@ -41,6 +45,7 @@ const PageHeader = ({
   priority = false,
   sizes = '100vw',
   quality,
+  unmuteOnFirstGesture = false,
 }: PageHeaderProps) => {
   const heightClasses = {
     small: 'min-h-[40vh]',
@@ -57,7 +62,10 @@ const PageHeader = ({
 
   const normalizedBg = normalizeMedia(backgroundImage);
 
-  const showVideo = Boolean(normalizedVideoUrl);
+  const [videoError, setVideoError] = React.useState(false);
+  const videoRef = React.useRef<HTMLVideoElement | null>(null);
+
+  const showVideo = Boolean(normalizedVideoUrl) && !videoError;
   const showImage = !showVideo && Boolean(normalizedBg);
 
   const overlayClass =
@@ -69,6 +77,38 @@ const PageHeader = ({
   const bgIsStatic = isStaticImport(normalizedBg);
   const bgIsLocalString = typeof normalizedBg === 'string' && isLocalPath(normalizedBg);
   const bgIsRemoteString = typeof normalizedBg === 'string' && !isLocalPath(normalizedBg);
+
+  // Gestione autoplay sicura: prova play() in muto; se bloccato, ritenta al primo gesto
+  React.useEffect(() => {
+    if (!showVideo) return;
+    const v = videoRef.current;
+    if (!v) return;
+
+    const tryPlay = () =>
+      v.play().catch(() => {
+        // Ignoriamo NotAllowedError finché non c'è un gesto dell’utente
+      });
+
+    tryPlay();
+
+    const onFirstGesture = () => {
+      if (unmuteOnFirstGesture) v.muted = false;
+      tryPlay();
+      window.removeEventListener('pointerdown', onFirstGesture);
+      window.removeEventListener('keydown', onFirstGesture);
+      window.removeEventListener('touchstart', onFirstGesture);
+    };
+
+    window.addEventListener('pointerdown', onFirstGesture, { once: true });
+    window.addEventListener('keydown', onFirstGesture, { once: true });
+    window.addEventListener('touchstart', onFirstGesture, { once: true });
+
+    return () => {
+      window.removeEventListener('pointerdown', onFirstGesture);
+      window.removeEventListener('keydown', onFirstGesture);
+      window.removeEventListener('touchstart', onFirstGesture);
+    };
+  }, [showVideo, unmuteOnFirstGesture, normalizedVideoUrl]);
 
   return (
     <div
@@ -82,13 +122,16 @@ const PageHeader = ({
       {showVideo && (
         <div className="absolute inset-0 z-0 h-full w-full">
           <video
+            ref={videoRef}
             className="w-full h-full object-cover"
             loop
             muted
             autoPlay
             playsInline
-            preload="none"
+            preload="metadata"
             poster={bgIsLocalString ? (normalizedBg as string) : undefined}
+            onError={() => setVideoError(true)}
+            aria-hidden="true"
           >
             <source src={normalizedVideoUrl!} type="video/mp4" />
           </video>
@@ -96,8 +139,8 @@ const PageHeader = ({
       )}
 
       {/* Immagine di sfondo:
-          - StaticImport => <Image> (ottimizzato, ok)
-          - Stringa locale (/public) => CSS background (nessun optimizer)
+          - StaticImport => <Image> (ottimizzato)
+          - Stringa locale (/public) => CSS background
           - Stringa remota => <Image> (optimizer) */}
       {showImage && bgIsStatic && (
         <div className="absolute inset-0 z-0 h-full w-full">

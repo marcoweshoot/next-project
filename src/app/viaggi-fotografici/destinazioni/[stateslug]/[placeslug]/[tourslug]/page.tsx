@@ -4,6 +4,8 @@ import path from 'node:path'
 import { permanentRedirect } from 'next/navigation'
 import dynamicImport from 'next/dynamic'
 import { unstable_cache as nextCache } from 'next/cache'
+import Script from 'next/script'                       // <-- SEO
+import type { Metadata } from 'next'                  // <-- SEO
 import { getClient } from '@/lib/graphqlClient'
 import { GET_TOUR_BY_SLUG, GET_ALL_TOUR_SLUGS } from '@/graphql/queries/tour-detail'
 import Header from '@/components/Header'
@@ -15,6 +17,7 @@ export const dynamic = 'force-static'
 // Consenti fallback stile "blocking" per slug non pre-renderizzati
 export const dynamicParams = true
 
+const SITE_URL = 'https://www.weshoot.it'            // <-- SEO
 const CANONICAL_BASE = '/viaggi-fotografici/destinazioni'
 const SNAPSHOT_DIR = path.join(process.cwd(), 'public', 'snapshots')
 
@@ -122,6 +125,80 @@ function getTourCached(slug: string) {
   return runner()
 }
 
+/* ===== SEO helpers (no UI) ===== */
+const absUrl = (u?: string) =>
+  !u ? '' : (u.startsWith('http') ? u : `${SITE_URL}${u.startsWith('/') ? '' : '/'}${u}`)
+const humanize = (slug?: string) =>
+  (slug || '').replace(/[-_]+/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase())
+const pick = <T,>(...vals: (T | undefined | null | '')[]) =>
+  vals.find(v => v != null && String(v).trim() !== '') as T | undefined
+const toNumber = (val: any): number | null => {
+  if (val == null) return null
+  const n = Number(String(val).replace(/[^\d.,]/g, '').replace(',', '.'))
+  return isFinite(n) && n > 0 ? n : null
+}
+const readSessionPrice = (s: any) =>
+  s?.price ?? s?.priceFrom ?? s?.quota ?? s?.cost ?? s?.amount ?? null
+function getSeoFromStrapi(tour: any) {
+  const s = tour?.SEO || tour?.seo || {}
+  const metaTitle = pick<string>(s.metaTitle, s.title)
+  const metaDescription = pick<string>(s.metaDescription, s.description)
+  const share = s.shareImage || s.ogImage || {}
+  return {
+    metaTitle,
+    metaDescription,
+    shareImage: {
+      url: share?.url as string | undefined,
+      width: share?.width as number | undefined,
+      height: share?.height as number | undefined,
+      alt: (share?.alternativeText as string | undefined) || 'Condivisione',
+    },
+  }
+}
+
+/* ===== generateMetadata (per-tour, nessun cambiamento UI) ===== */
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { stateslug, placeslug, tourslug } = await params
+  const tour = await getTourCached(tourslug)
+  if (!tour) return {}
+
+  const { metaTitle, metaDescription, shareImage } = getSeoFromStrapi(tour)
+
+  const title = metaTitle ?? tour.title ?? `${humanize(tourslug)} – Viaggio fotografico`
+  const description =
+    metaDescription ??
+    tour.summary ??
+    tour.description ??
+    'Viaggio fotografico e workshop con coach esperti. Itinerario, date e informazioni utili.'
+  const canonical = `${SITE_URL}${CANONICAL_BASE}/${stateslug}/${placeslug}/${tourslug}`
+
+  const fallbackImg =
+    tour?.image?.url || tour?.cover?.url || (Array.isArray(tour?.gallery) ? tour.gallery[0]?.url : '')
+  const ogImageUrl = absUrl(shareImage?.url || fallbackImg) || `${SITE_URL}/og-default.jpg`
+  const ogImage = {
+    url: ogImageUrl,
+    width: shareImage?.width ?? 1200,
+    height: shareImage?.height ?? 630,
+    alt: shareImage?.alt ?? title,
+  }
+
+  return {
+    title, // il brand lo aggiunge il layout via template "%s | WeShoot"
+    description,
+    alternates: { canonical },
+    openGraph: {
+      type: 'website',
+      siteName: 'WeShoot',
+      url: canonical,
+      title,
+      description,
+      images: [ogImage],
+    },
+    twitter: { card: 'summary_large_image', title, description, images: [ogImageUrl] },
+    robots: { index: true, follow: true },
+  }
+}
+
 export async function generateStaticParams(): Promise<Params[]> {
   // 1) snapshot-first
   let tours: any[] = await readSnapshotList()
@@ -189,6 +266,87 @@ export default async function TourDetailPage({ params }: Props) {
       ? tour.reviews.reduce((sum: number, r: any) => sum + (r?.rating ?? 0), 0) / reviewsCount
       : 0
 
+    /* ===== SOLO SEO: Product + Breadcrumbs (niente UI) ===== */
+    const nowTs = Date.now()
+    const futureSessions: any[] = Array.isArray(tour.sessions)
+      ? tour.sessions.filter((s: any) => {
+          const d = new Date(s?.start || '')
+          return !isNaN(d.getTime()) && d.getTime() >= nowTs
+        })
+      : []
+    const prices = futureSessions
+      .map((s) => toNumber(readSessionPrice(s)))
+      .filter((n): n is number => n != null)
+    const lowPrice =
+      prices.length
+        ? Math.min(...prices)
+        : toNumber(tour?.priceFrom ?? tour?.price ?? tour?.startingPrice)
+    const highPrice =
+      prices.length
+        ? Math.max(...prices)
+        : lowPrice
+    const offerCount =
+      futureSessions.length || (Array.isArray(tour.sessions) ? tour.sessions.length : 0)
+
+    const pageUrl = `${SITE_URL}${CANONICAL_BASE}/${stateslug}/${placeslug}/${tourslug}`
+    const mainImg =
+      tour?.image?.url || tour?.cover?.url || (Array.isArray(tour?.gallery) ? tour.gallery[0]?.url : '')
+    const gallery = Array.isArray(tour?.gallery) ? tour.gallery.map((g: any) => g?.url).filter(Boolean) : []
+
+    const { metaDescription: seoDesc } = getSeoFromStrapi(tour)
+    const productJsonLd: Record<string, any> = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: tour?.SEO?.metaTitle ?? tour?.title ?? 'Viaggio fotografico',
+      description: seoDesc ?? tour?.summary ?? tour?.description ?? '',
+      image: [absUrl(mainImg), ...gallery.map(absUrl)].filter(Boolean).slice(0, 6),
+      sku: (tour?.sku ?? tourslug)?.toString().toUpperCase(),
+      brand: { '@type': 'Brand', name: 'WeShoot' },
+      ...(lowPrice
+        ? {
+            offers:
+              highPrice && highPrice !== lowPrice
+                ? {
+                    '@type': 'AggregateOffer',
+                    priceCurrency: 'EUR',
+                    lowPrice: lowPrice.toFixed(2),
+                    highPrice: highPrice.toFixed(2),
+                    offerCount: String(offerCount || 1),
+                    availability: 'https://schema.org/InStock',
+                    url: pageUrl,
+                  }
+                : {
+                    '@type': 'Offer',
+                    priceCurrency: 'EUR',
+                    price: lowPrice.toFixed(2),
+                    availability: 'https://schema.org/InStock',
+                    url: pageUrl,
+                  },
+          }
+        : {}),
+      ...(reviewsCount
+        ? {
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: Math.max(1, Math.min(5, averageRating)).toFixed(1),
+              reviewCount: String(reviewsCount),
+            },
+          }
+        : {}),
+    }
+
+    const breadcrumbJsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Viaggi fotografici', item: `${SITE_URL}/viaggi-fotografici` },
+        { '@type': 'ListItem', position: 3, name: humanize(stateslug), item: `${SITE_URL}${CANONICAL_BASE}/${stateslug}` },
+        { '@type': 'ListItem', position: 4, name: humanize(placeslug), item: `${SITE_URL}${CANONICAL_BASE}/${stateslug}/${placeslug}` },
+        { '@type': 'ListItem', position: 5, name: humanize(tourslug), item: pageUrl },
+      ],
+    }
+
     return (
       <div className="min-h-screen bg-background">
         <Header />
@@ -200,6 +358,12 @@ export default async function TourDetailPage({ params }: Props) {
           stateSlug={stateslug}
           placeSlug={placeslug}
         />
+
+        {/* JSON-LD (non influisce sull’interfaccia) */}
+        <Script id="ld-product-tour" type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+        <Script id="ld-breadcrumbs" type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
         <SocialProofSection />
 

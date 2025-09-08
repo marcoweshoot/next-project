@@ -3,17 +3,20 @@ import { TOUR_BASE_FIELDS } from "./tour-base";
 import { TOUR_ITINERARY_FIELDS } from "./tour-itinerary";
 import { TOUR_INCLUSIONS_FIELDS } from "./tour-inclusions";
 import { TOUR_REVIEWS_FIELDS } from "./tour-reviews";
+import { TOUR_SEO_FIELDS } from "./tour-seo";
 
 export const GET_TOUR_BY_SLUG = gql`
   query GetTourBySlug($slug: String!, $locale: String) {
     tours(where: { slug: $slug }, locale: $locale) {
       ...TourBaseFields
+      ...TourSeoFields
       ...TourItineraryFields
       ...TourInclusionsFields
       ...TourReviewsFields
     }
   }
   ${TOUR_BASE_FIELDS}
+  ${TOUR_SEO_FIELDS}
   ${TOUR_ITINERARY_FIELDS}
   ${TOUR_INCLUSIONS_FIELDS}
   ${TOUR_REVIEWS_FIELDS}
