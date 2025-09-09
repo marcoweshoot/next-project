@@ -31,21 +31,21 @@ const TourThingsToKnow: React.FC<TourThingsToKnowProps> = ({
       case 'easy':
         return {
           label: 'Facile',
-          desc: 'Adatto a tutti...',
+          desc: 'Adatto a tutti i livelli: per chi vuole imparare o ripassare le basi della fotografia di paesaggio o per chi vuole iniziare a fare un salto di qualità',
           color: 'text-green-600 dark:text-green-400',
           bg: 'bg-green-100 dark:bg-green-400/20',
         };
       case 'medium':
         return {
           label: 'Medio',
-          desc: 'Richiede una buona forma fisica...',
+          desc: 'Per chi ha pieno controllo della fotocamera e vuole lavorare su tecniche complesse: astro, focus stacking, panorami multi-riga, blending di esposizioni e workflow rigoroso.',
           color: 'text-yellow-600 dark:text-yellow-400',
           bg: 'bg-yellow-100 dark:bg-yellow-400/20',
         };
       case 'hard':
         return {
           label: 'Difficile',
-          desc: 'Richiede ottima forma fisica...',
+          desc: 'Per chi cerca una sfida vera e vuole spingersi oltre: creatività, precisione e spot non convenzionali lontano dalle rotte comuni.',
           color: 'text-red-600 dark:text-red-400',
           bg: 'bg-red-100 dark:bg-red-400/20',
         };
