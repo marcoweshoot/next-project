@@ -866,40 +866,76 @@
   ],
   "highlights": [
     {
-      "id": "hl-0",
-      "title": "Albe e Tramonti",
-      "description": "Scatterai durante i due momenti di luce più belli della giornata",
-      "locale": "it"
-    },
-    {
-      "id": "hl-1",
+      "id": "4",
       "title": "Hotel",
       "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
-      "locale": "it"
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_96_2f78aa83d7.png",
+        "alternativeText": "Workshop fotografici e viaggi con strutture alberghiere di alta qualità",
+        "width": 96,
+        "height": 96
+      }
     },
     {
-      "id": "hl-2",
+      "id": "6",
       "title": "Comodo",
       "description": "Esperienze per tutti, da punta e scatta.",
-      "locale": "it"
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_thong_sandal_96_33e8ff9dd4.png",
+        "alternativeText": "workshop fotografici e viaggi semplici",
+        "width": 96,
+        "height": 96
+      }
     },
     {
-      "id": "hl-3",
+      "id": "7",
       "title": "Didattica",
       "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
-      "locale": "it"
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_person_teacher_96_f8a65e7659.png",
+        "alternativeText": "workshop fotografici e viaggi con sessioni di tecnica fotografica",
+        "width": 96,
+        "height": 96
+      }
     },
     {
-      "id": "hl-4",
+      "id": "10",
       "title": "Scogliere",
       "description": "Viaggi fotografici tra le più alte scogliere",
-      "locale": "it"
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_cliff_96_bc8e2cf763.png",
+        "alternativeText": "viaggi fotografici con scogliere e mare",
+        "width": 96,
+        "height": 96
+      }
     },
     {
-      "id": "hl-5",
+      "id": "18",
       "title": "Piccoli Gruppi",
       "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
-      "locale": "it"
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/weshooters_gruppi_viaggi_fotografici_d320f29a53.png",
+        "alternativeText": "piccoli gruppi di fotografi",
+        "width": 96,
+        "height": 96
+      }
+    },
+    {
+      "id": "24",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_sun_96_9918632c78.png",
+        "alternativeText": "viaggi fotografici con tramonti o albe ",
+        "width": 96,
+        "height": 96
+      }
     }
   ],
   "things2know": [],

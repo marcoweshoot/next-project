@@ -41,6 +41,8 @@ export const TOUR_BASE_FIELDS = gql`
       icon {
            url
            alternativeText
+           width
+           height
       }
     }
 

@@ -124,7 +124,14 @@ const TOURS_QUERY = /* GraphQL */ `
         steps { id title description locale }
       }
 
-      highlights { title description locale }
+      # 👇 AGGIUNTO: id + icon (con campi utili)
+      highlights {
+        id
+        title
+        description
+        locale
+        icon { url alternativeText width height }
+      }
 
       things2know {
         title
@@ -299,12 +306,20 @@ function normalizeTour(t) {
     icon: x.icon ? { url: toAbsUrl(x.icon.url) } : null,
   }));
 
-  // highlights / faqs / days id sintetici
+  // ✅ highlights: mantieni id reale (se presente) e salva ICON
   const highlights = arr(t.highlights).map((h, i) => ({
     id: String(h.id ?? `hl-${i}`),
     title: h.title ?? "",
     description: h.description ?? "",
     locale: h.locale ?? null,
+    icon: h.icon
+      ? {
+          url: toAbsUrl(h.icon.url),
+          alternativeText: h.icon.alternativeText ?? null,
+          width: h.icon.width ?? null,
+          height: h.icon.height ?? null,
+        }
+      : null,
   }));
 
   const faqs = arr(t.faqs).map((f, i) => ({
@@ -354,11 +369,11 @@ function normalizeTour(t) {
     image,
     pictures,
     sessions,
-    reviews, // <-- aggiunto
+    reviews,
     whats_includeds,
     whats_not_includeds,
     things2know,
-    highlights,
+    highlights, // <-- ora con icon
     faqs,
     days,
     locations,

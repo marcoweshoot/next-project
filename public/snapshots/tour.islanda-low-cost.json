@@ -1040,46 +1040,88 @@
   ],
   "highlights": [
     {
-      "id": "hl-0",
-      "title": "Aurora Boreale",
-      "description": "Scatta la magia delle luci del nord",
-      "locale": "it"
-    },
-    {
-      "id": "hl-1",
-      "title": "Albe e Tramonti",
-      "description": "Scatterai durante i due momenti di luce più belli della giornata",
-      "locale": "it"
-    },
-    {
-      "id": "hl-2",
+      "id": "5",
       "title": "Avventura",
       "description": "Per gli amanti delle avventure",
-      "locale": "it"
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hiking_boot_96_41028473e7.png",
+        "alternativeText": "Workshop fotografici e viaggi avventurosi",
+        "width": 96,
+        "height": 96
+      }
     },
     {
-      "id": "hl-3",
+      "id": "7",
       "title": "Didattica",
       "description": "Sessioni specifiche dedicate alla tecnica e post-produzione.",
-      "locale": "it"
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_person_teacher_96_f8a65e7659.png",
+        "alternativeText": "workshop fotografici e viaggi con sessioni di tecnica fotografica",
+        "width": 96,
+        "height": 96
+      }
     },
     {
-      "id": "hl-4",
+      "id": "10",
       "title": "Scogliere",
       "description": "Viaggi fotografici tra le più alte scogliere",
-      "locale": "it"
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_cliff_96_bc8e2cf763.png",
+        "alternativeText": "viaggi fotografici con scogliere e mare",
+        "width": 96,
+        "height": 96
+      }
     },
     {
-      "id": "hl-5",
+      "id": "18",
       "title": "Piccoli Gruppi",
       "description": "Tutti i nostri viaggi fotografici si differenziano dagli altri perchè formiamo gruppi di poche persone",
-      "locale": "it"
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/weshooters_gruppi_viaggi_fotografici_d320f29a53.png",
+        "alternativeText": "piccoli gruppi di fotografi",
+        "width": 96,
+        "height": 96
+      }
     },
     {
-      "id": "hl-6",
+      "id": "21",
       "title": "Camere Multiple",
       "description": "Goditi la convivialità e lo spirito di squadra alloggiando in camere condivise tra gruppi di tre o più persone",
-      "locale": "it"
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Camera_Multipla_ea48645899.png",
+        "alternativeText": "stanze condivise da 3+ ospiti",
+        "width": 96,
+        "height": 96
+      }
+    },
+    {
+      "id": "23",
+      "title": "Aurora Boreale",
+      "description": "Scatta la magia delle luci del nord",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_nothern_lights_96_e94f44ac46.png",
+        "alternativeText": "icona aurora boreale viaggi fotografici",
+        "width": 96,
+        "height": 96
+      }
+    },
+    {
+      "id": "24",
+      "title": "Albe e Tramonti",
+      "description": "Scatterai durante i due momenti di luce più belli della giornata",
+      "locale": "it",
+      "icon": {
+        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_sun_96_9918632c78.png",
+        "alternativeText": "viaggi fotografici con tramonti o albe ",
+        "width": 96,
+        "height": 96
+      }
     }
   ],
   "things2know": [],
