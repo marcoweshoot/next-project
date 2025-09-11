@@ -20,8 +20,6 @@ interface PageHeaderProps {
 
 const isHttp = (s: string) => /^https?:\/\//i.test(s);
 const isLocalPath = (s: string) => s.startsWith('/');
-const isStaticImport = (x: unknown): x is StaticImageData =>
-  !!x && typeof x === 'object' && 'src' in (x as Record<string, unknown>);
 
 function normalizeMedia(input?: string | StaticImageData) {
   if (!input) return undefined;
@@ -57,10 +55,6 @@ const PageHeader = ({
       ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent'
       : 'bg-gradient-to-t from-black/40 via-black/20 to-transparent';
 
-  const bgIsStatic = isStaticImport(normalizedBg);
-  const bgIsLocalString = typeof normalizedBg === 'string' && isLocalPath(normalizedBg);
-  const bgIsRemoteString = typeof normalizedBg === 'string' && !isLocalPath(normalizedBg);
-
   return (
     <div
       className={cn(
@@ -69,37 +63,14 @@ const PageHeader = ({
         className
       )}
     >
-      {/* Immagine di sfondo */}
-      {bgIsStatic && (
+      {/* Immagine di sfondo: sempre next/image per garantire fetchpriority=high quando priority=true */}
+      {normalizedBg && (
         <div className="absolute inset-0 z-0 h-full w-full">
           <Image
-            src={normalizedBg as StaticImageData}
+            src={normalizedBg as string | StaticImageData}
             alt={alt}
             fill
-            priority={priority}
-            sizes={sizes}
-            quality={quality}
-            className="object-cover"
-          />
-        </div>
-      )}
-
-      {bgIsLocalString && (
-        <div
-          className="absolute inset-0 z-0 h-full w-full bg-cover bg-center"
-          style={{ backgroundImage: `url('${normalizedBg as string}')` }}
-          aria-label={alt}
-          role="img"
-        />
-      )}
-
-      {bgIsRemoteString && (
-        <div className="absolute inset-0 z-0 h-full w-full">
-          <Image
-            src={normalizedBg as string}
-            alt={alt}
-            fill
-            priority={priority}
+            priority={priority}  // abilita fetchpriority="high" + preload quando true
             sizes={sizes}
             quality={quality}
             className="object-cover"

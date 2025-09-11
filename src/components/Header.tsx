@@ -1,20 +1,14 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import HeaderLogoDynamic from './header/HeaderLogoDynamic'
 import HeaderMobileButton from './header/HeaderMobileButton'
 import { useNavbarScroll } from '@/hooks/useNavbarScroll'
 
 // Code-splitting: questi chunk non finiscono nell'initial JS su mobile
-const HeaderDesktopNav = dynamic(() => import('./header/HeaderDesktopNav'), {
-  ssr: false,
-  loading: () => null,
-})
-const HeaderMobileNav = dynamic(() => import('./header/HeaderMobileNav'), {
-  ssr: false,
-  loading: () => null,
-})
+const HeaderDesktopNav = dynamic(() => import('./header/HeaderDesktopNav'))
+const HeaderMobileNav = dynamic(() => import('./header/HeaderMobileNav'))
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
