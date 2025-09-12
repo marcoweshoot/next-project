@@ -7,17 +7,32 @@ import HeaderMobileButton from './header/HeaderMobileButton'
 import { useNavbarScroll } from '@/hooks/useNavbarScroll'
 
 // Code-splitting: questi chunk non finiscono nell'initial JS su mobile
-const HeaderDesktopNav = dynamic(() => import('./header/HeaderDesktopNav'))
 const HeaderMobileNav = dynamic(() => import('./header/HeaderMobileNav'))
+const HeaderDesktopNav = dynamic(() => import('./header/HeaderDesktopNav'), {
+  ssr: false,
+  loading: () => (
+    // riserva lo spazio della navbar desktop finché il chunk si carica
+    <nav aria-hidden className="hidden lg:block h-20 w-full" />
+  ),
+});
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [isDesktop, setIsDesktop] = useState(false)
   const isScrolled = useNavbarScroll()
 
   const toggleDropdown = (menu: string) => {
     setActiveDropdown(prev => (prev === menu ? null : menu))
   }
+    // Aggiorna stato desktop/mobile
+    useEffect(() => {
+      const mq = window.matchMedia('(min-width: 1024px)')
+      const update = () => setIsDesktop(mq.matches)
+      update()
+      mq.addEventListener('change', update)
+      return () => mq.removeEventListener('change', update)
+    }, [])
 
   // Chiudi il menu quando passi a desktop
   useEffect(() => {
@@ -62,14 +77,16 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between lg:h-20">
           <HeaderLogoDynamic />
 
-          {/* Desktop nav — non SSR, non idratata su mobile */}
-          <div className="hidden lg:block">
-            <HeaderDesktopNav
-              isScrolled={isScrolled}
-              activeDropdown={activeDropdown}
-              toggleDropdown={toggleDropdown}
-            />
-          </div>
+          {/* Desktop nav — render solo su viewport desktop: NO download su mobile */}
+          {isDesktop && (
+            <div className="hidden lg:block">
+              <HeaderDesktopNav
+                isScrolled={isScrolled}
+                activeDropdown={activeDropdown}
+                toggleDropdown={toggleDropdown}
+              />
+            </div>
+          )}
 
           {/* Bottone mobile è leggero e resta client */}
           <HeaderMobileButton
