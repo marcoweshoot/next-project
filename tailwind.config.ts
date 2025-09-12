@@ -1,10 +1,8 @@
-// tailwind.config.ts
 import type { Config } from "tailwindcss"
 
 const config: Config = {
   darkMode: ["class"],
   content: [
-    // catch-all per evitare miss in compilazione
     "./src/**/*.{ts,tsx,mdx}",
   ],
   theme: {
@@ -15,6 +13,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
+        // usa la CSS variable esposta da next/font
         sans: ["var(--font-montserrat)", "system-ui", "sans-serif"],
       },
       colors: {
@@ -55,7 +54,6 @@ const config: Config = {
       },
     },
   },
-  // Se usi le utility di tailwindcss-animate, togli il commento:
   // plugins: [require("tailwindcss-animate")],
 }
 

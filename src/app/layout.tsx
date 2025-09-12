@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from 'next';
 import './globals.css';
 import { Montserrat } from 'next/font/google';
@@ -7,6 +6,7 @@ import { ToastStateProvider } from '@/components/ui/toast-provider';
 import { Toaster } from '@/components/ui/toaster';
 import IubendaScripts from "@/integrations/IubendaScripts";
 import ConsentLoaders from "@/integrations/ConsentLoaders";
+
 // Usa la CSS variable così font-sans del tema funziona ovunque
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -35,23 +35,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="it" suppressHydrationWarning>
+    <html lang="it" suppressHydrationWarning className={montserrat.variable}>
       <head>
+        {/* Preconnect solo alle origini davvero critiche per la home */}
         <link rel="preconnect" href="https://s3.eu-west-1.amazonaws.com" crossOrigin="" />
         <link rel="preconnect" href="https://wxoodcdxscxazjkoqhsg.supabase.co" crossOrigin="" />
       </head>
 
       {/* Applica i token del tema subito per evitare bordi bianchi in dark */}
-      <body
-        className={`${montserrat.variable} min-h-screen bg-background text-foreground font-sans antialiased`}
-      >
+      <body className="min-h-screen bg-background text-foreground font-sans antialiased">
         <ToastStateProvider>
           <ClientProviders>
-          <IubendaScripts />
-          <ConsentLoaders />
-          <div suppressHydrationWarning>
-          {children}
-          </div>
+            <IubendaScripts />
+            <ConsentLoaders />
+            <div suppressHydrationWarning>
+              {children}
+            </div>
           </ClientProviders>
           <Toaster />
         </ToastStateProvider>
