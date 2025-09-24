@@ -763,6 +763,31 @@
           "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
         }
       ]
+    },
+    {
+      "id": "248",
+      "start": "2026-07-02",
+      "end": "2026-07-05",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 790,
+      "deposit": 240,
+      "balance": 550,
+      "minPax": 2,
+      "currency": "EUR",
+      "priceCompanion": 790,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+        }
+      ]
     }
   ],
   "faqs": [
