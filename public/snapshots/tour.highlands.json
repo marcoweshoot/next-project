@@ -841,6 +841,31 @@
           "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
         }
       ]
+    },
+    {
+      "id": "249",
+      "start": "2026-05-23",
+      "end": "2026-05-30",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 2299,
+      "deposit": 699,
+      "balance": 1600,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 2099,
+      "users": [
+        {
+          "instagram": "alexwidesphotography",
+          "firstName": "Alessandro",
+          "lastName": "Cantarelli",
+          "username": "alessandrocantarelli",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+          },
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+        }
+      ]
     }
   ],
   "faqs": [

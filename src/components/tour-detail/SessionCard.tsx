@@ -13,6 +13,7 @@ import {
   MessageCircle,
   CheckCircle,
   AlertCircle,
+  XCircle,
 } from "lucide-react";
 import { getTourLink } from "@/components/tour-card/tourCardUtils";
 import { getFullMediaUrl, DEFAULT_COACH_AVATAR } from "@/utils/TourDataUtilis";
@@ -77,12 +78,26 @@ const SessionCard: React.FC<SessionCardProps> = ({
     const e = safeParse(end);
     if (!s || !e) return { dateRange: "Date TBC", year: "" };
 
+    const year = s.getFullYear().toString();
+    
+    // Se è lo stesso giorno (workshop di 1 giorno), mostra solo una data
+    const sameDay = s.getDate() === e.getDate() && 
+                   s.getMonth() === e.getMonth() && 
+                   s.getFullYear() === e.getFullYear();
+    
+    if (sameDay) {
+      const day = s.getDate();
+      const month = s.toLocaleDateString("it-IT", { month: "long" });
+      const dateRange = `${day} ${month}`;
+      return { dateRange, year };
+    }
+
+    // Se sono giorni diversi, mostra il range
     const sameMonth = s.getMonth() === e.getMonth();
     const startDay = s.getDate();
     const endDay = e.getDate();
     const startMonth = s.toLocaleDateString("it-IT", { month: "long" });
     const endMonth = e.toLocaleDateString("it-IT", { month: "long" });
-    const year = s.getFullYear().toString();
 
     const dateRange = sameMonth
       ? `${startDay} - ${endDay} ${startMonth}`
@@ -137,22 +152,33 @@ const SessionCard: React.FC<SessionCardProps> = ({
 
   const getStatusBadge = (status: string) => {
     switch (norm(status)) {
+      case "scheduled":
+        return (
+          <Badge className="rounded-full px-2.5 py-0.5 bg-gray-500/15 text-gray-700 dark:text-gray-300 ring-1 ring-gray-500/30 flex items-center gap-1">
+            <Clock className="w-3 h-3" />
+            Iscrizioni aperte
+          </Badge>
+        );
+      case "almostconfirmed":
+        return (
+          <Badge className="rounded-full px-2.5 py-0.5 bg-cyan-500/15 text-cyan-700 dark:text-cyan-300 ring-1 ring-cyan-500/30 flex items-center gap-1">
+            <AlertCircle className="w-3 h-3" />
+            Quasi confermato
+          </Badge>
+        );
       case "confirmed":
       case "open":
-      case "scheduled":
       case "planning":
         return (
-          <Badge className="rounded-full px-2.5 py-0.5 bg-primary/10 text-primary flex items-center gap-1">
+          <Badge className="rounded-full px-2.5 py-0.5 bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-500/30 flex items-center gap-1">
             <CheckCircle className="w-3 h-3" />
-            Iscrizioni aperte
+            Confermato
           </Badge>
         );
       case "almostfull":
       case "almost_full":
-      case "almostconfirmed":
-      case "almost_confirmed":
         return (
-          <Badge className="rounded-full px-2.5 py-0.5 bg-destructive/10 text-destructive flex items-center gap-1">
+          <Badge className="rounded-full px-2.5 py-0.5 bg-amber-500/15 text-amber-700 dark:text-amber-300 ring-1 ring-amber-500/30 flex items-center gap-1">
             <AlertCircle className="w-3 h-3" />
             Quasi pieno
           </Badge>
@@ -160,7 +186,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
       case "waitinglist":
       case "waiting_list":
         return (
-          <Badge className="rounded-full px-2.5 py-0.5 bg-muted text-muted-foreground flex items-center gap-1">
+          <Badge className="rounded-full px-2.5 py-0.5 bg-white/15 text-gray-700 dark:text-gray-300 ring-1 ring-gray-500/30 flex items-center gap-1">
             <Users className="w-3 h-3" />
             Lista d&apos;attesa
           </Badge>
@@ -169,14 +195,9 @@ const SessionCard: React.FC<SessionCardProps> = ({
       case "sold_out":
       case "closed":
         return (
-          <Badge className="rounded-full px-2.5 py-0.5 bg-destructive/10 text-destructive">
+          <Badge className="rounded-full px-2.5 py-0.5 bg-red-500/15 text-red-700 dark:text-red-300 ring-1 ring-red-500/30 flex items-center gap-1">
+            <XCircle className="w-3 h-3" />
             Tutto pieno
-          </Badge>
-        );
-      default:
-        return (
-          <Badge className="rounded-full px-2.5 py-0.5 bg-secondary text-foreground">
-            Iscrizioni aperte
           </Badge>
         );
     }

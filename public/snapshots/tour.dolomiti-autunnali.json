@@ -364,6 +364,31 @@
           "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>"
         }
       ]
+    },
+    {
+      "id": "263",
+      "start": "2026-10-15",
+      "end": "2026-10-18",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 899,
+      "deposit": 269,
+      "balance": 630,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 899,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/anto_tru_alo90/",
+          "firstName": "Antonello",
+          "lastName": "Alò",
+          "username": "antonelloalo",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
+          },
+          "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>"
+        }
+      ]
     }
   ],
   "faqs": [

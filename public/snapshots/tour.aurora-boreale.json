@@ -1403,7 +1403,7 @@
       "id": "187",
       "start": "2025-10-12",
       "end": "2025-10-19",
-      "status": "scheduled",
+      "status": "soldOut",
       "maxPax": 7,
       "price": 2399,
       "deposit": 719,
@@ -1421,14 +1421,6 @@
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
           "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
-        },
-        {
-          "instagram": null,
-          "firstName": "Gianluigi Gamba",
-          "lastName": "",
-          "username": "gianluigi.gamba@virgilio.it",
-          "profilePicture": null,
-          "bio": null
         }
       ]
     },
@@ -1436,6 +1428,31 @@
       "id": "237",
       "start": "2026-03-07",
       "end": "2026-03-14",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 2399,
+      "deposit": 720,
+      "balance": 1679,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 2399,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+        }
+      ]
+    },
+    {
+      "id": "262",
+      "start": "2026-10-10",
+      "end": "2026-10-17",
       "status": "scheduled",
       "maxPax": 7,
       "price": 2399,

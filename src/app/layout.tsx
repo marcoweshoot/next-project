@@ -25,10 +25,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://s3.eu-west-1.amazonaws.com" crossOrigin="" />
         <link rel="preconnect" href="https://wxoodcdxscxazjkoqhsg.supabase.co" crossOrigin="" />
         
+        // ... existing code ...
         {/* Facebook Pixel */}
         <Script
           id="fb-pixel"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -45,12 +46,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=220965505676374&ev=PageView&noscript=1"
-          />
+          <img height="1" width="1" style={{display:'none'}} 
+               src="https://www.facebook.com/tr?id=220965505676374&ev=PageView&noscript=1"/>
         </noscript>
       </head>
 

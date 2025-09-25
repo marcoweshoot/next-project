@@ -10,6 +10,11 @@ export const USER_FRAGMENT = gql`
     lastName
     bio
     instagram
+    email
+    role {
+      name
+    }
+    isCoach
     profilePicture {
       ...ImageFields
     }

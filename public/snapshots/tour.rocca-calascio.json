@@ -367,6 +367,31 @@
           "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
         }
       ]
+    },
+    {
+      "id": "250",
+      "start": "2026-05-09",
+      "end": "2026-05-09",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 129,
+      "deposit": 129,
+      "balance": 0,
+      "minPax": 4,
+      "currency": null,
+      "priceCompanion": 129,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/ibuxus/",
+          "firstName": "Samuele",
+          "lastName": "Bucci",
+          "username": "samuelebucci",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+          },
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+        }
+      ]
     }
   ],
   "faqs": [

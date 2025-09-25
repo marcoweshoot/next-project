@@ -56,6 +56,15 @@ function extractUpcomingCoaches(sessions: any[] = []) {
       sessions
         .filter((s) => { const dt = parseSessionDate(s); return dt && dt.getTime() >= now })
         .flatMap((s) => s.users || [])
+        .filter((u) => {
+          // Filtra solo i coach reali
+          const roleName = typeof u.role === 'object' ? u.role?.name : u.role;
+          return roleName === 'coach' || 
+                 u.isCoach === true || 
+                 (u.firstName && u.firstName.toLowerCase() === 'lorenzo') ||
+                 (u.username && u.username.toLowerCase().includes('coach')) ||
+                 (u.email && u.email.includes('weshoot'));
+        })
         .map((u) => [makeCoachKey(u), u])
     ).values()
   )
@@ -68,6 +77,15 @@ function extractPastCoaches(sessions: any[] = []) {
         .filter((s) => { const dt = parseSessionDate(s); return dt && dt.getTime() < now })
         .sort((a, b) => parseSessionDate(b)!.getTime() - parseSessionDate(a)!.getTime())
         .flatMap((s) => s.users || [])
+        .filter((u) => {
+          // Filtra solo i coach reali
+          const roleName = typeof u.role === 'object' ? u.role?.name : u.role;
+          return roleName === 'coach' || 
+                 u.isCoach === true || 
+                 (u.firstName && u.firstName.toLowerCase() === 'lorenzo') ||
+                 (u.username && u.username.toLowerCase().includes('coach')) ||
+                 (u.email && u.email.includes('weshoot'));
+        })
         .map((u) => [makeCoachKey(u), u])
     ).values()
   )

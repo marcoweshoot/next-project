@@ -27,6 +27,10 @@ interface Coach {
     alternativeText?: string;
   };
   instagram?: string; // handle (es. @nome) o URL completo (https://...)
+  role?: string | { name?: string }; // 'coach', 'user', etc. o oggetto con name
+  isCoach?: boolean; // flag per identificare i coach
+  username?: string; // username per identificazione
+  email?: string; // email per identificazione
 }
 
 interface TourCoachProps {
@@ -49,6 +53,18 @@ const getCoachDisplayName = (coach: Coach) => {
 
 const getCoachInitial = (coach: Coach) => {
   return (coach.firstName?.[0] || coach.lastName?.[0] || 'C').toUpperCase();
+};
+
+// Funzione per determinare se un utente è realmente un coach
+const isRealCoach = (coach: Coach) => {
+  // Controlla se role è un oggetto o una stringa
+  const roleName = typeof coach.role === 'object' ? coach.role?.name : coach.role;
+  
+  return roleName === 'coach' || 
+         coach.isCoach === true || 
+         (coach.firstName && coach.firstName.toLowerCase() === 'lorenzo') ||
+         (coach.username && coach.username.toLowerCase().includes('coach')) ||
+         (coach.email && coach.email.includes('weshoot'));
 };
 
 const pickGridCols = (count: number) => {
@@ -140,12 +156,15 @@ const TourCoach: React.FC<TourCoachProps> = ({
 
           <h3 className="text-lg font-bold mb-2 text-foreground">{coachName}</h3>
 
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <div className="w-5 h-5 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center">
-              <span className="text-white text-xs font-bold">W</span>
+          {/* Mostra il badge "Fotografo Certificato" solo per i coach reali */}
+          {isRealCoach(coach) && (
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <div className="w-5 h-5 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs font-bold">W</span>
+              </div>
+              <Badge variant="secondary" className="text-xs">Fotografo Certificato</Badge>
             </div>
-            <Badge variant="secondary" className="text-xs">Fotografo Certificato</Badge>
-          </div>
+          )}
 
           {coach.bio && (
             <div

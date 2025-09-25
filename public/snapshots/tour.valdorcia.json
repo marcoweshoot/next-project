@@ -2379,6 +2379,156 @@
           "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
         }
       ]
+    },
+    {
+      "id": "254",
+      "start": "2026-07-11",
+      "end": "2026-07-12",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 349,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "257",
+      "start": "2026-09-26",
+      "end": "2026-09-27",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 349,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "259",
+      "start": "2026-11-07",
+      "end": "2026-11-08",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 349,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "265",
+      "start": "2026-12-12",
+      "end": "2026-12-13",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": null,
+      "priceCompanion": 349,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "271",
+      "start": "2026-08-22",
+      "end": "2026-08-23",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 349,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
+    },
+    {
+      "id": "272",
+      "start": "2026-10-17",
+      "end": "2026-10-18",
+      "status": "scheduled",
+      "maxPax": 8,
+      "price": 349,
+      "deposit": 105,
+      "balance": 244,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 349,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+        }
+      ]
     }
   ],
   "faqs": [

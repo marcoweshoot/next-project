@@ -1404,7 +1404,7 @@
         "id": "187",
         "start": "2025-10-12",
         "end": "2025-10-19",
-        "status": "scheduled",
+        "status": "soldOut",
         "maxPax": 7,
         "price": 2399,
         "deposit": 719,
@@ -1422,14 +1422,6 @@
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
-          },
-          {
-            "instagram": null,
-            "firstName": "Gianluigi Gamba",
-            "lastName": "",
-            "username": "gianluigi.gamba@virgilio.it",
-            "profilePicture": null,
-            "bio": null
           }
         ]
       },
@@ -1437,6 +1429,31 @@
         "id": "237",
         "start": "2026-03-07",
         "end": "2026-03-14",
+        "status": "scheduled",
+        "maxPax": 7,
+        "price": 2399,
+        "deposit": 720,
+        "balance": 1679,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 2399,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/lorenzonightscapes/",
+            "firstName": "Lorenzo",
+            "lastName": "Ranieri Tenti",
+            "username": "lorenzoranieri",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
+            },
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          }
+        ]
+      },
+      {
+        "id": "262",
+        "start": "2026-10-10",
+        "end": "2026-10-17",
         "status": "scheduled",
         "maxPax": 7,
         "price": 2399,
@@ -5087,6 +5104,156 @@
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
         ]
+      },
+      {
+        "id": "254",
+        "start": "2026-07-11",
+        "end": "2026-07-12",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 349,
+        "deposit": 105,
+        "balance": 244,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 349,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "257",
+        "start": "2026-09-26",
+        "end": "2026-09-27",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 349,
+        "deposit": 105,
+        "balance": 244,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 349,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "259",
+        "start": "2026-11-07",
+        "end": "2026-11-08",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 349,
+        "deposit": 105,
+        "balance": 244,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 349,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "265",
+        "start": "2026-12-12",
+        "end": "2026-12-13",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 349,
+        "deposit": 105,
+        "balance": 244,
+        "minPax": 3,
+        "currency": null,
+        "priceCompanion": 349,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "271",
+        "start": "2026-08-22",
+        "end": "2026-08-23",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 349,
+        "deposit": 105,
+        "balance": 244,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 349,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "272",
+        "start": "2026-10-17",
+        "end": "2026-10-18",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 349,
+        "deposit": 105,
+        "balance": 244,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 349,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
       }
     ],
     "faqs": [
@@ -6980,6 +7147,31 @@
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
             "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+          }
+        ]
+      },
+      {
+        "id": "273",
+        "start": "2026-12-05",
+        "end": "2026-12-12",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 1399,
+        "deposit": 320,
+        "balance": 979,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 1399,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/lorenzonightscapes/",
+            "firstName": "Lorenzo",
+            "lastName": "Ranieri Tenti",
+            "username": "lorenzoranieri",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
+            },
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
         ]
       }
@@ -9522,6 +9714,56 @@
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
         ]
+      },
+      {
+        "id": "261",
+        "start": "2026-11-21",
+        "end": "2026-11-22",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 379,
+        "deposit": 115,
+        "balance": 264,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 379,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/lorenzonightscapes/",
+            "firstName": "Lorenzo",
+            "lastName": "Ranieri Tenti",
+            "username": "lorenzoranieri",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
+            },
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          }
+        ]
+      },
+      {
+        "id": "266",
+        "start": "2026-12-19",
+        "end": "2026-12-20",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 379,
+        "deposit": 115,
+        "balance": 264,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 379,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/lorenzonightscapes/",
+            "firstName": "Lorenzo",
+            "lastName": "Ranieri Tenti",
+            "username": "lorenzoranieri",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
+            },
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          }
+        ]
       }
     ],
     "faqs": [
@@ -11202,6 +11444,31 @@
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
             "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          }
+        ]
+      },
+      {
+        "id": "250",
+        "start": "2026-05-09",
+        "end": "2026-05-09",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 129,
+        "deposit": 129,
+        "balance": 0,
+        "minPax": 4,
+        "currency": null,
+        "priceCompanion": 129,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/ibuxus/",
+            "firstName": "Samuele",
+            "lastName": "Bucci",
+            "username": "samuelebucci",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+            },
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
         ]
       }
@@ -13092,6 +13359,31 @@
         "minPax": 3,
         "currency": "EUR",
         "priceCompanion": null,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/ibuxus/",
+            "firstName": "Samuele",
+            "lastName": "Bucci",
+            "username": "samuelebucci",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+            },
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+          }
+        ]
+      },
+      {
+        "id": "267",
+        "start": "2026-09-05",
+        "end": "2026-09-12",
+        "status": "scheduled",
+        "maxPax": 7,
+        "price": 2199,
+        "deposit": 660,
+        "balance": 1539,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 2199,
         "users": [
           {
             "instagram": "https://www.instagram.com/ibuxus/",
@@ -15317,8 +15609,8 @@
       },
       {
         "id": "135",
-        "start": "2025-11-09",
-        "end": "2025-11-16",
+        "start": "2026-11-07",
+        "end": "2026-11-14",
         "status": "scheduled",
         "maxPax": 7,
         "price": 2899,
@@ -16480,6 +16772,31 @@
         "minPax": 6,
         "currency": "EUR",
         "priceCompanion": 2299,
+        "users": [
+          {
+            "instagram": "alexwidesphotography",
+            "firstName": "Alessandro",
+            "lastName": "Cantarelli",
+            "username": "alessandrocantarelli",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
+            },
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+          }
+        ]
+      },
+      {
+        "id": "249",
+        "start": "2026-05-23",
+        "end": "2026-05-30",
+        "status": "scheduled",
+        "maxPax": 7,
+        "price": 2299,
+        "deposit": 699,
+        "balance": 1600,
+        "minPax": 4,
+        "currency": "EUR",
+        "priceCompanion": 2099,
         "users": [
           {
             "instagram": "alexwidesphotography",
@@ -20834,6 +21151,31 @@
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
             "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+          }
+        ]
+      },
+      {
+        "id": "252",
+        "start": "2026-07-11",
+        "end": "2026-07-18",
+        "status": "scheduled",
+        "maxPax": 7,
+        "price": 2490,
+        "deposit": 750,
+        "balance": 1740,
+        "minPax": 4,
+        "currency": "EUR",
+        "priceCompanion": 2490,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/lorenzonightscapes/",
+            "firstName": "Lorenzo",
+            "lastName": "Ranieri Tenti",
+            "username": "lorenzoranieri",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
+            },
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
           }
         ]
       }
@@ -30777,6 +31119,181 @@
             "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
           }
         ]
+      },
+      {
+        "id": "251",
+        "start": "2026-06-06",
+        "end": "2026-06-06",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 89,
+        "deposit": 89,
+        "balance": 0,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 89,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "253",
+        "start": "2026-07-04",
+        "end": "2026-07-04",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 89,
+        "deposit": 89,
+        "balance": 0,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 89,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "258",
+        "start": "2026-09-12",
+        "end": "2026-09-12",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 89,
+        "deposit": 89,
+        "balance": 0,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 89,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "264",
+        "start": "2026-12-19",
+        "end": "2026-12-19",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 89,
+        "deposit": 89,
+        "balance": 0,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 89,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "268",
+        "start": "2026-11-21",
+        "end": "2026-11-21",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 89,
+        "deposit": 89,
+        "balance": 0,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 89,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "269",
+        "start": "2026-10-03",
+        "end": "2026-10-03",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 89,
+        "deposit": 89,
+        "balance": 0,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 89,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
+      },
+      {
+        "id": "270",
+        "start": "2026-08-29",
+        "end": "2026-08-29",
+        "status": "scheduled",
+        "maxPax": null,
+        "price": 89,
+        "deposit": 89,
+        "balance": 0,
+        "minPax": null,
+        "currency": "EUR",
+        "priceCompanion": 89,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+          }
+        ]
       }
     ],
     "faqs": [
@@ -31138,6 +31655,31 @@
         "minPax": 4,
         "currency": "EUR",
         "priceCompanion": 0,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/ibuxus/",
+            "firstName": "Samuele",
+            "lastName": "Bucci",
+            "username": "samuelebucci",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+            },
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+          }
+        ]
+      },
+      {
+        "id": "255",
+        "start": "2026-10-10",
+        "end": "2026-10-10",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 129,
+        "deposit": 129,
+        "balance": 0,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 129,
         "users": [
           {
             "instagram": "https://www.instagram.com/ibuxus/",
@@ -31983,6 +32525,31 @@
             "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
           }
         ]
+      },
+      {
+        "id": "256",
+        "start": "2026-09-26",
+        "end": "2026-09-26",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 129,
+        "deposit": 129,
+        "balance": 0,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 129,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/ibuxus/",
+            "firstName": "Samuele",
+            "lastName": "Bucci",
+            "username": "samuelebucci",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+            },
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+          }
+        ]
       }
     ],
     "faqs": [
@@ -32505,6 +33072,31 @@
         "balance": 244,
         "minPax": 3,
         "currency": "EUR",
+        "priceCompanion": 349,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/ibuxus/",
+            "firstName": "Samuele",
+            "lastName": "Bucci",
+            "username": "samuelebucci",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+            },
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+          }
+        ]
+      },
+      {
+        "id": "260",
+        "start": "2026-11-07",
+        "end": "2026-11-08",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 349,
+        "deposit": 105,
+        "balance": 244,
+        "minPax": 3,
+        "currency": null,
         "priceCompanion": 349,
         "users": [
           {
@@ -35160,6 +35752,31 @@
         "deposit": 270,
         "balance": 629,
         "minPax": 4,
+        "currency": "EUR",
+        "priceCompanion": 899,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/anto_tru_alo90/",
+            "firstName": "Antonello",
+            "lastName": "Alò",
+            "username": "antonelloalo",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
+            },
+            "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>"
+          }
+        ]
+      },
+      {
+        "id": "263",
+        "start": "2026-10-15",
+        "end": "2026-10-18",
+        "status": "scheduled",
+        "maxPax": 8,
+        "price": 899,
+        "deposit": 269,
+        "balance": 630,
+        "minPax": 3,
         "currency": "EUR",
         "priceCompanion": 899,
         "users": [

@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, AlertCircle, Users, ArrowRight } from "lucide-react";
+import { CheckCircle, AlertCircle, Users, ArrowRight, Clock, XCircle } from "lucide-react";
 import { getTourLink } from "@/components/tour-card/tourCardUtils";
 import { getFullMediaUrl, DEFAULT_COACH_AVATAR } from "@/utils/TourDataUtilis";
 
@@ -13,11 +13,11 @@ interface TourSession {
   endDate: string;
   status:
     | "scheduled"
+    | "almostconfirmed"
     | "confirmed"
-    | "almostConfirmed"
-    | "almostFull"
-    | "waitingList"
-    | "soldOut"
+    | "almostfull"
+    | "waitinglist"
+    | "soldout"
     | string;
   price: number;
   currency: string;
@@ -134,6 +134,9 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
 
   const durationDays = inclusiveDaysRome(session.startDate, session.endDate);
   const durationLabel = `${durationDays} ${durationDays === 1 ? "giorno" : "giorni"}`;
+  
+  // Controlla se è lo stesso giorno (workshop di 1 giorno)
+  const isSameDay = durationDays === 1;
 
   const tourLink = getTourLink(session.tour);
 
@@ -154,14 +157,25 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
   const norm = (s?: string) =>
     (s || "").toLowerCase().replace(/\s+/g, "").replace(/_/g, "");
 
-  // Badge con colori leggibili anche in dark
+  // Badge con colori leggibili anche in dark e conformi a Lighthouse
   const getStatusBadge = (status: string, availableSpots?: number) => {
     const s = norm(status);
     switch (s) {
-      case "confirmed":
-      case "open":
       case "scheduled":
-      case "planning":
+        return (
+          <Badge className="flex items-center gap-1 bg-gray-500/15 text-gray-700 dark:text-gray-300 ring-1 ring-gray-500/30">
+            <Clock className="w-3 h-3" />
+            Iscrizioni aperte
+          </Badge>
+        );
+      case "almostconfirmed":
+        return (
+          <Badge className="flex items-center gap-1 bg-cyan-500/15 text-cyan-700 dark:text-cyan-300 ring-1 ring-cyan-500/30">
+            <AlertCircle className="w-3 h-3" />
+            quasi confermato
+          </Badge>
+        );
+      case "confirmed":
         return (
           <Badge className="flex items-center gap-1 bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-500/30">
             <CheckCircle className="w-3 h-3" />
@@ -169,7 +183,6 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
           </Badge>
         );
       case "almostfull":
-      case "almostconfirmed":
         return (
           <Badge className="flex items-center gap-1 bg-amber-500/15 text-amber-700 dark:text-amber-300 ring-1 ring-amber-500/30">
             <AlertCircle className="w-3 h-3" />
@@ -178,28 +191,16 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
         );
       case "waitinglist":
         return (
-          <Badge className="flex items-center gap-1 bg-sky-500/15 text-sky-700 dark:text-sky-300 ring-1 ring-sky-500/30">
+          <Badge className="flex items-center gap-1 bg-white/15 text-gray-700 dark:text-gray-300 ring-1 ring-gray-500/30">
             <Users className="w-3 h-3" />
-            lista d&apos;attesa
+            Lista d&apos;attesa
           </Badge>
         );
       case "soldout":
-      case "closed":
         return (
-          <Badge className="flex items-center gap-1 bg-neutral-500/15 text-neutral-700 dark:text-neutral-300 ring-1 ring-neutral-500/30">
+          <Badge className="flex items-center gap-1 bg-red-500/15 text-red-700 dark:text-red-300 ring-1 ring-red-500/30">
+            <XCircle className="w-3 h-3" />
             tutto pieno
-          </Badge>
-        );
-      default:
-        return availableSpots && availableSpots > 0 ? (
-          <Badge className="flex items-center gap-1 bg-blue-500/15 text-blue-700 dark:text-blue-300 ring-1 ring-blue-500/30">
-            <Users className="w-3 h-3" />
-            Iscrizioni aperte
-          </Badge>
-        ) : (
-          <Badge className="flex items-center gap-1 bg-amber-500/15 text-amber-700 dark:text-amber-300 ring-1 ring-amber-500/30">
-            <AlertCircle className="w-3 h-3" />
-            quasi pieno
           </Badge>
         );
     }
@@ -242,22 +243,38 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
       <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8">
         {/* Desktop */}
         <div className="hidden sm:block">
-          <div className="flex items-center gap-3">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-foreground">{startDateInfo.day}</div>
-              <div className="text-xs font-medium text-muted-foreground">{startDateInfo.month}</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <ArrowRight className="w-4 h-4 text-red-600 mb-1" />
-              <div className="text-xs font-medium text-red-600 whitespace-nowrap">
-                {durationLabel}
+          {isSameDay ? (
+            // Workshop di 1 giorno - mostra solo una data
+            <div className="flex items-center gap-3">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-foreground">{startDateInfo.day}</div>
+                <div className="text-xs font-medium text-muted-foreground">{startDateInfo.month}</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-xs font-medium text-red-600 whitespace-nowrap">
+                  {durationLabel}
+                </div>
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-foreground">{endDateInfo.day}</div>
-              <div className="text-xs font-medium text-muted-foreground">{endDateInfo.month}</div>
+          ) : (
+            // Workshop multi-giorno - mostra range di date
+            <div className="flex items-center gap-3">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-foreground">{startDateInfo.day}</div>
+                <div className="text-xs font-medium text-muted-foreground">{startDateInfo.month}</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <ArrowRight className="w-4 h-4 text-red-600 mb-1" />
+                <div className="text-xs font-medium text-red-600 whitespace-nowrap">
+                  {durationLabel}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-foreground">{endDateInfo.day}</div>
+                <div className="text-xs font-medium text-muted-foreground">{endDateInfo.month}</div>
+              </div>
             </div>
-          </div>
+          )}
           <div className="text-center mt-2 text-sm text-muted-foreground">
             {getDifficultyLabel(session.tour.difficulty)} •{" "}
             {getExperienceLabel(session.tour.experience_level)}
@@ -267,17 +284,28 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
         {/* Mobile */}
         <div className="block sm:hidden">
           <div className="flex items-center justify-between bg-muted rounded-lg p-3">
-            <div className="flex items-center gap-3">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">{startDateInfo.day}</div>
-                <div className="text-xs font-medium text-muted-foreground">{startDateInfo.month}</div>
+            {isSameDay ? (
+              // Workshop di 1 giorno - mostra solo una data
+              <div className="flex items-center gap-3">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-foreground">{startDateInfo.day}</div>
+                  <div className="text-xs font-medium text-muted-foreground">{startDateInfo.month}</div>
+                </div>
               </div>
-              <ArrowRight className="w-3 h-3 text-red-600" />
-              <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">{endDateInfo.day}</div>
-                <div className="text-xs font-medium text-muted-foreground">{endDateInfo.month}</div>
+            ) : (
+              // Workshop multi-giorno - mostra range di date
+              <div className="flex items-center gap-3">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-foreground">{startDateInfo.day}</div>
+                  <div className="text-xs font-medium text-muted-foreground">{startDateInfo.month}</div>
+                </div>
+                <ArrowRight className="w-3 h-3 text-red-600" />
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-foreground">{endDateInfo.day}</div>
+                  <div className="text-xs font-medium text-muted-foreground">{endDateInfo.month}</div>
+                </div>
               </div>
-            </div>
+            )}
             <div className="text-right">
               <div className="text-xs font-medium text-red-600">{durationLabel}</div>
             </div>
