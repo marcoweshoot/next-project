@@ -31,7 +31,6 @@ export default tseslint.config(
       globals: { ...globals.browser, ...globals.node },
     },
     plugins: {
-      "@next/next": nextPlugin,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
     },
@@ -47,9 +46,6 @@ export default tseslint.config(
       // ...tseslint.configs.recommendedTypeChecked,
     ],
     rules: {
-      // Applico le regole Core Web Vitals di Next senza usare extends legacy
-      ...(nextPlugin.configs["core-web-vitals"]?.rules ?? {}),
-
       // Hook: error (bug reali)
       ...reactHooks.configs.recommended.rules,
 
@@ -71,7 +67,6 @@ export default tseslint.config(
     files: ["**/*.{js,jsx}"],
     extends: [js.configs.recommended],
     rules: {
-      ...(nextPlugin.configs["core-web-vitals"]?.rules ?? {}),
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
     },

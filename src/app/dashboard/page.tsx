@@ -2,7 +2,7 @@ import { createServerClientSupabase } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 
 export default async function DashboardPage() {
-  const supabase = createServerClientSupabase()
+  const supabase = await createServerClientSupabase()
   
   const {
     data: { session },
