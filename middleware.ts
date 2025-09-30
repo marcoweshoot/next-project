@@ -9,7 +9,7 @@ function makeNonce() {
   return crypto.randomUUID().replace(/-/g, "");
 }
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const res = NextResponse.next();
   const isDev = process.env.NODE_ENV !== "production";
   const nonce = makeNonce();
