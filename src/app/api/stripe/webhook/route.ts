@@ -94,7 +94,7 @@ async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent) {
       const { error: insertError } = await supabase
         .from('bookings')
         .insert({
-          user_id: finalUserId,
+          user_id: userId,
           tour_id: tourId,
           session_id: sessionId,
           status: 'deposit_paid',
@@ -204,7 +204,7 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
       const { error: insertError } = await supabase
         .from('bookings')
         .insert({
-          user_id: finalUserId,
+          user_id: userId,
           tour_id: tourId,
           session_id: sessionId,
           status: 'deposit_paid',
