@@ -165,7 +165,13 @@ export async function uploadProfileImage(
 
   try {
     // Ridimensiona immagine
-    const resizedFile = await resizeImage(file, 400, 400)
+    const resizedBlob = await resizeImage(file, 400, 400)
+    
+    // Converti Blob in File mantenendo il nome originale
+    const resizedFile = new File([resizedBlob], file.name, {
+      type: resizedBlob.type || file.type,
+      lastModified: file.lastModified
+    })
 
     // Upload
     if (useCloudinary) {
