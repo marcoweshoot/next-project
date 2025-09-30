@@ -23,10 +23,15 @@ interface Booking {
   id: string
   tour_id: string
   session_id: string
+  quantity: number
   status: 'pending' | 'deposit_paid' | 'fully_paid' | 'completed' | 'cancelled'
   deposit_amount: number
   total_amount: number
   created_at: string
+  tour_title?: string
+  tour_destination?: string
+  session_date?: string
+  session_end_date?: string
 }
 
 interface DashboardOverviewProps {
@@ -45,7 +50,14 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
         setLoading(true)
         const { data, error } = await supabase
           .from('bookings')
-          .select('*')
+          .select(`
+            *,
+            tour_title,
+            tour_destination,
+            session_date,
+            session_end_date,
+            quantity
+          `)
           .eq('user_id', userId)
           .order('created_at', { ascending: false })
           .limit(5) // Show only recent bookings
@@ -234,6 +246,11 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
                     <div>
                       <p className="font-medium">
                         {booking.tour_title || `Tour: ${booking.tour_id}`}
+                        {booking.quantity > 1 && (
+                          <span className="text-sm font-normal text-muted-foreground ml-2">
+                            ({booking.quantity} persone)
+                          </span>
+                        )}
                       </p>
                       <p className="text-sm text-muted-foreground">
                         {booking.session_date ? 
