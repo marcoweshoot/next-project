@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
       }
       
       
-      const { data: insertData, error: insertError } = await supabase
+      const { error: insertError } = await supabase
         .from('bookings')
         .insert(bookingData)
         .select()

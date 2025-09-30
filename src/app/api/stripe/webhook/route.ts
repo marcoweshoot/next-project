@@ -148,7 +148,7 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
     }
   )
   
-  const { userId, tourId, sessionId, paymentType, quantity } = session.metadata
+  const { userId, tourId, sessionId, paymentType } = session.metadata
 
   if (!userId || !tourId || !sessionId || !paymentType) {
     console.error('❌ Missing metadata in checkout session:', session.id)
@@ -247,7 +247,6 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
 
       if (insertError) {
         console.error('Error creating booking:', insertError)
-      } else {
       }
     } else if (paymentType === 'balance') {
       // Update existing booking to fully paid
@@ -263,7 +262,6 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
 
       if (updateError) {
         console.error('Error updating booking:', updateError)
-      } else {
       }
     }
   } catch (error) {
@@ -348,7 +346,6 @@ async function updateUserProfileWithBillingData(supabase: any, userId: string, s
 
     if (updateError) {
       console.error('❌ Error updating/creating user profile:', updateError)
-    } else {
     }
 
   } catch (error) {
