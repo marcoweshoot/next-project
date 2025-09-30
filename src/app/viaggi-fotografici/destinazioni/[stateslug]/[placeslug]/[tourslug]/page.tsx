@@ -84,6 +84,22 @@ function extractUpcomingCoaches(sessions: any[] = []) {
     // Controlla il ruolo dall'oggetto role OPPURE il level
     const roleName = u.role?.name;
     const userLevel = u.level;
+    
+    // Debug: stampa tutti i campi dell'utente per capire la struttura
+    console.log('🔍 Debug user fields for', u.firstName, u.lastName, ':', {
+      allKeys: Object.keys(u),
+      role: u.role,
+      level: u.level,
+      roleName: roleName,
+      userLevel: userLevel,
+      // Controlla se ci sono altri campi che potrebbero indicare il ruolo
+      isCoach: u.isCoach,
+      userRole: u.userRole,
+      userType: u.userType,
+      type: u.type,
+      category: u.category
+    });
+    
     const isCoach = roleName === 'coach' || userLevel === 'coach';
     
     if (isCoach) {
