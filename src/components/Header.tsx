@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
+import { usePathname } from 'next/navigation'
 import HeaderLogoDynamic from './header/HeaderLogoDynamic'
 import HeaderMobileButton from './header/HeaderMobileButton'
 import { useNavbarScroll } from '@/hooks/useNavbarScroll'
@@ -63,15 +64,26 @@ const Header = () => {
     return () => document.removeEventListener('click', handleClickOutside)
   }, [isMenuOpen])
 
+  const pathname = usePathname();
+  
+  // Rileva se siamo in pagine di autenticazione (ottimizzato)
+  const isAuthPage = pathname.startsWith('/auth/') || 
+                     pathname.startsWith('/dashboard') || 
+                     pathname.startsWith('/admin');
+
   return (
     <header
-      className={`fixed left-0 right-0 top-0 z-50 transition-colors duration-300 ${
+      className={`fixed left-0 right-0 top-0 z-50 transition-colors duration-300 will-change-transform ${
         isScrolled
           ? // tema-aware: sfondo della navbar quando è attaccata
             'border-b border-border shadow-sm supports-[backdrop-filter]:bg-background/60 bg-background/80 backdrop-blur'
-          : // sopra l’hero: trasparente
+          : isAuthPage
+          ? // nelle pagine auth: semi-trasparente per leggibilità
+            'bg-background/20 backdrop-blur-sm'
+          : // sopra l'hero: trasparente
             'bg-transparent'
       }`}
+      style={{ transform: 'translateZ(0)' }}
     >
       <div className="container">
         <div className="flex h-16 items-center justify-between lg:h-20">

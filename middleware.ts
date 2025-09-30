@@ -1,6 +1,7 @@
 // middleware.ts
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { createServerClient } from '@supabase/ssr'
 
 // In middleware (Edge runtime) niente Buffer: usa Web Crypto.
 function makeNonce() {
@@ -34,6 +35,70 @@ export function middleware(req: NextRequest) {
 
   // Parti in Report-Only per test; poi passa a 'Content-Security-Policy'
   res.headers.set("Content-Security-Policy", csp);
+
+  // Gestione autenticazione Supabase
+  try {
+    const supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      {
+        cookies: {
+          get(name: string) {
+            return req.cookies.get(name)?.value
+          },
+          set(name: string, value: string, options: any) {
+            res.cookies.set(name, value, options)
+          },
+          remove(name: string, options: any) {
+            res.cookies.set(name, '', { ...options, maxAge: 0 })
+          },
+        },
+      }
+    )
+    await supabase.auth.getSession()
+  } catch (error) {
+    console.error('Middleware Supabase error:', error)
+  }
+
+  // Proteggi le route admin
+  if (req.nextUrl.pathname.startsWith('/admin')) {
+    try {
+      const supabase = createServerClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+        {
+          cookies: {
+            get(name: string) {
+              return req.cookies.get(name)?.value
+            },
+            set(name: string, value: string, options: any) {
+              res.cookies.set(name, value, options)
+            },
+            remove(name: string, options: any) {
+              res.cookies.set(name, '', { ...options, maxAge: 0 })
+            },
+          },
+        }
+      )
+      const { data: { user } } = await supabase.auth.getUser()
+
+      if (!user) {
+        return NextResponse.redirect(new URL('/auth/login', req.url))
+      }
+
+      // Verifica se l'utente è admin usando la funzione RPC
+      const { data: isAdmin, error } = await supabase
+        .rpc('is_admin', { user_uuid: user.id })
+
+      if (error || !isAdmin) {
+        return NextResponse.redirect(new URL('/dashboard', req.url))
+      }
+    } catch (error) {
+      console.error('Admin middleware error:', error)
+      return NextResponse.redirect(new URL('/dashboard', req.url))
+    }
+  }
+
   return res;
 }
 

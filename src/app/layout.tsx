@@ -6,7 +6,7 @@ import { ToastStateProvider } from '@/components/ui/toast-provider';
 import { Toaster } from '@/components/ui/toaster';
 import IubendaScripts from "@/integrations/IubendaScripts";
 import ConsentLoaders from "@/integrations/ConsentLoaders";
-import Script from 'next/script';
+import { FacebookPixel } from "@/components/analytics/FacebookPixel";
 
 // Usa la CSS variable così font-sans del tema funziona ovunque
 const montserrat = Montserrat({
@@ -25,30 +25,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://s3.eu-west-1.amazonaws.com" crossOrigin="" />
         <link rel="preconnect" href="https://wxoodcdxscxazjkoqhsg.supabase.co" crossOrigin="" />
         
-        // ... existing code ...
-        {/* Facebook Pixel */}
-        <Script
-          id="fb-pixel"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '220965505676374');
-              fbq('track', 'PageView');
-            `,
-          }}
-        />
-        <noscript>
-          <img height="1" width="1" style={{display:'none'}} 
-               src="https://www.facebook.com/tr?id=220965505676374&ev=PageView&noscript=1"/>
-        </noscript>
+        {/* Permissions Policy per abilitare i pagamenti */}
+        <meta httpEquiv="Permissions-Policy" content="payment=(*), camera=(), microphone=(), geolocation=()" />
+        
+        <FacebookPixel />
       </head>
 
       {/* Applica i token del tema subito per evitare bordi bianchi in dark */}

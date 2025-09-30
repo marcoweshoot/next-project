@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,9 +14,11 @@ import {
   CheckCircle,
   AlertCircle,
   XCircle,
+  CreditCard,
 } from "lucide-react";
 import { getTourLink } from "@/components/tour-card/tourCardUtils";
 import { getFullMediaUrl, DEFAULT_COACH_AVATAR } from "@/utils/TourDataUtilis";
+import { SimpleCheckoutModal } from "@/components/payment/SimpleCheckoutModal";
 
 interface SessionCardProps {
   session: {
@@ -27,6 +29,8 @@ interface SessionCardProps {
     price: number;
     currency?: string;
     maxPax: number;
+    deposit?: number;
+    balance?: number;
     users?: Array<{
       id: string;
       username: string;
@@ -56,8 +60,12 @@ interface SessionCardProps {
   };
   isNext?: boolean;
   ctaLabel?: string; // default: WHATSAPP
-  /** Mostra/nasconde il bottone "PRENOTA SUBITO" (default: false = nascosto) */
-  showBookingButton?: boolean;
+  /** Mostra/nasconde il bottone "PAGA ORA" (default: false = nascosto) */
+  showPaymentButton?: boolean;
+  user?: {
+    id: string;
+    email: string;
+  } | null;
 }
 
 const SessionCard: React.FC<SessionCardProps> = ({
@@ -66,8 +74,11 @@ const SessionCard: React.FC<SessionCardProps> = ({
   coach,
   isNext = false,
   ctaLabel = "WHATSAPP",
-  showBookingButton = false, // <- nascosto di default
+  showPaymentButton = false,
+  user = null,
 }) => {
+  const [isQuickCheckoutOpen, setIsQuickCheckoutOpen] = useState(false);
+  
   const safeParse = (d: string) => {
     const x = new Date(d);
     return isNaN(x.getTime()) ? null : x;
@@ -204,6 +215,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
   };
 
   return (
+    <>
     <Card
       className={`group relative overflow-hidden rounded-xl border border-border bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-card/60 shadow-sm transition-all duration-300 hover:shadow-lg ${
         isNext ? "ring-2 ring-primary/50" : ""
@@ -277,12 +289,18 @@ const SessionCard: React.FC<SessionCardProps> = ({
                   {ctaLabel}
                 </Button>
 
-                {/* PRENOTA SUBITO - nascosto per ora */}
-                {showBookingButton && (
-                  <Button asChild variant="outline" className="w-full font-medium py-3" size="lg">
-                    <Link href={tourLink}>PRENOTA SUBITO</Link>
+                {/* PAGA ORA - nuovo bottone di pagamento */}
+                {showPaymentButton && (
+                  <Button 
+                    onClick={() => setIsQuickCheckoutOpen(true)}
+                    className="w-full font-medium py-3 bg-green-600 hover:bg-green-700 text-white" 
+                    size="lg"
+                  >
+                    <CreditCard className="w-4 h-4 mr-2" />
+                    PAGA ORA
                   </Button>
                 )}
+
               </div>
             </div>
           </div>
@@ -344,18 +362,46 @@ const SessionCard: React.FC<SessionCardProps> = ({
                   {ctaLabel}
                 </Button>
 
-                {/* PRENOTA SUBITO - nascosto per ora */}
-                {showBookingButton && (
-                  <Button asChild variant="outline" className="w-full font-medium">
-                    <Link href={tourLink}>PRENOTA SUBITO</Link>
+                {/* PAGA ORA - nuovo bottone di pagamento */}
+                {showPaymentButton && (
+                  <Button 
+                    onClick={() => setIsQuickCheckoutOpen(true)}
+                    className="w-full font-medium bg-green-600 hover:bg-green-700 text-white"
+                  >
+                    <CreditCard className="w-4 h-4 mr-2" />
+                    PAGA ORA
                   </Button>
                 )}
+
               </div>
             </div>
           </div>
         </div>
       </CardContent>
     </Card>
+
+    {/* Quick Checkout Modal */}
+        <SimpleCheckoutModal
+      isOpen={isQuickCheckoutOpen}
+      onClose={() => setIsQuickCheckoutOpen(false)}
+      session={{
+        id: session.id,
+        date: session.start,
+        price: price,
+        deposit: session.deposit || Math.round(price * 0.3), // 30% se non specificato
+        currency: currency.toLowerCase(),
+        availableSpots: session.maxPax,
+      }}
+      tour={{
+        id: tour.id,
+        title: tour.title,
+        startDate: session.start,
+        endDate: session.end,
+        coach: coach.name,
+      }}
+      user={user}
+    />
+  </>
   );
 };
 

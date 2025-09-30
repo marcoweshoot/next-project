@@ -9,12 +9,12 @@ export default function HeaderLogo({ logoSrc }: HeaderLogoProps) {
   return (
     <Link href="/" className="flex items-center" title="WeShoot | Viaggi Fotografici">
       <Image
-  src={logoSrc}
-  alt="WeShoot"
-  width={120}
-  height={35}
-  priority
-/>
+        src={logoSrc}
+        alt="WeShoot"
+        width={120}
+        height={35}
+        priority
+      />
     </Link>
   );
 }

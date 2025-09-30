@@ -1,13 +1,15 @@
 'use client';
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import HeaderLogo from "./HeaderLogo";
 
-const DEFAULT_LOGO = "/lovable-uploads/11f40570-4fe1-4259-a79d-7c9d26dc7505.png";
-const SCROLLED_LOGO = "/lovable-uploads/64763a8e-c4be-4770-b713-082d8d5b4f9e.png";
+const LIGHT_LOGO = "/lovable-uploads/logo-light.svg";
+const DARK_LOGO = "/lovable-uploads/logo-dark.svg";
 
 export default function HeaderLogoDynamic() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const updateScroll = () => {
@@ -19,5 +21,14 @@ export default function HeaderLogoDynamic() {
     return () => window.removeEventListener("scroll", updateScroll);
   }, []);
 
-  return <HeaderLogo logoSrc={isScrolled ? SCROLLED_LOGO : DEFAULT_LOGO} />;
+  // Rileva se siamo in pagine di autenticazione (ottimizzato)
+  const isAuthPage = pathname.startsWith('/auth/') || 
+                     pathname.startsWith('/dashboard') || 
+                     pathname.startsWith('/admin');
+
+  // Nelle pagine auth/dashboard/admin usa sempre il logo light (per sfondo chiaro)
+  // Altrimenti usa la logica normale: light quando non scrollato, dark quando scrollato
+  const logoSrc = isAuthPage ? LIGHT_LOGO : (isScrolled ? DARK_LOGO : LIGHT_LOGO);
+
+  return <HeaderLogo logoSrc={logoSrc} />;
 }

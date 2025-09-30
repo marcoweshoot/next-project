@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
 
     // Create Stripe Payment Intent
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: formatAmountForStripe(amount, currency),
+      amount: amount, // Amount già in centesimi dal client
       currency: currency.toLowerCase(),
       metadata: {
         userId,

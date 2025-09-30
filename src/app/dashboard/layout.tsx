@@ -1,6 +1,8 @@
 import { redirect } from 'next/navigation'
 import { createServerClientSupabase } from '@/lib/supabase/server'
 import { LogoutButton } from '@/components/dashboard/LogoutButton'
+import { DashboardNavigation } from '@/components/dashboard/DashboardNavigation'
+import Header from '@/components/Header'
 
 export default async function DashboardLayout({
   children,
@@ -10,16 +12,18 @@ export default async function DashboardLayout({
   const supabase = await createServerClientSupabase()
   
   const {
-    data: { session },
-  } = await supabase.auth.getSession()
+    data: { user },
+  } = await supabase.auth.getUser()
 
-  if (!session) {
+  if (!user) {
     redirect('/auth/login')
   }
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8">
+      <Header />
+      
+      <div className="container mx-auto px-4 py-8 pt-20 lg:pt-24">
         <div className="mb-8 flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
@@ -29,6 +33,11 @@ export default async function DashboardLayout({
           </div>
           <LogoutButton />
         </div>
+        
+        <div className="mb-6">
+          <DashboardNavigation />
+        </div>
+        
         {children}
       </div>
     </div>

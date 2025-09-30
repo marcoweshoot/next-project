@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import Link from 'next/link'
+import Header from '@/components/Header'
 
 export default function RegisterPage() {
   const [email, setEmail] = useState('')
@@ -41,20 +42,33 @@ export default function RegisterPage() {
     }
 
     try {
-      const { error } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signUp({
         email,
         password,
         options: {
           data: {
             first_name: firstName,
             last_name: lastName,
-          }
+          },
+          emailRedirectTo: `${window.location.origin}/auth/callback`
         }
       })
 
       if (error) {
         setError(error.message)
-      } else {
+      } else if (data.user) {
+        // Crea il profilo manualmente se il trigger non funziona
+        try {
+          await supabase
+            .from('profiles')
+            .insert({
+              id: data.user.id,
+              first_name: firstName,
+              last_name: lastName
+            })
+        } catch (profileError) {
+          console.log('Profilo già esistente o errore:', profileError)
+        }
         setSuccess(true)
       }
     } catch (err) {
@@ -66,7 +80,9 @@ export default function RegisterPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background p-4">
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="flex items-center justify-center p-4 pt-20 lg:pt-24">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl text-green-600">Registrazione Completata!</CardTitle>
@@ -78,14 +94,17 @@ export default function RegisterPage() {
             <Button asChild>
               <Link href="/auth/login">Vai al Login</Link>
             </Button>
-          </CardContent>
-        </Card>
+        </CardContent>
+      </Card>
       </div>
-    )
+    </div>
+  )
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background p-4">
+    <div className="min-h-screen bg-background">
+      <Header />
+      <div className="flex items-center justify-center p-4 pt-20 lg:pt-24">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Registrati</CardTitle>
@@ -169,6 +188,7 @@ export default function RegisterPage() {
           </div>
         </CardContent>
       </Card>
+      </div>
     </div>
   )
 }

@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
 import { Calendar, Euro, Users, CreditCard } from 'lucide-react'
-import { PaymentForm } from '@/components/payment/PaymentForm'
+import { StripeCheckoutButton } from '@/components/payment/StripeCheckoutButton'
 
 interface TourSession {
   id: string
@@ -171,12 +171,16 @@ export function BookingForm({ tour, session, onBookingSuccess }: BookingFormProp
         )}
 
         {/* Payment Form */}
-        <PaymentForm
+        <StripeCheckoutButton
           amount={depositAmount * 100} // Convert to cents
+          currency="eur"
           tourId={tour.id}
           sessionId={session.id}
           userId={user.id}
           paymentType="deposit"
+          tourTitle={tour.title}
+          tourDestination={tour.destination}
+          sessionDate={session.start}
           onSuccess={handlePaymentSuccess}
           onError={handlePaymentError}
         />

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 interface HeaderMobileButtonProps {
@@ -18,6 +19,13 @@ const HeaderMobileButton: React.FC<HeaderMobileButtonProps> = ({
   setIsMenuOpen,
   menuId = 'mobile-nav',
 }) => {
+  const pathname = usePathname();
+  
+  // Rileva se siamo in pagine di autenticazione (ottimizzato)
+  const isAuthPage = pathname.startsWith('/auth/') || 
+                     pathname.startsWith('/dashboard') || 
+                     pathname.startsWith('/admin');
+
   const handleToggle = (e: React.MouseEvent<HTMLButtonElement>) => {
     // niente preventDefault su un <button type="button">
     e.stopPropagation();
@@ -38,13 +46,13 @@ const HeaderMobileButton: React.FC<HeaderMobileButtonProps> = ({
       {isMenuOpen ? (
         <X
           className={`h-6 w-6 transition-transform duration-200 ${
-            isScrolled ? 'text-gray-800 dark:text-white' : 'text-white'
+            isScrolled || isAuthPage ? 'text-gray-800 dark:text-white' : 'text-white'
           }`}
         />
       ) : (
         <Menu
           className={`h-6 w-6 transition-transform duration-200 ${
-            isScrolled ? 'text-gray-800 dark:text-white' : 'text-white'
+            isScrolled || isAuthPage ? 'text-gray-800 dark:text-white' : 'text-white'
           }`}
         />
       )}

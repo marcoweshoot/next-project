@@ -3,6 +3,8 @@
 import React from 'react';
 import SessionCard from './SessionCard';
 import { Calendar } from 'lucide-react';
+import { createClient } from '@/lib/supabase/client';
+import { useEffect, useState } from 'react';
 
 interface TourSessionsProps {
   tour: {
@@ -55,7 +57,19 @@ interface TourSessionsProps {
 }
 
 const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
+  const [user, setUser] = useState<{ id: string; email: string } | null>(null);
   const now = new Date();
+
+  useEffect(() => {
+    const getUser = async () => {
+      const supabase = createClient();
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        setUser({ id: user.id, email: user.email || '' });
+      }
+    };
+    getUser();
+  }, []);
 
   // Filtra solo le sessioni future e ordinale per data
   const futureSessions =
@@ -112,6 +126,8 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
         tour={tour}
         coach={sessionCoach}
         isNext={isNext}
+        showPaymentButton={true}
+        user={user}
       />
     );
   };

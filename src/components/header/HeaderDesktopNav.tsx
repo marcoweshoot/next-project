@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import React from 'react';
 import dynamic from 'next/dynamic';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 
@@ -24,8 +25,16 @@ const menuPanelClasses =
   'group-focus-within/drop:opacity-100 group-focus-within/drop:visible hover:opacity-100 hover:visible hover:translate-y-0';
 
 const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
-  // Link chiari su hero scuro, normali quando la header è “attaccata” allo sfondo della pagina
-  const linkColor = isScrolled ? 'text-foreground' : 'text-primary-foreground';
+  const pathname = usePathname();
+  
+  // Rileva se siamo in pagine di autenticazione (ottimizzato)
+  const isAuthPage = pathname.startsWith('/auth/') || 
+                     pathname.startsWith('/dashboard') || 
+                     pathname.startsWith('/admin');
+  
+  // Link chiari su hero scuro, normali quando la header è "attaccata" allo sfondo della pagina
+  // Nelle pagine auth/dashboard/admin usa sempre colori scuri
+  const linkColor = isScrolled || isAuthPage ? 'text-foreground' : 'text-primary-foreground';
 
   return (
     <nav className="hidden lg:flex items-center flex-nowrap gap-x-4 xl:gap-x-8">
