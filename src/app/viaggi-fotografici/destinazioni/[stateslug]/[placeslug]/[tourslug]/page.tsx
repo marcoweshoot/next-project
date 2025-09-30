@@ -51,44 +51,91 @@ const parseSessionDate = (s: any): Date | null => {
 }
 function extractUpcomingCoaches(sessions: any[] = []) {
   const now = Date.now()
-  return Array.from(
-    new Map(
-      sessions
-        .filter((s) => { const dt = parseSessionDate(s); return dt && dt.getTime() >= now })
-        .flatMap((s) => s.users || [])
-        .filter((u) => {
-          // Filtra solo i coach reali
-          const roleName = typeof u.role === 'object' ? u.role?.name : u.role;
-          return roleName === 'coach' || 
-                 u.isCoach === true || 
-                 (u.firstName && u.firstName.toLowerCase() === 'lorenzo') ||
-                 (u.username && u.username.toLowerCase().includes('coach')) ||
-                 (u.email && u.email.includes('weshoot'));
-        })
-        .map((u) => [makeCoachKey(u), u])
-    ).values()
+  console.log('🔍 extractUpcomingCoaches - Total sessions:', sessions.length)
+  
+  const upcomingSessions = sessions.filter((s) => { 
+    const dt = parseSessionDate(s); 
+    return dt && dt.getTime() >= now 
+  })
+  console.log('🔍 extractUpcomingCoaches - Upcoming sessions:', upcomingSessions.length)
+  
+  const allUsers = upcomingSessions.flatMap((s) => s.users || [])
+  console.log('🔍 extractUpcomingCoaches - All users from upcoming sessions:', allUsers.length)
+  
+  const coachUsers = allUsers.filter((u) => {
+    // Filtra solo i coach reali
+    const roleName = typeof u.role === 'object' ? u.role?.name : u.role;
+    const isCoach = roleName === 'coach' || 
+           u.isCoach === true || 
+           (u.firstName && u.firstName.toLowerCase() === 'lorenzo') ||
+           (u.username && u.username.toLowerCase().includes('coach')) ||
+           (u.email && u.email.includes('weshoot'));
+    
+    if (isCoach) {
+      console.log('✅ Coach found:', { 
+        name: `${u.firstName} ${u.lastName}`, 
+        role: roleName, 
+        isCoach: u.isCoach,
+        username: u.username,
+        email: u.email 
+      })
+    }
+    
+    return isCoach;
+  })
+  console.log('🔍 extractUpcomingCoaches - Coach users found:', coachUsers.length)
+  
+  const uniqueCoaches = Array.from(
+    new Map(coachUsers.map((u) => [makeCoachKey(u), u])).values()
   )
+  console.log('🔍 extractUpcomingCoaches - Unique coaches:', uniqueCoaches.length)
+  
+  return uniqueCoaches
 }
 function extractPastCoaches(sessions: any[] = []) {
   const now = Date.now()
-  return Array.from(
-    new Map(
-      sessions
-        .filter((s) => { const dt = parseSessionDate(s); return dt && dt.getTime() < now })
-        .sort((a, b) => parseSessionDate(b)!.getTime() - parseSessionDate(a)!.getTime())
-        .flatMap((s) => s.users || [])
-        .filter((u) => {
-          // Filtra solo i coach reali
-          const roleName = typeof u.role === 'object' ? u.role?.name : u.role;
-          return roleName === 'coach' || 
-                 u.isCoach === true || 
-                 (u.firstName && u.firstName.toLowerCase() === 'lorenzo') ||
-                 (u.username && u.username.toLowerCase().includes('coach')) ||
-                 (u.email && u.email.includes('weshoot'));
-        })
-        .map((u) => [makeCoachKey(u), u])
-    ).values()
+  console.log('🔍 extractPastCoaches - Total sessions:', sessions.length)
+  
+  const pastSessions = sessions.filter((s) => { 
+    const dt = parseSessionDate(s); 
+    return dt && dt.getTime() < now 
+  })
+  console.log('🔍 extractPastCoaches - Past sessions:', pastSessions.length)
+  
+  const allUsers = pastSessions
+    .sort((a, b) => parseSessionDate(b)!.getTime() - parseSessionDate(a)!.getTime())
+    .flatMap((s) => s.users || [])
+  console.log('🔍 extractPastCoaches - All users from past sessions:', allUsers.length)
+  
+  const coachUsers = allUsers.filter((u) => {
+    // Filtra solo i coach reali
+    const roleName = typeof u.role === 'object' ? u.role?.name : u.role;
+    const isCoach = roleName === 'coach' || 
+           u.isCoach === true || 
+           (u.firstName && u.firstName.toLowerCase() === 'lorenzo') ||
+           (u.username && u.username.toLowerCase().includes('coach')) ||
+           (u.email && u.email.includes('weshoot'));
+    
+    if (isCoach) {
+      console.log('✅ Past Coach found:', { 
+        name: `${u.firstName} ${u.lastName}`, 
+        role: roleName, 
+        isCoach: u.isCoach,
+        username: u.username,
+        email: u.email 
+      })
+    }
+    
+    return isCoach;
+  })
+  console.log('🔍 extractPastCoaches - Coach users found:', coachUsers.length)
+  
+  const uniqueCoaches = Array.from(
+    new Map(coachUsers.map((u) => [makeCoachKey(u), u])).values()
   )
+  console.log('🔍 extractPastCoaches - Unique coaches:', uniqueCoaches.length)
+  
+  return uniqueCoaches
 }
 
 // ---------- SNAPSHOT HELPERS ----------
@@ -274,10 +321,21 @@ export default async function TourDetailPage({ params }: Props) {
       return permanentRedirect(`${CANONICAL_BASE}/${canonicalState}/${canonicalPlace}/${tourslug}`)
     }
 
+    console.log('🎯 Tour slug:', tourslug)
+    console.log('🎯 Tour sessions count:', tour.sessions?.length || 0)
+    
     const upcoming = extractUpcomingCoaches(tour.sessions)
     const past = extractPastCoaches(tour.sessions)
     const isFallbackPast = upcoming.length === 0 && past.length > 0
     const coaches = upcoming.length > 0 ? upcoming : past
+    
+    console.log('🎯 Final coaches result:', {
+      upcomingCount: upcoming.length,
+      pastCount: past.length,
+      isFallbackPast,
+      finalCoachesCount: coaches.length,
+      coaches: coaches.map(c => ({ name: `${c.firstName} ${c.lastName}`, id: c.id }))
+    })
 
     const reviewsCount = Array.isArray(tour.reviews) ? tour.reviews.length : 0
     const averageRating = reviewsCount
