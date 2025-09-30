@@ -197,16 +197,19 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
       console.log('🔗 Magic link generated for auto-login')
       
       // Salva il magic link nel database per recuperarlo dopo
-      await supabase
-        .from('temp_magic_links')
-        .insert({
-          user_id: finalUserId,
-          email: userEmail,
-          magic_link: magicLinkUrl,
-          expires_at: new Date(Date.now() + 15 * 60 * 1000).toISOString(), // 15 minuti
-          created_at: new Date().toISOString()
-        })
-        .catch(err => console.error('❌ Error saving magic link:', err))
+      try {
+        await supabase
+          .from('temp_magic_links')
+          .insert({
+            user_id: finalUserId,
+            email: userEmail,
+            magic_link: magicLinkUrl,
+            expires_at: new Date(Date.now() + 15 * 60 * 1000).toISOString(), // 15 minuti
+            created_at: new Date().toISOString()
+          })
+      } catch (err) {
+        console.error('❌ Error saving magic link:', err)
+      }
     }
   }
 
