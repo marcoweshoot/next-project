@@ -558,7 +558,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
-          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -583,7 +589,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
-          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -608,7 +620,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
-          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -633,7 +651,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Andre_Curzi_876ef6c363.jpg"
           },
-          "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>"
+          "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>",
+          "level": "beginner",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     }

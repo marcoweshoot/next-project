@@ -367,7 +367,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
           },
-          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         },
         {
           "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -377,7 +383,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
-          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -402,7 +414,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
           },
-          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+          "level": "coach",
+          "role": {
+            "name": "User",
+            "description": "A User",
+            "type": "user"
+          }
         }
       ]
     },
@@ -427,7 +445,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
           },
-          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+          "level": "coach",
+          "role": {
+            "name": "User",
+            "description": "A User",
+            "type": "user"
+          }
         }
       ]
     },
@@ -452,7 +476,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
           },
-          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     }

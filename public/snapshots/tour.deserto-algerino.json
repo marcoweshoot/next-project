@@ -612,7 +612,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
           },
-          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     }

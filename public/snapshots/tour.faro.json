@@ -544,7 +544,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
           },
-          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         },
         {
           "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -554,7 +560,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
-          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -579,7 +591,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
           },
-          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         },
         {
           "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -589,7 +607,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
-          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -614,7 +638,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
-          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         },
         {
           "instagram": "alexwidesphotography",
@@ -624,7 +654,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
           },
-          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -649,7 +685,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
-          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -674,7 +716,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
-          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -699,7 +747,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
           },
-          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+          "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -724,7 +778,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
           },
-          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     }

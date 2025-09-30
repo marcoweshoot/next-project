@@ -752,7 +752,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
           },
-          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     }

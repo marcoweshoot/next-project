@@ -1236,7 +1236,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -1261,7 +1267,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -1286,7 +1298,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -1311,7 +1329,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": " https://www.instagram.com/anna_pernice/",
@@ -1321,7 +1345,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Anna_Pernice_92ca96963a.jpg"
             },
-            "bio": "<p>Travel blogger di professione, giornalista, content creator e digital pr. Innamorata dei viaggi e della Fotografia</p>"
+            "bio": "<p>Travel blogger di professione, giornalista, content creator e digital pr. Innamorata dei viaggi e della Fotografia</p>",
+            "level": "beginner",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -1346,7 +1376,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -1371,7 +1407,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -1396,7 +1438,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -1421,7 +1469,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -1446,7 +1500,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -1471,7 +1531,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -2387,7 +2453,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -2397,7 +2469,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -2422,7 +2500,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -2432,7 +2516,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -2457,7 +2547,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -2467,7 +2563,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -2492,7 +2594,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -2517,7 +2625,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -3991,7 +4105,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -4001,7 +4121,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -4011,7 +4137,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4036,7 +4168,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -4046,7 +4184,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -4056,7 +4200,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4081,7 +4231,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -4091,7 +4247,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -4101,7 +4263,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4126,7 +4294,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4151,7 +4325,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4176,7 +4356,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4201,7 +4387,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4226,7 +4418,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4251,7 +4449,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -4276,7 +4480,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -4286,7 +4496,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4311,7 +4527,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marco_carotenuto",
@@ -4321,7 +4543,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4346,7 +4574,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -4356,7 +4590,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4381,7 +4621,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marco_carotenuto",
@@ -4391,7 +4637,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4416,7 +4668,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -4426,7 +4684,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4451,7 +4715,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4476,7 +4746,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -4501,7 +4777,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4526,7 +4808,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4551,7 +4839,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4576,7 +4870,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4601,7 +4901,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4626,7 +4932,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4651,7 +4963,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4676,7 +4994,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
             },
-            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4701,7 +5025,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4726,7 +5056,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4751,7 +5087,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
             },
-            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4776,7 +5118,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4801,7 +5149,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4826,7 +5180,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4851,7 +5211,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
             },
-            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -4876,7 +5242,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4901,7 +5273,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4926,7 +5304,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4951,7 +5335,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -4976,7 +5366,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5001,7 +5397,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5026,7 +5428,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5051,7 +5459,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5076,7 +5490,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5101,7 +5521,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5126,7 +5552,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5151,7 +5583,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5176,7 +5614,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5201,7 +5645,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5226,7 +5676,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -5251,7 +5707,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       }
@@ -6128,7 +6590,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -6153,7 +6621,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -6178,7 +6652,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -6203,7 +6683,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -6228,7 +6714,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -6253,7 +6745,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -6991,7 +7489,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -7001,7 +7505,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -7026,7 +7536,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -7036,7 +7552,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -7061,7 +7583,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "alexwidesphotography",
@@ -7071,7 +7599,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -7096,7 +7630,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -7121,7 +7661,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -7146,7 +7692,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -7171,7 +7723,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -8164,7 +8722,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -8189,7 +8753,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -8214,7 +8784,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -8239,7 +8815,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -8264,7 +8846,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -8289,7 +8877,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "",
@@ -8299,7 +8893,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Andre_Curzi_876ef6c363.jpg"
             },
-            "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>"
+            "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>",
+            "level": "beginner",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -8324,7 +8924,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Andre_Curzi_876ef6c363.jpg"
             },
-            "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>"
+            "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>",
+            "level": "beginner",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -9231,7 +9837,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -9241,7 +9853,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9266,7 +9884,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -9276,7 +9900,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -9286,7 +9916,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -9311,7 +9947,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9336,7 +9978,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9361,7 +10009,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -9386,7 +10040,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9411,7 +10071,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9436,7 +10102,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9461,7 +10133,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -9486,7 +10164,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9511,7 +10195,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9536,7 +10226,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9561,7 +10257,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -9586,7 +10288,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9611,7 +10319,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9636,7 +10350,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9661,7 +10381,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9686,7 +10412,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9711,7 +10443,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9736,7 +10474,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -9761,7 +10505,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -10296,7 +11046,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -10306,7 +11062,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -10331,7 +11093,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -10356,7 +11124,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -10381,7 +11155,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -10903,7 +11683,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -10913,7 +11699,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -10938,7 +11730,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       }
@@ -11393,7 +12191,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -11418,7 +12222,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -11443,7 +12253,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -11468,7 +12284,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -11983,7 +12805,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -11993,7 +12821,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -13023,7 +13857,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13048,7 +13888,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13073,7 +13919,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13098,7 +13950,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -13108,7 +13966,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -13133,7 +13997,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13158,7 +14028,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13183,7 +14059,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13208,7 +14090,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13233,7 +14121,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/ibuxus/",
@@ -13243,7 +14137,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13268,7 +14168,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13293,7 +14199,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13318,7 +14230,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13343,7 +14261,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13368,7 +14292,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -13393,7 +14323,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -14432,7 +15368,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -14442,7 +15384,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -14467,7 +15415,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -14492,7 +15446,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -15518,7 +16478,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -15543,7 +16509,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -15553,7 +16525,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -15578,7 +16556,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -15603,7 +16587,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -15628,7 +16618,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -15653,7 +16649,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       }
@@ -16706,7 +17708,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -16731,7 +17739,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -16756,7 +17770,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -16781,7 +17801,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -16806,7 +17832,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -17562,7 +18594,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -17572,7 +18610,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -17597,7 +18641,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -17622,7 +18672,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -17647,7 +18703,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
             },
-            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -17672,7 +18734,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -17697,7 +18765,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
             },
-            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -17722,7 +18796,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
             },
-            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       }
@@ -18482,7 +19562,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -18507,7 +19593,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -18532,7 +19624,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -18557,7 +19655,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Andre_Curzi_876ef6c363.jpg"
             },
-            "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>"
+            "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>",
+            "level": "beginner",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -19244,7 +20348,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -19269,7 +20379,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -19294,7 +20410,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -19319,7 +20441,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -20139,7 +21267,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -20149,7 +21283,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -20174,7 +21314,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -20199,7 +21345,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/giacomo_finotti/",
@@ -20209,7 +21361,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
             },
-            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>"
+            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       }
@@ -21100,7 +22258,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -21125,7 +22289,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -21150,7 +22320,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -21175,7 +22351,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -22130,7 +23312,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": "https://www.instagram.com/lorenzonightscapes/",
@@ -22140,7 +23328,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -22165,7 +23359,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -22190,7 +23390,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           },
           {
             "instagram": null,
@@ -22200,7 +23406,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Daniela_1b0d860cb3.png"
             },
-            "bio": null
+            "bio": null,
+            "level": "traveler",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -22225,7 +23437,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -22250,7 +23468,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -22275,7 +23499,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -22300,7 +23530,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -22325,7 +23561,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -22350,7 +23592,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -23539,7 +24787,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/photo_2021_11_15_15_37_30_d5bf5e783f.jpeg"
             },
-            "bio": "<p>Fotografo paesaggista per passione, Marketer, Startup builder e Co-Founder di WeShoot 🚀</p>"
+            "bio": "<p>Fotografo paesaggista per passione, Marketer, Startup builder e Co-Founder di WeShoot 🚀</p>",
+            "level": "traveler",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           },
           {
             "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -23549,7 +24803,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -23574,7 +24834,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -23599,7 +24865,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       }
@@ -24308,7 +25580,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       }
@@ -25106,7 +26384,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -25131,7 +26415,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -25156,7 +26446,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -25181,7 +26477,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -25206,7 +26508,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -26337,7 +27645,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -26362,7 +27676,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       },
@@ -26387,7 +27707,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
             },
-            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+            "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
+            }
           }
         ]
       }
@@ -27801,7 +29127,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -28866,7 +30198,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -28891,7 +30229,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
             },
-            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>"
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -29852,7 +31196,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -30591,7 +31941,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30616,7 +31972,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30641,7 +32003,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30666,7 +32034,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30691,7 +32065,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30716,7 +32096,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30741,7 +32127,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30766,7 +32158,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30791,7 +32189,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30816,7 +32220,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30841,7 +32251,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30866,7 +32282,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30891,7 +32313,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30916,7 +32344,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30941,7 +32375,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30966,7 +32406,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -30991,7 +32437,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31016,7 +32468,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31041,7 +32499,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31066,7 +32530,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31091,7 +32561,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31116,7 +32592,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31141,7 +32623,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31166,7 +32654,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31191,7 +32685,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31216,7 +32716,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31241,7 +32747,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31266,7 +32778,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       },
@@ -31291,7 +32809,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>"
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
+            }
           }
         ]
       }
@@ -31639,7 +33163,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -31664,7 +33194,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -31689,7 +33225,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -32019,7 +33561,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -32044,7 +33592,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -32472,7 +34026,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -32497,7 +34057,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -32522,7 +34088,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -32547,7 +34119,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -33032,7 +34610,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -33057,7 +34641,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -33082,7 +34672,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -33107,7 +34703,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -34007,7 +35609,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -34834,7 +36442,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>"
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -35268,7 +36882,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
             },
-            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>"
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }
@@ -35763,7 +37383,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
             },
-            "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>"
+            "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       },
@@ -35788,7 +37414,13 @@
             "profilePicture": {
               "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
             },
-            "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>"
+            "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
           }
         ]
       }

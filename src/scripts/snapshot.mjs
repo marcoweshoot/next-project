@@ -159,6 +159,12 @@ const TOURS_QUERY = /* GraphQL */ `
           username
           profilePicture { url }
           bio
+          level
+          role {
+            name
+            description
+            type
+          }
         }
       }
 

@@ -961,7 +961,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/photo_2021_11_15_15_37_30_d5bf5e783f.jpeg"
           },
-          "bio": "<p>Fotografo paesaggista per passione, Marketer, Startup builder e Co-Founder di WeShoot 🚀</p>"
+          "bio": "<p>Fotografo paesaggista per passione, Marketer, Startup builder e Co-Founder di WeShoot 🚀</p>",
+          "level": "traveler",
+          "role": {
+            "name": "SuperAdmin",
+            "description": "Top level user",
+            "type": "authenticated"
+          }
         },
         {
           "instagram": "https://www.instagram.com/marikagrecofotografie/",
@@ -971,7 +977,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
           },
-          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+          "level": "coach",
+          "role": {
+            "name": "User",
+            "description": "A User",
+            "type": "user"
+          }
         }
       ]
     },
@@ -996,7 +1008,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
           },
-          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+          "level": "coach",
+          "role": {
+            "name": "User",
+            "description": "A User",
+            "type": "user"
+          }
         }
       ]
     },
@@ -1021,7 +1039,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
           },
-          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>"
+          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+          "level": "coach",
+          "role": {
+            "name": "User",
+            "description": "A User",
+            "type": "user"
+          }
         }
       ]
     }

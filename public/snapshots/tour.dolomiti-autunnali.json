@@ -361,7 +361,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
           },
-          "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>"
+          "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     },
@@ -386,7 +392,13 @@
           "profilePicture": {
             "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
           },
-          "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>"
+          "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
         }
       ]
     }
