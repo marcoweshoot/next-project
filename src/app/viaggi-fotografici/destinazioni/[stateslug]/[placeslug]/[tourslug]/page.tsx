@@ -77,21 +77,24 @@ function extractUpcomingCoaches(sessions: any[] = []) {
   })
   
   const coachUsers = allUsers.filter((u) => {
-    // Filtra solo i coach reali
-    const roleName = typeof u.role === 'object' ? u.role?.name : u.role;
-    const isCoach = roleName === 'coach' || 
-           u.isCoach === true || 
-           (u.firstName && u.firstName.toLowerCase() === 'lorenzo') ||
-           (u.username && u.username.toLowerCase().includes('coach')) ||
-           (u.email && u.email.includes('weshoot'));
+    // Controlla il ruolo dall'oggetto role
+    const roleName = u.role?.name;
+    const isCoach = roleName === 'coach';
     
     if (isCoach) {
       console.log('✅ Coach found:', { 
         name: `${u.firstName} ${u.lastName}`, 
         role: roleName, 
-        isCoach: u.isCoach,
+        roleType: u.role?.type,
+        roleDescription: u.role?.description,
         username: u.username,
         email: u.email 
+      })
+    } else {
+      console.log('❌ Not a coach:', { 
+        name: `${u.firstName} ${u.lastName}`, 
+        role: roleName, 
+        username: u.username 
       })
     }
     
@@ -122,21 +125,24 @@ function extractPastCoaches(sessions: any[] = []) {
   console.log('🔍 extractPastCoaches - All users from past sessions:', allUsers.length)
   
   const coachUsers = allUsers.filter((u) => {
-    // Filtra solo i coach reali
-    const roleName = typeof u.role === 'object' ? u.role?.name : u.role;
-    const isCoach = roleName === 'coach' || 
-           u.isCoach === true || 
-           (u.firstName && u.firstName.toLowerCase() === 'lorenzo') ||
-           (u.username && u.username.toLowerCase().includes('coach')) ||
-           (u.email && u.email.includes('weshoot'));
+    // Controlla il ruolo dall'oggetto role
+    const roleName = u.role?.name;
+    const isCoach = roleName === 'coach';
     
     if (isCoach) {
       console.log('✅ Past Coach found:', { 
         name: `${u.firstName} ${u.lastName}`, 
         role: roleName, 
-        isCoach: u.isCoach,
+        roleType: u.role?.type,
+        roleDescription: u.role?.description,
         username: u.username,
         email: u.email 
+      })
+    } else {
+      console.log('❌ Past user not a coach:', { 
+        name: `${u.firstName} ${u.lastName}`, 
+        role: roleName, 
+        username: u.username 
       })
     }
     
