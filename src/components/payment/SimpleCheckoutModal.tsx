@@ -74,30 +74,6 @@ export function SimpleCheckoutModal({
     setError(error)
   }
 
-  if (!user) {
-    return (
-      <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <CreditCard className="w-5 h-5" />
-              Checkout Rapido
-            </DialogTitle>
-          </DialogHeader>
-          <div className="text-center py-8">
-            <AlertCircle className="w-12 h-12 mx-auto text-red-500 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Accesso Richiesto</h3>
-            <p className="text-gray-600 mb-4">
-              Devi effettuare l'accesso per completare l'acquisto.
-            </p>
-            <Button onClick={onClose} className="w-full">
-              Chiudi
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
-    )
-  }
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
