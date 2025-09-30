@@ -71,8 +71,12 @@ function extractUpcomingCoaches(sessions: any[] = []) {
       username: user.username,
       email: user.email,
       role: user.role,
+      roleName: user.role?.name,
+      level: user.level,
       isCoach: user.isCoach,
-      profilePicture: user.profilePicture?.url ? 'has image' : 'no image'
+      profilePicture: user.profilePicture?.url ? 'has image' : 'no image',
+      // Log completo dell'oggetto user per debug
+      fullUserObject: user
     })
   })
   
