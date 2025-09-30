@@ -62,6 +62,20 @@ function extractUpcomingCoaches(sessions: any[] = []) {
   const allUsers = upcomingSessions.flatMap((s) => s.users || [])
   console.log('🔍 extractUpcomingCoaches - All users from upcoming sessions:', allUsers.length)
   
+  // Log dettagliato di tutti gli utenti per capire la struttura
+  allUsers.forEach((user, index) => {
+    console.log(`👤 User ${index + 1}:`, {
+      id: user.id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      username: user.username,
+      email: user.email,
+      role: user.role,
+      isCoach: user.isCoach,
+      profilePicture: user.profilePicture?.url ? 'has image' : 'no image'
+    })
+  })
+  
   const coachUsers = allUsers.filter((u) => {
     // Filtra solo i coach reali
     const roleName = typeof u.role === 'object' ? u.role?.name : u.role;
