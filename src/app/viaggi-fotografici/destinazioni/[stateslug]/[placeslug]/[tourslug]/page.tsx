@@ -77,14 +77,16 @@ function extractUpcomingCoaches(sessions: any[] = []) {
   })
   
   const coachUsers = allUsers.filter((u) => {
-    // Controlla il ruolo dall'oggetto role
+    // Controlla il ruolo dall'oggetto role OPPURE il level
     const roleName = u.role?.name;
-    const isCoach = roleName === 'coach';
+    const userLevel = u.level;
+    const isCoach = roleName === 'coach' || userLevel === 'coach';
     
     if (isCoach) {
       console.log('✅ Coach found:', { 
         name: `${u.firstName} ${u.lastName}`, 
         role: roleName, 
+        level: userLevel,
         roleType: u.role?.type,
         roleDescription: u.role?.description,
         username: u.username,
@@ -94,6 +96,7 @@ function extractUpcomingCoaches(sessions: any[] = []) {
       console.log('❌ Not a coach:', { 
         name: `${u.firstName} ${u.lastName}`, 
         role: roleName, 
+        level: userLevel,
         username: u.username 
       })
     }
@@ -125,14 +128,16 @@ function extractPastCoaches(sessions: any[] = []) {
   console.log('🔍 extractPastCoaches - All users from past sessions:', allUsers.length)
   
   const coachUsers = allUsers.filter((u) => {
-    // Controlla il ruolo dall'oggetto role
+    // Controlla il ruolo dall'oggetto role OPPURE il level
     const roleName = u.role?.name;
-    const isCoach = roleName === 'coach';
+    const userLevel = u.level;
+    const isCoach = roleName === 'coach' || userLevel === 'coach';
     
     if (isCoach) {
       console.log('✅ Past Coach found:', { 
         name: `${u.firstName} ${u.lastName}`, 
         role: roleName, 
+        level: userLevel,
         roleType: u.role?.type,
         roleDescription: u.role?.description,
         username: u.username,
@@ -142,6 +147,7 @@ function extractPastCoaches(sessions: any[] = []) {
       console.log('❌ Past user not a coach:', { 
         name: `${u.firstName} ${u.lastName}`, 
         role: roleName, 
+        level: userLevel,
         username: u.username 
       })
     }
