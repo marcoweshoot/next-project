@@ -36,7 +36,6 @@ export async function POST(request: NextRequest) {
       }, { status: 500 })
     }
 
-    console.log('✅ Profile created successfully:', data[0])
 
     return NextResponse.json({
       message: 'Profile created successfully',

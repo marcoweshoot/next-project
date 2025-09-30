@@ -68,7 +68,6 @@ async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent) {
     return
   }
 
-  console.log('✅ All metadata present:', { userId, tourId, sessionId, paymentType })
 
   // Nota: per PaymentIntent non abbiamo i dati di fatturazione completi come in Checkout Session
   // I dati di fatturazione vengono salvati solo quando si usa Stripe Checkout
@@ -157,12 +156,10 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
     return
   }
 
-  console.log('✅ All metadata present:', { userId, tourId, sessionId, paymentType, quantity })
 
   // Gestisci il caso di utenti anonimi
   let finalUserId = userId
   if (userId === 'anonymous') {
-    console.log('👤 Creating new user for anonymous checkout...')
     
     // Crea un nuovo utente con i dati raccolti da Stripe
     const { data: newUser, error: userError } = await supabase.auth.admin.createUser({
@@ -177,7 +174,6 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
     }
 
     finalUserId = newUser.user.id
-    console.log('✅ New user created:', finalUserId)
   }
 
   // Aggiorna il profilo dell'utente con i dati di fatturazione da Stripe
@@ -218,7 +214,6 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
       if (insertError) {
         console.error('Error creating booking:', insertError)
       } else {
-        console.log('✅ Booking created successfully for user:', userId)
       }
     } else if (paymentType === 'balance') {
       // Update existing booking to fully paid
@@ -235,7 +230,6 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
       if (updateError) {
         console.error('Error updating booking:', updateError)
       } else {
-        console.log('✅ Booking updated to fully paid for user:', userId)
       }
     }
   } catch (error) {
@@ -259,15 +253,11 @@ async function handlePaymentFailure(paymentIntent: Stripe.PaymentIntent) {
 
 async function updateUserProfileWithBillingData(supabase: any, userId: string, session: Stripe.Checkout.Session) {
   try {
-    console.log('📝 Updating user profile with billing data...')
-    console.log('🔍 Session data:', JSON.stringify(session, null, 2))
     
     // Estrai i dati di fatturazione dalla sessione Stripe
     const customerDetails = session.customer_details
     const customFields = session.custom_fields
     
-    console.log('👤 Customer details:', customerDetails)
-    console.log('📋 Custom fields:', customFields)
     
     if (!customerDetails) {
       console.log('⚠️ No customer details found in session')
@@ -325,7 +315,6 @@ async function updateUserProfileWithBillingData(supabase: any, userId: string, s
     if (updateError) {
       console.error('❌ Error updating/creating user profile:', updateError)
     } else {
-      console.log('✅ User profile updated/created with billing data:', profileUpdate)
     }
 
   } catch (error) {

@@ -51,135 +51,47 @@ const parseSessionDate = (s: any): Date | null => {
 }
 function extractUpcomingCoaches(sessions: any[] = []) {
   const now = Date.now()
-  console.log('🔍 extractUpcomingCoaches - Total sessions:', sessions.length)
   
   const upcomingSessions = sessions.filter((s) => { 
     const dt = parseSessionDate(s); 
     return dt && dt.getTime() >= now 
   })
-  console.log('🔍 extractUpcomingCoaches - Upcoming sessions:', upcomingSessions.length)
   
   const allUsers = upcomingSessions.flatMap((s) => s.users || [])
-  console.log('🔍 extractUpcomingCoaches - All users from upcoming sessions:', allUsers.length)
-  
-  // Log dettagliato di tutti gli utenti per capire la struttura
-  allUsers.forEach((user, index) => {
-    console.log(`👤 User ${index + 1}:`, {
-      id: user.id,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      username: user.username,
-      email: user.email,
-      role: user.role,
-      roleName: user.role?.name,
-      level: user.level,
-      isCoach: user.isCoach,
-      profilePicture: user.profilePicture?.url ? 'has image' : 'no image',
-      // Log completo dell'oggetto user per debug
-      fullUserObject: user
-    })
-  })
   
   const coachUsers = allUsers.filter((u) => {
-    // Controlla il ruolo dall'oggetto role OPPURE il level
     const roleName = u.role?.name;
     const userLevel = u.level;
-    
-    // Debug: stampa tutti i campi dell'utente per capire la struttura
-    console.log('🔍 Debug user fields for', u.firstName, u.lastName, ':', {
-      allKeys: Object.keys(u),
-      role: u.role,
-      level: u.level,
-      roleName: roleName,
-      userLevel: userLevel,
-      // Controlla se ci sono altri campi che potrebbero indicare il ruolo
-      isCoach: u.isCoach,
-      userRole: u.userRole,
-      userType: u.userType,
-      type: u.type,
-      category: u.category
-    });
-    
-    const isCoach = roleName === 'coach' || userLevel === 'coach';
-    
-    if (isCoach) {
-      console.log('✅ Coach found:', { 
-        name: `${u.firstName} ${u.lastName}`, 
-        role: roleName, 
-        level: userLevel,
-        roleType: u.role?.type,
-        roleDescription: u.role?.description,
-        username: u.username,
-        email: u.email 
-      })
-    } else {
-      console.log('❌ Not a coach:', { 
-        name: `${u.firstName} ${u.lastName}`, 
-        role: roleName, 
-        level: userLevel,
-        username: u.username 
-      })
-    }
-    
-    return isCoach;
+    return roleName === 'coach' || userLevel === 'coach';
   })
-  console.log('🔍 extractUpcomingCoaches - Coach users found:', coachUsers.length)
   
   const uniqueCoaches = Array.from(
     new Map(coachUsers.map((u) => [makeCoachKey(u), u])).values()
   )
-  console.log('🔍 extractUpcomingCoaches - Unique coaches:', uniqueCoaches.length)
   
   return uniqueCoaches
 }
 function extractPastCoaches(sessions: any[] = []) {
   const now = Date.now()
-  console.log('🔍 extractPastCoaches - Total sessions:', sessions.length)
   
   const pastSessions = sessions.filter((s) => { 
     const dt = parseSessionDate(s); 
     return dt && dt.getTime() < now 
   })
-  console.log('🔍 extractPastCoaches - Past sessions:', pastSessions.length)
   
   const allUsers = pastSessions
     .sort((a, b) => parseSessionDate(b)!.getTime() - parseSessionDate(a)!.getTime())
     .flatMap((s) => s.users || [])
-  console.log('🔍 extractPastCoaches - All users from past sessions:', allUsers.length)
   
   const coachUsers = allUsers.filter((u) => {
-    // Controlla il ruolo dall'oggetto role OPPURE il level
     const roleName = u.role?.name;
     const userLevel = u.level;
-    const isCoach = roleName === 'coach' || userLevel === 'coach';
-    
-    if (isCoach) {
-      console.log('✅ Past Coach found:', { 
-        name: `${u.firstName} ${u.lastName}`, 
-        role: roleName, 
-        level: userLevel,
-        roleType: u.role?.type,
-        roleDescription: u.role?.description,
-        username: u.username,
-        email: u.email 
-      })
-    } else {
-      console.log('❌ Past user not a coach:', { 
-        name: `${u.firstName} ${u.lastName}`, 
-        role: roleName, 
-        level: userLevel,
-        username: u.username 
-      })
-    }
-    
-    return isCoach;
+    return roleName === 'coach' || userLevel === 'coach';
   })
-  console.log('🔍 extractPastCoaches - Coach users found:', coachUsers.length)
   
   const uniqueCoaches = Array.from(
     new Map(coachUsers.map((u) => [makeCoachKey(u), u])).values()
   )
-  console.log('🔍 extractPastCoaches - Unique coaches:', uniqueCoaches.length)
   
   return uniqueCoaches
 }
@@ -367,21 +279,10 @@ export default async function TourDetailPage({ params }: Props) {
       return permanentRedirect(`${CANONICAL_BASE}/${canonicalState}/${canonicalPlace}/${tourslug}`)
     }
 
-    console.log('🎯 Tour slug:', tourslug)
-    console.log('🎯 Tour sessions count:', tour.sessions?.length || 0)
-    
     const upcoming = extractUpcomingCoaches(tour.sessions)
     const past = extractPastCoaches(tour.sessions)
     const isFallbackPast = upcoming.length === 0 && past.length > 0
     const coaches = upcoming.length > 0 ? upcoming : past
-    
-    console.log('🎯 Final coaches result:', {
-      upcomingCount: upcoming.length,
-      pastCount: past.length,
-      isFallbackPast,
-      finalCoachesCount: coaches.length,
-      coaches: coaches.map(c => ({ name: `${c.firstName} ${c.lastName}`, id: c.id }))
-    })
 
     const reviewsCount = Array.isArray(tour.reviews) ? tour.reviews.length : 0
     const averageRating = reviewsCount

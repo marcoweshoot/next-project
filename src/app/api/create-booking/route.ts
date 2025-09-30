@@ -6,7 +6,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { userId, tourId, sessionId, paymentType = 'deposit', quantity = 1, tourTitle, tourDestination, sessionDate, sessionEndDate, sessionPrice, sessionDeposit, amount } = body
 
-    console.log('📝 Creating booking after payment...', { userId, tourId, sessionId, paymentType, tourTitle, tourDestination, sessionDate, sessionEndDate, amount })
 
     const supabase = await createServerClientSupabase()
 
@@ -23,8 +22,6 @@ export async function POST(request: NextRequest) {
       depositAmount = amount || (sessionPrice || 379) * 100 * quantity // Same as total for full payments
     }
 
-    console.log('💰 Amounts calculated:', { totalAmount, depositAmount, paymentType, amount })
-    console.log('🎯 Status will be:', paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid')
 
     if (paymentType === 'deposit') {
       // Create new booking for deposit payments
@@ -48,7 +45,6 @@ export async function POST(request: NextRequest) {
         session_end_date: sessionEndDate,
       }
       
-      console.log('📝 Inserting booking data:', JSON.stringify(bookingData, null, 2))
       
       const { data: insertData, error: insertError } = await supabase
         .from('bookings')
@@ -60,8 +56,6 @@ export async function POST(request: NextRequest) {
         console.error('❌ Full error details:', JSON.stringify(insertError, null, 2))
         return NextResponse.json({ error: insertError.message }, { status: 500 })
       }
-      console.log('✅ Booking created successfully for deposit payment')
-      console.log('✅ Inserted data:', JSON.stringify(insertData, null, 2))
     } else if (paymentType === 'balance') {
       // Update existing booking for balance payments
       const { error: updateError } = await supabase
@@ -79,10 +73,8 @@ export async function POST(request: NextRequest) {
         console.error('❌ Full error details:', JSON.stringify(updateError, null, 2))
         return NextResponse.json({ error: updateError.message }, { status: 500 })
       }
-      console.log('✅ Booking updated successfully for balance payment')
     }
 
-    console.log('✅ Booking created successfully for user:', userId)
     return NextResponse.json({ success: true, message: 'Booking created' })
 
   } catch (error) {

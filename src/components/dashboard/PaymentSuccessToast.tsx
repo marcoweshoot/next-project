@@ -29,7 +29,6 @@ export function PaymentSuccessToast() {
         })
         .then(response => response.json())
         .then(result => {
-          console.log('📝 Booking creation result:', result)
           if (result.success) {
             // Clear payment data
             localStorage.removeItem('paymentData')

@@ -1,20 +1,16 @@
 
 export const processLocationData = (locationsData: any[], stateSlug: string) => {
-  console.log("🔍 processLocationData - Input:", { locationsData, stateSlug });
   
   if (!locationsData || locationsData.length === 0) {
-    console.log("🔍 processLocationData - No locations data");
     return null;
   }
 
   const locationData = locationsData[0];
   
-  console.log("🔍 processLocationData - Location data:", locationData);
 
   // Process state data
   const stateData = locationData.state;
   if (!stateData) {
-    console.log("🔍 processLocationData - No state data");
     return null;
   }
 
@@ -33,12 +29,10 @@ export const processLocationData = (locationsData: any[], stateSlug: string) => 
     }
   };
 
-  console.log("🔍 processLocationData - Processed location:", location);
   return location;
 };
 
 export const processPicturesData = (locationPictures: any[], additionalPictures: any[]) => {
-  console.log("🔍 processPicturesData - Input:", { locationPictures, additionalPictures });
   
   const allPictures = [...(locationPictures || []), ...(additionalPictures || [])];
   
@@ -56,15 +50,12 @@ export const processPicturesData = (locationPictures: any[], additionalPictures:
     };
   }).filter(picture => picture.url); // Filter out pictures without URLs
 
-  console.log("🔍 processPicturesData - Processed pictures:", processedPictures);
   return processedPictures;
 };
 
 export const processToursData = (toursData: any[], locationSlug: string) => {
-  console.log("🔍 processToursData - Input:", { toursData, locationSlug });
   
   if (!toursData || toursData.length === 0) {
-    console.log("🔍 processToursData - No tours data");
     return [];
   }
 
@@ -124,6 +115,5 @@ export const processToursData = (toursData: any[], locationSlug: string) => {
     };
   });
 
-  console.log("🔍 processToursData - Processed tours:", processedTours);
   return processedTours;
 };

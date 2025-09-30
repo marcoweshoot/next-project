@@ -34,7 +34,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    console.log('✅ All fields present, creating Stripe session...')
     // Note: Data comes from Strapi via the client
     // The webhook will validate the payment and create the booking
 
@@ -100,7 +99,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    console.log('✅ Stripe session created:', checkoutSession.id)
     return NextResponse.json({
       url: checkoutSession.url,
     })
