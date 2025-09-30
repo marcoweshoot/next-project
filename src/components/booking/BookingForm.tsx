@@ -179,7 +179,7 @@ export function BookingForm({ tour, session, onBookingSuccess }: BookingFormProp
           userId={user.id}
           paymentType="deposit"
           tourTitle={tour.title}
-          tourDestination={tour.destination}
+          tourDestination={tour.title}
           sessionDate={session.start}
           onSuccess={handlePaymentSuccess}
           onError={handlePaymentError}
