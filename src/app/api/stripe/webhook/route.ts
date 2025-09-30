@@ -159,11 +159,14 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
 
   // Gestisci il caso di utenti anonimi
   let finalUserId = userId
+  let magicLinkUrl = null
+  
   if (userId === 'anonymous') {
+    const userEmail = session.customer_details?.email || `user_${Date.now()}@temp.com`
     
     // Crea un nuovo utente con i dati raccolti da Stripe
     const { data: newUser, error: userError } = await supabase.auth.admin.createUser({
-      email: session.customer_details?.email || `user_${Date.now()}@temp.com`,
+      email: userEmail,
       password: `temp_password_${Date.now()}`,
       email_confirm: true, // Auto-confirm per permettere il checkout
     })
@@ -174,6 +177,37 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
     }
 
     finalUserId = newUser.user.id
+    
+    // Genera magic link per auto-login
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+                   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+    
+    const { data: linkData, error: linkError } = await supabase.auth.admin.generateLink({
+      type: 'magiclink',
+      email: userEmail,
+      options: {
+        redirectTo: `${siteUrl}/dashboard?auto_login=true&payment_success=true`
+      }
+    })
+    
+    if (linkError) {
+      console.error('❌ Error generating magic link:', linkError)
+    } else {
+      magicLinkUrl = linkData.properties.action_link
+      console.log('🔗 Magic link generated for auto-login')
+      
+      // Salva il magic link nel database per recuperarlo dopo
+      await supabase
+        .from('temp_magic_links')
+        .insert({
+          user_id: finalUserId,
+          email: userEmail,
+          magic_link: magicLinkUrl,
+          expires_at: new Date(Date.now() + 15 * 60 * 1000).toISOString(), // 15 minuti
+          created_at: new Date().toISOString()
+        })
+        .catch(err => console.error('❌ Error saving magic link:', err))
+    }
   }
 
   // Aggiorna il profilo dell'utente con i dati di fatturazione da Stripe
