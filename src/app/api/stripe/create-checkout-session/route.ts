@@ -1,6 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
 
+// Funzione per ottenere l'URL del sito in base all'ambiente
+function getSiteUrl() {
+  // In produzione/staging, usa la variabile d'ambiente
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL
+  }
+  
+  // In Vercel, usa VERCEL_URL
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`
+  }
+  
+  // Fallback per sviluppo locale
+  return 'http://localhost:3000'
+}
+
 export async function POST(request: NextRequest) {
   try {
     console.log('🚀 Creating checkout session...')
@@ -73,8 +89,8 @@ export async function POST(request: NextRequest) {
       ],
       // Personalizziamo i messaggi per l'Italia
       locale: 'it',
-      success_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/dashboard?payment=success`,
-      cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/dashboard?payment=cancelled`,
+      success_url: `${getSiteUrl()}/dashboard?payment=success`,
+      cancel_url: `${getSiteUrl()}/dashboard?payment=cancelled`,
       metadata: {
         userId,
         tourId,
