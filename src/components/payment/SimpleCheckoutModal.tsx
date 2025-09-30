@@ -268,41 +268,77 @@ export function SimpleCheckoutModal({
             </Alert>
           )}
 
-          {/* Payment Form */}
-          {showPaymentForm ? (
-            <div className="space-y-4">
-              <h4 className="font-semibold">Completa il pagamento</h4>
-              <StripeCheckoutButton
-                amount={getPaymentAmount() * 100}
-                currency={session.currency.toLowerCase()}
-                tourId={tour.id}
-                sessionId={session.id}
-                userId={user.id}
-                paymentType={paymentType === 'full' ? 'balance' : 'deposit'}
-                quantity={quantity}
-                tourTitle={tour.title}
-                tourDestination={tour.title} // Usiamo il titolo come destinazione per ora
-                sessionDate={session.date}
-                sessionEndDate={tour.endDate}
-                sessionPrice={session.price}
-                sessionDeposit={session.deposit}
-                onSuccess={handlePaymentSuccess}
-                onError={handlePaymentError}
-              />
+          {/* Authentication Check */}
+          {!user ? (
+            <div className="text-center space-y-4">
+              <Alert>
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>
+                  Devi effettuare l'accesso per completare l'acquisto.
+                </AlertDescription>
+              </Alert>
+              <div className="space-y-3">
+                <div className="flex gap-3">
+                  <Button 
+                    variant="outline" 
+                    onClick={() => window.location.href = '/auth/login'}
+                    className="flex-1"
+                  >
+                    <User className="w-4 h-4 mr-2" />
+                    Accedi
+                  </Button>
+                  <Button 
+                    onClick={() => window.location.href = '/auth/register'}
+                    className="flex-1 bg-red-600 hover:bg-red-700"
+                  >
+                    <User className="w-4 h-4 mr-2" />
+                    Registrati
+                  </Button>
+                </div>
+                <Button variant="ghost" onClick={onClose} className="w-full">
+                  Annulla
+                </Button>
+              </div>
             </div>
           ) : (
-            <div className="flex gap-3">
-              <Button variant="outline" onClick={onClose} className="flex-1">
-                Annulla
-              </Button>
-              <Button 
-                onClick={() => setShowPaymentForm(true)}
-                className="flex-1 bg-red-600 hover:bg-red-700"
-              >
-                <Euro className="w-4 h-4 mr-2" />
-                Paga {getPaymentAmount()}€
-              </Button>
-            </div>
+            <>
+              {/* Payment Form */}
+              {showPaymentForm ? (
+                <div className="space-y-4">
+                  <h4 className="font-semibold">Completa il pagamento</h4>
+                  <StripeCheckoutButton
+                    amount={getPaymentAmount() * 100}
+                    currency={session.currency.toLowerCase()}
+                    tourId={tour.id}
+                    sessionId={session.id}
+                    userId={user.id}
+                    paymentType={paymentType === 'full' ? 'balance' : 'deposit'}
+                    quantity={quantity}
+                    tourTitle={tour.title}
+                    tourDestination={tour.title} // Usiamo il titolo come destinazione per ora
+                    sessionDate={session.date}
+                    sessionEndDate={tour.endDate}
+                    sessionPrice={session.price}
+                    sessionDeposit={session.deposit}
+                    onSuccess={handlePaymentSuccess}
+                    onError={handlePaymentError}
+                  />
+                </div>
+              ) : (
+                <div className="flex gap-3">
+                  <Button variant="outline" onClick={onClose} className="flex-1">
+                    Annulla
+                  </Button>
+                  <Button 
+                    onClick={() => setShowPaymentForm(true)}
+                    className="flex-1 bg-red-600 hover:bg-red-700"
+                  >
+                    <Euro className="w-4 h-4 mr-2" />
+                    Paga {getPaymentAmount()}€
+                  </Button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </DialogContent>
