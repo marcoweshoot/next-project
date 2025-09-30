@@ -9,8 +9,8 @@ export async function POST(request: NextRequest) {
     
     const { amount, currency = 'eur', tourId, sessionId, userId, paymentType = 'deposit', quantity = 1 } = body
 
-    // Validate required fields
-    if (!amount || !tourId || !sessionId || !userId) {
+    // Validate required fields (userId can be 'anonymous' for guest checkout)
+    if (!amount || !tourId || !sessionId || (!userId && userId !== 'anonymous')) {
       console.error('❌ Missing required fields:', { amount, tourId, sessionId, userId })
       return NextResponse.json(
         { error: 'Missing required fields' },

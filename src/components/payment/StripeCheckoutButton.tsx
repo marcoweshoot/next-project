@@ -9,7 +9,7 @@ interface StripeCheckoutButtonProps {
   currency: string
   tourId: string
   sessionId: string
-  userId: string
+  userId: string | 'anonymous'
   paymentType: 'deposit' | 'balance'
   quantity?: number
   tourTitle?: string

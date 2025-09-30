@@ -94,7 +94,7 @@ async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent) {
       const { error: insertError } = await supabase
         .from('bookings')
         .insert({
-          user_id: userId,
+          user_id: finalUserId,
           tour_id: tourId,
           session_id: sessionId,
           status: 'deposit_paid',
@@ -159,8 +159,29 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
 
   console.log('✅ All metadata present:', { userId, tourId, sessionId, paymentType, quantity })
 
+  // Gestisci il caso di utenti anonimi
+  let finalUserId = userId
+  if (userId === 'anonymous') {
+    console.log('👤 Creating new user for anonymous checkout...')
+    
+    // Crea un nuovo utente con i dati raccolti da Stripe
+    const { data: newUser, error: userError } = await supabase.auth.admin.createUser({
+      email: session.customer_details?.email || `user_${Date.now()}@temp.com`,
+      password: `temp_password_${Date.now()}`,
+      email_confirm: true, // Auto-confirm per permettere il checkout
+    })
+
+    if (userError) {
+      console.error('❌ Error creating user:', userError)
+      return
+    }
+
+    finalUserId = newUser.user.id
+    console.log('✅ New user created:', finalUserId)
+  }
+
   // Aggiorna il profilo dell'utente con i dati di fatturazione da Stripe
-  await updateUserProfileWithBillingData(supabase, userId, session)
+  await updateUserProfileWithBillingData(supabase, finalUserId, session)
 
   try {
     // Get session details to calculate total amount
@@ -183,7 +204,7 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
       const { error: insertError } = await supabase
         .from('bookings')
         .insert({
-          user_id: userId,
+          user_id: finalUserId,
           tour_id: tourId,
           session_id: sessionId,
           status: 'deposit_paid',
@@ -292,16 +313,19 @@ async function updateUserProfileWithBillingData(supabase: any, userId: string, s
 
     console.log('💾 Profile update data:', profileUpdate)
 
-    // Aggiorna il profilo nel database
+    // Aggiorna o crea il profilo nel database
     const { error: updateError } = await supabase
       .from('profiles')
-      .update(profileUpdate)
-      .eq('id', userId)
+      .upsert({
+        id: userId,
+        ...profileUpdate,
+        created_at: new Date().toISOString()
+      })
 
     if (updateError) {
-      console.error('❌ Error updating user profile:', updateError)
+      console.error('❌ Error updating/creating user profile:', updateError)
     } else {
-      console.log('✅ User profile updated with billing data:', profileUpdate)
+      console.log('✅ User profile updated/created with billing data:', profileUpdate)
     }
 
   } catch (error) {
