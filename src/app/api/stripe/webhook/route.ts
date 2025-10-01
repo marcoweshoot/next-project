@@ -16,6 +16,10 @@ export async function POST(request: NextRequest) {
   console.log('🔔 Webhook received:', { signature: signature?.substring(0, 20) + '...' })
   console.log('🔔 Body preview:', body.substring(0, 200) + '...')
   console.log('🔔 Webhook secret length:', process.env.STRIPE_WEBHOOK_SECRET?.length)
+  console.log('🔔 Webhook secret preview:', process.env.STRIPE_WEBHOOK_SECRET?.substring(0, 10) + '...')
+  console.log('🔔 Full signature:', signature)
+  console.log('🔔 Body type:', typeof body)
+  console.log('🔔 Body encoding:', Buffer.from(body).toString('hex').substring(0, 100))
 
   let event: Stripe.Event
 
