@@ -39,11 +39,11 @@ export async function POST(request: NextRequest) {
       sessionDeposit
     } = body
 
-    // Validate required fields (userId can be 'anonymous' for guest checkout)
-    if (!amount || !tourId || !sessionId || (!userId && userId !== 'anonymous')) {
+    // Validate required fields (userId is required - no more anonymous users)
+    if (!amount || !tourId || !sessionId || !userId) {
       console.error('❌ Missing required fields:', { amount, tourId, sessionId, userId })
       return NextResponse.json(
-        { error: 'Missing required fields' },
+        { error: 'Missing required fields - user must be registered' },
         { status: 400 }
       )
     }

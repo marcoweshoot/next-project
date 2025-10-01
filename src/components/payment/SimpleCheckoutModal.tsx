@@ -89,11 +89,16 @@ export function SimpleCheckoutModal({
   }
 
   const handleStartPayment = () => {
-    if (!user && !registeredUserId) {
+    // Controlla se l'utente è effettivamente loggato
+    const isUserLoggedIn = user && user.id && user.email
+    
+    if (!isUserLoggedIn && !registeredUserId) {
       // Utente non registrato, mostra form di registrazione
+      console.log('User not logged in, showing registration form')
       setShowRegistrationForm(true)
     } else {
       // Utente già registrato, vai direttamente al pagamento
+      console.log('User logged in, going to payment')
       setShowPaymentForm(true)
     }
   }
@@ -293,7 +298,7 @@ export function SimpleCheckoutModal({
                 currency={session.currency.toLowerCase()}
                 tourId={tour.id}
                 sessionId={session.id}
-                userId={user?.id || registeredUserId || 'anonymous'}
+                userId={user?.id || registeredUserId || ''}
                 paymentType={paymentType === 'full' ? 'balance' : 'deposit'}
                 quantity={quantity}
                 tourTitle={tour.title}
