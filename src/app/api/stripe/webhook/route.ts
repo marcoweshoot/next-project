@@ -9,34 +9,20 @@ export const runtime = 'nodejs'
 
 export async function POST(request: NextRequest) {
   console.log('🔔 Webhook received at:', new Date().toISOString())
-  console.log('🔔 Request headers:', Object.fromEntries(request.headers.entries()))
   
   // Usiamo arrayBuffer per preservare l'encoding originale
   const bodyBuffer = await request.arrayBuffer()
   const body = Buffer.from(bodyBuffer)
   const signature = request.headers.get('stripe-signature')!
 
-  console.log('🔔 Body length:', body.length)
-  console.log('🔔 Signature present:', !!signature)
-  console.log('🔔 Webhook received:', { signature: signature?.substring(0, 20) + '...' })
-  console.log('🔔 Body preview:', body.toString('utf8').substring(0, 200) + '...')
-  console.log('🔔 Webhook secret length:', process.env.STRIPE_WEBHOOK_SECRET?.length)
-  console.log('🔔 Webhook secret preview:', process.env.STRIPE_WEBHOOK_SECRET?.substring(0, 10) + '...')
-  console.log('🔔 Full signature:', signature)
-  console.log('🔔 Body type:', typeof body)
-  console.log('🔔 Body encoding:', body.toString('hex').substring(0, 100))
+  if (!signature) {
+    console.error('❌ No stripe-signature header found')
+    return NextResponse.json({ error: 'No signature' }, { status: 400 })
+  }
 
   let event: Stripe.Event
 
   try {
-    // Debug: Verifichiamo che il secret sia corretto
-    console.log('🔍 Webhook secret from env:', process.env.STRIPE_WEBHOOK_SECRET)
-    console.log('🔍 Expected secret starts with:', process.env.STRIPE_WEBHOOK_SECRET?.substring(0, 10))
-    console.log('🔍 Body first 100 chars:', body.toString('utf8').substring(0, 100))
-    console.log('🔍 Body last 100 chars:', body.toString('utf8').substring(body.length - 100))
-    console.log('🔍 Body length:', body.length)
-    console.log('🔍 Signature header:', signature)
-    
     event = stripe.webhooks.constructEvent(
       body,
       signature,
@@ -47,8 +33,6 @@ export async function POST(request: NextRequest) {
   } catch (err) {
     console.error('❌ Webhook signature verification failed:', err)
     console.error('❌ Error details:', JSON.stringify(err, null, 2))
-    console.error('❌ Error type:', err?.constructor?.name)
-    console.error('❌ Error message:', err?.message)
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
   }
 
@@ -86,7 +70,17 @@ async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent) {
   console.log('🎉 Payment succeeded! PaymentIntent ID:', paymentIntent.id)
   console.log('📊 Metadata:', paymentIntent.metadata)
   
-  const supabase = await createServerClientSupabase()
+  // Usiamo Service Role Key per bypassare RLS
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
+    }
+  )
   
   const { userId, tourId, sessionId, paymentType } = paymentIntent.metadata
 
