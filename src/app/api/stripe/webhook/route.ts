@@ -27,6 +27,14 @@ export async function POST(request: NextRequest) {
   let event: Stripe.Event
 
   try {
+    // Debug: Verifichiamo che il secret sia corretto
+    console.log('🔍 Webhook secret from env:', process.env.STRIPE_WEBHOOK_SECRET)
+    console.log('🔍 Expected secret starts with:', process.env.STRIPE_WEBHOOK_SECRET?.substring(0, 10))
+    console.log('🔍 Body first 100 chars:', body.substring(0, 100))
+    console.log('🔍 Body last 100 chars:', body.substring(body.length - 100))
+    console.log('🔍 Body length:', body.length)
+    console.log('🔍 Signature header:', signature)
+    
     event = stripe.webhooks.constructEvent(
       body,
       signature,
@@ -37,6 +45,8 @@ export async function POST(request: NextRequest) {
   } catch (err) {
     console.error('❌ Webhook signature verification failed:', err)
     console.error('❌ Error details:', JSON.stringify(err, null, 2))
+    console.error('❌ Error type:', err?.constructor?.name)
+    console.error('❌ Error message:', err?.message)
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
   }
 
