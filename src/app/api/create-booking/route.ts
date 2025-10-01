@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClientSupabase } from '@/lib/supabase/server'
+import { createClient } from '@supabase/supabase-js'
 
 export async function POST(request: NextRequest) {
   try {
@@ -7,7 +8,30 @@ export async function POST(request: NextRequest) {
     const { userId, tourId, sessionId, paymentType = 'deposit', quantity = 1, tourTitle, tourDestination, sessionDate, sessionEndDate, sessionPrice, sessionDeposit, amount } = body
 
 
-    const supabase = await createServerClientSupabase()
+    // Prova prima con l'utente loggato
+    let supabase = await createServerClientSupabase()
+    let isUserLoggedIn = false
+    
+    try {
+      const { data: { user } } = await supabase.auth.getUser()
+      isUserLoggedIn = !!user
+    } catch (error) {
+      console.log('User not logged in, using service role key')
+    }
+    
+    // Se l'utente non è loggato, usa Service Role Key
+    if (!isUserLoggedIn) {
+      supabase = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY!,
+        {
+          auth: {
+            autoRefreshToken: false,
+            persistSession: false
+          }
+        }
+      )
+    }
 
     // Use real data from Strapi
     let totalAmount, depositAmount
