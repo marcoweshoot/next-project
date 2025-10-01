@@ -59,8 +59,8 @@ export async function POST(request: NextRequest) {
           price_data: {
             currency: currency.toLowerCase(),
             product_data: {
-              name: `Tour ${tourId} - ${paymentType === 'deposit' ? 'Acconto' : 'Saldo'}`,
-              description: `Sessione ${sessionId}${quantity > 1 ? ` (${quantity} persone)` : ''}`,
+              name: `${tourTitle || `Tour ${tourId}`} - ${paymentType === 'deposit' ? 'Acconto' : 'Saldo'}`,
+              description: `${sessionDate ? new Date(sessionDate).toLocaleDateString('it-IT') : `Sessione ${sessionId}`}${quantity > 1 ? ` (${quantity} persone)` : ''}`,
             },
             unit_amount: amount, // Already in cents
           },

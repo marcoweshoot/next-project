@@ -58,6 +58,13 @@ export function StripeCheckoutButton({
           sessionId,
           userId,
           paymentType,
+          quantity,
+          tourTitle,
+          tourDestination,
+          sessionDate,
+          sessionEndDate,
+          sessionPrice,
+          sessionDeposit,
         }),
       })
 
