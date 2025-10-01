@@ -66,8 +66,11 @@ export async function POST(request: NextRequest) {
         quantity
       } = session.metadata || {}
 
+      console.log('🔍 Extracted metadata:', { userId, tourId, sessionId, paymentType, quantity })
+
       if (!userId || !tourId || !sessionId || !paymentType) {
         console.error('❌ Missing metadata in checkout session:', session.id)
+        console.error('❌ Available metadata:', session.metadata)
         return NextResponse.json({ error: 'Missing metadata' }, { status: 400 })
       }
 
