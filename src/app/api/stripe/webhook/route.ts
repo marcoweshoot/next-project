@@ -5,10 +5,15 @@ import { createClient } from '@supabase/supabase-js'
 import Stripe from 'stripe'
 
 export async function POST(request: NextRequest) {
+  console.log('🔔 Webhook received at:', new Date().toISOString())
+  console.log('🔔 Request headers:', Object.fromEntries(request.headers.entries()))
+  
   const body = await request.text()
   const signature = request.headers.get('stripe-signature')!
 
-  console.log('Webhook received:', { signature: signature?.substring(0, 20) + '...' })
+  console.log('🔔 Body length:', body.length)
+  console.log('🔔 Signature present:', !!signature)
+  console.log('🔔 Webhook received:', { signature: signature?.substring(0, 20) + '...' })
 
   let event: Stripe.Event
 

@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
   try {
     console.log('🚀 Creating checkout session...')
     const body = await request.json()
-    console.log('📊 Request body:', body)
+    console.log('📊 Request body:', JSON.stringify(body, null, 2))
     
     const { 
       amount, 
@@ -117,6 +117,12 @@ export async function POST(request: NextRequest) {
         sessionPrice: sessionPrice?.toString() || '',
         sessionDeposit: sessionDeposit?.toString() || '',
       },
+    })
+
+    console.log('✅ Checkout session created:', {
+      id: checkoutSession.id,
+      url: checkoutSession.url,
+      metadata: checkoutSession.metadata
     })
 
     return NextResponse.json({
