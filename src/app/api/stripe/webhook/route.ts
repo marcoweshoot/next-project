@@ -178,38 +178,27 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
 
     finalUserId = newUser.user.id
     
-    // Genera magic link per auto-login
+    // Invia email di benvenuto con istruzioni per impostare la password
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 
                    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
     
-    const { data: linkData, error: linkError } = await supabase.auth.admin.generateLink({
-      type: 'magiclink',
-      email: userEmail,
-      options: {
-        redirectTo: `${siteUrl}/dashboard?auto_login=true&payment_success=true`
-      }
-    })
-    
-    if (linkError) {
-      console.error('❌ Error generating magic link:', linkError)
-    } else {
-      magicLinkUrl = linkData.properties.action_link
-      console.log('🔗 Magic link generated for auto-login')
+    try {
+      // Genera un link per il reset password (per permettere all'utente di impostare la sua password)
+      const { error: emailError } = await supabase.auth.admin.generateLink({
+        type: 'recovery',
+        email: userEmail,
+        options: {
+          redirectTo: `${siteUrl}/auth/reset-password`
+        }
+      })
       
-      // Salva il magic link nel database per recuperarlo dopo
-      try {
-        await supabase
-          .from('temp_magic_links')
-          .insert({
-            user_id: finalUserId,
-            email: userEmail,
-            magic_link: magicLinkUrl,
-            expires_at: new Date(Date.now() + 15 * 60 * 1000).toISOString(), // 15 minuti
-            created_at: new Date().toISOString()
-          })
-      } catch (err) {
-        console.error('❌ Error saving magic link:', err)
+      if (emailError) {
+        console.error('❌ Error sending welcome email:', emailError)
+      } else {
+        console.log('✅ Welcome email sent to:', userEmail)
       }
+    } catch (err) {
+      console.error('❌ Error in welcome email flow:', err)
     }
   }
 

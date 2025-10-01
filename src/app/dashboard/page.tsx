@@ -22,13 +22,11 @@ export default async function DashboardPage({
 
   const resolvedSearchParams = await searchParams
 
-  // Se non c'è utente ma ci sono parametri di auto-login, gestisci l'auto-login
-  if (!user && resolvedSearchParams.auto_login === 'true' && resolvedSearchParams.payment_success === 'true') {
-    // Redirect a una pagina client-side che gestirà l'auto-login
-    redirect('/auto-login')
-  }
-
+  // Se non c'è utente ma c'è stato un pagamento, redirect al login con messaggio
   if (!user) {
+    if (resolvedSearchParams.payment === 'success') {
+      redirect('/auth/login?message=payment_success')
+    }
     redirect('/auth/login')
   }
 
