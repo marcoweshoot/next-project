@@ -7,8 +7,8 @@ import Stripe from 'stripe'
 export const runtime = 'nodejs'
 
 export async function POST(request: NextRequest) {
-  console.log('🔔 Webhook received at:', new Date().toISOString())
-  console.log('🔔 Request headers:', Object.fromEntries(request.headers.entries()))
+  const timestamp = new Date().toISOString()
+  console.log('🔔 Webhook received at:', timestamp)
   
   try {
     // Leggi il body come stringa raw
@@ -17,12 +17,12 @@ export async function POST(request: NextRequest) {
 
     if (!signature) {
       console.error('❌ No stripe-signature header found')
-      return NextResponse.json({ error: 'No signature' }, { status: 400 })
+      return NextResponse.json({ 
+        error: 'No signature',
+        timestamp,
+        bodyLength: body.length 
+      }, { status: 400 })
     }
-
-    console.log('🔔 Body length:', body.length)
-    console.log('🔔 Signature present:', !!signature)
-    console.log('🔔 Body preview:', body.substring(0, 200) + '...')
 
     // Verifica la firma
     const event = stripe.webhooks.constructEvent(
@@ -32,9 +32,6 @@ export async function POST(request: NextRequest) {
     )
 
     console.log('✅ Webhook signature verified successfully!')
-    console.log('🔔 Webhook event type:', event.type)
-    console.log('🔔 Event ID:', event.id)
-    console.log('🔔 Event data:', JSON.stringify(event.data, null, 2))
 
     // Processa l'evento
     if (event.type === 'checkout.session.completed') {
@@ -71,7 +68,12 @@ export async function POST(request: NextRequest) {
       if (!userId || !tourId || !sessionId || !paymentType) {
         console.error('❌ Missing metadata in checkout session:', session.id)
         console.error('❌ Available metadata:', session.metadata)
-        return NextResponse.json({ error: 'Missing metadata' }, { status: 400 })
+        return NextResponse.json({ 
+          error: 'Missing metadata',
+          timestamp,
+          sessionId: session.id,
+          availableMetadata: session.metadata 
+        }, { status: 400 })
       }
 
       // Gestisci il caso di utenti anonimi
@@ -155,9 +157,18 @@ export async function POST(request: NextRequest) {
       console.log('⚠️ Event data:', JSON.stringify(event.data, null, 2))
     }
 
-    return NextResponse.json({ received: true })
+    return NextResponse.json({ 
+      received: true, 
+      timestamp,
+      eventType: event.type,
+      processed: true 
+    })
   } catch (error) {
     console.error('❌ Webhook error:', error)
-    return NextResponse.json({ error: 'Webhook processing failed' }, { status: 500 })
+    return NextResponse.json({ 
+      error: 'Webhook processing failed',
+      timestamp,
+      errorMessage: error instanceof Error ? error.message : 'Unknown error'
+    }, { status: 500 })
   }
 }
