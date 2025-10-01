@@ -32,8 +32,8 @@ export async function POST(request: NextRequest) {
     // Debug: Verifichiamo che il secret sia corretto
     console.log('🔍 Webhook secret from env:', process.env.STRIPE_WEBHOOK_SECRET)
     console.log('🔍 Expected secret starts with:', process.env.STRIPE_WEBHOOK_SECRET?.substring(0, 10))
-    console.log('🔍 Body first 100 chars:', body.substring(0, 100))
-    console.log('🔍 Body last 100 chars:', body.substring(body.length - 100))
+    console.log('🔍 Body first 100 chars:', body.toString('utf8').substring(0, 100))
+    console.log('🔍 Body last 100 chars:', body.toString('utf8').substring(body.length - 100))
     console.log('🔍 Body length:', body.length)
     console.log('🔍 Signature header:', signature)
     
