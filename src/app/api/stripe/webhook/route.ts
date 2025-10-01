@@ -11,18 +11,20 @@ export async function POST(request: NextRequest) {
   console.log('🔔 Webhook received at:', new Date().toISOString())
   console.log('🔔 Request headers:', Object.fromEntries(request.headers.entries()))
   
-  const body = await request.text()
+  // Usiamo arrayBuffer per preservare l'encoding originale
+  const bodyBuffer = await request.arrayBuffer()
+  const body = Buffer.from(bodyBuffer)
   const signature = request.headers.get('stripe-signature')!
 
   console.log('🔔 Body length:', body.length)
   console.log('🔔 Signature present:', !!signature)
   console.log('🔔 Webhook received:', { signature: signature?.substring(0, 20) + '...' })
-  console.log('🔔 Body preview:', body.substring(0, 200) + '...')
+  console.log('🔔 Body preview:', body.toString('utf8').substring(0, 200) + '...')
   console.log('🔔 Webhook secret length:', process.env.STRIPE_WEBHOOK_SECRET?.length)
   console.log('🔔 Webhook secret preview:', process.env.STRIPE_WEBHOOK_SECRET?.substring(0, 10) + '...')
   console.log('🔔 Full signature:', signature)
   console.log('🔔 Body type:', typeof body)
-  console.log('🔔 Body encoding:', Buffer.from(body).toString('hex').substring(0, 100))
+  console.log('🔔 Body encoding:', body.toString('hex').substring(0, 100))
 
   let event: Stripe.Event
 
