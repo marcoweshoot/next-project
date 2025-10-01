@@ -8,6 +8,7 @@ export const runtime = 'nodejs'
 
 export async function POST(request: NextRequest) {
   console.log('🔔 Webhook received at:', new Date().toISOString())
+  console.log('🔔 Request headers:', Object.fromEntries(request.headers.entries()))
   
   try {
     // Leggi il body come stringa raw
@@ -21,6 +22,7 @@ export async function POST(request: NextRequest) {
 
     console.log('🔔 Body length:', body.length)
     console.log('🔔 Signature present:', !!signature)
+    console.log('🔔 Body preview:', body.substring(0, 200) + '...')
 
     // Verifica la firma
     const event = stripe.webhooks.constructEvent(
@@ -30,14 +32,19 @@ export async function POST(request: NextRequest) {
     )
 
     console.log('✅ Webhook signature verified successfully!')
-    console.log('Webhook event type:', event.type)
+    console.log('🔔 Webhook event type:', event.type)
+    console.log('🔔 Event ID:', event.id)
+    console.log('🔔 Event data:', JSON.stringify(event.data, null, 2))
 
     // Processa l'evento
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object as Stripe.Checkout.Session
       console.log('🎉 Processing checkout.session.completed event')
       console.log('📊 Session ID:', session.id)
+      console.log('📊 Session Status:', session.status)
+      console.log('📊 Payment Status:', session.payment_status)
       console.log('📊 Metadata:', session.metadata)
+      console.log('📊 Customer Details:', session.customer_details)
 
       // Usa Service Role Key per bypassare RLS
       const supabase = createClient(
@@ -140,6 +147,9 @@ export async function POST(request: NextRequest) {
         console.error('❌ Error handling booking creation:', error)
         return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
       }
+    } else {
+      console.log('⚠️ Unhandled event type:', event.type)
+      console.log('⚠️ Event data:', JSON.stringify(event.data, null, 2))
     }
 
     return NextResponse.json({ received: true })
