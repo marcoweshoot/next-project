@@ -4,6 +4,9 @@ import { createServerClientSupabase } from '@/lib/supabase/server'
 import { createClient } from '@supabase/supabase-js'
 import Stripe from 'stripe'
 
+// Stripe consiglia Node.js runtime per i webhook
+export const runtime = 'nodejs'
+
 export async function POST(request: NextRequest) {
   console.log('🔔 Webhook received at:', new Date().toISOString())
   console.log('🔔 Request headers:', Object.fromEntries(request.headers.entries()))
