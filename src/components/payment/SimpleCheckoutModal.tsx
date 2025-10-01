@@ -10,6 +10,7 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { CreditCard, User, Calendar, Euro, AlertCircle, Loader2, Users } from 'lucide-react'
 import { StripeCheckoutButton } from './StripeCheckoutButton'
+import { QuickRegistrationForm } from './QuickRegistrationForm'
 
 interface SimpleCheckoutModalProps {
   isOpen: boolean
@@ -45,6 +46,8 @@ export function SimpleCheckoutModal({
   const [paymentType, setPaymentType] = useState<'deposit' | 'full'>('deposit')
   const [quantity, setQuantity] = useState(1)
   const [showPaymentForm, setShowPaymentForm] = useState(false)
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false)
+  const [registeredUserId, setRegisteredUserId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   const getPaymentAmount = () => {
@@ -72,6 +75,27 @@ export function SimpleCheckoutModal({
   const handlePaymentError = (error: string) => {
     console.error('Payment error:', error)
     setError(error)
+  }
+
+  const handleRegistrationSuccess = (userId: string) => {
+    setRegisteredUserId(userId)
+    setShowRegistrationForm(false)
+    setShowPaymentForm(true)
+    setError(null)
+  }
+
+  const handleRegistrationError = (error: string) => {
+    setError(error)
+  }
+
+  const handleStartPayment = () => {
+    if (!user && !registeredUserId) {
+      // Utente non registrato, mostra form di registrazione
+      setShowRegistrationForm(true)
+    } else {
+      // Utente già registrato, vai direttamente al pagamento
+      setShowPaymentForm(true)
+    }
   }
 
 
@@ -244,8 +268,24 @@ export function SimpleCheckoutModal({
             </Alert>
           )}
 
-          {/* Payment Form */}
-          {showPaymentForm ? (
+          {/* Registration Form */}
+          {showRegistrationForm ? (
+            <div className="space-y-4">
+              <QuickRegistrationForm
+                onSuccess={handleRegistrationSuccess}
+                onError={handleRegistrationError}
+              />
+              <div className="flex gap-3">
+                <Button 
+                  variant="outline" 
+                  onClick={() => setShowRegistrationForm(false)}
+                  className="flex-1"
+                >
+                  Indietro
+                </Button>
+              </div>
+            </div>
+          ) : showPaymentForm ? (
             <div className="space-y-4">
               <h4 className="font-semibold">Completa il pagamento</h4>
               <StripeCheckoutButton
@@ -253,11 +293,11 @@ export function SimpleCheckoutModal({
                 currency={session.currency.toLowerCase()}
                 tourId={tour.id}
                 sessionId={session.id}
-                userId={user?.id || 'anonymous'} // Permettiamo pagamento anche senza user
+                userId={user?.id || registeredUserId || 'anonymous'}
                 paymentType={paymentType === 'full' ? 'balance' : 'deposit'}
                 quantity={quantity}
                 tourTitle={tour.title}
-                tourDestination={tour.title} // Usiamo il titolo come destinazione per ora
+                tourDestination={tour.title}
                 sessionDate={session.date}
                 sessionEndDate={tour.endDate}
                 sessionPrice={session.price}
@@ -272,7 +312,7 @@ export function SimpleCheckoutModal({
                 Annulla
               </Button>
               <Button 
-                onClick={() => setShowPaymentForm(true)}
+                onClick={handleStartPayment}
                 className="flex-1 bg-red-600 hover:bg-red-700"
               >
                 <Euro className="w-4 h-4 mr-2" />

@@ -76,49 +76,16 @@ export async function POST(request: NextRequest) {
         }, { status: 400 })
       }
 
-      // Gestisci il caso di utenti anonimi
-      let finalUserId = userId
+      // Ora tutti gli utenti dovrebbero essere registrati prima del pagamento
+      const finalUserId = userId
 
       if (userId === 'anonymous') {
-        const userEmail = session.customer_details?.email || `user_${Date.now()}@temp.com`
-
-        console.log('👤 Anonymous user detected. Creating user:', userEmail)
-
-        const { data: newUser, error: userError } = await supabase.auth.admin.createUser({
-          email: userEmail,
-          password: `temp_password_${Date.now()}`,
-          email_confirm: true,
-        })
-
-        if (userError) {
-          console.error('❌ Error creating user:', userError)
-          return NextResponse.json({ error: 'User creation failed' }, { status: 500 })
-        }
-
-        finalUserId = newUser.user.id
-        console.log('✅ Anonymous user created with ID:', finalUserId)
-
-        // Invia email di recovery
-        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ||
-                       (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
-
-        try {
-          const { error: emailError } = await supabase.auth.admin.generateLink({
-            type: 'recovery',
-            email: userEmail,
-            options: {
-              redirectTo: `${siteUrl}/auth/reset-password`
-            }
-          })
-
-          if (emailError) {
-            console.error('❌ Error sending recovery email:', emailError)
-          } else {
-            console.log('✅ Recovery email sent to:', userEmail)
-          }
-        } catch (err) {
-          console.error('❌ Error in recovery email flow:', err)
-        }
+        console.error('❌ Anonymous user detected but should not happen anymore')
+        return NextResponse.json({ 
+          error: 'Anonymous users not supported - user must register first',
+          timestamp,
+          sessionId: session.id 
+        }, { status: 400 })
       }
 
       // Crea il booking
