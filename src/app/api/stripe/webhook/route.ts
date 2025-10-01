@@ -237,7 +237,7 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
       const { error: insertError } = await supabase
         .from('bookings')
         .insert({
-          user_id: userId,
+          user_id: finalUserId,
           tour_id: tourId,
           session_id: sessionId,
           status: 'deposit_paid',
@@ -259,7 +259,7 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
           status: 'fully_paid',
           stripe_payment_intent_id: session.payment_intent as string,
         })
-        .eq('user_id', userId)
+        .eq('user_id', finalUserId)
         .eq('tour_id', tourId)
         .eq('session_id', sessionId)
 
