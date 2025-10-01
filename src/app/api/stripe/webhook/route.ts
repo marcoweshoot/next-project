@@ -159,7 +159,6 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
 
   // Gestisci il caso di utenti anonimi
   let finalUserId = userId
-  let magicLinkUrl = null
   
   if (userId === 'anonymous') {
     const userEmail = session.customer_details?.email || `user_${Date.now()}@temp.com`
