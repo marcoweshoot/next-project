@@ -1,12 +1,12 @@
 {
   "functions": {
-    "src/app/api/stripe/webhook-public/route.ts": {
+    "src/app/api/stripe/webhook/route.ts": {
       "maxDuration": 30
     }
   },
   "headers": [
     {
-      "source": "/api/stripe/webhook-public",
+      "source": "/api/stripe/webhook",
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
@@ -14,11 +14,11 @@
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "POST, OPTIONS"
+          "value": "POST"
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, stripe-signature"
+          "value": "stripe-signature, content-type"
         }
       ]
     }
