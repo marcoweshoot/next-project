@@ -23,7 +23,21 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     console.log('📊 Request body:', body)
     
-    const { amount, currency = 'eur', tourId, sessionId, userId, paymentType = 'deposit', quantity = 1 } = body
+    const { 
+      amount, 
+      currency = 'eur', 
+      tourId, 
+      sessionId, 
+      userId, 
+      paymentType = 'deposit', 
+      quantity = 1,
+      tourTitle,
+      tourDestination,
+      sessionDate,
+      sessionEndDate,
+      sessionPrice,
+      sessionDeposit
+    } = body
 
     // Validate required fields (userId can be 'anonymous' for guest checkout)
     if (!amount || !tourId || !sessionId || (!userId && userId !== 'anonymous')) {
@@ -96,6 +110,12 @@ export async function POST(request: NextRequest) {
         sessionId,
         paymentType,
         quantity: quantity.toString(),
+        tourTitle: tourTitle || '',
+        tourDestination: tourDestination || '',
+        sessionDate: sessionDate || '',
+        sessionEndDate: sessionEndDate || '',
+        sessionPrice: sessionPrice?.toString() || '',
+        sessionDeposit: sessionDeposit?.toString() || '',
       },
     })
 

@@ -148,7 +148,19 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
     }
   )
   
-  const { userId, tourId, sessionId, paymentType } = session.metadata
+  const { 
+    userId, 
+    tourId, 
+    sessionId, 
+    paymentType, 
+    quantity,
+    tourTitle,
+    tourDestination,
+    sessionDate,
+    sessionEndDate,
+    sessionPrice,
+    sessionDeposit
+  } = session.metadata
 
   if (!userId || !tourId || !sessionId || !paymentType) {
     console.error('❌ Missing metadata in checkout session:', session.id)
@@ -234,10 +246,18 @@ async function handleCheckoutSuccess(session: Stripe.Checkout.Session) {
           stripe_payment_intent_id: session.payment_intent as string,
           deposit_due_date: new Date().toISOString(), // Data di pagamento dell'acconto (oggi)
           balance_due_date: new Date(new Date(sessionData.start).getTime() - 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 giorni prima della partenza
+          quantity: quantity ? parseInt(quantity) : 1,
+          tour_title: tourTitle || '',
+          tour_destination: tourDestination || '',
+          session_date: sessionDate || '',
+          session_end_date: sessionEndDate || '',
         })
 
       if (insertError) {
         console.error('Error creating booking:', insertError)
+        console.error('❌ Booking insert error details:', JSON.stringify(insertError, null, 2))
+      } else {
+        console.log('✅ Booking created successfully for user:', finalUserId)
       }
     } else if (paymentType === 'balance') {
       // Update existing booking to fully paid
