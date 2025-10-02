@@ -62,10 +62,15 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
 
   useEffect(() => {
     const getUser = async () => {
-      const supabase = createClient();
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
-        setUser({ id: user.id, email: user.email || '' });
+      try {
+        const supabase = createClient();
+        const { data: { user } } = await supabase.auth.getUser();
+        if (user) {
+          setUser({ id: user.id, email: user.email || '' });
+        }
+      } catch (error) {
+        // Ignora errori di autenticazione (403, etc.)
+        console.log('User not authenticated, continuing without login');
       }
     };
     getUser();
