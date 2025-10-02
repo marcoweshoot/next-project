@@ -92,16 +92,16 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
         throw new Error('Errore durante la registrazione')
       }
 
-      // Crea il profilo
+      // Crea o aggiorna il profilo
       const { error: profileError } = await supabase
         .from('profiles')
-        .insert({
+        .upsert({
           id: authData.user.id,
           email: formData.email,
           first_name: formData.firstName,
           last_name: formData.lastName,
           created_at: new Date().toISOString()
-        })
+        }, { onConflict: 'id' })
 
       if (profileError) {
         console.error('Errore creazione profilo:', profileError)
