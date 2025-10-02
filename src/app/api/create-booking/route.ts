@@ -116,7 +116,6 @@ export async function POST(request: NextRequest) {
           
           // Prepara i dati del profilo
           const profileUpdate: any = {
-            full_name: customerDetails.name || null,
             email: customerDetails.email || null,
             address: billingAddress?.line1 || null,
             city: billingAddress?.city || null,

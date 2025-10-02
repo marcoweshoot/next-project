@@ -100,7 +100,6 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
           email: formData.email,
           first_name: formData.firstName,
           last_name: formData.lastName,
-          full_name: `${formData.firstName} ${formData.lastName}`,
           created_at: new Date().toISOString()
         })
 
