@@ -21,11 +21,31 @@ export function PaymentSuccessToast() {
       try {
         const { userId, tourId, sessionId, paymentType, quantity = 1, tourTitle, tourDestination, sessionDate, sessionEndDate, sessionPrice, sessionDeposit, amount } = JSON.parse(paymentData)
         
+        // Try to get stripeSessionId from URL parameters
+        const urlParams = new URLSearchParams(window.location.search)
+        const stripeSessionId = urlParams.get('session_id')
+        
+        console.log('🔍 Stripe session ID from URL:', stripeSessionId)
+        
         // Create booking
         fetch('/api/create-booking', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ userId, tourId, sessionId, paymentType, quantity, tourTitle, tourDestination, sessionDate, sessionEndDate, sessionPrice, sessionDeposit, amount }),
+          body: JSON.stringify({ 
+            userId, 
+            tourId, 
+            sessionId, 
+            paymentType, 
+            quantity, 
+            tourTitle, 
+            tourDestination, 
+            sessionDate, 
+            sessionEndDate, 
+            sessionPrice, 
+            sessionDeposit, 
+            amount,
+            stripeSessionId 
+          }),
         })
         .then(response => response.json())
         .then(result => {
