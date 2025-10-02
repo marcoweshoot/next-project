@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Gift, Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { createClient } from "@/lib/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
 interface GiftCardItemProps {
@@ -22,6 +22,7 @@ const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPric
     if (isLoading) return;
     setIsLoading(true);
     try {
+      const supabase = createClient()
       const { data, error } = await supabase.functions.invoke<PaymentResponse>(
         "create-gift-card-payment",
         { body: { amount } }

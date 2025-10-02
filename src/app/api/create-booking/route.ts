@@ -8,6 +8,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { userId, tourId, sessionId, paymentType = 'deposit', quantity = 1, tourTitle, tourDestination, sessionDate, sessionEndDate, sessionPrice, sessionDeposit, amount, stripeSessionId } = body
 
+    console.log('🚀 /api/create-booking called with:', { userId, tourId, sessionId, paymentType })
 
     // Prova prima con l'utente loggato
     let supabase = await createServerClientSupabase()
@@ -18,7 +19,7 @@ export async function POST(request: NextRequest) {
       isUserLoggedIn = !!user
       console.log('🔍 User logged in:', isUserLoggedIn, user?.id)
     } catch (error) {
-      console.log('User not logged in, using service role key')
+      console.log('❌ User not logged in, using service role key:', error)
     }
     
     // Se l'utente non è loggato, usa Service Role Key
