@@ -22,7 +22,11 @@ function PaymentSuccessContent() {
         }
 
         // Get payment data from localStorage
+        console.log('🔍 Checking localStorage for paymentData...')
         const paymentData = localStorage.getItem('paymentData')
+        console.log('📊 localStorage paymentData:', paymentData)
+        console.log('📊 localStorage keys:', Object.keys(localStorage))
+        
         if (!paymentData) {
           throw new Error('Dati di pagamento non trovati')
         }
