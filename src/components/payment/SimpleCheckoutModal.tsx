@@ -105,6 +105,27 @@ export function SimpleCheckoutModal({
   }
 
   const handleRegistrationSuccess = (userId: string) => {
+    console.log('✅ Registration successful, saving payment data and showing payment form')
+    
+    // Salva i dati di pagamento in localStorage
+    const paymentData = {
+      userId: userId,
+      tourId: tour.id,
+      sessionId: session.id,
+      paymentType: paymentType === 'full' ? 'balance' : 'deposit',
+      quantity: quantity,
+      tourTitle: tour.title,
+      tourDestination: tour.title,
+      sessionDate: session.date,
+      sessionEndDate: tour.endDate,
+      sessionPrice: session.price,
+      sessionDeposit: session.deposit,
+      amount: getPaymentAmount() * 100, // Convert to cents
+    }
+    
+    localStorage.setItem('paymentData', JSON.stringify(paymentData))
+    console.log('💾 Payment data saved to localStorage after registration:', paymentData)
+    
     setRegisteredUserId(userId)
     setShowRegistrationForm(false)
     setShowPaymentForm(true)
