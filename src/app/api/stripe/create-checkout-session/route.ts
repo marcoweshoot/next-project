@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
       ],
       // Personalizziamo i messaggi per l'Italia
       locale: 'it',
-      success_url: `${getSiteUrl()}/dashboard?payment=success`,
+      success_url: `${getSiteUrl()}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${getSiteUrl()}/dashboard?payment=cancelled`,
       metadata: {
         userId,
