@@ -28,6 +28,7 @@ export function PaymentSuccessToast() {
         console.log('🔍 Stripe session ID from URL:', stripeSessionId)
         
         // Create booking
+        console.log('🔄 Creating booking for user:', userId)
         fetch('/api/create-booking', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -47,13 +48,20 @@ export function PaymentSuccessToast() {
             stripeSessionId 
           }),
         })
-        .then(response => response.json())
+        .then(response => {
+          console.log('📊 Create booking response status:', response.status)
+          return response.json()
+        })
         .then(result => {
+          console.log('📊 Create booking result:', result)
           if (result.success) {
+            console.log('✅ Booking created successfully!')
             // Clear payment data
             localStorage.removeItem('paymentData')
             // Force dashboard refresh to show new booking
             window.location.reload()
+          } else {
+            console.error('❌ Booking creation failed:', result.error)
           }
         })
         .catch(error => {
