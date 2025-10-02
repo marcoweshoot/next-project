@@ -43,7 +43,14 @@ export function SimpleCheckoutModal({
   session,
   user,
 }: SimpleCheckoutModalProps) {
-  const [paymentType, setPaymentType] = useState<'deposit' | 'full'>('deposit')
+  // Imposta il tipo di pagamento iniziale basato sulla disponibilità dell'acconto
+  const [paymentType, setPaymentType] = useState<'deposit' | 'full'>(() => {
+    // Se non c'è acconto o è molto piccolo, usa pagamento completo
+    if (!session.deposit || session.deposit === 0 || session.deposit >= session.price || session.deposit < session.price * 0.2) {
+      return 'full'
+    }
+    return 'deposit'
+  })
   const [quantity, setQuantity] = useState(1)
   const [showPaymentForm, setShowPaymentForm] = useState(false)
   const [showRegistrationForm, setShowRegistrationForm] = useState(false)
@@ -65,6 +72,26 @@ export function SimpleCheckoutModal({
 
   const getBalanceAmount = () => {
     return (session.price - session.deposit) * quantity
+  }
+
+  // Determina se mostrare l'opzione acconto
+  const shouldShowDepositOption = () => {
+    // Se l'acconto è 0 o null, non mostrare l'opzione acconto
+    if (!session.deposit || session.deposit === 0) {
+      return false
+    }
+    
+    // Se l'acconto è uguale al prezzo totale, non mostrare l'opzione acconto
+    if (session.deposit >= session.price) {
+      return false
+    }
+    
+    // Se l'acconto è meno del 20% del prezzo totale, non mostrare l'opzione acconto
+    if (session.deposit < session.price * 0.2) {
+      return false
+    }
+    
+    return true
   }
 
   const handlePaymentSuccess = () => {
@@ -157,19 +184,20 @@ export function SimpleCheckoutModal({
           </div>
 
           {/* Payment Type Selection */}
-          <div className="space-y-4">
-            <h4 className="font-semibold">Scegli il tipo di pagamento:</h4>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Deposit Option */}
-              <Card 
-                className={`cursor-pointer transition-all ${
-                  paymentType === 'deposit' 
-                    ? 'border-primary bg-primary/10' 
-                    : 'border-border hover:border-primary/50'
-                }`}
-                onClick={() => setPaymentType('deposit')}
-              >
+          {shouldShowDepositOption() && (
+            <div className="space-y-4">
+              <h4 className="font-semibold">Scegli il tipo di pagamento:</h4>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Deposit Option */}
+                <Card 
+                  className={`cursor-pointer transition-all ${
+                    paymentType === 'deposit' 
+                      ? 'border-primary bg-primary/10' 
+                      : 'border-border hover:border-primary/50'
+                  }`}
+                  onClick={() => setPaymentType('deposit')}
+                >
                 <CardContent className="p-4">
                   <div className="flex items-center gap-3">
                     <Checkbox 
@@ -238,6 +266,19 @@ export function SimpleCheckoutModal({
               </Card>
             </div>
           </div>
+          )}
+
+          {/* Info message when no deposit option */}
+          {!shouldShowDepositOption() && (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <p className="text-sm text-blue-700">
+                  Per questo importo è previsto solo il pagamento completo
+                </p>
+              </div>
+            </div>
+          )}
 
           {/* Payment Summary */}
           <Card className="bg-muted/50 border-border">

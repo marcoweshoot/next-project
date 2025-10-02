@@ -16,12 +16,14 @@ export async function POST(request: NextRequest) {
     try {
       const { data: { user } } = await supabase.auth.getUser()
       isUserLoggedIn = !!user
+      console.log('🔍 User logged in:', isUserLoggedIn, user?.id)
     } catch (error) {
       console.log('User not logged in, using service role key')
     }
     
     // Se l'utente non è loggato, usa Service Role Key
     if (!isUserLoggedIn) {
+      console.log('🔄 Using Service Role Key for booking creation')
       supabase = createClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
         process.env.SUPABASE_SERVICE_ROLE_KEY!,

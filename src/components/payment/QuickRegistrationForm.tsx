@@ -123,6 +123,9 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
         console.log('✅ Login automatico riuscito:', loginData.user?.id)
       }
 
+      // Aspetta un momento per assicurarsi che il login sia completato
+      await new Promise(resolve => setTimeout(resolve, 1000))
+
       onSuccess(authData.user.id)
     } catch (error: any) {
       console.error('Errore registrazione:', error)
