@@ -21,23 +21,8 @@ function PaymentSuccessContent() {
           throw new Error('Session ID non trovato')
         }
 
-        // Chiamiamo il nuovo endpoint che recupererà i dati da Stripe
-        console.log('🔄 Creating booking from Stripe session:', sessionId)
-        
-        const response = await fetch('/api/create-booking-from-stripe-session', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ stripeSessionId: sessionId }),
-        })
-
-        const result = await response.json()
-        console.log('📊 Create booking result:', result)
-
-        if (!response.ok) {
-          throw new Error(result.error || 'Errore durante la creazione della prenotazione')
-        }
-
-        console.log('✅ Booking created successfully!')
+        console.log('✅ Payment successful! Session ID:', sessionId)
+        console.log('ℹ️ Booking will be created automatically by Stripe webhook')
         
         // Clear payment data from localStorage (if it was ever there)
         localStorage.removeItem('paymentData')

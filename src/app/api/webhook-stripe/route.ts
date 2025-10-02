@@ -96,9 +96,9 @@ export async function POST(request: NextRequest) {
             user_id: finalUserId,
             tour_id: tourId,
             session_id: sessionId,
-            status: 'deposit_paid',
-            deposit_amount: session.amount_total,
-            total_amount: session.amount_total * 2, // Assumiamo che l'acconto sia metà del totale
+            status: paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid',
+            deposit_amount: paymentType === 'deposit' ? session.amount_total : (parseFloat(session.metadata?.sessionDeposit || '0') * 100),
+            total_amount: paymentType === 'deposit' ? (parseFloat(session.metadata?.sessionPrice || '0') * 100) : session.amount_total,
             stripe_payment_intent_id: session.payment_intent as string,
             deposit_due_date: new Date().toISOString(),
             balance_due_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 giorni da oggi
@@ -118,6 +118,61 @@ export async function POST(request: NextRequest) {
       } catch (error) {
         console.error('❌ Error handling booking creation:', error)
         return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
+      }
+
+      // Aggiorna il profilo con i dati di fatturazione
+      if (session.customer_details) {
+        try {
+          const customerDetails = session.customer_details
+          const billingAddress = customerDetails.address
+          
+          const profileUpdate: any = {
+            email: customerDetails.email || null,
+            address: billingAddress?.line1 || null,
+            city: billingAddress?.city || null,
+            postal_code: billingAddress?.postal_code || null,
+            country: billingAddress?.country || null,
+          }
+          
+          // Aggiungi dati custom di Stripe (codice fiscale, P.IVA, PEC)
+          if (session.custom_fields) {
+            session.custom_fields.forEach((field: any) => {
+              if (field.key === 'fiscal_code' && field.text?.value) {
+                profileUpdate.fiscal_code = field.text.value
+              }
+              if (field.key === 'vat_number' && field.text?.value) {
+                profileUpdate.vat_number = field.text.value
+              }
+              if (field.key === 'pec_email' && field.text?.value) {
+                profileUpdate.pec_email = field.text.value
+              }
+            })
+          }
+          
+          // Rimuovi campi nulli
+          Object.keys(profileUpdate).forEach(key => {
+            if (profileUpdate[key] === null) {
+              delete profileUpdate[key]
+            }
+          })
+          
+          console.log('📊 Updating profile with billing data:', profileUpdate)
+          
+          const { error: profileError } = await supabase
+            .from('profiles')
+            .upsert({
+              id: finalUserId,
+              ...profileUpdate,
+            }, { onConflict: 'id' })
+          
+          if (profileError) {
+            console.error('❌ Error updating user profile with billing data:', profileError)
+          } else {
+            console.log('✅ User profile updated with billing data for user:', finalUserId)
+          }
+        } catch (profileUpdateError) {
+          console.error('❌ Error in profile update process:', profileUpdateError)
+        }
       }
     } else {
       console.log('⚠️ Unhandled event type:', event.type)
