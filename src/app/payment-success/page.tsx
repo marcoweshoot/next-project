@@ -21,76 +21,37 @@ function PaymentSuccessContent() {
           throw new Error('Session ID non trovato')
         }
 
-        // Get payment data from localStorage
-        console.log('🔍 Checking localStorage for paymentData...')
-        const paymentData = localStorage.getItem('paymentData')
-        console.log('📊 localStorage paymentData:', paymentData)
-        console.log('📊 localStorage keys:', Object.keys(localStorage))
+        // Chiamiamo il nuovo endpoint che recupererà i dati da Stripe
+        console.log('🔄 Creating booking from Stripe session:', sessionId)
         
-        if (!paymentData) {
-          throw new Error('Dati di pagamento non trovati')
-        }
-
-        const { 
-          userId, 
-          tourId, 
-          sessionId: storedSessionId, 
-          paymentType, 
-          quantity = 1, 
-          tourTitle, 
-          tourDestination, 
-          sessionDate, 
-          sessionEndDate, 
-          sessionPrice, 
-          sessionDeposit, 
-          amount 
-        } = JSON.parse(paymentData)
-
-        console.log('🔄 Creating booking for user:', userId)
-
-        // Create booking
-        const response = await fetch('/api/create-booking', {
+        const response = await fetch('/api/create-booking-from-stripe-session', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-            userId, 
-            tourId, 
-            sessionId: storedSessionId, 
-            paymentType, 
-            quantity, 
-            tourTitle, 
-            tourDestination, 
-            sessionDate, 
-            sessionEndDate, 
-            sessionPrice, 
-            sessionDeposit, 
-            amount,
-            stripeSessionId: sessionId 
-          }),
+          body: JSON.stringify({ stripeSessionId: sessionId }),
         })
 
         const result = await response.json()
         console.log('📊 Create booking result:', result)
 
-        if (result.success) {
-          console.log('✅ Booking created successfully!')
-          
-          // Clear payment data
-          localStorage.removeItem('paymentData')
-          
-          // Show success toast
-          toast({
-            title: "Pagamento completato! 🎉",
-            description: "La tua prenotazione è stata confermata. Controlla la sezione 'Prenotazioni' per i dettagli.",
-          })
-
-          // Redirect to dashboard after 2 seconds
-          setTimeout(() => {
-            router.push('/dashboard')
-          }, 2000)
-        } else {
-          throw new Error(result.error || 'Errore nella creazione del booking')
+        if (!response.ok) {
+          throw new Error(result.error || 'Errore durante la creazione della prenotazione')
         }
+
+        console.log('✅ Booking created successfully!')
+        
+        // Clear payment data from localStorage (if it was ever there)
+        localStorage.removeItem('paymentData')
+        
+        // Show success toast
+        toast({
+          title: "Pagamento completato! 🎉",
+          description: "La tua prenotazione è stata confermata. Controlla la sezione 'Prenotazioni' per i dettagli.",
+        })
+
+        // Redirect to dashboard after 2 seconds
+        setTimeout(() => {
+          router.push('/dashboard')
+        }, 2000)
       } catch (error) {
         console.error('❌ Error handling payment success:', error)
         setError(error instanceof Error ? error.message : 'Errore sconosciuto')

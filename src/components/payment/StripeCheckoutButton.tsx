@@ -74,21 +74,6 @@ export function StripeCheckoutButton({
         throw new Error(error)
       }
 
-      // Save payment data to localStorage for after redirect
-      localStorage.setItem('paymentData', JSON.stringify({
-        userId,
-        tourId,
-        sessionId,
-        paymentType,
-        quantity,
-        tourTitle,
-        tourDestination,
-        sessionDate,
-        sessionEndDate,
-        sessionPrice,
-        sessionDeposit,
-        amount, // Add the actual amount in cents
-      }))
 
       // Redirect a Stripe Checkout
       window.location.href = url

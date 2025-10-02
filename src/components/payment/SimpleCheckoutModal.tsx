@@ -105,27 +105,7 @@ export function SimpleCheckoutModal({
   }
 
   const handleRegistrationSuccess = (userId: string) => {
-    console.log('✅ Registration successful, saving payment data and showing payment form')
-    
-    // Salva i dati di pagamento in localStorage
-    const paymentData = {
-      userId: userId,
-      tourId: tour.id,
-      sessionId: session.id,
-      paymentType: paymentType === 'full' ? 'balance' : 'deposit',
-      quantity: quantity,
-      tourTitle: tour.title,
-      tourDestination: tour.title,
-      sessionDate: session.date,
-      sessionEndDate: tour.endDate,
-      sessionPrice: session.price,
-      sessionDeposit: session.deposit,
-      amount: getPaymentAmount() * 100, // Convert to cents
-    }
-    
-    localStorage.setItem('paymentData', JSON.stringify(paymentData))
-    console.log('💾 Payment data saved to localStorage after registration:', paymentData)
-    
+    console.log('✅ Registration successful, showing payment form')
     setRegisteredUserId(userId)
     setShowRegistrationForm(false)
     setShowPaymentForm(true)
@@ -145,28 +125,8 @@ export function SimpleCheckoutModal({
       console.log('User not logged in, showing registration form')
       setShowRegistrationForm(true)
     } else {
-      // Utente già registrato, salva i dati e vai al pagamento
-      console.log('User logged in, saving payment data and going to payment')
-      
-      // Salva i dati di pagamento in localStorage
-      const paymentData = {
-        userId: user?.id || registeredUserId || '',
-        tourId: tour.id,
-        sessionId: session.id,
-        paymentType: paymentType === 'full' ? 'balance' : 'deposit',
-        quantity: quantity,
-        tourTitle: tour.title,
-        tourDestination: tour.title,
-        sessionDate: session.date,
-        sessionEndDate: tour.endDate,
-        sessionPrice: session.price,
-        sessionDeposit: session.deposit,
-        amount: getPaymentAmount() * 100, // Convert to cents
-      }
-      
-      localStorage.setItem('paymentData', JSON.stringify(paymentData))
-      console.log('💾 Payment data saved to localStorage:', paymentData)
-      
+      // Utente già registrato, vai al pagamento
+      console.log('User logged in, going to payment')
       setShowPaymentForm(true)
     }
   }
