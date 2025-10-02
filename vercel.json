@@ -1,12 +1,12 @@
 {
   "functions": {
-    "src/app/api/stripe/webhook/route.ts": {
+    "src/app/api/webhook-stripe/route.ts": {
       "maxDuration": 30
     }
   },
   "headers": [
     {
-      "source": "/api/stripe/webhook",
+      "source": "/api/webhook-stripe",
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
