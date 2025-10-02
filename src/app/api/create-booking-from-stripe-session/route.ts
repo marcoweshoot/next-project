@@ -74,6 +74,14 @@ export async function POST(request: NextRequest) {
     const totalSessionPrice = parseFloat(sessionPrice || '0') * 100 * parsedQuantity // in cents
     const sessionDepositAmount = parseFloat(sessionDeposit || '0') * 100 * parsedQuantity // in cents
 
+    console.log('💰 Amount calculations:', {
+      parsedQuantity,
+      paidAmount,
+      totalSessionPrice,
+      sessionDepositAmount,
+      paymentType
+    })
+
     let depositAmount = 0
     let totalAmount = 0
     let bookingStatus = 'pending'
@@ -93,6 +101,12 @@ export async function POST(request: NextRequest) {
       totalAmount = paidAmount
       bookingStatus = 'fully_paid'
     }
+
+    console.log('📊 Final amounts:', {
+      depositAmount,
+      totalAmount,
+      bookingStatus
+    })
 
     // Crea o aggiorna il booking (stesso formato del webhook che funziona)
     const bookingData = {
@@ -116,16 +130,22 @@ export async function POST(request: NextRequest) {
 
     console.log('📊 Booking data to insert:', bookingData)
 
-    const { error: bookingError } = await supabase
-      .from('bookings')
-      .upsert(bookingData, { onConflict: 'stripe_payment_intent_id' }) // Usa upsert per evitare duplicati
+    try {
+      const { error: bookingError } = await supabase
+        .from('bookings')
+        .upsert(bookingData, { onConflict: 'stripe_payment_intent_id' }) // Usa upsert per evitare duplicati
 
-    if (bookingError) {
-      console.error('❌ Error creating/updating booking:', bookingError)
-      console.error('❌ Full booking error details:', JSON.stringify(bookingError, null, 2))
-      return NextResponse.json({ error: 'Booking creation/update failed' }, { status: 500 })
+      if (bookingError) {
+        console.error('❌ Error creating/updating booking:', bookingError)
+        console.error('❌ Full booking error details:', JSON.stringify(bookingError, null, 2))
+        return NextResponse.json({ error: 'Booking creation/update failed' }, { status: 500 })
+      }
+      console.log('✅ Booking created/updated successfully for user:', userId)
+    } catch (dbError) {
+      console.error('❌ Database operation failed:', dbError)
+      console.error('❌ Database error details:', JSON.stringify(dbError, null, 2))
+      return NextResponse.json({ error: 'Database operation failed' }, { status: 500 })
     }
-    console.log('✅ Booking created/updated successfully for user:', userId)
 
     // Aggiorna il profilo con i dati di fatturazione
     if (session.customer_details) {
