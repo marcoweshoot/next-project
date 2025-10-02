@@ -2,13 +2,11 @@
 
 import { useEffect, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useToast } from '@/hooks/use-toast'
 import { CheckCircle, Loader2 } from 'lucide-react'
 
 function PaymentSuccessContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const { toast } = useToast()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -27,12 +25,6 @@ function PaymentSuccessContent() {
         // Clear payment data from localStorage (if it was ever there)
         localStorage.removeItem('paymentData')
         
-        // Show success toast
-        toast({
-          title: "Pagamento completato! 🎉",
-          description: "La tua prenotazione è stata confermata. Controlla la sezione 'Prenotazioni' per i dettagli.",
-        })
-
         // Redirect to dashboard after 2 seconds
         setTimeout(() => {
           router.push('/dashboard')
@@ -46,7 +38,7 @@ function PaymentSuccessContent() {
     }
 
     handlePaymentSuccess()
-  }, [searchParams, router, toast])
+  }, [searchParams, router])
 
   if (loading) {
     return (
