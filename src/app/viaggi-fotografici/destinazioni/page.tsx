@@ -48,7 +48,6 @@ export default async function DestinationsPage() {
           rel="preload"
           as="image"
           href="https://wxoodcdxscxazjkoqhsg.supabase.co/storage/v1/object/public/picture//photo-1469474968028-56623f02e42e.avif"
-          type="image/avif"
         />
       </Head>
 

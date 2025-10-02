@@ -21,7 +21,7 @@ export const useInfiniteScroll = ({ hasMore, isLoading, onLoadMore }: UseInfinit
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasMore, isLoading, isFetching]);
 
