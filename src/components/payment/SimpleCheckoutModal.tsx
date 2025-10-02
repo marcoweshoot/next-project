@@ -124,8 +124,28 @@ export function SimpleCheckoutModal({
       console.log('User not logged in, showing registration form')
       setShowRegistrationForm(true)
     } else {
-      // Utente già registrato, vai direttamente al pagamento
-      console.log('User logged in, going to payment')
+      // Utente già registrato, salva i dati e vai al pagamento
+      console.log('User logged in, saving payment data and going to payment')
+      
+      // Salva i dati di pagamento in localStorage
+      const paymentData = {
+        userId: user?.id || registeredUserId || '',
+        tourId: tour.id,
+        sessionId: session.id,
+        paymentType: paymentType === 'full' ? 'balance' : 'deposit',
+        quantity: quantity,
+        tourTitle: tour.title,
+        tourDestination: tour.title,
+        sessionDate: session.date,
+        sessionEndDate: tour.endDate,
+        sessionPrice: session.price,
+        sessionDeposit: session.deposit,
+        amount: getPaymentAmount() * 100, // Convert to cents
+      }
+      
+      localStorage.setItem('paymentData', JSON.stringify(paymentData))
+      console.log('💾 Payment data saved to localStorage:', paymentData)
+      
       setShowPaymentForm(true)
     }
   }
