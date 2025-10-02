@@ -114,12 +114,15 @@ export async function POST(request: NextRequest) {
       session_end_date: sessionEndDate || '',
     }
 
+    console.log('📊 Booking data to insert:', bookingData)
+
     const { error: bookingError } = await supabase
       .from('bookings')
       .upsert(bookingData, { onConflict: 'stripe_payment_intent_id' }) // Usa upsert per evitare duplicati
 
     if (bookingError) {
       console.error('❌ Error creating/updating booking:', bookingError)
+      console.error('❌ Full booking error details:', JSON.stringify(bookingError, null, 2))
       return NextResponse.json({ error: 'Booking creation/update failed' }, { status: 500 })
     }
     console.log('✅ Booking created/updated successfully for user:', userId)
