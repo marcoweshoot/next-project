@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
       bookingStatus = 'fully_paid'
     }
 
-    // Crea o aggiorna il booking
+    // Crea o aggiorna il booking (stesso formato del webhook che funziona)
     const bookingData = {
       user_id: userId,
       tour_id: tourId,
@@ -110,8 +110,8 @@ export async function POST(request: NextRequest) {
         new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // Fallback se non abbiamo la data
       tour_title: tourTitle || '',
       tour_destination: tourDestination || '',
-      session_date: sessionDate || '',
-      session_end_date: sessionEndDate || '',
+      session_date: sessionDate || '',         // ← CORRETTO: come nel webhook
+      session_end_date: sessionEndDate || '',  // ← CORRETTO: come nel webhook
     }
 
     console.log('📊 Booking data to insert:', bookingData)
