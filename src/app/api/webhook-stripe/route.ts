@@ -42,6 +42,8 @@ export async function POST(request: NextRequest) {
       console.log('📊 Payment Status:', session.payment_status)
       console.log('📊 Metadata:', session.metadata)
       console.log('📊 Customer Details:', session.customer_details)
+      console.log('📊 Custom Fields:', session.custom_fields)
+      console.log('📊 Full Session Object:', JSON.stringify(session, null, 2))
 
       // Usa Service Role Key per bypassare RLS
       const supabase = createClient(
@@ -120,58 +122,88 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
       }
 
-      // Aggiorna il profilo con i dati di fatturazione
+      // Aggiorna il profilo con i dati di fatturazione da Stripe
       if (session.customer_details) {
         try {
           const customerDetails = session.customer_details
           const billingAddress = customerDetails.address
           
-          const profileUpdate: any = {
-            email: customerDetails.email || null,
-            address: billingAddress?.line1 || null,
-            city: billingAddress?.city || null,
-            postal_code: billingAddress?.postal_code || null,
-            country: billingAddress?.country || null,
+          const profileUpdate: any = {}
+          
+          // Aggiungi email se presente
+          if (customerDetails.email) {
+            profileUpdate.email = customerDetails.email
           }
           
-          // Aggiungi dati custom di Stripe (codice fiscale, P.IVA, PEC)
+          // Aggiungi indirizzo se presente
+          if (billingAddress?.line1) {
+            profileUpdate.address = billingAddress.line1
+          }
+          if (billingAddress?.city) {
+            profileUpdate.city = billingAddress.city
+          }
+          if (billingAddress?.postal_code) {
+            profileUpdate.postal_code = billingAddress.postal_code
+          }
+          if (billingAddress?.country) {
+            profileUpdate.country = billingAddress.country
+          }
+          
+          // Aggiungi dati fiscali da custom fields di Stripe
           if (session.custom_fields) {
+            console.log('📊 Processing custom fields:', session.custom_fields)
+            
             session.custom_fields.forEach((field: any) => {
+              console.log('📊 Processing field:', field.key, 'value:', field.text?.value)
+              
               if (field.key === 'fiscal_code' && field.text?.value) {
-                profileUpdate.fiscal_code = field.text.value
+                const fiscalCode = field.text.value.trim().toUpperCase()
+                console.log('📊 Fiscal code after processing:', fiscalCode)
+                
+                // Valida formato codice fiscale italiano (16 caratteri, solo lettere e numeri)
+                if (fiscalCode && fiscalCode.length === 16 && /^[A-Z0-9]{16}$/.test(fiscalCode)) {
+                  profileUpdate.fiscal_code = fiscalCode
+                  console.log('✅ Valid fiscal code:', fiscalCode)
+                } else {
+                  console.warn('⚠️ Invalid fiscal code format:', fiscalCode, 'length:', fiscalCode.length)
+                }
               }
-              if (field.key === 'vat_number' && field.text?.value) {
-                profileUpdate.vat_number = field.text.value
+              if (field.key === 'vat_number' && field.text?.value && field.text.value.trim()) {
+                profileUpdate.vat_number = field.text.value.trim()
+                console.log('✅ VAT number:', field.text.value.trim())
               }
-              if (field.key === 'pec_email' && field.text?.value) {
-                profileUpdate.pec_email = field.text.value
+              if (field.key === 'pec_email' && field.text?.value && field.text.value.trim()) {
+                profileUpdate.pec_email = field.text.value.trim()
+                console.log('✅ PEC email:', field.text.value.trim())
               }
             })
           }
           
-          // Rimuovi campi nulli
-          Object.keys(profileUpdate).forEach(key => {
-            if (profileUpdate[key] === null) {
-              delete profileUpdate[key]
+          // Aggiorna il profilo solo se ci sono dati da aggiornare
+          if (Object.keys(profileUpdate).length > 0) {
+            console.log('📊 Updating profile with billing data:', profileUpdate)
+            
+            const { error: profileError } = await supabase
+              .from('profiles')
+              .upsert({
+                id: finalUserId,
+                ...profileUpdate,
+              }, { onConflict: 'id' })
+            
+            if (profileError) {
+              console.error('❌ Error updating user profile with billing data:', profileError)
+              // Non bloccare il flusso se l'aggiornamento del profilo fallisce
+              console.log('ℹ️ Continuing with booking creation despite profile update error')
+            } else {
+              console.log('✅ User profile updated with billing data for user:', finalUserId)
             }
-          })
-          
-          console.log('📊 Updating profile with billing data:', profileUpdate)
-          
-          const { error: profileError } = await supabase
-            .from('profiles')
-            .upsert({
-              id: finalUserId,
-              ...profileUpdate,
-            }, { onConflict: 'id' })
-          
-          if (profileError) {
-            console.error('❌ Error updating user profile with billing data:', profileError)
           } else {
-            console.log('✅ User profile updated with billing data for user:', finalUserId)
+            console.log('ℹ️ No billing data to update profile')
           }
         } catch (profileUpdateError) {
           console.error('❌ Error in profile update process:', profileUpdateError)
+          // Non bloccare il flusso se l'aggiornamento del profilo fallisce
+          console.log('ℹ️ Continuing with booking creation despite profile update error')
         }
       }
     } else if (event.type === 'payment_intent.succeeded') {
