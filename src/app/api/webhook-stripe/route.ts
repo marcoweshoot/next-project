@@ -175,86 +175,12 @@ export async function POST(request: NextRequest) {
         }
       }
     } else if (event.type === 'payment_intent.succeeded') {
-      const paymentIntent = event.data.object as Stripe.PaymentIntent
-      console.log('🎉 Processing payment_intent.succeeded event')
-      console.log('📊 Payment Intent ID:', paymentIntent.id)
-      console.log('📊 Amount:', paymentIntent.amount)
-      console.log('📊 Currency:', paymentIntent.currency)
-      console.log('📊 Status:', paymentIntent.status)
-      console.log('📊 Metadata:', paymentIntent.metadata)
-
-      // Usa Service Role Key per bypassare RLS
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.SUPABASE_SERVICE_ROLE_KEY!,
-        {
-          auth: {
-            autoRefreshToken: false,
-            persistSession: false
-          }
-        }
-      )
-
-      const {
-        userId,
-        tourId,
-        sessionId,
-        paymentType
-      } = paymentIntent.metadata || {}
-
-      console.log('🔍 Extracted metadata from payment intent:', { userId, tourId, sessionId, paymentType })
-
-      if (!userId || !tourId || !sessionId || !paymentType) {
-        console.error('❌ Missing metadata in payment intent:', paymentIntent.id)
-        console.error('❌ Available metadata:', paymentIntent.metadata)
-        return NextResponse.json({ 
-          error: 'Missing metadata in payment intent',
-          timestamp,
-          paymentIntentId: paymentIntent.id,
-          availableMetadata: paymentIntent.metadata 
-        }, { status: 400 })
-      }
-
-      if (userId === 'anonymous') {
-        console.error('❌ Anonymous user detected but should not happen anymore')
-        return NextResponse.json({ 
-          error: 'Anonymous users not supported - user must register first',
-          timestamp,
-          paymentIntentId: paymentIntent.id 
-        }, { status: 400 })
-      }
-
-      // Crea il booking per payment intent
-      try {
-        const { error: insertError } = await supabase
-          .from('bookings')
-          .insert({
-            user_id: userId,
-            tour_id: tourId,
-            session_id: sessionId,
-            status: paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid',
-            deposit_amount: paymentType === 'deposit' ? paymentIntent.amount : 0,
-            total_amount: paymentIntent.amount,
-            stripe_payment_intent_id: paymentIntent.id,
-            deposit_due_date: new Date().toISOString(),
-            balance_due_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 giorni da oggi
-            quantity: 1, // Default quantity for payment intents
-            tour_title: paymentIntent.metadata?.tourTitle || '',
-            tour_destination: paymentIntent.metadata?.tourDestination || '',
-            session_date: paymentIntent.metadata?.sessionDate || '',
-            session_end_date: paymentIntent.metadata?.sessionEndDate || '',
-          })
-
-        if (insertError) {
-          console.error('❌ Error creating booking from payment intent:', insertError)
-          return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
-        } else {
-          console.log('✅ Booking created successfully from payment intent for user:', userId)
-        }
-      } catch (error) {
-        console.error('❌ Error handling booking creation from payment intent:', error)
-        return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
-      }
+      // Payment Intent events are handled automatically by Stripe when using Checkout Sessions
+      // We only need to handle checkout.session.completed events for our booking system
+      console.log('ℹ️ Payment Intent succeeded - this is handled by checkout.session.completed event')
+      console.log('📊 Payment Intent ID:', (event.data.object as Stripe.PaymentIntent).id)
+      console.log('📊 Amount:', (event.data.object as Stripe.PaymentIntent).amount)
+      console.log('📊 This event is informational only - booking creation is handled by checkout.session.completed')
     } else {
       console.log('⚠️ Unhandled event type:', event.type)
       console.log('⚠️ Event data:', JSON.stringify(event.data, null, 2))
