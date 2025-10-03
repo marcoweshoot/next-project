@@ -3,6 +3,7 @@
 import { useEffect, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { CheckCircle, Loader2 } from 'lucide-react'
+import { createClient } from '@/lib/supabase/client'
 
 function PaymentSuccessContent() {
   const router = useRouter()
@@ -22,12 +23,25 @@ function PaymentSuccessContent() {
         console.log('✅ Payment successful! Session ID:', sessionId)
         console.log('ℹ️ Booking will be created automatically by Stripe webhook')
         
+        // Check if user is authenticated
+        const supabase = createClient()
+        const { data: { user }, error: authError } = await supabase.auth.getUser()
+        
+        if (authError || !user) {
+          console.log('⚠️ User not authenticated, redirecting to login with success message')
+          // Redirect to login with success message
+          router.push('/auth/login?message=payment_success')
+          return
+        }
+        
+        console.log('✅ User authenticated:', user.id)
+        
         // Clear payment data from localStorage (if it was ever there)
         localStorage.removeItem('paymentData')
         
-        // Redirect to dashboard after 2 seconds
+        // Redirect to dashboard with success parameter
         setTimeout(() => {
-          router.push('/dashboard')
+          router.push('/dashboard?payment=success')
         }, 2000)
       } catch (error) {
         console.error('❌ Error handling payment success:', error)
