@@ -11,6 +11,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import { CheckCircle, Loader2 } from 'lucide-react'
+import { GoogleAuthButton } from '@/components/auth/GoogleAuthButton'
 
 function LoginForm() {
   const [email, setEmail] = useState('')
@@ -106,6 +107,24 @@ function LoginForm() {
               {loading ? 'Accesso in corso...' : 'Accedi'}
             </Button>
           </form>
+          
+          <div className="relative my-6">
+            <div className="absolute inset-0 flex items-center">
+              <span className="w-full border-t" />
+            </div>
+            <div className="relative flex justify-center text-xs uppercase">
+              <span className="bg-background px-2 text-muted-foreground">
+                Oppure
+              </span>
+            </div>
+          </div>
+          
+          <GoogleAuthButton 
+            mode="signin"
+            onSuccess={() => router.push('/dashboard')}
+            onError={(error) => setError(error)}
+          />
+          
           <div className="mt-4 text-center text-sm">
             Non hai un account?{' '}
             <Link href="/auth/register" className="text-primary hover:underline">
