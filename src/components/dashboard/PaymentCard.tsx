@@ -197,14 +197,16 @@ export function PaymentCard({ tourId, bookings, tourInfo, isExpanded, onToggle }
               
               return (
                 <div key={booking.id} className="border rounded-lg p-4 bg-muted/30">
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <h4 className="font-medium">Prenotazione: {booking.id.slice(0, 8)}...</h4>
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3">
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-medium break-words">Prenotazione: {booking.id.slice(0, 8)}...</h4>
                       <p className="text-sm text-muted-foreground">
                         Sessione: {booking.session_id}
                       </p>
                     </div>
-                    {getStatusBadge(booking.status)}
+                    <div className="flex-shrink-0">
+                      {getStatusBadge(booking.status)}
+                    </div>
                   </div>
                   
                   {/* Payment Summary */}
@@ -267,7 +269,7 @@ export function PaymentCard({ tourId, bookings, tourInfo, isExpanded, onToggle }
                   </div>
 
                   {/* Actions */}
-                  <div className="flex gap-2 pt-4 border-t">
+                  <div className="flex flex-col sm:flex-row gap-2 pt-4 border-t">
                     {!paymentInfo.depositPaid && (
                       <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
                         <CreditCard className="w-4 h-4 mr-2" />
@@ -284,18 +286,21 @@ export function PaymentCard({ tourId, bookings, tourInfo, isExpanded, onToggle }
                       </div>
                     )}
                     
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      onClick={() => window.open(`/dashboard/bookings/${booking.id}`, '_blank')}
-                    >
-                      Dettagli
-                    </Button>
-                    
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      onClick={() => {
+                    <div className="flex gap-2 flex-1">
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        className="flex-1"
+                        onClick={() => window.open(`/dashboard/bookings/${booking.id}`, '_blank')}
+                      >
+                        Dettagli
+                      </Button>
+                      
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        className="flex-1"
+                        onClick={() => {
                         const subject = encodeURIComponent('Assistenza Prenotazione')
                         const body = encodeURIComponent(`Salve,\n\nHo bisogno di assistenza per la prenotazione:\n- ID Prenotazione: ${booking.id}\n- Tour: ${tourInfo?.title || 'N/A'}\n- Sessione: ${booking.session_id}\n\nDescrivo il problema:\n\n`)
                         
@@ -324,6 +329,7 @@ export function PaymentCard({ tourId, bookings, tourInfo, isExpanded, onToggle }
                     >
                       Assistenza
                     </Button>
+                    </div>
                   </div>
                 </div>
               )

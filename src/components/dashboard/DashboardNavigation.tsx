@@ -46,7 +46,7 @@ const baseNavigationItems = [
 ]
 
 const adminNavigationItem = {
-  href: '/admin/reviews',
+  href: '/admin',
   label: 'Admin',
   icon: Settings,
 }

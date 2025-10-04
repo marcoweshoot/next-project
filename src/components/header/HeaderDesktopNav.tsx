@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
+import { LoginDropdown } from '@/components/auth/LoginDropdown';
 
 const ThemeToggleLazy = dynamic(
   () => import('@/components/ui/theme-toggle').then(m => m.ThemeToggle),
@@ -37,7 +38,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
   const linkColor = isScrolled || isAuthPage ? 'text-foreground' : 'text-primary-foreground';
 
   return (
-    <nav className="hidden lg:flex items-center flex-nowrap gap-x-4 xl:gap-x-8">
+    <nav className="hidden lg:flex items-center flex-nowrap gap-x-2 xl:gap-x-4 2xl:gap-x-6">
       {/* Viaggi Fotografici */}
       <div className="group/drop relative">
         <button
@@ -119,7 +120,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
       <Link
         href="/fotografi/"
         prefetch={false}
-        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor}`}
+        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor} hidden xl:block`}
       >
         Coach
       </Link>
@@ -128,7 +129,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
         href="https://blog.weshoot.it/"
         target="_blank"
         rel="noopener noreferrer"
-        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor}`}
+        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor} hidden xl:block`}
       >
         Blog
       </a>
@@ -136,20 +137,23 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
       <Link
         href="/recensioni/"
         prefetch={false}
-        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor}`}
+        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor} hidden 2xl:block`}
       >
         Dicono di Noi
       </Link>
 
-      <ThemeToggleLazy />
+      <LoginDropdown isScrolled={isScrolled} />
 
-      <div className="flex items-center">
+      {/* Theme Toggle e CTA Button raggruppati */}
+      <div className="flex items-center gap-2">
+        <ThemeToggleLazy />
         <Button
           asChild
-          className="bg-red-600 text-primary-foreground hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="bg-red-600 text-white hover:bg-red-700 focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors duration-200 text-sm xl:text-base"
         >
           <Link href="/viaggi-fotografici/" prefetch={false}>
-            Scopri i Viaggi
+            <span className="hidden xl:inline">Scopri i Viaggi</span>
+            <span className="xl:hidden">Viaggi</span>
           </Link>
         </Button>
       </div>

@@ -182,9 +182,9 @@ export function BookingsList({ userId }: BookingsListProps) {
         return (
           <Card key={booking.id} className="hover:shadow-md transition-shadow">
             <CardHeader>
-              <div className="flex items-start justify-between">
-                <div>
-                  <CardTitle className="text-lg">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                <div className="flex-1 min-w-0">
+                  <CardTitle className="text-lg break-words">
                     {booking.tour_title || `Tour ID: ${booking.tour_id}`}
                     {booking.quantity > 1 && (
                       <span className="text-sm font-normal text-muted-foreground ml-2">
@@ -203,7 +203,9 @@ export function BookingsList({ userId }: BookingsListProps) {
                     }
                   </CardDescription>
                 </div>
-                {getStatusBadge(booking.status)}
+                <div className="flex-shrink-0">
+                  {getStatusBadge(booking.status)}
+                </div>
               </div>
             </CardHeader>
             
@@ -268,7 +270,7 @@ export function BookingsList({ userId }: BookingsListProps) {
               </div>
 
               {/* Actions */}
-              <div className="flex gap-2 pt-4 border-t">
+              <div className="flex flex-col sm:flex-row gap-2 pt-4 border-t">
                 {!paymentInfo.depositPaid && (
                   <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
                     <CreditCard className="w-4 h-4 mr-2" />
@@ -285,15 +287,17 @@ export function BookingsList({ userId }: BookingsListProps) {
                   </div>
                 )}
                 
-                <Link href={`/dashboard/bookings/${booking.id}`}>
-                  <Button variant="outline" size="sm">
-                    Dettagli
-                  </Button>
-                </Link>
-                
-                <Button 
-                  variant="outline" 
-                  size="sm"
+                <div className="flex gap-2 flex-1">
+                  <Link href={`/dashboard/bookings/${booking.id}`} className="flex-1">
+                    <Button variant="outline" size="sm" className="w-full">
+                      Dettagli
+                    </Button>
+                  </Link>
+                  
+                  <Button 
+                    variant="outline"
+                    size="sm"
+                    className="flex-1"
                   onClick={() => {
                     const subject = encodeURIComponent('Assistenza Prenotazione')
                     const body = encodeURIComponent(`Salve,\n\nHo bisogno di assistenza per la prenotazione:\n- ID Prenotazione: ${booking.id}\n- Tour: ${booking.tour_title || `Tour ${booking.tour_id}`}\n- Sessione: ${booking.session_id}\n\nDescrivo il problema:\n\n`)
@@ -323,6 +327,7 @@ export function BookingsList({ userId }: BookingsListProps) {
                 >
                   Assistenza
                 </Button>
+                </div>
               </div>
             </CardContent>
           </Card>

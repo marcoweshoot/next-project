@@ -59,7 +59,16 @@ export function SimpleCheckoutModal({
 
   const getPaymentAmount = () => {
     const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
-    return baseAmount * quantity
+    const total = baseAmount * quantity
+    console.log('💰 Payment calculation:', {
+      paymentType,
+      sessionDeposit: session.deposit,
+      sessionPrice: session.price,
+      quantity,
+      baseAmount,
+      total
+    })
+    return total
   }
 
   const getTotalAmount = () => {

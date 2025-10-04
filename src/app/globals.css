@@ -21,6 +21,40 @@
   }
 }
 
+/* Form input improvements */
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+  /* Fix cursor positioning */
+  text-align: left;
+  line-height: 1.5;
+  
+  /* Better focus behavior */
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  }
+  
+  /* Prevent cursor jumping */
+  &:not(:focus) {
+    caret-color: transparent;
+  }
+  
+  &:focus {
+    caret-color: auto;
+  }
+}
+
+/* Label click behavior */
+label {
+  cursor: pointer;
+  user-select: none;
+  
+  &:hover {
+    color: rgb(59, 130, 246);
+  }
+}
+
 /* Base: token chiari + mapping universale dei border */
 @layer base {
   :root {

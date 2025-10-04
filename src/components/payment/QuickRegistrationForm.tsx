@@ -149,6 +149,21 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
     }
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent, nextFieldId?: string) => {
+    if (e.key === 'Enter') {
+      e.preventDefault()
+      if (nextFieldId) {
+        const nextField = document.getElementById(nextFieldId)
+        if (nextField) {
+          nextField.focus()
+        }
+      } else {
+        // Se è l'ultimo campo, invia il form
+        handleSubmit(e as any)
+      }
+    }
+  }
+
   return (
     <Card className="max-h-[70vh] overflow-y-auto">
       <CardHeader className="pb-4">
@@ -170,9 +185,11 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
                 type="text"
                 value={formData.firstName}
                 onChange={(e) => handleInputChange('firstName', e.target.value)}
+                onKeyDown={(e) => handleKeyDown(e, 'lastName')}
                 className={errors.firstName ? 'border-red-500' : ''}
                 placeholder="Mario"
                 disabled={loading}
+                autoComplete="given-name"
               />
               {errors.firstName && (
                 <p className="text-sm text-red-500">{errors.firstName}</p>
@@ -185,9 +202,11 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
                 type="text"
                 value={formData.lastName}
                 onChange={(e) => handleInputChange('lastName', e.target.value)}
+                onKeyDown={(e) => handleKeyDown(e, 'email')}
                 className={errors.lastName ? 'border-red-500' : ''}
                 placeholder="Rossi"
                 disabled={loading}
+                autoComplete="family-name"
               />
               {errors.lastName && (
                 <p className="text-sm text-red-500">{errors.lastName}</p>
@@ -204,6 +223,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
+                onKeyDown={(e) => handleKeyDown(e, 'password')}
                 className={`pl-10 ${errors.email ? 'border-red-500' : ''}`}
                 placeholder="mario.rossi@email.com"
                 disabled={loading}
@@ -225,6 +245,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
                   type="password"
                   value={formData.password}
                   onChange={(e) => handleInputChange('password', e.target.value)}
+                  onKeyDown={(e) => handleKeyDown(e, 'confirmPassword')}
                   className={`pl-10 ${errors.password ? 'border-red-500' : ''}`}
                   placeholder="Min. 6 caratteri"
                   disabled={loading}
@@ -245,6 +266,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
                   type="password"
                   value={formData.confirmPassword}
                   onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
+                  onKeyDown={(e) => handleKeyDown(e)} // Ultimo campo, invia il form
                   className={`pl-10 ${errors.confirmPassword ? 'border-red-500' : ''}`}
                   placeholder="Ripeti password"
                   disabled={loading}

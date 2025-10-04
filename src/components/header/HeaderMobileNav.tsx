@@ -1,10 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { createClient } from '@/lib/supabase/client';
+import { useRouter } from 'next/navigation';
 
 interface HeaderMobileNavProps {
   isMenuOpen: boolean;
@@ -19,7 +21,31 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
   toggleDropdown,
   setIsMenuOpen,
 }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState<any>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      const supabase = createClient();
+      const { data: { user } } = await supabase.auth.getUser();
+      setIsLoggedIn(!!user);
+      setUser(user);
+    };
+    
+    checkAuth();
+  }, []);
+
   const handleLinkClick = () => setIsMenuOpen(false);
+
+  const handleLogout = async () => {
+    const supabase = createClient();
+    await supabase.auth.signOut();
+    setIsLoggedIn(false);
+    setUser(null);
+    router.push('/');
+    setIsMenuOpen(false);
+  };
 
   if (!isMenuOpen) return null;
 
@@ -142,6 +168,47 @@ const HeaderMobileNav: React.FC<HeaderMobileNavProps> = ({
         >
           Dicono di Noi
         </Link>
+
+        {/* Login/Logout Section */}
+        <div className="border-t border-border pt-3">
+          {isLoggedIn ? (
+            <div className="space-y-1">
+              <Link
+                href="/dashboard"
+                className="block rounded-md px-3 py-2 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target tap-highlight-none"
+                onClick={handleLinkClick}
+                aria-label="Vai alla Dashboard"
+              >
+                Dashboard
+              </Link>
+              <button
+                className="block w-full rounded-md px-3 py-2 text-left font-medium text-foreground transition-colors hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target tap-highlight-none"
+                onClick={handleLogout}
+              >
+                Esci
+              </button>
+            </div>
+          ) : (
+            <div className="space-y-1">
+              <Link
+                href="/auth/login"
+                className="block rounded-md px-3 py-2 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target tap-highlight-none"
+                onClick={handleLinkClick}
+                aria-label="Accedi al tuo account"
+              >
+                Accedi
+              </Link>
+              <Link
+                href="/auth/register"
+                className="block rounded-md px-3 py-2 font-medium text-foreground transition-colors hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background touch-target tap-highlight-none"
+                onClick={handleLinkClick}
+                aria-label="Registrati per un nuovo account"
+              >
+                Registrati
+              </Link>
+            </div>
+          )}
+        </div>
 
         {/* CTA */}
         <div className="px-3 py-3">

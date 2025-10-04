@@ -27,46 +27,10 @@ export function PaymentSuccessToast() {
         
         console.log('🔍 Stripe session ID from URL:', stripeSessionId)
         
-        // Create booking
-        console.log('🔄 Creating booking for user:', userId)
-        fetch('/api/create-booking', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-            userId, 
-            tourId, 
-            sessionId, 
-            paymentType, 
-            quantity, 
-            tourTitle, 
-            tourDestination, 
-            sessionDate, 
-            sessionEndDate, 
-            sessionPrice, 
-            sessionDeposit, 
-            amount,
-            stripeSessionId 
-          }),
-        })
-        .then(response => {
-          console.log('📊 Create booking response status:', response.status)
-          return response.json()
-        })
-        .then(result => {
-          console.log('📊 Create booking result:', result)
-          if (result.success) {
-            console.log('✅ Booking created successfully!')
-            // Clear payment data
-            localStorage.removeItem('paymentData')
-            // Force dashboard refresh to show new booking
-            window.location.reload()
-          } else {
-            console.error('❌ Booking creation failed:', result.error)
-          }
-        })
-        .catch(error => {
-          console.error('❌ Error creating booking:', error)
-        })
+        // Booking is created automatically by Stripe webhook
+        console.log('✅ Payment successful! Booking will be created by webhook')
+        // Clear payment data
+        localStorage.removeItem('paymentData')
       } catch (error) {
         console.error('❌ Error parsing payment data:', error)
       }
