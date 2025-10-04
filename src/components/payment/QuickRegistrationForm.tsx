@@ -150,9 +150,9 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+    <Card className="max-h-[70vh] overflow-y-auto">
+      <CardHeader className="pb-4">
+        <CardTitle className="flex items-center gap-2 text-lg">
           <User className="w-5 h-5" />
           Registrazione Veloce
         </CardTitle>
@@ -160,9 +160,9 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
           Inserisci i tuoi dati per procedere con l'acquisto
         </p>
       </CardHeader>
-      <CardContent>
+      <CardContent className="pb-4">
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="firstName">Nome *</Label>
               <Input
@@ -207,6 +207,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
                 className={`pl-10 ${errors.email ? 'border-red-500' : ''}`}
                 placeholder="mario.rossi@email.com"
                 disabled={loading}
+                autoComplete="email"
               />
             </div>
             {errors.email && (
@@ -214,42 +215,46 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
             )}
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="password">Password *</Label>
-            <div className="relative">
-              <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-              <Input
-                id="password"
-                type="password"
-                value={formData.password}
-                onChange={(e) => handleInputChange('password', e.target.value)}
-                className={`pl-10 ${errors.password ? 'border-red-500' : ''}`}
-                placeholder="Minimo 6 caratteri"
-                disabled={loading}
-              />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="password">Password *</Label>
+              <div className="relative">
+                <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                <Input
+                  id="password"
+                  type="password"
+                  value={formData.password}
+                  onChange={(e) => handleInputChange('password', e.target.value)}
+                  className={`pl-10 ${errors.password ? 'border-red-500' : ''}`}
+                  placeholder="Min. 6 caratteri"
+                  disabled={loading}
+                  autoComplete="new-password"
+                />
+              </div>
+              {errors.password && (
+                <p className="text-sm text-red-500">{errors.password}</p>
+              )}
             </div>
-            {errors.password && (
-              <p className="text-sm text-red-500">{errors.password}</p>
-            )}
-          </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="confirmPassword">Conferma Password *</Label>
-            <div className="relative">
-              <Lock className="absolute left-3 h-4 w-4 text-muted-foreground" />
-              <Input
-                id="confirmPassword"
-                type="password"
-                value={formData.confirmPassword}
-                onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
-                className={`pl-10 ${errors.confirmPassword ? 'border-red-500' : ''}`}
-                placeholder="Ripeti la password"
-                disabled={loading}
-              />
+            <div className="space-y-2">
+              <Label htmlFor="confirmPassword">Conferma *</Label>
+              <div className="relative">
+                <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                <Input
+                  id="confirmPassword"
+                  type="password"
+                  value={formData.confirmPassword}
+                  onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
+                  className={`pl-10 ${errors.confirmPassword ? 'border-red-500' : ''}`}
+                  placeholder="Ripeti password"
+                  disabled={loading}
+                  autoComplete="new-password"
+                />
+              </div>
+              {errors.confirmPassword && (
+                <p className="text-sm text-red-500">{errors.confirmPassword}</p>
+              )}
             </div>
-            {errors.confirmPassword && (
-              <p className="text-sm text-red-500">{errors.confirmPassword}</p>
-            )}
           </div>
 
           <Button 

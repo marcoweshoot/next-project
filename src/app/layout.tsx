@@ -21,6 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="it" suppressHydrationWarning className={montserrat.variable}>
       <head>
+        {/* Viewport per mobile responsiveness */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
         {/* Preconnect solo alle origini davvero critiche per la home */}
         <link rel="preconnect" href="https://s3.eu-west-1.amazonaws.com" crossOrigin="" />
         <link rel="preconnect" href="https://wxoodcdxscxazjkoqhsg.supabase.co" crossOrigin="" />

@@ -134,7 +134,7 @@ export function SimpleCheckoutModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto modal-content">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <CreditCard className="w-5 h-5" />
@@ -142,7 +142,7 @@ export function SimpleCheckoutModal({
           </DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-6">
+        <div className="space-y-6 pb-4">
           {/* Tour Details */}
           <div className="space-y-2">
             <h3 className="text-xl font-semibold">{tour.title}</h3>
@@ -189,7 +189,7 @@ export function SimpleCheckoutModal({
             <div className="space-y-4">
               <h4 className="font-semibold">Scegli il tipo di pagamento:</h4>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 {/* Deposit Option */}
                 <Card 
                   className={`cursor-pointer transition-all ${
