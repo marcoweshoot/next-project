@@ -30,7 +30,7 @@ const SEO: React.FC<SEOProps> = ({
   return (
     <Head>
       <title>{fullTitle}</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />

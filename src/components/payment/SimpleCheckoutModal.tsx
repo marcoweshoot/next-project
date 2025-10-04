@@ -66,7 +66,10 @@ export function SimpleCheckoutModal({
       sessionPrice: session.price,
       quantity,
       baseAmount,
-      total
+      total,
+      'session.deposit per persona?': session.deposit,
+      'calcolo corretto per 2 persone': session.deposit * quantity,
+      'se deposit è già per 2 persone': session.deposit
     })
     return total
   }
