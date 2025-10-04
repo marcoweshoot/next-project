@@ -211,6 +211,13 @@ const SessionCard: React.FC<SessionCardProps> = ({
             Tutto pieno
           </Badge>
         );
+      default:
+        return (
+          <Badge className="rounded-full px-2.5 py-0.5 bg-gray-500/15 text-gray-700 dark:text-gray-300 ring-1 ring-gray-500/30 flex items-center gap-1">
+            <Clock className="w-3 h-3" />
+            Iscrizioni aperte
+          </Badge>
+        );
     }
   };
 
@@ -363,7 +370,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 </Button>
 
                 {/* PAGA ORA - nuovo bottone di pagamento */}
-                {showPaymentButton && (
+                {showPaymentButton && !["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(norm(session.status)) && (
                   <Button 
                     onClick={() => setIsQuickCheckoutOpen(true)}
                     className="w-full font-medium bg-green-600 hover:bg-green-700 text-white"

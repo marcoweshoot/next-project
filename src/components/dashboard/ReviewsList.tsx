@@ -13,6 +13,7 @@ import {
   AlertCircle,
   Loader2,
   Plus,
+  Clock,
   Euro
 } from 'lucide-react'
 import { ReviewForm } from '@/components/reviews/ReviewForm'
@@ -39,6 +40,10 @@ interface Booking {
   id: string
   tour_id: string
   session_id: string
+  tour_title?: string
+  tour_destination?: string
+  session_date?: string
+  session_end_date?: string
   status: string
   total_amount: number
   created_at: string
@@ -74,12 +79,18 @@ export function ReviewsList({ userId }: ReviewsListProps) {
 
         setReviews(reviewsData || [])
 
-        // Fetch completed bookings (fully_paid or completed status)
+        // Fetch all bookings that can potentially be reviewed (paid or completed)
         const { data: bookingsData, error: bookingsError } = await supabase
           .from('bookings')
-          .select('*')
+          .select(`
+            *,
+            tour_title,
+            tour_destination,
+            session_date,
+            session_end_date
+          `)
           .eq('user_id', userId)
-          .in('status', ['fully_paid', 'completed'])
+          .in('status', ['deposit_paid', 'fully_paid', 'completed'])
           .order('created_at', { ascending: false })
 
         if (bookingsError) throw bookingsError
@@ -99,6 +110,16 @@ export function ReviewsList({ userId }: ReviewsListProps) {
   const handleEditReview = (review: Review) => {
     setEditingReview(review)
     setShowReviewForm(true)
+  }
+
+  // Determina se una prenotazione può essere recensita
+  const canReviewBooking = (booking: Booking) => {
+    return booking.status === 'completed' || booking.status === 'fully_paid'
+  }
+
+  // Determina se una prenotazione è in attesa di completamento
+  const isBookingPending = (booking: Booking) => {
+    return booking.status === 'deposit_paid'
   }
 
 
@@ -194,15 +215,23 @@ export function ReviewsList({ userId }: ReviewsListProps) {
       {/* Completed Bookings - Review Form */}
       {completedBookings.length > 0 && (
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Viaggi Completati - Lascia una Recensione</h3>
+          <h3 className="text-lg font-semibold">I Tuoi Viaggi - Recensioni</h3>
           {completedBookings.map((booking) => (
             <Card key={booking.id} className="hover:shadow-md transition-shadow">
               <CardHeader>
                 <CardTitle className="text-lg">
-                  Tour: {booking.tour_id}
+                  {booking.tour_title || `Tour: ${booking.tour_id}`}
                 </CardTitle>
                 <CardDescription>
-                  Prenotazione completata il {format(new Date(booking.created_at), 'dd MMMM yyyy', { locale: it })}
+                  {booking.tour_destination && (
+                    <div className="text-sm text-muted-foreground mb-1">
+                      {booking.tour_destination}
+                    </div>
+                  )}
+                  {canReviewBooking(booking) 
+                    ? `Prenotazione completata il ${format(new Date(booking.created_at), 'dd MMMM yyyy', { locale: it })}`
+                    : `Prenotazione effettuata il ${format(new Date(booking.created_at), 'dd MMMM yyyy', { locale: it })}`
+                  }
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -217,13 +246,24 @@ export function ReviewsList({ userId }: ReviewsListProps) {
                       {(booking.total_amount / 100).toFixed(2)}€
                     </div>
                   </div>
-                  <Button 
-                    onClick={() => handleReviewSubmit(booking)}
-                    className="bg-primary hover:bg-primary/90"
-                  >
-                    <Star className="w-4 h-4 mr-2" />
-                    Lascia Recensione
-                  </Button>
+                  
+                  {canReviewBooking(booking) ? (
+                    <Button 
+                      onClick={() => handleReviewSubmit(booking)}
+                      className="bg-primary hover:bg-primary/90"
+                    >
+                      <Star className="w-4 h-4 mr-2" />
+                      Lascia Recensione
+                    </Button>
+                  ) : (
+                    <Button 
+                      disabled
+                      className="bg-gray-400 cursor-not-allowed"
+                    >
+                      <Clock className="w-4 h-4 mr-2" />
+                      Recensione disponibile dopo il viaggio
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
