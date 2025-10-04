@@ -100,7 +100,7 @@ export async function POST(request: NextRequest) {
             session_id: sessionId,
             status: paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid',
             deposit_amount: paymentType === 'deposit' ? session.amount_total : (parseFloat(session.metadata?.sessionDeposit || '0') * 100),
-            total_amount: paymentType === 'deposit' ? (parseFloat(session.metadata?.sessionPrice || '0') * 100) : session.amount_total,
+            total_amount: paymentType === 'deposit' ? (parseFloat(session.metadata?.sessionPrice || '0') * 100 * parseInt(quantity || '1')) : session.amount_total,
             stripe_payment_intent_id: session.payment_intent as string,
             deposit_due_date: new Date().toISOString(),
             balance_due_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 giorni da oggi

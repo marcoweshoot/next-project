@@ -1448,19 +1448,19 @@
       "priceCompanion": 190,
       "users": [
         {
-          "instagram": "https://www.instagram.com/marikagrecofotografie/",
-          "firstName": "Marika",
-          "lastName": "Greco",
-          "username": "marikagreco",
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
           "profilePicture": {
-            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Marika_Greco_0d02429cee.jpg"
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
           },
-          "bio": "<p>Amore sfrenato per i viaggi, trolley e fotocamera sempre pronti. Unisco le due passioni per racchiudere in un fotogramma le emozioni che provo.</p>",
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
           "level": "coach",
           "role": {
-            "name": "User",
-            "description": "A User",
-            "type": "user"
+            "name": "SuperAdmin",
+            "description": "Top level user",
+            "type": "authenticated"
           }
         }
       ]
