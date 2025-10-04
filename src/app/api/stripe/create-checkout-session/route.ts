@@ -57,6 +57,15 @@ export async function POST(request: NextRequest) {
     // The webhook will validate the payment and create the booking
 
     // Create Stripe Checkout Session with billing address collection
+    // amount is already the total for all people, so we need to divide by quantity for unit_amount
+    const unitAmount = Math.round(amount / quantity)
+    console.log('💰 Stripe calculation:', {
+      totalAmount: amount,
+      quantity,
+      unitAmount,
+      'unitAmount in euros': unitAmount / 100
+    })
+    
     const checkoutSession = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -67,7 +76,7 @@ export async function POST(request: NextRequest) {
               name: `${tourTitle || `Tour ${tourId}`} - ${paymentType === 'deposit' ? 'Acconto' : 'Saldo'}`,
               description: `${sessionDate ? new Date(sessionDate).toLocaleDateString('it-IT') : `Sessione ${sessionId}`}${quantity > 1 ? ` (${quantity} persone)` : ''}`,
             },
-            unit_amount: amount, // Already in cents
+            unit_amount: unitAmount, // Amount per person in cents
           },
           quantity: quantity,
         },
