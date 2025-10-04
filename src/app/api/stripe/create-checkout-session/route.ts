@@ -8,8 +8,13 @@ function getSiteUrl() {
     return process.env.NEXT_PUBLIC_SITE_URL
   }
   
-  // In Vercel, usa VERCEL_URL
-  if (process.env.VERCEL_URL) {
+  // Per preview, usa URL fisso per evitare problemi di sessione
+  if (process.env.VERCEL_ENV === 'preview') {
+    return 'https://next-project-rho-teal.vercel.app'
+  }
+  
+  // In Vercel production, usa VERCEL_URL
+  if (process.env.VERCEL_URL && process.env.VERCEL_ENV === 'production') {
     return `https://${process.env.VERCEL_URL}`
   }
   
