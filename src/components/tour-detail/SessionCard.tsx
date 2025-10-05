@@ -370,7 +370,18 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 </Button>
 
                 {/* PAGA ORA - nuovo bottone di pagamento */}
-                {showPaymentButton && !["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(norm(session.status)) && (
+                {(() => {
+                  const normalizedStatus = norm(session.status);
+                  const isSoldOut = ["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(normalizedStatus);
+                  console.log('🔍 SessionCard debug:', {
+                    originalStatus: session.status,
+                    normalizedStatus,
+                    isSoldOut,
+                    showPaymentButton,
+                    shouldShowButton: showPaymentButton && !isSoldOut
+                  });
+                  return showPaymentButton && !isSoldOut;
+                })() && (
                   <Button 
                     onClick={() => setIsQuickCheckoutOpen(true)}
                     className="w-full font-medium bg-green-600 hover:bg-green-700 text-white"
