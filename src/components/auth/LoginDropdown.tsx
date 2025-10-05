@@ -47,7 +47,7 @@ export function LoginDropdown({ isScrolled }: LoginDropdownProps) {
         <button
           onClick={() => router.push('/dashboard')}
           className={`font-medium transition-colors duration-200 hover:text-primary ${
-            isScrolled ? 'text-foreground' : 'text-gray-800 dark:text-white'
+            isScrolled ? 'text-foreground' : 'text-white dark:text-gray-800'
           }`}
         >
           <span className="hidden xl:inline">Dashboard</span>
@@ -56,7 +56,7 @@ export function LoginDropdown({ isScrolled }: LoginDropdownProps) {
         <button
           onClick={handleLogout}
           className={`font-medium transition-colors duration-200 hover:text-primary ${
-            isScrolled ? 'text-foreground' : 'text-gray-800 dark:text-white'
+            isScrolled ? 'text-foreground' : 'text-white dark:text-gray-800'
           }`}
         >
           Esci
@@ -70,7 +70,7 @@ export function LoginDropdown({ isScrolled }: LoginDropdownProps) {
       <PopoverTrigger asChild>
         <button
           className={`flex items-center gap-2 font-medium transition-colors duration-200 hover:text-primary ${
-            isScrolled ? 'text-foreground' : 'text-gray-800 dark:text-white'
+            isScrolled ? 'text-foreground' : 'text-white dark:text-gray-800'
           }`}
         >
           <LogIn className="w-4 h-4" />
