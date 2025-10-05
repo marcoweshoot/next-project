@@ -19,10 +19,22 @@ export function GoogleAuthButton({ mode, onSuccess, onError }: GoogleAuthButtonP
     try {
       setLoading(true)
       
+      // Detect if we're on mobile
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      
+      console.log('🔍 Google Auth Debug:', { isMobile, userAgent: navigator.userAgent })
+      
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
           redirectTo: `${window.location.origin}/auth/callback`,
+          // Mobile-specific options
+          ...(isMobile && {
+            queryParams: {
+              access_type: 'offline',
+              prompt: 'consent',
+            }
+          })
         }
       })
 
@@ -30,6 +42,7 @@ export function GoogleAuthButton({ mode, onSuccess, onError }: GoogleAuthButtonP
         console.error('Google auth error:', error)
         onError?.(error.message)
       } else {
+        console.log('✅ Google auth initiated:', data)
         // The redirect will happen automatically
         onSuccess?.()
       }
