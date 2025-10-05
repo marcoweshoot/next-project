@@ -24,11 +24,6 @@ export function GoogleAuthButton({ mode, onSuccess, onError }: GoogleAuthButtonP
       
       console.log('🔍 Google Auth Debug:', { isMobile, userAgent: navigator.userAgent })
       
-      // Mobile debugging - show alert instead of console
-      if (isMobile) {
-        alert(`Mobile detected: ${isMobile}\nUser Agent: ${navigator.userAgent.substring(0, 50)}...`)
-      }
-      
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
@@ -45,19 +40,24 @@ export function GoogleAuthButton({ mode, onSuccess, onError }: GoogleAuthButtonP
 
       if (error) {
         console.error('Google auth error:', error)
-        // Mobile debugging
-        if (isMobile) {
-          alert(`Google Auth Error: ${error.message}`)
-        }
         onError?.(error.message)
       } else {
         console.log('✅ Google auth initiated:', data)
-        // Mobile debugging
+        
         if (isMobile) {
-          alert(`Google Auth Success: ${JSON.stringify(data)}`)
+          // Mobile: redirect manuale per evitare problemi di popup/redirect automatico
+          if (data.url) {
+            console.log('📱 Mobile redirect to:', data.url)
+            window.location.href = data.url
+          } else {
+            alert('Errore: URL di redirect non disponibile')
+            onError?.('URL di redirect non disponibile')
+          }
+        } else {
+          // Desktop: comportamento normale (redirect automatico)
+          console.log('🖥️ Desktop: redirect automatico')
+          onSuccess?.()
         }
-        // The redirect will happen automatically
-        onSuccess?.()
       }
     } catch (err) {
       console.error('Google auth error:', err)
