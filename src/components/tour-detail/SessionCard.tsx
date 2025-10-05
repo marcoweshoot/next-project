@@ -395,6 +395,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
         <SimpleCheckoutModal
       isOpen={isQuickCheckoutOpen}
       onClose={() => setIsQuickCheckoutOpen(false)}
+      isBalancePayment={false} // Sempre false per nuovi viaggi
       session={{
         id: session.id,
         date: session.start,

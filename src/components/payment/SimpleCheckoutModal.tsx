@@ -34,6 +34,7 @@ interface SimpleCheckoutModalProps {
     id: string
     email: string
   } | null
+  isBalancePayment?: boolean // Nuovo prop per distinguere pagamento saldo
 }
 
 export function SimpleCheckoutModal({
@@ -42,6 +43,7 @@ export function SimpleCheckoutModal({
   tour,
   session,
   user,
+  isBalancePayment = false,
 }: SimpleCheckoutModalProps) {
   // Imposta il tipo di pagamento iniziale basato sulla disponibilità dell'acconto
   const [paymentType, setPaymentType] = useState<'deposit' | 'full'>(() => {
@@ -338,7 +340,7 @@ export function SimpleCheckoutModal({
                 tourId={tour.id}
                 sessionId={session.id}
                 userId={user?.id || registeredUserId || ''}
-                paymentType={paymentType === 'full' ? 'balance' : 'deposit'}
+                paymentType={isBalancePayment ? 'balance' : 'deposit'}
                 quantity={quantity}
                 tourTitle={tour.title}
                 tourDestination={tour.title}
