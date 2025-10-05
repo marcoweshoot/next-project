@@ -16,6 +16,7 @@ export default function IubendaScripts() {
             siteId: ${siteId},
             cookiePolicyId: ${policyId},
             consentOnContinuedBrowsing: false,
+            cookieDuration: 365, // Durata consenso: 365 giorni
             banner: {
               acceptButtonDisplay: true,
               customizeButtonDisplay: true,

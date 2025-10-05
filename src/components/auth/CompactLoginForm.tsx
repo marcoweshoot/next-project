@@ -46,7 +46,6 @@ export function CompactLoginForm({ onSuccess, onError }: CompactLoginFormProps) 
       }
 
       if (data.user) {
-        console.log('✅ Login successful:', data.user.id)
         onSuccess?.()
         router.push('/dashboard')
       }

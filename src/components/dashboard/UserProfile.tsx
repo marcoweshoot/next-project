@@ -189,7 +189,6 @@ export function UserProfile({ userId }: UserProfileProps) {
         console.error('Errore nel salvataggio automatico:', error)
         setError('Errore nel salvataggio della foto profilo')
       } else {
-        console.log('Foto profilo salvata automaticamente')
       }
     } catch (err) {
       console.error('Errore nel salvataggio automatico:', err)

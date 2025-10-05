@@ -16,21 +16,15 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
     return null;
   }
 
-  console.log('StoryRelatedTours - Raw tours data:', tours);
 
   const transformStoryTourData = (tour: any): TourCardTour => {
-    console.log('StoryRelatedTours - Processing individual tour:', tour);
-    console.log('StoryRelatedTours - Tour sessions:', tour.sessions);
     
     const futureSessions = getFutureSessions(tour.sessions || []);
     const latestSession = getLatestSession(tour.sessions || []);
     
-    console.log('StoryRelatedTours - Future sessions:', futureSessions);
-    console.log('StoryRelatedTours - Latest session:', latestSession);
     
     const displaySession = futureSessions.length > 0 ? futureSessions[0] : latestSession;
     
-    console.log('StoryRelatedTours - Display session:', displaySession);
 
     const maxPax = displaySession?.maxPax || 0;
     const registeredUsers = displaySession?.users?.length || 0;
@@ -60,7 +54,6 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
     const getCoachFromSession = (session: any) => {
       if (session?.users && session.users.length > 0) {
         const coach = session.users[0];
-        console.log('StoryRelatedTours - Coach from session:', coach);
         return {
           id: coach.id,
           name: coach.firstName ? `${coach.firstName} ${coach.lastName || ''}`.trim() : coach.username,
@@ -75,7 +68,6 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
     };
 
     const sessionCoach = getCoachFromSession(displaySession);
-    console.log('StoryRelatedTours - Session coach:', sessionCoach);
 
     const transformedSessions = (tour.sessions || []).map((session: any) => ({
       id: session.id,
@@ -130,7 +122,6 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
       places: Array.isArray(tour.places) ? tour.places : tour.places ? [tour.places] : []
     };
 
-    console.log('StoryRelatedTours - Final transformed tour:', transformedTour);
     return transformedTour;
   };
 
@@ -148,9 +139,7 @@ const StoryRelatedTours: React.FC<StoryRelatedToursProps> = ({ tours }) => {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tours.map((tour, index) => {
-            console.log('StoryRelatedTours - Processing tour for render:', tour);
             const transformedTour = transformStoryTourData(tour);
-            console.log('StoryRelatedTours - Transformed tour for render:', transformedTour);
 
             return (
               <TourCard 

@@ -109,7 +109,6 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
       }
 
       // Fai il login automatico dopo la registrazione
-      console.log('🔄 Attempting automatic login after registration...')
       const { data: loginData, error: loginError } = await supabase.auth.signInWithPassword({
         email: formData.email,
         password: formData.password,
@@ -118,8 +117,6 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
       if (loginError) {
         console.error('❌ Errore login automatico:', loginError)
         // Non blocchiamo il flusso, l'utente può comunque procedere
-      } else {
-        console.log('✅ Login automatico riuscito:', loginData.user?.id)
       }
 
       // Aspetta un momento per assicurarsi che il login sia completato

@@ -68,7 +68,6 @@ export default function RegisterPage() {
               last_name: lastName
             })
         } catch (profileError) {
-          console.log('Profilo già esistente o errore:', profileError)
         }
         setSuccess(true)
       }

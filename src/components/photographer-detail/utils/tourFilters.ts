@@ -16,7 +16,6 @@ export const filterToursByPhotographer = (
 
   const photographerTours = tours.reduce<Tour[]>((acc, tour) => {
     if (!tour.sessions || tour.sessions.length === 0) {
-      console.log(`Tour "${tour.title}" has no sessions, skipping`);
       return acc;
     }
 
@@ -27,7 +26,6 @@ export const filterToursByPhotographer = (
     });
 
     if (futureSessions.length === 0) {
-      console.log(`Tour "${tour.title}" has no future sessions, skipping`);
       return acc;
     }
 
@@ -39,9 +37,6 @@ export const filterToursByPhotographer = (
     });
 
     if (sessionsWithPhotographer.length === 0) {
-      console.log(
-        `Tour "${tour.title}" has no future sessions with ${photographerUsername}, skipping`
-      );
       return acc;
     }
 
@@ -53,8 +48,5 @@ export const filterToursByPhotographer = (
     return acc;
   }, []);
 
-  console.log(
-    `filterToursByPhotographer: ${photographerTours.length} tours matched out of ${tours.length}`
-  );
   return photographerTours;
 };

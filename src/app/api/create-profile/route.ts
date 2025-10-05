@@ -12,7 +12,6 @@ export async function POST(request: NextRequest) {
 
     const supabase = await createServerClientSupabase()
 
-    console.log('🔨 Creating profile for userId:', userId)
 
     // Crea il profilo
     const { data, error } = await supabase
