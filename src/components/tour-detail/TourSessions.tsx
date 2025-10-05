@@ -125,13 +125,19 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
           }
         : coach;
 
+    // Controlla se la sessione è sold out
+    const norm = (s?: string) => (s || "").toLowerCase();
+    const normalizedStatus = norm(session.status);
+    const isSoldOut = ["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(normalizedStatus);
+    const shouldShowPaymentButton = !isSoldOut;
+
     return (
       <SessionCard
         session={session}
         tour={tour}
         coach={sessionCoach}
         isNext={isNext}
-        showPaymentButton={true}
+        showPaymentButton={shouldShowPaymentButton}
         user={user}
       />
     );
