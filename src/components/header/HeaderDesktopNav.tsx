@@ -35,7 +35,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
   
   // Link chiari su hero scuro, normali quando la header è "attaccata" allo sfondo della pagina
   // Nelle pagine auth/dashboard/admin usa sempre colori scuri
-  const linkColor = isScrolled || isAuthPage ? 'text-foreground' : 'text-primary-foreground';
+  const linkColor = isScrolled || isAuthPage ? 'text-foreground' : 'text-white';
 
   return (
     <nav className="hidden lg:flex items-center flex-nowrap gap-x-2 xl:gap-x-4 2xl:gap-x-6">
