@@ -68,6 +68,7 @@ export default function RegisterPage() {
               last_name: lastName
             })
         } catch (profileError) {
+          // Profile creation failed, but registration can continue
         }
         setSuccess(true)
       }
