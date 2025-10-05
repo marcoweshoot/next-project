@@ -90,36 +90,91 @@ export async function POST(request: NextRequest) {
         }, { status: 400 })
       }
 
-      // Crea il booking
-      try {
-        const { error: insertError } = await supabase
-          .from('bookings')
-          .insert({
-            user_id: finalUserId,
-            tour_id: tourId,
-            session_id: sessionId,
-            status: paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid',
-            deposit_amount: paymentType === 'deposit' ? session.amount_total : (parseFloat(session.metadata?.sessionDeposit || '0') * 100),
-            total_amount: paymentType === 'deposit' ? (parseFloat(session.metadata?.sessionPrice || '0') * 100 * parseInt(quantity || '1')) : session.amount_total,
-            stripe_payment_intent_id: session.payment_intent as string,
-            deposit_due_date: new Date().toISOString(),
-            balance_due_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 giorni da oggi
-            quantity: quantity ? parseInt(quantity) : 1,
-            tour_title: session.metadata?.tourTitle || '',
-            tour_destination: session.metadata?.tourDestination || '',
-            session_date: session.metadata?.sessionDate || '',
-            session_end_date: session.metadata?.sessionEndDate || '',
-          })
+      // Gestisci acconto vs saldo
+      if (paymentType === 'deposit') {
+        // Crea nuovo booking per acconto
+        try {
+          const { error: insertError } = await supabase
+            .from('bookings')
+            .insert({
+              user_id: finalUserId,
+              tour_id: tourId,
+              session_id: sessionId,
+              status: 'deposit_paid',
+              deposit_amount: session.amount_total,
+              total_amount: parseFloat(session.metadata?.sessionPrice || '0') * 100 * parseInt(quantity || '1'),
+              stripe_payment_intent_id: session.payment_intent as string,
+              deposit_due_date: new Date().toISOString(),
+              balance_due_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 giorni da oggi
+              quantity: quantity ? parseInt(quantity) : 1,
+              tour_title: session.metadata?.tourTitle || '',
+              tour_destination: session.metadata?.tourDestination || '',
+              session_date: session.metadata?.sessionDate || '',
+              session_end_date: session.metadata?.sessionEndDate || '',
+            })
 
-        if (insertError) {
-          console.error('❌ Error creating booking:', insertError)
+          if (insertError) {
+            console.error('❌ Error creating booking:', insertError)
+            return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
+          } else {
+            console.log('✅ Booking created successfully for user:', finalUserId)
+          }
+        } catch (error) {
+          console.error('❌ Error handling booking creation:', error)
           return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
-        } else {
-          console.log('✅ Booking created successfully for user:', finalUserId)
         }
-      } catch (error) {
-        console.error('❌ Error handling booking creation:', error)
-        return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
+      } else if (paymentType === 'balance') {
+        // Aggiorna booking esistente per saldo
+        try {
+          console.log('🔍 Looking for existing booking to update...')
+          
+          // Cerca la prenotazione esistente
+          const { data: existingBookings, error: searchError } = await supabase
+            .from('bookings')
+            .select('*')
+            .eq('user_id', finalUserId)
+            .eq('tour_id', tourId)
+            .eq('session_id', sessionId)
+            .eq('status', 'deposit_paid')
+            .order('created_at', { ascending: false })
+            .limit(1)
+
+          if (searchError) {
+            console.error('❌ Error searching for existing booking:', searchError)
+            return NextResponse.json({ error: 'Failed to find existing booking' }, { status: 500 })
+          }
+
+          if (!existingBookings || existingBookings.length === 0) {
+            console.error('❌ No existing booking found for balance payment')
+            return NextResponse.json({ error: 'No existing booking found for balance payment' }, { status: 400 })
+          }
+
+          const existingBooking = existingBookings[0]
+          console.log('✅ Found existing booking:', existingBooking.id)
+
+          // Aggiorna lo status a fully_paid
+          const { error: updateError } = await supabase
+            .from('bookings')
+            .update({
+              status: 'fully_paid',
+              stripe_payment_intent_id: session.payment_intent as string,
+              updated_at: new Date().toISOString()
+            })
+            .eq('id', existingBooking.id)
+
+          if (updateError) {
+            console.error('❌ Error updating booking:', updateError)
+            return NextResponse.json({ error: 'Failed to update booking' }, { status: 500 })
+          } else {
+            console.log('✅ Booking updated to fully_paid for user:', finalUserId)
+          }
+        } catch (error) {
+          console.error('❌ Error handling balance payment:', error)
+          return NextResponse.json({ error: 'Balance payment failed' }, { status: 500 })
+        }
+      } else {
+        console.error('❌ Unknown payment type:', paymentType)
+        return NextResponse.json({ error: 'Unknown payment type' }, { status: 400 })
       }
 
       // Aggiorna il profilo con i dati di fatturazione da Stripe
