@@ -25,10 +25,7 @@ export function PaymentSuccessToast() {
         const urlParams = new URLSearchParams(window.location.search)
         const stripeSessionId = urlParams.get('session_id')
         
-        console.log('🔍 Stripe session ID from URL:', stripeSessionId)
-        
-        // Booking is created automatically by Stripe webhook
-        console.log('✅ Payment successful! Booking will be created by webhook')
+              // Booking is created automatically by Stripe webhook
         // Clear payment data
         localStorage.removeItem('paymentData')
       } catch (error) {

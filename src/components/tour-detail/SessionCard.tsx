@@ -373,13 +373,6 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 {(() => {
                   const normalizedStatus = norm(session.status);
                   const isSoldOut = ["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(normalizedStatus);
-                  console.log('🔍 SessionCard debug:', {
-                    originalStatus: session.status,
-                    normalizedStatus,
-                    isSoldOut,
-                    showPaymentButton,
-                    shouldShowButton: showPaymentButton && !isSoldOut
-                  });
                   return showPaymentButton && !isSoldOut;
                 })() && (
                   <Button 

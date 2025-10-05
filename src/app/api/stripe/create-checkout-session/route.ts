@@ -24,9 +24,7 @@ function getSiteUrl() {
 
 export async function POST(request: NextRequest) {
   try {
-    console.log('🚀 Creating checkout session...')
     const body = await request.json()
-    console.log('📊 Request body:', JSON.stringify(body, null, 2))
     
     const { 
       amount, 
@@ -46,7 +44,6 @@ export async function POST(request: NextRequest) {
 
     // Validate required fields (userId is required - no more anonymous users)
     if (!amount || !tourId || !sessionId || !userId) {
-      console.error('❌ Missing required fields:', { amount, tourId, sessionId, userId })
       return NextResponse.json(
         { error: 'Missing required fields - user must be registered' },
         { status: 400 }
@@ -59,12 +56,6 @@ export async function POST(request: NextRequest) {
     // Create Stripe Checkout Session with billing address collection
     // amount is already the total for all people, so we need to divide by quantity for unit_amount
     const unitAmount = Math.round(amount / quantity)
-    console.log('💰 Stripe calculation:', {
-      totalAmount: amount,
-      quantity,
-      unitAmount,
-      'unitAmount in euros': unitAmount / 100
-    })
     
     const checkoutSession = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
@@ -133,18 +124,12 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    console.log('✅ Checkout session created:', {
-      id: checkoutSession.id,
-      url: checkoutSession.url,
-      metadata: checkoutSession.metadata
-    })
 
     return NextResponse.json({
       url: checkoutSession.url,
     })
 
   } catch (error) {
-    console.error('❌ Error creating checkout session:', error)
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }

@@ -8,7 +8,6 @@ export const runtime = 'nodejs'
 
 export async function POST(request: NextRequest) {
   const timestamp = new Date().toISOString()
-  console.log('🔔 Webhook received at:', timestamp)
   
   try {
     // Leggi il body come stringa raw
@@ -16,7 +15,6 @@ export async function POST(request: NextRequest) {
     const signature = request.headers.get('stripe-signature')
 
     if (!signature) {
-      console.error('❌ No stripe-signature header found')
       return NextResponse.json({ 
         error: 'No signature',
         timestamp,
@@ -31,19 +29,9 @@ export async function POST(request: NextRequest) {
       process.env.STRIPE_WEBHOOK_SECRET!
     )
 
-    console.log('✅ Webhook signature verified successfully!')
-
     // Processa l'evento
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object as Stripe.Checkout.Session
-      console.log('🎉 Processing checkout.session.completed event')
-      console.log('📊 Session ID:', session.id)
-      console.log('📊 Session Status:', session.status)
-      console.log('📊 Payment Status:', session.payment_status)
-      console.log('📊 Metadata:', session.metadata)
-      console.log('📊 Customer Details:', session.customer_details)
-      console.log('📊 Custom Fields:', session.custom_fields)
-      console.log('📊 Full Session Object:', JSON.stringify(session, null, 2))
 
       // Usa Service Role Key per bypassare RLS
       const supabase = createClient(
@@ -65,11 +53,7 @@ export async function POST(request: NextRequest) {
         quantity
       } = session.metadata || {}
 
-      console.log('🔍 Extracted metadata:', { userId, tourId, sessionId, paymentType, quantity })
-
       if (!userId || !tourId || !sessionId || !paymentType) {
-        console.error('❌ Missing metadata in checkout session:', session.id)
-        console.error('❌ Available metadata:', session.metadata)
         return NextResponse.json({ 
           error: 'Missing metadata',
           timestamp,
@@ -82,7 +66,6 @@ export async function POST(request: NextRequest) {
       const finalUserId = userId
 
       if (userId === 'anonymous') {
-        console.error('❌ Anonymous user detected but should not happen anymore')
         return NextResponse.json({ 
           error: 'Anonymous users not supported - user must register first',
           timestamp,
@@ -116,20 +99,14 @@ export async function POST(request: NextRequest) {
             })
 
           if (insertError) {
-            console.error('❌ Error creating booking:', insertError)
             return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
-          } else {
-            console.log('✅ Booking created successfully for user:', finalUserId)
           }
         } catch (error) {
-          console.error('❌ Error handling booking creation:', error)
           return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
         }
       } else if (paymentType === 'balance') {
         // Aggiorna booking esistente per saldo
         try {
-          console.log('🔍 Looking for existing booking to update...')
-          
           // Cerca la prenotazione esistente
           const { data: existingBookings, error: searchError } = await supabase
             .from('bookings')
@@ -142,17 +119,14 @@ export async function POST(request: NextRequest) {
             .limit(1)
 
           if (searchError) {
-            console.error('❌ Error searching for existing booking:', searchError)
             return NextResponse.json({ error: 'Failed to find existing booking' }, { status: 500 })
           }
 
           if (!existingBookings || existingBookings.length === 0) {
-            console.error('❌ No existing booking found for balance payment')
             return NextResponse.json({ error: 'No existing booking found for balance payment' }, { status: 400 })
           }
 
           const existingBooking = existingBookings[0]
-          console.log('✅ Found existing booking:', existingBooking.id)
 
           // Aggiorna lo status a fully_paid
           const { error: updateError } = await supabase
@@ -165,17 +139,12 @@ export async function POST(request: NextRequest) {
             .eq('id', existingBooking.id)
 
           if (updateError) {
-            console.error('❌ Error updating booking:', updateError)
             return NextResponse.json({ error: 'Failed to update booking' }, { status: 500 })
-          } else {
-            console.log('✅ Booking updated to fully_paid for user:', finalUserId)
           }
         } catch (error) {
-          console.error('❌ Error handling balance payment:', error)
           return NextResponse.json({ error: 'Balance payment failed' }, { status: 500 })
         }
       } else {
-        console.error('❌ Unknown payment type:', paymentType)
         return NextResponse.json({ error: 'Unknown payment type' }, { status: 400 })
       }
 
@@ -208,38 +177,26 @@ export async function POST(request: NextRequest) {
           
           // Aggiungi dati fiscali da custom fields di Stripe
           if (session.custom_fields) {
-            console.log('📊 Processing custom fields:', session.custom_fields)
-            
             session.custom_fields.forEach((field: any) => {
-              console.log('📊 Processing field:', field.key, 'value:', field.text?.value)
-              
               if (field.key === 'fiscal_code' && field.text?.value) {
                 const fiscalCode = field.text.value.trim().toUpperCase()
-                console.log('📊 Fiscal code after processing:', fiscalCode)
                 
                 // Valida formato codice fiscale italiano (16 caratteri, solo lettere e numeri)
                 if (fiscalCode && fiscalCode.length === 16 && /^[A-Z0-9]{16}$/.test(fiscalCode)) {
                   profileUpdate.fiscal_code = fiscalCode
-                  console.log('✅ Valid fiscal code:', fiscalCode)
-                } else {
-                  console.warn('⚠️ Invalid fiscal code format:', fiscalCode, 'length:', fiscalCode.length)
                 }
               }
               if (field.key === 'vat_number' && field.text?.value && field.text.value.trim()) {
                 profileUpdate.vat_number = field.text.value.trim()
-                console.log('✅ VAT number:', field.text.value.trim())
               }
               if (field.key === 'pec_email' && field.text?.value && field.text.value.trim()) {
                 profileUpdate.pec_email = field.text.value.trim()
-                console.log('✅ PEC email:', field.text.value.trim())
               }
             })
           }
           
           // Aggiorna il profilo solo se ci sono dati da aggiornare
           if (Object.keys(profileUpdate).length > 0) {
-            console.log('📊 Updating profile with billing data:', profileUpdate)
-            
             const { error: profileError } = await supabase
               .from('profiles')
               .upsert({
@@ -248,31 +205,16 @@ export async function POST(request: NextRequest) {
               }, { onConflict: 'id' })
             
             if (profileError) {
-              console.error('❌ Error updating user profile with billing data:', profileError)
               // Non bloccare il flusso se l'aggiornamento del profilo fallisce
-              console.log('ℹ️ Continuing with booking creation despite profile update error')
-            } else {
-              console.log('✅ User profile updated with billing data for user:', finalUserId)
             }
-          } else {
-            console.log('ℹ️ No billing data to update profile')
           }
         } catch (profileUpdateError) {
-          console.error('❌ Error in profile update process:', profileUpdateError)
           // Non bloccare il flusso se l'aggiornamento del profilo fallisce
-          console.log('ℹ️ Continuing with booking creation despite profile update error')
         }
       }
     } else if (event.type === 'payment_intent.succeeded') {
       // Payment Intent events are handled automatically by Stripe when using Checkout Sessions
       // We only need to handle checkout.session.completed events for our booking system
-      console.log('ℹ️ Payment Intent succeeded - this is handled by checkout.session.completed event')
-      console.log('📊 Payment Intent ID:', (event.data.object as Stripe.PaymentIntent).id)
-      console.log('📊 Amount:', (event.data.object as Stripe.PaymentIntent).amount)
-      console.log('📊 This event is informational only - booking creation is handled by checkout.session.completed')
-    } else {
-      console.log('⚠️ Unhandled event type:', event.type)
-      console.log('⚠️ Event data:', JSON.stringify(event.data, null, 2))
     }
 
     return NextResponse.json({ 
@@ -282,7 +224,6 @@ export async function POST(request: NextRequest) {
       processed: true 
     })
   } catch (error) {
-    console.error('❌ Webhook error:', error)
     return NextResponse.json({ 
       error: 'Webhook processing failed',
       timestamp,

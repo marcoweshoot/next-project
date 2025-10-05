@@ -60,17 +60,6 @@ export function SimpleCheckoutModal({
   const getPaymentAmount = () => {
     const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
     const total = baseAmount * quantity
-    console.log('💰 Payment calculation:', {
-      paymentType,
-      sessionDeposit: session.deposit,
-      sessionPrice: session.price,
-      quantity,
-      baseAmount,
-      total,
-      'session.deposit per persona?': session.deposit,
-      'calcolo corretto per 2 persone': session.deposit * quantity,
-      'se deposit è già per 2 persone': session.deposit
-    })
     return total
   }
 
@@ -107,7 +96,6 @@ export function SimpleCheckoutModal({
   }
 
   const handlePaymentSuccess = () => {
-    console.log('Payment successful!')
     onClose()
   }
 
@@ -117,7 +105,6 @@ export function SimpleCheckoutModal({
   }
 
   const handleRegistrationSuccess = (userId: string) => {
-    console.log('✅ Registration successful, showing payment form')
     setRegisteredUserId(userId)
     setShowRegistrationForm(false)
     setShowPaymentForm(true)
@@ -134,11 +121,9 @@ export function SimpleCheckoutModal({
     
     if (!isUserLoggedIn && !registeredUserId) {
       // Utente non registrato, mostra form di registrazione
-      console.log('User not logged in, showing registration form')
       setShowRegistrationForm(true)
     } else {
       // Utente già registrato, vai al pagamento
-      console.log('User logged in, going to payment')
       setShowPaymentForm(true)
     }
   }
