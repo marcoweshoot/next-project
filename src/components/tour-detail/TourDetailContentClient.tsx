@@ -11,7 +11,6 @@ import TourSessions from './TourSessions';
 import TourReviews from './TourReviews';
 import TourFAQ from './TourFAQ';
 import GroupGallerySection from '@/components/tour-detail/GroupGallerySection';
-import TourHighlights from '@/components/tour-detail/TourHighlights'; // <-- AGGIUNTO
 
 interface Coach {
   id?: string;
@@ -77,14 +76,6 @@ export default function TourDetailContentClient({
 
       <TourItinerary itinerary={Array.isArray(tour.days) ? tour.days : []} tour={tour} />
 
-      {/* HIGHLIGHTS - mostra le icone reali */}
-      {Array.isArray(tour.highlights) && tour.highlights.length > 0 && (
-        <section className="py-16 bg-background border-t border-border transition-colors">
-          <div className="container mx-auto px-4">
-            <TourHighlights highlights={tour.highlights} />
-          </div>
-        </section>
-      )}
 
       <section id="details" className="py-16 bg-background border-t border-border transition-colors">
         <div className="container mx-auto px-4">
