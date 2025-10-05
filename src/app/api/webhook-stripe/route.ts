@@ -105,7 +105,9 @@ export async function POST(request: NextRequest) {
               total_amount: parseFloat(session.metadata?.sessionPrice || '0') * 100 * parseInt(quantity || '1'),
               stripe_payment_intent_id: session.payment_intent as string,
               deposit_due_date: new Date().toISOString(),
-              balance_due_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 giorni da oggi
+              balance_due_date: session.metadata?.sessionDate ? 
+                new Date(new Date(session.metadata.sessionDate).getTime() - 30 * 24 * 60 * 60 * 1000).toISOString() : 
+                new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 giorni prima della partenza
               quantity: quantity ? parseInt(quantity) : 1,
               tour_title: session.metadata?.tourTitle || '',
               tour_destination: session.metadata?.tourDestination || '',

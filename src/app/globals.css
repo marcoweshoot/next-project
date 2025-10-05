@@ -28,6 +28,7 @@ input[type="password"] {
   /* Fix cursor positioning */
   text-align: left;
   line-height: 1.5;
+  vertical-align: middle;
   
   /* Better focus behavior */
   &:focus {
@@ -42,6 +43,25 @@ input[type="password"] {
   
   &:focus {
     caret-color: auto;
+  }
+}
+
+/* Mobile-specific input fixes */
+@media (max-width: 768px) {
+  input[type="text"], 
+  input[type="email"], 
+  input[type="password"] {
+    /* Better cursor alignment on mobile */
+    padding: 12px 16px;
+    line-height: 1.4;
+    font-size: 16px;
+    text-align: left;
+    vertical-align: middle;
+    
+    /* Fix cursor positioning */
+    &::placeholder {
+      line-height: 1.4;
+    }
   }
 }
 
