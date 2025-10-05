@@ -8,6 +8,7 @@ export const runtime = 'nodejs'
 
 export async function POST(request: NextRequest) {
   const timestamp = new Date().toISOString()
+  console.log('🔔 Webhook received at:', timestamp)
   
   try {
     // Leggi il body come stringa raw
@@ -30,8 +31,15 @@ export async function POST(request: NextRequest) {
     )
 
     // Processa l'evento
+    console.log('📊 Event type:', event.type)
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object as Stripe.Checkout.Session
+      console.log('🎉 Processing checkout.session.completed event')
+      console.log('📊 Session ID:', session.id)
+      console.log('📊 Metadata:', session.metadata)
+      console.log('📊 Payment Type:', session.metadata?.paymentType)
+      console.log('📊 User ID:', session.metadata?.userId)
+      console.log('📊 Tour ID:', session.metadata?.tourId)
 
       // Usa Service Role Key per bypassare RLS
       const supabase = createClient(
