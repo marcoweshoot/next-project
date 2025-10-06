@@ -114,12 +114,29 @@ export function ReviewsList({ userId }: ReviewsListProps) {
 
   // Determina se una prenotazione può essere recensita
   const canReviewBooking = (booking: Booking) => {
-    return booking.status === 'completed' || booking.status === 'fully_paid'
+    // 1. Deve essere pagato completamente
+    const isFullyPaid = booking.status === 'fully_paid' || booking.status === 'completed'
+    
+    // 2. Il viaggio deve essere completato (data fine < oggi)
+    const tripEndDate = booking.session_end_date || booking.session_date
+    const isTripCompleted = tripEndDate && new Date(tripEndDate) < new Date()
+    
+    return isFullyPaid && isTripCompleted
   }
 
-  // Determina se una prenotazione è in attesa di completamento
+  // Determina se una prenotazione è in attesa di completamento del viaggio
   const isBookingPending = (booking: Booking) => {
-    return booking.status === 'deposit_paid'
+    const tripEndDate = booking.session_end_date || booking.session_date
+    return tripEndDate && new Date(tripEndDate) >= new Date()
+  }
+
+  // Determina se il viaggio è completato ma non pagato completamente
+  const isTripCompletedButNotPaid = (booking: Booking) => {
+    const tripEndDate = booking.session_end_date || booking.session_date
+    const isTripCompleted = tripEndDate && new Date(tripEndDate) < new Date()
+    const isNotFullyPaid = booking.status !== 'fully_paid' && booking.status !== 'completed'
+    
+    return isTripCompleted && isNotFullyPaid
   }
 
 
@@ -229,7 +246,9 @@ export function ReviewsList({ userId }: ReviewsListProps) {
                     </div>
                   )}
                   {canReviewBooking(booking) 
-                    ? `Prenotazione completata il ${format(new Date(booking.created_at), 'dd MMMM yyyy', { locale: it })}`
+                    ? `Viaggio completato - Prenotazione del ${format(new Date(booking.created_at), 'dd MMMM yyyy', { locale: it })}`
+                    : isTripCompletedButNotPaid(booking)
+                    ? `Viaggio completato ma non pagato - Prenotazione del ${format(new Date(booking.created_at), 'dd MMMM yyyy', { locale: it })}`
                     : `Prenotazione effettuata il ${format(new Date(booking.created_at), 'dd MMMM yyyy', { locale: it })}`
                   }
                 </CardDescription>
@@ -254,6 +273,14 @@ export function ReviewsList({ userId }: ReviewsListProps) {
                     >
                       <Star className="w-4 h-4 mr-2" />
                       Lascia Recensione
+                    </Button>
+                  ) : isTripCompletedButNotPaid(booking) ? (
+                    <Button 
+                      disabled
+                      className="bg-gray-400 cursor-not-allowed"
+                    >
+                      <AlertCircle className="w-4 h-4 mr-2" />
+                      Non hai partecipato, sarà per la prossima
                     </Button>
                   ) : (
                     <Button 
