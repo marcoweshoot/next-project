@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
+import Stripe from 'stripe'
 
 // Funzione per ottenere l'URL del sito in base all'ambiente
 function getSiteUrl() {
@@ -57,8 +58,8 @@ export async function POST(request: NextRequest) {
     // amount is already the total for all people, so we need to divide by quantity for unit_amount
     const unitAmount = Math.round(amount / quantity)
     
-    const checkoutSession = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
+    const sessionParams: Stripe.Checkout.SessionCreateParams = {
+      payment_method_types: ['card', 'klarna', 'sepa_debit'],
       line_items: [
         {
           price_data: {
@@ -122,8 +123,9 @@ export async function POST(request: NextRequest) {
         sessionPrice: sessionPrice?.toString() || '',
         sessionDeposit: sessionDeposit?.toString() || '',
       },
-    })
+    }
 
+    const checkoutSession = await stripe.checkout.sessions.create(sessionParams)
 
     return NextResponse.json({
       url: checkoutSession.url,

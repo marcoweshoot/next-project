@@ -85,15 +85,28 @@ export async function POST(request: NextRequest) {
       if (paymentType === 'deposit') {
         // Crea nuovo booking per acconto
         try {
+          // Calcola il totale atteso
+          const expectedTotal = parseFloat(session.metadata?.sessionPrice || '0') * 100 * parseInt(quantity || '1')
+          
+          // Determina lo status: se l'importo pagato >= totale atteso, è tutto pagato
+          const bookingStatus = session.amount_total >= expectedTotal ? 'fully_paid' : 'deposit_paid'
+          
+          console.log('💰 Payment Analysis:', {
+            amountPaid: session.amount_total,
+            expectedTotal,
+            bookingStatus,
+            isFullPayment: session.amount_total >= expectedTotal
+          })
+          
           const { error: insertError } = await supabase
             .from('bookings')
             .insert({
               user_id: finalUserId,
               tour_id: tourId,
               session_id: sessionId,
-              status: 'deposit_paid',
+              status: bookingStatus,
               deposit_amount: session.amount_total,
-              total_amount: parseFloat(session.metadata?.sessionPrice || '0') * 100 * parseInt(quantity || '1'),
+              total_amount: expectedTotal,
               stripe_payment_intent_id: session.payment_intent as string,
               deposit_due_date: new Date().toISOString(),
               balance_due_date: session.metadata?.sessionDate ? 
