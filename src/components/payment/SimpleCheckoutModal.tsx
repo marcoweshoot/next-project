@@ -349,29 +349,23 @@ export function SimpleCheckoutModal({
           ) : showPaymentForm ? (
             <div className="space-y-4">
               <h4 className="font-semibold">Completa il pagamento</h4>
-              {(user?.id || registeredUserId) ? (
-                <StripeCheckoutButton
-                  amount={getPaymentAmount() * 100}
-                  currency={session.currency.toLowerCase()}
-                  tourId={tour.id}
-                  sessionId={session.id}
-                  userId={user?.id || registeredUserId || ''}
-                  paymentType={isBalancePayment ? 'balance' : 'deposit'}
-                  quantity={quantity}
-                  tourTitle={tour.title}
-                  tourDestination={tour.title}
-                  sessionDate={session.date}
-                  sessionEndDate={tour.endDate}
-                  sessionPrice={session.price}
-                  sessionDeposit={session.deposit}
-                  onSuccess={handlePaymentSuccess}
-                  onError={handlePaymentError}
-                />
-              ) : (
-                <div className="text-center py-4">
-                  <p className="text-muted-foreground">Utente non autenticato</p>
-                </div>
-              )}
+              <StripeCheckoutButton
+                amount={getPaymentAmount() * 100}
+                currency={session.currency.toLowerCase()}
+                tourId={tour.id}
+                sessionId={session.id}
+                userId={user?.id || registeredUserId || ''}
+                paymentType={isBalancePayment ? 'balance' : 'deposit'}
+                quantity={quantity}
+                tourTitle={tour.title}
+                tourDestination={tour.title}
+                sessionDate={session.date}
+                sessionEndDate={tour.endDate}
+                sessionPrice={session.price}
+                sessionDeposit={session.deposit}
+                onSuccess={handlePaymentSuccess}
+                onError={handlePaymentError}
+              />
             </div>
           ) : (
             <div className="flex gap-3">

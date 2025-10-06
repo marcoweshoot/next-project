@@ -27,6 +27,8 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     
+    console.log('🔍 Create checkout session - Request body:', body)
+    
     const { 
       amount, 
       currency = 'eur', 
@@ -43,8 +45,13 @@ export async function POST(request: NextRequest) {
       sessionDeposit
     } = body
 
+    console.log('🔍 Parsed fields:', {
+      amount, tourId, sessionId, userId, paymentType, quantity
+    })
+
     // Validate required fields (userId is required - no more anonymous users)
     if (!amount || !tourId || !sessionId || !userId) {
+      console.log('❌ Missing required fields:', { amount, tourId, sessionId, userId })
       return NextResponse.json(
         { error: 'Missing required fields - user must be registered' },
         { status: 400 }
@@ -141,6 +148,7 @@ export async function POST(request: NextRequest) {
     })
 
   } catch (error) {
+    console.error('❌ Create checkout session error:', error)
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
