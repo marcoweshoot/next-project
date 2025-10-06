@@ -145,7 +145,17 @@ export function CompactLoginForm({ onSuccess, onError }: CompactLoginFormProps) 
         </Button>
       </div>
 
-        <div className="text-center">
+      <div className="text-center space-y-2">
+        <Button
+          type="button"
+          variant="link"
+          className="text-sm text-muted-foreground hover:text-primary"
+          onClick={() => router.push('/auth/forgot-password')}
+        >
+          Hai dimenticato la password?
+        </Button>
+        
+        <div>
           <Button
             type="button"
             variant="link"
@@ -155,6 +165,7 @@ export function CompactLoginForm({ onSuccess, onError }: CompactLoginFormProps) 
             Non hai un account? Registrati
           </Button>
         </div>
+      </div>
       </form>
     </div>
   )

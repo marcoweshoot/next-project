@@ -44,7 +44,7 @@ export default function ForgotPasswordPage() {
       } else {
         setSuccess(true)
       }
-    } catch (err) {
+    } catch {
       setError('Si è verificato un errore durante l\'invio della richiesta')
     } finally {
       setLoading(false)
@@ -62,7 +62,7 @@ export default function ForgotPasswordPage() {
             {/* Mobile Logo */}
             <div className="flex justify-center mb-8">
               <Image
-                src="/lovable-uploads/logo-light.svg"
+                src="/lovable-uploads/logo-dark.svg"
                 alt="WeShoot"
                 width={150}
                 height={45}
@@ -141,7 +141,7 @@ export default function ForgotPasswordPage() {
             {/* Logo */}
             <div className="flex justify-center">
               <Image
-                src="/lovable-uploads/logo-light.svg"
+                src="/lovable-uploads/logo-dark.svg"
                 alt="WeShoot"
                 width={200}
                 height={60}

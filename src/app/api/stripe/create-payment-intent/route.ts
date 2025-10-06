@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
 import { createServerClientSupabase } from '@/lib/supabase/server'
-import { formatAmountForStripe } from '@/lib/stripe'
+// import { formatAmountForStripe } from '@/lib/stripe' // Not used currently
 
 export async function POST(request: NextRequest) {
   try {

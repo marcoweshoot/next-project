@@ -1,5 +1,5 @@
 import { createServerClientSupabase } from '@/lib/supabase/server'
-import { redirect, notFound } from 'next/navigation'
+import { redirect } from 'next/navigation'
 import { AdminUserManagement } from '@/components/admin/AdminUserManagement'
 
 export default async function AdminUsersPage() {

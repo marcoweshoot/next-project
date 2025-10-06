@@ -51,7 +51,7 @@ function ResetPasswordForm() {
           const refreshToken = searchParams.get('refresh_token')
           
           if (accessToken && refreshToken) {
-            const { data, error } = await supabase.auth.setSession({
+            const { error } = await supabase.auth.setSession({
               access_token: accessToken,
               refresh_token: refreshToken,
             })
@@ -67,7 +67,7 @@ function ResetPasswordForm() {
             setIsValidSession(false)
           }
         }
-      } catch (err) {
+      } catch {
         setError('Errore nella verifica del link')
         setIsValidSession(false)
       }
@@ -108,7 +108,7 @@ function ResetPasswordForm() {
           router.push('/dashboard')
         }, 3000)
       }
-    } catch (err) {
+    } catch {
       setError('Si è verificato un errore durante l\'aggiornamento della password')
     } finally {
       setLoading(false)
@@ -259,7 +259,7 @@ function ResetPasswordForm() {
             {/* Logo */}
             <div className="flex justify-center">
               <Image
-                src="/lovable-uploads/logo-light.svg"
+                src="/lovable-uploads/logo-dark.svg"
                 alt="WeShoot"
                 width={200}
                 height={60}

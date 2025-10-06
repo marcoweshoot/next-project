@@ -191,7 +191,7 @@ export async function POST(request: NextRequest) {
           const customerDetails = session.customer_details
           const billingAddress = customerDetails.address
           
-          const profileUpdate: any = {}
+          const profileUpdate: Record<string, string> = {}
           
           // Aggiungi email se presente
           if (customerDetails.email) {
@@ -214,7 +214,7 @@ export async function POST(request: NextRequest) {
           
           // Aggiungi dati fiscali da custom fields di Stripe
           if (session.custom_fields) {
-            session.custom_fields.forEach((field: any) => {
+            session.custom_fields.forEach((field: { key: string; text?: { value: string } }) => {
               if (field.key === 'fiscal_code' && field.text?.value) {
                 const fiscalCode = field.text.value.trim().toUpperCase()
                 

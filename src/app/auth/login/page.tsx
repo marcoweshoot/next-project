@@ -108,6 +108,12 @@ function LoginForm() {
             </Button>
           </form>
           
+          <div className="text-center text-sm">
+            <Link href="/auth/forgot-password" className="text-primary hover:underline">
+              Hai dimenticato la password?
+            </Link>
+          </div>
+          
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
               <span className="w-full border-t" />
