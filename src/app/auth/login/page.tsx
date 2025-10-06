@@ -71,7 +71,7 @@ function LoginForm() {
               <AlertDescription className="text-green-800">
                 <strong>Pagamento completato con successo!</strong>
                 <br />
-                Abbiamo creato il tuo account. Controlla la tua email per impostare la password e accedere alla dashboard.
+                Abbiamo creato il tuo account. Fai il login per accedere alla dashboard.
               </AlertDescription>
             </Alert>
           )}
