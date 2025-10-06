@@ -35,6 +35,24 @@ function PaymentSuccessContent() {
         // Clear payment data from localStorage (if it was ever there)
         localStorage.removeItem('paymentData')
         
+        // Facebook Pixel: Track Purchase event client-side
+        if (typeof window !== 'undefined' && window.fbq) {
+          // Try to get purchase details from session storage if available
+          const purchaseData = sessionStorage.getItem('lastPurchase')
+          if (purchaseData) {
+            const purchase = JSON.parse(purchaseData)
+            window.fbq('track', 'Purchase', {
+              content_name: purchase.tourTitle || 'Tour',
+              content_category: 'Viaggi Fotografici',
+              value: purchase.value || 0,
+              currency: 'EUR',
+              num_items: purchase.quantity || 1
+            })
+            // Clean up
+            sessionStorage.removeItem('lastPurchase')
+          }
+        }
+        
         // Redirect to dashboard with success parameter
         setTimeout(() => {
           router.push('/dashboard?payment=success')

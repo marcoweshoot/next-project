@@ -74,6 +74,14 @@ export function StripeCheckoutButton({
         throw new Error(error)
       }
 
+      // Save purchase data for Facebook Pixel tracking
+      sessionStorage.setItem('lastPurchase', JSON.stringify({
+        tourTitle,
+        value: amount / 100, // Convert from cents
+        quantity,
+        tourDestination,
+        sessionDate
+      }))
 
       // Redirect a Stripe Checkout
       window.location.href = url

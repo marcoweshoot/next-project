@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -58,6 +58,20 @@ export function SimpleCheckoutModal({
   const [showRegistrationForm, setShowRegistrationForm] = useState(false)
   const [registeredUserId, setRegisteredUserId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+
+  // Facebook Pixel: Track InitiateCheckout when modal opens
+  useEffect(() => {
+    if (isOpen && typeof window !== 'undefined' && window.fbq) {
+      const totalValue = getPaymentAmount()
+      window.fbq('track', 'InitiateCheckout', {
+        content_name: tour.title,
+        content_category: 'Viaggi Fotografici',
+        value: totalValue,
+        currency: 'EUR',
+        num_items: quantity
+      })
+    }
+  }, [isOpen, tour.title, quantity])
 
   const getPaymentAmount = () => {
     const baseAmount = paymentType === 'deposit' ? session.deposit : session.price

@@ -122,6 +122,14 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
       // Aspetta un momento per assicurarsi che il login sia completato
       await new Promise(resolve => setTimeout(resolve, 1000))
 
+      // Facebook Pixel: Track CompleteRegistration
+      if (typeof window !== 'undefined' && window.fbq) {
+        window.fbq('track', 'CompleteRegistration', {
+          content_name: 'Quick Registration',
+          status: 'completed'
+        })
+      }
+
       onSuccess(authData.user.id)
     } catch (error: any) {
       console.error('Errore registrazione:', error)
