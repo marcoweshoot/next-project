@@ -402,7 +402,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
         price: price,
         deposit: session.deposit || Math.round(price * 0.3), // 30% se non specificato - questo è per persona
         currency: currency.toLowerCase(),
-        availableSpots: session.maxPax,
+        availableSpots: availableSpots,
       }}
       tour={{
         id: tour.id,
