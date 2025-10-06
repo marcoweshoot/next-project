@@ -21,7 +21,28 @@ export default function AuthCallbackPage() {
         }
 
         if (data.session) {
-          // Authentication successful
+          const user = data.session.user
+          
+          // Check if this is a new user (created in the last few seconds)
+          const isNewUser = user.created_at && 
+            new Date(user.created_at).getTime() > (Date.now() - 10000) // 10 seconds ago
+          
+          if (isNewUser) {
+            // Check if user has a profile
+            const { data: profile, error: profileError } = await supabase
+              .from('profiles')
+              .select('id')
+              .eq('id', user.id)
+              .single()
+            
+            if (profileError || !profile) {
+              // New user without profile - redirect to confirmation page
+              router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
+              return
+            }
+          }
+          
+          // Existing user or new user with profile - go to dashboard
           router.push('/dashboard')
         } else {
           // No session, redirect to login
