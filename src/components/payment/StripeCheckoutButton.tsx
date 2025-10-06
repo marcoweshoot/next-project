@@ -45,6 +45,11 @@ export function StripeCheckoutButton({
     setLoading(true)
     
     try {
+      // Verifica che userId sia valido
+      if (!userId || userId.trim() === '') {
+        throw new Error('Utente non autenticato. Effettua il login o la registrazione.')
+      }
+
       // Crea checkout session
       const response = await fetch('/api/stripe/create-checkout-session', {
         method: 'POST',
