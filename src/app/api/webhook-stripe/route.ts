@@ -88,8 +88,8 @@ export async function POST(request: NextRequest) {
           // Calcola il totale atteso (prezzo completo per tutte le persone)
           const sessionPrice = parseFloat(session.metadata?.sessionPrice || '0')
           const sessionDeposit = parseFloat(session.metadata?.sessionDeposit || '0')
-          const quantity = parseInt(session.metadata?.quantity || '1')
-          const expectedTotal = sessionPrice * 100 * quantity
+          const quantityValue = parseInt(session.metadata?.quantity || '1')
+          const expectedTotal = sessionPrice * 100 * quantityValue
           
           // Determina lo status: se l'importo pagato >= totale atteso, è tutto pagato
           const bookingStatus = session.amount_total >= expectedTotal ? 'fully_paid' : 'deposit_paid'
@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
             amountPaid: session.amount_total,
             sessionPrice: sessionPrice,
             sessionDeposit: sessionDeposit,
-            quantity: quantity,
+            quantity: quantityValue,
             expectedTotal,
             bookingStatus,
             isFullPayment: session.amount_total >= expectedTotal
@@ -136,7 +136,7 @@ export async function POST(request: NextRequest) {
             currency: 'EUR',
             contentName: session.metadata?.tourTitle || `Tour ${tourId}`,
             contentCategory: 'Viaggi Fotografici',
-            numItems: quantity
+            numItems: quantityValue
           })
         } catch (error) {
           return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
