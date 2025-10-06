@@ -129,24 +129,15 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
           }
 
-          // Track purchase event
-          try {
-            await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/track-purchase`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                transactionId: session.id,
-                value: session.amount_total / 100, // Convert from cents
-                currency: 'EUR',
-                contentName: session.metadata?.tourTitle || `Tour ${tourId}`,
-                contentCategory: 'Viaggi Fotografici',
-                numItems: quantity
-              })
-            })
-          } catch (trackingError) {
-            // Non bloccare il processo se il tracking fallisce
-            console.error('Purchase tracking failed:', trackingError)
-          }
+          // Track purchase event (temporarily disabled to fix server error)
+          console.log('📊 Purchase completed:', {
+            transactionId: session.id,
+            value: session.amount_total / 100,
+            currency: 'EUR',
+            contentName: session.metadata?.tourTitle || `Tour ${tourId}`,
+            contentCategory: 'Viaggi Fotografici',
+            numItems: quantity
+          })
         } catch (error) {
           return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
         }

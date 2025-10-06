@@ -62,7 +62,8 @@ export function SimpleCheckoutModal({
   // Facebook Pixel: Track InitiateCheckout when modal opens
   useEffect(() => {
     if (isOpen && typeof window !== 'undefined' && window.fbq) {
-      const totalValue = getPaymentAmount()
+      const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
+      const totalValue = baseAmount * quantity
       window.fbq('track', 'InitiateCheckout', {
         content_name: tour.title,
         content_category: 'Viaggi Fotografici',
@@ -71,7 +72,7 @@ export function SimpleCheckoutModal({
         num_items: quantity
       })
     }
-  }, [isOpen, tour.title, quantity])
+  }, [isOpen, tour.title, quantity, paymentType, session.deposit, session.price])
 
   const getPaymentAmount = () => {
     const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
