@@ -67,12 +67,12 @@ export default function RegisterPage() {
               first_name: firstName,
               last_name: lastName
             })
-        } catch (profileError) {
+        } catch {
           // Profile creation failed, but registration can continue
         }
         setSuccess(true)
       }
-    } catch (err) {
+    } catch {
       setError('Si è verificato un errore durante la registrazione')
     } finally {
       setLoading(false)

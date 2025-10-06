@@ -46,7 +46,7 @@ function LoginForm() {
         router.push('/dashboard')
         router.refresh()
       }
-    } catch (err) {
+    } catch {
       setError('Si è verificato un errore durante il login')
     } finally {
       setLoading(false)

@@ -245,7 +245,7 @@ export async function POST(request: NextRequest) {
               // Non bloccare il flusso se l'aggiornamento del profilo fallisce
             }
           }
-        } catch (profileUpdateError) {
+        } catch {
           // Non bloccare il flusso se l'aggiornamento del profilo fallisce
         }
       }

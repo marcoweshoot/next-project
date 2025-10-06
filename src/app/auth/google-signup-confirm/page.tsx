@@ -12,7 +12,14 @@ import { CheckCircle, Loader2, User, Mail, AlertCircle } from 'lucide-react'
 function GoogleSignupConfirmContent() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [userData, setUserData] = useState<any>(null)
+  const [userData, setUserData] = useState<{
+    id: string;
+    email: string;
+    name: string;
+    firstName: string;
+    lastName: string;
+    avatar: string;
+  } | null>(null)
   const router = useRouter()
   const searchParams = useSearchParams()
   const supabase = createClient()
@@ -43,7 +50,7 @@ function GoogleSignupConfirmContent() {
           lastName: user.user_metadata?.last_name || user.user_metadata?.family_name || '',
           avatar: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
         })
-      } catch (err) {
+      } catch {
         setError('Errore nel recupero dei dati utente')
       }
     }
@@ -80,7 +87,7 @@ function GoogleSignupConfirmContent() {
 
       // Success - redirect to dashboard
       router.push('/dashboard')
-    } catch (err) {
+    } catch {
       setError('Errore durante la registrazione. Riprova.')
     } finally {
       setLoading(false)
