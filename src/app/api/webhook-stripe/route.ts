@@ -85,14 +85,20 @@ export async function POST(request: NextRequest) {
       if (paymentType === 'deposit') {
         // Crea nuovo booking per acconto
         try {
-          // Calcola il totale atteso
-          const expectedTotal = parseFloat(session.metadata?.sessionPrice || '0') * 100 * parseInt(quantity || '1')
+          // Calcola il totale atteso (prezzo completo per tutte le persone)
+          const sessionPrice = parseFloat(session.metadata?.sessionPrice || '0')
+          const sessionDeposit = parseFloat(session.metadata?.sessionDeposit || '0')
+          const quantity = parseInt(session.metadata?.quantity || '1')
+          const expectedTotal = sessionPrice * 100 * quantity
           
           // Determina lo status: se l'importo pagato >= totale atteso, è tutto pagato
           const bookingStatus = session.amount_total >= expectedTotal ? 'fully_paid' : 'deposit_paid'
           
           console.log('💰 Payment Analysis:', {
             amountPaid: session.amount_total,
+            sessionPrice: sessionPrice,
+            sessionDeposit: sessionDeposit,
+            quantity: quantity,
             expectedTotal,
             bookingStatus,
             isFullPayment: session.amount_total >= expectedTotal
@@ -212,6 +218,9 @@ export async function POST(request: NextRequest) {
               }
               if (field.key === 'pec_email' && field.text?.value && field.text.value.trim()) {
                 profileUpdate.pec_email = field.text.value.trim()
+              }
+              if (field.key === 'phone_number' && field.text?.value && field.text.value.trim()) {
+                profileUpdate.phone_number = field.text.value.trim()
               }
             })
           }

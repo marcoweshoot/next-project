@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
           price_data: {
             currency: currency.toLowerCase(),
             product_data: {
-              name: `${tourTitle || `Tour ${tourId}`} - ${paymentType === 'deposit' ? 'Acconto' : 'Saldo'}`,
+              name: `${tourTitle || `Tour ${tourId}`}`,
               description: `${sessionDate ? new Date(sessionDate).toLocaleDateString('it-IT') : `Sessione ${sessionId}`}${quantity > 1 ? ` (${quantity} persone)` : ''}`,
             },
             unit_amount: unitAmount, // Amount per person in cents
@@ -104,6 +104,15 @@ export async function POST(request: NextRequest) {
           },
           type: 'text',
           optional: true,
+        },
+        {
+          key: 'phone_number',
+          label: {
+            type: 'custom',
+            custom: 'Numero di cellulare',
+          },
+          type: 'text',
+          optional: false,
         },
       ],
       // Personalizziamo i messaggi per l'Italia
