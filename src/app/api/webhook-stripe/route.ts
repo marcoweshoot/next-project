@@ -118,7 +118,7 @@ export async function POST(request: NextRequest) {
               balance_due_date: session.metadata?.sessionDate ? 
                 new Date(new Date(session.metadata.sessionDate).getTime() - 30 * 24 * 60 * 60 * 1000).toISOString() : 
                 new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 giorni prima della partenza
-              quantity: quantity ? parseInt(quantity) : 1,
+              quantity: quantity,
               tour_title: session.metadata?.tourTitle || '',
               tour_destination: session.metadata?.tourDestination || '',
               session_date: session.metadata?.sessionDate || '',
