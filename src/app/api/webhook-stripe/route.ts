@@ -223,15 +223,12 @@ export async function POST(request: NextRequest) {
                   profileUpdate.fiscal_code = fiscalCode
                 }
               }
-              if (field.key === 'vat_number' && field.text?.value && field.text.value.trim()) {
-                profileUpdate.vat_number = field.text.value.trim()
-              }
-              if (field.key === 'pec_email' && field.text?.value && field.text.value.trim()) {
-                profileUpdate.pec_email = field.text.value.trim()
-              }
-              if (field.key === 'phone_number' && field.text?.value && field.text.value.trim()) {
-                profileUpdate.phone_number = field.text.value.trim()
-              }
+                if (field.key === 'vat_number' && field.text?.value && field.text.value.trim()) {
+                  profileUpdate.vat_number = field.text.value.trim()
+                }
+                if (field.key === 'phone_number' && field.text?.value && field.text.value.trim()) {
+                  profileUpdate.phone_number = field.text.value.trim()
+                }
             })
           }
           
