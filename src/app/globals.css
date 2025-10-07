@@ -21,15 +21,17 @@
   }
 }
 
-/* Input cursor alignment fix */
+/* Input cursor alignment fix - minimal approach */
 input[type="text"], 
 input[type="email"], 
 input[type="password"],
 input[type="tel"] {
-  /* Ensure proper cursor alignment */
-  line-height: normal !important;
-  vertical-align: baseline !important;
+  /* Only ensure text alignment */
   text-align: left !important;
+  /* Ensure cursor stays aligned during typing */
+  line-height: 1.5 !important;
+  /* Prevent cursor jumping */
+  box-sizing: border-box !important;
 }
 
 /* Mobile-specific input fixes - minimal approach */
