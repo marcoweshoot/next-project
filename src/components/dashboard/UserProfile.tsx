@@ -10,7 +10,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { ProfilePictureUpload } from '@/components/dashboard/ProfilePictureUpload'
 import { 
   User, 
-  Mail, 
   Phone, 
   Save, 
   CheckCircle, 
@@ -363,57 +362,6 @@ export function UserProfile({ userId }: UserProfileProps) {
         </CardContent>
       </Card>
 
-      {/* Account Information */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Mail className="w-5 h-5" />
-            Informazioni account
-          </CardTitle>
-          <CardDescription>
-            Informazioni di base del tuo account
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <Label className="text-sm font-medium text-muted-foreground">Email</Label>
-              <p className="text-sm font-medium">{formData.email || userId}</p>
-            </div>
-            
-            <div>
-              <Label className="text-sm font-medium text-muted-foreground">ID Utente</Label>
-              <p className="text-sm font-mono text-muted-foreground">{userId}</p>
-            </div>
-          </div>
-
-          {profile && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <Label className="text-sm font-medium text-muted-foreground">Account creato</Label>
-                <p className="text-sm">
-                  {new Date(profile.created_at).toLocaleDateString('it-IT', {
-                    day: '2-digit',
-                    month: 'long',
-                    year: 'numeric'
-                  })}
-                </p>
-              </div>
-              
-              <div>
-                <Label className="text-sm font-medium text-muted-foreground">Ultimo aggiornamento</Label>
-                <p className="text-sm">
-                  {new Date(profile.updated_at).toLocaleDateString('it-IT', {
-                    day: '2-digit',
-                    month: 'long',
-                    year: 'numeric'
-                  })}
-                </p>
-              </div>
-            </div>
-          )}
-        </CardContent>
-      </Card>
     </div>
   )
 }
