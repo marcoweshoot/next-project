@@ -9,9 +9,10 @@ import { useRouter } from 'next/navigation'
 
 interface LoginDropdownProps {
   isScrolled?: boolean
+  isAuthPage?: boolean
 }
 
-export function LoginDropdown({ isScrolled }: LoginDropdownProps) {
+export function LoginDropdown({ isScrolled, isAuthPage }: LoginDropdownProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [user, setUser] = useState<any>(null)
@@ -47,7 +48,7 @@ export function LoginDropdown({ isScrolled }: LoginDropdownProps) {
         <button
           onClick={() => router.push('/dashboard')}
           className={`font-medium transition-colors duration-200 hover:text-primary ${
-            isScrolled ? 'text-foreground' : 'text-white'
+            isScrolled || isAuthPage ? 'text-foreground' : 'text-white'
           }`}
         >
           <span className="hidden xl:inline">Dashboard</span>
@@ -56,7 +57,7 @@ export function LoginDropdown({ isScrolled }: LoginDropdownProps) {
         <button
           onClick={handleLogout}
           className={`font-medium transition-colors duration-200 hover:text-primary ${
-            isScrolled ? 'text-foreground' : 'text-white'
+            isScrolled || isAuthPage ? 'text-foreground' : 'text-white'
           }`}
         >
           Esci
@@ -70,7 +71,7 @@ export function LoginDropdown({ isScrolled }: LoginDropdownProps) {
       <PopoverTrigger asChild>
         <button
           className={`flex items-center gap-2 font-medium transition-colors duration-200 hover:text-primary ${
-            isScrolled ? 'text-foreground' : 'text-white'
+            isScrolled || isAuthPage ? 'text-foreground' : 'text-white'
           }`}
         >
           <LogIn className="w-4 h-4" />

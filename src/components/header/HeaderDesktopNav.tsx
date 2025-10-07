@@ -142,7 +142,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
         Dicono di Noi
       </Link>
 
-      <LoginDropdown isScrolled={isScrolled} />
+      <LoginDropdown isScrolled={isScrolled} isAuthPage={isAuthPage} />
 
       {/* Theme Toggle e CTA Button raggruppati */}
       <div className="flex items-center gap-2">
