@@ -17,13 +17,28 @@
   
 }
 
-/* Mobile-specific input fixes - ONLY prevent zoom */
+/* Input cursor alignment fix - force proper behavior */
+input[type="text"], 
+input[type="email"], 
+input[type="password"],
+input[type="tel"] {
+  /* Force proper cursor alignment */
+  line-height: 1.5 !important;
+  padding: 8px 12px !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 40px !important;
+}
+
+/* Mobile-specific input fixes - prevent zoom */
 @media (max-width: 768px) {
   input[type="text"], 
   input[type="email"], 
   input[type="password"],
   input[type="tel"] {
-    /* Only prevent zoom on mobile - let shadcn/ui handle everything else */
+    /* Prevent zoom on mobile */
     font-size: 16px !important;
   }
 }
