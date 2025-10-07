@@ -21,26 +21,13 @@
   }
 }
 
-/* Input cursor alignment fix - minimal approach */
-input[type="text"], 
-input[type="email"], 
-input[type="password"],
-input[type="tel"] {
-  /* Only ensure text alignment */
-  text-align: left !important;
-  /* Ensure cursor stays aligned during typing */
-  line-height: 1.5 !important;
-  /* Prevent cursor jumping */
-  box-sizing: border-box !important;
-}
-
-/* Mobile-specific input fixes - minimal approach */
+/* Mobile-specific input fixes - ONLY prevent zoom */
 @media (max-width: 768px) {
   input[type="text"], 
   input[type="email"], 
   input[type="password"],
   input[type="tel"] {
-    /* Only prevent zoom on mobile */
+    /* Only prevent zoom on mobile - let shadcn/ui handle everything else */
     font-size: 16px !important;
   }
 }
