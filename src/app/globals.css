@@ -21,47 +21,25 @@
   }
 }
 
-/* Form input improvements */
+/* Input cursor alignment fix */
 input[type="text"], 
 input[type="email"], 
-input[type="password"] {
-  /* Fix cursor positioning */
-  text-align: left;
-  line-height: 1.5;
-  vertical-align: middle;
-  
-  /* Better focus behavior */
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
-  }
-  
-  /* Prevent cursor jumping */
-  &:not(:focus) {
-    caret-color: transparent;
-  }
-  
-  &:focus {
-    caret-color: auto;
-  }
+input[type="password"],
+input[type="tel"] {
+  /* Ensure proper cursor alignment */
+  line-height: normal !important;
+  vertical-align: baseline !important;
+  text-align: left !important;
 }
 
-/* Mobile-specific input fixes */
+/* Mobile-specific input fixes - minimal approach */
 @media (max-width: 768px) {
   input[type="text"], 
   input[type="email"], 
-  input[type="password"] {
-    /* Better cursor alignment on mobile */
-    padding: 12px 16px;
-    line-height: 1.4;
-    font-size: 16px;
-    text-align: left;
-    vertical-align: middle;
-    
-    /* Fix cursor positioning */
-    &::placeholder {
-      line-height: 1.4;
-    }
+  input[type="password"],
+  input[type="tel"] {
+    /* Only prevent zoom on mobile */
+    font-size: 16px !important;
   }
 }
 

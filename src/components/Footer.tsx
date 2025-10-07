@@ -42,7 +42,7 @@ const Footer: React.FC = () => (
         <div className="space-y-4">
           <Link href="/" className="flex items-center space-x-2" aria-label="WeShoot Home">
             <Image
-              src="/lovable-uploads/759cd14e-fb23-4e8f-ad1a-d8a690a28a83.png"
+              src="/lovable-uploads/logo-light.svg"
               alt="WeShoot - viaggi fotografici e workshop"
               width={120}
               height={48}
