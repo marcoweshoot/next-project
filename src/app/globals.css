@@ -15,10 +15,6 @@
     min-width: 44px;
   }
   
-  /* Better modal scrolling on mobile */
-  .modal-content {
-    -webkit-overflow-scrolling: touch;
-  }
 }
 
 /* Mobile-specific input fixes - ONLY prevent zoom */
