@@ -32,7 +32,7 @@ input[type="tel"] {
   min-height: 40px !important;
 }
 
-/* Mobile-specific input fixes - prevent zoom */
+/* Mobile-specific input fixes - prevent zoom and keyboard issues */
 @media (max-width: 768px) {
   input[type="text"], 
   input[type="email"], 
@@ -40,6 +40,21 @@ input[type="tel"] {
   input[type="tel"] {
     /* Prevent zoom on mobile */
     font-size: 16px !important;
+    /* Fix cursor alignment on mobile */
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    /* Prevent layout shifts */
+    position: relative !important;
+    z-index: 1 !important;
+  }
+  
+  /* Fix modal positioning when keyboard appears */
+  [data-radix-dialog-content] {
+    /* Prevent modal from jumping when keyboard appears */
+    transform: translate(-50%, -50%) !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
   }
 }
 
