@@ -170,7 +170,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
   }
 
   return (
-    <Card className="max-h-[70vh] overflow-y-auto">
+    <Card>
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center gap-2 text-lg">
           <User className="w-5 h-5" />
