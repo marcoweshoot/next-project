@@ -4,27 +4,10 @@
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
-  /* Prevent zoom on input focus */
-  input, textarea, select {
-    font-size: 16px !important;
-  }
-  
   /* Improve touch targets */
   button, [role="button"] {
     min-height: 44px;
     min-width: 44px;
-  }
-  
-}
-
-/* Mobile-specific input fixes - ONLY prevent zoom */
-@media (max-width: 768px) {
-  input[type="text"], 
-  input[type="email"], 
-  input[type="password"],
-  input[type="tel"] {
-    /* Only prevent zoom on mobile - let shadcn/ui handle everything else */
-    font-size: 16px !important;
   }
 }
 
