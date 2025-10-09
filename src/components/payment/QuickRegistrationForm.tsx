@@ -324,7 +324,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
           
           <TabsContent value="register" className="mt-6">
             <form onSubmit={handleRegisterSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="register-firstName">Nome *</Label>
                   <Input
@@ -382,7 +382,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
                 )}
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="register-password">Password *</Label>
                   <div className="relative">

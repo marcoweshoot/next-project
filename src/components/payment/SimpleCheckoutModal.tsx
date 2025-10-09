@@ -173,7 +173,7 @@ export function SimpleCheckoutModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto w-[95vw] sm:w-full">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <CreditCard className="w-5 h-5" />
@@ -181,32 +181,32 @@ export function SimpleCheckoutModal({
           </DialogTitle>
           
           {/* Indicatore di step */}
-          <div className="flex items-center justify-center space-x-4 py-4">
-            <div className={`flex items-center space-x-2 ${currentStep >= 1 ? 'text-primary' : 'text-muted-foreground'}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
+          <div className="flex items-center justify-center space-x-2 sm:space-x-4 py-4 px-2">
+            <div className={`flex items-center space-x-1 sm:space-x-2 ${currentStep >= 1 ? 'text-primary' : 'text-muted-foreground'}`}>
+              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-medium ${
                 currentStep >= 1 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
               }`}>
                 1
               </div>
-              <span className="text-sm">Dettagli</span>
+              <span className="text-xs sm:text-sm hidden sm:inline">Dettagli</span>
             </div>
-            <div className={`w-8 h-0.5 ${currentStep >= 2 ? 'bg-primary' : 'bg-muted'}`}></div>
-            <div className={`flex items-center space-x-2 ${currentStep >= 2 ? 'text-primary' : 'text-muted-foreground'}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
+            <div className={`w-4 sm:w-8 h-0.5 ${currentStep >= 2 ? 'bg-primary' : 'bg-muted'}`}></div>
+            <div className={`flex items-center space-x-1 sm:space-x-2 ${currentStep >= 2 ? 'text-primary' : 'text-muted-foreground'}`}>
+              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-medium ${
                 currentStep >= 2 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
               }`}>
                 2
               </div>
-              <span className="text-sm">Accesso</span>
+              <span className="text-xs sm:text-sm hidden sm:inline">Accesso</span>
             </div>
-            <div className={`w-8 h-0.5 ${currentStep >= 3 ? 'bg-primary' : 'bg-muted'}`}></div>
-            <div className={`flex items-center space-x-2 ${currentStep >= 3 ? 'text-primary' : 'text-muted-foreground'}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
+            <div className={`w-4 sm:w-8 h-0.5 ${currentStep >= 3 ? 'bg-primary' : 'bg-muted'}`}></div>
+            <div className={`flex items-center space-x-1 sm:space-x-2 ${currentStep >= 3 ? 'text-primary' : 'text-muted-foreground'}`}>
+              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-medium ${
                 currentStep >= 3 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
               }`}>
                 3
               </div>
-              <span className="text-sm">Pagamento</span>
+              <span className="text-xs sm:text-sm hidden sm:inline">Pagamento</span>
             </div>
           </div>
         </DialogHeader>
@@ -236,20 +236,22 @@ export function SimpleCheckoutModal({
           {/* Quantity Selection */}
           <div className="space-y-4">
             <h4 className="font-semibold">Seleziona il numero di posti:</h4>
-            <div className="flex items-center gap-4">
-              <Users className="w-5 h-5 text-muted-foreground" />
-              <Select value={quantity.toString()} onValueChange={(value) => setQuantity(parseInt(value))}>
-                <SelectTrigger className="w-32">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {Array.from({ length: Math.min(session.availableSpots, 10) }, (_, i) => i + 1).map((num) => (
-                    <SelectItem key={num} value={num.toString()}>
-                      {num} {num === 1 ? 'persona' : 'persone'}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5 text-muted-foreground" />
+                <Select value={quantity.toString()} onValueChange={(value) => setQuantity(parseInt(value))}>
+                  <SelectTrigger className="w-32">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {Array.from({ length: Math.min(session.availableSpots, 10) }, (_, i) => i + 1).map((num) => (
+                      <SelectItem key={num} value={num.toString()}>
+                        {num} {num === 1 ? 'persona' : 'persone'}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
               <span className="text-sm text-muted-foreground">
                 {session.availableSpots} posti disponibili
               </span>
