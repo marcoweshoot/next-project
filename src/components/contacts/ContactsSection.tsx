@@ -21,14 +21,14 @@ const ContactsSection = () => {
           type: "whatsapp",
           label: "WhatsApp",
           value: "+39 349 526 9093",
-          href: "https://wa.me/393495269093",
+          href: "https://wa.me/393508828541",
           icon: MessageCircle
         },
         {
           type: "phone",
           label: "Telefono",
           value: "+39 349 526 9093",
-          href: "tel:+393495269093",
+          href: "tel:+393508828541",
           icon: Phone
         }
       ]
@@ -63,14 +63,14 @@ const ContactsSection = () => {
           type: "whatsapp",
           label: "WhatsApp",
           value: "+39 349 526 9093",
-          href: "https://wa.me/393495269093",
+          href: "https://wa.me/393508828541",
           icon: MessageCircle
         },
         {
           type: "phone",
           label: "Telefono",
           value: "+39 349 526 9093",
-          href: "tel:+393495269093",
+          href: "tel:+393508828541",
           icon: Phone
         },
         {

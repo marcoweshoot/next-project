@@ -8,5 +8,5 @@ export const scrollToSection = (sectionId: string) => {
 export const openWhatsApp = (tour: { title: string }) => {
   const message = `Ciao WeShoot, mi potete dare più info sul viaggio ${tour.title}?`;
   const encodedMessage = encodeURIComponent(message);
-  window.open(`https://wa.me/393495269093?text=${encodedMessage}`, '_blank');
+  window.open(`https://wa.me/393508828541?text=${encodedMessage}`, '_blank');
 };

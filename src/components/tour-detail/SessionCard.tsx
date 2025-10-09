@@ -142,7 +142,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
     const message = encodeURIComponent(
       `Ciao! Sono interessato al viaggio "${tour.title}" in partenza il ${dateRange}. Potresti darmi maggiori informazioni?`
     );
-    window.open(`https://wa.me/393495269093?text=${message}`, "_blank");
+    window.open(`https://wa.me/393508828541?text=${message}`, "_blank");
   };
 
   const availableSpots = getAvailableSpots();

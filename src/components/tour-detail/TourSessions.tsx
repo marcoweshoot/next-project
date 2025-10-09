@@ -157,7 +157,7 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
       </p>
       <div className="flex flex-col sm:flex-row gap-3 justify-center">
         <a
-          href="https://wa.me/393495269093"
+          href="https://wa.me/393508828541"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors"
