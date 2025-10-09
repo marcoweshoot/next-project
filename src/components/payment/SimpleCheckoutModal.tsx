@@ -399,7 +399,7 @@ export function SimpleCheckoutModal({
 
           {/* Step 2: Autenticazione */}
           {currentStep === 2 && (
-            <div className="space-y-4">
+            <div className="space-y-4 w-full max-w-full overflow-hidden">
               <div className="text-center space-y-2">
                 <h3 className="text-xl font-semibold">Per continuare con il pagamento</h3>
                 <p className="text-muted-foreground">è necessario fare l'accesso o registrarsi</p>

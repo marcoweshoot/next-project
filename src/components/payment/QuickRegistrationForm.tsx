@@ -244,7 +244,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
   }
 
   return (
-    <Card>
+    <Card className="w-full max-w-full overflow-hidden">
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center gap-2 text-lg">
           <User className="w-5 h-5" />
@@ -256,14 +256,16 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
       </CardHeader>
       <CardContent className="pb-4">
         <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'login' | 'register')} className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="login" className="flex items-center gap-2">
-              <LogIn className="w-4 h-4" />
-              Accedi
+          <TabsList className="grid w-full grid-cols-2 max-w-full overflow-hidden">
+            <TabsTrigger value="login" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm">
+              <LogIn className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="hidden sm:inline">Accedi</span>
+              <span className="sm:hidden">Login</span>
             </TabsTrigger>
-            <TabsTrigger value="register" className="flex items-center gap-2">
-              <User className="w-4 h-4" />
-              Registrati
+            <TabsTrigger value="register" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm">
+              <User className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="hidden sm:inline">Registrati</span>
+              <span className="sm:hidden">Reg</span>
             </TabsTrigger>
           </TabsList>
           
