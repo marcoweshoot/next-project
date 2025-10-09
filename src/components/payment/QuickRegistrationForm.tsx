@@ -10,6 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Loader2, User, Mail, Lock, AlertCircle, LogIn } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import { GoogleAuthButton } from '@/components/auth/GoogleAuthButton'
+import { validateFields } from '@/lib/validation'
 
 interface QuickRegistrationFormProps {
   onSuccess: (userId: string) => void
@@ -90,7 +91,15 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
   const handleRegisterSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
+    // Client-side validation first
     if (!validateRegisterForm()) {
+      return
+    }
+
+    // Server-side validation
+    const validation = validateFields(registerData)
+    if (!validation.isValid) {
+      setErrors(validation.errors)
       return
     }
 
@@ -178,7 +187,15 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
+    // Client-side validation first
     if (!validateLoginForm()) {
+      return
+    }
+
+    // Server-side validation
+    const validation = validateFields(loginData)
+    if (!validation.isValid) {
+      setErrors(validation.errors)
       return
     }
 

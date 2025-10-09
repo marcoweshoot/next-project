@@ -1,12 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
 import { createClient } from '@supabase/supabase-js'
+import { rateLimits } from '@/lib/rateLimit'
+import { validateFields } from '@/lib/validation'
 import Stripe from 'stripe'
 
 // Stripe consiglia Node.js runtime per i webhook
 export const runtime = 'nodejs'
 
 export async function POST(request: NextRequest) {
+  // Apply rate limiting
+  const rateLimitResponse = await rateLimits.webhook(request)
+  if (rateLimitResponse) {
+    return rateLimitResponse
+  }
   const timestamp = new Date().toISOString()
   console.log('🔔 Webhook received at:', timestamp)
   
@@ -53,17 +60,38 @@ export async function POST(request: NextRequest) {
         }
       )
 
-      const {
-        userId,
-        tourId,
-        sessionId,
-        paymentType,
-        quantity
-      } = session.metadata || {}
+      const rawData = {
+        userId: session.metadata?.userId,
+        tourId: session.metadata?.tourId,
+        sessionId: session.metadata?.sessionId,
+        paymentType: session.metadata?.paymentType,
+        quantity: session.metadata?.quantity,
+        fiscalCode: session.metadata?.fiscal_code,
+        vatNumber: session.metadata?.vat_number,
+        phoneNumber: session.metadata?.phone_number
+      }
+
+      // Validate and sanitize input data
+      const validation = validateFields(rawData)
+      if (!validation.isValid) {
+        console.log('❌ Validation failed:', validation.errors)
+        return NextResponse.json({ 
+          error: 'Invalid input data',
+          details: validation.errors,
+          timestamp
+        }, { status: 400 })
+      }
+
+      const { sanitizedData } = validation
+      const userId = sanitizedData.userId
+      const tourId = sanitizedData.tourId
+      const sessionId = sanitizedData.sessionId
+      const paymentType = sanitizedData.paymentType
+      const quantity = sanitizedData.quantity
 
       if (!userId || !tourId || !sessionId || !paymentType) {
         return NextResponse.json({ 
-          error: 'Missing metadata',
+          error: 'Missing required metadata',
           timestamp,
           sessionId: session.id,
           availableMetadata: session.metadata 

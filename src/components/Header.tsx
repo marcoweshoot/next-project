@@ -91,7 +91,7 @@ const Header = () => {
 
           {/* Desktop nav — render solo su viewport desktop: NO download su mobile */}
           {isDesktop && (
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex lg:flex-1 lg:justify-center lg:ml-4">
               <HeaderDesktopNav
                 isScrolled={isScrolled}
                 activeDropdown={activeDropdown}

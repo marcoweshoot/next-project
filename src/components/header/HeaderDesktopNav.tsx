@@ -38,13 +38,14 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
   const linkColor = isScrolled || isAuthPage ? 'text-foreground' : 'text-white';
 
   return (
-    <nav className="hidden lg:flex items-center flex-nowrap gap-x-2 xl:gap-x-4 2xl:gap-x-6">
+    <nav className="hidden lg:flex items-center flex-nowrap gap-x-1 lg:gap-x-2 xl:gap-x-3 2xl:gap-x-4">
       {/* Viaggi Fotografici */}
       <div className="group/drop relative">
         <button
           type="button"
           aria-haspopup="true"
           aria-expanded={false}
+          aria-label="Menu Viaggi Fotografici"
           className={`flex items-center gap-1 py-2 font-medium transition-colors duration-200 ${linkColor} hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md`}
         >
           <span>Viaggi Fotografici</span>
@@ -83,6 +84,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
           type="button"
           aria-haspopup="true"
           aria-expanded={false}
+          aria-label="Menu Accademia fotografia"
           className={`flex items-center gap-1 py-2 font-medium transition-colors duration-200 ${linkColor} hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md`}
         >
           <span>Accademia fotografia</span>
@@ -116,11 +118,11 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
         </div>
       </div>
 
-      {/* Link singoli */}
+      {/* Link singoli - ottimizzati per rimanere visibili più a lungo */}
       <Link
         href="/fotografi/"
         prefetch={false}
-        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor} hidden xl:block`}
+        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor} hidden lg:block`}
       >
         Coach
       </Link>
@@ -129,7 +131,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
         href="https://blog.weshoot.it/"
         target="_blank"
         rel="noopener noreferrer"
-        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor} hidden xl:block`}
+        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor} hidden lg:block`}
       >
         Blog
       </a>
@@ -137,7 +139,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
       <Link
         href="/recensioni/"
         prefetch={false}
-        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor} hidden 2xl:block`}
+        className={`font-medium transition-colors duration-200 hover:text-primary ${linkColor} hidden xl:block`}
       >
         Dicono di Noi
       </Link>
