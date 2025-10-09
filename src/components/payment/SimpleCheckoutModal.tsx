@@ -54,10 +54,35 @@ export function SimpleCheckoutModal({
     return 'deposit'
   })
   const [quantity, setQuantity] = useState(1)
-  const [showPaymentForm, setShowPaymentForm] = useState(false)
-  const [showRegistrationForm, setShowRegistrationForm] = useState(false)
   const [registeredUserId, setRegisteredUserId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+  
+  // Gestione degli step del modal
+  const [currentStep, setCurrentStep] = useState<1 | 2 | 3>(1)
+  
+  // Funzioni per gestire gli step
+  const handleNextStep = () => {
+    if (currentStep < 3) {
+      setCurrentStep((prev) => (prev + 1) as 1 | 2 | 3)
+    }
+  }
+  
+  const handlePrevStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep((prev) => (prev - 1) as 1 | 2 | 3)
+    }
+  }
+  
+  const resetModal = () => {
+    setCurrentStep(1)
+    setRegisteredUserId(null)
+    setError(null)
+  }
+  
+  const handleClose = () => {
+    resetModal()
+    onClose()
+  }
 
   // Facebook Pixel: Track InitiateCheckout when modal opens
   useEffect(() => {
@@ -123,9 +148,9 @@ export function SimpleCheckoutModal({
 
   const handleRegistrationSuccess = (userId: string) => {
     setRegisteredUserId(userId)
-    setShowRegistrationForm(false)
-    setShowPaymentForm(true)
     setError(null)
+    // Vai allo step 3 (pagamento) dopo il successo
+    setCurrentStep(3)
   }
 
   const handleRegistrationError = (error: string) => {
@@ -137,26 +162,59 @@ export function SimpleCheckoutModal({
     const isUserLoggedIn = user && user.id && user.email
     
     if (!isUserLoggedIn && !registeredUserId) {
-      // Utente non registrato, mostra form di registrazione
-      setShowRegistrationForm(true)
+      // Utente non registrato, vai allo step 2 (autenticazione)
+      setCurrentStep(2)
     } else {
-      // Utente già registrato, vai al pagamento
-      setShowPaymentForm(true)
+      // Utente già registrato, vai allo step 3 (pagamento)
+      setCurrentStep(3)
     }
   }
 
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+    <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <CreditCard className="w-5 h-5" />
             Checkout Rapido
           </DialogTitle>
+          
+          {/* Indicatore di step */}
+          <div className="flex items-center justify-center space-x-4 py-4">
+            <div className={`flex items-center space-x-2 ${currentStep >= 1 ? 'text-primary' : 'text-muted-foreground'}`}>
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
+                currentStep >= 1 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
+              }`}>
+                1
+              </div>
+              <span className="text-sm">Dettagli</span>
+            </div>
+            <div className={`w-8 h-0.5 ${currentStep >= 2 ? 'bg-primary' : 'bg-muted'}`}></div>
+            <div className={`flex items-center space-x-2 ${currentStep >= 2 ? 'text-primary' : 'text-muted-foreground'}`}>
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
+                currentStep >= 2 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
+              }`}>
+                2
+              </div>
+              <span className="text-sm">Accesso</span>
+            </div>
+            <div className={`w-8 h-0.5 ${currentStep >= 3 ? 'bg-primary' : 'bg-muted'}`}></div>
+            <div className={`flex items-center space-x-2 ${currentStep >= 3 ? 'text-primary' : 'text-muted-foreground'}`}>
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
+                currentStep >= 3 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
+              }`}>
+                3
+              </div>
+              <span className="text-sm">Pagamento</span>
+            </div>
+          </div>
         </DialogHeader>
 
         <div className="space-y-6 pb-4">
+          {/* Step 1: Dettagli Tour e Selezione */}
+          {currentStep === 1 && (
+            <>
           {/* Tour Details */}
           <div className="space-y-2">
             <h3 className="text-xl font-semibold">{tour.title}</h3>
@@ -321,34 +379,55 @@ export function SimpleCheckoutModal({
             </CardContent>
           </Card>
 
-          {/* Error Display */}
-          {error && (
-            <Alert variant="destructive">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>{error}</AlertDescription>
-            </Alert>
+          {/* Bottoni Step 1 */}
+          <div className="flex gap-3">
+            <Button variant="outline" onClick={handleClose} className="flex-1">
+              Annulla
+            </Button>
+            <Button 
+              onClick={handleStartPayment}
+              className="flex-1 bg-red-600 hover:bg-red-700"
+            >
+              <Euro className="w-4 h-4 mr-2" />
+              Paga {getPaymentAmount()}€
+            </Button>
+          </div>
+            </>
           )}
 
-          {/* Registration Form */}
-          {showRegistrationForm ? (
+          {/* Step 2: Autenticazione */}
+          {currentStep === 2 && (
             <div className="space-y-4">
+              <div className="text-center space-y-2">
+                <h3 className="text-xl font-semibold">Per continuare con il pagamento</h3>
+                <p className="text-muted-foreground">è necessario fare l'accesso o registrarsi</p>
+              </div>
+              
               <QuickRegistrationForm
                 onSuccess={handleRegistrationSuccess}
                 onError={handleRegistrationError}
               />
+              
               <div className="flex gap-3">
                 <Button 
                   variant="outline" 
-                  onClick={() => setShowRegistrationForm(false)}
+                  onClick={handlePrevStep}
                   className="flex-1"
                 >
                   Indietro
                 </Button>
               </div>
             </div>
-          ) : showPaymentForm ? (
+          )}
+
+          {/* Step 3: Pagamento */}
+          {currentStep === 3 && (
             <div className="space-y-4">
-              <h4 className="font-semibold">Completa il pagamento</h4>
+              <div className="text-center space-y-2">
+                <h3 className="text-xl font-semibold">Completa il pagamento</h3>
+                <p className="text-muted-foreground">Procedi con il checkout sicuro</p>
+              </div>
+              
               <StripeCheckoutButton
                 amount={getPaymentAmount() * 100}
                 currency={session.currency.toLowerCase()}
@@ -366,21 +445,27 @@ export function SimpleCheckoutModal({
                 onSuccess={handlePaymentSuccess}
                 onError={handlePaymentError}
               />
-            </div>
-          ) : (
-            <div className="flex gap-3">
-              <Button variant="outline" onClick={onClose} className="flex-1">
-                Annulla
-              </Button>
-              <Button 
-                onClick={handleStartPayment}
-                className="flex-1 bg-red-600 hover:bg-red-700"
-              >
-                <Euro className="w-4 h-4 mr-2" />
-                Paga {getPaymentAmount()}€
-              </Button>
+              
+              <div className="flex gap-3">
+                <Button 
+                  variant="outline" 
+                  onClick={handlePrevStep}
+                  className="flex-1"
+                >
+                  Indietro
+                </Button>
+              </div>
             </div>
           )}
+
+          {/* Error Display */}
+          {error && (
+            <Alert variant="destructive">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>{error}</AlertDescription>
+            </Alert>
+          )}
+
         </div>
       </DialogContent>
     </Dialog>
