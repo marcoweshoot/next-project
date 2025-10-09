@@ -256,8 +256,8 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
       </CardHeader>
       <CardContent className="pb-4">
         <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'login' | 'register')} className="w-full">
-          {/* Mobile: Simple buttons */}
-          <div className="sm:hidden flex w-full gap-2">
+          {/* Simple buttons for all devices */}
+          <div className="flex w-full gap-2">
             <button
               type="button"
               onClick={() => setActiveTab('login')}
@@ -268,7 +268,8 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
               }`}
             >
               <LogIn className="w-4 h-4" />
-              Login
+              <span className="hidden sm:inline">Accedi</span>
+              <span className="sm:hidden">Login</span>
             </button>
             <button
               type="button"
@@ -280,27 +281,10 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
               }`}
             >
               <User className="w-4 h-4" />
-              Reg
+              <span className="hidden sm:inline">Registrati</span>
+              <span className="sm:hidden">Reg</span>
             </button>
           </div>
-          
-          {/* Desktop: Original Tabs */}
-          <TabsList className="hidden sm:grid w-full grid-cols-2 max-w-full overflow-hidden relative">
-            <TabsTrigger 
-              value="login" 
-              className="flex items-center gap-2 text-sm"
-            >
-              <LogIn className="w-4 h-4" />
-              Accedi
-            </TabsTrigger>
-            <TabsTrigger 
-              value="register" 
-              className="flex items-center gap-2 text-sm"
-            >
-              <User className="w-4 h-4" />
-              Registrati
-            </TabsTrigger>
-          </TabsList>
           
           <TabsContent value="login" className="mt-6">
             <form onSubmit={handleLoginSubmit} className="space-y-4">
