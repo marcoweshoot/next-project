@@ -9,6 +9,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Loader2, User, Mail, Lock, AlertCircle, LogIn } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
+import { GoogleAuthButton } from '@/components/auth/GoogleAuthButton'
 
 interface QuickRegistrationFormProps {
   onSuccess: (userId: string) => void
@@ -338,6 +339,23 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
                   'Accedi'
                 )}
               </Button>
+              
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <span className="w-full border-t" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-background px-2 text-muted-foreground">
+                    Oppure
+                  </span>
+                </div>
+              </div>
+              
+              <GoogleAuthButton
+                mode="signin"
+                onSuccess={() => onSuccess('')}
+                onError={onError}
+              />
             </form>
           </TabsContent>
           
@@ -459,6 +477,23 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
                   'Registrati e Procedi'
                 )}
               </Button>
+              
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <span className="w-full border-t" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-background px-2 text-muted-foreground">
+                    Oppure
+                  </span>
+                </div>
+              </div>
+              
+              <GoogleAuthButton
+                mode="signup"
+                onSuccess={() => onSuccess('')}
+                onError={onError}
+              />
             </form>
           </TabsContent>
         </Tabs>
