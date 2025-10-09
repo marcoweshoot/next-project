@@ -256,16 +256,49 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
       </CardHeader>
       <CardContent className="pb-4">
         <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'login' | 'register')} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 max-w-full overflow-hidden relative">
-            <TabsTrigger value="login" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm overflow-hidden">
-              <LogIn className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="hidden sm:inline">Accedi</span>
-              <span className="sm:hidden">Login</span>
+          {/* Mobile: Simple buttons */}
+          <div className="sm:hidden flex w-full gap-2">
+            <button
+              type="button"
+              onClick={() => setActiveTab('login')}
+              className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-md text-sm font-medium transition-colors ${
+                activeTab === 'login' 
+                  ? 'bg-primary text-primary-foreground' 
+                  : 'bg-muted text-muted-foreground hover:bg-muted/80'
+              }`}
+            >
+              <LogIn className="w-4 h-4" />
+              Login
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab('register')}
+              className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-md text-sm font-medium transition-colors ${
+                activeTab === 'register' 
+                  ? 'bg-primary text-primary-foreground' 
+                  : 'bg-muted text-muted-foreground hover:bg-muted/80'
+              }`}
+            >
+              <User className="w-4 h-4" />
+              Reg
+            </button>
+          </div>
+          
+          {/* Desktop: Original Tabs */}
+          <TabsList className="hidden sm:grid w-full grid-cols-2 max-w-full overflow-hidden relative">
+            <TabsTrigger 
+              value="login" 
+              className="flex items-center gap-2 text-sm"
+            >
+              <LogIn className="w-4 h-4" />
+              Accedi
             </TabsTrigger>
-            <TabsTrigger value="register" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm overflow-hidden">
-              <User className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="hidden sm:inline">Registrati</span>
-              <span className="sm:hidden">Reg</span>
+            <TabsTrigger 
+              value="register" 
+              className="flex items-center gap-2 text-sm"
+            >
+              <User className="w-4 h-4" />
+              Registrati
             </TabsTrigger>
           </TabsList>
           
