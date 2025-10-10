@@ -70,6 +70,7 @@ interface Booking {
     postal_code?: string
     country?: string
     fiscal_code?: string
+    vat_number?: string
   }
 }
 
@@ -114,27 +115,14 @@ export function BookingsAdminList() {
       setLoading(true)
       setError(null)
       
-      const { data, error } = await supabase
-        .from('bookings')
-        .select(`
-          *,
-          profiles!inner(
-            first_name,
-            last_name,
-            email,
-            phone,
-            mobile_phone,
-            address,
-            city,
-            postal_code,
-            country,
-            fiscal_code
-          )
-        `)
-        .order('created_at', { ascending: false })
+      const response = await fetch('/api/admin/bookings')
+      const result = await response.json()
 
-      if (error) throw error
-      setBookings(data || [])
+      if (!response.ok) {
+        throw new Error(result.error || 'Errore nel caricamento delle prenotazioni')
+      }
+
+      setBookings(result.bookings || [])
     } catch (err) {
       console.error('Error fetching bookings:', err)
       setError(err instanceof Error ? err.message : 'Errore nel caricamento delle prenotazioni')

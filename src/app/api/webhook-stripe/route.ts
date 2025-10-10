@@ -71,10 +71,18 @@ export async function POST(request: NextRequest) {
       const vatNumber = vatNumberField?.text?.value || null
       const phoneNumber = phoneNumberField?.text?.value || null
 
+      // Estrai anche l'indirizzo di fatturazione da Stripe
+      const billingAddress = session.customer_details?.address
+      const fullAddress = billingAddress ? 
+        `${billingAddress.line1 || ''} ${billingAddress.line2 || ''}, ${billingAddress.city || ''}, ${billingAddress.postal_code || ''}, ${billingAddress.country || ''}`.trim().replace(/^,\s*|,\s*$/g, '') 
+        : null
+
       console.log('📋 Extracted custom fields:', {
         fiscalCode,
         vatNumber,
-        phoneNumber
+        phoneNumber,
+        fullAddress,
+        billingAddress
       })
 
       const rawData = {
@@ -188,7 +196,7 @@ export async function POST(request: NextRequest) {
           console.log('✅ Booking created successfully')
 
           // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
-          if (fiscalCode || vatNumber || phoneNumber) {
+          if (fiscalCode || vatNumber || phoneNumber || fullAddress) {
             const updateData: any = {}
             
             if (fiscalCode) {
@@ -200,6 +208,13 @@ export async function POST(request: NextRequest) {
             if (phoneNumber) {
               // Salva come mobile_phone se non c'è già
               updateData.mobile_phone = phoneNumber
+            }
+            if (fullAddress) {
+              updateData.address = fullAddress
+              // Estrai anche i singoli campi se disponibili
+              if (billingAddress?.city) updateData.city = billingAddress.city
+              if (billingAddress?.postal_code) updateData.postal_code = billingAddress.postal_code
+              if (billingAddress?.country) updateData.country = billingAddress.country
             }
 
             console.log('📝 Updating user profile with fiscal data:', updateData)
@@ -272,7 +287,7 @@ export async function POST(request: NextRequest) {
           }
 
           // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
-          if (fiscalCode || vatNumber || phoneNumber) {
+          if (fiscalCode || vatNumber || phoneNumber || fullAddress) {
             const updateData: any = {}
             
             if (fiscalCode) {
@@ -283,6 +298,13 @@ export async function POST(request: NextRequest) {
             }
             if (phoneNumber) {
               updateData.mobile_phone = phoneNumber
+            }
+            if (fullAddress) {
+              updateData.address = fullAddress
+              // Estrai anche i singoli campi se disponibili
+              if (billingAddress?.city) updateData.city = billingAddress.city
+              if (billingAddress?.postal_code) updateData.postal_code = billingAddress.postal_code
+              if (billingAddress?.country) updateData.country = billingAddress.country
             }
 
             console.log('📝 Updating user profile with fiscal data (balance payment):', updateData)
