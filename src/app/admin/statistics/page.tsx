@@ -1,4 +1,5 @@
 import { createServerClientSupabase } from '@/lib/supabase/server'
+import { createClient } from '@supabase/supabase-js'
 import { redirect } from 'next/navigation'
 import { StatisticsClient } from '@/components/admin/StatisticsClient'
 
@@ -64,6 +65,18 @@ export default async function AdminStatisticsPage() {
     redirect('/dashboard')
   }
 
+  // Usa Service Role Key per bypassare RLS nelle statistiche
+  const adminSupabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
+    }
+  )
+
   // Fetch delle statistiche e dati per grafici
   const [
     bookingStats,
@@ -74,13 +87,13 @@ export default async function AdminStatisticsPage() {
     bookingsData
   ] = await Promise.all([
     // Statistiche prenotazioni
-    supabase
+    adminSupabase
       .from('bookings')
       .select('status, created_at')
       .then(({ data }) => {
         const stats: BookingStats = {
           total: data?.length || 0,
-          paid: data?.filter(b => b.status === 'paid').length || 0,
+          paid: data?.filter(b => b.status === 'fully_paid').length || 0,
           pending: data?.filter(b => b.status === 'pending').length || 0,
           cancelled: data?.filter(b => b.status === 'cancelled').length || 0,
         }
@@ -88,9 +101,9 @@ export default async function AdminStatisticsPage() {
       }),
 
     // Statistiche revenue
-    supabase
+    adminSupabase
       .from('bookings')
-      .select('status, total_price, created_at')
+      .select('status, total_amount, created_at')
       .then(({ data }) => {
         const now = new Date()
         const thisMonth = new Date(now.getFullYear(), now.getMonth(), 1)
@@ -98,23 +111,23 @@ export default async function AdminStatisticsPage() {
         const lastMonthEnd = new Date(now.getFullYear(), now.getMonth(), 0)
 
         const stats: RevenueStats = {
-          total: data?.reduce((sum, b) => sum + (b.total_price || 0), 0) || 0,
-          paid: data?.filter(b => b.status === 'paid').reduce((sum, b) => sum + (b.total_price || 0), 0) || 0,
-          pending: data?.filter(b => b.status === 'pending').reduce((sum, b) => sum + (b.total_price || 0), 0) || 0,
+          total: data?.reduce((sum, b) => sum + (b.total_amount || 0), 0) || 0,
+          paid: data?.filter(b => b.status === 'fully_paid').reduce((sum, b) => sum + (b.total_amount || 0), 0) || 0,
+          pending: data?.filter(b => b.status === 'pending').reduce((sum, b) => sum + (b.total_amount || 0), 0) || 0,
           this_month: data?.filter(b => 
-            new Date(b.created_at) >= thisMonth && b.status === 'paid'
-          ).reduce((sum, b) => sum + (b.total_price || 0), 0) || 0,
+            new Date(b.created_at) >= thisMonth && b.status === 'fully_paid'
+          ).reduce((sum, b) => sum + (b.total_amount || 0), 0) || 0,
           last_month: data?.filter(b => 
             new Date(b.created_at) >= lastMonth && 
             new Date(b.created_at) <= lastMonthEnd && 
-            b.status === 'paid'
-          ).reduce((sum, b) => sum + (b.total_price || 0), 0) || 0,
+            b.status === 'fully_paid'
+          ).reduce((sum, b) => sum + (b.total_amount || 0), 0) || 0,
         }
         return stats
       }),
 
     // Statistiche utenti
-    supabase
+    adminSupabase
       .from('profiles')
       .select('created_at, updated_at')
       .then(({ data }) => {
@@ -134,7 +147,7 @@ export default async function AdminStatisticsPage() {
       }),
 
     // Statistiche recensioni
-    supabase
+    adminSupabase
       .from('reviews')
       .select('status, rating')
       .then(({ data }) => {
@@ -150,14 +163,14 @@ export default async function AdminStatisticsPage() {
       }),
 
     // Statistiche tour
-    supabase
+    adminSupabase
       .from('bookings')
-      .select('tour_name')
+      .select('tour_title')
       .then(({ data }) => {
         const tourCounts: Record<string, number> = {}
         data?.forEach(booking => {
-          if (booking.tour_name) {
-            tourCounts[booking.tour_name] = (tourCounts[booking.tour_name] || 0) + 1
+          if (booking.tour_title) {
+            tourCounts[booking.tour_title] = (tourCounts[booking.tour_title] || 0) + 1
           }
         })
         
@@ -174,7 +187,7 @@ export default async function AdminStatisticsPage() {
       }),
 
     // Dati completi bookings per grafici
-    supabase
+    adminSupabase
       .from('bookings')
       .select('id, status, total_amount, deposit_amount, created_at')
       .then(({ data }) => data || []),

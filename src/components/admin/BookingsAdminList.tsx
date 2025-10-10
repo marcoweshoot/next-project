@@ -138,15 +138,19 @@ export function BookingsAdminList() {
       setActionLoading(true)
       setError(null)
       
-      const { error } = await supabase
-        .from('bookings')
-        .update({ 
-          status: newStatus,
-          updated_at: new Date().toISOString()
-        })
-        .eq('id', selectedBooking.id)
+      const response = await fetch(`/api/admin/bookings/${selectedBooking.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ status: newStatus }),
+      })
 
-      if (error) throw error
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Errore nell\'aggiornamento dello status')
+      }
 
       setSuccess(`Status aggiornato a: ${newStatus}`)
       setStatusDialogOpen(false)
