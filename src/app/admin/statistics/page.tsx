@@ -1,17 +1,6 @@
 import { createServerClientSupabase } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { 
-  DollarSign, 
-  Users, 
-  Calendar, 
-  TrendingUp, 
-  AlertCircle,
-  CheckCircle,
-  Clock,
-  BarChart3
-} from 'lucide-react'
+import { StatisticsClient } from '@/components/admin/StatisticsClient'
 
 interface BookingStats {
   total: number
@@ -75,13 +64,14 @@ export default async function AdminStatisticsPage() {
     redirect('/dashboard')
   }
 
-  // Fetch delle statistiche
+  // Fetch delle statistiche e dati per grafici
   const [
     bookingStats,
     revenueStats,
     userStats,
     reviewStats,
-    tourStats
+    tourStats,
+    bookingsData
   ] = await Promise.all([
     // Statistiche prenotazioni
     supabase
@@ -182,215 +172,22 @@ export default async function AdminStatisticsPage() {
         }
         return stats
       }),
+
+    // Dati completi bookings per grafici
+    supabase
+      .from('bookings')
+      .select('id, status, total_amount, deposit_amount, created_at')
+      .then(({ data }) => data || []),
   ])
 
-  const revenueGrowth = revenueStats.last_month > 0 
-    ? ((revenueStats.this_month - revenueStats.last_month) / revenueStats.last_month * 100)
-    : 0
-
   return (
-    <div className="space-y-6">
-      <div className="flex items-center gap-2 mb-6">
-        <BarChart3 className="w-6 h-6" />
-        <h2 className="text-2xl font-bold">Statistiche Generali</h2>
-      </div>
-
-      {/* Revenue Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Incasso Totale</CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">€{revenueStats.total.toLocaleString()}</div>
-            <p className="text-xs text-muted-foreground">
-              €{revenueStats.paid.toLocaleString()} confermati
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Incasso Questo Mese</CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">€{revenueStats.this_month.toLocaleString()}</div>
-            <p className="text-xs text-muted-foreground">
-              {revenueGrowth > 0 ? '+' : ''}{revenueGrowth.toFixed(1)}% vs mese scorso
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">In Attesa di Pagamento</CardTitle>
-            <Clock className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">€{revenueStats.pending.toLocaleString()}</div>
-            <p className="text-xs text-muted-foreground">
-              Da confermare
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Prenotazioni Totali</CardTitle>
-            <Calendar className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{bookingStats.total}</div>
-            <p className="text-xs text-muted-foreground">
-              {bookingStats.paid} pagate
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Detailed Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Booking Status */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Calendar className="w-5 h-5" />
-              Stato Prenotazioni
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
-                <span>Pagate</span>
-              </div>
-              <Badge variant="secondary">{bookingStats.paid}</Badge>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-yellow-500" />
-                <span>In Attesa</span>
-              </div>
-              <Badge variant="outline">{bookingStats.pending}</Badge>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <AlertCircle className="w-4 h-4 text-red-500" />
-                <span>Cancellate</span>
-              </div>
-              <Badge variant="destructive">{bookingStats.cancelled}</Badge>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* User Stats */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Users className="w-5 h-5" />
-              Statistiche Utenti
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <div className="flex items-center justify-between">
-              <span>Utenti Totali</span>
-              <Badge variant="secondary">{userStats.total}</Badge>
-            </div>
-            <div className="flex items-center justify-between">
-              <span>Utenti Attivi (30gg)</span>
-              <Badge variant="outline">{userStats.active}</Badge>
-            </div>
-            <div className="flex items-center justify-between">
-              <span>Nuovi Questo Mese</span>
-              <Badge variant="default">{userStats.new_this_month}</Badge>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Review Stats */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5" />
-              Statistiche Recensioni
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <div className="flex items-center justify-between">
-              <span>Recensioni Totali</span>
-              <Badge variant="secondary">{reviewStats.total}</Badge>
-            </div>
-            <div className="flex items-center justify-between">
-              <span>Approvate</span>
-              <Badge variant="outline">{reviewStats.approved}</Badge>
-            </div>
-            <div className="flex items-center justify-between">
-              <span>In Attesa</span>
-              <Badge variant="outline">{reviewStats.pending}</Badge>
-            </div>
-            <div className="flex items-center justify-between">
-              <span>Rating Medio</span>
-              <Badge variant="default">{reviewStats.average_rating.toFixed(1)} ⭐</Badge>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Tour Popularity */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5" />
-              Tour Più Popolari
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {tourStats.most_booked.length > 0 ? (
-              tourStats.most_booked.map((tour, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <span className="truncate max-w-[200px]" title={tour.name}>
-                    {tour.name}
-                  </span>
-                  <Badge variant={index === 0 ? "default" : "outline"}>
-                    {tour.bookings} prenotazioni
-                  </Badge>
-                </div>
-              ))
-            ) : (
-              <p className="text-muted-foreground text-sm">Nessuna prenotazione ancora</p>
-            )}
-          </CardContent>
-        </Card>
-
-        {/* Revenue Breakdown */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <DollarSign className="w-5 h-5" />
-              Dettaglio Incassi
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <div className="flex items-center justify-between">
-              <span>Incasso Confermato</span>
-              <Badge variant="secondary">€{revenueStats.paid.toLocaleString()}</Badge>
-            </div>
-            <div className="flex items-center justify-between">
-              <span>In Attesa</span>
-              <Badge variant="outline">€{revenueStats.pending.toLocaleString()}</Badge>
-            </div>
-            <div className="flex items-center justify-between">
-              <span>Questo Mese</span>
-              <Badge variant="default">€{revenueStats.this_month.toLocaleString()}</Badge>
-            </div>
-            <div className="flex items-center justify-between">
-              <span>Mese Scorso</span>
-              <Badge variant="outline">€{revenueStats.last_month.toLocaleString()}</Badge>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    <StatisticsClient
+      bookingStats={bookingStats}
+      revenueStats={revenueStats}
+      userStats={userStats}
+      reviewStats={reviewStats}
+      tourStats={tourStats}
+      bookingsData={bookingsData}
+    />
   )
 }

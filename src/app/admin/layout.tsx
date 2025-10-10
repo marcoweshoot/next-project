@@ -2,7 +2,7 @@ import { createServerClientSupabase } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, Settings, Users, BarChart3 } from 'lucide-react'
+import { ArrowLeft, Settings, Users, BarChart3, Calendar } from 'lucide-react'
 import Header from '@/components/Header'
 
 export default async function AdminLayout({
@@ -64,11 +64,17 @@ export default async function AdminLayout({
         
         {/* Admin Navigation */}
         <div className="mb-6">
-          <nav className="flex gap-2">
+          <nav className="flex gap-2 flex-wrap">
             <Link href="/admin/statistics">
               <Button variant="outline" size="sm" className="flex items-center gap-2">
                 <BarChart3 className="w-4 h-4" />
                 Statistiche
+              </Button>
+            </Link>
+            <Link href="/admin/bookings">
+              <Button variant="outline" size="sm" className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                Prenotazioni
               </Button>
             </Link>
             <Link href="/admin/reviews">

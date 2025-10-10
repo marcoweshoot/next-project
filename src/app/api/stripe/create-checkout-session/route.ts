@@ -131,9 +131,13 @@ export async function POST(request: NextRequest) {
       url: checkoutSession.url,
     })
 
-  } catch {
+  } catch (error) {
+    console.error('❌ Error creating checkout session:', error)
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { 
+        error: 'Internal server error',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      },
       { status: 500 }
     )
   }

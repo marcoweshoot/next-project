@@ -132,6 +132,16 @@ export async function POST(request: NextRequest) {
             isFullPayment: session.amount_total >= expectedTotal
           })
           
+          console.log('💾 Inserting booking with data:', {
+            user_id: finalUserId,
+            tour_id: tourId,
+            session_id: sessionId,
+            status: bookingStatus,
+            deposit_amount: session.amount_total,
+            total_amount: expectedTotal,
+            quantity: quantity,
+          })
+
           const { error: insertError } = await supabase
             .from('bookings')
             .insert({
@@ -154,8 +164,14 @@ export async function POST(request: NextRequest) {
             })
 
           if (insertError) {
-            return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
+            console.error('❌ Booking insertion error:', insertError)
+            return NextResponse.json({ 
+              error: 'Booking creation failed',
+              details: insertError.message 
+            }, { status: 500 })
           }
+          
+          console.log('✅ Booking created successfully')
 
           // Track purchase event (temporarily disabled to fix server error)
           console.log('📊 Purchase completed:', {
@@ -167,7 +183,11 @@ export async function POST(request: NextRequest) {
             numItems: quantityValue
           })
         } catch (error) {
-          return NextResponse.json({ error: 'Booking creation failed' }, { status: 500 })
+          console.error('❌ Exception during booking creation:', error)
+          return NextResponse.json({ 
+            error: 'Booking creation failed',
+            details: error instanceof Error ? error.message : 'Unknown error'
+          }, { status: 500 })
         }
       } else if (paymentType === 'balance') {
         // Aggiorna booking esistente per saldo
