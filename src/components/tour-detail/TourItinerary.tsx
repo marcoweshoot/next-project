@@ -64,7 +64,8 @@ const groupConsecutiveDays = (days: ItineraryDay[]): ItineraryDay[] => {
 // Funzione per creare un giorno accorpato
 const createGroupedDay = (group: ItineraryDay[]): ItineraryDay => {
   const firstDay = group[0];
-  const dayNumbers = group.map(day => day.day).sort((a, b) => Number(a) - Number(b));
+  // I dati originali da Strapi hanno 'number', non 'day'
+  const dayNumbers = group.map(day => (day as any).number || day.day).sort((a, b) => Number(a) - Number(b));
   
   return {
     ...firstDay,
