@@ -61,13 +61,28 @@ export async function POST(request: NextRequest) {
         }
       )
 
+      // Estrai i custom_fields da Stripe
+      const customFields = session.custom_fields || []
+      const fiscalCodeField = customFields.find((f: any) => f.key === 'fiscal_code')
+      const vatNumberField = customFields.find((f: any) => f.key === 'vat_number')
+      const phoneNumberField = customFields.find((f: any) => f.key === 'phone_number')
+
+      const fiscalCode = fiscalCodeField?.text?.value || null
+      const vatNumber = vatNumberField?.text?.value || null
+      const phoneNumber = phoneNumberField?.text?.value || null
+
+      console.log('📋 Extracted custom fields:', {
+        fiscalCode,
+        vatNumber,
+        phoneNumber
+      })
+
       const rawData = {
         userId: session.metadata?.userId,
         tourId: session.metadata?.tourId,
         sessionId: session.metadata?.sessionId,
         paymentType: session.metadata?.paymentType,
         quantity: session.metadata?.quantity
-        // Removed fiscal_code, vat_number, phone_number - not needed for booking creation
       }
 
       // Validate and sanitize input data
@@ -172,6 +187,36 @@ export async function POST(request: NextRequest) {
           
           console.log('✅ Booking created successfully')
 
+          // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
+          if (fiscalCode || vatNumber || phoneNumber) {
+            const updateData: any = {}
+            
+            if (fiscalCode) {
+              updateData.fiscal_code = fiscalCode.toUpperCase()
+            }
+            if (vatNumber) {
+              updateData.vat_number = vatNumber.toUpperCase()
+            }
+            if (phoneNumber) {
+              // Salva come mobile_phone se non c'è già
+              updateData.mobile_phone = phoneNumber
+            }
+
+            console.log('📝 Updating user profile with fiscal data:', updateData)
+
+            const { error: updateError } = await supabase
+              .from('profiles')
+              .update(updateData)
+              .eq('id', finalUserId)
+
+            if (updateError) {
+              console.error('⚠️ Error updating user profile (non-blocking):', updateError)
+              // Non blocchiamo il flusso se l'aggiornamento del profilo fallisce
+            } else {
+              console.log('✅ User profile updated successfully')
+            }
+          }
+
           // Track purchase event (temporarily disabled to fix server error)
           console.log('📊 Purchase completed:', {
             transactionId: session.id,
@@ -224,6 +269,34 @@ export async function POST(request: NextRequest) {
 
           if (updateError) {
             return NextResponse.json({ error: 'Failed to update booking' }, { status: 500 })
+          }
+
+          // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
+          if (fiscalCode || vatNumber || phoneNumber) {
+            const updateData: any = {}
+            
+            if (fiscalCode) {
+              updateData.fiscal_code = fiscalCode.toUpperCase()
+            }
+            if (vatNumber) {
+              updateData.vat_number = vatNumber.toUpperCase()
+            }
+            if (phoneNumber) {
+              updateData.mobile_phone = phoneNumber
+            }
+
+            console.log('📝 Updating user profile with fiscal data (balance payment):', updateData)
+
+            const { error: profileUpdateError } = await supabase
+              .from('profiles')
+              .update(updateData)
+              .eq('id', finalUserId)
+
+            if (profileUpdateError) {
+              console.error('⚠️ Error updating user profile (non-blocking):', profileUpdateError)
+            } else {
+              console.log('✅ User profile updated successfully')
+            }
           }
         } catch (error) {
           return NextResponse.json({ error: 'Balance payment failed' }, { status: 500 })
