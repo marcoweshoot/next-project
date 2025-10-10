@@ -15,7 +15,6 @@ export async function POST(request: NextRequest) {
     return rateLimitResponse
   }
   const timestamp = new Date().toISOString()
-  console.log('🔔 Webhook received at:', timestamp)
   
   try {
     // Leggi il body come stringa raw
@@ -38,16 +37,8 @@ export async function POST(request: NextRequest) {
     )
 
     // Processa l'evento
-    console.log('📊 Event type:', event.type)
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object as Stripe.Checkout.Session
-      console.log('🎉 Processing checkout.session.completed event')
-      console.log('📊 Session ID:', session.id)
-      console.log('📊 Metadata:', session.metadata)
-      console.log('📊 Custom Fields:', session.custom_fields)
-      console.log('📊 Payment Type:', session.metadata?.paymentType)
-      console.log('📊 User ID:', session.metadata?.userId)
-      console.log('📊 Tour ID:', session.metadata?.tourId)
 
       // Usa Service Role Key per bypassare RLS
       const supabase = createClient(
@@ -77,13 +68,7 @@ export async function POST(request: NextRequest) {
         `${billingAddress.line1 || ''} ${billingAddress.line2 || ''}, ${billingAddress.city || ''}, ${billingAddress.postal_code || ''}, ${billingAddress.country || ''}`.trim().replace(/^,\s*|,\s*$/g, '') 
         : null
 
-      console.log('📋 Extracted custom fields:', {
-        fiscalCode,
-        vatNumber,
-        phoneNumber,
-        fullAddress,
-        billingAddress
-      })
+      // Custom fields estratti da Stripe
 
       const rawData = {
         userId: session.metadata?.userId,
@@ -96,7 +81,6 @@ export async function POST(request: NextRequest) {
       // Validate and sanitize input data
       const validation = validateFields(rawData)
       if (!validation.isValid) {
-        console.log('❌ Validation failed:', validation.errors)
         return NextResponse.json({ 
           error: 'Invalid input data',
           details: validation.errors,
@@ -143,26 +127,6 @@ export async function POST(request: NextRequest) {
           
           // Determina lo status: se l'importo pagato >= totale atteso, è tutto pagato
           const bookingStatus = session.amount_total >= expectedTotal ? 'fully_paid' : 'deposit_paid'
-          
-          console.log('💰 Payment Analysis:', {
-            amountPaid: session.amount_total,
-            sessionPrice: sessionPrice,
-            sessionDeposit: sessionDeposit,
-            quantity: quantityValue,
-            expectedTotal,
-            bookingStatus,
-            isFullPayment: session.amount_total >= expectedTotal
-          })
-          
-          console.log('💾 Inserting booking with data:', {
-            user_id: finalUserId,
-            tour_id: tourId,
-            session_id: sessionId,
-            status: bookingStatus,
-            deposit_amount: session.amount_total,
-            total_amount: expectedTotal,
-            quantity: quantity,
-          })
 
           const { error: insertError } = await supabase
             .from('bookings')
@@ -186,14 +150,11 @@ export async function POST(request: NextRequest) {
             })
 
           if (insertError) {
-            console.error('❌ Booking insertion error:', insertError)
             return NextResponse.json({ 
               error: 'Booking creation failed',
               details: insertError.message 
             }, { status: 500 })
           }
-          
-          console.log('✅ Booking created successfully')
 
           // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
           if (fiscalCode || vatNumber || phoneNumber || fullAddress) {
@@ -217,32 +178,20 @@ export async function POST(request: NextRequest) {
               if (billingAddress?.country) updateData.country = billingAddress.country
             }
 
-            console.log('📝 Updating user profile with fiscal data:', updateData)
-
             const { error: updateError } = await supabase
               .from('profiles')
               .update(updateData)
               .eq('id', finalUserId)
 
+            // Non blocchiamo il flusso se l'aggiornamento del profilo fallisce
             if (updateError) {
-              console.error('⚠️ Error updating user profile (non-blocking):', updateError)
-              // Non blocchiamo il flusso se l'aggiornamento del profilo fallisce
-            } else {
-              console.log('✅ User profile updated successfully')
+              console.error('Error updating user profile:', updateError)
             }
           }
 
-          // Track purchase event (temporarily disabled to fix server error)
-          console.log('📊 Purchase completed:', {
-            transactionId: session.id,
-            value: session.amount_total / 100,
-            currency: 'EUR',
-            contentName: session.metadata?.tourTitle || `Tour ${tourId}`,
-            contentCategory: 'Viaggi Fotografici',
-            numItems: quantityValue
-          })
+          // Purchase tracking (implementare se necessario)
         } catch (error) {
-          console.error('❌ Exception during booking creation:', error)
+          console.error('Exception during booking creation:', error)
           return NextResponse.json({ 
             error: 'Booking creation failed',
             details: error instanceof Error ? error.message : 'Unknown error'
@@ -307,17 +256,13 @@ export async function POST(request: NextRequest) {
               if (billingAddress?.country) updateData.country = billingAddress.country
             }
 
-            console.log('📝 Updating user profile with fiscal data (balance payment):', updateData)
-
             const { error: profileUpdateError } = await supabase
               .from('profiles')
               .update(updateData)
               .eq('id', finalUserId)
 
             if (profileUpdateError) {
-              console.error('⚠️ Error updating user profile (non-blocking):', profileUpdateError)
-            } else {
-              console.log('✅ User profile updated successfully')
+              console.error('Error updating user profile:', profileUpdateError)
             }
           }
         } catch (error) {

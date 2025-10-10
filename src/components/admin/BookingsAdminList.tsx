@@ -104,7 +104,7 @@ export function BookingsAdminList() {
   const [newStatus, setNewStatus] = useState<string>('')
   const [actionLoading, setActionLoading] = useState(false)
   
-  const supabase = createClient()
+  // const supabase = createClient() // Non più necessario - usiamo API route
 
   useEffect(() => {
     fetchBookings()

@@ -5,7 +5,7 @@ import { createServerClientSupabase } from '@/lib/supabase/server'
 // PUT /api/admin/bookings/[id] - Update booking status
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     // Verifica autenticazione e ruolo admin
@@ -37,8 +37,9 @@ export async function PUT(
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
 
-    // Parse request body
+    // Parse request body and params
     const { status } = await request.json()
+    const { id } = await params
 
     if (!status) {
       return NextResponse.json({ error: 'Status is required' }, { status: 400 })
@@ -63,7 +64,7 @@ export async function PUT(
         status,
         updated_at: new Date().toISOString()
       })
-      .eq('id', params.id)
+      .eq('id', id)
       .select()
 
     if (error) {

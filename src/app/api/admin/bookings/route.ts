@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import { createServerClientSupabase } from '@/lib/supabase/server'
 
 // GET /api/admin/bookings - Fetch all bookings for admin
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
   try {
     // Verifica autenticazione e ruolo admin
     const supabase = await createServerClientSupabase()
