@@ -2,6 +2,23 @@ import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
 import Stripe from 'stripe'
 
+// Funzione per formattare la data della sessione in modo sicuro
+function formatSessionDate(sessionDate: string | undefined, sessionId: string): string {
+  if (!sessionDate) {
+    return `Sessione ${sessionId}`;
+  }
+
+  try {
+    const date = new Date(sessionDate);
+    if (isNaN(date.getTime())) {
+      return `Sessione ${sessionId}`;
+    }
+    return date.toLocaleDateString('it-IT');
+  } catch {
+    return `Sessione ${sessionId}`;
+  }
+}
+
 // Funzione per ottenere l'URL del sito in base all'ambiente
 function getSiteUrl() {
   // In produzione/staging, usa la variabile d'ambiente
@@ -66,7 +83,7 @@ export async function POST(request: NextRequest) {
             currency: currency.toLowerCase(),
             product_data: {
               name: `${tourTitle || `Tour ${tourId}`}`,
-              description: `${sessionDate ? new Date(sessionDate).toLocaleDateString('it-IT') : `Sessione ${sessionId}`}${quantity > 1 ? ` (${quantity} persone)` : ''}`,
+              description: `${formatSessionDate(sessionDate, sessionId)}${quantity > 1 ? ` (${quantity} persone)` : ''}`,
             },
             unit_amount: unitAmount, // Amount per person in cents
           },
