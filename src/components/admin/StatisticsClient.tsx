@@ -214,9 +214,9 @@ export function StatisticsClient({
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <AlertCircle className="w-4 h-4 text-red-500" />
-                <span>Cancellate</span>
+                <span>Rimborsate</span>
               </div>
-              <Badge variant="destructive">{bookingStats.cancelled}</Badge>
+              <Badge variant="destructive">{bookingStats.refunded}</Badge>
             </div>
           </CardContent>
         </Card>
