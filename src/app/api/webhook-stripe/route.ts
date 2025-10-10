@@ -3,6 +3,7 @@ import { stripe } from '@/lib/stripe'
 import { createClient } from '@supabase/supabase-js'
 import { rateLimits } from '@/lib/rateLimit'
 import { validateFields } from '@/lib/validation'
+import { sendAdminNotification, generateNewBookingAdminEmail } from '@/lib/email'
 import Stripe from 'stripe'
 
 // Stripe consiglia Node.js runtime per i webhook
@@ -155,6 +156,37 @@ export async function POST(request: NextRequest) {
             }, { status: 500 })
           }
 
+          // Invia notifica email all'admin (non-blocking)
+          try {
+            const { data: userProfile } = await supabase
+              .from('profiles')
+              .select('first_name, last_name, email')
+              .eq('id', finalUserId)
+              .single()
+
+            if (userProfile) {
+              const userName = `${userProfile.first_name || ''} ${userProfile.last_name || ''}`.trim() || 'Cliente'
+              const userEmail = userProfile.email || ''
+              
+              const emailContent = generateNewBookingAdminEmail(
+                userName,
+                userEmail,
+                session.metadata?.tourTitle || 'Tour',
+                '', // bookingId - we don't have it yet from the insert
+                session.amount_total || 0,
+                quantityValue,
+                'deposit'
+              )
+
+              // Send admin notification (non-blocking)
+              sendAdminNotification(emailContent.subject, emailContent.html, emailContent.text)
+                .catch(err => console.error('Failed to send admin notification:', err))
+            }
+          } catch (emailError) {
+            // Log but don't fail the booking
+            console.error('Error sending admin notification:', emailError)
+          }
+
           // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
           if (fiscalCode || vatNumber || phoneNumber || fullAddress) {
             const updateData: any = {}
@@ -232,6 +264,37 @@ export async function POST(request: NextRequest) {
 
           if (updateError) {
             return NextResponse.json({ error: 'Failed to update booking' }, { status: 500 })
+          }
+
+          // Invia notifica email all'admin per saldo completato (non-blocking)
+          try {
+            const { data: userProfile } = await supabase
+              .from('profiles')
+              .select('first_name, last_name, email')
+              .eq('id', finalUserId)
+              .single()
+
+            if (userProfile) {
+              const userName = `${userProfile.first_name || ''} ${userProfile.last_name || ''}`.trim() || 'Cliente'
+              const userEmail = userProfile.email || ''
+              
+              const emailContent = generateNewBookingAdminEmail(
+                userName,
+                userEmail,
+                existingBooking.tour_title || session.metadata?.tourTitle || 'Tour',
+                existingBooking.id,
+                session.amount_total || 0,
+                existingBooking.quantity || 1,
+                'balance'
+              )
+
+              // Send admin notification (non-blocking)
+              sendAdminNotification(emailContent.subject, emailContent.html, emailContent.text)
+                .catch(err => console.error('Failed to send admin notification:', err))
+            }
+          } catch (emailError) {
+            // Log but don't fail the booking
+            console.error('Error sending admin notification:', emailError)
           }
 
           // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
