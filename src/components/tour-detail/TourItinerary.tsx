@@ -64,12 +64,12 @@ const groupConsecutiveDays = (days: ItineraryDay[]): ItineraryDay[] => {
 // Funzione per creare un giorno accorpato
 const createGroupedDay = (group: ItineraryDay[]): ItineraryDay => {
   const firstDay = group[0];
-  const dayNumbers = group.map(day => day.number).sort((a, b) => a - b);
+  const dayNumbers = group.map(day => day.day).sort((a, b) => Number(a) - Number(b));
   
   return {
     ...firstDay,
     id: `grouped-${firstDay.id}`, // ID univoco per il gruppo
-    number: dayNumbers.join('-'), // "6-7-8-9-10"
+    day: dayNumbers.join('-'), // "6-7-8-9-10"
     isGrouped: true,
     groupSize: group.length,
     originalDays: group
@@ -112,8 +112,8 @@ const TourItinerary: React.FC<TourItineraryProps> = ({ itinerary, tour }) => {
             <TourDay
               key={day.id}
               day={{
-                id: `day-${day.number}`,
-                number: day.number,
+                id: `day-${day.day}`,
+                number: day.day,
                 title: day.title,
                 description: day.description,
                 steps: day.steps,
