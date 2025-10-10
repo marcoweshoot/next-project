@@ -46,7 +46,7 @@ const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
       }}
     >
       <DialogContent
-        className="w-[95vw] max-w-[1200px] h-[90vh] p-0 bg-black/95 border-none overflow-hidden"
+        className="w-[95vw] max-w-[1200px] h-[90vh] p-0 bg-black/95 border-none overflow-hidden [&>button]:hidden"
         onKeyDown={onKeyDown}
         tabIndex={0}
         autoFocus
