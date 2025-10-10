@@ -31,7 +31,7 @@ interface StatisticsClientProps {
     total: number
     paid: number
     pending: number
-    cancelled: number
+    refunded: number
   }
   revenueStats: {
     total: number

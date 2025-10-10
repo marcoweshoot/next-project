@@ -121,7 +121,6 @@ export async function POST(request: NextRequest) {
         try {
           // Calcola il totale atteso (prezzo completo per tutte le persone)
           const sessionPrice = parseFloat(session.metadata?.sessionPrice || '0')
-          const sessionDeposit = parseFloat(session.metadata?.sessionDeposit || '0')
           const quantityValue = parseInt(session.metadata?.quantity || '1')
           const expectedTotal = sessionPrice * 100 * quantityValue
           
