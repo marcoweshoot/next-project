@@ -336,7 +336,7 @@ export function BookingsAdminList() {
           <CardContent>
             <div className="text-2xl font-bold">{stats.total}</div>
             <p className="text-xs text-muted-foreground mt-1">
-              {stats.completed} completate
+              {stats.refunded} rimborsate
             </p>
           </CardContent>
         </Card>
