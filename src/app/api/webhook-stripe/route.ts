@@ -44,6 +44,7 @@ export async function POST(request: NextRequest) {
       console.log('🎉 Processing checkout.session.completed event')
       console.log('📊 Session ID:', session.id)
       console.log('📊 Metadata:', session.metadata)
+      console.log('📊 Custom Fields:', session.custom_fields)
       console.log('📊 Payment Type:', session.metadata?.paymentType)
       console.log('📊 User ID:', session.metadata?.userId)
       console.log('📊 Tour ID:', session.metadata?.tourId)
