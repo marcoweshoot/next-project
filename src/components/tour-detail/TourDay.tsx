@@ -2,10 +2,12 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
+import { Clock, Camera, MapPin } from 'lucide-react';
 import GalleryLightbox from './gallery/GalleryLightbox';
 import TourDayHeader from './day/TourDayHeader';
 import TourDayContent from './day/TourDayContent';
 import TourDaySteps from './day/TourDaySteps';
+import TourDayLocation from './day/TourDayLocation';
 
 interface DayLocation {
   id: string | number;
@@ -31,10 +33,12 @@ interface DayStep {
 
 interface DayProps {
   id: string | number;
-  number: number;
+  number: number | string; // Può essere un numero singolo o una stringa come "6-7-8-9-10"
   title: string;
   description?: string;
   steps?: DayStep[];
+  isGrouped?: boolean; // Indica se è un giorno accorpato
+  groupSize?: number; // Numero di giorni nel gruppo
 }
 
 interface LightboxImage {
@@ -135,13 +139,91 @@ const TourDay: React.FC<TourDayProps> = ({ day, tour }) => {
   return (
     <>
       <div className="rounded-2xl border border-border bg-card text-card-foreground shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500">
-        <TourDayHeader number={day.number} title={day.title} />
+        {/* Barra colorata in alto */}
+        <div aria-hidden="true" className="h-[3px] bg-gradient-to-r from-primary via-rose-500 to-amber-400" />
+        
+        {/* Contenuto unificato */}
+        <div className="p-6 md:p-8">
+          {/* Sezione giorno e titolo */}
+          <div className="mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-primary-700 dark:text-primary-300 mb-3">
+              <Clock className="h-4 w-4" aria-hidden="true" />
+              <span>
+                {typeof day.number === 'string' && day.number.includes('-') 
+                  ? `Giorni ${day.number}` 
+                  : `Giorno ${day.number}`}
+              </span>
+            </div>
+            
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
+              {day.title}
+            </h2>
+          </div>
 
-        <div className="p-8">
-          <TourDayContent description={day.description} />
+          {/* Separatore */}
+          <div className="border-b border-border mb-6" />
 
-          {/* ✅ passiamo gli step “arricchiti” con le loro location */}
-          <TourDaySteps steps={stepsWithLocations} onOpenLightbox={openLightbox} />
+          {/* Sezione programma fotografico */}
+          {stepsWithLocations && stepsWithLocations.length > 0 && (
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-foreground mb-4">
+                <Camera className="h-4 w-4" aria-hidden="true" />
+                Programma fotografico del giorno
+              </div>
+
+              {stepsWithLocations.map((step, index) => {
+                const stepKey = `${step.id ?? step.title}-${index}`;
+                
+                return (
+                  <article key={stepKey} className="space-y-4">
+                    {/* Titolo del programma */}
+                    <h3 className="text-xl font-semibold tracking-tight text-foreground">
+                      {step.title}
+                    </h3>
+
+                    {/* Descrizione del programma */}
+                    {step.description && (
+                      <div
+                        className="prose prose-lg text-gray-800 dark:text-gray-200 max-w-none leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: step.description }}
+                      />
+                    )}
+
+                    {/* Location fotografiche */}
+                    {step.locations && step.locations.length > 0 && (
+                      <section className="mt-6">
+                        <div className="mb-4 flex items-center gap-2">
+                          <MapPin className="h-5 w-5 text-primary" aria-hidden="true" />
+                          <h4 className="text-base font-semibold text-foreground">
+                            Location fotografiche
+                          </h4>
+                          <div className="ml-2 h-px flex-1 bg-border" aria-hidden="true" />
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                          {step.locations.map((location, li) => {
+                            const locKey = `${location.id ?? location.title}-${li}`;
+                            return (
+                              <TourDayLocation
+                                key={locKey}
+                                location={{
+                                  ...location,
+                                  id: String(location.id || location.title || `location-${li}`),
+                                  slug: location.slug || String(location.title || '').toLowerCase().replace(/\s+/g, '-'),
+                                }}
+                                onOpenLightbox={openLightbox}
+                                headingLevel={5}
+                              />
+                            );
+                          })}
+                        </div>
+                      </section>
+                    )}
+                  </article>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
 

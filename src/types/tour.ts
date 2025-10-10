@@ -56,6 +56,7 @@ export interface Tour {
 
   // Itinerario
   itinerary?: ItineraryDay[];
+  days?: ItineraryDay[]; // Alias per itinerary per compatibilità
 
   // Cosa è incluso / escluso
   includes?: TourBlock[];
@@ -85,6 +86,7 @@ export interface SessionUser {
 }
 
 export interface ItineraryDay {
+  id: string | number; // ID univoco da Strapi
   day: number;
   title: string;
   description: string;
@@ -92,6 +94,9 @@ export interface ItineraryDay {
   activities?: string[];
   accommodation?: string;
   meals?: string[];
+  isGrouped?: boolean; // Indica se è un giorno accorpato
+  groupSize?: number; // Numero di giorni nel gruppo
+  originalDays?: ItineraryDay[]; // Giorni originali prima dell'accorpamento
 }
 
 export interface DayStep {

@@ -4,7 +4,7 @@ import { Clock } from 'lucide-react';
 type Variant = 'ribbon' | 'bar' | 'stripe';
 
 interface TourDayHeaderProps {
-  number: number;
+  number: number | string; // Può essere un numero singolo o una stringa come "6-7-8-9-10"
   title?: string;
   variant?: Variant;
   /** livello heading del titolo del giorno (default: 2 => <h2>) */
@@ -43,7 +43,11 @@ const TourDayHeader: React.FC<TourDayHeaderProps> = ({
       <div className="flex flex-col gap-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium text-primary-700 dark:text-primary-300">
           <Clock className="h-4 w-4" aria-hidden="true" />
-          <span>Giorno {number}</span>
+          <span>
+            {typeof number === 'string' && number.includes('-') 
+              ? `Giorni ${number}` 
+              : `Giorno ${number}`}
+          </span>
         </div>
 
         {React.createElement(

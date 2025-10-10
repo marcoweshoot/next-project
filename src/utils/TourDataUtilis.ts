@@ -302,6 +302,13 @@ export const transformTourData = (tour: any): Tour => {
     states: Array.isArray(tour.states) ? tour.states : [],
     places: Array.isArray(tour.places) ? tour.places : [],
     highlights: tour.highlights || [],
+    days: Array.isArray(tour.days) ? tour.days.map((day: any) => ({
+      id: day.id, // Usiamo l'ID di Strapi come identificatore univoco
+      day: day.number, // Mappiamo 'number' da Strapi a 'day' per il nostro componente
+      title: day.title || '',
+      description: '', // I giorni non hanno descrizione, solo gli steps
+      steps: day.steps || [],
+    })) : [],
   };
 };
 
@@ -372,6 +379,13 @@ export const transformTours = (tours: any[]): Tour[] => {
       states: Array.isArray(tour.states) ? tour.states : [],
       places: Array.isArray(tour.places) ? tour.places : [],
       highlights: tour.highlights || [],
+      days: Array.isArray(tour.days) ? tour.days.map((day: any) => ({
+        id: day.id, // Usiamo l'ID di Strapi come identificatore univoco
+        day: day.number, // Mappiamo 'number' da Strapi a 'day' per il nostro componente
+        title: day.title || '',
+        description: '', // I giorni non hanno descrizione, solo gli steps
+        steps: day.steps || [],
+      })) : [],
     };
   });
 };

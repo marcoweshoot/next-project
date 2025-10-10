@@ -76,15 +76,10 @@ export default function TourDetailContentClient({
 
       <TourItinerary itinerary={Array.isArray(tour.days) ? tour.days : []} tour={tour} />
 
-
-      <section id="details" className="py-16 bg-background border-t border-border transition-colors">
-        <div className="container mx-auto px-4">
-          <TourEquipment
-            thingsNeeded={tour.things_needed}
-            experienceLevel={tour.experience_level}
-          />
-        </div>
-      </section>
+      <TourEquipment
+        thingsNeeded={tour.things_needed}
+        experienceLevel={tour.experience_level}
+      />
 
       <TourThingsToKnow
         difficulty={tour.difficulty}
