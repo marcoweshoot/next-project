@@ -8,6 +8,8 @@ import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Label } from '@/components/ui/label'
+import { Calendar as CalendarComponent } from '@/components/ui/calendar'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import {
   Dialog,
   DialogContent,
@@ -39,6 +41,7 @@ import {
 } from 'lucide-react'
 import { format } from 'date-fns'
 import { it } from 'date-fns/locale'
+import { cn } from '@/lib/utils'
 
 interface Booking {
   id: string
@@ -95,6 +98,13 @@ export function BookingsAdminList() {
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [dateFilter, setDateFilter] = useState<string>('all')
   const [showFilters, setShowFilters] = useState(false)
+  
+  // Advanced filters
+  const [dateFrom, setDateFrom] = useState<Date | undefined>()
+  const [dateTo, setDateTo] = useState<Date | undefined>()
+  const [tourFilter, setTourFilter] = useState<string>('all')
+  const [minAmount, setMinAmount] = useState<string>('')
+  const [maxAmount, setMaxAmount] = useState<string>('')
   
   // Dialog states
   const [statusDialogOpen, setStatusDialogOpen] = useState(false)
@@ -167,6 +177,31 @@ export function BookingsAdminList() {
     setStatusDialogOpen(true)
   }
 
+  const resetFilters = () => {
+    setSearchQuery('')
+    setStatusFilter('all')
+    setDateFilter('all')
+    setDateFrom(undefined)
+    setDateTo(undefined)
+    setTourFilter('all')
+    setMinAmount('')
+    setMaxAmount('')
+  }
+
+  const hasActiveFilters = searchQuery || statusFilter !== 'all' || dateFilter !== 'all' || 
+    dateFrom || dateTo || tourFilter !== 'all' || minAmount || maxAmount
+
+  // Get unique tours for filter
+  const uniqueTours = useMemo(() => {
+    const tours = new Set<string>()
+    bookings.forEach(booking => {
+      if (booking.tour_title) {
+        tours.add(booking.tour_title)
+      }
+    })
+    return Array.from(tours).sort()
+  }, [bookings])
+
   // Filtered bookings
   const filteredBookings = useMemo(() => {
     return bookings.filter(booking => {
@@ -184,7 +219,7 @@ export function BookingsAdminList() {
       // Status filter
       if (statusFilter !== 'all' && booking.status !== statusFilter) return false
 
-      // Date filter
+      // Date filter (predefined)
       if (dateFilter !== 'all') {
         const bookingDate = new Date(booking.created_at)
         const now = new Date()
@@ -207,9 +242,28 @@ export function BookingsAdminList() {
         }
       }
 
+      // Custom date range filter
+      if (dateFrom || dateTo) {
+        const bookingDate = new Date(booking.created_at)
+        if (dateFrom && bookingDate < dateFrom) return false
+        if (dateTo) {
+          const dateToEnd = new Date(dateTo)
+          dateToEnd.setHours(23, 59, 59, 999)
+          if (bookingDate > dateToEnd) return false
+        }
+      }
+
+      // Tour filter
+      if (tourFilter !== 'all' && booking.tour_title !== tourFilter) return false
+
+      // Amount range filter
+      const bookingAmount = booking.total_amount / 100 // Convert from cents to euros
+      if (minAmount && bookingAmount < parseFloat(minAmount)) return false
+      if (maxAmount && bookingAmount > parseFloat(maxAmount)) return false
+
       return true
     })
-  }, [bookings, searchQuery, statusFilter, dateFilter])
+  }, [bookings, searchQuery, statusFilter, dateFilter, dateFrom, dateTo, tourFilter, minAmount, maxAmount])
 
   // Statistics
   const stats: BookingStats = useMemo(() => {
@@ -252,6 +306,21 @@ export function BookingsAdminList() {
   }
 
   const exportToCSV = () => {
+    // Build filter info
+    const filterInfo = []
+    if (hasActiveFilters) {
+      filterInfo.push(['FILTRI APPLICATI'])
+      if (searchQuery) filterInfo.push(['Ricerca', searchQuery])
+      if (statusFilter !== 'all') filterInfo.push(['Stato', statusFilter])
+      if (dateFilter !== 'all') filterInfo.push(['Periodo', dateFilter])
+      if (dateFrom) filterInfo.push(['Data Da', format(dateFrom, 'dd/MM/yyyy')])
+      if (dateTo) filterInfo.push(['Data A', format(dateTo, 'dd/MM/yyyy')])
+      if (tourFilter !== 'all') filterInfo.push(['Tour', tourFilter])
+      if (minAmount) filterInfo.push(['Importo Minimo', `€${minAmount}`])
+      if (maxAmount) filterInfo.push(['Importo Massimo', `€${maxAmount}`])
+      filterInfo.push([])
+    }
+
     const headers = [
       'ID Prenotazione',
       'Data Prenotazione',
@@ -259,9 +328,17 @@ export function BookingsAdminList() {
       'Cognome',
       'Email',
       'Telefono',
+      'Cellulare',
+      'Codice Fiscale',
+      'P.IVA',
+      'Indirizzo',
       'Città',
+      'CAP',
+      'Paese',
       'Tour',
+      'Destinazione',
       'Data Viaggio',
+      'Data Fine',
       'Partecipanti',
       'Status',
       'Acconto (€)',
@@ -275,10 +352,18 @@ export function BookingsAdminList() {
       booking.profiles?.first_name || '',
       booking.profiles?.last_name || '',
       booking.profiles?.email || '',
-      booking.profiles?.phone || booking.profiles?.mobile_phone || '',
+      booking.profiles?.phone || '',
+      booking.profiles?.mobile_phone || '',
+      booking.profiles?.fiscal_code || '',
+      booking.profiles?.vat_number || '',
+      booking.profiles?.address || '',
       booking.profiles?.city || '',
+      booking.profiles?.postal_code || '',
+      booking.profiles?.country || '',
       booking.tour_title || '',
+      booking.tour_destination || '',
       booking.session_date ? format(new Date(booking.session_date), 'dd/MM/yyyy') : '',
+      booking.session_end_date ? format(new Date(booking.session_end_date), 'dd/MM/yyyy') : '',
       booking.quantity || 1,
       booking.status,
       (booking.deposit_amount / 100).toFixed(2),
@@ -287,6 +372,7 @@ export function BookingsAdminList() {
     ])
 
     const csvContent = [
+      ...filterInfo.map(row => row.map(cell => `"${cell}"`).join(',')),
       headers.join(','),
       ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
     ].join('\n')
@@ -295,7 +381,10 @@ export function BookingsAdminList() {
     const link = document.createElement('a')
     const url = URL.createObjectURL(blob)
     link.setAttribute('href', url)
-    link.setAttribute('download', `prenotazioni_${format(new Date(), 'yyyy-MM-dd')}.csv`)
+    const filename = hasActiveFilters 
+      ? `prenotazioni_filtrate_${format(new Date(), 'yyyy-MM-dd_HH-mm')}.csv`
+      : `prenotazioni_${format(new Date(), 'yyyy-MM-dd')}.csv`
+    link.setAttribute('download', filename)
     link.style.visibility = 'hidden'
     document.body.appendChild(link)
     link.click()
@@ -417,81 +506,236 @@ export function BookingsAdminList() {
         
         {showFilters && (
           <CardContent className="border-t pt-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {/* Search */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-                <Input
-                  placeholder="Cerca per nome, email, tour..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-9"
-                />
-                {searchQuery && (
-                  <button
-                    onClick={() => setSearchQuery('')}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+            <div className="space-y-6">
+              {/* Basic Filters */}
+              <div>
+                <h4 className="text-sm font-medium mb-3">Filtri Base</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {/* Search */}
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                    <Input
+                      placeholder="Cerca per nome, email, tour..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="pl-9"
+                    />
+                    {searchQuery && (
+                      <button
+                        onClick={() => setSearchQuery('')}
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Status Filter */}
+                  <select
+                    value={statusFilter}
+                    onChange={(e) => setStatusFilter(e.target.value)}
+                    className="px-3 py-2 border rounded-md bg-background"
                   >
-                    <X className="w-4 h-4" />
-                  </button>
-                )}
+                    <option value="all">Tutti gli stati</option>
+                    <option value="deposit_paid">Acconto Pagato</option>
+                    <option value="fully_paid">Pagato Completamente</option>
+                    <option value="refunded">Rimborsato</option>
+                  </select>
+
+                  {/* Date Filter */}
+                  <select
+                    value={dateFilter}
+                    onChange={(e) => setDateFilter(e.target.value)}
+                    className="px-3 py-2 border rounded-md bg-background"
+                  >
+                    <option value="all">Tutte le date</option>
+                    <option value="today">Oggi</option>
+                    <option value="week">Ultima settimana</option>
+                    <option value="month">Ultimo mese</option>
+                  </select>
+                </div>
               </div>
 
-              {/* Status Filter */}
-              <select
-                value={statusFilter}
-                onChange={(e) => setStatusFilter(e.target.value)}
-                className="px-3 py-2 border rounded-md bg-background"
-              >
-                <option value="all">Tutti gli stati</option>
-                <option value="deposit_paid">Acconto Pagato</option>
-                <option value="fully_paid">Pagato Completamente</option>
-                <option value="refunded">Rimborsato</option>
-              </select>
+              {/* Advanced Filters */}
+              <div>
+                <h4 className="text-sm font-medium mb-3">Filtri Avanzati</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {/* Date Range - From */}
+                  <div className="space-y-2">
+                    <Label className="text-xs text-muted-foreground">Data Da</Label>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "w-full justify-start text-left font-normal",
+                            !dateFrom && "text-muted-foreground"
+                          )}
+                        >
+                          <Calendar className="mr-2 h-4 w-4" />
+                          {dateFrom ? format(dateFrom, "dd MMM yyyy", { locale: it }) : "Seleziona data"}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <CalendarComponent
+                          mode="single"
+                          selected={dateFrom}
+                          onSelect={setDateFrom}
+                          initialFocus
+                        />
+                      </PopoverContent>
+                    </Popover>
+                  </div>
 
-              {/* Date Filter */}
-              <select
-                value={dateFilter}
-                onChange={(e) => setDateFilter(e.target.value)}
-                className="px-3 py-2 border rounded-md bg-background"
-              >
-                <option value="all">Tutte le date</option>
-                <option value="today">Oggi</option>
-                <option value="week">Ultima settimana</option>
-                <option value="month">Ultimo mese</option>
-              </select>
+                  {/* Date Range - To */}
+                  <div className="space-y-2">
+                    <Label className="text-xs text-muted-foreground">Data A</Label>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "w-full justify-start text-left font-normal",
+                            !dateTo && "text-muted-foreground"
+                          )}
+                        >
+                          <Calendar className="mr-2 h-4 w-4" />
+                          {dateTo ? format(dateTo, "dd MMM yyyy", { locale: it }) : "Seleziona data"}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <CalendarComponent
+                          mode="single"
+                          selected={dateTo}
+                          onSelect={setDateTo}
+                          initialFocus
+                          disabled={(date) => dateFrom ? date < dateFrom : false}
+                        />
+                      </PopoverContent>
+                    </Popover>
+                  </div>
+
+                  {/* Tour Filter */}
+                  <div className="space-y-2">
+                    <Label className="text-xs text-muted-foreground">Tour</Label>
+                    <select
+                      value={tourFilter}
+                      onChange={(e) => setTourFilter(e.target.value)}
+                      className="w-full px-3 py-2 border rounded-md bg-background"
+                    >
+                      <option value="all">Tutti i tour</option>
+                      {uniqueTours.map(tour => (
+                        <option key={tour} value={tour}>{tour}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Amount Range */}
+                  <div className="space-y-2">
+                    <Label className="text-xs text-muted-foreground">Importo (€)</Label>
+                    <div className="flex gap-2">
+                      <Input
+                        type="number"
+                        placeholder="Min"
+                        value={minAmount}
+                        onChange={(e) => setMinAmount(e.target.value)}
+                        className="w-full"
+                        min="0"
+                        step="10"
+                      />
+                      <Input
+                        type="number"
+                        placeholder="Max"
+                        value={maxAmount}
+                        onChange={(e) => setMaxAmount(e.target.value)}
+                        className="w-full"
+                        min="0"
+                        step="10"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Active filters display */}
+              {hasActiveFilters && (
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-sm text-muted-foreground">Filtri attivi:</span>
+                  {searchQuery && (
+                    <Badge variant="secondary" className="gap-1">
+                      Cerca: {searchQuery}
+                      <button onClick={() => setSearchQuery('')}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </Badge>
+                  )}
+                  {statusFilter !== 'all' && (
+                    <Badge variant="secondary" className="gap-1">
+                      Stato: {statusFilter}
+                      <button onClick={() => setStatusFilter('all')}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </Badge>
+                  )}
+                  {dateFilter !== 'all' && (
+                    <Badge variant="secondary" className="gap-1">
+                      Data: {dateFilter}
+                      <button onClick={() => setDateFilter('all')}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </Badge>
+                  )}
+                  {dateFrom && (
+                    <Badge variant="secondary" className="gap-1">
+                      Da: {format(dateFrom, "dd/MM/yyyy")}
+                      <button onClick={() => setDateFrom(undefined)}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </Badge>
+                  )}
+                  {dateTo && (
+                    <Badge variant="secondary" className="gap-1">
+                      A: {format(dateTo, "dd/MM/yyyy")}
+                      <button onClick={() => setDateTo(undefined)}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </Badge>
+                  )}
+                  {tourFilter !== 'all' && (
+                    <Badge variant="secondary" className="gap-1">
+                      Tour: {tourFilter}
+                      <button onClick={() => setTourFilter('all')}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </Badge>
+                  )}
+                  {minAmount && (
+                    <Badge variant="secondary" className="gap-1">
+                      Min: €{minAmount}
+                      <button onClick={() => setMinAmount('')}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </Badge>
+                  )}
+                  {maxAmount && (
+                    <Badge variant="secondary" className="gap-1">
+                      Max: €{maxAmount}
+                      <button onClick={() => setMaxAmount('')}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </Badge>
+                  )}
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    onClick={resetFilters}
+                    className="text-xs"
+                  >
+                    Reset tutti i filtri
+                  </Button>
+                </div>
+              )}
             </div>
-
-            {/* Active filters display */}
-            {(searchQuery || statusFilter !== 'all' || dateFilter !== 'all') && (
-              <div className="flex items-center gap-2 mt-4 flex-wrap">
-                <span className="text-sm text-muted-foreground">Filtri attivi:</span>
-                {searchQuery && (
-                  <Badge variant="secondary" className="gap-1">
-                    Cerca: {searchQuery}
-                    <button onClick={() => setSearchQuery('')}>
-                      <X className="w-3 h-3" />
-                    </button>
-                  </Badge>
-                )}
-                {statusFilter !== 'all' && (
-                  <Badge variant="secondary" className="gap-1">
-                    Stato: {statusFilter}
-                    <button onClick={() => setStatusFilter('all')}>
-                      <X className="w-3 h-3" />
-                    </button>
-                  </Badge>
-                )}
-                {dateFilter !== 'all' && (
-                  <Badge variant="secondary" className="gap-1">
-                    Data: {dateFilter}
-                    <button onClick={() => setDateFilter('all')}>
-                      <X className="w-3 h-3" />
-                    </button>
-                  </Badge>
-                )}
-              </div>
-            )}
           </CardContent>
         )}
       </Card>
