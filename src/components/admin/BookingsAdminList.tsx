@@ -145,6 +145,7 @@ export function BookingsAdminList() {
     try {
       setActionLoading(true)
       setError(null)
+      setSuccess(null)
       
       const response = await fetch(`/api/admin/bookings/${selectedBooking.id}`, {
         method: 'PUT',
@@ -161,11 +162,18 @@ export function BookingsAdminList() {
       }
 
       setSuccess(`Status aggiornato a: ${newStatus}`)
-      setStatusDialogOpen(false)
+      
+      // Chiudi il dialog dopo un breve delay per permettere all'utente di vedere il messaggio di successo
+      setTimeout(() => {
+        setStatusDialogOpen(false)
+        setSuccess(null)
+      }, 1500)
+      
       fetchBookings()
     } catch (err) {
       console.error('Error updating status:', err)
       setError(err instanceof Error ? err.message : 'Errore nell\'aggiornamento dello status')
+      // Non chiudere il dialog in caso di errore, così l'utente può riprovare
     } finally {
       setActionLoading(false)
     }
@@ -174,6 +182,8 @@ export function BookingsAdminList() {
   const openStatusDialog = (booking: Booking) => {
     setSelectedBooking(booking)
     setNewStatus(booking.status)
+    setError(null)
+    setSuccess(null)
     setStatusDialogOpen(true)
   }
 

@@ -22,6 +22,11 @@ interface BalancePaymentFormProps {
     total_amount: number
     deposit_amount: number
     status: string
+    tour_title?: string
+    tour_destination?: string
+    session_date?: string
+    session_end_date?: string
+    quantity?: number
   }
   onPaymentSuccess?: () => void
 }
@@ -172,9 +177,13 @@ export function BalancePaymentForm({ booking, onPaymentSuccess }: BalancePayment
             sessionId={booking.session_id}
             userId={user.id}
             paymentType="balance"
-            tourTitle={`Tour ${booking.tour_id}`}
-            tourDestination="Destinazione da definire"
-            sessionDate="Data da definire"
+            quantity={booking.quantity || 1}
+            tourTitle={booking.tour_title || `Tour ${booking.tour_id}`}
+            tourDestination={booking.tour_destination || booking.tour_title || 'Destinazione'}
+            sessionDate={booking.session_date || ''}
+            sessionEndDate={booking.session_end_date || ''}
+            sessionPrice={booking.total_amount}
+            sessionDeposit={booking.deposit_amount}
             onSuccess={handlePaymentSuccess}
             onError={handlePaymentError}
           />
