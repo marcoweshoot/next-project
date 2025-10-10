@@ -65,10 +65,8 @@ export async function POST(request: NextRequest) {
         tourId: session.metadata?.tourId,
         sessionId: session.metadata?.sessionId,
         paymentType: session.metadata?.paymentType,
-        quantity: session.metadata?.quantity,
-        fiscalCode: session.metadata?.fiscal_code,
-        vatNumber: session.metadata?.vat_number,
-        phoneNumber: session.metadata?.phone_number
+        quantity: session.metadata?.quantity
+        // Removed fiscal_code, vat_number, phone_number - not needed for booking creation
       }
 
       // Validate and sanitize input data
