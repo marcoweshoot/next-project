@@ -7,7 +7,7 @@ interface BookingStats {
   total: number
   paid: number
   pending: number
-  cancelled: number
+  refunded: number
 }
 
 interface RevenueStats {
@@ -94,8 +94,8 @@ export default async function AdminStatisticsPage() {
         const stats: BookingStats = {
           total: data?.length || 0,
           paid: data?.filter(b => b.status === 'fully_paid').length || 0,
-          pending: data?.filter(b => b.status === 'pending').length || 0,
-          cancelled: data?.filter(b => b.status === 'cancelled').length || 0,
+          pending: data?.filter(b => b.status === 'deposit_paid').length || 0,
+          refunded: data?.filter(b => b.status === 'refunded').length || 0,
         }
         return stats
       }),
@@ -113,7 +113,7 @@ export default async function AdminStatisticsPage() {
         const stats: RevenueStats = {
           total: data?.reduce((sum, b) => sum + (b.total_amount || 0), 0) || 0,
           paid: data?.filter(b => b.status === 'fully_paid').reduce((sum, b) => sum + (b.total_amount || 0), 0) || 0,
-          pending: data?.filter(b => b.status === 'pending').reduce((sum, b) => sum + (b.total_amount || 0), 0) || 0,
+          pending: data?.filter(b => b.status === 'deposit_paid').reduce((sum, b) => sum + (b.total_amount || 0), 0) || 0,
           this_month: data?.filter(b => 
             new Date(b.created_at) >= thisMonth && b.status === 'fully_paid'
           ).reduce((sum, b) => sum + (b.total_amount || 0), 0) || 0,

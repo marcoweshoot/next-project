@@ -46,7 +46,7 @@ interface Booking {
   tour_id: string
   session_id: string
   quantity: number
-  status: 'pending' | 'deposit_paid' | 'fully_paid' | 'completed' | 'cancelled'
+  status: 'deposit_paid' | 'fully_paid' | 'refunded'
   deposit_amount: number
   total_amount: number
   stripe_payment_intent_id?: string
@@ -76,11 +76,9 @@ interface Booking {
 
 interface BookingStats {
   total: number
-  pending: number
   deposit_paid: number
   fully_paid: number
-  completed: number
-  cancelled: number
+  refunded: number
   total_revenue: number
   pending_revenue: number
 }
@@ -220,18 +218,16 @@ export function BookingsAdminList() {
       acc[booking.status]++
       acc.total_revenue += booking.total_amount || 0
       
-      if (booking.status === 'pending' || booking.status === 'deposit_paid') {
+      if (booking.status === 'deposit_paid') {
         acc.pending_revenue += (booking.total_amount || 0) - (booking.deposit_amount || 0)
       }
       
       return acc
     }, {
       total: 0,
-      pending: 0,
       deposit_paid: 0,
       fully_paid: 0,
-      completed: 0,
-      cancelled: 0,
+      refunded: 0,
       total_revenue: 0,
       pending_revenue: 0,
     })
@@ -239,14 +235,12 @@ export function BookingsAdminList() {
 
   const getStatusBadge = (status: string) => {
     const variants = {
-      pending: { icon: Clock, text: 'In Attesa', className: 'bg-yellow-500/15 text-yellow-700 dark:text-yellow-300 ring-1 ring-yellow-500/30' },
       deposit_paid: { icon: CheckCircle, text: 'Acconto Pagato', className: 'bg-blue-500/15 text-blue-700 dark:text-blue-300 ring-1 ring-blue-500/30' },
-      fully_paid: { icon: CheckCircle, text: 'Pagato', className: 'bg-green-500/15 text-green-700 dark:text-green-300 ring-1 ring-green-500/30' },
-      completed: { icon: CheckCircle, text: 'Completato', className: 'bg-green-600/15 text-green-800 dark:text-green-200 ring-1 ring-green-600/30' },
-      cancelled: { icon: XCircle, text: 'Cancellato', className: 'bg-red-500/15 text-red-700 dark:text-red-300 ring-1 ring-red-500/30' },
+      fully_paid: { icon: CheckCircle, text: 'Pagato Completamente', className: 'bg-green-500/15 text-green-700 dark:text-green-300 ring-1 ring-green-500/30' },
+      refunded: { icon: XCircle, text: 'Rimborsato', className: 'bg-orange-500/15 text-orange-700 dark:text-orange-300 ring-1 ring-orange-500/30' },
     }
 
-    const variant = variants[status as keyof typeof variants] || variants.pending
+    const variant = variants[status as keyof typeof variants] || variants.deposit_paid
     const Icon = variant.icon
 
     return (
@@ -450,11 +444,9 @@ export function BookingsAdminList() {
                 className="px-3 py-2 border rounded-md bg-background"
               >
                 <option value="all">Tutti gli stati</option>
-                <option value="pending">In Attesa</option>
                 <option value="deposit_paid">Acconto Pagato</option>
                 <option value="fully_paid">Pagato Completamente</option>
-                <option value="completed">Completato</option>
-                <option value="cancelled">Cancellato</option>
+                <option value="refunded">Rimborsato</option>
               </select>
 
               {/* Date Filter */}
@@ -753,11 +745,9 @@ export function BookingsAdminList() {
                 onChange={(e) => setNewStatus(e.target.value)}
                 className="w-full px-3 py-2 border rounded-md bg-background"
               >
-                <option value="pending">In Attesa</option>
                 <option value="deposit_paid">Acconto Pagato</option>
                 <option value="fully_paid">Pagato Completamente</option>
-                <option value="completed">Completato</option>
-                <option value="cancelled">Cancellato</option>
+                <option value="refunded">Rimborsato</option>
               </select>
             </div>
             
