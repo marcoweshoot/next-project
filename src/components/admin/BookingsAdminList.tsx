@@ -42,6 +42,7 @@ import {
 import { format } from 'date-fns'
 import { it } from 'date-fns/locale'
 import { cn } from '@/lib/utils'
+import { SessionChangeModal } from './SessionChangeModal'
 
 interface Booking {
   id: string
@@ -111,6 +112,9 @@ export function BookingsAdminList() {
   const [selectedBooking, setSelectedBooking] = useState<Booking | null>(null)
   const [newStatus, setNewStatus] = useState<string>('')
   const [actionLoading, setActionLoading] = useState(false)
+  
+  // Session change modal states
+  const [sessionChangeModalOpen, setSessionChangeModalOpen] = useState(false)
   
   // const supabase = createClient() // Non più necessario - usiamo API route
 
@@ -185,6 +189,18 @@ export function BookingsAdminList() {
     setError(null)
     setSuccess(null)
     setStatusDialogOpen(true)
+  }
+
+  const openSessionChangeModal = (booking: Booking) => {
+    setSelectedBooking(booking)
+    setSessionChangeModalOpen(true)
+  }
+
+  const handleSessionChanged = (success: boolean, message?: string) => {
+    if (success) {
+      setSuccess(message || 'Sessione cambiata con successo')
+      fetchBookings() // Ricarica la lista
+    }
   }
 
   const resetFilters = () => {
@@ -945,6 +961,14 @@ export function BookingsAdminList() {
                         Cambia Status
                       </Button>
                       <Button
+                        variant="secondary"
+                        size="sm"
+                        onClick={() => openSessionChangeModal(booking)}
+                      >
+                        <Calendar className="w-4 h-4 mr-2" />
+                        Cambia Sessione
+                      </Button>
+                      <Button
                         variant="outline"
                         size="sm"
                         onClick={() => {
@@ -1041,6 +1065,19 @@ export function BookingsAdminList() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+
+      {/* Session Change Modal */}
+      {selectedBooking && (
+        <SessionChangeModal
+          isOpen={sessionChangeModalOpen}
+          onClose={() => setSessionChangeModalOpen(false)}
+          bookingId={selectedBooking.id}
+          currentSessionId={selectedBooking.session_id}
+          currentTourTitle={selectedBooking.tour_title}
+          currentSessionDate={selectedBooking.session_date}
+          onSessionChanged={handleSessionChanged}
+        />
+      )}
     </div>
   )
 }
