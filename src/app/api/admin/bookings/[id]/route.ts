@@ -45,6 +45,10 @@ export async function PUT(
       return NextResponse.json({ error: 'Status is required' }, { status: 400 })
     }
 
+    if (!id) {
+      return NextResponse.json({ error: 'Booking ID is required' }, { status: 400 })
+    }
+
     // Usa Service Role Key per bypassare RLS
     const adminSupabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -57,6 +61,24 @@ export async function PUT(
       }
     )
 
+    // Verifica che la prenotazione esista
+    const { data: existingBooking, error: fetchError } = await adminSupabase
+      .from('bookings')
+      .select('id, status, amount_paid')
+      .eq('id', id)
+      .single()
+
+    if (fetchError) {
+      console.error('Error fetching booking:', fetchError)
+      return NextResponse.json({ 
+        error: 'Booking not found',
+        details: fetchError.message 
+      }, { status: 404 })
+    }
+
+    console.log('Existing booking:', existingBooking)
+    console.log('Updating booking:', { id, status })
+    
     // Update booking status and amount_paid based on status
     const updateData: any = {
       status,
@@ -66,7 +88,10 @@ export async function PUT(
     // Se lo status è 'refunded' o 'cancelled', azzera amount_paid
     if (status === 'refunded' || status === 'cancelled') {
       updateData.amount_paid = 0
+      console.log('Setting amount_paid to 0 for status:', status)
     }
+
+    console.log('Update data:', updateData)
 
     const { data, error } = await adminSupabase
       .from('bookings')
@@ -75,8 +100,17 @@ export async function PUT(
       .select()
 
     if (error) {
-      console.error('Error updating booking status:', error)
-      return NextResponse.json({ error: 'Failed to update booking status' }, { status: 500 })
+      console.error('Database error updating booking status:', error)
+      console.error('Error details:', {
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
+        code: error.code
+      })
+      return NextResponse.json({ 
+        error: 'Failed to update booking status',
+        details: error.message 
+      }, { status: 500 })
     }
 
     if (!data || data.length === 0) {
