@@ -222,9 +222,9 @@ export function PaymentCard({ tourId, bookings, tourInfo, isExpanded, onToggle }
                     <div className="flex items-center gap-2">
                       <CreditCard className="w-4 h-4 text-muted-foreground" />
                       <div>
-                        <p className="text-sm font-medium">Acconto</p>
+                        <p className="text-sm font-medium">Pagato</p>
                         <p className="text-lg font-bold">
-                          {formatCurrency(booking.deposit_amount)}
+                          {formatCurrency(paymentInfo.amountPaid)}
                           {paymentInfo.depositPaid && (
                             <CheckCircle className="inline w-4 h-4 text-green-500 ml-1" />
                           )}

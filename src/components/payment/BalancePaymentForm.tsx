@@ -21,6 +21,7 @@ interface BalancePaymentFormProps {
     session_id: string
     total_amount: number
     deposit_amount: number
+    amount_paid?: number // Importo effettivamente pagato
     status: string
     tour_title?: string
     tour_destination?: string
@@ -49,7 +50,9 @@ export function BalancePaymentForm({ booking, onPaymentSuccess }: BalancePayment
     getUser()
   }, [supabase.auth])
 
-  const balanceAmount = Math.max(booking.total_amount - booking.deposit_amount, 0)
+  // Calcola il saldo rimanente basato sull'importo effettivamente pagato
+  const amountPaid = booking.amount_paid || 0
+  const balanceAmount = Math.max(booking.total_amount - amountPaid, 0)
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('it-IT', {
@@ -159,8 +162,8 @@ export function BalancePaymentForm({ booking, onPaymentSuccess }: BalancePayment
             <span className="font-semibold">{formatCurrency(booking.total_amount)}</span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-sm font-medium">Acconto già pagato:</span>
-            <span className="text-green-600">-{formatCurrency(booking.deposit_amount)}</span>
+            <span className="text-sm font-medium">Importo già pagato:</span>
+            <span className="text-green-600">-{formatCurrency(amountPaid)}</span>
           </div>
           <div className="border-t pt-2 flex justify-between items-center">
             <span className="font-semibold">Saldo da pagare:</span>
