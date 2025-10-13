@@ -88,7 +88,7 @@ export function FinancialCharts({ bookings }: FinancialChartsProps) {
       deposit_paid: 'Acconto Pagato',
       fully_paid: 'Pagato',
       completed: 'Completato',
-      cancelled: 'Cancellato',
+      cancelled: 'Rimborsato',
     }
 
     return Object.values(distribution).map(item => ({

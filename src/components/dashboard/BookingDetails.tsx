@@ -55,6 +55,42 @@ export function BookingDetails({ booking, userId }: BookingDetailsProps) {
   const [success, setSuccess] = useState<string | null>(null)
   const supabase = createClient()
 
+  // Funzione per mostrare il modal con il testo dell'email
+  const showEmailModal = (emailText: string) => {
+    const modal = document.createElement('div')
+    modal.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    `
+    
+    modal.innerHTML = `
+      <div style="background: white; padding: 20px; border-radius: 8px; max-width: 600px; max-height: 80vh; overflow-y: auto;">
+        <h3 style="margin-top: 0;">📧 Contatta Assistenza</h3>
+        <p>Copia il testo qui sotto e invialo a: <strong>prenotazioni@weshoot.it</strong></p>
+        <textarea readonly style="width: 100%; height: 300px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace;">${emailText}</textarea>
+        <div style="margin-top: 10px; text-align: right;">
+          <button onclick="this.closest('div').parentElement.remove()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Chiudi</button>
+        </div>
+      </div>
+    `
+    
+    document.body.appendChild(modal)
+    
+    // Seleziona automaticamente il testo
+    const textarea = modal.querySelector('textarea')
+    if (textarea) {
+      textarea.select()
+    }
+  }
+
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -89,7 +125,7 @@ export function BookingDetails({ booking, userId }: BookingDetailsProps) {
         return (
           <Badge variant="destructive" className="flex items-center gap-1">
             <XCircle className="w-3 h-3" />
-            Cancellato
+            Rimborsato
           </Badge>
         )
       default:
@@ -315,29 +351,34 @@ export function BookingDetails({ booking, userId }: BookingDetailsProps) {
             <Button 
               variant="outline" 
               onClick={() => {
-                const subject = encodeURIComponent('Assistenza Prenotazione')
-                const body = encodeURIComponent(`Salve,\n\nHo bisogno di assistenza per la prenotazione:\n- ID Prenotazione: ${booking.id}\n- Tour: ${booking.tour_title || `Tour ${booking.tour_id}`}\n- Sessione: ${booking.session_id}\n\nDescrivo il problema:\n\n`)
-                
-                // Prova prima con mailto:
-                const mailtoUrl = `mailto:prenotazioni@weshoot.it?subject=${subject}&body=${body}`
-                
-                try {
-                  const newWindow = window.open(mailtoUrl)
-                  
-                  // Se la finestra non si apre o si apre con un URL strano, usa il fallback
-                  setTimeout(() => {
-                    if (!newWindow || newWindow.location.href.includes('mailto:') === false) {
-                      // Fallback: copia l'email e le info negli appunti
-                      const emailText = `prenotazioni@weshoot.it\n\nOggetto: Assistenza Prenotazione\n\nMessaggio:\nSalve,\n\nHo bisogno di assistenza per la prenotazione:\n- ID Prenotazione: ${booking.id}\n- Tour: ${booking.tour_title || `Tour ${booking.tour_id}`}\n- Sessione: ${booking.session_id}\n\nDescrivo il problema:\n\n`
-                      navigator.clipboard.writeText(emailText)
-                      alert('Email e messaggio copiati negli appunti!\n\nIncolla in un nuovo messaggio a: prenotazioni@weshoot.it')
-                    }
-                  }, 500)
-                } catch (error) {
-                  // Fallback diretto se mailto: non è supportato
-                  const emailText = `prenotazioni@weshoot.it\n\nOggetto: Assistenza Prenotazione\n\nMessaggio:\nSalve,\n\nHo bisogno di assistenza per la prenotazione:\n- ID Prenotazione: ${booking.id}\n- Tour: ${booking.tour_title || `Tour ${booking.tour_id}`}\n- Sessione: ${booking.session_id}\n\nDescrivo il problema:\n\n`
-                  navigator.clipboard.writeText(emailText)
-                  alert('Email e messaggio copiati negli appunti!\n\nIncolla in un nuovo messaggio a: prenotazioni@weshoot.it')
+                const emailText = `prenotazioni@weshoot.it
+
+Oggetto: Assistenza Prenotazione
+
+Messaggio:
+Salve,
+
+Ho bisogno di assistenza per la prenotazione:
+- ID Prenotazione: ${booking.id}
+- Tour: ${booking.tour_title || `Tour ${booking.tour_id}`}
+- Sessione: ${booking.session_id}
+- Data Sessione: ${booking.session_date ? new Date(booking.session_date).toLocaleDateString('it-IT') : 'N/A'}
+
+Descrivo il problema:
+
+`
+
+                // Prova prima a copiare negli appunti
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                  navigator.clipboard.writeText(emailText).then(() => {
+                    alert('✅ Email e messaggio copiati negli appunti!\n\n📧 Invia un email a: prenotazioni@weshoot.it\n\n💡 Incolla il contenuto per avere tutte le informazioni della prenotazione.')
+                  }).catch(() => {
+                    // Fallback se clipboard non funziona
+                    showEmailModal(emailText)
+                  })
+                } else {
+                  // Fallback per browser vecchi
+                  showEmailModal(emailText)
                 }
               }}
             >

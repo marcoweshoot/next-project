@@ -100,7 +100,7 @@ export function PaymentCard({ tourId, bookings, tourInfo, isExpanded, onToggle }
         return (
           <Badge variant="destructive" className="flex items-center gap-1">
             <XCircle className="w-3 h-3" />
-            Cancellato
+            Rimborsato
           </Badge>
         )
       default:

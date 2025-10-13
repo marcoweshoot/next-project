@@ -110,7 +110,7 @@ export function BookingsList({ userId }: BookingsListProps) {
         return (
           <Badge variant="destructive" className="flex items-center gap-1">
             <XCircle className="w-3 h-3" />
-            Cancellato
+            Rimborsato
           </Badge>
         )
       default:
