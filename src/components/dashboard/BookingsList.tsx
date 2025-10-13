@@ -30,6 +30,7 @@ interface Booking {
   status: 'pending' | 'deposit_paid' | 'fully_paid' | 'completed' | 'cancelled'
   deposit_amount: number
   total_amount: number
+  amount_paid?: number // Importo effettivamente pagato
   stripe_payment_intent_id?: string
   stripe_deposit_intent_id?: string
   deposit_due_date?: string
@@ -132,12 +133,16 @@ export function BookingsList({ userId }: BookingsListProps) {
   const getPaymentInfo = (booking: Booking) => {
     const depositPaid = booking.status === 'deposit_paid' || booking.status === 'fully_paid'
     const fullyPaid = booking.status === 'fully_paid' || booking.status === 'completed'
-    const balanceAmount = booking.total_amount - booking.deposit_amount
+    
+    // Calcola il saldo rimanente basato sull'importo effettivamente pagato
+    const amountPaid = booking.amount_paid || 0
+    const balanceAmount = booking.total_amount - amountPaid
 
     return {
       depositPaid,
       fullyPaid,
       balanceAmount,
+      amountPaid,
       depositAmount: booking.deposit_amount,
       totalAmount: booking.total_amount,
     }
@@ -223,9 +228,9 @@ export function BookingsList({ userId }: BookingsListProps) {
                 <div className="flex items-center gap-2">
                   <CreditCard className="w-4 h-4 text-muted-foreground" />
                   <div>
-                    <p className="text-sm font-medium">Acconto</p>
+                    <p className="text-sm font-medium">Pagato</p>
                     <p className="text-lg font-bold">
-                      {formatCurrency(booking.deposit_amount)}
+                      {formatCurrency(paymentInfo.amountPaid)}
                       {paymentInfo.depositPaid && (
                         <CheckCircle className="inline w-4 h-4 text-green-500 ml-1" />
                       )}

@@ -46,6 +46,7 @@ interface Booking {
   session_end_date?: string
   status: string
   total_amount: number
+  amount_paid?: number // Importo effettivamente pagato
   created_at: string
 }
 

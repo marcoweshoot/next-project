@@ -27,6 +27,7 @@ interface Booking {
   status: 'pending' | 'deposit_paid' | 'fully_paid' | 'completed' | 'cancelled'
   deposit_amount: number
   total_amount: number
+  amount_paid?: number // Importo effettivamente pagato
   created_at: string
   tour_title?: string
   tour_destination?: string
@@ -84,12 +85,8 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
     const totalSpent = bookings
       .filter(b => ['deposit_paid', 'fully_paid', 'completed'].includes(b.status))
       .reduce((sum, b) => {
-        // For fully paid bookings, add the total amount
-        if (b.status === 'fully_paid' || b.status === 'completed') {
-          return sum + b.total_amount
-        }
-        // For deposit only, add just the deposit amount
-        return sum + b.deposit_amount
+        // Usa l'importo effettivamente pagato
+        return sum + (b.amount_paid || 0)
       }, 0)
 
     return {
