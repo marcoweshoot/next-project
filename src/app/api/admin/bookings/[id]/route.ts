@@ -49,14 +49,25 @@ export async function PUT(
       return NextResponse.json({ error: 'Booking ID is required' }, { status: 400 })
     }
 
-    // Mappa i valori di status comuni ai valori validi nel database
+    // Valori validi per lo status: 'pending', 'deposit_paid', 'fully_paid', 'completed', 'cancelled'
     const statusMapping: { [key: string]: string } = {
-      'refunded': 'refund', // Mappa 'refunded' a 'refund'
-      'cancelled': 'cancel', // Mappa 'cancelled' a 'cancel' se necessario
+      'refunded': 'cancelled', // Mappa 'refunded' a 'cancelled' (valore valido nel DB)
+      'cancelled': 'cancelled', // Mantieni 'cancelled' come è
     }
 
     const mappedStatus = statusMapping[status] || status
     console.log('Status mapping:', { original: status, mapped: mappedStatus })
+    
+    // Verifica che il mappedStatus sia valido
+    const validStatuses = ['pending', 'deposit_paid', 'fully_paid', 'completed', 'cancelled']
+    if (!validStatuses.includes(mappedStatus)) {
+      return NextResponse.json({ 
+        error: 'Invalid status value',
+        details: `Status must be one of: ${validStatuses.join(', ')}`,
+        received: status,
+        mapped: mappedStatus
+      }, { status: 400 })
+    }
 
     // Usa Service Role Key per bypassare RLS
     const adminSupabase = createClient(
