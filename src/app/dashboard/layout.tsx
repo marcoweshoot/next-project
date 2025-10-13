@@ -3,6 +3,20 @@ import { createServerClientSupabase } from '@/lib/supabase/server'
 import { LogoutButton } from '@/components/dashboard/LogoutButton'
 import { DashboardNavigation } from '@/components/dashboard/DashboardNavigation'
 import Header from '@/components/Header'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
+}
 
 export default async function DashboardLayout({
   children,
