@@ -139,15 +139,50 @@ export async function PUT(
       updateData.tour_destination = newTour.title
     }
 
-    // Se il prezzo è cambiato, aggiorna i totali
+    // Se il prezzo è cambiato, aggiorna i totali e ricalcola lo stato
     if (priceDifference !== 0) {
       updateData.total_amount = newTotal
       updateData.deposit_amount = Math.round(newSession.deposit * 100)
       
-      // Se il cliente ha già pagato tutto, calcola il nuovo saldo
-      if (currentBooking.status === 'fully_paid') {
-        updateData.status = 'deposit_paid'
+      // Calcola quanto ha già pagato il cliente in base allo stato attuale
+      let amountPaid = 0
+      switch (currentBooking.status) {
+        case 'deposit_paid':
+          amountPaid = currentBooking.deposit_amount || 0
+          break
+        case 'fully_paid':
+          amountPaid = currentBooking.total_amount || 0
+          break
+        case 'cancelled':
+        case 'refunded':
+          amountPaid = 0
+          break
+        default:
+          amountPaid = 0
       }
+      
+      // Determina il nuovo stato basandosi su quanto ha pagato vs il nuovo totale
+      const newDepositAmount = Math.round(newSession.deposit * 100)
+      
+      if (amountPaid >= newTotal) {
+        // Ha già pagato più del nuovo totale (situazione di credito)
+        updateData.status = 'fully_paid'
+      } else if (amountPaid >= newDepositAmount) {
+        // Ha pagato almeno il nuovo deposito
+        updateData.status = 'deposit_paid'
+      } else {
+        // Ha pagato meno del nuovo deposito
+        updateData.status = 'pending'
+      }
+      
+      // Se il cliente aveva un credito (fully_paid) e il nuovo tour costa meno,
+      // mantieni lo stato fully_paid ma aggiorna l'importo pagato
+      if (currentBooking.status === 'fully_paid' && amountPaid >= newTotal) {
+        updateData.status = 'fully_paid'
+      }
+      
+      // Traccia l'importo effettivamente pagato dal cliente
+      updateData.amount_paid = amountPaid
     }
 
     const { data, error } = await adminSupabase
@@ -168,16 +203,35 @@ export async function PUT(
     // TODO: Invia email di notifica al cliente
     // await sendSessionChangeNotification(currentBooking.user_id, updateData)
 
+    // Calcola informazioni dettagliate per la risposta
+    const updatedBooking = data[0]
+    const amountPaid = updatedBooking.amount_paid || 0
+    const newDepositAmount = Math.round(newSession.deposit * 100)
+    const remainingBalance = newTotal - amountPaid
+    
+    let statusMessage = ''
+    if (updatedBooking.status === 'fully_paid') {
+      statusMessage = 'Prenotazione completamente pagata'
+    } else if (updatedBooking.status === 'deposit_paid') {
+      statusMessage = `Acconto pagato (€${(amountPaid / 100).toFixed(2)}). Saldo residuo: €${(remainingBalance / 100).toFixed(2)}`
+    } else {
+      statusMessage = `Importo pagato: €${(amountPaid / 100).toFixed(2)}. Nuovo deposito richiesto: €${(newDepositAmount / 100).toFixed(2)}`
+    }
+
     return NextResponse.json({ 
       success: true,
-      booking: data[0],
+      booking: updatedBooking,
       priceDifference,
       newTotal: newTotal / 100, // Converti in euro per la risposta
+      amountPaid: amountPaid / 100,
+      remainingBalance: remainingBalance / 100,
+      newDepositAmount: newDepositAmount / 100,
+      statusMessage,
       message: priceDifference > 0 
-        ? `La nuova sessione costa €${(priceDifference / 100).toFixed(2)} in più. Il cliente dovrà pagare la differenza.`
+        ? `La nuova sessione costa €${(priceDifference / 100).toFixed(2)} in più. ${statusMessage}`
         : priceDifference < 0 
-        ? `La nuova sessione costa €${Math.abs(priceDifference / 100).toFixed(2)} in meno. Il cliente avrà un credito.`
-        : 'Il prezzo rimane invariato.'
+        ? `La nuova sessione costa €${Math.abs(priceDifference / 100).toFixed(2)} in meno. ${statusMessage}`
+        : `Il prezzo rimane invariato. ${statusMessage}`
     })
 
   } catch (error) {

@@ -116,7 +116,18 @@ export function SessionChangeModal({
         throw new Error(result.error || 'Errore nel cambio sessione')
       }
 
-      setSuccess(`Sessione cambiata con successo! ${result.message}`)
+      // Mostra informazioni dettagliate
+      const detailMessage = `Sessione cambiata con successo!
+
+${result.message}
+
+Dettagli finanziari:
+• Importo pagato: €${result.amountPaid?.toFixed(2) || '0.00'}
+• Nuovo totale: €${result.newTotal?.toFixed(2) || '0.00'}
+• Saldo residuo: €${result.remainingBalance?.toFixed(2) || '0.00'}
+• Nuovo deposito: €${result.newDepositAmount?.toFixed(2) || '0.00'}`
+
+      setSuccess(detailMessage)
       
       // Chiudi il modal dopo un delay
       setTimeout(() => {
@@ -124,7 +135,7 @@ export function SessionChangeModal({
         onClose()
         setSuccess(null)
         setSelectedSessionId('')
-      }, 2000)
+      }, 3000)
 
     } catch (err) {
       console.error('Error changing session:', err)
