@@ -79,17 +79,16 @@ export async function PUT(
     console.log('Existing booking:', existingBooking)
     console.log('Updating booking:', { id, status })
     
-    // Update booking status and amount_paid based on status
+    // Update booking status (temporaneamente senza amount_paid per test)
     const updateData: any = {
       status,
       updated_at: new Date().toISOString()
     }
 
-    // Se lo status è 'refunded' o 'cancelled', azzera amount_paid
-    if (status === 'refunded' || status === 'cancelled') {
-      updateData.amount_paid = 0
-      console.log('Setting amount_paid to 0 for status:', status)
-    }
+    // TODO: Aggiungere amount_paid quando il campo sarà disponibile nel DB di produzione
+    // if (status === 'refunded' || status === 'cancelled') {
+    //   updateData.amount_paid = 0
+    // }
 
     console.log('Update data:', updateData)
 
