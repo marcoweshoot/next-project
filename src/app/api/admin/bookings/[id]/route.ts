@@ -57,13 +57,20 @@ export async function PUT(
       }
     )
 
-    // Update booking status
+    // Update booking status and amount_paid based on status
+    const updateData: any = {
+      status,
+      updated_at: new Date().toISOString()
+    }
+
+    // Se lo status è 'refunded' o 'cancelled', azzera amount_paid
+    if (status === 'refunded' || status === 'cancelled') {
+      updateData.amount_paid = 0
+    }
+
     const { data, error } = await adminSupabase
       .from('bookings')
-      .update({ 
-        status,
-        updated_at: new Date().toISOString()
-      })
+      .update(updateData)
       .eq('id', id)
       .select()
 
