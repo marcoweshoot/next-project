@@ -137,6 +137,7 @@ export async function POST(request: NextRequest) {
               status: bookingStatus,
               deposit_amount: session.amount_total,
               total_amount: expectedTotal,
+              amount_paid: session.amount_total, // Importo effettivamente pagato
               stripe_payment_intent_id: session.payment_intent as string,
               deposit_due_date: new Date().toISOString(),
               balance_due_date: session.metadata?.sessionDate ? 
@@ -252,11 +253,13 @@ export async function POST(request: NextRequest) {
 
           const existingBooking = existingBookings[0]
 
-          // Aggiorna lo status a fully_paid
+          // Aggiorna lo status a fully_paid e l'importo pagato
+          const newAmountPaid = (existingBooking.amount_paid || 0) + session.amount_total
           const { error: updateError } = await supabase
             .from('bookings')
             .update({
               status: 'fully_paid',
+              amount_paid: newAmountPaid, // Aggiorna l'importo totale pagato
               stripe_payment_intent_id: session.payment_intent as string,
               updated_at: new Date().toISOString()
             })

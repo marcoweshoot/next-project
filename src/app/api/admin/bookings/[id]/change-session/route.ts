@@ -180,9 +180,6 @@ export async function PUT(
       if (currentBooking.status === 'fully_paid' && amountPaid >= newTotal) {
         updateData.status = 'fully_paid'
       }
-      
-      // Traccia l'importo effettivamente pagato dal cliente
-      updateData.amount_paid = amountPaid
     }
 
     const { data, error } = await adminSupabase
