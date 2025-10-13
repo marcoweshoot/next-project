@@ -49,6 +49,15 @@ export async function PUT(
       return NextResponse.json({ error: 'Booking ID is required' }, { status: 400 })
     }
 
+    // Mappa i valori di status comuni ai valori validi nel database
+    const statusMapping: { [key: string]: string } = {
+      'refunded': 'refund', // Mappa 'refunded' a 'refund'
+      'cancelled': 'cancel', // Mappa 'cancelled' a 'cancel' se necessario
+    }
+
+    const mappedStatus = statusMapping[status] || status
+    console.log('Status mapping:', { original: status, mapped: mappedStatus })
+
     // Usa Service Role Key per bypassare RLS
     const adminSupabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -77,18 +86,19 @@ export async function PUT(
     }
 
     console.log('Existing booking:', existingBooking)
-    console.log('Updating booking:', { id, status })
+    console.log('Updating booking:', { id, originalStatus: status, mappedStatus })
     
-    // Update booking status (temporaneamente senza amount_paid per test)
+    // Update booking status and amount_paid based on status
     const updateData: any = {
-      status,
+      status: mappedStatus,
       updated_at: new Date().toISOString()
     }
 
-    // TODO: Aggiungere amount_paid quando il campo sarà disponibile nel DB di produzione
-    // if (status === 'refunded' || status === 'cancelled') {
-    //   updateData.amount_paid = 0
-    // }
+    // Se lo status è 'refunded' o 'cancelled', azzera amount_paid
+    if (status === 'refunded' || status === 'cancelled') {
+      updateData.amount_paid = 0
+      console.log('Setting amount_paid to 0 for status:', status)
+    }
 
     console.log('Update data:', updateData)
 
