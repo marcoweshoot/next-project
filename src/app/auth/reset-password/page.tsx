@@ -137,7 +137,7 @@ function ResetPasswordForm() {
               
               // Verifica che il code sia valido (non crea sessione)
               const { error } = await supabase.auth.verifyOtp({
-                token_hash: code,
+                token: code,
                 type: 'recovery'
               })
               
@@ -251,7 +251,7 @@ function ResetPasswordForm() {
         
         // Per il formato nuovo con code, prima verifichiamo il code e poi aggiorniamo la password
         const { data: verifyData, error: verifyError } = await supabase.auth.verifyOtp({
-          token_hash: code,
+          token: code,
           type: 'recovery'
         })
         
