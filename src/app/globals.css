@@ -34,8 +34,8 @@ label {
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    /* Primario (il tuo rosso/rosa) */
-    --primary: 7 75% 58%;
+    /* Primario (rosso WeShoot #E53E3E) */
+    --primary: 0 73% 57%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 4.8% 95.9%;
@@ -72,9 +72,9 @@ label {
     --popover: 0 0% 9%;
     --popover-foreground: 0 0% 95%;
 
-    /* Primario invariato (così hai consistenza brand) */
-    --primary: 346.8 77.2% 49.8%;
-    --primary-foreground: 355.7 100% 97.3%;
+    /* Primario invariato (rosso WeShoot #E53E3E) */
+    --primary: 0 73% 57%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
