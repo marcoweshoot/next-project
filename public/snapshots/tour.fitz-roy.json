@@ -7,7 +7,7 @@
   "excerpt": "Preparati a vivere un'esperienza fotografica tra i paesaggi più spettacolari del pianeta",
   "difficulty": "medium",
   "experience_level": "Sfida",
-  "things_needed": null,
+  "things_needed": "<p style=\"margin-left:0px;\">Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm) e tele (70-200mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Astroinseguitore (opzionale)</li></ul><p style=\"margin-left:0px;\">Abbigliamento:</p><ul><li>Vestiario comodo e impermeabile</li><li>Maglia termica</li><li>Pile</li><li>Piumino</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
   "video_url": null,
   "locale": "it",
   "places": {
@@ -78,7 +78,7 @@
         {
           "id": "159",
           "title": "Preparazione per l'Outdoor a El Chalten",
-          "description": "<p>Il secondo giorno ci occuperemo di gestire tutta la fase logistica di questo viaggio fotografico in Patagonia; faremo spesa con viveri e gas per i fornelli, faremo un<span style=\"color:hsl(0, 0%, 0%);\"> discorso tecnico sulla preparazione dell'attrezzatura fotografica per il trekking al campo base del Fitz Roy del giorno successivo. Verso le 17 faremo un trekking di 2km per raggiungere Mirador del Paredón, con vista sulla città e sulle Cerro Torre e Fitz Roy al tramonto.&nbsp;</span></p>",
+          "description": "<p>Il secondo giorno ci occuperemo di gestire tutta la fase logistica di questo viaggio fotografico in Patagonia; faremo spesa con viveri e gas per i fornelli, faremo un discorso tecnico sulla preparazione dell'attrezzatura fotografica per il trekking al campo base del Fitz Roy del giorno successivo. Verso le 17 faremo un trekking di 2km per raggiungere Mirador del Paredón, con vista sulla città e sulle Cerro Torre e Fitz Roy al tramonto.</p>",
           "locale": "it"
         }
       ],
@@ -389,7 +389,7 @@
         {
           "id": "159",
           "title": "Preparazione per l'Outdoor a El Chalten",
-          "description": "<p>Il secondo giorno ci occuperemo di gestire tutta la fase logistica di questo viaggio fotografico in Patagonia; faremo spesa con viveri e gas per i fornelli, faremo un<span style=\"color:hsl(0, 0%, 0%);\"> discorso tecnico sulla preparazione dell'attrezzatura fotografica per il trekking al campo base del Fitz Roy del giorno successivo. Verso le 17 faremo un trekking di 2km per raggiungere Mirador del Paredón, con vista sulla città e sulle Cerro Torre e Fitz Roy al tramonto.&nbsp;</span></p>",
+          "description": "<p>Il secondo giorno ci occuperemo di gestire tutta la fase logistica di questo viaggio fotografico in Patagonia; faremo spesa con viveri e gas per i fornelli, faremo un discorso tecnico sulla preparazione dell'attrezzatura fotografica per il trekking al campo base del Fitz Roy del giorno successivo. Verso le 17 faremo un trekking di 2km per raggiungere Mirador del Paredón, con vista sulla città e sulle Cerro Torre e Fitz Roy al tramonto.</p>",
           "locale": "it"
         }
       ]

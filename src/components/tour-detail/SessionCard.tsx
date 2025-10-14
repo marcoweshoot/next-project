@@ -309,7 +309,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
                     size="lg"
                   >
                     <CreditCard className="w-4 h-4 mr-2" />
-                    PAGA ORA
+                    PRENOTA ORA
                   </Button>
                 )}
 
@@ -389,7 +389,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
                     className="w-full font-medium bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
                     <CreditCard className="w-4 h-4 mr-2" />
-                    PAGA ORA
+                    PRENOTA ORA
                   </Button>
                 )}
 
