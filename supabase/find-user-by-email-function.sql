@@ -7,7 +7,7 @@
 CREATE OR REPLACE FUNCTION find_user_by_email(user_email TEXT)
 RETURNS TABLE (
   id UUID,
-  email TEXT,
+  email VARCHAR,
   first_name TEXT,
   last_name TEXT
 ) AS $$
@@ -26,9 +26,9 @@ BEGIN
   RETURN QUERY
   SELECT 
     u.id,
-    u.email,
-    p.first_name,
-    p.last_name
+    u.email::VARCHAR,
+    COALESCE(p.first_name, '')::TEXT,
+    COALESCE(p.last_name, '')::TEXT
   FROM auth.users u
   LEFT JOIN profiles p ON p.id = u.id
   WHERE u.email = user_email;
