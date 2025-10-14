@@ -19,40 +19,51 @@ export function GoogleAuthButton({ mode, onSuccess, onError }: GoogleAuthButtonP
     try {
       setLoading(true)
       
-      // Detect if we're on mobile
+      // Detect Safari and mobile devices
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      const isSafariMobile = /iPhone|iPad|iPod/.test(navigator.userAgent) && /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)
       
+      console.log('🔍 Auth detection:', { isSafari, isMobile, isSafariMobile, userAgent: navigator.userAgent })
+      
+      // Per Safari, usiamo sempre redirect manuale
+      const shouldUseManualRedirect = isSafari || isSafariMobile || isMobile
       
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
           redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || window.location.origin}/auth/callback`,
-          // Mobile-specific options
-          ...(isMobile && {
+          // Safari and mobile-specific options
+          ...(shouldUseManualRedirect ? {
             queryParams: {
               access_type: 'offline',
               prompt: 'consent',
             }
-          })
+          } : {})
         }
       })
 
       if (error) {
+        console.error('❌ Google Auth Error:', error)
         onError?.(error.message)
       } else {
-        if (isMobile) {
-          // Mobile: redirect manuale per evitare problemi di popup/redirect automatico
+        // Safari e mobile: redirect manuale per evitare problemi
+        if (shouldUseManualRedirect) {
+          console.log('🔍 Safari/Mobile detected, using manual redirect')
           if (data.url) {
+            // Per Safari, usiamo window.location.href per evitare problemi di popup
             window.location.href = data.url
           } else {
             onError?.('URL di redirect non disponibile')
           }
         } else {
           // Desktop: comportamento normale (redirect automatico)
+          console.log('🔍 Desktop detected, using automatic redirect')
           onSuccess?.()
         }
       }
     } catch (err) {
+      console.error('❌ Google Auth Exception:', err)
       onError?.('Errore durante l\'autenticazione con Google')
     } finally {
       setLoading(false)
@@ -60,6 +71,9 @@ export function GoogleAuthButton({ mode, onSuccess, onError }: GoogleAuthButtonP
   }
 
   const buttonText = mode === 'signin' ? 'Accedi con Google' : 'Registrati con Google'
+  
+  // Detect Safari per mostrare messaggio informativo
+  const isSafari = typeof window !== 'undefined' && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
   return (
     <Button
