@@ -39,8 +39,14 @@ function ResetPasswordForm() {
   const supabase = createClient()
 
   useEffect(() => {
+    // Log immediato per verificare che la pagina si carichi
+    console.log('🔍 Reset password page loaded!')
+    console.log('📍 Current URL:', window.location.href)
+    console.log('🔍 Search params:', Object.fromEntries(searchParams.entries()))
+    
     const checkSession = async () => {
       try {
+        console.log('🔍 Starting session check...')
         const { data: { session } } = await supabase.auth.getSession()
         
         if (session) {
@@ -65,7 +71,7 @@ function ResetPasswordForm() {
           }
           
           // Debug logging
-          console.log('Reset password tokens:', { 
+          console.log('🔍 Reset password tokens:', { 
             hasAccessToken: !!accessToken, 
             hasRefreshToken: !!refreshToken,
             cookies: document.cookie,
@@ -76,6 +82,9 @@ function ResetPasswordForm() {
             currentUrl: window.location.href,
             searchParams: Object.fromEntries(searchParams.entries())
           })
+          
+          // Alert visibile per debug (rimuovere dopo test)
+          alert(`DEBUG: AccessToken: ${!!accessToken}, RefreshToken: ${!!refreshToken}`)
           
           if (accessToken && refreshToken) {
             // Verifica che i token siano validi ma NON creare la sessione
