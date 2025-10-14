@@ -2,6 +2,9 @@
 -- FUNZIONE RPC PER CERCARE UTENTI PER EMAIL
 -- =============================================
 
+-- Prima elimina la funzione esistente se presente
+DROP FUNCTION IF EXISTS find_user_by_email(TEXT);
+
 -- Crea una funzione RPC che permette di cercare utenti per email
 -- Questa funzione può essere chiamata solo dal service role o da super admin
 CREATE OR REPLACE FUNCTION find_user_by_email(user_email TEXT)
