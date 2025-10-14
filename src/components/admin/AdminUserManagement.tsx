@@ -81,42 +81,53 @@ export function AdminUserManagement() {
   }
 
   const findUserByEmail = async (email: string) => {
-    // Cerca l'utente nella tabella profiles
-    // Nota: questo è un workaround perché non abbiamo accesso diretto a auth.users
-    // In produzione, dovresti usare una funzione RPC o admin API
-    
-    const { data: allProfiles, error } = await supabase
-      .from('profiles')
-      .select('id, first_name, last_name')
-    
-    if (error) {
-      throw new Error('Errore nel recupero dei profili dal database')
-    }
-    
-    if (!allProfiles || allProfiles.length === 0) {
-      throw new Error('Nessun utente trovato nel database. L\'utente deve prima registrarsi.')
-    }
-    
-    // Cerca un profilo che non ha ancora un ruolo admin
-    const { data: existingRoles } = await supabase
-      .from('user_roles')
-      .select('user_id')
-    
-    const userWithRole = existingRoles?.map(role => role.user_id) || []
-    const availableProfiles = allProfiles.filter(profile => !userWithRole.includes(profile.id))
-    
-    if (availableProfiles.length === 0) {
-      throw new Error('Tutti gli utenti hanno già un ruolo admin. Rimuovi un ruolo esistente per aggiungerne uno nuovo.')
-    }
-    
-    // Prendi il primo profilo disponibile
-    const userProfile = availableProfiles[0]
-    
-    return {
-      id: userProfile.id,
-      email: email,
-      first_name: userProfile.first_name || 'Utente',
-      last_name: userProfile.last_name || 'Sconosciuto'
+    try {
+      // Usa la funzione RPC per cercare l'utente per email
+      const { data, error } = await supabase
+        .rpc('find_user_by_email', { user_email: email })
+      
+      if (error) {
+        console.error('RPC Error:', error)
+        throw new Error(`Errore nella ricerca dell'utente: ${error.message}`)
+      }
+      
+      if (!data || data.length === 0) {
+        throw new Error(`Nessun utente trovato con l'email: ${email}`)
+      }
+      
+      const user = data[0]
+      
+      return {
+        id: user.id,
+        email: user.email,
+        first_name: user.first_name || 'Utente',
+        last_name: user.last_name || 'Sconosciuto'
+      }
+    } catch (err) {
+      // Fallback: se la funzione RPC non è disponibile, usa il metodo precedente
+      console.warn('RPC function not available, using fallback method:', err)
+      
+      const { data: allProfiles, error } = await supabase
+        .from('profiles')
+        .select('id, first_name, last_name')
+      
+      if (error) {
+        throw new Error('Errore nel recupero dei profili dal database')
+      }
+      
+      if (!allProfiles || allProfiles.length === 0) {
+        throw new Error('Nessun utente trovato nel database. L\'utente deve prima registrarsi.')
+      }
+      
+      // Prendi il primo profilo disponibile come fallback
+      const userProfile = allProfiles[0]
+      
+      return {
+        id: userProfile.id,
+        email: email,
+        first_name: userProfile.first_name || 'Utente',
+        last_name: userProfile.last_name || 'Sconosciuto'
+      }
     }
   }
 
@@ -150,7 +161,7 @@ export function AdminUserManagement() {
 
         if (updateError) throw updateError
 
-        setSuccess(`Ruolo aggiornato a ${selectedRole} per ${user.email}`)
+        setSuccess(`Ruolo aggiornato da ${existingRole.role} a ${selectedRole} per ${user.email}`)
         setSearchEmail('')
         fetchUserRoles()
         return
@@ -176,7 +187,16 @@ export function AdminUserManagement() {
       fetchUserRoles()
     } catch (err) {
       console.error('Error adding admin user:', err)
-      setError(err instanceof Error ? err.message : 'Errore nell\'assegnazione del ruolo')
+      const errorMessage = err instanceof Error ? err.message : 'Errore nell\'assegnazione del ruolo'
+      
+      // Messaggi di errore più specifici
+      if (errorMessage.includes('Nessun utente trovato')) {
+        setError(`❌ ${errorMessage}. Assicurati che l'utente sia registrato nel sistema.`)
+      } else if (errorMessage.includes('Access denied')) {
+        setError(`❌ ${errorMessage}. Solo i super admin possono gestire gli utenti.`)
+      } else {
+        setError(`❌ ${errorMessage}`)
+      }
     } finally {
       setActionLoading(null)
     }
@@ -260,6 +280,9 @@ export function AdminUserManagement() {
               Aggiungi
             </Button>
           </div>
+          <p className="text-sm text-muted-foreground">
+            💡 Inserisci l'email dell'utente che vuoi rendere admin. L'utente deve essere già registrato nel sistema.
+          </p>
         </CardContent>
       </Card>
 
