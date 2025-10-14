@@ -93,6 +93,16 @@ function ResetPasswordForm() {
           // Alert visibile per debug (rimuovere dopo test)
           alert(`DEBUG: AccessToken: ${!!accessToken}, RefreshToken: ${!!refreshToken}, Code: ${!!code}`)
           
+          // Log dettagliato per debug
+          console.log('🔍 DEBUG DETAILS:', {
+            accessToken: accessToken ? `${accessToken.substring(0, 20)}...` : null,
+            refreshToken: refreshToken ? `${refreshToken.substring(0, 20)}...` : null,
+            code: code ? `${code.substring(0, 20)}...` : null,
+            allCookies: document.cookie,
+            searchParams: Object.fromEntries(searchParams.entries()),
+            currentUrl: window.location.href
+          })
+          
           // Se abbiamo access_token e refresh_token (formato vecchio)
           if (accessToken && refreshToken) {
             // Verifica che i token siano validi ma NON creare la sessione
@@ -119,7 +129,7 @@ function ResetPasswordForm() {
             // Il code verrà usato per verificare la password durante l'update
             try {
               // Verifica che il code sia valido (non crea sessione)
-              const { data, error } = await supabase.auth.verifyOtp({
+              const { error } = await supabase.auth.verifyOtp({
                 token_hash: code,
                 type: 'recovery'
               })
@@ -224,24 +234,36 @@ function ResetPasswordForm() {
       }
       // Se abbiamo un code (formato nuovo)
       else if (code) {
-        // Per il formato nuovo con code, usiamo verifyOtp per verificare e aggiornare la password
-        const { data, error } = await supabase.auth.verifyOtp({
+        console.log('🔍 Using CODE format for password reset:', { code: `${code.substring(0, 20)}...` })
+        
+        // Per il formato nuovo con code, prima verifichiamo il code e poi aggiorniamo la password
+        const { data: verifyData, error: verifyError } = await supabase.auth.verifyOtp({
           token_hash: code,
-          type: 'recovery',
-          password: password
+          type: 'recovery'
         })
         
-        if (error) {
-          setError(error.message)
+        console.log('🔍 Code verification result:', { verifyData, verifyError })
+        
+        if (verifyError) {
+          setError(verifyError.message)
         } else {
-          // Pulisci il cookie di reset per sicurezza
-          document.cookie = 'reset_code=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/auth/reset-password;'
+          // Ora che il code è verificato, aggiorna la password
+          const { error: updateError } = await supabase.auth.updateUser({
+            password: password
+          })
           
-          setSuccess(true)
-          // Redirect to dashboard after 3 seconds
-          setTimeout(() => {
-            router.push('/dashboard')
-          }, 3000)
+          if (updateError) {
+            setError(updateError.message)
+          } else {
+            // Pulisci il cookie di reset per sicurezza
+            document.cookie = 'reset_code=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/auth/reset-password;'
+            
+            setSuccess(true)
+            // Redirect to dashboard after 3 seconds
+            setTimeout(() => {
+              router.push('/dashboard')
+            }, 3000)
+          }
         }
       } else {
         setError('Token o codice mancanti. Riprova con un nuovo link.')
@@ -397,7 +419,7 @@ function ResetPasswordForm() {
             {/* Logo */}
             <div className="flex justify-center">
               <Image
-                src="/lovable-uploads/logo-dark.svg"
+                src="/lovable-uploads/logo-light.svg"
                 alt="WeShoot"
                 width={200}
                 height={60}
