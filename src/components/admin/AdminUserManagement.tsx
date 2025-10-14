@@ -66,10 +66,14 @@ export function AdminUserManagement() {
       if (profilesError) throw profilesError
 
       // Combina i dati
-      const combinedData = rolesData?.map(role => ({
-        ...role,
-        profiles: profilesData?.find(profile => profile.id === role.user_id)
-      })) || []
+      const combinedData = rolesData?.map(role => {
+        const profile = profilesData?.find(profile => profile.id === role.user_id)
+        console.log(`User ${role.user_id} profile:`, profile)
+        return {
+          ...role,
+          profiles: profile
+        }
+      }) || []
 
       setUserRoles(combinedData)
     } catch (err) {
@@ -304,9 +308,23 @@ export function AdminUserManagement() {
       {/* Current Admin Users */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Shield className="w-5 h-5" />
-            Utenti Admin Attuali
+          <CardTitle className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Shield className="w-5 h-5" />
+              Utenti Admin Attuali
+            </div>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick={fetchUserRoles}
+              disabled={loading}
+            >
+              {loading ? (
+                <Loader2 className="w-4 h-4 animate-spin" />
+              ) : (
+                <Search className="w-4 h-4" />
+              )}
+            </Button>
           </CardTitle>
           <CardDescription>
             Lista degli utenti con privilegi amministrativi
@@ -331,7 +349,9 @@ export function AdminUserManagement() {
                       <p className="font-medium">
                         {userRole.profiles?.first_name && userRole.profiles?.last_name 
                           ? `${userRole.profiles.first_name} ${userRole.profiles.last_name}`
-                          : 'Nome non disponibile'
+                          : userRole.profiles?.first_name 
+                          ? userRole.profiles.first_name
+                          : `Utente ${userRole.user_id.slice(0, 8)}...`
                         }
                       </p>
                       <p className="text-sm text-muted-foreground">

@@ -17,6 +17,39 @@ export async function middleware(req: NextRequest) {
   // Passa il nonce all'app (lo leggerai in app/layout.tsx con headers())
   res.headers.set("x-nonce", nonce);
 
+  // Gestione parametri di reset password per sicurezza
+  if (req.nextUrl.pathname === '/auth/reset-password') {
+    const accessToken = req.nextUrl.searchParams.get('access_token');
+    const refreshToken = req.nextUrl.searchParams.get('refresh_token');
+    
+    // Se ci sono token nella URL, rimuovili per sicurezza e salvali in cookie
+    if (accessToken && refreshToken) {
+      const url = new URL(req.url);
+      url.searchParams.delete('access_token');
+      url.searchParams.delete('refresh_token');
+      
+      // Imposta cookie sicuri per i token (httponly, secure, sameSite)
+      res.cookies.set('reset_access_token', accessToken, {
+        httpOnly: true,
+        secure: !isDev,
+        sameSite: 'lax',
+        maxAge: 300, // 5 minuti
+        path: '/auth/reset-password'
+      });
+      
+      res.cookies.set('reset_refresh_token', refreshToken, {
+        httpOnly: true,
+        secure: !isDev,
+        sameSite: 'lax',
+        maxAge: 300, // 5 minuti
+        path: '/auth/reset-password'
+      });
+      
+      // Redirect alla stessa pagina senza parametri URL
+      return NextResponse.redirect(url);
+    }
+  }
+
   const csp = [
     "default-src 'self'",
     // niente 'unsafe-inline': consentiamo solo script con nonce (+ strict-dynamic)

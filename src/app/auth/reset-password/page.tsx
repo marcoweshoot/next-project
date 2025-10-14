@@ -46,21 +46,33 @@ function ResetPasswordForm() {
         if (session) {
           setIsValidSession(true)
         } else {
-          // Check if we have the access_token and refresh_token in URL
-          const accessToken = searchParams.get('access_token')
-          const refreshToken = searchParams.get('refresh_token')
+          // Check if we have the access_token and refresh_token in cookies (more secure)
+          const accessToken = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('reset_access_token='))
+            ?.split('=')[1]
+          const refreshToken = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('reset_refresh_token='))
+            ?.split('=')[1]
           
           if (accessToken && refreshToken) {
-            const { error } = await supabase.auth.setSession({
-              access_token: accessToken,
-              refresh_token: refreshToken,
-            })
-            
-            if (error) {
-              setError('Link di reset non valido o scaduto')
+            // Verifica che i token siano validi ma NON creare la sessione
+            // La sessione verrà creata solo dopo l'inserimento della nuova password
+            try {
+              // Verifica che i token siano validi senza crearli
+              const { error: verifyError } = await supabase.auth.getUser(accessToken)
+              
+              if (verifyError) {
+                setError('Link di reset non valido o scaduto')
+                setIsValidSession(false)
+              } else {
+                // Token validi, ma non creare sessione - richiedi nuova password
+                setIsValidSession(true)
+              }
+            } catch {
+              setError('Link di reset non valido')
               setIsValidSession(false)
-            } else {
-              setIsValidSession(true)
             }
           } else {
             setError('Link di reset non valido')
@@ -95,18 +107,48 @@ function ResetPasswordForm() {
     }
 
     try {
-      const { error } = await supabase.auth.updateUser({
-        password: password
-      })
+      // Prima crea la sessione con i token dai cookie (più sicuro)
+      const accessToken = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('reset_access_token='))
+        ?.split('=')[1]
+      const refreshToken = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('reset_refresh_token='))
+        ?.split('=')[1]
+      
+      if (accessToken && refreshToken) {
+        // Crea la sessione temporanea per poter aggiornare la password
+        const { error: sessionError } = await supabase.auth.setSession({
+          access_token: accessToken,
+          refresh_token: refreshToken,
+        })
+        
+        if (sessionError) {
+          setError('Sessione non valida. Riprova con un nuovo link.')
+          return
+        }
+        
+        // Ora aggiorna la password
+        const { error } = await supabase.auth.updateUser({
+          password: password
+        })
 
-      if (error) {
-        setError(error.message)
+        if (error) {
+          setError(error.message)
+        } else {
+          // Pulisci i cookie di reset per sicurezza
+          document.cookie = 'reset_access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/auth/reset-password;'
+          document.cookie = 'reset_refresh_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/auth/reset-password;'
+          
+          setSuccess(true)
+          // Redirect to dashboard after 3 seconds
+          setTimeout(() => {
+            router.push('/dashboard')
+          }, 3000)
+        }
       } else {
-        setSuccess(true)
-        // Redirect to dashboard after 3 seconds
-        setTimeout(() => {
-          router.push('/dashboard')
-        }, 3000)
+        setError('Token mancanti. Riprova con un nuovo link.')
       }
     } catch {
       setError('Si è verificato un errore durante l\'aggiornamento della password')
