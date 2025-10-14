@@ -23,53 +23,49 @@ export default function AuthCallbackPage() {
         if (data.session) {
           const user = data.session.user
           
-          // Check if this is a new user (created in the last few seconds)
-          const isNewUser = user.created_at && 
-            new Date(user.created_at).getTime() > (Date.now() - 10000) // 10 seconds ago
+          // ALWAYS check if user has a profile (not just new users)
+          const { data: profile, error: profileError } = await supabase
+            .from('profiles')
+            .select('id')
+            .eq('id', user.id)
+            .single()
           
-          if (isNewUser) {
-            // Check if user has a profile
-            const { data: profile, error: profileError } = await supabase
-              .from('profiles')
-              .select('id')
-              .eq('id', user.id)
-              .single()
-            
-            if (profileError || !profile) {
-              // New user without profile - create profile automatically
-              try {
-                const { error: createProfileError } = await supabase
-                  .from('profiles')
-                  .insert({
-                    id: user.id,
-                    email: user.email || '',
-                    first_name: user.user_metadata?.first_name || user.user_metadata?.given_name || '',
-                    last_name: user.user_metadata?.last_name || user.user_metadata?.family_name || '',
-                    full_name: user.user_metadata?.full_name || user.user_metadata?.name || '',
-                    avatar_url: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
-                    country: 'IT',
-                    created_at: new Date().toISOString(),
-                    updated_at: new Date().toISOString()
-                  })
-                
-                if (createProfileError) {
-                  console.error('Auto profile creation failed:', createProfileError)
-                  // Fallback: redirect to confirmation page
-                  router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
-                  return
-                }
-                
-                console.log('Profile created automatically for new user:', user.id)
-              } catch (err) {
-                console.error('Error creating profile:', err)
+          if (profileError || !profile) {
+            // User without profile - create profile automatically
+            try {
+              console.log('Creating missing profile for user:', user.id, user.email)
+              
+              const { error: createProfileError } = await supabase
+                .from('profiles')
+                .insert({
+                  id: user.id,
+                  email: user.email || '',
+                  first_name: user.user_metadata?.first_name || user.user_metadata?.given_name || '',
+                  last_name: user.user_metadata?.last_name || user.user_metadata?.family_name || '',
+                  full_name: user.user_metadata?.full_name || user.user_metadata?.name || '',
+                  avatar_url: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
+                  country: 'IT',
+                  created_at: new Date().toISOString(),
+                  updated_at: new Date().toISOString()
+                })
+              
+              if (createProfileError) {
+                console.error('Auto profile creation failed:', createProfileError)
                 // Fallback: redirect to confirmation page
                 router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
                 return
               }
+              
+              console.log('Profile created automatically for user:', user.id)
+            } catch (err) {
+              console.error('Error creating profile:', err)
+              // Fallback: redirect to confirmation page
+              router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
+              return
             }
           }
           
-          // Existing user or new user with profile - go to dashboard
+          // User with profile - go to dashboard
           router.push('/dashboard')
         } else {
           // No session, redirect to login
