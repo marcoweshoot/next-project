@@ -22,11 +22,14 @@ export async function middleware(req: NextRequest) {
     const accessToken = req.nextUrl.searchParams.get('access_token');
     const refreshToken = req.nextUrl.searchParams.get('refresh_token');
     
-    console.log('Middleware: Reset password request detected', {
+    // Log che apparirà nei log di Vercel
+    console.log('🚨 MIDDLEWARE: Reset password request detected', {
       pathname: req.nextUrl.pathname,
       hasAccessToken: !!accessToken,
       hasRefreshToken: !!refreshToken,
-      url: req.url
+      url: req.url,
+      userAgent: req.headers.get('user-agent'),
+      timestamp: new Date().toISOString()
     });
     
     // Se ci sono token nella URL, rimuovili per sicurezza e salvali in cookie
@@ -56,7 +59,7 @@ export async function middleware(req: NextRequest) {
       // Redirect alla stessa pagina senza parametri URL
       return NextResponse.redirect(url);
     } else {
-      console.log('Middleware: No reset tokens found in URL');
+      console.log('🚨 MIDDLEWARE: No reset tokens found in URL - this is the problem!');
     }
   }
 
