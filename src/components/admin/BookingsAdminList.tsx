@@ -315,12 +315,15 @@ export function BookingsAdminList() {
 
   const getStatusBadge = (status: string) => {
     const variants = {
+      pending: { icon: Clock, text: 'In Attesa', className: 'bg-gray-500/15 text-gray-700 dark:text-gray-300 ring-1 ring-gray-500/30' },
       deposit_paid: { icon: CheckCircle, text: 'Acconto Pagato', className: 'bg-blue-500/15 text-blue-700 dark:text-blue-300 ring-1 ring-blue-500/30' },
       fully_paid: { icon: CheckCircle, text: 'Pagato Completamente', className: 'bg-green-500/15 text-green-700 dark:text-green-300 ring-1 ring-green-500/30' },
+      completed: { icon: CheckCircle, text: 'Completato', className: 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-500/30' },
+      cancelled: { icon: XCircle, text: 'Rimborsato', className: 'bg-red-500/15 text-red-700 dark:text-red-300 ring-1 ring-red-500/30' },
       refunded: { icon: XCircle, text: 'Rimborsato', className: 'bg-orange-500/15 text-orange-700 dark:text-orange-300 ring-1 ring-orange-500/30' },
     }
 
-    const variant = variants[status as keyof typeof variants] || variants.deposit_paid
+    const variant = variants[status as keyof typeof variants] || { icon: AlertCircle, text: 'Sconosciuto', className: 'bg-gray-500/15 text-gray-700 dark:text-gray-300 ring-1 ring-gray-500/30' }
     const Icon = variant.icon
 
     return (
