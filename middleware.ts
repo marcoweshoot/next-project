@@ -28,9 +28,9 @@ export async function middleware(req: NextRequest) {
       url.searchParams.delete('access_token');
       url.searchParams.delete('refresh_token');
       
-      // Imposta cookie sicuri per i token (httponly, secure, sameSite)
+      // Imposta cookie sicuri per i token (non httpOnly per permettere lettura JS)
       res.cookies.set('reset_access_token', accessToken, {
-        httpOnly: true,
+        httpOnly: false, // Permette a JavaScript di leggerli
         secure: !isDev,
         sameSite: 'lax',
         maxAge: 300, // 5 minuti
@@ -38,7 +38,7 @@ export async function middleware(req: NextRequest) {
       });
       
       res.cookies.set('reset_refresh_token', refreshToken, {
-        httpOnly: true,
+        httpOnly: false, // Permette a JavaScript di leggerli
         secure: !isDev,
         sameSite: 'lax',
         maxAge: 300, // 5 minuti

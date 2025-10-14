@@ -47,14 +47,33 @@ function ResetPasswordForm() {
           setIsValidSession(true)
         } else {
           // Check if we have the access_token and refresh_token in cookies (more secure)
-          const accessToken = document.cookie
+          // Fallback: also check URL params in case middleware hasn't processed yet
+          let accessToken = document.cookie
             .split('; ')
             .find(row => row.startsWith('reset_access_token='))
             ?.split('=')[1]
-          const refreshToken = document.cookie
+          let refreshToken = document.cookie
             .split('; ')
             .find(row => row.startsWith('reset_refresh_token='))
             ?.split('=')[1]
+          
+          // Fallback: check URL params if cookies not found
+          if (!accessToken || !refreshToken) {
+            console.log('Tokens not found in cookies, checking URL params...')
+            accessToken = searchParams.get('access_token')
+            refreshToken = searchParams.get('refresh_token')
+          }
+          
+          // Debug logging
+          console.log('Reset password tokens:', { 
+            hasAccessToken: !!accessToken, 
+            hasRefreshToken: !!refreshToken,
+            cookies: document.cookie,
+            urlParams: {
+              access_token: searchParams.get('access_token'),
+              refresh_token: searchParams.get('refresh_token')
+            }
+          })
           
           if (accessToken && refreshToken) {
             // Verifica che i token siano validi ma NON creare la sessione
@@ -108,14 +127,21 @@ function ResetPasswordForm() {
 
     try {
       // Prima crea la sessione con i token dai cookie (più sicuro)
-      const accessToken = document.cookie
+      // Fallback: anche controllare URL params
+      let accessToken = document.cookie
         .split('; ')
         .find(row => row.startsWith('reset_access_token='))
         ?.split('=')[1]
-      const refreshToken = document.cookie
+      let refreshToken = document.cookie
         .split('; ')
         .find(row => row.startsWith('reset_refresh_token='))
         ?.split('=')[1]
+      
+      // Fallback: check URL params if cookies not found
+      if (!accessToken || !refreshToken) {
+        accessToken = searchParams.get('access_token')
+        refreshToken = searchParams.get('refresh_token')
+      }
       
       if (accessToken && refreshToken) {
         // Crea la sessione temporanea per poter aggiornare la password
