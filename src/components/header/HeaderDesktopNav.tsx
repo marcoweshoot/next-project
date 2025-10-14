@@ -151,7 +151,7 @@ const HeaderDesktopNav: React.FC<HeaderDesktopNavProps> = ({ isScrolled }) => {
         <ThemeToggleLazy />
         <Button
           asChild
-          className="bg-red-600 text-white hover:bg-red-700 focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors duration-200 text-sm xl:text-base"
+          className="bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors duration-200 text-sm xl:text-base"
         >
           <Link href="/viaggi-fotografici/" prefetch={false}>
             <span className="hidden xl:inline">Scopri i Viaggi</span>

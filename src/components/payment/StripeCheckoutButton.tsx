@@ -98,7 +98,7 @@ export function StripeCheckoutButton({
     <Button
       onClick={handleCheckout}
       disabled={loading}
-      className="w-full bg-red-600 hover:bg-red-700 text-white"
+      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
     >
       {loading ? (
         <>

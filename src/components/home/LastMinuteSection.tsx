@@ -46,7 +46,7 @@ const LastMinuteSection: React.FC<Props> = ({ tours, daysAhead = 60 }) => {
           <Button
             size="lg"
             asChild
-            className="bg-red-600 text-primary-foreground hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background font-semibold px-8 py-4 rounded-full shadow-md transition"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background font-semibold px-8 py-4 rounded-full shadow-md transition"
           >
             <Link href="/viaggi-fotografici/calendario" aria-label="Vai alla pagina calendario viaggi">
               Vedi Tutti i Viaggi

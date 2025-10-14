@@ -17,14 +17,14 @@ const CoursesCTA: React.FC = () => {
             href="https://accademia.weshoot.it/wp-login"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
           >
             Accedi all'Accademia
           </a>
 
           <Link
             href="/viaggi-fotografici"
-            className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
           >
             Scopri i Viaggi
           </Link>

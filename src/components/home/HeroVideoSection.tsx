@@ -116,7 +116,7 @@ const HeroVideoSection: React.FC = () => {
 
           <Button
             size="lg"
-            className="text-lg px-12 py-4 bg-red-600 text-white font-semibold rounded-lg shadow-xl hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+            className="text-lg px-12 py-4 bg-primary text-primary-foreground font-semibold rounded-lg shadow-xl hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
             asChild
           >
             <Link href="/viaggi-fotografici">Vedi partenze</Link>
