@@ -72,7 +72,9 @@ function ResetPasswordForm() {
             urlParams: {
               access_token: searchParams.get('access_token'),
               refresh_token: searchParams.get('refresh_token')
-            }
+            },
+            currentUrl: window.location.href,
+            searchParams: Object.fromEntries(searchParams.entries())
           })
           
           if (accessToken && refreshToken) {

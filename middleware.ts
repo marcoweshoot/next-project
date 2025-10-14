@@ -22,8 +22,16 @@ export async function middleware(req: NextRequest) {
     const accessToken = req.nextUrl.searchParams.get('access_token');
     const refreshToken = req.nextUrl.searchParams.get('refresh_token');
     
+    console.log('Middleware: Reset password request detected', {
+      pathname: req.nextUrl.pathname,
+      hasAccessToken: !!accessToken,
+      hasRefreshToken: !!refreshToken,
+      url: req.url
+    });
+    
     // Se ci sono token nella URL, rimuovili per sicurezza e salvali in cookie
     if (accessToken && refreshToken) {
+      console.log('Middleware: Setting cookies for reset tokens');
       const url = new URL(req.url);
       url.searchParams.delete('access_token');
       url.searchParams.delete('refresh_token');
@@ -47,6 +55,8 @@ export async function middleware(req: NextRequest) {
       
       // Redirect alla stessa pagina senza parametri URL
       return NextResponse.redirect(url);
+    } else {
+      console.log('Middleware: No reset tokens found in URL');
     }
   }
 
