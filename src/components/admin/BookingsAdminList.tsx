@@ -91,6 +91,15 @@ export function BookingsAdminList() {
   const [bookings, setBookings] = useState<Booking[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [pagination, setPagination] = useState({
+    page: 1,
+    limit: 20,
+    total: 0,
+    totalPages: 0,
+    hasNext: false,
+    hasPrev: false
+  })
   const [success, setSuccess] = useState<string | null>(null)
   const [expandedBooking, setExpandedBooking] = useState<string | null>(null)
   
@@ -122,12 +131,12 @@ export function BookingsAdminList() {
     fetchBookings()
   }, [])
 
-  const fetchBookings = async () => {
+  const fetchBookings = async (page: number = currentPage) => {
     try {
       setLoading(true)
       setError(null)
       
-      const response = await fetch('/api/admin/bookings')
+      const response = await fetch(`/api/admin/bookings?page=${page}&limit=20`)
       const result = await response.json()
 
       if (!response.ok) {
@@ -135,6 +144,15 @@ export function BookingsAdminList() {
       }
 
       setBookings(result.bookings || [])
+      setPagination(result.pagination || {
+        page: 1,
+        limit: 20,
+        total: 0,
+        totalPages: 0,
+        hasNext: false,
+        hasPrev: false
+      })
+      setCurrentPage(page)
     } catch (err) {
       console.error('Error fetching bookings:', err)
       setError(err instanceof Error ? err.message : 'Errore nel caricamento delle prenotazioni')
@@ -1068,6 +1086,57 @@ export function BookingsAdminList() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+
+      {/* Pagination Controls */}
+      {pagination.totalPages > 1 && (
+        <Card className="mt-6">
+          <CardContent className="p-4">
+            <div className="flex items-center justify-between">
+              <div className="text-sm text-muted-foreground">
+                Mostrando {((pagination.page - 1) * pagination.limit) + 1} - {Math.min(pagination.page * pagination.limit, pagination.total)} di {pagination.total} prenotazioni
+              </div>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => fetchBookings(currentPage - 1)}
+                  disabled={!pagination.hasPrev || loading}
+                >
+                  <ChevronDown className="w-4 h-4 mr-1 rotate-90" />
+                  Precedente
+                </Button>
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: Math.min(5, pagination.totalPages) }, (_, i) => {
+                    const pageNum = Math.max(1, Math.min(pagination.totalPages - 4, pagination.page - 2)) + i
+                    if (pageNum > pagination.totalPages) return null
+                    return (
+                      <Button
+                        key={pageNum}
+                        variant={pageNum === pagination.page ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => fetchBookings(pageNum)}
+                        disabled={loading}
+                        className="w-8 h-8 p-0"
+                      >
+                        {pageNum}
+                      </Button>
+                    )
+                  })}
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => fetchBookings(currentPage + 1)}
+                  disabled={!pagination.hasNext || loading}
+                >
+                  Successiva
+                  <ChevronDown className="w-4 h-4 ml-1 -rotate-90" />
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Session Change Modal */}
       {selectedBooking && (
