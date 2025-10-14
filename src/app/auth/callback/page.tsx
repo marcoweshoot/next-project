@@ -36,9 +36,36 @@ export default function AuthCallbackPage() {
               .single()
             
             if (profileError || !profile) {
-              // New user without profile - redirect to confirmation page
-              router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
-              return
+              // New user without profile - create profile automatically
+              try {
+                const { error: createProfileError } = await supabase
+                  .from('profiles')
+                  .insert({
+                    id: user.id,
+                    email: user.email || '',
+                    first_name: user.user_metadata?.first_name || user.user_metadata?.given_name || '',
+                    last_name: user.user_metadata?.last_name || user.user_metadata?.family_name || '',
+                    full_name: user.user_metadata?.full_name || user.user_metadata?.name || '',
+                    avatar_url: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
+                    country: 'IT',
+                    created_at: new Date().toISOString(),
+                    updated_at: new Date().toISOString()
+                  })
+                
+                if (createProfileError) {
+                  console.error('Auto profile creation failed:', createProfileError)
+                  // Fallback: redirect to confirmation page
+                  router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
+                  return
+                }
+                
+                console.log('Profile created automatically for new user:', user.id)
+              } catch (err) {
+                console.error('Error creating profile:', err)
+                // Fallback: redirect to confirmation page
+                router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
+                return
+              }
             }
           }
           
