@@ -52,7 +52,7 @@ const AcademySection: FC = () => {
             <ul className="mb-8 space-y-4">
               {features.map((text, i) => (
                 <li key={i} className="flex items-start">
-                  <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-primary-foreground font-bold">
+                  <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
                     {i + 1}
                   </div>
                   <p className="text-base text-foreground">{text}</p>

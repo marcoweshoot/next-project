@@ -333,7 +333,7 @@ export function BookingDetails({ booking, userId }: BookingDetailsProps) {
         <CardContent className="space-y-4">
           <div className="flex gap-2 flex-wrap">
             {!paymentInfo.depositPaid && (
-              <Button className="bg-primary hover:bg-primary/90">
+              <Button className="bg-primary hover:bg-primary/90 font-semibold">
                 <CreditCard className="w-4 h-4 mr-2" />
                 Paga Acconto
               </Button>

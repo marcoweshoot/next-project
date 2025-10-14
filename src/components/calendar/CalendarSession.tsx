@@ -348,7 +348,7 @@ const CalendarSession: React.FC<CalendarSessionProps> = ({ session, isLast }) =>
         </div>
         <Button
           asChild
-          className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 md:px-6 py-2 text-sm md:text-base"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 md:px-6 py-2 text-sm md:text-base font-semibold"
         >
           <Link href={tourLink}>SCOPRI VIAGGIO</Link>
         </Button>

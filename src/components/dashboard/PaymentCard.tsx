@@ -271,7 +271,7 @@ export function PaymentCard({ tourId, bookings, tourInfo, isExpanded, onToggle }
                   {/* Actions */}
                   <div className="flex flex-col sm:flex-row gap-2 pt-4 border-t">
                     {!paymentInfo.depositPaid && (
-                      <Button size="sm" className="bg-primary hover:bg-primary/90">
+                      <Button size="sm" className="bg-primary hover:bg-primary/90 font-semibold">
                         <CreditCard className="w-4 h-4 mr-2" />
                         Paga Acconto
                       </Button>

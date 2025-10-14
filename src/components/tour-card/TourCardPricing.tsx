@@ -40,7 +40,7 @@ const TourCardPricing: React.FC<TourCardPricingProps> = ({
       {hasFutureSessions && (
         <Button
           asChild
-          className="flex-shrink-0 px-4 py-2 text-xs uppercase tracking-wide"
+          className="flex-shrink-0 px-4 py-2 text-xs uppercase tracking-wide font-semibold"
         >
           <span>Vedi viaggio</span>
         </Button>

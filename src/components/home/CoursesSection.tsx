@@ -61,7 +61,7 @@ const CoursesSection: FC<CoursesSectionProps> = ({ courses }) => {
           <Button
             size="lg"
             asChild
-            className="bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background font-semibold"
           >
             <Link href="/corsi-di-fotografia">Scopri Tutti i Corsi</Link>
           </Button>
