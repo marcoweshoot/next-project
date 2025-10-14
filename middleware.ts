@@ -21,20 +21,22 @@ export async function middleware(req: NextRequest) {
   if (req.nextUrl.pathname === '/auth/reset-password') {
     const accessToken = req.nextUrl.searchParams.get('access_token');
     const refreshToken = req.nextUrl.searchParams.get('refresh_token');
+    const code = req.nextUrl.searchParams.get('code');
     
     // Log che apparirà nei log di Vercel
     console.log('🚨 MIDDLEWARE: Reset password request detected', {
       pathname: req.nextUrl.pathname,
       hasAccessToken: !!accessToken,
       hasRefreshToken: !!refreshToken,
+      hasCode: !!code,
       url: req.url,
       userAgent: req.headers.get('user-agent'),
       timestamp: new Date().toISOString()
     });
     
-    // Se ci sono token nella URL, rimuovili per sicurezza e salvali in cookie
+    // Se ci sono token nella URL (formato vecchio), rimuovili per sicurezza e salvali in cookie
     if (accessToken && refreshToken) {
-      console.log('Middleware: Setting cookies for reset tokens');
+      console.log('Middleware: Setting cookies for reset tokens (old format)');
       const url = new URL(req.url);
       url.searchParams.delete('access_token');
       url.searchParams.delete('refresh_token');
@@ -58,8 +60,26 @@ export async function middleware(req: NextRequest) {
       
       // Redirect alla stessa pagina senza parametri URL
       return NextResponse.redirect(url);
+    } 
+    // Se c'è un code (formato nuovo), rimuovilo per sicurezza e salvalo in cookie
+    else if (code) {
+      console.log('Middleware: Setting cookie for reset code (new format)');
+      const url = new URL(req.url);
+      url.searchParams.delete('code');
+      
+      // Imposta cookie sicuro per il code (non httpOnly per permettere lettura JS)
+      res.cookies.set('reset_code', code, {
+        httpOnly: false, // Permette a JavaScript di leggerlo
+        secure: !isDev,
+        sameSite: 'lax',
+        maxAge: 300, // 5 minuti
+        path: '/auth/reset-password'
+      });
+      
+      // Redirect alla stessa pagina senza parametri URL
+      return NextResponse.redirect(url);
     } else {
-      console.log('🚨 MIDDLEWARE: No reset tokens found in URL - this is the problem!');
+      console.log('🚨 MIDDLEWARE: No reset tokens or code found in URL - this is the problem!');
     }
   }
 

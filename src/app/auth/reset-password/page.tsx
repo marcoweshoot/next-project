@@ -52,8 +52,8 @@ function ResetPasswordForm() {
         if (session) {
           setIsValidSession(true)
         } else {
-          // Check if we have the access_token and refresh_token in cookies (more secure)
-          // Fallback: also check URL params in case middleware hasn't processed yet
+          // Check if we have the access_token and refresh_token in cookies (formato vecchio)
+          // OR if we have a code in cookies (formato nuovo)
           let accessToken = document.cookie
             .split('; ')
             .find(row => row.startsWith('reset_access_token='))
@@ -62,30 +62,38 @@ function ResetPasswordForm() {
             .split('; ')
             .find(row => row.startsWith('reset_refresh_token='))
             ?.split('=')[1]
+          let code = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('reset_code='))
+            ?.split('=')[1]
           
           // Fallback: check URL params if cookies not found
           if (!accessToken || !refreshToken) {
             console.log('Tokens not found in cookies, checking URL params...')
             accessToken = searchParams.get('access_token')
             refreshToken = searchParams.get('refresh_token')
+            code = searchParams.get('code')
           }
           
           // Debug logging
-          console.log('🔍 Reset password tokens:', { 
+          console.log('🔍 Reset password parameters:', { 
             hasAccessToken: !!accessToken, 
             hasRefreshToken: !!refreshToken,
+            hasCode: !!code,
             cookies: document.cookie,
             urlParams: {
               access_token: searchParams.get('access_token'),
-              refresh_token: searchParams.get('refresh_token')
+              refresh_token: searchParams.get('refresh_token'),
+              code: searchParams.get('code')
             },
             currentUrl: window.location.href,
             searchParams: Object.fromEntries(searchParams.entries())
           })
           
           // Alert visibile per debug (rimuovere dopo test)
-          alert(`DEBUG: AccessToken: ${!!accessToken}, RefreshToken: ${!!refreshToken}`)
+          alert(`DEBUG: AccessToken: ${!!accessToken}, RefreshToken: ${!!refreshToken}, Code: ${!!code}`)
           
+          // Se abbiamo access_token e refresh_token (formato vecchio)
           if (accessToken && refreshToken) {
             // Verifica che i token siano validi ma NON creare la sessione
             // La sessione verrà creata solo dopo l'inserimento della nuova password
@@ -98,6 +106,29 @@ function ResetPasswordForm() {
                 setIsValidSession(false)
               } else {
                 // Token validi, ma non creare sessione - richiedi nuova password
+                setIsValidSession(true)
+              }
+            } catch {
+              setError('Link di reset non valido')
+              setIsValidSession(false)
+            }
+          }
+          // Se abbiamo un code (formato nuovo)
+          else if (code) {
+            // Per il formato nuovo con code, verifichiamo che il code sia valido
+            // Il code verrà usato per verificare la password durante l'update
+            try {
+              // Verifica che il code sia valido (non crea sessione)
+              const { data, error } = await supabase.auth.verifyOtp({
+                token_hash: code,
+                type: 'recovery'
+              })
+              
+              if (error) {
+                setError('Link di reset non valido o scaduto')
+                setIsValidSession(false)
+              } else {
+                // Code valido - richiedi nuova password
                 setIsValidSession(true)
               }
             } catch {
@@ -147,13 +178,19 @@ function ResetPasswordForm() {
         .split('; ')
         .find(row => row.startsWith('reset_refresh_token='))
         ?.split('=')[1]
+      let code = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('reset_code='))
+        ?.split('=')[1]
       
       // Fallback: check URL params if cookies not found
       if (!accessToken || !refreshToken) {
         accessToken = searchParams.get('access_token')
         refreshToken = searchParams.get('refresh_token')
+        code = searchParams.get('code')
       }
       
+      // Se abbiamo access_token e refresh_token (formato vecchio)
       if (accessToken && refreshToken) {
         // Crea la sessione temporanea per poter aggiornare la password
         const { error: sessionError } = await supabase.auth.setSession({
@@ -184,8 +221,30 @@ function ResetPasswordForm() {
             router.push('/dashboard')
           }, 3000)
         }
+      }
+      // Se abbiamo un code (formato nuovo)
+      else if (code) {
+        // Per il formato nuovo con code, usiamo verifyOtp per verificare e aggiornare la password
+        const { data, error } = await supabase.auth.verifyOtp({
+          token_hash: code,
+          type: 'recovery',
+          password: password
+        })
+        
+        if (error) {
+          setError(error.message)
+        } else {
+          // Pulisci il cookie di reset per sicurezza
+          document.cookie = 'reset_code=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/auth/reset-password;'
+          
+          setSuccess(true)
+          // Redirect to dashboard after 3 seconds
+          setTimeout(() => {
+            router.push('/dashboard')
+          }, 3000)
+        }
       } else {
-        setError('Token mancanti. Riprova con un nuovo link.')
+        setError('Token o codice mancanti. Riprova con un nuovo link.')
       }
     } catch {
       setError('Si è verificato un errore durante l\'aggiornamento della password')
