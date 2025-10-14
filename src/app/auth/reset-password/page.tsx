@@ -128,14 +128,27 @@ function ResetPasswordForm() {
             // Per il formato nuovo con code, verifichiamo che il code sia valido
             // Il code verrà usato per verificare la password durante l'update
             try {
+              console.log('🔍 Attempting to verify code:', {
+                codeLength: code.length,
+                codeStart: code.substring(0, 10),
+                codeEnd: code.substring(code.length - 10),
+                fullCode: code
+              })
+              
               // Verifica che il code sia valido (non crea sessione)
               const { error } = await supabase.auth.verifyOtp({
                 token_hash: code,
                 type: 'recovery'
               })
               
+              console.log('🔍 Verification result:', { error })
+              
               if (error) {
-                setError('Link di reset non valido o scaduto')
+                if (error.message.includes('expired') || error.message.includes('scaduto')) {
+                  setError('Il link di reset è scaduto. Richiedi un nuovo link.')
+                } else {
+                  setError('Link di reset non valido o scaduto')
+                }
                 setIsValidSession(false)
               } else {
                 // Code valido - richiedi nuova password
