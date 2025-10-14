@@ -291,7 +291,12 @@ const SessionCard: React.FC<SessionCardProps> = ({
               </div>
 
               <div className="space-y-3">
-                <Button onClick={openWhatsApp} className="w-full font-medium py-3" size="lg">
+                <Button 
+                  onClick={openWhatsApp} 
+                  variant="outline"
+                  className="w-full font-medium py-3 border-primary text-primary hover:bg-primary hover:text-primary-foreground" 
+                  size="lg"
+                >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {ctaLabel}
                 </Button>
@@ -300,7 +305,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 {showPaymentButton && (
                   <Button 
                     onClick={() => setIsQuickCheckoutOpen(true)}
-                    className="w-full font-medium py-3 bg-green-600 hover:bg-green-700 text-white" 
+                    className="w-full font-medium py-3 bg-primary hover:bg-primary/90 text-primary-foreground" 
                     size="lg"
                   >
                     <CreditCard className="w-4 h-4 mr-2" />
@@ -364,7 +369,11 @@ const SessionCard: React.FC<SessionCardProps> = ({
               <div className="mb-3 flex justify-end">{getStatusBadge(session.status)}</div>
 
               <div className="space-y-2">
-                <Button onClick={openWhatsApp} className="w-full font-medium">
+                <Button 
+                  onClick={openWhatsApp} 
+                  variant="outline"
+                  className="w-full font-medium border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {ctaLabel}
                 </Button>
@@ -377,7 +386,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 })() && (
                   <Button 
                     onClick={() => setIsQuickCheckoutOpen(true)}
-                    className="w-full font-medium bg-green-600 hover:bg-green-700 text-white"
+                    className="w-full font-medium bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
                     <CreditCard className="w-4 h-4 mr-2" />
                     PAGA ORA
