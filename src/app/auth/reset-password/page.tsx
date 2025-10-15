@@ -52,8 +52,12 @@ function ResetPasswordForm() {
         if (session) {
           setIsValidSession(true)
         } else {
-          // Check if we have the access_token and refresh_token in cookies (formato vecchio)
-          // OR if we have a code in cookies (formato nuovo)
+          // Check URL params for PKCE format (token and token_hash)
+          let token = searchParams.get('token')
+          let tokenHash = searchParams.get('token_hash')
+          let type = searchParams.get('type')
+          
+          // Fallback: check cookies for old format
           let accessToken = document.cookie
             .split('; ')
             .find(row => row.startsWith('reset_access_token='))
@@ -67,9 +71,9 @@ function ResetPasswordForm() {
             .find(row => row.startsWith('reset_code='))
             ?.split('=')[1]
           
-          // Fallback: check URL params if cookies not found
-          if (!accessToken || !refreshToken) {
-            console.log('Tokens not found in cookies, checking URL params...')
+          // Fallback: check URL params for old format if PKCE not found
+          if (!token && !tokenHash) {
+            console.log('PKCE tokens not found in URL, checking for old format...')
             accessToken = searchParams.get('access_token')
             refreshToken = searchParams.get('refresh_token')
             code = searchParams.get('code')
@@ -77,11 +81,17 @@ function ResetPasswordForm() {
           
           // Debug logging
           console.log('🔍 Reset password parameters:', { 
+            hasToken: !!token,
+            hasTokenHash: !!tokenHash,
+            hasType: !!type,
             hasAccessToken: !!accessToken, 
             hasRefreshToken: !!refreshToken,
             hasCode: !!code,
             cookies: document.cookie,
             urlParams: {
+              token: searchParams.get('token'),
+              token_hash: searchParams.get('token_hash'),
+              type: searchParams.get('type'),
               access_token: searchParams.get('access_token'),
               refresh_token: searchParams.get('refresh_token'),
               code: searchParams.get('code')
@@ -91,7 +101,8 @@ function ResetPasswordForm() {
           })
           
                 // Alert visibile per debug (rimuovere dopo test)
-                alert(`DEBUG: AccessToken: ${!!accessToken}, RefreshToken: ${!!refreshToken}, Code: ${!!code}
+                alert(`DEBUG PKCE: Token: ${!!token}, TokenHash: ${!!tokenHash}, Type: ${type}
+DEBUG Old: AccessToken: ${!!accessToken}, RefreshToken: ${!!refreshToken}, Code: ${!!code}
                 
 URL: ${window.location.href}
 Cookies: ${document.cookie}
@@ -99,6 +110,9 @@ Search Params: ${window.location.search}`)
           
           // Log dettagliato per debug
           console.log('🔍 DEBUG DETAILS:', {
+            token: token ? `${token.substring(0, 20)}...` : null,
+            tokenHash: tokenHash ? `${tokenHash.substring(0, 20)}...` : null,
+            type: type,
             accessToken: accessToken ? `${accessToken.substring(0, 20)}...` : null,
             refreshToken: refreshToken ? `${refreshToken.substring(0, 20)}...` : null,
             code: code ? `${code.substring(0, 20)}...` : null,
@@ -107,8 +121,41 @@ Search Params: ${window.location.search}`)
             currentUrl: window.location.href
           })
           
+          // Se abbiamo token e token_hash (formato PKCE)
+          if (token && tokenHash && type === 'recovery') {
+            console.log('🔍 Using PKCE format for verification:', {
+              tokenLength: token.length,
+              tokenHashLength: tokenHash.length,
+              type: type
+            })
+            
+            try {
+              // Per PKCE, verifichiamo il token_hash
+              const { error: verifyError } = await supabase.auth.verifyOtp({
+                token_hash: tokenHash,
+                type: 'recovery'
+              })
+              
+              console.log('🔍 PKCE verification result:', { verifyError })
+              
+              if (verifyError) {
+                if (verifyError.message.includes('expired') || verifyError.message.includes('scaduto')) {
+                  setError('Il link di reset è scaduto. Richiedi un nuovo link.')
+                } else {
+                  setError('Link di reset non valido o scaduto')
+                }
+                setIsValidSession(false)
+              } else {
+                // Token PKCE validi - richiedi nuova password
+                setIsValidSession(true)
+              }
+            } catch {
+              setError('Link di reset non valido')
+              setIsValidSession(false)
+            }
+          }
           // Se abbiamo access_token e refresh_token (formato vecchio)
-          if (accessToken && refreshToken) {
+          else if (accessToken && refreshToken) {
             // Verifica che i token siano validi ma NON creare la sessione
             // La sessione verrà creata solo dopo l'inserimento della nuova password
             try {
@@ -196,8 +243,12 @@ Search Params: ${window.location.search}`)
     }
 
     try {
-      // Prima crea la sessione con i token dai cookie (più sicuro)
-      // Fallback: anche controllare URL params
+      // Check URL params for PKCE format first
+      let token = searchParams.get('token')
+      let tokenHash = searchParams.get('token_hash')
+      let type = searchParams.get('type')
+      
+      // Fallback: check cookies for old format
       let accessToken = document.cookie
         .split('; ')
         .find(row => row.startsWith('reset_access_token='))
@@ -211,15 +262,50 @@ Search Params: ${window.location.search}`)
         .find(row => row.startsWith('reset_code='))
         ?.split('=')[1]
       
-      // Fallback: check URL params if cookies not found
-      if (!accessToken || !refreshToken) {
+      // Fallback: check URL params for old format if PKCE not found
+      if (!token && !tokenHash) {
         accessToken = searchParams.get('access_token')
         refreshToken = searchParams.get('refresh_token')
         code = searchParams.get('code')
       }
       
+      // Se abbiamo token e token_hash (formato PKCE)
+      if (token && tokenHash && type === 'recovery') {
+        console.log('🔍 Using PKCE format for password reset:', { 
+          token: `${token.substring(0, 20)}...`,
+          tokenHash: `${tokenHash.substring(0, 20)}...`,
+          type: type
+        })
+        
+        // Per PKCE, prima verifichiamo il token_hash e poi aggiorniamo la password
+        const { data: verifyData, error: verifyError } = await supabase.auth.verifyOtp({
+          token_hash: tokenHash,
+          type: 'recovery'
+        })
+        
+        console.log('🔍 PKCE verification result:', { verifyData, verifyError })
+        
+        if (verifyError) {
+          setError(verifyError.message)
+        } else {
+          // Ora che il token è verificato, aggiorna la password
+          const { error: updateError } = await supabase.auth.updateUser({
+            password: password
+          })
+          
+          if (updateError) {
+            setError(updateError.message)
+          } else {
+            setSuccess(true)
+            // Redirect to dashboard after 3 seconds
+            setTimeout(() => {
+              router.push('/dashboard')
+            }, 3000)
+          }
+        }
+      }
       // Se abbiamo access_token e refresh_token (formato vecchio)
-      if (accessToken && refreshToken) {
+      else if (accessToken && refreshToken) {
         // Crea la sessione temporanea per poter aggiornare la password
         const { error: sessionError } = await supabase.auth.setSession({
           access_token: accessToken,
