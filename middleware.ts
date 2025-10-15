@@ -18,7 +18,7 @@ export async function middleware(req: NextRequest) {
   res.headers.set("x-nonce", nonce);
 
   // Gestione parametri di reset password per sicurezza
-  if (req.nextUrl.pathname === '/auth/reset-password') {
+  if (req.nextUrl.pathname === '/auth/reset-password' || req.nextUrl.pathname === '/auth/reset-password-redirect') {
     const accessToken = req.nextUrl.searchParams.get('access_token');
     const refreshToken = req.nextUrl.searchParams.get('refresh_token');
     const code = req.nextUrl.searchParams.get('code');

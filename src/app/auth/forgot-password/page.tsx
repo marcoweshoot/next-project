@@ -35,14 +35,31 @@ export default function ForgotPasswordPage() {
     setError(null)
 
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/auth/reset-password`,
+      // Prova prima con l'API custom che bypassa Brevo
+      const response = await fetch('/api/auth/send-reset-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
       })
 
-      if (error) {
-        setError(error.message)
+      const result = await response.json()
+
+      if (!response.ok) {
+        // Fallback al metodo standard se l'API custom fallisce
+        const { error } = await supabase.auth.resetPasswordForEmail(email, {
+          redirectTo: `${window.location.origin}/auth/reset-password`,
+        })
+
+        if (error) {
+          setError(error.message)
+        } else {
+          setSuccess(true)
+        }
       } else {
         setSuccess(true)
+        console.log('Reset email sent via custom API:', result)
       }
     } catch {
       setError('Si è verificato un errore durante l\'invio della richiesta')
