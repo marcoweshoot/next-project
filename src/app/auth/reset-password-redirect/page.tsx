@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
 
-export default function ResetPasswordRedirectPage() {
+function ResetPasswordRedirectContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [_loading, setLoading] = useState(true)
@@ -93,5 +93,29 @@ export default function ResetPasswordRedirectPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function ResetPasswordRedirectPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+        <div className="text-center space-y-4">
+          <div className="flex justify-center">
+            <Loader2 className="h-8 w-8 animate-spin text-red-600" />
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
+              Caricamento...
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400">
+              Preparazione del redirect...
+            </p>
+          </div>
+        </div>
+      </div>
+    }>
+      <ResetPasswordRedirectContent />
+    </Suspense>
   )
 }
