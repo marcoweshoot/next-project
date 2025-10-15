@@ -26,7 +26,7 @@ export default function AuthCallbackPage() {
           // ALWAYS check if user has a profile and update it with Google data
           const { data: existingProfile, error: profileError } = await supabase
             .from('profiles')
-            .select('id, first_name, last_name, email, avatar_url, full_name')
+            .select('id, first_name, last_name, email')
             .eq('id', user.id)
             .single()
           
@@ -34,8 +34,6 @@ export default function AuthCallbackPage() {
             email: user.email || '',
             first_name: user.user_metadata?.first_name || user.user_metadata?.given_name || '',
             last_name: user.user_metadata?.last_name || user.user_metadata?.family_name || '',
-            full_name: user.user_metadata?.full_name || user.user_metadata?.name || '',
-            avatar_url: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
             updated_at: new Date().toISOString()
           }
           
@@ -72,8 +70,7 @@ export default function AuthCallbackPage() {
             const needsUpdate = 
               !existingProfile.first_name || 
               !existingProfile.last_name || 
-              !existingProfile.email ||
-              !existingProfile.avatar_url
+              !existingProfile.email
             
             if (needsUpdate) {
               try {
@@ -86,8 +83,6 @@ export default function AuthCallbackPage() {
                     email: existingProfile.email || googleData.email,
                     first_name: existingProfile.first_name || googleData.first_name,
                     last_name: existingProfile.last_name || googleData.last_name,
-                    full_name: existingProfile.full_name || googleData.full_name,
-                    avatar_url: existingProfile.avatar_url || googleData.avatar_url,
                     updated_at: googleData.updated_at
                   })
                   .eq('id', user.id)
