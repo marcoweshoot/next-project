@@ -63,7 +63,7 @@ export default function ForgotPasswordPage() {
             {/* Mobile Logo */}
             <div className="flex justify-center mb-8">
               <Image
-                src="/lovable-uploads/logo-dark.svg"
+                src="/lovable-uploads/logo-light.svg"
                 alt="WeShoot"
                 width={150}
                 height={45}
