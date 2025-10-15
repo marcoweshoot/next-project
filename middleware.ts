@@ -30,6 +30,8 @@ export async function middleware(req: NextRequest) {
       hasRefreshToken: !!refreshToken,
       hasCode: !!code,
       url: req.url,
+      fullUrl: req.url,
+      searchParams: req.nextUrl.search,
       userAgent: req.headers.get('user-agent'),
       timestamp: new Date().toISOString()
     });
@@ -78,9 +80,13 @@ export async function middleware(req: NextRequest) {
       
       // Redirect alla stessa pagina senza parametri URL
       return NextResponse.redirect(url);
-    } else {
-      console.log('🚨 MIDDLEWARE: No reset tokens or code found in URL - this is the problem!');
-    }
+            } else {
+              console.log('🚨 MIDDLEWARE: No reset tokens or code found in URL - this is the problem!', {
+                url: req.url,
+                searchParams: req.nextUrl.search,
+                allParams: Object.fromEntries(req.nextUrl.searchParams.entries())
+              });
+            }
   }
 
   const csp = [

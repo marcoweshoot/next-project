@@ -90,8 +90,12 @@ function ResetPasswordForm() {
             searchParams: Object.fromEntries(searchParams.entries())
           })
           
-          // Alert visibile per debug (rimuovere dopo test)
-          alert(`DEBUG: AccessToken: ${!!accessToken}, RefreshToken: ${!!refreshToken}, Code: ${!!code}`)
+                // Alert visibile per debug (rimuovere dopo test)
+                alert(`DEBUG: AccessToken: ${!!accessToken}, RefreshToken: ${!!refreshToken}, Code: ${!!code}
+                
+URL: ${window.location.href}
+Cookies: ${document.cookie}
+Search Params: ${window.location.search}`)
           
           // Log dettagliato per debug
           console.log('🔍 DEBUG DETAILS:', {
