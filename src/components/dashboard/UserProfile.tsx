@@ -130,7 +130,13 @@ export function UserProfile({ userId }: UserProfileProps) {
 
       if (error) throw error
 
-      setSuccess('Profilo aggiornato con successo!')
+      setSuccess('✅ Profilo aggiornato con successo!')
+      
+      // Auto-dismiss success message after 5 seconds
+      setTimeout(() => {
+        setSuccess(null)
+      }, 5000)
+      
       // Refresh profile data
       const { data } = await supabase
         .from('profiles')
@@ -207,16 +213,20 @@ export function UserProfile({ userId }: UserProfileProps) {
   return (
     <div className="space-y-6">
       {error && (
-        <Alert variant="destructive">
-          <AlertCircle className="h-4 w-4" />
-          <AlertDescription>{error}</AlertDescription>
+        <Alert variant="destructive" className="border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950">
+          <AlertCircle className="h-4 w-4 text-red-600 dark:text-red-400" />
+          <AlertDescription className="text-red-800 dark:text-red-200 font-medium">
+            {error}
+          </AlertDescription>
         </Alert>
       )}
 
       {success && (
-        <Alert>
-          <CheckCircle className="h-4 w-4" />
-          <AlertDescription>{success}</AlertDescription>
+        <Alert className="border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950">
+          <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
+          <AlertDescription className="text-green-800 dark:text-green-200 font-medium">
+            {success}
+          </AlertDescription>
         </Alert>
       )}
 

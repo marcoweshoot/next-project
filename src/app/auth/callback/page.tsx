@@ -23,14 +23,23 @@ export default function AuthCallbackPage() {
         if (data.session) {
           const user = data.session.user
           
-          // ALWAYS check if user has a profile (not just new users)
-          const { data: profile, error: profileError } = await supabase
+          // ALWAYS check if user has a profile and update it with Google data
+          const { data: existingProfile, error: profileError } = await supabase
             .from('profiles')
-            .select('id')
+            .select('id, first_name, last_name, email, avatar_url')
             .eq('id', user.id)
             .single()
           
-          if (profileError || !profile) {
+          const googleData = {
+            email: user.email || '',
+            first_name: user.user_metadata?.first_name || user.user_metadata?.given_name || '',
+            last_name: user.user_metadata?.last_name || user.user_metadata?.family_name || '',
+            full_name: user.user_metadata?.full_name || user.user_metadata?.name || '',
+            avatar_url: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
+            updated_at: new Date().toISOString()
+          }
+          
+          if (profileError || !existingProfile) {
             // User without profile - create profile automatically
             try {
               console.log('Creating missing profile for user:', user.id, user.email)
@@ -39,14 +48,9 @@ export default function AuthCallbackPage() {
                 .from('profiles')
                 .insert({
                   id: user.id,
-                  email: user.email || '',
-                  first_name: user.user_metadata?.first_name || user.user_metadata?.given_name || '',
-                  last_name: user.user_metadata?.last_name || user.user_metadata?.family_name || '',
-                  full_name: user.user_metadata?.full_name || user.user_metadata?.name || '',
-                  avatar_url: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
+                  ...googleData,
                   country: 'IT',
-                  created_at: new Date().toISOString(),
-                  updated_at: new Date().toISOString()
+                  created_at: new Date().toISOString()
                 })
               
               if (createProfileError) {
@@ -62,6 +66,40 @@ export default function AuthCallbackPage() {
               // Fallback: redirect to confirmation page
               router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
               return
+            }
+          } else {
+            // User has profile - update with Google data if missing
+            const needsUpdate = 
+              !existingProfile.first_name || 
+              !existingProfile.last_name || 
+              !existingProfile.email ||
+              !existingProfile.avatar_url
+            
+            if (needsUpdate) {
+              try {
+                console.log('Updating profile with Google data for user:', user.id)
+                
+                const { error: updateError } = await supabase
+                  .from('profiles')
+                  .update({
+                    // Update only missing fields, keep existing ones
+                    email: existingProfile.email || googleData.email,
+                    first_name: existingProfile.first_name || googleData.first_name,
+                    last_name: existingProfile.last_name || googleData.last_name,
+                    full_name: existingProfile.full_name || googleData.full_name,
+                    avatar_url: existingProfile.avatar_url || googleData.avatar_url,
+                    updated_at: googleData.updated_at
+                  })
+                  .eq('id', user.id)
+                
+                if (updateError) {
+                  console.error('Profile update failed:', updateError)
+                } else {
+                  console.log('Profile updated with Google data for user:', user.id)
+                }
+              } catch (err) {
+                console.error('Error updating profile:', err)
+              }
             }
           }
           
