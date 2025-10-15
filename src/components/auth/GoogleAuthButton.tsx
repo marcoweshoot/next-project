@@ -71,9 +71,6 @@ export function GoogleAuthButton({ mode, onSuccess, onError }: GoogleAuthButtonP
   }
 
   const buttonText = mode === 'signin' ? 'Accedi con Google' : 'Registrati con Google'
-  
-  // Detect Safari per mostrare messaggio informativo
-  const isSafari = typeof window !== 'undefined' && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
   return (
     <Button

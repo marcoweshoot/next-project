@@ -26,7 +26,7 @@ export default function AuthCallbackPage() {
           // ALWAYS check if user has a profile and update it with Google data
           const { data: existingProfile, error: profileError } = await supabase
             .from('profiles')
-            .select('id, first_name, last_name, email, avatar_url')
+            .select('id, first_name, last_name, email, avatar_url, full_name')
             .eq('id', user.id)
             .single()
           
