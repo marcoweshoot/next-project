@@ -53,9 +53,9 @@ function ResetPasswordForm() {
           setIsValidSession(true)
         } else {
           // Check URL params for PKCE format (token and token_hash)
-          let token = searchParams.get('token')
-          let tokenHash = searchParams.get('token_hash')
-          let type = searchParams.get('type')
+          const token = searchParams.get('token')
+          const tokenHash = searchParams.get('token_hash')
+          const type = searchParams.get('type')
           
           // Fallback: check cookies for old format
           let accessToken = document.cookie
@@ -244,9 +244,9 @@ Search Params: ${window.location.search}`)
 
     try {
       // Check URL params for PKCE format first
-      let token = searchParams.get('token')
-      let tokenHash = searchParams.get('token_hash')
-      let type = searchParams.get('type')
+      const token = searchParams.get('token')
+      const tokenHash = searchParams.get('token_hash')
+      const type = searchParams.get('type')
       
       // Fallback: check cookies for old format
       let accessToken = document.cookie

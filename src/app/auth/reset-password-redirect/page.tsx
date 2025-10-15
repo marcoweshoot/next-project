@@ -7,7 +7,7 @@ import { Loader2 } from 'lucide-react'
 export default function ResetPasswordRedirectPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [loading, setLoading] = useState(true)
+  const [_loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
