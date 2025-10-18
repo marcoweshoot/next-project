@@ -26,7 +26,9 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
     lastName: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    privacyAccepted: false,
+    marketingAccepted: false
   })
   
   // Form data per login
@@ -65,6 +67,10 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
       newErrors.confirmPassword = 'Conferma la password'
     } else if (registerData.password !== registerData.confirmPassword) {
       newErrors.confirmPassword = 'Le password non coincidono'
+    }
+
+    if (!registerData.privacyAccepted) {
+      newErrors.privacyAccepted = 'Devi accettare la Privacy Policy'
     }
 
     setErrors(newErrors)
@@ -139,7 +145,9 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
             userId: authData.user.id,
             email: registerData.email,
             firstName: registerData.firstName,
-            lastName: registerData.lastName
+            lastName: registerData.lastName,
+            privacyAccepted: registerData.privacyAccepted,
+            marketingAccepted: registerData.marketingAccepted
           })
         })
       } catch (profileError) {
@@ -478,6 +486,46 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
                   {errors.confirmPassword && (
                     <p className="text-sm text-red-500">{errors.confirmPassword}</p>
                   )}
+                </div>
+              </div>
+
+              {/* Privacy e Marketing Checkboxes */}
+              <div className="space-y-3">
+                <div className="flex items-start space-x-2">
+                  <input
+                    type="checkbox"
+                    id="privacyAccepted"
+                    checked={registerData.privacyAccepted}
+                    onChange={(e) => handleRegisterInputChange('privacyAccepted', e.target.checked)}
+                    className="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                  />
+                  <label htmlFor="privacyAccepted" className="text-sm text-muted-foreground leading-tight">
+                    Accetto la{' '}
+                    <a href="/privacy-policy" target="_blank" className="text-primary hover:underline">
+                      Privacy Policy
+                    </a>{' '}
+                    e i{' '}
+                    <a href="/terms" target="_blank" className="text-primary hover:underline">
+                      Termini e Condizioni
+                    </a>{' '}
+                    <span className="text-red-500">*</span>
+                  </label>
+                </div>
+                {errors.privacyAccepted && (
+                  <p className="text-sm text-red-500">{errors.privacyAccepted}</p>
+                )}
+
+                <div className="flex items-start space-x-2">
+                  <input
+                    type="checkbox"
+                    id="marketingAccepted"
+                    checked={registerData.marketingAccepted}
+                    onChange={(e) => handleRegisterInputChange('marketingAccepted', e.target.checked)}
+                    className="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                  />
+                  <label htmlFor="marketingAccepted" className="text-sm text-muted-foreground leading-tight">
+                    Accetto di ricevere comunicazioni promozionali e newsletter via email (opzionale)
+                  </label>
                 </div>
               </div>
 

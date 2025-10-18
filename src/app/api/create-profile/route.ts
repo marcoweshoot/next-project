@@ -5,10 +5,14 @@ import { createClient } from '@supabase/supabase-js'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { userId, email, firstName, lastName } = body
+    const { userId, email, firstName, lastName, privacyAccepted = true, marketingAccepted = false } = body
 
     if (!userId) {
       return NextResponse.json({ error: 'userId is required' }, { status: 400 })
+    }
+
+    if (!privacyAccepted) {
+      return NextResponse.json({ error: 'Privacy policy must be accepted' }, { status: 400 })
     }
 
     // Usa Service Role per bypassare RLS
@@ -28,7 +32,9 @@ export async function POST(request: NextRequest) {
       user_id: userId,
       user_email: email || '',
       user_first_name: firstName || '',
-      user_last_name: lastName || ''
+      user_last_name: lastName || '',
+      user_privacy_accepted: privacyAccepted,
+      user_marketing_accepted: marketingAccepted
     })
 
     if (rpcError) {
@@ -44,6 +50,10 @@ export async function POST(request: NextRequest) {
           last_name: lastName || '',
           full_name: `${firstName || ''} ${lastName || ''}`.trim(),
           country: 'IT',
+          privacy_accepted: privacyAccepted,
+          privacy_accepted_at: privacyAccepted ? new Date().toISOString() : null,
+          marketing_accepted: marketingAccepted,
+          marketing_accepted_at: marketingAccepted ? new Date().toISOString() : null,
           created_at: new Date().toISOString(),
           updated_at: new Date().toISOString()
         })
