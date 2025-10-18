@@ -26,10 +26,13 @@ COMMENT ON FUNCTION public.update_updated_at_column() IS
 -- FIX: validate_fiscal_code search_path
 -- ==============================================
 
--- Drop la vecchia funzione prima di ricrearla (per evitare conflitti con nomi parametri)
+-- Step 1: Rimuovi temporaneamente il constraint che dipende dalla funzione
+ALTER TABLE public.profiles DROP CONSTRAINT IF EXISTS check_fiscal_code;
+
+-- Step 2: Drop la vecchia funzione
 DROP FUNCTION IF EXISTS public.validate_fiscal_code(text);
 
--- Ricrea la funzione con search_path fisso e nome parametro corretto
+-- Step 3: Ricrea la funzione con search_path fisso e nome parametro corretto
 CREATE OR REPLACE FUNCTION public.validate_fiscal_code(fc text)
 RETURNS boolean
 LANGUAGE plpgsql
@@ -54,6 +57,11 @@ $$;
 -- Commento sulla funzione
 COMMENT ON FUNCTION public.validate_fiscal_code(text) IS 
   'Validates Italian fiscal code format';
+
+-- Step 4: Ricrea il constraint sulla tabella profiles
+ALTER TABLE public.profiles 
+  ADD CONSTRAINT check_fiscal_code 
+  CHECK (fiscal_code IS NULL OR validate_fiscal_code(fiscal_code));
 
 -- ==============================================
 -- Verifica che i trigger siano attivi
