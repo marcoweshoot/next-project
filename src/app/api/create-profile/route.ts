@@ -7,11 +7,14 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { userId, email, firstName, lastName, privacyAccepted = true, marketingAccepted = false } = body
 
+    console.log('📝 Creating profile:', { userId, email, firstName, lastName, privacyAccepted, marketingAccepted })
+
     if (!userId) {
       return NextResponse.json({ error: 'userId is required' }, { status: 400 })
     }
 
     if (!privacyAccepted) {
+      console.error('❌ Privacy not accepted:', privacyAccepted)
       return NextResponse.json({ error: 'Privacy policy must be accepted' }, { status: 400 })
     }
 
@@ -68,13 +71,17 @@ export async function POST(request: NextRequest) {
         }, { status: 500 })
       }
 
+      console.log('✅ Profile created successfully via fallback insert')
       return NextResponse.json({
+        success: true,
         message: 'Profile created successfully (fallback)',
         profile: data?.[0]
       })
     }
 
+    console.log('✅ Profile created successfully via RPC')
     return NextResponse.json({
+      success: true,
       message: 'Profile created successfully',
       userId
     })
