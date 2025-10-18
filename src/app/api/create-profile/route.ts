@@ -31,6 +31,15 @@ export async function POST(request: NextRequest) {
     )
 
     // Usa la funzione RPC che bypassa RLS
+    console.log('🔄 Calling RPC with params:', {
+      user_id: userId,
+      user_email: email,
+      user_first_name: firstName,
+      user_last_name: lastName,
+      user_privacy_accepted: privacyAccepted,
+      user_marketing_accepted: marketingAccepted
+    })
+
     const { error: rpcError } = await supabaseAdmin.rpc('create_user_profile', {
       user_id: userId,
       user_email: email || '',
@@ -42,6 +51,7 @@ export async function POST(request: NextRequest) {
 
     if (rpcError) {
       console.error('❌ Error creating profile via RPC:', rpcError)
+      console.error('❌ RPC Error details:', JSON.stringify(rpcError, null, 2))
       
       // Fallback: usa insert diretto con service role
       const { data, error: insertError } = await supabaseAdmin
@@ -72,10 +82,12 @@ export async function POST(request: NextRequest) {
       }
 
       console.log('✅ Profile created successfully via fallback insert')
+      console.log('📊 Fallback insert data:', data?.[0])
       return NextResponse.json({
         success: true,
         message: 'Profile created successfully (fallback)',
-        profile: data?.[0]
+        profile: data?.[0],
+        usedFallback: true
       })
     }
 
