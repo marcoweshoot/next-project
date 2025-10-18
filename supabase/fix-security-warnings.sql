@@ -68,7 +68,9 @@ ALTER TABLE public.profiles
 -- ==============================================
 
 -- FIX: is_admin function
-CREATE OR REPLACE FUNCTION public.is_admin(user_id uuid)
+DROP FUNCTION IF EXISTS public.is_admin(uuid);
+
+CREATE OR REPLACE FUNCTION public.is_admin(user_uuid uuid)
 RETURNS boolean
 LANGUAGE plpgsql
 SECURITY DEFINER
@@ -77,13 +79,15 @@ AS $$
 BEGIN
   RETURN EXISTS (
     SELECT 1 FROM public.user_roles 
-    WHERE user_roles.user_id = is_admin.user_id 
+    WHERE user_roles.user_id = is_admin.user_uuid 
     AND role = 'admin'
   );
 END;
 $$;
 
 -- FIX: handle_new_user function
+DROP FUNCTION IF EXISTS public.handle_new_user();
+
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS trigger
 LANGUAGE plpgsql
@@ -99,6 +103,8 @@ END;
 $$;
 
 -- FIX: cleanup_expired_magic_links function
+DROP FUNCTION IF EXISTS public.cleanup_expired_magic_links();
+
 CREATE OR REPLACE FUNCTION public.cleanup_expired_magic_links()
 RETURNS void
 LANGUAGE plpgsql
@@ -112,7 +118,9 @@ END;
 $$;
 
 -- FIX: is_super_admin function
-CREATE OR REPLACE FUNCTION public.is_super_admin(user_id uuid)
+DROP FUNCTION IF EXISTS public.is_super_admin(uuid);
+
+CREATE OR REPLACE FUNCTION public.is_super_admin(user_uuid uuid)
 RETURNS boolean
 LANGUAGE plpgsql
 SECURITY DEFINER
@@ -121,13 +129,15 @@ AS $$
 BEGIN
   RETURN EXISTS (
     SELECT 1 FROM public.user_roles 
-    WHERE user_roles.user_id = is_super_admin.user_id 
+    WHERE user_roles.user_id = is_super_admin.user_uuid 
     AND role = 'super_admin'
   );
 END;
 $$;
 
 -- FIX: find_user_by_email function
+DROP FUNCTION IF EXISTS public.find_user_by_email(text);
+
 CREATE OR REPLACE FUNCTION public.find_user_by_email(email_param text)
 RETURNS TABLE(user_id uuid, user_email text)
 LANGUAGE plpgsql
