@@ -235,7 +235,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
     }
   }
 
-  const handleRegisterInputChange = (field: string, value: string) => {
+  const handleRegisterInputChange = (field: string, value: string | boolean) => {
     setRegisterData(prev => ({ ...prev, [field]: value }))
     // Rimuovi l'errore quando l'utente inizia a digitare
     if (errors[field]) {
