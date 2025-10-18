@@ -247,14 +247,7 @@ function LoginForm() {
                 />
 
                 <div className="text-center">
-                  <Button asChild variant="outline" className="w-full h-12">
-                    <Link href="/auth/register">
-                      <ArrowLeft className="w-4 h-4 mr-2" />
-                      Crea un Account
-                    </Link>
-                  </Button>
-                  
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mt-4">
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
                     Non hai ancora un account?{' '}
                     <Link 
                       href="/auth/register" 
