@@ -86,8 +86,13 @@ END;
 $$;
 
 -- FIX: handle_new_user function
+-- Step 1: Drop il trigger che dipende dalla funzione
+DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
+
+-- Step 2: Drop la funzione
 DROP FUNCTION IF EXISTS public.handle_new_user();
 
+-- Step 3: Ricrea la funzione con search_path fisso
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS trigger
 LANGUAGE plpgsql
@@ -101,6 +106,12 @@ BEGIN
   RETURN NEW;
 END;
 $$;
+
+-- Step 4: Ricrea il trigger
+CREATE TRIGGER on_auth_user_created
+  AFTER INSERT ON auth.users
+  FOR EACH ROW
+  EXECUTE FUNCTION public.handle_new_user();
 
 -- FIX: cleanup_expired_magic_links function
 DROP FUNCTION IF EXISTS public.cleanup_expired_magic_links();
