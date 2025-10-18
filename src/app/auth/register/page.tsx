@@ -72,17 +72,21 @@ export default function RegisterPage() {
       if (error) {
         setError(error.message)
       } else if (data.user) {
-        // Crea il profilo manualmente se il trigger non funziona
+        // Crea il profilo usando l'API che bypassa RLS
         try {
-          await supabase
-            .from('profiles')
-            .insert({
-              id: data.user.id,
-              first_name: firstName,
-              last_name: lastName
+          await fetch('/api/create-profile', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              userId: data.user.id,
+              email: email,
+              firstName: firstName,
+              lastName: lastName
             })
+          })
         } catch {
           // Profile creation failed, but registration can continue
+          console.error('Failed to create profile via API')
         }
         setSuccess(true)
       }

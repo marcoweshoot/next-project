@@ -130,18 +130,19 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
         throw new Error('Errore durante la registrazione')
       }
 
-      // Crea o aggiorna il profilo
-      const { error: profileError } = await supabase
-        .from('profiles')
-        .upsert({
-          id: authData.user.id,
-          email: registerData.email,
-          first_name: registerData.firstName,
-          last_name: registerData.lastName,
-          created_at: new Date().toISOString()
-        }, { onConflict: 'id' })
-
-      if (profileError) {
+      // Crea il profilo usando l'API che bypassa RLS
+      try {
+        await fetch('/api/create-profile', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            userId: authData.user.id,
+            email: registerData.email,
+            firstName: registerData.firstName,
+            lastName: registerData.lastName
+          })
+        })
+      } catch (profileError) {
         console.error('Errore creazione profilo:', profileError)
         // Non blocchiamo il flusso se il profilo non viene creato
       }

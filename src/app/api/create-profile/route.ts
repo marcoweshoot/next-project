@@ -1,44 +1,72 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClientSupabase } from '@/lib/supabase/server'
+import { createClient } from '@supabase/supabase-js'
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { userId } = body
+    const { userId, email, firstName, lastName } = body
 
     if (!userId) {
       return NextResponse.json({ error: 'userId is required' }, { status: 400 })
     }
 
-    const supabase = await createServerClientSupabase()
+    // Usa Service Role per bypassare RLS
+    const supabaseAdmin = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!,
+      {
+        auth: {
+          autoRefreshToken: false,
+          persistSession: false
+        }
+      }
+    )
 
+    // Usa la funzione RPC che bypassa RLS
+    const { error: rpcError } = await supabaseAdmin.rpc('create_user_profile', {
+      user_id: userId,
+      user_email: email || '',
+      user_first_name: firstName || '',
+      user_last_name: lastName || ''
+    })
 
-    // Crea il profilo
-    const { data, error } = await supabase
-      .from('profiles')
-      .insert({
-        id: userId,
-        first_name: '',
-        last_name: '',
-        country: 'IT',
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+    if (rpcError) {
+      console.error('❌ Error creating profile via RPC:', rpcError)
+      
+      // Fallback: usa insert diretto con service role
+      const { data, error: insertError } = await supabaseAdmin
+        .from('profiles')
+        .insert({
+          id: userId,
+          email: email || '',
+          first_name: firstName || '',
+          last_name: lastName || '',
+          full_name: `${firstName || ''} ${lastName || ''}`.trim(),
+          country: 'IT',
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString()
+        })
+        .select()
+
+      if (insertError) {
+        console.error('❌ Error creating profile via insert:', insertError)
+        return NextResponse.json({ 
+          error: 'Database error',
+          details: insertError.message,
+          code: insertError.code
+        }, { status: 500 })
+      }
+
+      return NextResponse.json({
+        message: 'Profile created successfully (fallback)',
+        profile: data?.[0]
       })
-      .select()
-
-    if (error) {
-      console.error('❌ Error creating profile:', error)
-      return NextResponse.json({ 
-        error: 'Database error',
-        details: error.message,
-        code: error.code
-      }, { status: 500 })
     }
-
 
     return NextResponse.json({
       message: 'Profile created successfully',
-      profile: data[0]
+      userId
     })
 
   } catch (error) {
