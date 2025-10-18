@@ -107,11 +107,18 @@ CREATE POLICY "Users can delete their own reviews" ON public.reviews
 
 -- USER_ROLES: Ottimizza usando (select auth.uid())
 DROP POLICY IF EXISTS "Users can view their own roles" ON public.user_roles;
+DROP POLICY IF EXISTS "Authenticated users can view all roles" ON public.user_roles;
 
 CREATE POLICY "Users can view their own roles" ON public.user_roles
   FOR SELECT
   TO public, anon
   USING ((select auth.uid()) = user_id);
+
+-- Ricrea la policy per utenti autenticati che possono vedere tutti i ruoli
+CREATE POLICY "Authenticated users can view all roles" ON public.user_roles
+  FOR SELECT
+  TO authenticated
+  USING ((select auth.uid()) IS NOT NULL);
 
 -- ==============================================
 -- STEP 6: Verifica le policy rimaste
