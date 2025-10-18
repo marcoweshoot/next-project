@@ -82,7 +82,7 @@ export default function RegisterPage() {
       } else if (data.user) {
         // Crea il profilo usando l'API che bypassa RLS
         try {
-          await fetch('/api/create-profile', {
+          const response = await fetch('/api/create-profile', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -94,10 +94,25 @@ export default function RegisterPage() {
               marketingAccepted: marketingAccepted
             })
           })
-        } catch {
+          
+          const result = await response.json()
+          console.log('Profile creation result:', result)
+          
+          if (!response.ok) {
+            console.error('Profile creation failed:', result)
+          }
+        } catch (err) {
           // Profile creation failed, but registration can continue
-          console.error('Failed to create profile via API')
+          console.error('Failed to create profile via API:', err)
         }
+        
+        // Se l'email confirmation è disabilitata, l'utente è già loggato
+        // Redirect direttamente alla dashboard
+        if (data.session) {
+          router.push('/dashboard')
+          return
+        }
+        
         setSuccess(true)
       }
     } catch {
