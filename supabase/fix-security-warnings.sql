@@ -64,6 +64,86 @@ ALTER TABLE public.profiles
   CHECK (fiscal_code IS NULL OR validate_fiscal_code(fiscal_code));
 
 -- ==============================================
+-- FIX: Altre funzioni con search_path mutabile
+-- ==============================================
+
+-- FIX: is_admin function
+CREATE OR REPLACE FUNCTION public.is_admin(user_id uuid)
+RETURNS boolean
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+  RETURN EXISTS (
+    SELECT 1 FROM public.user_roles 
+    WHERE user_roles.user_id = is_admin.user_id 
+    AND role = 'admin'
+  );
+END;
+$$;
+
+-- FIX: handle_new_user function
+CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS trigger
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+  INSERT INTO public.profiles (id, email, created_at, updated_at)
+  VALUES (NEW.id, NEW.email, NOW(), NOW())
+  ON CONFLICT (id) DO NOTHING;
+  RETURN NEW;
+END;
+$$;
+
+-- FIX: cleanup_expired_magic_links function
+CREATE OR REPLACE FUNCTION public.cleanup_expired_magic_links()
+RETURNS void
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+  DELETE FROM public.temp_magic_links
+  WHERE expires_at < NOW();
+END;
+$$;
+
+-- FIX: is_super_admin function
+CREATE OR REPLACE FUNCTION public.is_super_admin(user_id uuid)
+RETURNS boolean
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+  RETURN EXISTS (
+    SELECT 1 FROM public.user_roles 
+    WHERE user_roles.user_id = is_super_admin.user_id 
+    AND role = 'super_admin'
+  );
+END;
+$$;
+
+-- FIX: find_user_by_email function
+CREATE OR REPLACE FUNCTION public.find_user_by_email(email_param text)
+RETURNS TABLE(user_id uuid, user_email text)
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public, pg_temp
+AS $$
+BEGIN
+  RETURN QUERY
+  SELECT id as user_id, email as user_email
+  FROM auth.users
+  WHERE email = email_param
+  LIMIT 1;
+END;
+$$;
+
+-- ==============================================
 -- Verifica che i trigger siano attivi
 -- ==============================================
 
