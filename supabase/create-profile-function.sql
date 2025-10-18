@@ -2,6 +2,9 @@
 -- FUNZIONE PER CREARE PROFILI AUTOMATICAMENTE
 -- =============================================
 
+-- Drop della vecchia versione della funzione se esiste
+DROP FUNCTION IF EXISTS public.create_user_profile(UUID, TEXT, TEXT, TEXT);
+
 -- Funzione per creare un profilo utente
 -- Usa SECURITY DEFINER per bypassare RLS
 CREATE OR REPLACE FUNCTION public.create_user_profile(
