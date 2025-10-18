@@ -26,8 +26,11 @@ COMMENT ON FUNCTION public.update_updated_at_column() IS
 -- FIX: validate_fiscal_code search_path
 -- ==============================================
 
--- Se la funzione validate_fiscal_code esiste, ricreala con search_path fisso
-CREATE OR REPLACE FUNCTION public.validate_fiscal_code(fiscal_code text)
+-- Drop la vecchia funzione prima di ricrearla (per evitare conflitti con nomi parametri)
+DROP FUNCTION IF EXISTS public.validate_fiscal_code(text);
+
+-- Ricrea la funzione con search_path fisso e nome parametro corretto
+CREATE OR REPLACE FUNCTION public.validate_fiscal_code(fc text)
 RETURNS boolean
 LANGUAGE plpgsql
 SECURITY DEFINER
@@ -35,12 +38,12 @@ SET search_path = public  -- FIX: Imposta search_path fisso
 AS $$
 BEGIN
   -- Validazione base: lunghezza 16 caratteri, formato alfanumerico
-  IF fiscal_code IS NULL OR length(fiscal_code) != 16 THEN
+  IF fc IS NULL OR length(fc) != 16 THEN
     RETURN FALSE;
   END IF;
   
   -- Verifica che sia alfanumerico maiuscolo
-  IF fiscal_code !~ '^[A-Z0-9]{16}$' THEN
+  IF fc !~ '^[A-Z0-9]{16}$' THEN
     RETURN FALSE;
   END IF;
   
