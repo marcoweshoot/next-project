@@ -32,6 +32,8 @@ export default function RegisterPage() {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
+  const [privacyAccepted, setPrivacyAccepted] = useState(false)
+  const [marketingAccepted, setMarketingAccepted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
@@ -44,6 +46,12 @@ export default function RegisterPage() {
     setError(null)
 
     // Validation
+    if (!privacyAccepted) {
+      setError('Devi accettare la Privacy Policy e i Termini e Condizioni')
+      setLoading(false)
+      return
+    }
+
     if (password !== confirmPassword) {
       setError('Le password non corrispondono')
       setLoading(false)
@@ -81,7 +89,9 @@ export default function RegisterPage() {
               userId: data.user.id,
               email: email,
               firstName: firstName,
-              lastName: lastName
+              lastName: lastName,
+              privacyAccepted: privacyAccepted,
+              marketingAccepted: marketingAccepted
             })
           })
         } catch {
@@ -355,6 +365,43 @@ export default function RegisterPage() {
                         required
                         className="pl-10 h-12 border-slate-200 dark:border-slate-700 focus:border-red-500 focus:ring-red-500/20"
                       />
+                    </div>
+                  </div>
+
+                  {/* Privacy e Marketing Checkboxes */}
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-2">
+                      <input
+                        type="checkbox"
+                        id="privacyAccepted"
+                        checked={privacyAccepted}
+                        onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                        className="mt-1 h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500"
+                      />
+                      <label htmlFor="privacyAccepted" className="text-sm text-slate-600 dark:text-slate-400 leading-tight">
+                        Accetto la{' '}
+                        <a href="/privacy-policy" target="_blank" className="text-red-600 hover:underline">
+                          Privacy Policy
+                        </a>{' '}
+                        e i{' '}
+                        <a href="/terms" target="_blank" className="text-red-600 hover:underline">
+                          Termini e Condizioni
+                        </a>{' '}
+                        <span className="text-red-500">*</span>
+                      </label>
+                    </div>
+
+                    <div className="flex items-start space-x-2">
+                      <input
+                        type="checkbox"
+                        id="marketingAccepted"
+                        checked={marketingAccepted}
+                        onChange={(e) => setMarketingAccepted(e.target.checked)}
+                        className="mt-1 h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500"
+                      />
+                      <label htmlFor="marketingAccepted" className="text-sm text-slate-600 dark:text-slate-400 leading-tight">
+                        Accetto di ricevere comunicazioni promozionali e newsletter via email (opzionale)
+                      </label>
                     </div>
                   </div>
 
