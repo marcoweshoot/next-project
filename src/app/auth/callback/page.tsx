@@ -38,33 +38,10 @@ export default function AuthCallbackPage() {
           }
           
           if (profileError || !existingProfile) {
-            // User without profile - create profile automatically
-            try {
-              console.log('Creating missing profile for user:', user.id, user.email)
-              
-              const { error: createProfileError } = await supabase
-                .from('profiles')
-                .insert({
-                  id: user.id,
-                  ...googleData,
-                  country: 'IT',
-                  created_at: new Date().toISOString()
-                })
-              
-              if (createProfileError) {
-                console.error('Auto profile creation failed:', createProfileError)
-                // Fallback: redirect to confirmation page
-                router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
-                return
-              }
-              
-              console.log('Profile created automatically for user:', user.id)
-            } catch (err) {
-              console.error('Error creating profile:', err)
-              // Fallback: redirect to confirmation page
-              router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
-              return
-            }
+            // User without profile - redirect to confirmation page to accept privacy policy
+            console.log('New Google user detected, redirecting to consent page:', user.id, user.email)
+            router.push(`/auth/google-signup-confirm?user_id=${user.id}`)
+            return
           } else {
             // User has profile - update with Google data if missing
             const needsUpdate = 

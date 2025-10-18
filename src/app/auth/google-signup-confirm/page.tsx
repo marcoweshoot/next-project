@@ -12,6 +12,8 @@ import { CheckCircle, Loader2, User, Mail, AlertCircle } from 'lucide-react'
 function GoogleSignupConfirmContent() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [privacyAccepted, setPrivacyAccepted] = useState(false)
+  const [marketingAccepted, setMarketingAccepted] = useState(false)
   const [userData, setUserData] = useState<{
     id: string;
     email: string;
@@ -61,33 +63,42 @@ function GoogleSignupConfirmContent() {
   const handleConfirmSignup = async () => {
     if (!userData) return
 
+    // Validation
+    if (!privacyAccepted) {
+      setError('Devi accettare la Privacy Policy e i Termini e Condizioni')
+      return
+    }
+
     setLoading(true)
     setError(null)
 
     try {
-      // Create profile with Google data
-      const { error: profileError } = await supabase
-        .from('profiles')
-        .insert({
-          id: userData.id,
+      // Create profile using API that bypasses RLS
+      const response = await fetch('/api/create-profile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId: userData.id,
           email: userData.email,
-          first_name: userData.firstName,
-          last_name: userData.lastName,
-          avatar_url: userData.avatar,
-          country: 'IT',
-          created_at: new Date().toISOString(),
-          updated_at: new Date().toISOString()
+          firstName: userData.firstName,
+          lastName: userData.lastName,
+          privacyAccepted: privacyAccepted,
+          marketingAccepted: marketingAccepted
         })
+      })
 
-      if (profileError) {
-        console.error('Profile creation error:', profileError)
+      const result = await response.json()
+
+      if (!response.ok || !result.success) {
+        console.error('Profile creation error:', result.error)
         setError('Errore nella creazione del profilo. Riprova.')
         return
       }
 
       // Success - redirect to dashboard
       router.push('/dashboard')
-    } catch {
+    } catch (err) {
+      console.error('Error:', err)
       setError('Errore durante la registrazione. Riprova.')
     } finally {
       setLoading(false)
@@ -180,6 +191,43 @@ function GoogleSignupConfirmContent() {
               </Alert>
             )}
 
+            {/* Privacy and Marketing Consent */}
+            <div className="space-y-4 border-t pt-4">
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="privacyAccepted"
+                  checked={privacyAccepted}
+                  onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                  className="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                />
+                <label htmlFor="privacyAccepted" className="text-sm text-muted-foreground leading-tight">
+                  Accetto la{' '}
+                  <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    Privacy Policy
+                  </a>{' '}
+                  e i{' '}
+                  <a href="/terms" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    Termini e Condizioni
+                  </a>
+                  {' '}<span className="text-destructive">*</span>
+                </label>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="marketingAccepted"
+                  checked={marketingAccepted}
+                  onChange={(e) => setMarketingAccepted(e.target.checked)}
+                  className="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                />
+                <label htmlFor="marketingAccepted" className="text-sm text-muted-foreground leading-tight">
+                  Acconsento a ricevere comunicazioni marketing e newsletter
+                </label>
+              </div>
+            </div>
+
             <div className="space-y-3">
               <Button 
                 onClick={handleConfirmSignup}
@@ -205,11 +253,6 @@ function GoogleSignupConfirmContent() {
                 No, torna al login
               </Button>
             </div>
-            
-            <p className="text-xs text-muted-foreground text-center">
-              Cliccando "Sì, crea il mio account" accetti i nostri{' '}
-              <a href="/terms" className="text-primary hover:underline">Termini di Servizio</a>
-            </p>
           </CardContent>
         </Card>
       </div>
