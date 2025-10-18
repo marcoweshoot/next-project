@@ -59,6 +59,10 @@ BEGIN
       COALESCE(NULLIF(profiles.first_name, ''), EXCLUDED.first_name) || ' ' || 
       COALESCE(NULLIF(profiles.last_name, ''), EXCLUDED.last_name)
     ),
+    privacy_accepted = EXCLUDED.privacy_accepted,
+    privacy_accepted_at = EXCLUDED.privacy_accepted_at,
+    marketing_accepted = EXCLUDED.marketing_accepted,
+    marketing_accepted_at = EXCLUDED.marketing_accepted_at,
     updated_at = NOW();
     
   EXCEPTION WHEN others THEN
