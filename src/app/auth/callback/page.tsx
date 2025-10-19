@@ -23,6 +23,10 @@ export default function AuthCallbackPage() {
         if (data.session) {
           const user = data.session.user
           
+          // 🐛 DEBUG: Log Google metadata
+          console.log('🔍 Google OAuth user_metadata:', user.user_metadata)
+          console.log('🔍 Google OAuth app_metadata:', user.app_metadata)
+          
           // ALWAYS check if user has a profile and update it with Google data
           const { data: existingProfile, error: profileError } = await supabase
             .from('profiles')
@@ -36,6 +40,9 @@ export default function AuthCallbackPage() {
             last_name: user.user_metadata?.last_name || user.user_metadata?.family_name || '',
             updated_at: new Date().toISOString()
           }
+          
+          // 🐛 DEBUG: Log extracted data
+          console.log('📝 Extracted Google data:', googleData)
           
           if (profileError || !existingProfile) {
             // User without profile - redirect to confirmation page to accept privacy policy
