@@ -44,10 +44,6 @@ function GoogleSignupConfirmContent() {
           return
         }
 
-        // 🐛 DEBUG: Log dei metadati Google per capire cosa passa
-        console.log('🔍 Google user_metadata:', user.user_metadata)
-        console.log('🔍 Google app_metadata:', user.app_metadata)
-
         // Extract name from Google (they provide full_name, not given_name/family_name)
         const fullName = user.user_metadata?.full_name || user.user_metadata?.name || ''
         const nameParts = fullName.trim().split(' ')
@@ -61,13 +57,6 @@ function GoogleSignupConfirmContent() {
           firstName: firstName,
           lastName: lastName,
           avatar: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
-        })
-        
-        // 🐛 DEBUG: Log dei dati estratti
-        console.log('📝 Extracted data:', {
-          fullName,
-          firstName,
-          lastName
         })
       } catch {
         setError('Errore nel recupero dei dati utente')
