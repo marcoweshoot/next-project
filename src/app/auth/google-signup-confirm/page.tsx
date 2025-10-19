@@ -48,19 +48,26 @@ function GoogleSignupConfirmContent() {
         console.log('🔍 Google user_metadata:', user.user_metadata)
         console.log('🔍 Google app_metadata:', user.app_metadata)
 
+        // Extract name from Google (they provide full_name, not given_name/family_name)
+        const fullName = user.user_metadata?.full_name || user.user_metadata?.name || ''
+        const nameParts = fullName.trim().split(' ')
+        const firstName = nameParts[0] || ''
+        const lastName = nameParts.slice(1).join(' ') || ''
+
         setUserData({
           id: user.id,
           email: user.email,
-          name: user.user_metadata?.full_name || user.user_metadata?.name || '',
-          firstName: user.user_metadata?.first_name || user.user_metadata?.given_name || '',
-          lastName: user.user_metadata?.last_name || user.user_metadata?.family_name || '',
+          name: fullName,
+          firstName: firstName,
+          lastName: lastName,
           avatar: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
         })
         
         // 🐛 DEBUG: Log dei dati estratti
         console.log('📝 Extracted data:', {
-          firstName: user.user_metadata?.first_name || user.user_metadata?.given_name,
-          lastName: user.user_metadata?.last_name || user.user_metadata?.family_name
+          fullName,
+          firstName,
+          lastName
         })
       } catch {
         setError('Errore nel recupero dei dati utente')

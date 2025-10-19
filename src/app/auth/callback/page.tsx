@@ -34,10 +34,16 @@ export default function AuthCallbackPage() {
             .eq('id', user.id)
             .single()
           
+          // Extract name from Google (they provide full_name, not given_name/family_name)
+          const fullName = user.user_metadata?.full_name || user.user_metadata?.name || ''
+          const nameParts = fullName.trim().split(' ')
+          const firstName = nameParts[0] || ''
+          const lastName = nameParts.slice(1).join(' ') || ''
+          
           const googleData = {
             email: user.email || '',
-            first_name: user.user_metadata?.first_name || user.user_metadata?.given_name || '',
-            last_name: user.user_metadata?.last_name || user.user_metadata?.family_name || '',
+            first_name: firstName,
+            last_name: lastName,
             updated_at: new Date().toISOString()
           }
           
