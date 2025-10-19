@@ -760,20 +760,6 @@
       ]
     },
     {
-      "id": "54",
-      "number": 8,
-      "title": "Arrivederci Lofoten",
-      "locale": "it",
-      "steps": [
-        {
-          "id": "45",
-          "title": "Saluti e transfer in aereoporto",
-          "description": "A seconda di come sono organizzati i rientri, ci ritroveremo a fare colazione e poi ognuno si organizzerà per il trasferimento verso l'aereoporto di Harstad/Narvik per rientrare in Italia.",
-          "locale": "it"
-        }
-      ]
-    },
-    {
       "id": "55",
       "number": 7,
       "title": "Lasciamo Leknes per rientrare a Evenes",
@@ -783,6 +769,20 @@
           "id": "44",
           "title": "Ultimi spot fotografici da ammirare",
           "description": "Lasceremo la struttura che ci ha ospitati per tutte queste notti per tornare verso Evenes. Durante il viaggio non mancheranno occasioni di fermarsi lungo la strada a fotografare gli ultimi incredibili spot, come ad esempio il ponte Ponte di Fredvang. La sera ci riuniremo tutti insieme a cena per discutere del viaggio affrontato e commentare le foto.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "number": 8,
+      "title": "Arrivederci Lofoten",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "45",
+          "title": "Saluti e transfer in aereoporto",
+          "description": "A seconda di come sono organizzati i rientri, ci ritroveremo a fare colazione e poi ognuno si organizzerà per il trasferimento verso l'aereoporto di Harstad/Narvik per rientrare in Italia.",
           "locale": "it"
         }
       ]

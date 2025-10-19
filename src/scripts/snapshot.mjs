@@ -335,18 +335,20 @@ function normalizeTour(t) {
     locale: f.locale ?? null,
   }));
 
-  const days = arr(t.days).map((d, di) => ({
-    id: String(d.id ?? `day-${di}`),
-    number: d.number ?? di + 1,
-    title: d.title ?? "",
-    locale: d.locale ?? null,
-    steps: arr(d.steps).map((s, si) => ({
-      id: String(s.id ?? `day-${di}-step-${si}`),
-      title: s.title ?? "",
-      description: s.description ?? "",
-      locale: s.locale ?? null,
-    })),
-  }));
+  const days = arr(t.days)
+    .map((d, di) => ({
+      id: String(d.id ?? `day-${di}`),
+      number: d.number ?? di + 1,
+      title: d.title ?? "",
+      locale: d.locale ?? null,
+      steps: arr(d.steps).map((s, si) => ({
+        id: String(s.id ?? `day-${di}-step-${si}`),
+        title: s.title ?? "",
+        description: s.description ?? "",
+        locale: s.locale ?? null,
+      })),
+    }))
+    .sort((a, b) => Number(a.number) - Number(b.number)); // Ordina per numero giorno
 
   // locations con id e steps normalizzati
   const locations = arr(t.locations).map((loc, li) => ({

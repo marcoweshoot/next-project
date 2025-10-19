@@ -601,20 +601,6 @@
       ]
     },
     {
-      "id": "66",
-      "number": 8,
-      "title": "Artigianato locale e Rientro a casa",
-      "locale": "it",
-      "steps": [
-        {
-          "id": "153",
-          "title": "Artigianato locale",
-          "description": "<p style=\"margin-left:0px;\">Se gli orari del volo lo permetteranno, nella mattinata visiteremo Amman e gli artigiani locali famosi per la lavorazione del legno.&nbsp;</p><p style=\"margin-left:0px;\">Trasferimento in aeroporto e rientro a casa</p>",
-          "locale": "it"
-        }
-      ]
-    },
-    {
       "id": "67",
       "number": 3,
       "title": "Madaba e riserva di Dana",
@@ -680,6 +666,20 @@
           "id": "68",
           "title": "Mar Morto e rientro ad Amman",
           "description": "<p>Dopo la colazione inizieremo il nostro rientro verso Amman. Faremo tappa sul mar morto per fotografare gli incredibili cristalli di sale. Arrivo in Hotel in serata</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "66",
+      "number": 8,
+      "title": "Artigianato locale e Rientro a casa",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "153",
+          "title": "Artigianato locale",
+          "description": "<p style=\"margin-left:0px;\">Se gli orari del volo lo permetteranno, nella mattinata visiteremo Amman e gli artigiani locali famosi per la lavorazione del legno.&nbsp;</p><p style=\"margin-left:0px;\">Trasferimento in aeroporto e rientro a casa</p>",
           "locale": "it"
         }
       ]

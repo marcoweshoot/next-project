@@ -535,20 +535,6 @@
       ]
     },
     {
-      "id": "19",
-      "number": 4,
-      "title": "Un'ultima alba prima di ripartire",
-      "locale": "it",
-      "steps": [
-        {
-          "id": "19",
-          "title": "Ultima sessione fotografica sui campi di lavanda",
-          "description": "<ul><li>Ore 05:00 : Sveglia presto per dirigerci sui campi per una sessione di scatto all'Alba</li><li>Ore 09:00 : Rientro in albergo e ricca colazione</li><li>Ore 10:00 : Check Out dalla struttura ricettiva</li><li>Ore 12:00 : Pranzo conclusivo e termine del workshop</li></ul>",
-          "locale": "it"
-        }
-      ]
-    },
-    {
       "id": "167",
       "number": 3,
       "title": "Esploriamo le Gole del Verdon",
@@ -558,6 +544,20 @@
           "id": "150",
           "title": "Le acque azzurre del Fiume Verdon e il canyon",
           "description": "<p>Dopo aver fatto una ricca colazione ci prepareremo per raggiungere le Gole del Verdon. Esploreremo un pò la zona in cerca di composizioni interessanti e se le temperature lo permetteranno ci avventureremo in un piccolo trekking tra questi splendidi muraglioni.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "number": 4,
+      "title": "Un'ultima alba prima di ripartire",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "19",
+          "title": "Ultima sessione fotografica sui campi di lavanda",
+          "description": "<ul><li>Ore 05:00 : Sveglia presto per dirigerci sui campi per una sessione di scatto all'Alba</li><li>Ore 09:00 : Rientro in albergo e ricca colazione</li><li>Ore 10:00 : Check Out dalla struttura ricettiva</li><li>Ore 12:00 : Pranzo conclusivo e termine del workshop</li></ul>",
           "locale": "it"
         }
       ]

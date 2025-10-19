@@ -428,20 +428,6 @@
       ]
     },
     {
-      "id": "206",
-      "number": 5,
-      "title": "Le dune nere di Adjlati",
-      "locale": "it",
-      "steps": [
-        {
-          "id": "195",
-          "title": "Le dune nere di Adjlati",
-          "description": "<p>Oggi attraverseremo il Wadi di Indjaren, un paesaggio punteggiato da pitture e incisioni rupestri. Il viaggio prosegue fino a raggiungere le dune nere di Adjlati, dove monteremo il campo per la notte. Un paesaggio contrastato e affascinante tra sabbia scura e rilievi desertici. Pernottamento in campo tendato, per vivere a pieno questa esperienza fotografica.</p>",
-          "locale": "it"
-        }
-      ]
-    },
-    {
       "id": "207",
       "number": 4,
       "title": "Rientro a Djanet",
@@ -451,6 +437,20 @@
           "id": "196",
           "title": "Rientro a Djanet e tramonto sulla valle deli UFO",
           "description": "<p>Partiremo per Djanet, notte in hotel con alba o tramonto sulla valle degli UFO, in una zona vicino la città che ci consentirà di fare una sessione di scatto anche quando abbiamo il pernotto in Hotel.</p>",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "206",
+      "number": 5,
+      "title": "Le dune nere di Adjlati",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "195",
+          "title": "Le dune nere di Adjlati",
+          "description": "<p>Oggi attraverseremo il Wadi di Indjaren, un paesaggio punteggiato da pitture e incisioni rupestri. Il viaggio prosegue fino a raggiungere le dune nere di Adjlati, dove monteremo il campo per la notte. Un paesaggio contrastato e affascinante tra sabbia scura e rilievi desertici. Pernottamento in campo tendato, per vivere a pieno questa esperienza fotografica.</p>",
           "locale": "it"
         }
       ]

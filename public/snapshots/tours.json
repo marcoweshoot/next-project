@@ -6465,20 +6465,6 @@
         ]
       },
       {
-        "id": "19",
-        "number": 4,
-        "title": "Un'ultima alba prima di ripartire",
-        "locale": "it",
-        "steps": [
-          {
-            "id": "19",
-            "title": "Ultima sessione fotografica sui campi di lavanda",
-            "description": "<ul><li>Ore 05:00 : Sveglia presto per dirigerci sui campi per una sessione di scatto all'Alba</li><li>Ore 09:00 : Rientro in albergo e ricca colazione</li><li>Ore 10:00 : Check Out dalla struttura ricettiva</li><li>Ore 12:00 : Pranzo conclusivo e termine del workshop</li></ul>",
-            "locale": "it"
-          }
-        ]
-      },
-      {
         "id": "167",
         "number": 3,
         "title": "Esploriamo le Gole del Verdon",
@@ -6488,6 +6474,20 @@
             "id": "150",
             "title": "Le acque azzurre del Fiume Verdon e il canyon",
             "description": "<p>Dopo aver fatto una ricca colazione ci prepareremo per raggiungere le Gole del Verdon. Esploreremo un pò la zona in cerca di composizioni interessanti e se le temperature lo permetteranno ci avventureremo in un piccolo trekking tra questi splendidi muraglioni.</p>",
+            "locale": "it"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "number": 4,
+        "title": "Un'ultima alba prima di ripartire",
+        "locale": "it",
+        "steps": [
+          {
+            "id": "19",
+            "title": "Ultima sessione fotografica sui campi di lavanda",
+            "description": "<ul><li>Ore 05:00 : Sveglia presto per dirigerci sui campi per una sessione di scatto all'Alba</li><li>Ore 09:00 : Rientro in albergo e ricca colazione</li><li>Ore 10:00 : Check Out dalla struttura ricettiva</li><li>Ore 12:00 : Pranzo conclusivo e termine del workshop</li></ul>",
             "locale": "it"
           }
         ]
@@ -12668,20 +12668,6 @@
         ]
       },
       {
-        "id": "36",
-        "number": 3,
-        "title": "Arrivederci Zermatt",
-        "locale": "it",
-        "steps": [
-          {
-            "id": "36",
-            "title": "Analisi degli scatti e saluti finali",
-            "description": "L'ultima mattinata che avremo a disposizione verrà dedicata all'analisi delle fotografie dei partecipanti, dove faremo il punto su ciò che avete appreso e sugli aspetti da migliorare. Ogni partecipante riceverà delle critiche costruttive atte a migliorare la sua tecnica, al termine di questa attività si concluderà l'evento, ognuno tornerà verso casa, per poi ricevere tutto il materiale didattico e i video di post produzione direttamente via mail.",
-            "locale": "it"
-          }
-        ]
-      },
-      {
         "id": "38",
         "number": 2,
         "title": "Un'intera giornata sul ghiacciaio",
@@ -12691,6 +12677,20 @@
             "id": "35",
             "title": "Dalle prime luci dell'alba, al tramonto",
             "description": "Per il secondo giorno prevediamo di svegliarci molto presto, recarci in location ancora con il buio, ed attendere le prime luci dell'alba. Questa sarà probabilmente la sessione più impegnativa di tutto l'evento ma varrà la pena assistere ad uno degli spettacoli più straordinari che la natura possa offrirci: l'alba sul ghiacciaio a 3100 m di quota. Cercheremo di trovare le migliori composizioni sfruttando la luce radente, il controluce e la luce alle spalle. Una volta delineate le sessioni di scatto torneremo in struttura per un po' di relax, una sana colazione, una sessione di analisi critica degli scatti dei partecipanti.Al termine delle attività faremo il pranzo, dopodiché ci rilasseremo fino all'arrivo del tramonto, Dove torneremo al fresco a scattare nuove inquadrature. Dopo il tramonto e la cena è prevista una sessione di fotografia notturna (previa verifica delle condizioni metereologiche) dove fotograferemo le stelle sul ghiacciaio.",
+            "locale": "it"
+          }
+        ]
+      },
+      {
+        "id": "36",
+        "number": 3,
+        "title": "Arrivederci Zermatt",
+        "locale": "it",
+        "steps": [
+          {
+            "id": "36",
+            "title": "Analisi degli scatti e saluti finali",
+            "description": "L'ultima mattinata che avremo a disposizione verrà dedicata all'analisi delle fotografie dei partecipanti, dove faremo il punto su ciò che avete appreso e sugli aspetti da migliorare. Ogni partecipante riceverà delle critiche costruttive atte a migliorare la sua tecnica, al termine di questa attività si concluderà l'evento, ognuno tornerà verso casa, per poi ricevere tutto il materiale didattico e i video di post produzione direttamente via mail.",
             "locale": "it"
           }
         ]
@@ -13720,20 +13720,6 @@
         ]
       },
       {
-        "id": "54",
-        "number": 8,
-        "title": "Arrivederci Lofoten",
-        "locale": "it",
-        "steps": [
-          {
-            "id": "45",
-            "title": "Saluti e transfer in aereoporto",
-            "description": "A seconda di come sono organizzati i rientri, ci ritroveremo a fare colazione e poi ognuno si organizzerà per il trasferimento verso l'aereoporto di Harstad/Narvik per rientrare in Italia.",
-            "locale": "it"
-          }
-        ]
-      },
-      {
         "id": "55",
         "number": 7,
         "title": "Lasciamo Leknes per rientrare a Evenes",
@@ -13743,6 +13729,20 @@
             "id": "44",
             "title": "Ultimi spot fotografici da ammirare",
             "description": "Lasceremo la struttura che ci ha ospitati per tutte queste notti per tornare verso Evenes. Durante il viaggio non mancheranno occasioni di fermarsi lungo la strada a fotografare gli ultimi incredibili spot, come ad esempio il ponte Ponte di Fredvang. La sera ci riuniremo tutti insieme a cena per discutere del viaggio affrontato e commentare le foto.",
+            "locale": "it"
+          }
+        ]
+      },
+      {
+        "id": "54",
+        "number": 8,
+        "title": "Arrivederci Lofoten",
+        "locale": "it",
+        "steps": [
+          {
+            "id": "45",
+            "title": "Saluti e transfer in aereoporto",
+            "description": "A seconda di come sono organizzati i rientri, ci ritroveremo a fare colazione e poi ognuno si organizzerà per il trasferimento verso l'aereoporto di Harstad/Narvik per rientrare in Italia.",
             "locale": "it"
           }
         ]
@@ -16261,20 +16261,6 @@
         ]
       },
       {
-        "id": "66",
-        "number": 8,
-        "title": "Artigianato locale e Rientro a casa",
-        "locale": "it",
-        "steps": [
-          {
-            "id": "153",
-            "title": "Artigianato locale",
-            "description": "<p style=\"margin-left:0px;\">Se gli orari del volo lo permetteranno, nella mattinata visiteremo Amman e gli artigiani locali famosi per la lavorazione del legno.&nbsp;</p><p style=\"margin-left:0px;\">Trasferimento in aeroporto e rientro a casa</p>",
-            "locale": "it"
-          }
-        ]
-      },
-      {
         "id": "67",
         "number": 3,
         "title": "Madaba e riserva di Dana",
@@ -16340,6 +16326,20 @@
             "id": "68",
             "title": "Mar Morto e rientro ad Amman",
             "description": "<p>Dopo la colazione inizieremo il nostro rientro verso Amman. Faremo tappa sul mar morto per fotografare gli incredibili cristalli di sale. Arrivo in Hotel in serata</p>",
+            "locale": "it"
+          }
+        ]
+      },
+      {
+        "id": "66",
+        "number": 8,
+        "title": "Artigianato locale e Rientro a casa",
+        "locale": "it",
+        "steps": [
+          {
+            "id": "153",
+            "title": "Artigianato locale",
+            "description": "<p style=\"margin-left:0px;\">Se gli orari del volo lo permetteranno, nella mattinata visiteremo Amman e gli artigiani locali famosi per la lavorazione del legno.&nbsp;</p><p style=\"margin-left:0px;\">Trasferimento in aeroporto e rientro a casa</p>",
             "locale": "it"
           }
         ]
@@ -36289,20 +36289,6 @@
         ]
       },
       {
-        "id": "206",
-        "number": 5,
-        "title": "Le dune nere di Adjlati",
-        "locale": "it",
-        "steps": [
-          {
-            "id": "195",
-            "title": "Le dune nere di Adjlati",
-            "description": "<p>Oggi attraverseremo il Wadi di Indjaren, un paesaggio punteggiato da pitture e incisioni rupestri. Il viaggio prosegue fino a raggiungere le dune nere di Adjlati, dove monteremo il campo per la notte. Un paesaggio contrastato e affascinante tra sabbia scura e rilievi desertici. Pernottamento in campo tendato, per vivere a pieno questa esperienza fotografica.</p>",
-            "locale": "it"
-          }
-        ]
-      },
-      {
         "id": "207",
         "number": 4,
         "title": "Rientro a Djanet",
@@ -36312,6 +36298,20 @@
             "id": "196",
             "title": "Rientro a Djanet e tramonto sulla valle deli UFO",
             "description": "<p>Partiremo per Djanet, notte in hotel con alba o tramonto sulla valle degli UFO, in una zona vicino la città che ci consentirà di fare una sessione di scatto anche quando abbiamo il pernotto in Hotel.</p>",
+            "locale": "it"
+          }
+        ]
+      },
+      {
+        "id": "206",
+        "number": 5,
+        "title": "Le dune nere di Adjlati",
+        "locale": "it",
+        "steps": [
+          {
+            "id": "195",
+            "title": "Le dune nere di Adjlati",
+            "description": "<p>Oggi attraverseremo il Wadi di Indjaren, un paesaggio punteggiato da pitture e incisioni rupestri. Il viaggio prosegue fino a raggiungere le dune nere di Adjlati, dove monteremo il campo per la notte. Un paesaggio contrastato e affascinante tra sabbia scura e rilievi desertici. Pernottamento in campo tendato, per vivere a pieno questa esperienza fotografica.</p>",
             "locale": "it"
           }
         ]

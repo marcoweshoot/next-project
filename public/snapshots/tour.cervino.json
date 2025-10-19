@@ -216,20 +216,6 @@
       ]
     },
     {
-      "id": "36",
-      "number": 3,
-      "title": "Arrivederci Zermatt",
-      "locale": "it",
-      "steps": [
-        {
-          "id": "36",
-          "title": "Analisi degli scatti e saluti finali",
-          "description": "L'ultima mattinata che avremo a disposizione verrà dedicata all'analisi delle fotografie dei partecipanti, dove faremo il punto su ciò che avete appreso e sugli aspetti da migliorare. Ogni partecipante riceverà delle critiche costruttive atte a migliorare la sua tecnica, al termine di questa attività si concluderà l'evento, ognuno tornerà verso casa, per poi ricevere tutto il materiale didattico e i video di post produzione direttamente via mail.",
-          "locale": "it"
-        }
-      ]
-    },
-    {
       "id": "38",
       "number": 2,
       "title": "Un'intera giornata sul ghiacciaio",
@@ -239,6 +225,20 @@
           "id": "35",
           "title": "Dalle prime luci dell'alba, al tramonto",
           "description": "Per il secondo giorno prevediamo di svegliarci molto presto, recarci in location ancora con il buio, ed attendere le prime luci dell'alba. Questa sarà probabilmente la sessione più impegnativa di tutto l'evento ma varrà la pena assistere ad uno degli spettacoli più straordinari che la natura possa offrirci: l'alba sul ghiacciaio a 3100 m di quota. Cercheremo di trovare le migliori composizioni sfruttando la luce radente, il controluce e la luce alle spalle. Una volta delineate le sessioni di scatto torneremo in struttura per un po' di relax, una sana colazione, una sessione di analisi critica degli scatti dei partecipanti.Al termine delle attività faremo il pranzo, dopodiché ci rilasseremo fino all'arrivo del tramonto, Dove torneremo al fresco a scattare nuove inquadrature. Dopo il tramonto e la cena è prevista una sessione di fotografia notturna (previa verifica delle condizioni metereologiche) dove fotograferemo le stelle sul ghiacciaio.",
+          "locale": "it"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "number": 3,
+      "title": "Arrivederci Zermatt",
+      "locale": "it",
+      "steps": [
+        {
+          "id": "36",
+          "title": "Analisi degli scatti e saluti finali",
+          "description": "L'ultima mattinata che avremo a disposizione verrà dedicata all'analisi delle fotografie dei partecipanti, dove faremo il punto su ciò che avete appreso e sugli aspetti da migliorare. Ogni partecipante riceverà delle critiche costruttive atte a migliorare la sua tecnica, al termine di questa attività si concluderà l'evento, ognuno tornerà verso casa, per poi ricevere tutto il materiale didattico e i video di post produzione direttamente via mail.",
           "locale": "it"
         }
       ]
