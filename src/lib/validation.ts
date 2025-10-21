@@ -272,12 +272,33 @@ export function validateFields(fields: Record<string, any>): {
         result = validateVATNumber(value)
         break
       }
+      case 'privacyaccepted':
+      case 'privacy_accepted':
+      case 'marketingaccepted':
+      case 'marketing_accepted':
+      case 'confirmpassword':
+      case 'confirm_password': {
+        // Boolean or confirmation fields - just pass through
+        result = { 
+          isValid: true, 
+          sanitizedValue: value 
+        }
+        break
+      }
       default: {
         // Generic string validation
-        const sanitized = sanitizeString(value)
-        result = { 
-          isValid: sanitized.length > 0, 
-          sanitizedValue: sanitized 
+        if (typeof value === 'boolean') {
+          // Handle boolean values
+          result = { 
+            isValid: true, 
+            sanitizedValue: value 
+          }
+        } else {
+          const sanitized = sanitizeString(value)
+          result = { 
+            isValid: sanitized.length > 0, 
+            sanitizedValue: sanitized 
+          }
         }
         break
       }
