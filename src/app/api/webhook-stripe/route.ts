@@ -159,6 +159,7 @@ export async function POST(request: NextRequest) {
 
           // Invia notifica email all'admin (non-blocking)
           try {
+            console.log('📧 [WEBHOOK] Attempting to send admin notification...')
             const { data: userProfile } = await supabase
               .from('profiles')
               .select('first_name, last_name, email')
@@ -168,6 +169,8 @@ export async function POST(request: NextRequest) {
             if (userProfile) {
               const userName = `${userProfile.first_name || ''} ${userProfile.last_name || ''}`.trim() || 'Cliente'
               const userEmail = userProfile.email || ''
+              
+              console.log(`📧 [WEBHOOK] User profile found: ${userName} (${userEmail})`)
               
               const emailContent = generateNewBookingAdminEmail(
                 userName,
@@ -179,13 +182,23 @@ export async function POST(request: NextRequest) {
                 'deposit'
               )
 
+              console.log(`📧 [WEBHOOK] Email content generated. Subject: ${emailContent.subject}`)
+              console.log(`📧 [WEBHOOK] Sending to admin email: ${process.env.ADMIN_EMAIL}`)
+
               // Send admin notification (non-blocking)
-              sendAdminNotification(emailContent.subject, emailContent.html, emailContent.text)
-                .catch(err => console.error('Failed to send admin notification:', err))
+              const emailSent = await sendAdminNotification(emailContent.subject, emailContent.html, emailContent.text)
+              
+              if (emailSent) {
+                console.log('✅ [WEBHOOK] Admin notification sent successfully!')
+              } else {
+                console.error('❌ [WEBHOOK] Admin notification failed to send')
+              }
+            } else {
+              console.warn('⚠️ [WEBHOOK] User profile not found for userId:', finalUserId)
             }
           } catch (emailError) {
             // Log but don't fail the booking
-            console.error('Error sending admin notification:', emailError)
+            console.error('❌ [WEBHOOK] Error sending admin notification:', emailError)
           }
 
           // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
@@ -271,6 +284,7 @@ export async function POST(request: NextRequest) {
 
           // Invia notifica email all'admin per saldo completato (non-blocking)
           try {
+            console.log('📧 [WEBHOOK] Attempting to send admin notification for balance payment...')
             const { data: userProfile } = await supabase
               .from('profiles')
               .select('first_name, last_name, email')
@@ -280,6 +294,8 @@ export async function POST(request: NextRequest) {
             if (userProfile) {
               const userName = `${userProfile.first_name || ''} ${userProfile.last_name || ''}`.trim() || 'Cliente'
               const userEmail = userProfile.email || ''
+              
+              console.log(`📧 [WEBHOOK] User profile found: ${userName} (${userEmail})`)
               
               const emailContent = generateNewBookingAdminEmail(
                 userName,
@@ -291,13 +307,23 @@ export async function POST(request: NextRequest) {
                 'balance'
               )
 
+              console.log(`📧 [WEBHOOK] Email content generated. Subject: ${emailContent.subject}`)
+              console.log(`📧 [WEBHOOK] Sending to admin email: ${process.env.ADMIN_EMAIL}`)
+
               // Send admin notification (non-blocking)
-              sendAdminNotification(emailContent.subject, emailContent.html, emailContent.text)
-                .catch(err => console.error('Failed to send admin notification:', err))
+              const emailSent = await sendAdminNotification(emailContent.subject, emailContent.html, emailContent.text)
+              
+              if (emailSent) {
+                console.log('✅ [WEBHOOK] Admin notification sent successfully!')
+              } else {
+                console.error('❌ [WEBHOOK] Admin notification failed to send')
+              }
+            } else {
+              console.warn('⚠️ [WEBHOOK] User profile not found for userId:', finalUserId)
             }
           } catch (emailError) {
             // Log but don't fail the booking
-            console.error('Error sending admin notification:', emailError)
+            console.error('❌ [WEBHOOK] Error sending admin notification:', emailError)
           }
 
           // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)

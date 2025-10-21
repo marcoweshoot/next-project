@@ -16,9 +16,12 @@ const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@weshoot.it'
 
 export async function sendEmail(emailData: EmailData): Promise<boolean> {
   try {
+    console.log(`📧 [EMAIL] Attempting to send email to: ${emailData.to}`)
+    console.log(`📧 [EMAIL] Subject: ${emailData.subject}`)
+    
     // In development, just log the email
     if (process.env.NODE_ENV === 'development' && !process.env.BREVO_API_KEY) {
-      console.log('📧 Email would be sent:')
+      console.log('📧 [EMAIL] Development mode - Email would be sent:')
       console.log('From:', emailData.from || DEFAULT_FROM_EMAIL)
       console.log('To:', emailData.to)
       console.log('Subject:', emailData.subject)
@@ -28,9 +31,11 @@ export async function sendEmail(emailData: EmailData): Promise<boolean> {
 
     // Check if Brevo API key is configured
     if (!process.env.BREVO_API_KEY) {
-      console.warn('⚠️ BREVO_API_KEY not configured. Email not sent.')
+      console.error('❌ [EMAIL] BREVO_API_KEY not configured. Email not sent.')
       return false
     }
+
+    console.log('📧 [EMAIL] Brevo API key found, initializing...')
 
     // Initialize Brevo API
     const apiInstance = new brevo.TransactionalEmailsApi()
@@ -43,6 +48,8 @@ export async function sendEmail(emailData: EmailData): Promise<boolean> {
     const recipients = Array.isArray(emailData.to)
       ? emailData.to.map(email => ({ email }))
       : [{ email: emailData.to }]
+
+    console.log(`📧 [EMAIL] Sending to ${recipients.length} recipient(s)`)
 
     // Send email via Brevo
     const sendSmtpEmail = new brevo.SendSmtpEmail()
@@ -60,12 +67,20 @@ export async function sendEmail(emailData: EmailData): Promise<boolean> {
       sendSmtpEmail.replyTo = { email: emailData.replyTo }
     }
 
+    console.log('📧 [EMAIL] Calling Brevo API...')
     const result = await apiInstance.sendTransacEmail(sendSmtpEmail)
     
-    console.log('✅ Email sent successfully:', result.response.statusCode)
+    console.log(`✅ [EMAIL] Email sent successfully! Status: ${result.response.statusCode}`)
+    console.log(`✅ [EMAIL] Message ID: ${result.body.messageId}`)
     return true
   } catch (error) {
-    console.error('❌ Error sending email:', error)
+    console.error('❌ [EMAIL] Error sending email:', error)
+    if (error instanceof Error) {
+      console.error('❌ [EMAIL] Error message:', error.message)
+      console.error('❌ [EMAIL] Error stack:', error.stack)
+    }
+    // Log the full error object for debugging
+    console.error('❌ [EMAIL] Full error:', JSON.stringify(error, null, 2))
     return false
   }
 }
