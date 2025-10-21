@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 import IubendaScripts from "@/integrations/IubendaScripts";
 import ConsentLoaders from "@/integrations/ConsentLoaders";
 import { FacebookPixel } from "@/components/analytics/FacebookPixel";
+import { FacebookPixelDebug } from "@/components/analytics/FacebookPixelDebug";
 
 // Usa la CSS variable così font-sans del tema funziona ovunque
 const montserrat = Montserrat({
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div suppressHydrationWarning>
               {children}
             </div>
+            <FacebookPixelDebug />
           </ClientProviders>
           <Toaster />
         </ToastStateProvider>

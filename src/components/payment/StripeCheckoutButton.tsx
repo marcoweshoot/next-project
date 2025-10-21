@@ -75,13 +75,19 @@ export function StripeCheckoutButton({
       }
 
       // Save purchase data for Facebook Pixel tracking
-      sessionStorage.setItem('lastPurchase', JSON.stringify({
+      const purchaseData = {
         tourTitle,
         value: amount / 100, // Convert from cents
         quantity,
         tourDestination,
         sessionDate
-      }))
+      }
+      console.log('💾 [FB PIXEL] Saving purchase data to sessionStorage:', purchaseData)
+      sessionStorage.setItem('lastPurchase', JSON.stringify(purchaseData))
+      
+      // Verify data was saved
+      const savedData = sessionStorage.getItem('lastPurchase')
+      console.log('✅ [FB PIXEL] Data saved verification:', savedData ? 'SUCCESS' : 'FAILED')
 
       // Redirect a Stripe Checkout
       window.location.href = url

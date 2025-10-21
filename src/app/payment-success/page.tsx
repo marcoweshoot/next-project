@@ -36,21 +36,38 @@ function PaymentSuccessContent() {
         localStorage.removeItem('paymentData')
         
         // Facebook Pixel: Track Purchase event client-side
+        console.log('🎯 [FB PIXEL] Payment success page loaded')
+        console.log('🎯 [FB PIXEL] window.fbq exists:', typeof window !== 'undefined' && !!window.fbq)
+        
         if (typeof window !== 'undefined' && window.fbq) {
           // Try to get purchase details from session storage if available
           const purchaseData = sessionStorage.getItem('lastPurchase')
+          console.log('🎯 [FB PIXEL] Retrieved purchase data:', purchaseData)
+          
           if (purchaseData) {
             const purchase = JSON.parse(purchaseData)
-            window.fbq('track', 'Purchase', {
+            console.log('🎯 [FB PIXEL] Parsed purchase data:', purchase)
+            
+            const eventData = {
               content_name: purchase.tourTitle || 'Tour',
               content_category: 'Viaggi Fotografici',
               value: purchase.value || 0,
               currency: 'EUR',
               num_items: purchase.quantity || 1
-            })
+            }
+            console.log('🎯 [FB PIXEL] Tracking Purchase event with data:', eventData)
+            
+            window.fbq('track', 'Purchase', eventData)
+            console.log('✅ [FB PIXEL] Purchase event sent successfully!')
+            
             // Clean up
             sessionStorage.removeItem('lastPurchase')
+            console.log('🧹 [FB PIXEL] Cleaned up sessionStorage')
+          } else {
+            console.warn('⚠️ [FB PIXEL] No purchase data found in sessionStorage')
           }
+        } else {
+          console.error('❌ [FB PIXEL] Facebook Pixel not initialized (window.fbq not found)')
         }
         
         // Redirect to dashboard with success parameter

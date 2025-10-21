@@ -7,18 +7,32 @@ export function FacebookPixel() {
   const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL
 
   useEffect(() => {
+    console.log('🔧 [FB PIXEL INIT] FB_PIXEL_ID:', FB_PIXEL_ID ? `${FB_PIXEL_ID.substring(0, 8)}...` : 'NOT SET')
+    
     if (!FB_PIXEL_ID) {
-      console.warn('Facebook Pixel ID is not set. Facebook Pixel will not be initialized.')
+      console.warn('⚠️ [FB PIXEL INIT] Facebook Pixel ID is not set. Facebook Pixel will not be initialized.')
+      console.warn('💡 [FB PIXEL INIT] Set NEXT_PUBLIC_FB_PIXEL in your environment variables')
       return
     }
 
-    // Ensure fbq is defined before use
-    if (typeof window !== 'undefined' && !window.fbq) {
-      // This part should ideally be handled by the script itself,
-      // but adding a fallback for type safety and clarity.
-      // The actual script in the <Script> component will define window.fbq
-      console.warn('window.fbq not found, Facebook Pixel might not be loaded correctly.')
-    }
+    // Wait a bit for script to load, then check
+    const checkInterval = setInterval(() => {
+      if (typeof window !== 'undefined' && window.fbq) {
+        console.log('✅ [FB PIXEL INIT] Facebook Pixel loaded successfully!')
+        console.log('✅ [FB PIXEL INIT] window.fbq is available')
+        clearInterval(checkInterval)
+      }
+    }, 100)
+
+    // Stop checking after 5 seconds
+    setTimeout(() => {
+      clearInterval(checkInterval)
+      if (typeof window !== 'undefined' && !window.fbq) {
+        console.error('❌ [FB PIXEL INIT] Facebook Pixel failed to load after 5 seconds')
+      }
+    }, 5000)
+
+    return () => clearInterval(checkInterval)
   }, [FB_PIXEL_ID])
 
   if (!FB_PIXEL_ID) {
