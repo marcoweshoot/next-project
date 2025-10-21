@@ -88,7 +88,6 @@ const HeroVideoSection: React.FC = () => {
         {/* Video solo da md+, senza preload aggressivo */}
         <video
           ref={videoRef}
-          autoPlay
           muted
           loop
           playsInline
