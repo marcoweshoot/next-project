@@ -20,10 +20,13 @@ import {
   MapPin,
   Users,
   Star,
-  ArrowLeft,
   CheckCircle
 } from 'lucide-react'
 import { GoogleAuthButton } from '@/components/auth/GoogleAuthButton'
+import dynamic from 'next/dynamic'
+
+const Aurora = dynamic(() => import('@/components/ui/Aurora'), { ssr: false })
+const SplashCursor = dynamic(() => import('@/components/ui/SplashCursor'), { ssr: false })
 
 function LoginForm() {
   const [email, setEmail] = useState('')
@@ -66,11 +69,23 @@ function LoginForm() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/fallbacks/tour-cover.avif')] bg-cover bg-center opacity-5 dark:opacity-10" />
+    <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+      {/* Aurora Background */}
+      <div className="absolute inset-0 z-0">
+        <Aurora 
+          amplitude={1.0}
+          blend={0.5}
+          speed={0.8}
+        />
+      </div>
       
-      <div className="relative min-h-screen flex">
+      {/* Overlay gradient for better readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-slate-900/60 z-0" />
+      
+      {/* Splash Cursor Effect */}
+      <SplashCursor />
+      
+      <div className="relative z-10 min-h-screen flex">
         {/* Left Side - Branding */}
         <div className="hidden lg:flex lg:w-1/2 flex-col justify-center items-center p-12 text-center">
           <div className="max-w-md space-y-8">
@@ -274,12 +289,20 @@ function LoginForm() {
 export default function LoginPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-        <div className="absolute inset-0 bg-[url('/fallbacks/tour-cover.avif')] bg-cover bg-center opacity-5 dark:opacity-10" />
-        <div className="relative min-h-screen flex items-center justify-center">
+      <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Aurora 
+            amplitude={1.0}
+            blend={0.5}
+            speed={0.8}
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-slate-900/60 z-0" />
+        <SplashCursor />
+        <div className="relative z-10 min-h-screen flex items-center justify-center">
           <div className="flex items-center space-x-2">
-            <Loader2 className="h-6 w-6 animate-spin text-red-600" />
-            <span className="text-slate-600 dark:text-slate-400">Caricamento...</span>
+            <Loader2 className="h-6 w-6 animate-spin text-red-500" />
+            <span className="text-white">Caricamento...</span>
           </div>
         </div>
       </div>

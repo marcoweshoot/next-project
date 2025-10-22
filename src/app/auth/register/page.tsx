@@ -25,6 +25,10 @@ import {
   CheckCircle
 } from 'lucide-react'
 import { GoogleAuthButton } from '@/components/auth/GoogleAuthButton'
+import dynamic from 'next/dynamic'
+
+const Aurora = dynamic(() => import('@/components/ui/Aurora'), { ssr: false })
+const SplashCursor = dynamic(() => import('@/components/ui/SplashCursor'), { ssr: false })
 
 export default function RegisterPage() {
   const [email, setEmail] = useState('')
@@ -124,11 +128,23 @@ export default function RegisterPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('/fallbacks/tour-cover.avif')] bg-cover bg-center opacity-5 dark:opacity-10" />
+      <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+        {/* Aurora Background */}
+        <div className="absolute inset-0 z-0">
+          <Aurora 
+            amplitude={1.0}
+            blend={0.5}
+            speed={0.8}
+          />
+        </div>
         
-        <div className="relative min-h-screen flex items-center justify-center p-8">
+        {/* Overlay gradient for better readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-slate-900/60 z-0" />
+        
+        {/* Splash Cursor Effect */}
+        <SplashCursor />
+        
+        <div className="relative z-10 min-h-screen flex items-center justify-center p-8">
           <div className="w-full max-w-md">
             {/* Mobile Logo */}
             <div className="flex justify-center mb-8">
@@ -205,11 +221,23 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/fallbacks/tour-cover.avif')] bg-cover bg-center opacity-5 dark:opacity-10" />
+    <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+      {/* Aurora Background */}
+      <div className="absolute inset-0 z-0">
+        <Aurora 
+          amplitude={1.0}
+          blend={0.5}
+          speed={0.8}
+        />
+      </div>
       
-      <div className="relative min-h-screen flex">
+      {/* Overlay gradient for better readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-slate-900/60 z-0" />
+      
+      {/* Splash Cursor Effect */}
+      <SplashCursor />
+      
+      <div className="relative z-10 min-h-screen flex">
         {/* Left Side - Branding */}
         <div className="hidden lg:flex lg:w-1/2 flex-col justify-center items-center p-12 text-center">
           <div className="max-w-md space-y-8">
