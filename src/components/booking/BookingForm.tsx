@@ -8,6 +8,8 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
 import { Calendar, Euro, Users, CreditCard } from 'lucide-react'
 import { StripeCheckoutButton } from '@/components/payment/StripeCheckoutButton'
+import { GiftCardInput } from '@/components/gift-card/GiftCardInput'
+import { formatCurrency } from '@/lib/giftCards'
 
 interface TourSession {
   id: string
@@ -33,6 +35,8 @@ export function BookingForm({ tour, session, onBookingSuccess }: BookingFormProp
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [user, setUser] = useState<any>(null)
+  const [giftCardCode, setGiftCardCode] = useState<string | undefined>(undefined)
+  const [giftCardDiscount, setGiftCardDiscount] = useState<number>(0)
   const supabase = createClient()
 
   // Get current user
@@ -64,6 +68,9 @@ export function BookingForm({ tour, session, onBookingSuccess }: BookingFormProp
 
   const depositAmount = Math.round(session.price * 0.5) // 50% deposit
   const balanceAmount = session.price - depositAmount
+  
+  // Calculate final amount after gift card
+  const finalDepositAmount = Math.max(0, depositAmount - (giftCardDiscount / 100))
 
   const handlePaymentSuccess = () => {
     setStep('payment')
@@ -72,6 +79,17 @@ export function BookingForm({ tour, session, onBookingSuccess }: BookingFormProp
 
   const handlePaymentError = (error: string) => {
     setError(error)
+  }
+  
+  const handleApplyGiftCard = (code: string, discount: number) => {
+    setGiftCardCode(code)
+    setGiftCardDiscount(discount)
+    setError(null)
+  }
+  
+  const handleRemoveGiftCard = () => {
+    setGiftCardCode(undefined)
+    setGiftCardDiscount(0)
   }
 
   if (step === 'payment') {
@@ -141,6 +159,14 @@ export function BookingForm({ tour, session, onBookingSuccess }: BookingFormProp
           </Badge>
         </div>
 
+        {/* Gift Card Input */}
+        <GiftCardInput
+          onApply={handleApplyGiftCard}
+          onRemove={handleRemoveGiftCard}
+          appliedCode={giftCardCode}
+          appliedDiscount={giftCardDiscount}
+        />
+
         {/* Payment Breakdown */}
         <div className="border rounded-lg p-4 space-y-2">
           <h4 className="font-medium">Riepilogo Pagamento</h4>
@@ -152,14 +178,22 @@ export function BookingForm({ tour, session, onBookingSuccess }: BookingFormProp
             <span>Acconto (50%):</span>
             <span>€{depositAmount}</span>
           </div>
+          {giftCardDiscount > 0 && (
+            <div className="flex justify-between text-sm text-green-600 dark:text-green-400">
+              <span>Sconto Gift Card:</span>
+              <span>-{formatCurrency(giftCardDiscount)}</span>
+            </div>
+          )}
           <div className="flex justify-between text-sm">
             <span>Saldo:</span>
             <span>€{balanceAmount}</span>
           </div>
           <div className="border-t pt-2">
-            <div className="flex justify-between font-medium">
+            <div className="flex justify-between font-medium text-lg">
               <span>Da pagare ora:</span>
-              <span>€{depositAmount}</span>
+              <span className={giftCardDiscount > 0 ? 'text-green-600 dark:text-green-400' : ''}>
+                €{finalDepositAmount}
+              </span>
             </div>
           </div>
         </div>
@@ -170,20 +204,30 @@ export function BookingForm({ tour, session, onBookingSuccess }: BookingFormProp
           </Alert>
         )}
 
-        {/* Payment Form */}
-        <StripeCheckoutButton
-          amount={depositAmount * 100} // Convert to cents
-          currency="eur"
-          tourId={tour.id}
-          sessionId={session.id}
-          userId={user.id}
-          paymentType="deposit"
-          tourTitle={tour.title}
-          tourDestination={tour.title}
-          sessionDate={session.start}
-          onSuccess={handlePaymentSuccess}
-          onError={handlePaymentError}
-        />
+        {finalDepositAmount === 0 ? (
+          <Alert>
+            <AlertDescription>
+              🎉 La tua gift card copre l'intero importo dell'acconto! 
+              Contatta il supporto per completare la prenotazione.
+            </AlertDescription>
+          </Alert>
+        ) : (
+          /* Payment Form */
+          <StripeCheckoutButton
+            amount={finalDepositAmount * 100} // Convert to cents
+            currency="eur"
+            tourId={tour.id}
+            sessionId={session.id}
+            userId={user.id}
+            paymentType="deposit"
+            tourTitle={tour.title}
+            tourDestination={tour.title}
+            sessionDate={session.start}
+            giftCardCode={giftCardCode}
+            onSuccess={handlePaymentSuccess}
+            onError={handlePaymentError}
+          />
+        )}
       </CardContent>
     </Card>
   )

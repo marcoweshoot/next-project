@@ -98,6 +98,143 @@ export async function sendAdminNotification(
   })
 }
 
+/**
+ * Send gift card email to recipient
+ */
+export async function sendGiftCardEmail(
+  recipientEmail: string,
+  giftCardCode: string,
+  amount: number, // in cents
+  expiresAt: string
+): Promise<boolean> {
+  const formattedAmount = new Intl.NumberFormat('it-IT', {
+    style: 'currency',
+    currency: 'EUR'
+  }).format(amount / 100)
+  
+  const expirationDate = new Date(expiresAt).toLocaleDateString('it-IT', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  })
+  
+  const subject = `🎁 La tua Gift Card WeShoot di ${formattedAmount}`
+  
+  const html = `
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Card WeShoot</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td align="center" style="padding: 40px 0;">
+        <table role="presentation" style="width: 600px; max-width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <!-- Header with gradient -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: bold;">🎁 Gift Card WeShoot</h1>
+              <p style="margin: 10px 0 0; color: #ffffff; font-size: 18px; opacity: 0.95;">Il regalo perfetto per chi ama la fotografia</p>
+            </td>
+          </tr>
+          
+          <!-- Content -->
+          <tr>
+            <td style="padding: 40px 30px;">
+              <h2 style="margin: 0 0 20px; color: #333333; font-size: 24px;">Congratulazioni!</h2>
+              <p style="margin: 0 0 20px; color: #666666; font-size: 16px; line-height: 1.6;">
+                Hai ricevuto una Gift Card WeShoot del valore di <strong style="color: #667eea;">${formattedAmount}</strong>!
+              </p>
+              
+              <!-- Gift Card Box -->
+              <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 30px; margin: 30px 0; text-align: center;">
+                <p style="margin: 0 0 10px; color: #ffffff; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9;">Il tuo codice</p>
+                <div style="background-color: #ffffff; border-radius: 8px; padding: 20px; margin: 10px 0;">
+                  <code style="font-size: 32px; font-weight: bold; color: #667eea; letter-spacing: 2px; font-family: 'Courier New', monospace;">${giftCardCode}</code>
+                </div>
+                <p style="margin: 10px 0 0; color: #ffffff; font-size: 28px; font-weight: bold;">${formattedAmount}</p>
+              </div>
+              
+              <!-- How to use -->
+              <div style="background-color: #f8f9fa; border-left: 4px solid #667eea; padding: 20px; margin: 30px 0; border-radius: 4px;">
+                <h3 style="margin: 0 0 15px; color: #333333; font-size: 18px;">Come utilizzarla</h3>
+                <ol style="margin: 0; padding-left: 20px; color: #666666; line-height: 1.8;">
+                  <li>Scegli il tuo viaggio fotografico su <a href="https://www.weshoot.it/viaggi-fotografici" style="color: #667eea; text-decoration: none;">weshoot.it</a></li>
+                  <li>Durante il pagamento, inserisci il codice della gift card</li>
+                  <li>Lo sconto verrà applicato automaticamente</li>
+                  <li>Completa la prenotazione e preparati a partire!</li>
+                </ol>
+              </div>
+              
+              <!-- Important info -->
+              <div style="margin: 30px 0;">
+                <p style="margin: 0 0 10px; color: #666666; font-size: 14px;">
+                  <strong>Validità:</strong> Questa gift card è valida fino al <strong>${expirationDate}</strong>
+                </p>
+                <p style="margin: 0; color: #666666; font-size: 14px;">
+                  <strong>Valore rimanente:</strong> Puoi usare la gift card su più prenotazioni fino ad esaurimento del credito
+                </p>
+              </div>
+              
+              <!-- CTA Button -->
+              <div style="text-align: center; margin: 40px 0;">
+                <a href="https://www.weshoot.it/viaggi-fotografici" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 8px; font-weight: bold; font-size: 16px;">Scopri i Viaggi</a>
+              </div>
+            </td>
+          </tr>
+          
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f8f9fa; padding: 30px; text-align: center; border-top: 1px solid #e9ecef;">
+              <p style="margin: 0 0 10px; color: #999999; font-size: 14px;">
+                Hai domande? Contattaci a <a href="mailto:info@weshoot.it" style="color: #667eea; text-decoration: none;">info@weshoot.it</a>
+              </p>
+              <p style="margin: 0; color: #999999; font-size: 12px;">
+                © ${new Date().getFullYear()} WeShoot. Tutti i diritti riservati.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+  `
+  
+  const text = `
+🎁 Gift Card WeShoot
+
+Congratulazioni! Hai ricevuto una Gift Card WeShoot del valore di ${formattedAmount}!
+
+IL TUO CODICE: ${giftCardCode}
+
+Come utilizzarla:
+1. Scegli il tuo viaggio fotografico su weshoot.it/viaggi-fotografici
+2. Durante il pagamento, inserisci il codice della gift card
+3. Lo sconto verrà applicato automaticamente
+4. Completa la prenotazione e preparati a partire!
+
+Validità: Fino al ${expirationDate}
+
+Puoi usare la gift card su più prenotazioni fino ad esaurimento del credito.
+
+Hai domande? Contattaci a info@weshoot.it
+
+© ${new Date().getFullYear()} WeShoot. Tutti i diritti riservati.
+  `.trim()
+  
+  return sendEmail({
+    to: recipientEmail,
+    subject,
+    html,
+    text,
+  })
+}
+
 // Admin notification templates
 export function generateNewBookingAdminEmail(
   userName: string,

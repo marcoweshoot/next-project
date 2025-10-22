@@ -18,6 +18,7 @@ interface StripeCheckoutButtonProps {
   sessionEndDate?: string
   sessionPrice?: number
   sessionDeposit?: number
+  giftCardCode?: string
   onSuccess?: () => void
   onError?: (error: string) => void
 }
@@ -36,6 +37,7 @@ export function StripeCheckoutButton({
   sessionEndDate,
   sessionPrice,
   sessionDeposit,
+  giftCardCode,
   onSuccess,
   onError,
 }: StripeCheckoutButtonProps) {
@@ -65,6 +67,7 @@ export function StripeCheckoutButton({
           sessionEndDate,
           sessionPrice,
           sessionDeposit,
+          giftCardCode,
         }),
       })
 

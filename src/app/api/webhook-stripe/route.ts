@@ -125,10 +125,18 @@ export async function POST(request: NextRequest) {
           const quantityValue = parseInt(session.metadata?.quantity || '1')
           const expectedTotal = sessionPrice * 100 * quantityValue
           
+          // Check if gift card was applied
+          const giftCardCode = session.metadata?.giftCardCode
+          const giftCardDiscount = parseInt(session.metadata?.giftCardDiscount || '0')
+          const originalAmount = parseInt(session.metadata?.originalAmount || session.amount_total.toString())
+          
+          // Calculate total amount paid (Stripe payment + gift card discount)
+          const totalAmountPaid = session.amount_total + giftCardDiscount
+          
           // Determina lo status: se l'importo pagato >= totale atteso, è tutto pagato
-          const bookingStatus = session.amount_total >= expectedTotal ? 'fully_paid' : 'deposit_paid'
+          const bookingStatus = totalAmountPaid >= expectedTotal ? 'fully_paid' : 'deposit_paid'
 
-          const { error: insertError } = await supabase
+          const { data: newBooking, error: insertError } = await supabase
             .from('bookings')
             .insert({
               user_id: finalUserId,
@@ -137,7 +145,7 @@ export async function POST(request: NextRequest) {
               status: bookingStatus,
               deposit_amount: session.amount_total,
               total_amount: expectedTotal,
-              amount_paid: session.amount_total, // Importo effettivamente pagato
+              amount_paid: totalAmountPaid, // Include gift card discount
               stripe_payment_intent_id: session.payment_intent as string,
               deposit_due_date: new Date().toISOString(),
               balance_due_date: session.metadata?.sessionDate ? 
@@ -149,12 +157,40 @@ export async function POST(request: NextRequest) {
               session_date: session.metadata?.sessionDate || '',
               session_end_date: session.metadata?.sessionEndDate || '',
             })
+            .select()
+            .single()
 
           if (insertError) {
             return NextResponse.json({ 
               error: 'Booking creation failed',
               details: insertError.message 
             }, { status: 500 })
+          }
+          
+          // Apply gift card if present
+          if (giftCardCode && giftCardDiscount > 0 && newBooking) {
+            try {
+              console.log(`🎁 [WEBHOOK] Applying gift card ${giftCardCode} with discount ${giftCardDiscount}`)
+              const { applyGiftCard } = await import('@/lib/giftCards')
+              
+              const result = await applyGiftCard(
+                giftCardCode,
+                originalAmount,
+                finalUserId,
+                newBooking.id,
+                supabase
+              )
+              
+              if (result.success) {
+                console.log(`✅ [WEBHOOK] Gift card applied successfully. Remaining balance: ${result.remainingBalance}`)
+              } else {
+                console.error(`❌ [WEBHOOK] Failed to apply gift card: ${result.error}`)
+                // Don't fail the booking, just log the error
+              }
+            } catch (giftCardError) {
+              console.error('❌ [WEBHOOK] Exception applying gift card:', giftCardError)
+              // Don't fail the booking
+            }
           }
 
           // Invia notifica email all'admin (non-blocking)
@@ -266,13 +302,18 @@ export async function POST(request: NextRequest) {
 
           const existingBooking = existingBookings[0]
 
-          // Aggiorna lo status a fully_paid e l'importo pagato
-          const newAmountPaid = (existingBooking.amount_paid || 0) + session.amount_total
+          // Check if gift card was applied
+          const giftCardCode = session.metadata?.giftCardCode
+          const giftCardDiscount = parseInt(session.metadata?.giftCardDiscount || '0')
+          const originalAmount = parseInt(session.metadata?.originalAmount || session.amount_total.toString())
+
+          // Aggiorna lo status a fully_paid e l'importo pagato (include gift card)
+          const newAmountPaid = (existingBooking.amount_paid || 0) + session.amount_total + giftCardDiscount
           const { error: updateError } = await supabase
             .from('bookings')
             .update({
               status: 'fully_paid',
-              amount_paid: newAmountPaid, // Aggiorna l'importo totale pagato
+              amount_paid: newAmountPaid, // Include gift card discount
               stripe_payment_intent_id: session.payment_intent as string,
               updated_at: new Date().toISOString()
             })
@@ -280,6 +321,30 @@ export async function POST(request: NextRequest) {
 
           if (updateError) {
             return NextResponse.json({ error: 'Failed to update booking' }, { status: 500 })
+          }
+          
+          // Apply gift card if present
+          if (giftCardCode && giftCardDiscount > 0) {
+            try {
+              console.log(`🎁 [WEBHOOK] Applying gift card ${giftCardCode} for balance payment`)
+              const { applyGiftCard } = await import('@/lib/giftCards')
+              
+              const result = await applyGiftCard(
+                giftCardCode,
+                originalAmount,
+                finalUserId,
+                existingBooking.id,
+                supabase
+              )
+              
+              if (result.success) {
+                console.log(`✅ [WEBHOOK] Gift card applied successfully. Remaining balance: ${result.remainingBalance}`)
+              } else {
+                console.error(`❌ [WEBHOOK] Failed to apply gift card: ${result.error}`)
+              }
+            } catch (giftCardError) {
+              console.error('❌ [WEBHOOK] Exception applying gift card:', giftCardError)
+            }
           }
 
           // Invia notifica email all'admin per saldo completato (non-blocking)
@@ -358,6 +423,106 @@ export async function POST(request: NextRequest) {
           }
         } catch (error) {
           return NextResponse.json({ error: 'Balance payment failed' }, { status: 500 })
+        }
+      } else if (session.metadata?.type === 'gift_card') {
+        // Handle gift card purchase
+        try {
+          console.log('🎁 [WEBHOOK] Processing gift card purchase...')
+          
+          // Import gift card utilities
+          const { generateGiftCardCode } = await import('@/lib/giftCards')
+          
+          // Generate unique code
+          let giftCardCode = generateGiftCardCode()
+          let isUnique = false
+          let attempts = 0
+          
+          // Ensure code is unique (max 5 attempts)
+          while (!isUnique && attempts < 5) {
+            const { data: existing } = await supabase
+              .from('gift_cards')
+              .select('id')
+              .eq('code', giftCardCode)
+              .single()
+            
+            if (!existing) {
+              isUnique = true
+            } else {
+              giftCardCode = generateGiftCardCode()
+              attempts++
+            }
+          }
+          
+          if (!isUnique) {
+            console.error('❌ [WEBHOOK] Failed to generate unique gift card code')
+            return NextResponse.json({ error: 'Failed to generate unique code' }, { status: 500 })
+          }
+          
+          const giftCardAmount = parseInt(session.metadata?.amount || '0')
+          const purchaserUserId = userId !== 'anonymous' ? finalUserId : null
+          const recipientEmail = session.customer_details?.email || null
+          
+          // Set expiration to 2 years from now
+          const expiresAt = new Date()
+          expiresAt.setFullYear(expiresAt.getFullYear() + 2)
+          
+          // Create gift card
+          const { data: giftCard, error: insertError } = await supabase
+            .from('gift_cards')
+            .insert({
+              code: giftCardCode,
+              amount: giftCardAmount * 100, // Convert to cents
+              remaining_balance: giftCardAmount * 100,
+              purchaser_user_id: purchaserUserId,
+              recipient_email: recipientEmail,
+              status: 'active',
+              expires_at: expiresAt.toISOString(),
+              stripe_session_id: session.id,
+              stripe_payment_intent_id: session.payment_intent as string,
+            })
+            .select()
+            .single()
+          
+          if (insertError) {
+            console.error('❌ [WEBHOOK] Failed to create gift card:', insertError)
+            return NextResponse.json({ 
+              error: 'Gift card creation failed',
+              details: insertError.message 
+            }, { status: 500 })
+          }
+          
+          console.log(`✅ [WEBHOOK] Gift card created successfully: ${giftCardCode}`)
+          
+          // Send email with gift card code (non-blocking)
+          if (recipientEmail) {
+            try {
+              console.log(`📧 [WEBHOOK] Sending gift card email to: ${recipientEmail}`)
+              const { sendGiftCardEmail } = await import('@/lib/email')
+              
+              const emailSent = await sendGiftCardEmail(
+                recipientEmail,
+                giftCardCode,
+                giftCardAmount * 100,
+                expiresAt.toISOString()
+              )
+              
+              if (emailSent) {
+                console.log('✅ [WEBHOOK] Gift card email sent successfully!')
+              } else {
+                console.error('❌ [WEBHOOK] Gift card email failed to send')
+              }
+            } catch (emailError) {
+              console.error('❌ [WEBHOOK] Exception sending gift card email:', emailError)
+              // Don't fail the gift card creation
+            }
+          }
+          
+        } catch (error) {
+          console.error('❌ [WEBHOOK] Exception during gift card creation:', error)
+          return NextResponse.json({ 
+            error: 'Gift card creation failed',
+            details: error instanceof Error ? error.message : 'Unknown error'
+          }, { status: 500 })
         }
       } else {
         return NextResponse.json({ error: 'Unknown payment type' }, { status: 400 })

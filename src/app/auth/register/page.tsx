@@ -254,15 +254,15 @@ export default function RegisterPage() {
             </div>
             
             {/* Branding Content */}
-            <div className="space-y-6">
-              <h1 className="text-4xl font-bold text-slate-900 dark:text-white">
+            <div className="space-y-6 text-center">
+              <h1 className="text-4xl font-bold text-white">
                 Unisciti a Noi
-                <span className="block text-2xl text-slate-600 dark:text-slate-300 font-normal mt-2">
+                <span className="block text-2xl text-slate-200 font-normal mt-2">
                   Inizia la Tua Avventura Fotografica
                 </span>
               </h1>
               
-              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-lg text-slate-300 leading-relaxed">
                 Crea il tuo account e accedi a viaggi fotografici unici, 
                 gestisci le tue prenotazioni e connettiti con altri fotografi.
               </p>
@@ -270,20 +270,20 @@ export default function RegisterPage() {
 
             {/* Features */}
             <div className="grid grid-cols-1 gap-4 pt-8">
-              <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
-                <Camera className="w-5 h-5 text-red-500" />
+              <div className="flex items-center justify-center gap-3 text-slate-200">
+                <Camera className="w-5 h-5 text-red-500 flex-shrink-0" />
                 <span>Viaggi fotografici esclusivi</span>
               </div>
-              <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
-                <MapPin className="w-5 h-5 text-red-500" />
+              <div className="flex items-center justify-center gap-3 text-slate-200">
+                <MapPin className="w-5 h-5 text-red-500 flex-shrink-0" />
                 <span>Destinazioni mozzafiato</span>
               </div>
-              <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
-                <Users className="w-5 h-5 text-red-500" />
+              <div className="flex items-center justify-center gap-3 text-slate-200">
+                <Users className="w-5 h-5 text-red-500 flex-shrink-0" />
                 <span>Community di fotografi</span>
               </div>
-              <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
-                <Star className="w-5 h-5 text-red-500" />
+              <div className="flex items-center justify-center gap-3 text-slate-200">
+                <Star className="w-5 h-5 text-red-500 flex-shrink-0" />
                 <span>Esperienze indimenticabili</span>
               </div>
             </div>

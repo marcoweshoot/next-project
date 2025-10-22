@@ -57,7 +57,8 @@ export async function POST(request: NextRequest) {
       sessionDate,
       sessionEndDate,
       sessionPrice,
-      sessionDeposit
+      sessionDeposit,
+      giftCardCode
     } = body
 
     // Validate required fields (userId is required - no more anonymous users)
@@ -68,12 +69,58 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Handle gift card if provided
+    let finalAmount = amount
+    let giftCardDiscount = 0
+    
+    if (giftCardCode) {
+      try {
+        // Validate gift card code (read-only operation)
+        const { createClient } = await import('@/integrations/supabase/client')
+        const { validateGiftCardCode } = await import('@/lib/giftCards')
+        
+        const supabase = createClient()
+        const validation = await validateGiftCardCode(giftCardCode, supabase)
+        
+        if (!validation.valid || !validation.giftCard) {
+          return NextResponse.json(
+            { error: validation.error || 'Gift card non valida' },
+            { status: 400 }
+          )
+        }
+        
+        // Calculate discount (can't exceed amount to pay or remaining balance)
+        giftCardDiscount = Math.min(validation.giftCard.remaining_balance, amount)
+        finalAmount = Math.max(0, amount - giftCardDiscount)
+        
+        console.log(`Gift card applied: ${giftCardCode}, discount: ${giftCardDiscount}, final amount: ${finalAmount}`)
+      } catch (error) {
+        console.error('Error validating gift card:', error)
+        return NextResponse.json(
+          { error: 'Errore nella validazione della gift card' },
+          { status: 400 }
+        )
+      }
+    }
+
+    // If gift card covers the full amount, we can't create a Stripe session
+    if (finalAmount === 0) {
+      return NextResponse.json(
+        { 
+          error: 'Gift card covers full amount',
+          fullyCovered: true,
+          giftCardCode
+        },
+        { status: 400 }
+      )
+    }
+
     // Note: Data comes from Strapi via the client
     // The webhook will validate the payment and create the booking
 
     // Create Stripe Checkout Session with billing address collection
-    // amount is already the total for all people, so we need to divide by quantity for unit_amount
-    const unitAmount = Math.round(amount / quantity)
+    // finalAmount is already the total for all people, so we need to divide by quantity for unit_amount
+    const unitAmount = Math.round(finalAmount / quantity)
     
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
       payment_method_types: ['card', 'klarna', 'sepa_debit'],
@@ -139,6 +186,9 @@ export async function POST(request: NextRequest) {
         sessionEndDate: sessionEndDate || '',
         sessionPrice: sessionPrice?.toString() || '',
         sessionDeposit: sessionDeposit?.toString() || '',
+        giftCardCode: giftCardCode || '',
+        giftCardDiscount: giftCardDiscount.toString(),
+        originalAmount: amount.toString(),
       },
     }
 
