@@ -93,4 +93,3 @@ BEGIN
   RETURN result;
 END;
 $$ LANGUAGE plpgsql;
-
