@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/integrations/supabase/client'
+import { supabase } from '@/integrations/supabase/client'
 import { validateGiftCardCode } from '@/lib/giftCards'
 
 export async function POST(request: NextRequest) {
@@ -13,10 +13,10 @@ export async function POST(request: NextRequest) {
       )
     }
     
-    const supabase = createClient()
+    // Use the imported supabase client
     
     // Validate the gift card code
-    const result = await validateGiftCardCode(code, supabase)
+    const result = await validateGiftCardCode(code, supabase as any)
     
     if (!result.valid) {
       return NextResponse.json(

@@ -76,11 +76,11 @@ export async function POST(request: NextRequest) {
     if (giftCardCode) {
       try {
         // Validate gift card code (read-only operation)
-        const { createClient } = await import('@/integrations/supabase/client')
+        const { supabase } = await import('@/integrations/supabase/client')
         const { validateGiftCardCode } = await import('@/lib/giftCards')
         
-        const supabase = createClient()
-        const validation = await validateGiftCardCode(giftCardCode, supabase)
+        // Use the imported supabase client
+        const validation = await validateGiftCardCode(giftCardCode, supabase as any)
         
         if (!validation.valid || !validation.giftCard) {
           return NextResponse.json(

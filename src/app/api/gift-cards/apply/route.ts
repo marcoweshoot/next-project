@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import type { Database } from '@/integrations/supabase/types'
 import { applyGiftCard } from '@/lib/giftCards'
 
 // Use service role for applying gift cards (requires write access)
@@ -15,7 +16,7 @@ export async function POST(request: NextRequest) {
     }
     
     // Use service role client for write operations
-    const supabase = createClient(
+    const supabase = createClient<Database>(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.SUPABASE_SERVICE_ROLE_KEY!,
       {
@@ -32,7 +33,7 @@ export async function POST(request: NextRequest) {
       amountToPay,
       userId,
       bookingId || null,
-      supabase
+      supabase as any
     )
     
     if (!result.success) {

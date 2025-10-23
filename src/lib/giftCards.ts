@@ -94,22 +94,22 @@ export async function validateGiftCardCode(
     }
     
     // Check if expired
-    if (giftCard.expires_at && new Date(giftCard.expires_at) < new Date()) {
+    if ((giftCard as any).expires_at && new Date((giftCard as any).expires_at) < new Date()) {
       return { valid: false, error: 'Gift card scaduta' }
     }
     
     // Check if used
-    if (giftCard.status === 'used' || giftCard.remaining_balance <= 0) {
+    if ((giftCard as any).status === 'used' || (giftCard as any).remaining_balance <= 0) {
       return { valid: false, error: 'Gift card già utilizzata' }
     }
     
     // Check if cancelled
-    if (giftCard.status === 'cancelled') {
+    if ((giftCard as any).status === 'cancelled') {
       return { valid: false, error: 'Gift card annullata' }
     }
     
     // Check if active
-    if (giftCard.status !== 'active') {
+    if ((giftCard as any).status !== 'active') {
       return { valid: false, error: 'Gift card non attiva' }
     }
     
@@ -151,14 +151,14 @@ export async function applyGiftCard(
     const newRemainingBalance = giftCard.remaining_balance - discountAmount
     
     // Update gift card balance
-    const { error: updateError } = await supabase
+    const { error: updateError } = await (supabase as any)
       .from('gift_cards')
       .update({
         remaining_balance: newRemainingBalance,
         status: newRemainingBalance === 0 ? 'used' : 'active',
         updated_at: new Date().toISOString()
       })
-      .eq('id', giftCard.id)
+      .eq('id', (giftCard as any).id)
     
     if (updateError) {
       console.error('Error updating gift card:', updateError)
@@ -171,10 +171,10 @@ export async function applyGiftCard(
     }
     
     // Record transaction
-    const { error: transactionError } = await supabase
+    const { error: transactionError } = await (supabase as any)
       .from('gift_card_transactions')
       .insert({
-        gift_card_id: giftCard.id,
+        gift_card_id: (giftCard as any).id,
         booking_id: bookingId,
         user_id: userId,
         amount_used: discountAmount,

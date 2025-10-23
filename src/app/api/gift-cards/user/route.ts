@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/integrations/supabase/client'
+import { supabase } from '@/integrations/supabase/client'
 import { getUserGiftCards } from '@/lib/giftCards'
 
 export async function GET(request: NextRequest) {
   try {
-    const supabase = createClient()
+    // Use the imported supabase client
     
     // Get authenticated user
     const { data: { user }, error: authError } = await supabase.auth.getUser()
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     }
     
     // Get user's gift cards
-    const giftCards = await getUserGiftCards(user.id, supabase)
+    const giftCards = await getUserGiftCards(user.id, supabase as any)
     
     return NextResponse.json({ giftCards })
   } catch (error) {

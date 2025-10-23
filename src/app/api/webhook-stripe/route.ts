@@ -178,7 +178,7 @@ export async function POST(request: NextRequest) {
                 originalAmount,
                 finalUserId,
                 newBooking.id,
-                supabase
+                supabase as any
               )
               
               if (result.success) {
@@ -334,7 +334,7 @@ export async function POST(request: NextRequest) {
                 originalAmount,
                 finalUserId,
                 existingBooking.id,
-                supabase
+                supabase as any
               )
               
               if (result.success) {
