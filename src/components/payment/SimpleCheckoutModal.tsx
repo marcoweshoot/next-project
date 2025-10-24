@@ -89,10 +89,37 @@ export function SimpleCheckoutModal({
     onClose()
   }
 
-  const handleApplyGiftCard = (code: string, discount: number) => {
+  const handleApplyGiftCard = async (code: string, discount: number) => {
     setGiftCardCode(code)
-    setGiftCardDiscount(discount)
     setError(null)
+    
+    // Calculate the actual discount based on the amount to pay
+    const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
+    const totalAmount = baseAmount * quantity
+    
+    try {
+      // Validate gift card and get its balance
+      const response = await fetch('/api/gift-cards/validate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: code.trim().toUpperCase() })
+      })
+      
+      const data = await response.json()
+      
+      if (!response.ok || !data.valid) {
+        setError(data.error || 'Gift card non valida')
+        return
+      }
+      
+      // Calculate actual discount (can't exceed amount to pay or remaining balance)
+      const actualDiscount = Math.min(data.giftCard.remaining_balance, totalAmount)
+      setGiftCardDiscount(actualDiscount)
+      
+    } catch (err) {
+      setError('Errore nella validazione della gift card')
+      console.error('Error validating gift card:', err)
+    }
   }
   
   const handleRemoveGiftCard = () => {
@@ -456,24 +483,33 @@ export function SimpleCheckoutModal({
                 appliedDiscount={giftCardDiscount}
               />
               
-              <StripeCheckoutButton
-                amount={getPaymentAmount() * 100}
-                currency={session.currency.toLowerCase()}
-                tourId={tour.id}
-                sessionId={session.id}
-                userId={user?.id || registeredUserId || ''}
-                paymentType={isBalancePayment ? 'balance' : 'deposit'}
-                quantity={quantity}
-                tourTitle={tour.title}
-                tourDestination={tour.title}
-                sessionDate={session.date}
-                sessionEndDate={tour.endDate}
-                sessionPrice={session.price}
-                sessionDeposit={session.deposit}
-                giftCardCode={giftCardCode}
-                onSuccess={handlePaymentSuccess}
-                onError={handlePaymentError}
-              />
+              {!user?.id && !registeredUserId ? (
+                <Alert variant="destructive">
+                  <AlertCircle className="h-4 w-4" />
+                  <AlertDescription>
+                    Errore di autenticazione. Per favore, ricarica la pagina e riprova.
+                  </AlertDescription>
+                </Alert>
+              ) : (
+                <StripeCheckoutButton
+                  amount={getPaymentAmount() * 100}
+                  currency={session.currency.toLowerCase()}
+                  tourId={tour.id}
+                  sessionId={session.id}
+                  userId={user?.id || registeredUserId || ''}
+                  paymentType={isBalancePayment ? 'balance' : 'deposit'}
+                  quantity={quantity}
+                  tourTitle={tour.title}
+                  tourDestination={tour.title}
+                  sessionDate={session.date}
+                  sessionEndDate={tour.endDate}
+                  sessionPrice={session.price}
+                  sessionDeposit={session.deposit}
+                  giftCardCode={giftCardCode}
+                  onSuccess={handlePaymentSuccess}
+                  onError={handlePaymentError}
+                />
+              )}
               
               <div className="flex gap-3">
                 <Button 

@@ -48,8 +48,8 @@ export function GiftCardInput({
         return
       }
 
-      // Apply the gift card
-      onApply(data.giftCard.code, data.giftCard.remaining_balance)
+      // Apply the gift card - pass the code, the discount will be calculated by the parent
+      onApply(data.giftCard.code, 0) // The parent will calculate the actual discount
       setCode('')
     } catch (err) {
       setError('Errore nella validazione del codice')
