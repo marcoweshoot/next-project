@@ -21,6 +21,7 @@ import {
   ChevronRight
 } from 'lucide-react'
 import { PaymentCard } from '@/components/dashboard/PaymentCard'
+import { UserGiftCards } from '@/components/dashboard/UserGiftCards'
 import { format } from 'date-fns'
 import { it } from 'date-fns/locale'
 
@@ -176,21 +177,30 @@ export function PaymentsList({ userId }: PaymentsListProps) {
 
   return (
     <div className="space-y-6">
-      {Object.entries(groupedBookings).map(([tourId, tourBookings]) => {
-        const tour = tourInfo[tourId]
-        const isExpanded = expandedTours.has(tourId)
+      {/* Gift Cards Section */}
+      <div className="mb-8">
+        <UserGiftCards />
+      </div>
 
-        return (
-          <PaymentCard
-            key={tourId}
-            tourId={tourId}
-            bookings={tourBookings}
-            tourInfo={tour}
-            isExpanded={isExpanded}
-            onToggle={() => toggleTourExpansion(tourId)}
-          />
-        )
-      })}
+      {/* Payments Section */}
+      <div className="space-y-4">
+        <h3 className="text-lg font-semibold text-foreground">Prenotazioni e Pagamenti</h3>
+        {Object.entries(groupedBookings).map(([tourId, tourBookings]) => {
+          const tour = tourInfo[tourId]
+          const isExpanded = expandedTours.has(tourId)
+
+          return (
+            <PaymentCard
+              key={tourId}
+              tourId={tourId}
+              bookings={tourBookings}
+              tourInfo={tour}
+              isExpanded={isExpanded}
+              onToggle={() => toggleTourExpansion(tourId)}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }

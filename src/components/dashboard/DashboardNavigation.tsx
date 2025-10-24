@@ -12,7 +12,8 @@ import {
   User as UserIcon,
   Star,
   CreditCard,
-  Settings
+  Settings,
+  Gift
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useAdminRole } from '@/hooks/useAdminRole'
@@ -42,6 +43,11 @@ const baseNavigationItems = [
     href: '/dashboard/payments',
     label: 'Pagamenti',
     icon: CreditCard,
+  },
+  {
+    href: '/dashboard/gift-cards',
+    label: 'Gift Card',
+    icon: Gift,
   },
 ]
 
