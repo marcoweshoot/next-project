@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { CreditCard, User, Calendar, Euro, AlertCircle, Loader2, Users } from 'lucide-react'
+import { CreditCard, User, Calendar, Euro, AlertCircle, Loader2, Users, CheckCircle } from 'lucide-react'
 import { StripeCheckoutButton } from './StripeCheckoutButton'
 import { QuickRegistrationForm } from './QuickRegistrationForm'
 import { GiftCardInput } from '@/components/gift-card/GiftCardInput'
@@ -126,6 +126,9 @@ export function SimpleCheckoutModal({
         finalAmount: totalAmount - actualDiscount
       })
       
+      // Force re-render to update the display
+      setGiftCardDiscount(actualDiscount)
+      
     } catch (err) {
       setError('Errore nella validazione della gift card')
       console.error('Error validating gift card:', err)
@@ -135,6 +138,35 @@ export function SimpleCheckoutModal({
   const handleRemoveGiftCard = () => {
     setGiftCardCode(undefined)
     setGiftCardDiscount(0)
+  }
+
+  const handleZeroPayment = async () => {
+    try {
+      // Create booking directly without Stripe payment
+      const response = await fetch('/api/bookings/create-zero-payment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          tourId: tour.id,
+          sessionId: session.id,
+          userId: user?.id || registeredUserId,
+          quantity,
+          paymentType: isBalancePayment ? 'balance' : 'deposit',
+          giftCardCode,
+          amount: 0
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error('Errore nella creazione della prenotazione')
+      }
+
+      // Success - close modal and redirect
+      handlePaymentSuccess()
+    } catch (error) {
+      console.error('Error creating zero payment booking:', error)
+      handlePaymentError('Errore nella creazione della prenotazione')
+    }
   }
 
   // Facebook Pixel: Track InitiateCheckout when modal opens
@@ -500,6 +532,25 @@ export function SimpleCheckoutModal({
                     Errore di autenticazione. Per favore, ricarica la pagina e riprova.
                   </AlertDescription>
                 </Alert>
+              ) : getPaymentAmount() === 0 ? (
+                // Handle 0€ payment (gift card covers full amount)
+                <div className="space-y-4">
+                  <Alert className="border-green-200 bg-green-50">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <AlertDescription className="text-green-800">
+                      <strong>Gift card copre l'intero importo!</strong><br />
+                      La tua prenotazione sarà completata automaticamente.
+                    </AlertDescription>
+                  </Alert>
+                  <Button
+                    onClick={handleZeroPayment}
+                    className="w-full bg-green-600 hover:bg-green-700 text-white"
+                    size="lg"
+                  >
+                    <CheckCircle className="mr-2 h-5 w-5" />
+                    Completa Prenotazione (0€)
+                  </Button>
+                </div>
               ) : (
                 <StripeCheckoutButton
                   amount={getPaymentAmount() * 100}
