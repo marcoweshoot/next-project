@@ -53,6 +53,115 @@ export async function POST(request: NextRequest) {
         }
       )
 
+      // 🎁 GIFT CARD: Controllo PRIMA della validazione tour
+      if (session.metadata?.type === 'gift_card') {
+        console.log('🎁 [WEBHOOK] Processing gift card purchase...')
+        
+        try {
+          // Import gift card utilities
+          const { generateGiftCardCode } = await import('@/lib/giftCards')
+          
+          // Generate unique code
+          let giftCardCode = generateGiftCardCode()
+          let isUnique = false
+          let attempts = 0
+          
+          // Ensure code is unique (max 5 attempts)
+          while (!isUnique && attempts < 5) {
+            const { data: existing } = await supabase
+              .from('gift_cards')
+              .select('id')
+              .eq('code', giftCardCode)
+              .single()
+            
+            if (!existing) {
+              isUnique = true
+            } else {
+              giftCardCode = generateGiftCardCode()
+              attempts++
+            }
+          }
+          
+          if (!isUnique) {
+            console.error('❌ [WEBHOOK] Failed to generate unique gift card code')
+            return NextResponse.json({ error: 'Failed to generate unique code' }, { status: 500 })
+          }
+          
+          const giftCardAmount = parseInt(session.metadata?.amount || '0')
+          const purchaserUserId = session.metadata?.userId || null
+          const recipientEmail = session.customer_details?.email || null
+          
+          // Set expiration to 2 years from now
+          const expiresAt = new Date()
+          expiresAt.setFullYear(expiresAt.getFullYear() + 2)
+          
+          // Create gift card
+          const { data: giftCard, error: insertError } = await supabase
+            .from('gift_cards')
+            .insert({
+              code: giftCardCode,
+              amount: giftCardAmount * 100, // Convert to cents
+              remaining_balance: giftCardAmount * 100,
+              purchaser_user_id: purchaserUserId,
+              recipient_email: recipientEmail,
+              status: 'active',
+              expires_at: expiresAt.toISOString(),
+              stripe_session_id: session.id,
+              stripe_payment_intent_id: session.payment_intent as string,
+            })
+            .select()
+            .single()
+          
+          if (insertError) {
+            console.error('❌ [WEBHOOK] Failed to create gift card:', insertError)
+            return NextResponse.json({ 
+              error: 'Gift card creation failed',
+              details: insertError.message 
+            }, { status: 500 })
+          }
+          
+          console.log(`✅ [WEBHOOK] Gift card created successfully: ${giftCardCode}`)
+          
+          // Send email with gift card code (non-blocking)
+          if (recipientEmail) {
+            try {
+              console.log(`📧 [WEBHOOK] Sending gift card email to: ${recipientEmail}`)
+              const { sendGiftCardEmail } = await import('@/lib/email')
+              
+              const emailSent = await sendGiftCardEmail(
+                recipientEmail,
+                giftCardCode,
+                giftCardAmount * 100,
+                expiresAt.toISOString()
+              )
+              
+              if (emailSent) {
+                console.log('✅ [WEBHOOK] Gift card email sent successfully!')
+              } else {
+                console.error('❌ [WEBHOOK] Gift card email failed to send')
+              }
+            } catch (emailError) {
+              console.error('❌ [WEBHOOK] Exception sending gift card email:', emailError)
+              // Don't fail the gift card creation
+            }
+          }
+          
+          return NextResponse.json({
+            success: true,
+            message: 'Gift card processed successfully',
+            giftCardCode
+          })
+          
+        } catch (error) {
+          console.error('❌ [WEBHOOK] Exception during gift card creation:', error)
+          return NextResponse.json({ 
+            error: 'Gift card creation failed',
+            details: error instanceof Error ? error.message : 'Unknown error'
+          }, { status: 500 })
+        }
+      }
+
+      // 🏛️ TOUR: Validazione normale (solo se NON è gift card)
       // Estrai i custom_fields da Stripe
       const customFields = session.custom_fields || []
       const fiscalCodeField = customFields.find((f: any) => f.key === 'fiscal_code')
@@ -68,8 +177,6 @@ export async function POST(request: NextRequest) {
       const fullAddress = billingAddress ? 
         `${billingAddress.line1 || ''} ${billingAddress.line2 || ''}, ${billingAddress.city || ''}, ${billingAddress.postal_code || ''}, ${billingAddress.country || ''}`.trim().replace(/^,\s*|,\s*$/g, '') 
         : null
-
-      // Custom fields estratti da Stripe
 
       const rawData = {
         userId: session.metadata?.userId,
@@ -423,106 +530,6 @@ export async function POST(request: NextRequest) {
           }
         } catch (error) {
           return NextResponse.json({ error: 'Balance payment failed' }, { status: 500 })
-        }
-      } else if (session.metadata?.type === 'gift_card') {
-        // Handle gift card purchase
-        try {
-          console.log('🎁 [WEBHOOK] Processing gift card purchase...')
-          
-          // Import gift card utilities
-          const { generateGiftCardCode } = await import('@/lib/giftCards')
-          
-          // Generate unique code
-          let giftCardCode = generateGiftCardCode()
-          let isUnique = false
-          let attempts = 0
-          
-          // Ensure code is unique (max 5 attempts)
-          while (!isUnique && attempts < 5) {
-            const { data: existing } = await supabase
-              .from('gift_cards')
-              .select('id')
-              .eq('code', giftCardCode)
-              .single()
-            
-            if (!existing) {
-              isUnique = true
-            } else {
-              giftCardCode = generateGiftCardCode()
-              attempts++
-            }
-          }
-          
-          if (!isUnique) {
-            console.error('❌ [WEBHOOK] Failed to generate unique gift card code')
-            return NextResponse.json({ error: 'Failed to generate unique code' }, { status: 500 })
-          }
-          
-          const giftCardAmount = parseInt(session.metadata?.amount || '0')
-          const purchaserUserId = userId !== 'anonymous' ? finalUserId : null
-          const recipientEmail = session.customer_details?.email || null
-          
-          // Set expiration to 2 years from now
-          const expiresAt = new Date()
-          expiresAt.setFullYear(expiresAt.getFullYear() + 2)
-          
-          // Create gift card
-          const { data: giftCard, error: insertError } = await supabase
-            .from('gift_cards')
-            .insert({
-              code: giftCardCode,
-              amount: giftCardAmount * 100, // Convert to cents
-              remaining_balance: giftCardAmount * 100,
-              purchaser_user_id: purchaserUserId,
-              recipient_email: recipientEmail,
-              status: 'active',
-              expires_at: expiresAt.toISOString(),
-              stripe_session_id: session.id,
-              stripe_payment_intent_id: session.payment_intent as string,
-            })
-            .select()
-            .single()
-          
-          if (insertError) {
-            console.error('❌ [WEBHOOK] Failed to create gift card:', insertError)
-            return NextResponse.json({ 
-              error: 'Gift card creation failed',
-              details: insertError.message 
-            }, { status: 500 })
-          }
-          
-          console.log(`✅ [WEBHOOK] Gift card created successfully: ${giftCardCode}`)
-          
-          // Send email with gift card code (non-blocking)
-          if (recipientEmail) {
-            try {
-              console.log(`📧 [WEBHOOK] Sending gift card email to: ${recipientEmail}`)
-              const { sendGiftCardEmail } = await import('@/lib/email')
-              
-              const emailSent = await sendGiftCardEmail(
-                recipientEmail,
-                giftCardCode,
-                giftCardAmount * 100,
-                expiresAt.toISOString()
-              )
-              
-              if (emailSent) {
-                console.log('✅ [WEBHOOK] Gift card email sent successfully!')
-              } else {
-                console.error('❌ [WEBHOOK] Gift card email failed to send')
-              }
-            } catch (emailError) {
-              console.error('❌ [WEBHOOK] Exception sending gift card email:', emailError)
-              // Don't fail the gift card creation
-            }
-          }
-          
-        } catch (error) {
-          console.error('❌ [WEBHOOK] Exception during gift card creation:', error)
-          return NextResponse.json({ 
-            error: 'Gift card creation failed',
-            details: error instanceof Error ? error.message : 'Unknown error'
-          }, { status: 500 })
         }
       } else {
         return NextResponse.json({ error: 'Unknown payment type' }, { status: 400 })

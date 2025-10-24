@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Gift, Loader2 } from "lucide-react";
-import { createClient } from "@/lib/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
 interface GiftCardItemProps {
@@ -11,8 +10,6 @@ interface GiftCardItemProps {
   color: string;
   originalPrice: number;
 }
-
-type PaymentResponse = { url: string };
 
 const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPrice }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,16 +19,26 @@ const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPric
     if (isLoading) return;
     setIsLoading(true);
     try {
-      const supabase = createClient()
-      const { data, error } = await supabase.functions.invoke<PaymentResponse>(
-        "create-gift-card-payment",
-        { body: { amount } }
-      );
-      if (error) throw error;
-      if (!data?.url) throw new Error("URL di pagamento non ricevuto");
+      const response = await fetch('/api/stripe/create-gift-card-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ amount }),
+      });
 
-      const w = window.open(data.url, "_blank", "noopener,noreferrer");
-      if (!w) window.location.href = data.url;
+      const { url, error } = await response.json();
+
+      if (error) {
+        throw new Error(error);
+      }
+
+      if (!url) {
+        throw new Error("URL di pagamento non ricevuto");
+      }
+
+      // Redirect to Stripe Checkout
+      window.location.href = url;
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : "Si è verificato un errore";
       toast({ title: "Errore nel pagamento", description: message });
