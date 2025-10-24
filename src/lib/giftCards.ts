@@ -31,16 +31,13 @@ export interface GiftCardTransaction {
 
 /**
  * Generate a unique gift card code
- * Format: XXXX-XXXX-XXXX (12 characters, no ambiguous chars)
+ * Format: XXXXXXXXXXXX (12 characters, no ambiguous chars)
  */
 export function generateGiftCardCode(): string {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789' // No O, 0, I, 1, etc.
   let code = ''
   
   for (let i = 0; i < 12; i++) {
-    if (i > 0 && i % 4 === 0) {
-      code += '-'
-    }
     code += chars.charAt(Math.floor(Math.random() * chars.length))
   }
   
