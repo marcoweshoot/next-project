@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { CreditCard, User, Calendar, Euro, AlertCircle, Loader2, Users } from 'lucide-react'
 import { StripeCheckoutButton } from './StripeCheckoutButton'
 import { QuickRegistrationForm } from './QuickRegistrationForm'
+import { GiftCardInput } from '@/components/gift-card/GiftCardInput'
 
 interface SimpleCheckoutModalProps {
   isOpen: boolean
@@ -56,6 +57,8 @@ export function SimpleCheckoutModal({
   const [quantity, setQuantity] = useState(1)
   const [registeredUserId, setRegisteredUserId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [giftCardCode, setGiftCardCode] = useState<string | undefined>(undefined)
+  const [giftCardDiscount, setGiftCardDiscount] = useState<number>(0)
   
   // Gestione degli step del modal
   const [currentStep, setCurrentStep] = useState<1 | 2 | 3>(1)
@@ -77,11 +80,24 @@ export function SimpleCheckoutModal({
     setCurrentStep(1)
     setRegisteredUserId(null)
     setError(null)
+    setGiftCardCode(undefined)
+    setGiftCardDiscount(0)
   }
   
   const handleClose = () => {
     resetModal()
     onClose()
+  }
+
+  const handleApplyGiftCard = (code: string, discount: number) => {
+    setGiftCardCode(code)
+    setGiftCardDiscount(discount)
+    setError(null)
+  }
+  
+  const handleRemoveGiftCard = () => {
+    setGiftCardCode(undefined)
+    setGiftCardDiscount(0)
   }
 
   // Facebook Pixel: Track InitiateCheckout when modal opens
@@ -102,7 +118,9 @@ export function SimpleCheckoutModal({
   const getPaymentAmount = () => {
     const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
     const total = baseAmount * quantity
-    return total
+    // Apply gift card discount
+    const finalAmount = Math.max(0, total - (giftCardDiscount / 100))
+    return finalAmount
   }
 
   const getTotalAmount = () => {
@@ -429,6 +447,14 @@ export function SimpleCheckoutModal({
                 <h3 className="text-xl font-semibold">Completa il pagamento</h3>
                 <p className="text-muted-foreground">Procedi con il checkout sicuro</p>
               </div>
+
+              {/* Gift Card Input */}
+              <GiftCardInput
+                onApply={handleApplyGiftCard}
+                onRemove={handleRemoveGiftCard}
+                appliedCode={giftCardCode}
+                appliedDiscount={giftCardDiscount}
+              />
               
               <StripeCheckoutButton
                 amount={getPaymentAmount() * 100}
@@ -444,6 +470,7 @@ export function SimpleCheckoutModal({
                 sessionEndDate={tour.endDate}
                 sessionPrice={session.price}
                 sessionDeposit={session.deposit}
+                giftCardCode={giftCardCode}
                 onSuccess={handlePaymentSuccess}
                 onError={handlePaymentError}
               />
