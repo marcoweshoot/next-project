@@ -71,19 +71,19 @@ export async function validateGiftCardCode(
   supabase: ReturnType<typeof createClient>
 ): Promise<{ valid: boolean; giftCard?: GiftCard; error?: string }> {
   try {
-    // Format the code
-    const formattedCode = formatGiftCardCode(code)
+    // Clean the code (remove dashes, uppercase) but don't format it
+    const cleanedCode = code.replace(/-/g, '').toUpperCase()
     
     // Check format
-    if (!isValidGiftCardCodeFormat(formattedCode)) {
+    if (!isValidGiftCardCodeFormat(cleanedCode)) {
       return { valid: false, error: 'Formato codice non valido' }
     }
     
-    // Query the gift card
+    // Query the gift card with the cleaned code (no dashes)
     const { data: giftCard, error } = await supabase
       .from('gift_cards')
       .select('*')
-      .eq('code', formattedCode)
+      .eq('code', cleanedCode)
       .single()
     
     if (error || !giftCard) {
