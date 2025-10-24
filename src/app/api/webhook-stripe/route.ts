@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
           }
           
           const giftCardAmount = parseInt(session.metadata?.amount || '0')
-          const purchaserUserId = session.metadata?.userId || null
+          const purchaserUserId = session.metadata?.userId === 'anonymous' ? null : session.metadata?.userId || null
           const recipientEmail = session.customer_details?.email || null
           
           // Set expiration to 2 years from now

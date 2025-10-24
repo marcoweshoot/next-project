@@ -35,6 +35,18 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Get user ID if authenticated
+    let userId = null
+    try {
+      const { createClient } = await import('@/lib/supabase/client')
+      const supabase = createClient()
+      const { data: { user } } = await supabase.auth.getUser()
+      userId = user?.id || null
+    } catch (error) {
+      // User not authenticated, continue with null userId
+      console.log('User not authenticated for gift card purchase')
+    }
+
     const siteUrl = getSiteUrl()
     const origin = request.headers.get('origin') || siteUrl
 
@@ -61,7 +73,7 @@ export async function POST(request: NextRequest) {
       metadata: {
         type: 'gift_card',
         amount: amount.toString(),
-        userId: 'anonymous', // Gift cards can be purchased anonymously
+        userId: userId || 'anonymous', // Use real userId if authenticated, otherwise anonymous
       },
       // Raccogliamo i dati di fatturazione per la legislazione italiana
       billing_address_collection: 'required',

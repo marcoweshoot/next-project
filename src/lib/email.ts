@@ -179,9 +179,21 @@ export async function sendGiftCardEmail(
                 </p>
               </div>
               
-              <!-- CTA Button -->
+              <!-- CTA Buttons -->
               <div style="text-align: center; margin: 40px 0;">
-                <a href="https://www.weshoot.it/viaggi-fotografici" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 8px; font-weight: bold; font-size: 16px;">Scopri i Viaggi</a>
+                <a href="https://www.weshoot.it/viaggi-fotografici" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 0 10px 10px 0;">Scopri i Viaggi</a>
+                <a href="https://www.weshoot.it/auth/register?gift_card=${giftCardCode}" style="display: inline-block; background: transparent; color: #667eea; text-decoration: none; padding: 16px 40px; border: 2px solid #667eea; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 0 10px 10px 0;">Crea Account per Gestire</a>
+              </div>
+              
+              <!-- Account Benefits -->
+              <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin: 30px 0; border-left: 4px solid #28a745;">
+                <h3 style="margin: 0 0 15px; color: #333333; font-size: 18px;">💡 Perché creare un account?</h3>
+                <ul style="margin: 0; padding-left: 20px; color: #666666; line-height: 1.8;">
+                  <li><strong>Gestisci le tue gift card</strong> - Vedi saldo e storico utilizzi</li>
+                  <li><strong>Tracking automatico</strong> - Ricevi notifiche quando vengono usate</li>
+                  <li><strong>Supporto prioritario</strong> - Assistenza dedicata per i tuoi acquisti</li>
+                  <li><strong>Offerte esclusive</strong> - Sconti speciali per i nostri clienti</li>
+                </ul>
               </div>
             </td>
           </tr>
@@ -221,6 +233,14 @@ Come utilizzarla:
 Validità: Fino al ${expirationDate}
 
 Puoi usare la gift card su più prenotazioni fino ad esaurimento del credito.
+
+💡 BONUS: Crea un account per gestire le tue gift card
+- Gestisci le tue gift card e vedi saldo
+- Tracking automatico degli utilizzi
+- Supporto prioritario
+- Offerte esclusive
+
+Registrati qui: https://www.weshoot.it/auth/register?gift_card=${giftCardCode}
 
 Hai domande? Contattaci a info@weshoot.it
 

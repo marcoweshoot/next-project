@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, useEffect } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -40,8 +40,18 @@ export default function RegisterPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
+  const [giftCardCode, setGiftCardCode] = useState<string | null>(null)
   const router = useRouter()
+  const searchParams = useSearchParams()
   const supabase = createClient()
+
+  // Check for gift card parameter
+  useEffect(() => {
+    const giftCard = searchParams.get('gift_card')
+    if (giftCard) {
+      setGiftCardCode(giftCard)
+    }
+  }, [searchParams])
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -112,6 +122,22 @@ export default function RegisterPage() {
         // Se l'email confirmation è disabilitata, l'utente è già loggato
         // Redirect direttamente alla dashboard
         if (data.session) {
+          // Associate gift card if present
+          if (giftCardCode) {
+            try {
+              await fetch('/api/gift-cards/associate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  giftCardCode: giftCardCode,
+                  userId: data.user.id
+                })
+              })
+            } catch (error) {
+              console.error('Failed to associate gift card:', error)
+              // Don't fail registration if gift card association fails
+            }
+          }
           router.push('/dashboard')
           return
         }
@@ -311,6 +337,24 @@ export default function RegisterPage() {
                     Crea un account per gestire le tue prenotazioni
                   </CardDescription>
                 </div>
+                
+                {/* Gift Card Banner */}
+                {giftCardCode && (
+                  <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950 dark:to-blue-950 border border-green-200 dark:border-green-800 rounded-lg p-4 mt-4">
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
+                      </div>
+                      <h3 className="font-semibold text-green-800 dark:text-green-200">Gift Card Rilevata!</h3>
+                    </div>
+                    <p className="text-sm text-green-700 dark:text-green-300 mb-2">
+                      Hai una gift card con codice <code className="bg-green-100 dark:bg-green-900 px-2 py-1 rounded font-mono text-sm">{giftCardCode}</code>
+                    </p>
+                    <p className="text-xs text-green-600 dark:text-green-400">
+                      Creando un account potrai gestire la tua gift card, vedere il saldo e ricevere notifiche quando viene utilizzata.
+                    </p>
+                  </div>
+                )}
               </CardHeader>
               
               <CardContent className="space-y-6">
