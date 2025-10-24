@@ -142,18 +142,24 @@ export function SimpleCheckoutModal({
 
   const handleZeroPayment = async () => {
     try {
-      // Create booking directly without Stripe payment
-      const response = await fetch('/api/zero-payment', {
+      // Use existing checkout API which now handles zero payments
+      const response = await fetch('/api/stripe/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          amount: 0,
           tourId: tour.id,
           sessionId: session.id,
           userId: user?.id || registeredUserId,
           quantity,
           paymentType: isBalancePayment ? 'balance' : 'deposit',
           giftCardCode,
-          amount: 0
+          tourTitle: tour.title,
+          tourDestination: tour.title,
+          sessionDate: session.date,
+          sessionEndDate: tour.endDate,
+          sessionPrice: session.price,
+          sessionDeposit: session.deposit
         })
       })
 

@@ -7,8 +7,28 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { tourId, sessionId, userId, quantity, paymentType, giftCardCode, amount } = body
 
+    console.log('🎁 [ZERO PAYMENT API] Received parameters:', {
+      tourId,
+      sessionId,
+      userId,
+      quantity,
+      paymentType,
+      giftCardCode,
+      amount,
+      hasUserId: !!userId,
+      userIdType: typeof userId,
+      userIdLength: userId?.length
+    })
+
     // Validate required fields
     if (!tourId || !sessionId || !userId || !giftCardCode) {
+      console.error('❌ [ZERO PAYMENT API] Missing required fields:', {
+        tourId: !!tourId,
+        sessionId: !!sessionId,
+        userId: !!userId,
+        giftCardCode: !!giftCardCode,
+        userIdValue: userId
+      })
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -25,6 +45,7 @@ export async function POST(request: NextRequest) {
       .single()
 
     if (tourError || !tour) {
+      console.error('❌ [ZERO PAYMENT API] Tour not found:', tourError)
       return NextResponse.json(
         { error: 'Tour not found' },
         { status: 404 }
@@ -38,6 +59,7 @@ export async function POST(request: NextRequest) {
       .single()
 
     if (sessionError || !session) {
+      console.error('❌ [ZERO PAYMENT API] Session not found:', sessionError)
       return NextResponse.json(
         { error: 'Session not found' },
         { status: 404 }
@@ -47,6 +69,16 @@ export async function POST(request: NextRequest) {
     // Calculate amounts
     const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
     const totalAmount = baseAmount * quantity
+
+    console.log('🎁 [ZERO PAYMENT API] Creating booking:', {
+      userId,
+      tourId,
+      sessionId,
+      quantity,
+      paymentType,
+      totalAmount,
+      baseAmount
+    })
 
     // Create booking
     const { data: booking, error: bookingError } = await supabase
@@ -68,16 +100,19 @@ export async function POST(request: NextRequest) {
       .single()
 
     if (bookingError || !booking) {
-      console.error('Error creating booking:', bookingError)
+      console.error('❌ [ZERO PAYMENT API] Error creating booking:', bookingError)
       return NextResponse.json(
         { error: 'Failed to create booking' },
         { status: 500 }
       )
     }
 
+    console.log('✅ [ZERO PAYMENT API] Booking created:', booking.id)
+
     // Apply gift card
     if (giftCardCode) {
       try {
+        console.log('🎁 [ZERO PAYMENT API] Applying gift card:', giftCardCode)
         const result = await applyGiftCard(
           giftCardCode,
           totalAmount * 100, // Convert to cents
@@ -87,11 +122,13 @@ export async function POST(request: NextRequest) {
         )
 
         if (!result.success) {
-          console.error('Error applying gift card:', result.error)
+          console.error('❌ [ZERO PAYMENT API] Error applying gift card:', result.error)
           // Don't fail the booking if gift card application fails
+        } else {
+          console.log('✅ [ZERO PAYMENT API] Gift card applied successfully')
         }
       } catch (giftCardError) {
-        console.error('Exception applying gift card:', giftCardError)
+        console.error('❌ [ZERO PAYMENT API] Exception applying gift card:', giftCardError)
         // Don't fail the booking if gift card application fails
       }
     }
@@ -103,7 +140,7 @@ export async function POST(request: NextRequest) {
     })
 
   } catch (error) {
-    console.error('Error in create-zero-payment:', error)
+    console.error('❌ [ZERO PAYMENT API] Error in create-zero-payment:', error)
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
