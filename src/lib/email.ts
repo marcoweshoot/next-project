@@ -127,15 +127,23 @@ export async function sendGiftCardEmail(
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gift Card WeShoot</title>
+  <style>
+    @media print {
+      body { margin: 0; padding: 0; }
+      .no-print { display: none !important; }
+      .print-only { display: block !important; }
+    }
+    .print-only { display: none; }
+  </style>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
   <table role="presentation" style="width: 100%; border-collapse: collapse;">
     <tr>
       <td align="center" style="padding: 40px 0;">
         <table role="presentation" style="width: 600px; max-width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <!-- Header with gradient -->
+          <!-- Header with WeShoot colors -->
           <tr>
-            <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center;">
+            <td style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); padding: 40px 30px; text-align: center;">
               <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: bold;">🎁 Gift Card WeShoot</h1>
               <p style="margin: 10px 0 0; color: #ffffff; font-size: 18px; opacity: 0.95;">Il regalo perfetto per chi ama la fotografia</p>
             </td>
@@ -146,23 +154,23 @@ export async function sendGiftCardEmail(
             <td style="padding: 40px 30px;">
               <h2 style="margin: 0 0 20px; color: #333333; font-size: 24px;">Congratulazioni!</h2>
               <p style="margin: 0 0 20px; color: #666666; font-size: 16px; line-height: 1.6;">
-                Hai ricevuto una Gift Card WeShoot del valore di <strong style="color: #667eea;">${formattedAmount}</strong>!
+                Hai ricevuto una Gift Card WeShoot del valore di <strong style="color: #dc2626;">${formattedAmount}</strong>!
               </p>
               
               <!-- Gift Card Box -->
-              <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 30px; margin: 30px 0; text-align: center;">
+              <div style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); border-radius: 12px; padding: 30px; margin: 30px 0; text-align: center;">
                 <p style="margin: 0 0 10px; color: #ffffff; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.9;">Il tuo codice</p>
                 <div style="background-color: #ffffff; border-radius: 8px; padding: 20px; margin: 10px 0;">
-                  <code style="font-size: 32px; font-weight: bold; color: #667eea; letter-spacing: 2px; font-family: 'Courier New', monospace;">${giftCardCode}</code>
+                  <code style="font-size: 32px; font-weight: bold; color: #dc2626; letter-spacing: 2px; font-family: 'Courier New', monospace;">${giftCardCode}</code>
                 </div>
                 <p style="margin: 10px 0 0; color: #ffffff; font-size: 28px; font-weight: bold;">${formattedAmount}</p>
               </div>
               
               <!-- How to use -->
-              <div style="background-color: #f8f9fa; border-left: 4px solid #667eea; padding: 20px; margin: 30px 0; border-radius: 4px;">
+              <div style="background-color: #f8f9fa; border-left: 4px solid #dc2626; padding: 20px; margin: 30px 0; border-radius: 4px;">
                 <h3 style="margin: 0 0 15px; color: #333333; font-size: 18px;">Come utilizzarla</h3>
                 <ol style="margin: 0; padding-left: 20px; color: #666666; line-height: 1.8;">
-                  <li>Scegli il tuo viaggio fotografico su <a href="https://www.weshoot.it/viaggi-fotografici" style="color: #667eea; text-decoration: none;">weshoot.it</a></li>
+                  <li>Scegli il tuo viaggio fotografico su <a href="https://www.weshoot.it/viaggi-fotografici" style="color: #dc2626; text-decoration: none;">weshoot.it</a></li>
                   <li>Durante il pagamento, inserisci il codice della gift card</li>
                   <li>Lo sconto verrà applicato automaticamente</li>
                   <li>Completa la prenotazione e preparati a partire!</li>
@@ -181,8 +189,9 @@ export async function sendGiftCardEmail(
               
               <!-- CTA Buttons -->
               <div style="text-align: center; margin: 40px 0;">
-                <a href="https://www.weshoot.it/viaggi-fotografici" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 0 10px 10px 0;">Scopri i Viaggi</a>
-                <a href="https://www.weshoot.it/auth/register?gift_card=${giftCardCode}" style="display: inline-block; background: transparent; color: #667eea; text-decoration: none; padding: 16px 40px; border: 2px solid #667eea; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 0 10px 10px 0;">Crea Account per Gestire</a>
+                <a href="https://www.weshoot.it/viaggi-fotografici" style="display: inline-block; background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 0 10px 10px 0;">Scopri i Viaggi</a>
+                <a href="https://www.weshoot.it/auth/register?gift_card=${giftCardCode}" style="display: inline-block; background: transparent; color: #dc2626; text-decoration: none; padding: 16px 40px; border: 2px solid #dc2626; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 0 10px 10px 0;">Crea Account per Gestire</a>
+                <a href="javascript:window.print()" style="display: inline-block; background: #f3f4f6; color: #374151; text-decoration: none; padding: 16px 40px; border: 1px solid #d1d5db; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 0 10px 10px 0;" class="no-print">🖨️ Stampa questa Email</a>
               </div>
               
               <!-- Account Benefits -->

@@ -1,6 +1,7 @@
 import { createServerClientSupabase } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { UserGiftCards } from '@/components/dashboard/UserGiftCards'
+import { GiftCardRedeem } from '@/components/dashboard/GiftCardRedeem'
 
 export default async function GiftCardsPage() {
   const supabase = await createServerClientSupabase()
@@ -22,6 +23,10 @@ export default async function GiftCardsPage() {
         </p>
       </div>
       
+      {/* Riscatta Gift Card */}
+      <GiftCardRedeem />
+      
+      {/* Le Mie Gift Card */}
       <UserGiftCards />
     </div>
   )
