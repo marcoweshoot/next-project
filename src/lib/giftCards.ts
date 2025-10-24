@@ -11,6 +11,7 @@ export interface GiftCard {
   amount: number // in cents
   remaining_balance: number // in cents
   purchaser_user_id: string | null
+  redeemed_by_user_id: string | null
   recipient_email: string | null
   status: 'active' | 'used' | 'expired' | 'cancelled'
   expires_at: string | null
@@ -210,7 +211,7 @@ export async function getUserGiftCards(
     const { data, error } = await supabase
       .from('gift_cards')
       .select('*')
-      .eq('purchaser_user_id', userId)
+      .or(`purchaser_user_id.eq.${userId},redeemed_by_user_id.eq.${userId}`)
       .order('created_at', { ascending: false })
     
     if (error) {

@@ -38,19 +38,19 @@ export async function POST(request: NextRequest) {
       )
     }
     
-    // Check if gift card is already associated with a user
-    if (giftCard.purchaser_user_id) {
+    // Check if gift card is already redeemed by a user
+    if (giftCard.redeemed_by_user_id) {
       return NextResponse.json(
-        { success: false, error: 'Gift card is already associated with a user' },
+        { success: false, error: 'Gift card is already redeemed by another user' },
         { status: 400 }
       )
     }
     
-    // Associate the gift card with the user
+    // Associate the gift card with the user (set redeemed_by_user_id, not purchaser_user_id)
     const { error: updateError } = await supabase
       .from('gift_cards')
       .update({
-        purchaser_user_id: userId,
+        redeemed_by_user_id: userId,
         updated_at: new Date().toISOString()
       })
       .eq('id', giftCard.id)
