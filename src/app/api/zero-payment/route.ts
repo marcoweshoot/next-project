@@ -70,7 +70,6 @@ export async function POST(request: NextRequest) {
         total_amount: totalAmount,
         amount_paid: totalAmount,
         payment_method: 'gift_card',
-        gift_card_code: giftCardCode,
         created_at: new Date().toISOString()
       })
       .select()
