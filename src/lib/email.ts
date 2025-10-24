@@ -191,9 +191,19 @@ export async function sendGiftCardEmail(
               <div style="text-align: center; margin: 40px 0;">
                 <a href="https://www.weshoot.it/viaggi-fotografici" style="display: inline-block; background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 0 10px 10px 0;">Scopri i Viaggi</a>
                 <a href="https://www.weshoot.it/auth/register?gift_card=${giftCardCode}" style="display: inline-block; background: transparent; color: #dc2626; text-decoration: none; padding: 16px 40px; border: 2px solid #dc2626; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 0 10px 10px 0;">Crea Account per Gestire</a>
-                <a href="javascript:window.print()" style="display: inline-block; background: #f3f4f6; color: #374151; text-decoration: none; padding: 16px 40px; border: 1px solid #d1d5db; border-radius: 8px; font-weight: bold; font-size: 16px; margin: 0 10px 10px 0;" class="no-print">🖨️ Stampa questa Email</a>
               </div>
               
+              <!-- Print Instructions -->
+              <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin: 30px 0; border-left: 4px solid #dc2626;">
+                <h3 style="margin: 0 0 15px; color: #333333; font-size: 18px;">🖨️ Per Stampare questa Email</h3>
+                <p style="margin: 0 0 10px; color: #666666; font-size: 14px;">
+                  <strong>Opzione 1:</strong> Usa Ctrl+P (Windows) o Cmd+P (Mac) per stampare direttamente
+                </p>
+                <p style="margin: 0; color: #666666; font-size: 14px;">
+                  <strong>Opzione 2:</strong> Salva questa email come PDF e stampala quando necessario
+                </p>
+              </div>
+
               <!-- Account Benefits -->
               <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin: 30px 0; border-left: 4px solid #28a745;">
                 <h3 style="margin: 0 0 15px; color: #333333; font-size: 18px;">💡 Perché creare un account?</h3>
