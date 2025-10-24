@@ -61,8 +61,27 @@ export async function POST(request: NextRequest) {
       giftCardCode
     } = body
 
+    // Debug logging
+    console.log('🔍 [CHECKOUT] Received parameters:', {
+      amount,
+      tourId,
+      sessionId,
+      userId,
+      giftCardCode,
+      hasUserId: !!userId,
+      userIdType: typeof userId,
+      userIdLength: userId?.length
+    })
+
     // Validate required fields (userId is required - no more anonymous users)
     if (!amount || !tourId || !sessionId || !userId) {
+      console.error('❌ [CHECKOUT] Missing required fields:', {
+        amount: !!amount,
+        tourId: !!tourId,
+        sessionId: !!sessionId,
+        userId: !!userId,
+        userIdValue: userId
+      })
       return NextResponse.json(
         { error: 'Missing required fields - user must be registered' },
         { status: 400 }
