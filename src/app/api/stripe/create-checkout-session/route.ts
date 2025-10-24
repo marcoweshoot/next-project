@@ -74,9 +74,10 @@ export async function POST(request: NextRequest) {
     })
 
     // Validate required fields (userId is required - no more anonymous users)
-    if (!amount || !tourId || !sessionId || !userId) {
+    // Allow amount to be 0 if gift card covers everything
+    if (amount === undefined || amount === null || !tourId || !sessionId || !userId) {
       console.error('❌ [CHECKOUT] Missing required fields:', {
-        amount: !!amount,
+        amount: amount,
         tourId: !!tourId,
         sessionId: !!sessionId,
         userId: !!userId,
