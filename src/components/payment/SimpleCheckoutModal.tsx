@@ -153,7 +153,7 @@ export function SimpleCheckoutModal({
           quantity,
           paymentType: isBalancePayment ? 'balance' : 'deposit',
           giftCardCode,
-          amount: 0
+          amount: getPaymentAmount() // Pass the actual amount to pay
         })
       })
 

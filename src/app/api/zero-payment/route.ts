@@ -37,38 +37,16 @@ export async function POST(request: NextRequest) {
 
     const supabase = await createServerClientSupabase()
 
-    // Get tour and session details
-    const { data: tour, error: tourError } = await supabase
-      .from('tours')
-      .select('title, destination')
-      .eq('id', tourId)
-      .single()
-
-    if (tourError || !tour) {
-      console.error('❌ [ZERO PAYMENT API] Tour not found:', tourError)
-      return NextResponse.json(
-        { error: 'Tour not found' },
-        { status: 404 }
-      )
-    }
-
-    const { data: session, error: sessionError } = await supabase
-      .from('tour_sessions')
-      .select('start, end, price, deposit')
-      .eq('id', sessionId)
-      .single()
-
-    if (sessionError || !session) {
-      console.error('❌ [ZERO PAYMENT API] Session not found:', sessionError)
-      return NextResponse.json(
-        { error: 'Session not found' },
-        { status: 404 }
-      )
-    }
-
-    // Calculate amounts
-    const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
-    const totalAmount = baseAmount * quantity
+    // Note: Tour and session data come from Strapi (GraphQL), not Supabase
+    // We need to get the amounts from the request body or calculate them
+    // For now, we'll use the amount from the request or calculate based on typical values
+    
+    // Since we don't have access to tour/session data in Supabase,
+    // we'll use the amount passed from the frontend
+    // The frontend calculates the correct amount based on tour/session data from Strapi
+    const totalAmount = amount || 0 // Use the amount from the request
+    
+    console.log('🎁 [ZERO PAYMENT API] Using amount from frontend:', totalAmount)
 
     console.log('🎁 [ZERO PAYMENT API] Creating booking:', {
       userId,
