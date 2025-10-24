@@ -28,7 +28,6 @@ import { GoogleAuthButton } from '@/components/auth/GoogleAuthButton'
 import dynamic from 'next/dynamic'
 
 const Aurora = dynamic(() => import('@/components/ui/Aurora'), { ssr: false })
-const SplashCursor = dynamic(() => import('@/components/ui/SplashCursor'), { ssr: false })
 
 export default function RegisterPage() {
   const [email, setEmail] = useState('')
@@ -141,8 +140,6 @@ export default function RegisterPage() {
         {/* Overlay gradient for better readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-slate-900/60 z-0" />
         
-        {/* Splash Cursor Effect */}
-        <SplashCursor />
         
         <div className="relative z-10 min-h-screen flex items-center justify-center p-8">
           <div className="w-full max-w-md">
@@ -234,8 +231,6 @@ export default function RegisterPage() {
       {/* Overlay gradient for better readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-slate-900/60 z-0" />
       
-      {/* Splash Cursor Effect */}
-      <SplashCursor />
       
       <div className="relative z-10 min-h-screen flex">
         {/* Left Side - Branding */}

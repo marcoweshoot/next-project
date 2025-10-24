@@ -54,8 +54,9 @@ const adminNavigationItem = {
 export function DashboardNavigation() {
   const pathname = usePathname()
   const [user, setUser] = useState<User | null>(null)
-  const { isAdmin } = useAdminRole(user)
+  const { isAdmin, isSuperAdmin, loading } = useAdminRole(user)
   const supabase = createClient()
+
 
   useEffect(() => {
     async function getUser() {
@@ -65,9 +66,10 @@ export function DashboardNavigation() {
     getUser()
   }, [supabase])
 
-  const navigationItems = isAdmin 
+  const navigationItems = (isAdmin || isSuperAdmin)
     ? [...baseNavigationItems, adminNavigationItem]
     : baseNavigationItems
+
 
   return (
     <nav className="flex flex-wrap gap-2">

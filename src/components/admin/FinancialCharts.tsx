@@ -101,10 +101,15 @@ export function FinancialCharts({ bookings }: FinancialChartsProps) {
   // Weekly bookings trend (last 8 weeks)
   const weeklyData = useMemo(() => {
     const last8Weeks = Array.from({ length: 8 }, (_, i) => {
-      const date = new Date()
-      date.setDate(date.getDate() - (7 * (7 - i)))
-      const weekStart = new Date(date)
-      weekStart.setDate(date.getDate() - date.getDay())
+      // Calcola l'inizio della settimana corrente
+      const today = new Date()
+      const currentWeekStart = new Date(today)
+      currentWeekStart.setDate(today.getDate() - today.getDay()) // Inizio settimana corrente (domenica)
+      currentWeekStart.setHours(0, 0, 0, 0)
+      
+      // Sottrai i giorni per andare indietro di i settimane
+      const weekStart = new Date(currentWeekStart)
+      weekStart.setDate(currentWeekStart.getDate() - (7 * i))
       
       return {
         week: `${weekStart.getDate()}/${weekStart.getMonth() + 1}`,

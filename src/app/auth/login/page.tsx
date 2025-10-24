@@ -26,7 +26,6 @@ import { GoogleAuthButton } from '@/components/auth/GoogleAuthButton'
 import dynamic from 'next/dynamic'
 
 const Aurora = dynamic(() => import('@/components/ui/Aurora'), { ssr: false })
-const SplashCursor = dynamic(() => import('@/components/ui/SplashCursor'), { ssr: false })
 
 function LoginForm() {
   const [email, setEmail] = useState('')
@@ -82,8 +81,6 @@ function LoginForm() {
       {/* Overlay gradient for better readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-slate-900/60 z-0" />
       
-      {/* Splash Cursor Effect */}
-      <SplashCursor />
       
       <div className="relative z-10 min-h-screen flex">
         {/* Left Side - Branding */}
@@ -298,7 +295,6 @@ export default function LoginPage() {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-slate-900/60 z-0" />
-        <SplashCursor />
         <div className="relative z-10 min-h-screen flex items-center justify-center">
           <div className="flex items-center space-x-2">
             <Loader2 className="h-6 w-6 animate-spin text-red-500" />
