@@ -54,8 +54,7 @@ export async function POST(request: NextRequest) {
       sessionId,
       quantity,
       paymentType,
-      totalAmount,
-      baseAmount
+      totalAmount
     })
 
     // Create booking
