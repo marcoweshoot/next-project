@@ -143,7 +143,7 @@ export function SimpleCheckoutModal({
   const handleZeroPayment = async () => {
     try {
       // Create booking directly without Stripe payment
-      const response = await fetch('/api/bookings/create-zero-payment', {
+      const response = await fetch('/api/zero-payment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
