@@ -142,24 +142,18 @@ export function SimpleCheckoutModal({
 
   const handleZeroPayment = async () => {
     try {
-      // Use existing checkout API which now handles zero payments
-      const response = await fetch('/api/stripe/create-checkout-session', {
+      // Create booking directly without Stripe payment
+      const response = await fetch('/api/zero-payment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          amount: 0,
           tourId: tour.id,
           sessionId: session.id,
           userId: user?.id || registeredUserId,
           quantity,
           paymentType: isBalancePayment ? 'balance' : 'deposit',
           giftCardCode,
-          tourTitle: tour.title,
-          tourDestination: tour.title,
-          sessionDate: session.date,
-          sessionEndDate: tour.endDate,
-          sessionPrice: session.price,
-          sessionDeposit: session.deposit
+          amount: 0
         })
       })
 
@@ -195,6 +189,15 @@ export function SimpleCheckoutModal({
     const total = baseAmount * quantity
     // Apply gift card discount (giftCardDiscount is already in euros)
     const finalAmount = Math.max(0, total - giftCardDiscount)
+    
+    console.log('🎁 [PAYMENT AMOUNT] Debug:', {
+      baseAmount,
+      total,
+      giftCardDiscount,
+      finalAmount,
+      isZero: finalAmount === 0
+    })
+    
     return finalAmount
   }
 
