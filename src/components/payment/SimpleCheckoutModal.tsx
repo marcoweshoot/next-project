@@ -113,8 +113,18 @@ export function SimpleCheckoutModal({
       }
       
       // Calculate actual discount (can't exceed amount to pay or remaining balance)
-      const actualDiscount = Math.min(data.giftCard.remaining_balance, totalAmount)
+      // Convert gift card balance from cents to euros for comparison
+      const giftCardBalanceInEuros = data.giftCard.remaining_balance / 100
+      const actualDiscount = Math.min(giftCardBalanceInEuros, totalAmount)
       setGiftCardDiscount(actualDiscount)
+      
+      console.log('🎁 [GIFT CARD] Debug calculation:', {
+        giftCardBalanceCents: data.giftCard.remaining_balance,
+        giftCardBalanceEuros: giftCardBalanceInEuros,
+        totalAmount,
+        actualDiscount,
+        finalAmount: totalAmount - actualDiscount
+      })
       
     } catch (err) {
       setError('Errore nella validazione della gift card')
@@ -145,8 +155,8 @@ export function SimpleCheckoutModal({
   const getPaymentAmount = () => {
     const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
     const total = baseAmount * quantity
-    // Apply gift card discount
-    const finalAmount = Math.max(0, total - (giftCardDiscount / 100))
+    // Apply gift card discount (giftCardDiscount is already in euros)
+    const finalAmount = Math.max(0, total - giftCardDiscount)
     return finalAmount
   }
 
