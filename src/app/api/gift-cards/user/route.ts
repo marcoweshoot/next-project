@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabase } from '@/integrations/supabase/client'
+import { createServerClientSupabase } from '@/lib/supabase/server'
 import { getUserGiftCards } from '@/lib/giftCards'
 
 export async function GET(request: NextRequest) {
   try {
-    // Use the imported supabase client
+    // Use server client that can read cookies
+    const supabase = await createServerClientSupabase()
     
     // Get authenticated user
     const { data: { user }, error: authError } = await supabase.auth.getUser()
