@@ -153,7 +153,14 @@ export function SimpleCheckoutModal({
           quantity,
           paymentType: isBalancePayment ? 'balance' : 'deposit',
           giftCardCode,
-          amount: getPaymentAmount() // Pass the actual amount to pay
+          amount: getPaymentAmount(), // Pass the actual amount to pay
+          // Pass tour and session data for enriched booking
+          tourTitle: tour.title,
+          tourDestination: tour.title, // or tour.destination if available
+          sessionDate: session.date,
+          sessionEndDate: tour.endDate,
+          sessionPrice: session.price,
+          sessionDeposit: session.deposit
         })
       })
 

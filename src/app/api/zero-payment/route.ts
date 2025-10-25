@@ -5,7 +5,21 @@ import { applyGiftCard } from '@/lib/giftCards'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { tourId, sessionId, userId, quantity, paymentType, giftCardCode, amount } = body
+    const { 
+      tourId, 
+      sessionId, 
+      userId, 
+      quantity, 
+      paymentType, 
+      giftCardCode, 
+      amount,
+      tourTitle,
+      tourDestination,
+      sessionDate,
+      sessionEndDate,
+      sessionPrice,
+      sessionDeposit
+    } = body
 
     console.log('🎁 [ZERO PAYMENT API] Received parameters:', {
       tourId,
@@ -57,7 +71,7 @@ export async function POST(request: NextRequest) {
       totalAmount
     })
 
-    // Create booking
+    // Create booking with enriched data
     const { data: booking, error: bookingError } = await supabase
       .from('bookings')
       .insert({
@@ -70,6 +84,14 @@ export async function POST(request: NextRequest) {
         total_amount: totalAmount,
         amount_paid: totalAmount,
         payment_method: 'gift_card',
+        gift_card_code: giftCardCode,
+        // Add enriched data for better display
+        tour_title: tourTitle,
+        tour_destination: tourDestination,
+        session_date: sessionDate,
+        session_end_date: sessionEndDate,
+        session_price: sessionPrice,
+        session_deposit: sessionDeposit,
         created_at: new Date().toISOString()
       })
       .select()
