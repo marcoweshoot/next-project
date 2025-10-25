@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
         tour_id: tourId,
         session_id: sessionId,
         quantity,
-        status: paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid',
+        status: totalAmount === 0 ? 'fully_paid' : (paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid'),
         deposit_amount: paymentType === 'deposit' ? totalAmount : 0,
         total_amount: totalAmount,
         amount_paid: totalAmount,
@@ -132,9 +132,20 @@ export async function POST(request: NextRequest) {
           }
         )
         
+        // Calculate original amount before gift card discount
+        const originalAmount = paymentType === 'deposit' ? sessionDeposit : sessionPrice
+        const originalAmountInCents = originalAmount * 100
+        
+        console.log('🎁 [ZERO PAYMENT API] Gift card details:', {
+          originalAmount,
+          originalAmountInCents,
+          totalAmount,
+          paymentType
+        })
+        
         const result = await applyGiftCard(
           giftCardCode,
-          totalAmount * 100, // Convert to cents
+          originalAmountInCents, // Use original amount, not discounted amount
           userId,
           booking.id,
           serviceSupabase as any
