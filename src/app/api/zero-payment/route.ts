@@ -31,7 +31,14 @@ export async function POST(request: NextRequest) {
       amount,
       hasUserId: !!userId,
       userIdType: typeof userId,
-      userIdLength: userId?.length
+      userIdLength: userId?.length,
+      // Log enriched data
+      tourTitle,
+      tourDestination,
+      sessionDate,
+      sessionEndDate,
+      sessionPrice,
+      sessionDeposit
     })
 
     // Validate required fields
