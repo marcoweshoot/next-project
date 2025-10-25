@@ -133,14 +133,12 @@ export async function POST(request: NextRequest) {
         )
         
         // Calculate correct amount based on payment type
-        const sessionBalance = sessionPrice - sessionDeposit // 349€ - 115€ = 234€
-        const originalAmount = paymentType === 'deposit' ? sessionDeposit : sessionBalance
+        const originalAmount = paymentType === 'deposit' ? sessionDeposit : sessionPrice
         const originalAmountInCents = originalAmount * 100
         
         console.log('🎁 [ZERO PAYMENT API] Gift card details:', {
           sessionPrice,
           sessionDeposit,
-          sessionBalance,
           originalAmount,
           originalAmountInCents,
           totalAmount,
