@@ -114,16 +114,30 @@ export async function POST(request: NextRequest) {
 
     console.log('✅ [ZERO PAYMENT API] Booking created:', booking.id)
 
-    // Apply gift card
+    // Apply gift card using service role
     if (giftCardCode) {
       try {
         console.log('🎁 [ZERO PAYMENT API] Applying gift card:', giftCardCode)
+        
+        // Create service role client for gift card operations
+        const { createClient } = await import('@supabase/supabase-js')
+        const serviceSupabase = createClient(
+          process.env.NEXT_PUBLIC_SUPABASE_URL!,
+          process.env.SUPABASE_SERVICE_ROLE_KEY!,
+          {
+            auth: {
+              autoRefreshToken: false,
+              persistSession: false
+            }
+          }
+        )
+        
         const result = await applyGiftCard(
           giftCardCode,
           totalAmount * 100, // Convert to cents
           userId,
           booking.id,
-          supabase as any
+          serviceSupabase as any
         )
 
         if (!result.success) {
