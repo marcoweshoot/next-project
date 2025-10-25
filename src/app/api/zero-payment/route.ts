@@ -132,11 +132,15 @@ export async function POST(request: NextRequest) {
           }
         )
         
-        // Calculate original amount before gift card discount
-        const originalAmount = paymentType === 'deposit' ? sessionDeposit : sessionPrice
+        // Calculate correct amount based on payment type
+        const sessionBalance = sessionPrice - sessionDeposit // 349€ - 115€ = 234€
+        const originalAmount = paymentType === 'deposit' ? sessionDeposit : sessionBalance
         const originalAmountInCents = originalAmount * 100
         
         console.log('🎁 [ZERO PAYMENT API] Gift card details:', {
+          sessionPrice,
+          sessionDeposit,
+          sessionBalance,
           originalAmount,
           originalAmountInCents,
           totalAmount,
