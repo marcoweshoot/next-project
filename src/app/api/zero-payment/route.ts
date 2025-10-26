@@ -41,6 +41,35 @@ export async function POST(request: NextRequest) {
       sessionDeposit
     })
 
+    // Check for existing booking to prevent duplicates
+    const { data: existingBookings } = await supabase
+      .from('bookings')
+      .select('id, created_at')
+      .eq('user_id', userId)
+      .eq('tour_id', tourId)
+      .eq('session_id', sessionId)
+      .eq('gift_card_code', giftCardCode)
+      .order('created_at', { ascending: false })
+      .limit(1)
+
+    if (existingBookings && existingBookings.length > 0) {
+      const lastBooking = existingBookings[0]
+      const timeDiff = Date.now() - new Date(lastBooking.created_at).getTime()
+      
+      // If booking was created less than 30 seconds ago, it's likely a duplicate
+      if (timeDiff < 30000) {
+        console.log('🚫 [ZERO PAYMENT API] Duplicate booking prevented:', {
+          existingBookingId: lastBooking.id,
+          timeDiff: timeDiff + 'ms'
+        })
+        return NextResponse.json({ 
+          success: true, 
+          bookingId: lastBooking.id,
+          message: 'Booking already exists (duplicate prevented)'
+        })
+      }
+    }
+
     // Validate required fields
     if (!tourId || !sessionId || !userId || !giftCardCode) {
       console.error('❌ [ZERO PAYMENT API] Missing required fields:', {
@@ -86,7 +115,7 @@ export async function POST(request: NextRequest) {
         tour_id: tourId,
         session_id: sessionId,
         quantity,
-        status: totalAmount === 0 ? 'fully_paid' : (paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid'),
+        status: paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid',
         deposit_amount: paymentType === 'deposit' ? totalAmount : 0,
         total_amount: totalAmount,
         amount_paid: totalAmount,
