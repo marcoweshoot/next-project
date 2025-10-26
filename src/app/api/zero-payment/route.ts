@@ -224,22 +224,23 @@ export async function POST(request: NextRequest) {
           }
         )
         
-        // Calculate correct amount based on payment type (for all quantity)
-        // totalAmount is already the original tour amount for all quantity
-        const originalAmountInCents = totalAmount * 100
+        // Calculate correct amount to deduct from gift card
+        // This should be the actual amount covered by the gift card (deposit or full price)
+        const giftCardDeduction = expectedPaidAmount * 100 // Convert to cents
         
         console.log('🎁 [ZERO PAYMENT API] Gift card details:', {
           sessionPrice,
           sessionDeposit,
           quantity,
+          paymentType,
           totalAmount,
-          originalAmountInCents,
-          paymentType
+          expectedPaidAmount,
+          giftCardDeduction
         })
         
         const result = await applyGiftCard(
           giftCardCode,
-          originalAmountInCents, // Use total original amount for all quantity
+          giftCardDeduction, // Amount to deduct from gift card (deposit or full price)
           userId,
           booking.id,
           serviceSupabase as any
