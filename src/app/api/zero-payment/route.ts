@@ -41,6 +41,23 @@ export async function POST(request: NextRequest) {
       sessionDeposit
     })
 
+    // Validate required fields
+    if (!tourId || !sessionId || !userId || !giftCardCode) {
+      console.error('❌ [ZERO PAYMENT API] Missing required fields:', {
+        tourId: !!tourId,
+        sessionId: !!sessionId,
+        userId: !!userId,
+        giftCardCode: !!giftCardCode,
+        userIdValue: userId
+      })
+      return NextResponse.json(
+        { error: 'Missing required fields' },
+        { status: 400 }
+      )
+    }
+
+    const supabase = await createServerClientSupabase()
+
     // Check for existing booking to prevent duplicates
     const { data: existingBookings } = await supabase
       .from('bookings')
@@ -70,23 +87,6 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Validate required fields
-    if (!tourId || !sessionId || !userId || !giftCardCode) {
-      console.error('❌ [ZERO PAYMENT API] Missing required fields:', {
-        tourId: !!tourId,
-        sessionId: !!sessionId,
-        userId: !!userId,
-        giftCardCode: !!giftCardCode,
-        userIdValue: userId
-      })
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      )
-    }
-
-    const supabase = await createServerClientSupabase()
-
     // Note: Tour and session data come from Strapi (GraphQL), not Supabase
     // We need to get the amounts from the request body or calculate them
     // For now, we'll use the amount from the request or calculate based on typical values
@@ -108,6 +108,16 @@ export async function POST(request: NextRequest) {
     })
 
     // Create booking with enriched data
+    console.log('🎁 [ZERO PAYMENT API] About to insert booking with data:', {
+      user_id: userId,
+      tour_id: tourId,
+      session_id: sessionId,
+      quantity,
+      status: paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid',
+      gift_card_code: giftCardCode,
+      payment_method: 'gift_card'
+    })
+    
     const { data: booking, error: bookingError } = await supabase
       .from('bookings')
       .insert({
@@ -132,6 +142,11 @@ export async function POST(request: NextRequest) {
       })
       .select()
       .single()
+      
+    console.log('🎁 [ZERO PAYMENT API] Supabase insert result:', {
+      booking: booking ? { id: booking.id, created_at: booking.created_at } : null,
+      error: bookingError ? { code: bookingError.code, message: bookingError.message } : null
+    })
 
     if (bookingError || !booking) {
       console.error('❌ [ZERO PAYMENT API] Error creating booking:', bookingError)
