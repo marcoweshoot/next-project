@@ -168,6 +168,38 @@ export function SimpleCheckoutModal({
         throw new Error('Errore nella creazione della prenotazione')
       }
 
+      // Save purchase data for Facebook Pixel tracking
+      if (typeof window !== 'undefined' && window.sessionStorage) {
+        const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
+        const totalValue = baseAmount * quantity
+        sessionStorage.setItem('lastPurchase', JSON.stringify({
+          tourTitle: tour.title,
+          value: totalValue,
+          quantity,
+          tourDestination: tour.title,
+          sessionDate: session.date
+        }))
+        console.log('💾 [FB PIXEL] Saved purchase data for gift card payment:', {
+          tourTitle: tour.title,
+          value: totalValue,
+          quantity
+        })
+      }
+
+      // Track Facebook Pixel Purchase event for gift card payments
+      if (typeof window !== 'undefined' && window.fbq) {
+        const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
+        const totalValue = baseAmount * quantity
+        window.fbq('track', 'Purchase', {
+          content_name: tour.title,
+          content_category: 'Viaggi Fotografici',
+          value: totalValue,
+          currency: 'EUR',
+          num_items: quantity
+        })
+        console.log('📊 [FB PIXEL] Purchase event tracked for gift card payment')
+      }
+
       // Success - close modal and redirect
       handlePaymentSuccess()
     } catch (error) {
@@ -241,7 +273,12 @@ export function SimpleCheckoutModal({
   }
 
   const handlePaymentSuccess = () => {
+    // Close modal and redirect to dashboard
     onClose()
+    // Small delay to ensure modal closes smoothly before redirect
+    setTimeout(() => {
+      window.location.href = '/dashboard'
+    }, 300)
   }
 
   const handlePaymentError = (error: string) => {

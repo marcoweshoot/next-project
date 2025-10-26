@@ -87,16 +87,39 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Note: Tour and session data come from Strapi (GraphQL), not Supabase
-    // We need to get the amounts from the request body or calculate them
-    // For now, we'll use the amount from the request or calculate based on typical values
+    // Calculate the correct amounts based on payment type
+    // For gift cards that cover the full amount, we need to preserve the original tour price
+    const originalTourAmount = paymentType === 'deposit' 
+      ? (sessionDeposit || 0) * quantity 
+      : (sessionPrice || 0) * quantity
     
-    // Since we don't have access to tour/session data in Supabase,
-    // we'll use the amount passed from the frontend
-    // The frontend calculates the correct amount based on tour/session data from Strapi
-    const totalAmount = amount || 0 // Use the amount from the request
+    // The amount being paid (0 if fully covered by gift card)
+    const paidAmount = amount || 0
     
-    console.log('🎁 [ZERO PAYMENT API] Using amount from frontend:', totalAmount)
+    // Total amount of the tour (original price regardless of gift card)
+    const totalAmount = originalTourAmount
+    
+    console.log('🎁 [ZERO PAYMENT API] Amount calculation:', {
+      paymentType,
+      sessionPrice,
+      sessionDeposit,
+      quantity,
+      originalTourAmount,
+      paidAmount,
+      totalAmount,
+      giftCardCode
+    })
+
+    // Convert to cents for database storage
+    const totalAmountCents = Math.round(totalAmount * 100)
+    const paidAmountCents = Math.round(paidAmount * 100)
+    const depositAmountCents = Math.round((paymentType === 'deposit' ? totalAmount : 0) * 100)
+    
+    console.log('🎁 [ZERO PAYMENT API] Amounts in cents:', {
+      totalAmountCents,
+      paidAmountCents,
+      depositAmountCents
+    })
 
     console.log('🎁 [ZERO PAYMENT API] Creating booking:', {
       userId,
@@ -104,7 +127,9 @@ export async function POST(request: NextRequest) {
       sessionId,
       quantity,
       paymentType,
-      totalAmount
+      totalAmountCents,
+      paidAmountCents,
+      depositAmountCents
     })
 
     // Create booking with enriched data
@@ -126,9 +151,9 @@ export async function POST(request: NextRequest) {
         session_id: sessionId,
         quantity,
         status: paymentType === 'deposit' ? 'deposit_paid' : 'fully_paid',
-        deposit_amount: paymentType === 'deposit' ? totalAmount : 0,
-        total_amount: totalAmount,
-        amount_paid: totalAmount,
+        deposit_amount: depositAmountCents, // Convert to cents
+        total_amount: totalAmountCents, // Original tour price in cents
+        amount_paid: paidAmountCents, // Actual amount paid in cents (0 if gift card covers all)
         payment_method: 'gift_card',
         gift_card_code: giftCardCode,
         // Add enriched data for better display
@@ -150,6 +175,16 @@ export async function POST(request: NextRequest) {
 
     if (bookingError || !booking) {
       console.error('❌ [ZERO PAYMENT API] Error creating booking:', bookingError)
+      
+      // Check if it's a duplicate constraint violation
+      if (bookingError?.code === '23505' && bookingError?.message?.includes('unique_booking_user_tour_session')) {
+        console.log('🚫 [ZERO PAYMENT API] Duplicate booking blocked by constraint')
+        return NextResponse.json(
+          { error: 'Booking already exists for this tour and session' },
+          { status: 409 }
+        )
+      }
+      
       return NextResponse.json(
         { error: 'Failed to create booking' },
         { status: 500 }
@@ -176,22 +211,22 @@ export async function POST(request: NextRequest) {
           }
         )
         
-        // Calculate correct amount based on payment type
-        const originalAmount = paymentType === 'deposit' ? sessionDeposit : sessionPrice
-        const originalAmountInCents = originalAmount * 100
+        // Calculate correct amount based on payment type (for all quantity)
+        // totalAmount is already the original tour amount for all quantity
+        const originalAmountInCents = totalAmount * 100
         
         console.log('🎁 [ZERO PAYMENT API] Gift card details:', {
           sessionPrice,
           sessionDeposit,
-          originalAmount,
-          originalAmountInCents,
+          quantity,
           totalAmount,
+          originalAmountInCents,
           paymentType
         })
         
         const result = await applyGiftCard(
           giftCardCode,
-          originalAmountInCents, // Use original amount, not discounted amount
+          originalAmountInCents, // Use total original amount for all quantity
           userId,
           booking.id,
           serviceSupabase as any
