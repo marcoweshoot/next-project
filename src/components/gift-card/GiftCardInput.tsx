@@ -96,7 +96,10 @@ export function GiftCardInput({
             </div>
             <div className="text-right">
               <p className="text-lg font-bold text-green-900 dark:text-green-100">
-                -{formatCurrency(appliedDiscount)}
+                -{new Intl.NumberFormat('it-IT', {
+                  style: 'currency',
+                  currency: 'EUR'
+                }).format(appliedDiscount)}
               </p>
               <Button
                 type="button"
