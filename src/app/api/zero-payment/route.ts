@@ -88,23 +88,29 @@ export async function POST(request: NextRequest) {
     }
 
     // Calculate the correct amounts based on payment type
-    // For gift cards that cover the full amount, we need to preserve the original tour price
-    const originalTourAmount = paymentType === 'deposit' 
+    // IMPORTANT: total_amount should always be the FULL tour price, not just the deposit
+    // The total amount is the complete price of the tour regardless of payment type
+    const totalTourAmount = (sessionPrice || 0) * quantity
+    
+    // For deposit payment type, the amount paid is the deposit amount
+    // For full payment type, the amount paid is the full tour price
+    const expectedPaidAmount = paymentType === 'deposit' 
       ? (sessionDeposit || 0) * quantity 
       : (sessionPrice || 0) * quantity
     
-    // The amount being paid (0 if fully covered by gift card)
+    // The actual amount being paid (0 if fully covered by gift card)
     const paidAmount = amount || 0
     
-    // Total amount of the tour (original price regardless of gift card)
-    const totalAmount = originalTourAmount
+    // Total amount of the tour (FULL price regardless of payment type or gift card)
+    const totalAmount = totalTourAmount
     
     console.log('🎁 [ZERO PAYMENT API] Amount calculation:', {
       paymentType,
       sessionPrice,
       sessionDeposit,
       quantity,
-      originalTourAmount,
+      totalTourAmount,
+      expectedPaidAmount,
       paidAmount,
       totalAmount,
       giftCardCode
@@ -113,7 +119,7 @@ export async function POST(request: NextRequest) {
     // Convert to cents for database storage
     const totalAmountCents = Math.round(totalAmount * 100)
     const paidAmountCents = Math.round(paidAmount * 100)
-    const depositAmountCents = Math.round((paymentType === 'deposit' ? totalAmount : 0) * 100)
+    const depositAmountCents = Math.round(expectedPaidAmount * 100) // Expected deposit amount
     
     console.log('🎁 [ZERO PAYMENT API] Amounts in cents:', {
       totalAmountCents,
