@@ -101,6 +101,12 @@ export async function POST(request: NextRequest) {
     // The actual amount being paid (0 if fully covered by gift card)
     const paidAmount = amount || 0
     
+    // IMPORTANT: When using a gift card, we need to track what was "paid" with the gift card
+    // This is used for balance calculations (total - amount paid)
+    // If payment type is deposit and gift card covers it, amount_paid should be the deposit amount
+    // If gift card covered full payment, amount_paid should be the full tour price
+    const amountPaidValue = paidAmount || expectedPaidAmount
+    
     // Total amount of the tour (FULL price regardless of payment type or gift card)
     const totalAmount = totalTourAmount
     
@@ -112,13 +118,14 @@ export async function POST(request: NextRequest) {
       totalTourAmount,
       expectedPaidAmount,
       paidAmount,
+      amountPaidValue,
       totalAmount,
       giftCardCode
     })
 
     // Convert to cents for database storage
     const totalAmountCents = Math.round(totalAmount * 100)
-    const paidAmountCents = Math.round(paidAmount * 100)
+    const paidAmountCents = Math.round(amountPaidValue * 100) // Use amountPaidValue which includes gift card payment
     const depositAmountCents = Math.round(expectedPaidAmount * 100) // Expected deposit amount
     
     console.log('🎁 [ZERO PAYMENT API] Amounts in cents:', {
