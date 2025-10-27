@@ -21,7 +21,6 @@ import {
   ChevronRight
 } from 'lucide-react'
 import { PaymentCard } from '@/components/dashboard/PaymentCard'
-import { UserGiftCards } from '@/components/dashboard/UserGiftCards'
 import { format } from 'date-fns'
 import { it } from 'date-fns/locale'
 
@@ -177,11 +176,6 @@ export function PaymentsList({ userId }: PaymentsListProps) {
 
   return (
     <div className="space-y-6">
-      {/* Gift Cards Section */}
-      <div className="mb-8">
-        <UserGiftCards />
-      </div>
-
       {/* Payments Section */}
       <div className="space-y-4">
         <h3 className="text-lg font-semibold text-foreground">Prenotazioni e Pagamenti</h3>
