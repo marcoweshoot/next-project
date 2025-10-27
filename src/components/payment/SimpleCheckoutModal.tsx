@@ -76,7 +76,16 @@ export function SimpleCheckoutModal({
   
   const handlePrevStep = () => {
     if (currentStep > 1) {
-      setCurrentStep((prev) => (prev - 1) as 1 | 2 | 3)
+      // Navigazione intelligente: se l'utente è già loggato, salta lo step 2 (Accesso)
+      const isUserLoggedIn = user && user.id && user.email
+      
+      if (currentStep === 3 && isUserLoggedIn) {
+        // Se siamo allo step 3 e l'utente è loggato, vai direttamente allo step 1
+        setCurrentStep(1)
+      } else {
+        // Altrimenti, navigazione normale
+        setCurrentStep((prev) => (prev - 1) as 1 | 2 | 3)
+      }
     }
   }
   
