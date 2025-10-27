@@ -103,16 +103,16 @@ export default async function AdminStatisticsPage() {
     userStats,
     reviewStats,
     tourStats,
-    giftCardStats,
-    bookingsData
+    bookingsData,
+    giftCardStats
   ]: [
     BookingStats,
     RevenueStats,
     UserStats,
     ReviewStats,
     TourStats,
-    GiftCardStats,
-    BookingData[]
+    BookingData[],
+    GiftCardStats
   ] = await Promise.all([
     // Statistiche prenotazioni
     adminSupabase
