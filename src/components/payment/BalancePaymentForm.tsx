@@ -12,7 +12,7 @@ import {
   Loader2,
   CheckCircle
 } from 'lucide-react'
-import { StripeCheckoutButton } from '@/components/payment/StripeCheckoutButton'
+import { SimpleCheckoutModal } from '@/components/payment/SimpleCheckoutModal'
 
 interface BalancePaymentFormProps {
   booking: {
@@ -37,6 +37,7 @@ export function BalancePaymentForm({ booking, onPaymentSuccess }: BalancePayment
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<string | null>(null)
   const [user, setUser] = useState<{ id: string } | null>(null)
+  const [showPaymentModal, setShowPaymentModal] = useState(false)
   const supabase = createClient()
 
   // Get authenticated user
@@ -173,23 +174,38 @@ export function BalancePaymentForm({ booking, onPaymentSuccess }: BalancePayment
 
         {/* Payment Form */}
         {user ? (
-          <StripeCheckoutButton
-            amount={balanceAmount}
-            currency="eur"
-            tourId={booking.tour_id}
-            sessionId={booking.session_id}
-            userId={user.id}
-            paymentType="balance"
-            quantity={booking.quantity || 1}
-            tourTitle={booking.tour_title || `Tour ${booking.tour_id}`}
-            tourDestination={booking.tour_destination || booking.tour_title || 'Destinazione'}
-            sessionDate={booking.session_date || ''}
-            sessionEndDate={booking.session_end_date || ''}
-            sessionPrice={booking.total_amount}
-            sessionDeposit={booking.deposit_amount}
-            onSuccess={handlePaymentSuccess}
-            onError={handlePaymentError}
-          />
+          <>
+            <Button
+              onClick={() => setShowPaymentModal(true)}
+              className="w-full bg-red-600 hover:bg-red-700 text-white"
+              size="lg"
+            >
+              <CreditCard className="w-5 h-5 mr-2" />
+              Paga {formatCurrency(balanceAmount)}
+            </Button>
+            
+            <SimpleCheckoutModal
+              isOpen={showPaymentModal}
+              onClose={() => setShowPaymentModal(false)}
+              tour={{
+                id: booking.tour_id,
+                title: booking.tour_title || `Tour ${booking.tour_id}`,
+                startDate: booking.session_date || '',
+                endDate: booking.session_end_date || '',
+                coach: 'WeShoot'
+              }}
+              session={{
+                id: booking.session_id,
+                date: booking.session_date || '',
+                price: booking.total_amount / 100, // Convert from cents to euros
+                deposit: booking.deposit_amount / 100, // Convert from cents to euros
+                availableSpots: 999,
+                currency: 'EUR'
+              }}
+              user={user}
+              isBalancePayment={true}
+            />
+          </>
         ) : (
           <div className="text-center py-4">
             <p className="text-muted-foreground">Caricamento utente...</p>
