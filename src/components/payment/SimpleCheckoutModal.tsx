@@ -48,6 +48,10 @@ export function SimpleCheckoutModal({
 }: SimpleCheckoutModalProps) {
   // Imposta il tipo di pagamento iniziale basato sulla disponibilità dell'acconto
   const [paymentType, setPaymentType] = useState<'deposit' | 'full'>(() => {
+    // Se è un pagamento di saldo, usa sempre 'balance' (che viene mappato a 'full' per l'API)
+    if (isBalancePayment) {
+      return 'full'
+    }
     // Se non c'è acconto o è molto piccolo, usa pagamento completo
     if (!session.deposit || session.deposit === 0 || session.deposit >= session.price || session.deposit < session.price * 0.2) {
       return 'full'
@@ -398,8 +402,8 @@ export function SimpleCheckoutModal({
             </div>
           </div>
 
-          {/* Payment Type Selection */}
-          {shouldShowDepositOption() && (
+          {/* Payment Type Selection - Skip for balance payments */}
+          {!isBalancePayment && shouldShowDepositOption() && (
             <div className="space-y-4">
               <h4 className="font-semibold">Scegli il tipo di pagamento:</h4>
               
@@ -501,12 +505,18 @@ export function SimpleCheckoutModal({
               <div className="flex justify-between items-center">
                 <div>
                   <p className="text-sm text-muted-foreground">
-                    {paymentType === 'deposit' 
-                      ? `Acconto di ${session.deposit}€ (saldo di ${getBalanceAmount()}€ da pagare entro 30 giorni)`
-                      : `Pagamento completo di ${session.price}€`
+                    {isBalancePayment 
+                      ? `Pagamento saldo rimanente di ${session.price}€`
+                      : paymentType === 'deposit' 
+                        ? `Acconto di ${session.deposit}€ (saldo di ${getBalanceAmount()}€ da pagare entro 30 giorni)`
+                        : `Pagamento completo di ${session.price}€`
                     }
                   </p>
-                  {paymentType === 'deposit' && (
+                  {isBalancePayment ? (
+                    <p className="text-xs text-muted-foreground/70 mt-1">
+                      Completa il pagamento del saldo per la tua prenotazione
+                    </p>
+                  ) : paymentType === 'deposit' && (
                     <p className="text-xs text-muted-foreground/70 mt-1">
                       Saldo da pagare entro 30 giorni dalla prenotazione
                     </p>
@@ -531,7 +541,7 @@ export function SimpleCheckoutModal({
               className="flex-1 bg-primary hover:bg-primary/90"
             >
               <Euro className="w-4 h-4 mr-2" />
-              Paga {getPaymentAmount()}€
+              {isBalancePayment ? `Paga Saldo ${getPaymentAmount()}€` : `Paga ${getPaymentAmount()}€`}
             </Button>
           </div>
             </>
