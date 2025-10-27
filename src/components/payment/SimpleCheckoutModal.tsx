@@ -638,7 +638,7 @@ export function SimpleCheckoutModal({
                   tourId={tour.id}
                   sessionId={session.id}
                   userId={user?.id || registeredUserId || ''}
-                  paymentType={isBalancePayment ? 'balance' : paymentType}
+                  paymentType={isBalancePayment ? 'balance' : (paymentType === 'full' ? 'deposit' : paymentType)}
                   quantity={quantity}
                   tourTitle={tour.title}
                   tourDestination={tour.title}

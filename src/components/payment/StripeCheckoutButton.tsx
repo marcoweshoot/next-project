@@ -10,7 +10,7 @@ interface StripeCheckoutButtonProps {
   tourId: string
   sessionId: string
   userId: string
-  paymentType: 'deposit' | 'balance'
+  paymentType: 'deposit' | 'balance' | 'full'
   quantity?: number
   tourTitle?: string
   tourDestination?: string
