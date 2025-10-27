@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GiftCardItem from './GiftCardItem';
+import CustomGiftCard from './CustomGiftCard';
 
 const giftCardOptions = [
   { amount: 50, color: 'bg-red-500', originalPrice: 50 },
@@ -32,6 +33,8 @@ const GiftCardGrid: React.FC = () => {
               originalPrice={option.originalPrice}
             />
           ))}
+          {/* Custom amount card */}
+          <CustomGiftCard />
         </div>
       </div>
     </section>
