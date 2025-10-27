@@ -13,7 +13,8 @@ import {
   CheckCircle,
   Clock,
   Download,
-  FileText
+  FileText,
+  Gift
 } from 'lucide-react'
 import { FinancialCharts } from './FinancialCharts'
 import { format } from 'date-fns'
@@ -55,6 +56,15 @@ interface StatisticsClientProps {
     total: number
     most_booked: Array<{name: string, bookings: number}>
   }
+  giftCardStats: {
+    total_sold: number
+    total_value: number
+    total_used: number
+    total_remaining: number
+    this_month_sold: number
+    this_month_value: number
+    most_popular_amounts: Array<{amount: number, count: number}>
+  }
   bookingsData: BookingData[]
 }
 
@@ -64,6 +74,7 @@ export function StatisticsClient({
   userStats,
   reviewStats,
   tourStats,
+  giftCardStats,
   bookingsData
 }: StatisticsClientProps) {
   const revenueGrowth = revenueStats.last_month > 0 
@@ -100,7 +111,18 @@ export function StatisticsClient({
       ['Rating Medio', reviewStats.average_rating.toFixed(1)],
       [],
       ['TOUR PIÙ POPOLARI'],
-      ...tourStats.most_booked.map(tour => [tour.name, tour.bookings])
+      ...tourStats.most_booked.map(tour => [tour.name, tour.bookings]),
+      [],
+      ['GIFT CARD'],
+      ['Totale Vendute', giftCardStats?.total_sold || 0],
+      ['Valore Totale', `€${((giftCardStats?.total_value || 0) / 100).toFixed(2)}`],
+      ['Valore Utilizzato', `€${((giftCardStats?.total_used || 0) / 100).toFixed(2)}`],
+      ['Valore Rimanente', `€${((giftCardStats?.total_remaining || 0) / 100).toFixed(2)}`],
+      ['Vendute Questo Mese', giftCardStats?.this_month_sold || 0],
+      ['Valore Questo Mese', `€${((giftCardStats?.this_month_value || 0) / 100).toFixed(2)}`],
+      [],
+      ['IMPORTI PIÙ POPOLARI'],
+      ...(giftCardStats?.most_popular_amounts || []).map(item => [`€${item.amount}`, item.count])
     ]
 
     const csvContent = data.map(row => row.join(',')).join('\n')
@@ -183,8 +205,63 @@ export function StatisticsClient({
         </Card>
       </div>
 
+      {/* Gift Card Statistics */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Gift Card Vendute</CardTitle>
+            <Gift className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{giftCardStats?.total_sold || 0}</div>
+            <p className="text-xs text-muted-foreground">
+              {giftCardStats?.this_month_sold || 0} questo mese
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Valore Totale</CardTitle>
+            <DollarSign className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">€{((giftCardStats?.total_value || 0) / 100).toLocaleString()}</div>
+            <p className="text-xs text-muted-foreground">
+              €{((giftCardStats?.this_month_value || 0) / 100).toLocaleString()} questo mese
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Valore Utilizzato</CardTitle>
+            <CheckCircle className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">€{((giftCardStats?.total_used || 0) / 100).toLocaleString()}</div>
+            <p className="text-xs text-muted-foreground">
+              {(giftCardStats?.total_value || 0) > 0 ? (((giftCardStats?.total_used || 0) / (giftCardStats?.total_value || 1)) * 100).toFixed(1) : 0}% del totale
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Valore Rimanente</CardTitle>
+            <Clock className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">€{((giftCardStats?.total_remaining || 0) / 100).toLocaleString()}</div>
+            <p className="text-xs text-muted-foreground">
+              {(giftCardStats?.total_value || 0) > 0 ? (((giftCardStats?.total_remaining || 0) / (giftCardStats?.total_value || 1)) * 100).toFixed(1) : 0}% del totale
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
       {/* Financial Charts */}
-      <FinancialCharts bookings={bookingsData} />
+      <FinancialCharts bookings={bookingsData || []} />
 
       {/* Detailed Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -324,6 +401,62 @@ export function StatisticsClient({
               <span>Mese Scorso</span>
               <Badge variant="outline">€{(revenueStats.last_month / 100).toLocaleString()}</Badge>
             </div>
+          </CardContent>
+        </Card>
+
+        {/* Gift Card Details */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Gift className="w-5 h-5" />
+              Dettaglio Gift Card
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <div className="flex items-center justify-between">
+              <span>Totale Vendute</span>
+              <Badge variant="secondary">{giftCardStats?.total_sold || 0}</Badge>
+            </div>
+            <div className="flex items-center justify-between">
+              <span>Valore Totale</span>
+              <Badge variant="default">€{((giftCardStats?.total_value || 0) / 100).toLocaleString()}</Badge>
+            </div>
+            <div className="flex items-center justify-between">
+              <span>Valore Utilizzato</span>
+              <Badge variant="outline">€{((giftCardStats?.total_used || 0) / 100).toLocaleString()}</Badge>
+            </div>
+            <div className="flex items-center justify-between">
+              <span>Valore Rimanente</span>
+              <Badge variant="outline">€{((giftCardStats?.total_remaining || 0) / 100).toLocaleString()}</Badge>
+            </div>
+            <div className="flex items-center justify-between">
+              <span>Questo Mese</span>
+              <Badge variant="default">{giftCardStats?.this_month_sold || 0} vendute</Badge>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Most Popular Gift Card Amounts */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5" />
+              Importi Più Popolari
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            {giftCardStats?.most_popular_amounts?.length > 0 ? (
+              giftCardStats.most_popular_amounts.map((item, index) => (
+                <div key={index} className="flex items-center justify-between">
+                  <span>€{item.amount}</span>
+                  <Badge variant={index === 0 ? "default" : "outline"}>
+                    {item.count} vendute
+                  </Badge>
+                </div>
+              ))
+            ) : (
+              <p className="text-muted-foreground text-sm">Nessuna gift card venduta ancora</p>
+            )}
           </CardContent>
         </Card>
       </div>

@@ -44,36 +44,39 @@ const COLORS = {
 export function FinancialCharts({ bookings }: FinancialChartsProps) {
   // Monthly revenue and bookings data
   const monthlyData = useMemo(() => {
-    const last12Months = Array.from({ length: 12 }, (_, i) => {
+    const last12Months = []
+    for (let i = 0; i < 12; i++) {
       const date = new Date()
       date.setMonth(date.getMonth() - (11 - i))
-      return {
+      last12Months.push({
         month: date.toLocaleString('it-IT', { month: 'short', year: '2-digit' }),
         year: date.getFullYear(),
         monthIndex: date.getMonth(),
         revenue: 0,
         bookings: 0,
-      }
-    })
+      })
+    }
 
-    bookings.forEach(booking => {
-      const bookingDate = new Date(booking.created_at)
-      const monthIndex = last12Months.findIndex(
-        m => m.year === bookingDate.getFullYear() && m.monthIndex === bookingDate.getMonth()
-      )
-      
-      if (monthIndex !== -1 && booking.status !== 'cancelled') {
-        last12Months[monthIndex].revenue += booking.total_amount / 100
-        last12Months[monthIndex].bookings += 1
-      }
-    })
+    if (Array.isArray(bookings)) {
+      bookings.forEach(booking => {
+        const bookingDate = new Date(booking.created_at)
+        const monthIndex = last12Months.findIndex(
+          m => m.year === bookingDate.getFullYear() && m.monthIndex === bookingDate.getMonth()
+        )
+        
+        if (monthIndex !== -1 && booking.status !== 'cancelled') {
+          last12Months[monthIndex].revenue += booking.total_amount / 100
+          last12Months[monthIndex].bookings += 1
+        }
+      })
+    }
 
     return last12Months
   }, [bookings])
 
   // Status distribution data
   const statusData = useMemo(() => {
-    const distribution = bookings.reduce((acc, booking) => {
+    const distribution = Array.isArray(bookings) ? bookings.reduce((acc, booking) => {
       const status = booking.status
       if (!acc[status]) {
         acc[status] = { name: status, value: 0, revenue: 0 }
@@ -81,7 +84,7 @@ export function FinancialCharts({ bookings }: FinancialChartsProps) {
       acc[status].value += 1
       acc[status].revenue += booking.total_amount / 100
       return acc
-    }, {} as Record<string, { name: string; value: number; revenue: number }>)
+    }, {} as Record<string, { name: string; value: number; revenue: number }>) : {}
 
     const statusLabels: Record<string, string> = {
       pending: 'In Attesa',
@@ -100,7 +103,8 @@ export function FinancialCharts({ bookings }: FinancialChartsProps) {
 
   // Weekly bookings trend (last 8 weeks)
   const weeklyData = useMemo(() => {
-    const last8Weeks = Array.from({ length: 8 }, (_, i) => {
+    const last8Weeks = []
+    for (let i = 0; i < 8; i++) {
       // Calcola l'inizio della settimana corrente
       const today = new Date()
       const currentWeekStart = new Date(today)
@@ -111,24 +115,26 @@ export function FinancialCharts({ bookings }: FinancialChartsProps) {
       const weekStart = new Date(currentWeekStart)
       weekStart.setDate(currentWeekStart.getDate() - (7 * i))
       
-      return {
+      last8Weeks.push({
         week: `${weekStart.getDate()}/${weekStart.getMonth() + 1}`,
         weekStart: weekStart.getTime(),
         weekEnd: weekStart.getTime() + 7 * 24 * 60 * 60 * 1000,
         bookings: 0,
-      }
-    })
+      })
+    }
 
-    bookings.forEach(booking => {
-      const bookingTime = new Date(booking.created_at).getTime()
-      const weekIndex = last8Weeks.findIndex(
-        w => bookingTime >= w.weekStart && bookingTime < w.weekEnd
-      )
-      
-      if (weekIndex !== -1) {
-        last8Weeks[weekIndex].bookings += 1
-      }
-    })
+    if (Array.isArray(bookings)) {
+      bookings.forEach(booking => {
+        const bookingTime = new Date(booking.created_at).getTime()
+        const weekIndex = last8Weeks.findIndex(
+          w => bookingTime >= w.weekStart && bookingTime < w.weekEnd
+        )
+        
+        if (weekIndex !== -1) {
+          last8Weeks[weekIndex].bookings += 1
+        }
+      })
+    }
 
     return last8Weeks
   }, [bookings])

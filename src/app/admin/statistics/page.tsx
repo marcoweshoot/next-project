@@ -36,6 +36,16 @@ interface TourStats {
   most_booked: Array<{name: string, bookings: number}>
 }
 
+interface GiftCardStats {
+  total_sold: number
+  total_value: number
+  total_used: number
+  total_remaining: number
+  this_month_sold: number
+  this_month_value: number
+  most_popular_amounts: Array<{amount: number, count: number}>
+}
+
 export default async function AdminStatisticsPage() {
   const supabase = await createServerClientSupabase()
   
@@ -84,6 +94,7 @@ export default async function AdminStatisticsPage() {
     userStats,
     reviewStats,
     tourStats,
+    giftCardStats,
     bookingsData
   ] = await Promise.all([
     // Statistiche prenotazioni
@@ -191,6 +202,56 @@ export default async function AdminStatisticsPage() {
       .from('bookings')
       .select('id, status, total_amount, deposit_amount, created_at')
       .then(({ data }) => data || []),
+
+    // Statistiche Gift Card
+    adminSupabase
+      .from('gift_cards')
+      .select('amount, remaining_balance, created_at, status')
+      .then(({ data }) => {
+        if (!data) return {
+          total_sold: 0,
+          total_value: 0,
+          total_used: 0,
+          total_remaining: 0,
+          this_month_sold: 0,
+          this_month_value: 0,
+          most_popular_amounts: []
+        }
+
+        const now = new Date()
+        const thisMonth = new Date(now.getFullYear(), now.getMonth(), 1)
+        
+        const totalSold = data.length
+        const totalValue = data.reduce((sum, gc) => sum + gc.amount, 0)
+        const totalRemaining = data.reduce((sum, gc) => sum + gc.remaining_balance, 0)
+        const totalUsed = totalValue - totalRemaining
+        
+        const thisMonthCards = data.filter(gc => new Date(gc.created_at) >= thisMonth)
+        const thisMonthSold = thisMonthCards.length
+        const thisMonthValue = thisMonthCards.reduce((sum, gc) => sum + gc.amount, 0)
+        
+        // Most popular amounts
+        const amountCounts = data.reduce((acc, gc) => {
+          const amount = gc.amount / 100 // Convert to euros
+          acc[amount] = (acc[amount] || 0) + 1
+          return acc
+        }, {} as Record<number, number>)
+        
+        const mostPopularAmounts = Object.entries(amountCounts)
+          .map(([amount, count]) => ({ amount: parseInt(amount), count }))
+          .sort((a, b) => b.count - a.count)
+          .slice(0, 5)
+
+        return {
+          total_sold: totalSold,
+          total_value: totalValue,
+          total_used: totalUsed,
+          total_remaining: totalRemaining,
+          this_month_sold: thisMonthSold,
+          this_month_value: thisMonthValue,
+          most_popular_amounts: mostPopularAmounts
+        }
+      }),
   ])
 
   return (
@@ -200,6 +261,7 @@ export default async function AdminStatisticsPage() {
       userStats={userStats}
       reviewStats={reviewStats}
       tourStats={tourStats}
+      giftCardStats={giftCardStats}
       bookingsData={bookingsData}
     />
   )
