@@ -150,7 +150,7 @@ export function GiftCardSuccessContent() {
             </CardTitle>
           </CardHeader>
           <CardContent className="text-center space-y-6">
-            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 border border-primary/20">
+            <div className="bg-card/90 backdrop-blur-sm rounded-lg p-6 border border-primary/20">
               <div className="text-4xl font-bold text-primary mb-2">
                 {formatCurrency(giftCard.amount)}
               </div>
@@ -159,7 +159,7 @@ export function GiftCardSuccessContent() {
               <div className="bg-muted/50 rounded-lg p-4 mb-4">
                 <p className="text-sm text-muted-foreground mb-2">Codice Gift Card</p>
                 <div className="flex items-center justify-center gap-2">
-                  <code className="text-2xl font-mono font-bold text-foreground bg-background px-4 py-2 rounded border">
+                  <code className="text-2xl font-mono font-bold text-foreground bg-card border-2 border-primary/20 px-4 py-2 rounded">
                     {giftCard.code}
                   </code>
                   <Button
@@ -197,30 +197,30 @@ export function GiftCardSuccessContent() {
           <CardContent className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               {/* Email Notification */}
-              <div className="flex gap-4 p-4 rounded-lg bg-blue-50 border border-blue-200">
+              <div className="flex gap-4 p-4 rounded-lg bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-blue-600" />
+                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-blue-900 mb-1">Email di Conferma</h3>
-                  <p className="text-sm text-blue-700">
+                  <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-1">Email di Conferma</h3>
+                  <p className="text-sm text-blue-700 dark:text-blue-300">
                     Riceverai una email con tutti i dettagli della gift card e le istruzioni per utilizzarla.
                   </p>
                 </div>
               </div>
 
               {/* Digital Delivery */}
-              <div className="flex gap-4 p-4 rounded-lg bg-green-50 border border-green-200">
+              <div className="flex gap-4 p-4 rounded-lg bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                    <Share2 className="w-5 h-5 text-green-600" />
+                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center">
+                    <Share2 className="w-5 h-5 text-green-600 dark:text-green-400" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-green-900 mb-1">Consegna Digitale</h3>
-                  <p className="text-sm text-green-700">
+                  <h3 className="font-semibold text-green-900 dark:text-green-100 mb-1">Consegna Digitale</h3>
+                  <p className="text-sm text-green-700 dark:text-green-300">
                     Puoi condividere il codice digitalmente o stampare la gift card per regalarla.
                   </p>
                 </div>
@@ -289,8 +289,8 @@ export function GiftCardSuccessContent() {
                 </div>
               </div>
 
-              <div className="bg-muted/50 rounded-lg p-6 text-center">
-                <h4 className="font-semibold mb-2">💡 Suggerimento</h4>
+              <div className="bg-muted/50 dark:bg-muted/30 rounded-lg p-6 text-center border border-muted-foreground/20">
+                <h4 className="font-semibold mb-2 text-foreground">💡 Suggerimento</h4>
                 <p className="text-sm text-muted-foreground">
                   La gift card può essere utilizzata per qualsiasi viaggio fotografico WeShoot. 
                   Se il viaggio costa meno del valore della gift card, il saldo rimarrà disponibile per future prenotazioni.
@@ -317,13 +317,13 @@ export function GiftCardSuccessContent() {
         </div>
 
         {/* Support Section */}
-        <Card className="bg-muted/30">
+        <Card className="bg-muted/30 dark:bg-muted/20 border border-muted-foreground/20">
           <CardContent className="pt-6 text-center">
-            <h3 className="font-semibold mb-2">Hai bisogno di aiuto?</h3>
+            <h3 className="font-semibold mb-2 text-foreground">Hai bisogno di aiuto?</h3>
             <p className="text-sm text-muted-foreground mb-4">
               Il nostro team è qui per aiutarti con qualsiasi domanda sulla tua gift card.
             </p>
-            <Button asChild variant="link">
+            <Button asChild variant="link" className="text-primary hover:text-primary/80">
               <a href="mailto:prenotazioni@weshoot.it">
                 Contatta Supporto
               </a>
