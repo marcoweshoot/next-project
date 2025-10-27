@@ -79,8 +79,7 @@ export function GiftCardSuccessContent() {
       } catch (err) {
         toast({
           title: "Errore",
-          description: "Impossibile copiare il codice",
-          variant: "destructive"
+          description: "Impossibile copiare il codice"
         });
       }
     }
