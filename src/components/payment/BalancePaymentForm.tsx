@@ -197,8 +197,8 @@ export function BalancePaymentForm({ booking, onPaymentSuccess }: BalancePayment
               session={{
                 id: booking.session_id,
                 date: booking.session_date || '',
-                price: booking.total_amount / 100, // Convert from cents to euros
-                deposit: booking.deposit_amount / 100, // Convert from cents to euros
+                price: balanceAmount / 100, // Use balance amount instead of total
+                deposit: 0, // No deposit for balance payments
                 availableSpots: 999,
                 currency: 'EUR'
               }}
