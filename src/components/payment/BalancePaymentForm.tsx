@@ -36,7 +36,7 @@ export function BalancePaymentForm({ booking, onPaymentSuccess }: BalancePayment
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<string | null>(null)
-  const [user, setUser] = useState<{ id: string } | null>(null)
+  const [user, setUser] = useState<{ id: string; email: string } | null>(null)
   const [showPaymentModal, setShowPaymentModal] = useState(false)
   const supabase = createClient()
 
@@ -44,8 +44,8 @@ export function BalancePaymentForm({ booking, onPaymentSuccess }: BalancePayment
   React.useEffect(() => {
     const getUser = async () => {
       const { data: { user } } = await supabase.auth.getUser()
-      if (user) {
-        setUser({ id: user.id })
+      if (user && user.email) {
+        setUser({ id: user.id, email: user.email })
       }
     }
     getUser()
