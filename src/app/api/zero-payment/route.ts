@@ -122,6 +122,8 @@ export async function POST(request: NextRequest) {
           )
           
           // Calculate amount to deduct from gift card (the balance amount)
+          const expectedPaidAmount = (sessionPrice || 0) * quantity
+          const totalAmount = (sessionPrice || 0) * quantity
           const giftCardDeduction = expectedPaidAmount * 100 // Convert to cents
           
           console.log('🎁 [ZERO PAYMENT API] Gift card details for balance payment:', {
