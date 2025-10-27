@@ -46,6 +46,15 @@ interface GiftCardStats {
   most_popular_amounts: Array<{amount: number, count: number}>
 }
 
+interface BookingData {
+  id: string
+  status: string
+  total_amount: number
+  deposit_amount: number
+  created_at: string
+}
+
+
 export default async function AdminStatisticsPage() {
   const supabase = await createServerClientSupabase()
   
@@ -96,6 +105,14 @@ export default async function AdminStatisticsPage() {
     tourStats,
     giftCardStats,
     bookingsData
+  ]: [
+    BookingStats,
+    RevenueStats,
+    UserStats,
+    ReviewStats,
+    TourStats,
+    GiftCardStats,
+    BookingData[]
   ] = await Promise.all([
     // Statistiche prenotazioni
     adminSupabase
