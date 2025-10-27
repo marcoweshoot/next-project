@@ -58,7 +58,110 @@ export async function POST(request: NextRequest) {
 
     const supabase = await createServerClientSupabase()
 
-    // Check for existing booking to prevent duplicates
+    // For balance payments, we need to find the existing booking to update it
+    if (paymentType === 'balance') {
+      console.log('🎁 [ZERO PAYMENT API] Balance payment - looking for existing booking')
+      
+      const { data: existingBooking } = await supabase
+        .from('bookings')
+        .select('id, status, amount_paid, total_amount, gift_card_code')
+        .eq('user_id', userId)
+        .eq('tour_id', tourId)
+        .eq('session_id', sessionId)
+        .eq('status', 'deposit_paid') // Only look for bookings with deposit paid
+        .single()
+
+      if (!existingBooking) {
+        console.error('❌ [ZERO PAYMENT API] No existing booking found for balance payment')
+        return NextResponse.json(
+          { error: 'No existing booking found for balance payment' },
+          { status: 404 }
+        )
+      }
+
+      console.log('🎁 [ZERO PAYMENT API] Found existing booking:', existingBooking)
+
+      // Update the existing booking to fully_paid
+      const { data: updatedBooking, error: updateError } = await supabase
+        .from('bookings')
+        .update({
+          status: 'fully_paid',
+          amount_paid: existingBooking.total_amount, // Mark as fully paid
+          updated_at: new Date().toISOString()
+        })
+        .eq('id', existingBooking.id)
+        .select()
+        .single()
+
+      if (updateError || !updatedBooking) {
+        console.error('❌ [ZERO PAYMENT API] Error updating booking:', updateError)
+        return NextResponse.json(
+          { error: 'Failed to update booking' },
+          { status: 500 }
+        )
+      }
+
+      console.log('✅ [ZERO PAYMENT API] Booking updated to fully_paid:', updatedBooking.id)
+
+      // Apply gift card to the existing booking
+      if (giftCardCode) {
+        try {
+          console.log('🎁 [ZERO PAYMENT API] Applying gift card to existing booking:', giftCardCode)
+          
+          // Create service role client for gift card operations
+          const { createClient } = await import('@supabase/supabase-js')
+          const serviceSupabase = createClient(
+            process.env.NEXT_PUBLIC_SUPABASE_URL!,
+            process.env.SUPABASE_SERVICE_ROLE_KEY!,
+            {
+              auth: {
+                autoRefreshToken: false,
+                persistSession: false
+              }
+            }
+          )
+          
+          // Calculate amount to deduct from gift card (the balance amount)
+          const giftCardDeduction = expectedPaidAmount * 100 // Convert to cents
+          
+          console.log('🎁 [ZERO PAYMENT API] Gift card details for balance payment:', {
+            sessionPrice,
+            sessionDeposit,
+            quantity,
+            paymentType,
+            totalAmount,
+            expectedPaidAmount,
+            giftCardDeduction
+          })
+          
+          const result = await applyGiftCard(
+            giftCardCode,
+            giftCardDeduction,
+            userId,
+            existingBooking.id,
+            serviceSupabase as any
+          )
+
+          if (!result.success) {
+            console.error('❌ [ZERO PAYMENT API] Error applying gift card:', result.error)
+            // Don't fail the booking if gift card application fails
+          } else {
+            console.log('✅ [ZERO PAYMENT API] Gift card applied successfully to existing booking')
+          }
+        } catch (giftCardError) {
+          console.error('❌ [ZERO PAYMENT API] Exception applying gift card:', giftCardError)
+          // Don't fail the booking if gift card application fails
+        }
+      }
+
+      return NextResponse.json({
+        success: true,
+        bookingId: existingBooking.id,
+        message: 'Balance payment completed successfully with gift card'
+      })
+    }
+
+    // For new bookings (deposit or full payment), check for duplicates
     const { data: existingBookings } = await supabase
       .from('bookings')
       .select('id, created_at')
