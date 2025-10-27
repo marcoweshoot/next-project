@@ -95,8 +95,7 @@ const CustomGiftCard: React.FC = () => {
       setError(message);
       toast({ 
         title: "Errore nel pagamento", 
-        description: message,
-        variant: "destructive"
+        description: message
       });
     } finally {
       setIsLoading(false);
