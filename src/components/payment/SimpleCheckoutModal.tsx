@@ -155,7 +155,7 @@ export function SimpleCheckoutModal({
           sessionId: session.id,
           userId: user?.id || registeredUserId,
           quantity,
-          paymentType: isBalancePayment ? 'balance' : 'deposit',
+          paymentType: isBalancePayment ? 'balance' : paymentType,
           giftCardCode,
           amount: getPaymentAmount(), // Pass the actual amount to pay
           // Pass tour and session data for enriched booking
