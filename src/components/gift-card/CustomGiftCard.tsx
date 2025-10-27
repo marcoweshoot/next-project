@@ -44,7 +44,9 @@ const CustomGiftCard: React.FC = () => {
     if (amount > MAX_AMOUNT) {
       return `L'importo massimo è €${MAX_AMOUNT}`;
     }
-    if (amount % 0.01 !== 0) {
+    // Check if amount has more than 2 decimal places
+    const decimalPlaces = (amount.toString().split('.')[1] || '').length;
+    if (decimalPlaces > 2) {
       return 'L\'importo può avere al massimo 2 decimali';
     }
     return null;
@@ -101,7 +103,8 @@ const CustomGiftCard: React.FC = () => {
     }
   };
 
-  const isValidAmount = customAmount && !isNaN(parseFloat(customAmount)) && !validateAmount(parseFloat(customAmount));
+  const amount = parseFloat(customAmount);
+  const isValidAmount = customAmount && !isNaN(amount) && amount >= MIN_AMOUNT && amount <= MAX_AMOUNT;
 
   return (
     <Card className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 border-dashed border-2 border-primary/30">
@@ -132,6 +135,11 @@ const CustomGiftCard: React.FC = () => {
           <p className="text-xs text-muted-foreground">
             Minimo €{MIN_AMOUNT} - Massimo €{MAX_AMOUNT}
           </p>
+          {customAmount && (
+            <p className={`text-xs ${isValidAmount ? 'text-green-600' : 'text-red-600'}`}>
+              {isValidAmount ? `✓ Importo valido: €${amount}` : `✗ Importo non valido`}
+            </p>
+          )}
         </div>
 
         {error && (
