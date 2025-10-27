@@ -90,8 +90,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Handle gift card if provided
-    let finalAmount = amount
+    // Calculate the actual discount that was applied
     let giftCardDiscount = 0
+    let originalAmount = amount
     
     if (giftCardCode) {
       try {
@@ -109,11 +110,25 @@ export async function POST(request: NextRequest) {
           )
         }
         
-        // Calculate discount (can't exceed amount to pay or remaining balance)
-        giftCardDiscount = Math.min(validation.giftCard.remaining_balance, amount)
-        finalAmount = Math.max(0, amount - giftCardDiscount)
+        // Calculate the original amount before gift card (need to get this from session price/deposit)
+        // For deposit: original amount is sessionDeposit * quantity
+        // For balance: original amount is (sessionPrice - sessionDeposit) * quantity
+        // For full: original amount is sessionPrice * quantity
+        const sessionPriceValue = sessionPrice ? parseFloat(sessionPrice) : 0
+        const sessionDepositValue = sessionDeposit ? parseFloat(sessionDeposit) : 0
         
-        console.log(`Gift card applied: ${giftCardCode}, discount: ${giftCardDiscount}, final amount: ${finalAmount}`)
+        if (paymentType === 'deposit' && sessionDepositValue > 0) {
+          originalAmount = sessionDepositValue * 100 * quantity // Convert to cents
+        } else if (paymentType === 'balance') {
+          originalAmount = (sessionPriceValue - sessionDepositValue) * 100 * quantity // Convert to cents
+        } else {
+          originalAmount = sessionPriceValue * 100 * quantity // Convert to cents
+        }
+        
+        // Calculate the discount that was applied
+        giftCardDiscount = originalAmount - amount
+        
+        console.log(`✅ Gift card validated: ${giftCardCode}, original: ${originalAmount}, final: ${amount}, discount: ${giftCardDiscount}`)
       } catch (error) {
         console.error('Error validating gift card:', error)
         return NextResponse.json(
@@ -123,17 +138,19 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // If gift card covers the full amount, we can't create a Stripe session
-    if (finalAmount === 0) {
+    // If amount is 0, we can't create a Stripe session (should use zero-payment API instead)
+    if (amount === 0) {
       return NextResponse.json(
         { 
-          error: 'Gift card covers full amount',
-          fullyCovered: true,
-          giftCardCode
+          error: 'Amount is zero - use zero-payment API instead',
+          fullyCovered: true
         },
         { status: 400 }
       )
     }
+
+    // Use the amount as-is (already discounted from frontend)
+    const finalAmount = amount
 
     // Note: Data comes from Strapi via the client
     // The webhook will validate the payment and create the booking

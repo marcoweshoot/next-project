@@ -228,13 +228,21 @@ export function SimpleCheckoutModal({
   }, [isOpen, tour.title, quantity, paymentType, session.deposit, session.price])
 
   const getPaymentAmount = () => {
-    const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
+    // For balance payments, calculate the remaining balance to pay
+    const baseAmount = isBalancePayment 
+      ? (session.price - session.deposit)  // Balance amount for balance payments
+      : (paymentType === 'deposit' ? session.deposit : session.price)
+    
     const total = baseAmount * quantity
     // Apply gift card discount (giftCardDiscount is already in euros)
     const finalAmount = Math.max(0, total - giftCardDiscount)
     
     console.log('🎁 [PAYMENT AMOUNT] Debug:', {
+      isBalancePayment,
+      paymentType,
       baseAmount,
+      sessionDeposit: session.deposit,
+      sessionPrice: session.price,
       total,
       giftCardDiscount,
       finalAmount,
