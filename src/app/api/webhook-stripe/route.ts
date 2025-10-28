@@ -243,6 +243,11 @@ export async function POST(request: NextRequest) {
           // Per paymentType === 'deposit', lo status è sempre deposit_paid
           // L'utente ha scelto di pagare solo l'acconto, indipendentemente da quanto paga
           const bookingStatus = 'deposit_paid'
+          
+          // For deposit payments, deposit_amount should be the total deposit amount (not just Stripe)
+          // Calculate the expected deposit amount from session metadata
+          const sessionDeposit = parseFloat(session.metadata?.sessionDeposit || '0')
+          const expectedDepositAmount = sessionDeposit * 100 * quantityValue
 
           const { data: newBooking, error: insertError } = await supabase
             .from('bookings')
@@ -251,10 +256,11 @@ export async function POST(request: NextRequest) {
               tour_id: tourId,
               session_id: sessionId,
               status: bookingStatus,
-              deposit_amount: session.amount_total,
+              deposit_amount: expectedDepositAmount, // Total deposit amount, not just Stripe
               total_amount: expectedTotal,
               amount_paid: totalAmountPaid, // Include gift card discount
               stripe_payment_intent_id: session.payment_intent as string,
+              gift_card_code: giftCardCode || null, // Add gift card code if present
               deposit_due_date: new Date().toISOString(),
               balance_due_date: session.metadata?.sessionDate ? 
                 new Date(new Date(session.metadata.sessionDate).getTime() - 30 * 24 * 60 * 60 * 1000).toISOString() : 
