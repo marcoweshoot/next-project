@@ -235,7 +235,9 @@ export async function POST(request: NextRequest) {
           // Check if gift card was applied
           const giftCardCode = session.metadata?.giftCardCode
           const giftCardDiscount = parseInt(session.metadata?.giftCardDiscount || '0')
-          const originalAmount = parseInt(session.metadata?.originalAmount || session.amount_total.toString())
+          // For deposit payments, originalAmount should be the total deposit amount, not just Stripe
+          const sessionDeposit = parseFloat(session.metadata?.sessionDeposit || '0')
+          const originalAmount = sessionDeposit * 100 * quantityValue
           
           // Calculate total amount paid (Stripe payment + gift card discount)
           const totalAmountPaid = session.amount_total + giftCardDiscount
@@ -246,7 +248,6 @@ export async function POST(request: NextRequest) {
           
           // For deposit payments, deposit_amount should be the total deposit amount (not just Stripe)
           // Calculate the expected deposit amount from session metadata
-          const sessionDeposit = parseFloat(session.metadata?.sessionDeposit || '0')
           const expectedDepositAmount = sessionDeposit * 100 * quantityValue
 
           const { data: newBooking, error: insertError } = await supabase
