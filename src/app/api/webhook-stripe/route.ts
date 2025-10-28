@@ -416,6 +416,7 @@ export async function POST(request: NextRequest) {
               total_amount: expectedTotal,
               amount_paid: totalAmountPaid, // Include gift card discount
               stripe_payment_intent_id: session.payment_intent as string,
+              gift_card_code: giftCardCode || null, // Add gift card code if present
               deposit_due_date: new Date().toISOString(),
               balance_due_date: session.metadata?.sessionDate ? 
                 new Date(new Date(session.metadata.sessionDate).getTime() - 30 * 24 * 60 * 60 * 1000).toISOString() : 
@@ -439,7 +440,7 @@ export async function POST(request: NextRequest) {
           // Apply gift card if present
           if (giftCardCode && giftCardDiscount > 0 && newBooking) {
             try {
-              console.log(`🎁 [WEBHOOK] Applying gift card ${giftCardCode} with discount ${giftCardDiscount}`)
+              console.log(`🎁 [WEBHOOK] Applying gift card ${giftCardCode} with discount ${giftCardDiscount} for full payment`)
               const { applyGiftCard } = await import('@/lib/giftCards')
               
               const result = await applyGiftCard(
@@ -452,6 +453,21 @@ export async function POST(request: NextRequest) {
               
               if (result.success) {
                 console.log(`✅ [WEBHOOK] Gift card applied successfully. Remaining balance: ${result.remainingBalance}`)
+                
+                // Update the booking with the gift card code for full payment
+                const { error: updateError } = await supabase
+                  .from('bookings')
+                  .update({
+                    gift_card_code: giftCardCode,
+                    updated_at: new Date().toISOString()
+                  })
+                  .eq('id', newBooking.id)
+                
+                if (updateError) {
+                  console.error('❌ [WEBHOOK] Error updating booking with gift card code:', updateError)
+                } else {
+                  console.log('✅ [WEBHOOK] Booking updated with gift card code for full payment')
+                }
               } else {
                 console.error(`❌ [WEBHOOK] Failed to apply gift card: ${result.error}`)
                 // Don't fail the booking, just log the error
