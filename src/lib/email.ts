@@ -282,7 +282,7 @@ export function generateNewBookingAdminEmail(
   bookingId: string,
   amount: number,
   quantity: number,
-  paymentType: 'deposit' | 'balance'
+  paymentType: 'deposit' | 'balance' | 'full'
 ): { subject: string; html: string; text: string } {
   const formattedAmount = new Intl.NumberFormat('it-IT', {
     style: 'currency',
@@ -291,7 +291,9 @@ export function generateNewBookingAdminEmail(
 
   const subject = paymentType === 'deposit' 
     ? `Nuova Prenotazione: ${tourTitle}` 
-    : `Saldo Completato: ${tourTitle}`
+    : paymentType === 'balance'
+    ? `Saldo Completato: ${tourTitle}`
+    : `Pagamento Completo: ${tourTitle}`
 
   const html = `
     <!DOCTYPE html>
@@ -315,11 +317,11 @@ export function generateNewBookingAdminEmail(
     <body>
       <div class="container">
         <div class="header">
-          <h1>🎉 ${paymentType === 'deposit' ? 'Nuova Prenotazione!' : 'Saldo Completato!'}</h1>
+          <h1>🎉 ${paymentType === 'deposit' ? 'Nuova Prenotazione!' : paymentType === 'balance' ? 'Saldo Completato!' : 'Pagamento Completo!'}</h1>
         </div>
         
         <div class="content">
-          <p><strong>${paymentType === 'deposit' ? 'È stata ricevuta una nuova prenotazione!' : 'Un cliente ha completato il pagamento del saldo!'}</strong></p>
+          <p><strong>${paymentType === 'deposit' ? 'È stata ricevuta una nuova prenotazione!' : paymentType === 'balance' ? 'Un cliente ha completato il pagamento del saldo!' : 'Un cliente ha effettuato il pagamento completo!'}</strong></p>
           
           <div class="info-box">
             <h3>📋 Dettagli Prenotazione</h3>
@@ -345,12 +347,12 @@ export function generateNewBookingAdminEmail(
                 <td>${quantity}</td>
               </tr>
               <tr>
-                <th>Importo ${paymentType === 'deposit' ? 'Acconto' : 'Saldo'}</th>
+                <th>Importo ${paymentType === 'deposit' ? 'Acconto' : paymentType === 'balance' ? 'Saldo' : 'Pagamento'}</th>
                 <td><strong>${formattedAmount}</strong></td>
               </tr>
               <tr>
                 <th>Tipo Pagamento</th>
-                <td>${paymentType === 'deposit' ? '💳 Acconto' : '✅ Saldo Completo'}</td>
+                <td>${paymentType === 'deposit' ? '💳 Acconto' : paymentType === 'balance' ? '✅ Saldo Completo' : '💰 Pagamento Completo'}</td>
               </tr>
               <tr>
                 <th>Data</th>
@@ -372,7 +374,7 @@ export function generateNewBookingAdminEmail(
     </html>
   `
 
-  const text = `${subject}\n\n${paymentType === 'deposit' ? 'Nuova prenotazione ricevuta!' : 'Saldo completato!'}\n\nDettagli:\n- Tour: ${tourTitle}\n- Cliente: ${userName} (${userEmail})\n- ID: ${bookingId}\n- Partecipanti: ${quantity}\n- Importo: ${formattedAmount}\n- Data: ${new Date().toLocaleString('it-IT')}\n\nVai alla dashboard: ${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin/bookings`
+  const text = `${subject}\n\n${paymentType === 'deposit' ? 'Nuova prenotazione ricevuta!' : paymentType === 'balance' ? 'Saldo completato!' : 'Pagamento completo effettuato!'}\n\nDettagli:\n- Tour: ${tourTitle}\n- Cliente: ${userName} (${userEmail})\n- ID: ${bookingId}\n- Partecipanti: ${quantity}\n- Importo: ${formattedAmount}\n- Data: ${new Date().toLocaleString('it-IT')}\n\nVai alla dashboard: ${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin/bookings`
 
   return { subject, html, text }
 }
