@@ -240,8 +240,9 @@ export async function POST(request: NextRequest) {
           // Calculate total amount paid (Stripe payment + gift card discount)
           const totalAmountPaid = session.amount_total + giftCardDiscount
           
-          // Determina lo status: se l'importo pagato >= totale atteso, è tutto pagato
-          const bookingStatus = totalAmountPaid >= expectedTotal ? 'fully_paid' : 'deposit_paid'
+          // Per paymentType === 'deposit', lo status è sempre deposit_paid
+          // L'utente ha scelto di pagare solo l'acconto, indipendentemente da quanto paga
+          const bookingStatus = 'deposit_paid'
 
           const { data: newBooking, error: insertError } = await supabase
             .from('bookings')
@@ -382,6 +383,167 @@ export async function POST(request: NextRequest) {
           console.error('Exception during booking creation:', error)
           return NextResponse.json({ 
             error: 'Booking creation failed',
+            details: error instanceof Error ? error.message : 'Unknown error'
+          }, { status: 500 })
+        }
+      } else if (paymentType === 'full') {
+        // Crea nuovo booking per pagamento completo
+        try {
+          // Calcola il totale atteso (prezzo completo per tutte le persone)
+          const sessionPrice = parseFloat(session.metadata?.sessionPrice || '0')
+          const quantityValue = parseInt(session.metadata?.quantity || '1')
+          const expectedTotal = sessionPrice * 100 * quantityValue
+          
+          // Check if gift card was applied
+          const giftCardCode = session.metadata?.giftCardCode
+          const giftCardDiscount = parseInt(session.metadata?.giftCardDiscount || '0')
+          const originalAmount = parseInt(session.metadata?.originalAmount || session.amount_total.toString())
+          
+          // Calculate total amount paid (Stripe payment + gift card discount)
+          const totalAmountPaid = session.amount_total + giftCardDiscount
+          
+          // Per pagamento completo, lo status è sempre fully_paid
+          const bookingStatus = 'fully_paid'
+
+          const { data: newBooking, error: insertError } = await supabase
+            .from('bookings')
+            .insert({
+              user_id: finalUserId,
+              tour_id: tourId,
+              session_id: sessionId,
+              status: bookingStatus,
+              deposit_amount: 0, // Per pagamento completo, deposit_amount è 0
+              total_amount: expectedTotal,
+              amount_paid: totalAmountPaid, // Include gift card discount
+              stripe_payment_intent_id: session.payment_intent as string,
+              deposit_due_date: new Date().toISOString(),
+              balance_due_date: session.metadata?.sessionDate ? 
+                new Date(new Date(session.metadata.sessionDate).getTime() - 30 * 24 * 60 * 60 * 1000).toISOString() : 
+                new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 giorni prima della partenza
+              quantity: quantity,
+              tour_title: session.metadata?.tourTitle || '',
+              tour_destination: session.metadata?.tourDestination || '',
+              session_date: session.metadata?.sessionDate || '',
+              session_end_date: session.metadata?.sessionEndDate || '',
+            })
+            .select()
+            .single()
+
+          if (insertError) {
+            return NextResponse.json({ 
+              error: 'Booking creation failed',
+              details: insertError.message 
+            }, { status: 500 })
+          }
+          
+          // Apply gift card if present
+          if (giftCardCode && giftCardDiscount > 0 && newBooking) {
+            try {
+              console.log(`🎁 [WEBHOOK] Applying gift card ${giftCardCode} with discount ${giftCardDiscount}`)
+              const { applyGiftCard } = await import('@/lib/giftCards')
+              
+              const result = await applyGiftCard(
+                giftCardCode,
+                originalAmount,
+                finalUserId,
+                newBooking.id,
+                supabase as any
+              )
+              
+              if (result.success) {
+                console.log(`✅ [WEBHOOK] Gift card applied successfully. Remaining balance: ${result.remainingBalance}`)
+              } else {
+                console.error(`❌ [WEBHOOK] Failed to apply gift card: ${result.error}`)
+                // Don't fail the booking, just log the error
+              }
+            } catch (giftCardError) {
+              console.error('❌ [WEBHOOK] Exception applying gift card:', giftCardError)
+              // Don't fail the booking
+            }
+          }
+
+          // Invia notifica email all'admin (non-blocking)
+          try {
+            console.log('📧 [WEBHOOK] Attempting to send admin notification...')
+            const { data: userProfile } = await supabase
+              .from('profiles')
+              .select('first_name, last_name, email')
+              .eq('id', finalUserId)
+              .single()
+
+            if (userProfile) {
+              const userName = `${userProfile.first_name || ''} ${userProfile.last_name || ''}`.trim() || 'Cliente'
+              const userEmail = userProfile.email || ''
+              
+              console.log(`📧 [WEBHOOK] User profile found: ${userName} (${userEmail})`)
+              
+              const emailContent = generateNewBookingAdminEmail(
+                userName,
+                userEmail,
+                newBooking.tour_title || session.metadata?.tourTitle || 'Tour',
+                newBooking.id,
+                session.amount_total || 0,
+                newBooking.quantity || 1,
+                'full'
+              )
+
+              console.log(`📧 [WEBHOOK] Email content generated. Subject: ${emailContent.subject}`)
+              console.log(`📧 [WEBHOOK] Sending to admin email: ${process.env.ADMIN_EMAIL}`)
+
+              // Send admin notification (non-blocking)
+              const emailSent = await sendAdminNotification(emailContent.subject, emailContent.html, emailContent.text)
+              
+              if (emailSent) {
+                console.log('✅ [WEBHOOK] Admin notification sent successfully!')
+              } else {
+                console.error('❌ [WEBHOOK] Admin notification failed to send')
+              }
+            } else {
+              console.warn('⚠️ [WEBHOOK] User profile not found for userId:', finalUserId)
+            }
+          } catch (emailError) {
+            // Log but don't fail the booking
+            console.error('❌ [WEBHOOK] Error sending admin notification:', emailError)
+          }
+
+          // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
+          if (fiscalCode || vatNumber || phoneNumber || fullAddress) {
+            const updateData: any = {}
+            
+            if (fiscalCode) {
+              updateData.fiscal_code = fiscalCode.toUpperCase()
+            }
+            if (vatNumber) {
+              updateData.vat_number = vatNumber.toUpperCase()
+            }
+            if (phoneNumber) {
+              // Salva come mobile_phone se non c'è già
+              updateData.mobile_phone = phoneNumber
+            }
+            if (fullAddress) {
+              updateData.address = fullAddress
+              // Estrai anche i singoli campi se disponibili
+              if (billingAddress?.city) updateData.city = billingAddress.city
+              if (billingAddress?.postal_code) updateData.postal_code = billingAddress.postal_code
+              if (billingAddress?.country) updateData.country = billingAddress.country
+            }
+
+            const { error: updateError } = await supabase
+              .from('profiles')
+              .update(updateData)
+              .eq('id', finalUserId)
+
+            // Non blocchiamo il flusso se l'aggiornamento del profilo fallisce
+            if (updateError) {
+              console.error('Error updating user profile:', updateError)
+            }
+          }
+
+          // Purchase tracking (implementare se necessario)
+        } catch (error) {
+          console.error('Exception during full payment booking creation:', error)
+          return NextResponse.json({ 
+            error: 'Full payment booking creation failed',
             details: error instanceof Error ? error.message : 'Unknown error'
           }, { status: 500 })
         }
