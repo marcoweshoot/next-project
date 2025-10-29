@@ -80,7 +80,6 @@ export function PaymentsList({ userId }: PaymentsListProps) {
         // Carica informazioni sui tour
         await loadTourInfo(data || [])
       } catch (err) {
-        console.error('Error fetching bookings:', err)
         setError(err instanceof Error ? err.message : 'Errore nel caricamento delle prenotazioni')
       } finally {
         setLoading(false)
@@ -115,7 +114,7 @@ export function PaymentsList({ userId }: PaymentsListProps) {
       
       setTourInfo(realTourInfo)
     } catch (err) {
-      console.error('Error loading tour info:', err)
+      // Error loading tour info
     }
   }
 

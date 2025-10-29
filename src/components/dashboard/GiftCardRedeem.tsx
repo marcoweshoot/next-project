@@ -90,7 +90,6 @@ export function GiftCardRedeem({ onGiftCardAdded }: GiftCardRedeemProps) {
 
     } catch (err) {
       setError('Errore nella validazione del codice')
-      console.error('Error redeeming gift card:', err)
     } finally {
       setLoading(false)
     }

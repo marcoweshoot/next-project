@@ -85,7 +85,6 @@ export function BalancePaymentForm({ booking, onPaymentSuccess }: BalancePayment
       // Refresh page after 2 seconds
       setTimeout(() => window.location.reload(), 2000)
     } catch (err) {
-      console.error('Error updating booking status:', err)
       setError(err instanceof Error ? err.message : 'Errore nell\'aggiornamento dello stato')
     } finally {
       setLoading(false)

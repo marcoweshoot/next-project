@@ -47,6 +47,7 @@ export function LoginDropdown({ isScrolled, isAuthPage }: LoginDropdownProps) {
       <div className="flex items-center gap-4">
         <button
           onClick={() => router.push('/dashboard')}
+          aria-label="Vai alla dashboard"
           className={`font-medium transition-colors duration-200 hover:text-primary ${
             isScrolled || isAuthPage ? 'text-foreground' : 'text-white'
           }`}
@@ -56,6 +57,7 @@ export function LoginDropdown({ isScrolled, isAuthPage }: LoginDropdownProps) {
         </button>
         <button
           onClick={handleLogout}
+          aria-label="Esci dal tuo account"
           className={`font-medium transition-colors duration-200 hover:text-primary ${
             isScrolled || isAuthPage ? 'text-foreground' : 'text-white'
           }`}
@@ -70,11 +72,12 @@ export function LoginDropdown({ isScrolled, isAuthPage }: LoginDropdownProps) {
     <Popover open={isOpen} onOpenChange={setIsOpen}>
       <PopoverTrigger asChild>
         <button
+          aria-label="Accedi al tuo account"
           className={`flex items-center gap-2 font-medium transition-colors duration-200 hover:text-primary ${
             isScrolled || isAuthPage ? 'text-foreground' : 'text-white'
           }`}
         >
-          <LogIn className="w-4 h-4" />
+          <LogIn className="w-4 h-4" aria-hidden="true" />
           <span className="hidden xl:inline">Accedi</span>
         </button>
       </PopoverTrigger>

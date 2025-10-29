@@ -53,7 +53,6 @@ export function GiftCardInput({
       setCode('')
     } catch (err) {
       setError('Errore nella validazione del codice')
-      console.error('Error validating gift card:', err)
     } finally {
       setLoading(false)
     }

@@ -22,7 +22,6 @@ function ResetPasswordRedirectContent() {
         if (url) {
           // Decodifica l'URL se è codificato
           const decodedUrl = decodeURIComponent(url)
-          console.log('🔍 Redirecting to:', decodedUrl)
           
           // Reindirizza al vero URL di reset password
           window.location.href = decodedUrl
@@ -45,7 +44,6 @@ function ResetPasswordRedirectContent() {
           }
         }
       } catch (err) {
-        console.error('Redirect error:', err)
         setError('Errore durante il redirect')
       } finally {
         setLoading(false)

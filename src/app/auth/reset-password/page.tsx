@@ -39,14 +39,9 @@ function ResetPasswordForm() {
   const supabase = createClient()
 
   useEffect(() => {
-    // Log immediato per verificare che la pagina si carichi
-    console.log('🔍 Reset password page loaded!')
-    console.log('📍 Current URL:', window.location.href)
-    console.log('🔍 Search params:', Object.fromEntries(searchParams.entries()))
     
     const checkSession = async () => {
       try {
-        console.log('🔍 Starting session check...')
         const { data: { session } } = await supabase.auth.getSession()
         
         if (session) {
@@ -73,7 +68,6 @@ function ResetPasswordForm() {
           
           // Fallback: check URL params for old format if PKCE not found
           if (!token && !tokenHash) {
-            console.log('PKCE tokens not found in URL, checking for old format...')
             accessToken = searchParams.get('access_token')
             refreshToken = searchParams.get('refresh_token')
             code = searchParams.get('code')

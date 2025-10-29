@@ -113,7 +113,6 @@ export async function validateGiftCardCode(
     
     return { valid: true, giftCard: giftCard as GiftCard }
   } catch (error) {
-    console.error('Error validating gift card:', error)
     return { valid: false, error: 'Errore nella validazione del codice' }
   }
 }
@@ -159,7 +158,6 @@ export async function applyGiftCard(
       .eq('id', (giftCard as any).id)
     
     if (updateError) {
-      console.error('Error updating gift card:', updateError)
       return {
         success: false,
         discountAmount: 0,
@@ -180,7 +178,6 @@ export async function applyGiftCard(
       })
     
     if (transactionError) {
-      console.error('Error recording gift card transaction:', transactionError)
       // Don't fail the whole operation if transaction recording fails
     }
     
@@ -190,7 +187,6 @@ export async function applyGiftCard(
       remainingBalance: newRemainingBalance
     }
   } catch (error) {
-    console.error('Error applying gift card:', error)
     return {
       success: false,
       discountAmount: 0,
@@ -215,13 +211,11 @@ export async function getUserGiftCards(
       .order('created_at', { ascending: false })
     
     if (error) {
-      console.error('Error fetching user gift cards:', error)
       return []
     }
     
     return data as GiftCard[]
   } catch (error) {
-    console.error('Error fetching user gift cards:', error)
     return []
   }
 }

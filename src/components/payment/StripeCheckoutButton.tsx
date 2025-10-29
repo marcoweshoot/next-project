@@ -90,7 +90,6 @@ export function StripeCheckoutButton({
       window.location.href = url
       
     } catch (error) {
-      console.error('Checkout error:', error)
       onError?.(error instanceof Error ? error.message : 'Checkout failed')
     } finally {
       setLoading(false)

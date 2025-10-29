@@ -26,7 +26,7 @@ export function UserGiftCards() {
         setGiftCards(data.giftCards || [])
       }
     } catch (error) {
-      console.error('Error fetching gift cards:', error)
+      // Error fetching gift cards
     } finally {
       setLoading(false)
     }
@@ -38,7 +38,7 @@ export function UserGiftCards() {
       setCopiedCode(code)
       setTimeout(() => setCopiedCode(null), 2000)
     } catch (error) {
-      console.error('Error copying code:', error)
+      // Error copying code
     }
   }
 

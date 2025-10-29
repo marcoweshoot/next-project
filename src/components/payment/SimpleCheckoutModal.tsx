@@ -131,20 +131,11 @@ export function SimpleCheckoutModal({
       const actualDiscount = Math.min(giftCardBalanceInEuros, totalAmount)
       setGiftCardDiscount(actualDiscount)
       
-      console.log('🎁 [GIFT CARD] Debug calculation:', {
-        giftCardBalanceCents: data.giftCard.remaining_balance,
-        giftCardBalanceEuros: giftCardBalanceInEuros,
-        totalAmount,
-        actualDiscount,
-        finalAmount: totalAmount - actualDiscount
-      })
-      
       // Force re-render to update the display
       setGiftCardDiscount(actualDiscount)
       
     } catch (err) {
       setError('Errore nella validazione della gift card')
-      console.error('Error validating gift card:', err)
     }
   }
   
@@ -210,13 +201,11 @@ export function SimpleCheckoutModal({
           currency: 'EUR',
           num_items: quantity
         })
-        console.log('📊 [FB PIXEL] Purchase event tracked for gift card payment')
       }
 
       // Success - close modal and redirect
       handlePaymentSuccess()
     } catch (error) {
-      console.error('Error creating zero payment booking:', error)
       handlePaymentError('Errore nella creazione della prenotazione')
     }
   }
@@ -246,17 +235,6 @@ export function SimpleCheckoutModal({
     // Apply gift card discount (giftCardDiscount is already in euros)
     const finalAmount = Math.max(0, total - giftCardDiscount)
     
-    console.log('🎁 [PAYMENT AMOUNT] Debug:', {
-      isBalancePayment,
-      paymentType,
-      baseAmount,
-      sessionDeposit: session.deposit,
-      sessionPrice: session.price,
-      total,
-      giftCardDiscount,
-      finalAmount,
-      isZero: finalAmount === 0
-    })
     
     return finalAmount
   }
@@ -303,7 +281,6 @@ export function SimpleCheckoutModal({
   }
 
   const handlePaymentError = (error: string) => {
-    console.error('Payment error:', error)
     setError(error)
   }
 

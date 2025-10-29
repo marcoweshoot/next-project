@@ -110,14 +110,12 @@ function RegisterForm() {
           })
           
           const result = await response.json()
-          console.log('Profile creation result:', result)
           
           if (!response.ok) {
-            console.error('Profile creation failed:', result)
+            // Profile creation failed, but registration can continue
           }
         } catch (err) {
           // Profile creation failed, but registration can continue
-          console.error('Failed to create profile via API:', err)
         }
         
         // Se l'email confirmation è disabilitata, l'utente è già loggato
@@ -135,7 +133,6 @@ function RegisterForm() {
                 })
               })
             } catch (error) {
-              console.error('Failed to associate gift card:', error)
               // Don't fail registration if gift card association fails
             }
           }
@@ -172,14 +169,16 @@ function RegisterForm() {
           <div className="w-full max-w-md">
             {/* Mobile Logo */}
             <div className="flex justify-center mb-8">
-              <Image
-                src="/lovable-uploads/logo-light.svg"
-                alt="WeShoot"
-                width={150}
-                height={45}
-                className="h-12 w-auto"
-                priority
-              />
+              <Link href="/" className="flex items-center" title="WeShoot | Viaggi Fotografici">
+                <Image
+                  src="/lovable-uploads/logo-light.svg"
+                  alt="WeShoot"
+                  width={150}
+                  height={45}
+                  className="h-12 w-auto hover:opacity-80 transition-opacity duration-200"
+                  priority
+                />
+              </Link>
             </div>
 
             <Card className="border-0 shadow-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm">
@@ -265,14 +264,16 @@ function RegisterForm() {
           <div className="max-w-md space-y-8">
             {/* Logo */}
             <div className="flex justify-center">
-              <Image
-                src="/lovable-uploads/logo-light.svg"
-                alt="WeShoot"
-                width={200}
-                height={60}
-                className="h-16 w-auto"
-                priority
-              />
+              <Link href="/" className="flex items-center" title="WeShoot | Viaggi Fotografici">
+                <Image
+                  src="/lovable-uploads/logo-light.svg"
+                  alt="WeShoot"
+                  width={200}
+                  height={60}
+                  className="h-16 w-auto hover:opacity-80 transition-opacity duration-200"
+                  priority
+                />
+              </Link>
             </div>
             
             {/* Branding Content */}
@@ -317,14 +318,16 @@ function RegisterForm() {
           <div className="w-full max-w-md space-y-8">
             {/* Mobile Logo */}
             <div className="lg:hidden flex justify-center mb-8">
-              <Image
-                src="/lovable-uploads/logo-light.svg"
-                alt="WeShoot"
-                width={150}
-                height={45}
-                className="h-12 w-auto"
-                priority
-              />
+              <Link href="/" className="flex items-center" title="WeShoot | Viaggi Fotografici">
+                <Image
+                  src="/lovable-uploads/logo-light.svg"
+                  alt="WeShoot"
+                  width={150}
+                  height={45}
+                  className="h-12 w-auto hover:opacity-80 transition-opacity duration-200"
+                  priority
+                />
+              </Link>
             </div>
 
             {/* Register Card */}

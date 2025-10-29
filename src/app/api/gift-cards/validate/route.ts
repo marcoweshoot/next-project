@@ -35,7 +35,6 @@ export async function POST(request: NextRequest) {
       }
     })
   } catch (error) {
-    console.error('Error validating gift card:', error)
     return NextResponse.json(
       { valid: false, error: 'Errore nella validazione del codice' },
       { status: 500 }

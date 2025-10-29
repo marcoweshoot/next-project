@@ -21,35 +21,9 @@ export async function POST(request: NextRequest) {
       sessionDeposit
     } = body
 
-    console.log('🎁 [ZERO PAYMENT API] Received parameters:', {
-      tourId,
-      sessionId,
-      userId,
-      quantity,
-      paymentType,
-      giftCardCode,
-      amount,
-      hasUserId: !!userId,
-      userIdType: typeof userId,
-      userIdLength: userId?.length,
-      // Log enriched data
-      tourTitle,
-      tourDestination,
-      sessionDate,
-      sessionEndDate,
-      sessionPrice,
-      sessionDeposit
-    })
 
     // Validate required fields
     if (!tourId || !sessionId || !userId || !giftCardCode) {
-      console.error('❌ [ZERO PAYMENT API] Missing required fields:', {
-        tourId: !!tourId,
-        sessionId: !!sessionId,
-        userId: !!userId,
-        giftCardCode: !!giftCardCode,
-        userIdValue: userId
-      })
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -60,7 +34,6 @@ export async function POST(request: NextRequest) {
 
     // For balance payments, we need to find the existing booking to update it
     if (paymentType === 'balance') {
-      console.log('🎁 [ZERO PAYMENT API] Balance payment - looking for existing booking')
       
       const { data: existingBooking } = await supabase
         .from('bookings')
@@ -72,7 +45,6 @@ export async function POST(request: NextRequest) {
         .single()
 
       if (!existingBooking) {
-        console.error('❌ [ZERO PAYMENT API] No existing booking found for balance payment')
         return NextResponse.json(
           { error: 'No existing booking found for balance payment' },
           { status: 404 }

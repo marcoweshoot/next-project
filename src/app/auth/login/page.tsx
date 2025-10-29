@@ -88,14 +88,16 @@ function LoginForm() {
           <div className="max-w-md space-y-8">
             {/* Logo */}
             <div className="flex justify-center">
-              <Image
-                src="/lovable-uploads/logo-light.svg"
-                alt="WeShoot"
-                width={200}
-                height={60}
-                className="h-16 w-auto"
-                priority
-              />
+              <Link href="/" className="flex items-center" title="WeShoot | Viaggi Fotografici">
+                <Image
+                  src="/lovable-uploads/logo-light.svg"
+                  alt="WeShoot"
+                  width={200}
+                  height={60}
+                  className="h-16 w-auto hover:opacity-80 transition-opacity duration-200"
+                  priority
+                />
+              </Link>
             </div>
             
             {/* Branding Content */}
@@ -140,14 +142,16 @@ function LoginForm() {
           <div className="w-full max-w-md space-y-8">
             {/* Mobile Logo */}
             <div className="lg:hidden flex justify-center mb-8">
-              <Image
-                src="/lovable-uploads/logo-light.svg"
-                alt="WeShoot"
-                width={150}
-                height={45}
-                className="h-12 w-auto"
-                priority
-              />
+              <Link href="/" className="flex items-center" title="WeShoot | Viaggi Fotografici">
+                <Image
+                  src="/lovable-uploads/logo-light.svg"
+                  alt="WeShoot"
+                  width={150}
+                  height={45}
+                  className="h-12 w-auto hover:opacity-80 transition-opacity duration-200"
+                  priority
+                />
+              </Link>
             </div>
 
             {/* Login Card */}
