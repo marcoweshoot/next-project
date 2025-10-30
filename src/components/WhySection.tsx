@@ -7,7 +7,7 @@ const WhySection: React.FC = () => {
     {
       icon: Users,
       title: "Piccoli Gruppi",
-      subtitle: "Massimo 10-12 partecipanti per garantire un'attenzione personalizzata e un'esperienza più intima"
+      subtitle: "Massimo 7-8 partecipanti per garantire un'attenzione personalizzata e un'esperienza più intima"
     },
     {
       icon: Star,

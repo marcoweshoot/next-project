@@ -167,7 +167,7 @@ const CustomGiftCard: React.FC = () => {
             ) : (
               <>
                 <Gift className="mr-2 h-4 w-4" />
-                Acquista Ora
+                Regala Ora
               </>
             )}
           </Button>

@@ -1487,6 +1487,37 @@
           }
         }
       ]
+    },
+    {
+      "id": "275",
+      "start": "2025-11-15",
+      "end": "2025-11-15",
+      "status": "confirmed",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 69,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+          "level": "coach",
+          "role": {
+            "name": "SuperAdmin",
+            "description": "Top level user",
+            "type": "authenticated"
+          }
+        }
+      ]
     }
   ],
   "faqs": [

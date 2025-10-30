@@ -47,8 +47,8 @@ const GiftCardFAQ: React.FC = () => {
               Le carte regalo hanno una scadenza?
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-4 text-muted-foreground">
-              Le nostre carte regalo non hanno scadenza e possono essere utilizzate in qualsiasi
-              momento per prenotare uno dei nostri viaggi fotografici.
+              Le nostre carte regalo hanno una scadenza indicata nel codice della carta regalo, possono essere utilizzate in qualsiasi
+              momento per prenotare uno dei nostri viaggi fotografici fino alla scadenza indicata nel codice.
             </AccordionContent>
           </AccordionItem>
 

@@ -16,7 +16,7 @@ export default function ToursInfoSection() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Piccoli Gruppi</h3>
               <p className="text-gray-600">
-                Massimo 10-12 partecipanti per garantire un'attenzione personalizzata
+                Massimo 7-8 partecipanti per garantire un'attenzione personalizzata
               </p>
             </div>
 

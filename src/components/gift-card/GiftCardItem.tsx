@@ -82,7 +82,7 @@ const GiftCardItem: React.FC<GiftCardItemProps> = ({ amount, color, originalPric
               Elaborazione...
             </>
           ) : (
-            "Acquista Ora"
+            "Regala Ora"
           )}
         </Button>
       </div>
