@@ -37,30 +37,67 @@ function PaymentSuccessContent() {
         
         // Facebook Pixel: Track Purchase event client-side
         if (typeof window !== 'undefined' && window.fbq) {
-          const purchaseData = sessionStorage.getItem('lastPurchase')
+          console.log('🎯 [FB PIXEL] Payment success page loaded')
+          console.log('🎯 [FB PIXEL] window.fbq exists:', !!window.fbq)
+          
+          // Try sessionStorage first, then localStorage as fallback
+          let purchaseData = sessionStorage.getItem('lastPurchase')
+          let storageSource = 'sessionStorage'
+          
+          if (!purchaseData) {
+            purchaseData = localStorage.getItem('lastPurchase')
+            storageSource = 'localStorage'
+            console.log('⚠️ [FB PIXEL] Data not found in sessionStorage, trying localStorage')
+          }
+          
+          console.log('🎯 [FB PIXEL] Purchase data found in', storageSource, purchaseData ? '✅' : '❌')
           
           if (purchaseData) {
             try {
               const purchase = JSON.parse(purchaseData)
               const purchaseValue = purchase.value || 0
               
+              console.log('🎯 [FB PIXEL] Parsed purchase data:', {
+                tourTitle: purchase.tourTitle,
+                value: purchaseValue,
+                quantity: purchase.quantity
+              })
+              
               // Only track if value is greater than 0 (Facebook requirement)
               if (purchaseValue > 0 && !isNaN(purchaseValue) && isFinite(purchaseValue)) {
-                window.fbq('track', 'Purchase', {
+                const eventData = {
                   content_name: purchase.tourTitle || 'Tour',
                   content_category: 'Viaggi Fotografici',
                   value: purchaseValue,
                   currency: 'EUR',
                   num_items: purchase.quantity || 1
-                })
+                }
+                
+                console.log('✅ [FB PIXEL] Tracking Purchase event with data:', eventData)
+                
+                window.fbq('track', 'Purchase', eventData)
+                
+                console.log('✅ [FB PIXEL] Purchase event sent successfully!')
+              } else {
+                console.warn('⚠️ [FB PIXEL] Purchase value is invalid:', purchaseValue)
               }
               
               // Clean up
               sessionStorage.removeItem('lastPurchase')
+              localStorage.removeItem('lastPurchase')
+              console.log('🧹 [FB PIXEL] Cleaned up storage')
             } catch (error) {
-              console.error('Failed to track Facebook Pixel Purchase event:', error)
+              console.error('❌ [FB PIXEL] Failed to track Facebook Pixel Purchase event:', error)
             }
+          } else {
+            console.warn('⚠️ [FB PIXEL] No purchase data found in sessionStorage or localStorage')
+            console.log('💡 [FB PIXEL] This might happen if:')
+            console.log('   - Browser cleared storage during Stripe redirect')
+            console.log('   - User used incognito/private mode')
+            console.log('   - Data was not saved before redirect')
           }
+        } else {
+          console.warn('⚠️ [FB PIXEL] Facebook Pixel not initialized (window.fbq not found)')
         }
         
         // Redirect to dashboard with success parameter
