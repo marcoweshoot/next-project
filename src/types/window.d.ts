@@ -18,6 +18,7 @@ declare global {
     dataLayer: unknown[]; // <-- non opzionale (niente '?')
     gtag?: (...args: unknown[]) => void;
     fbq?: FBQ;
+    fbPixelInitialized?: boolean; // Flag per indicare se il pixel è inizializzato
     _iub?: { cs?: { api?: IubApi } };
   }
 }
