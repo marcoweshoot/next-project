@@ -79,6 +79,8 @@ export function StripeCheckoutButton({
 
       // Save purchase data for Facebook Pixel tracking
       // Save to both sessionStorage and localStorage for reliability across Stripe redirect
+      // Note: We don't generate event_id here - we'll use Stripe session_id as event_id
+      // which is more reliable and consistent
       const purchaseData = {
         tourTitle,
         value: amount / 100, // Convert from cents
@@ -91,6 +93,7 @@ export function StripeCheckoutButton({
         sessionStorage.setItem('lastPurchase', JSON.stringify(purchaseData))
         localStorage.setItem('lastPurchase', JSON.stringify(purchaseData))
         console.log('💾 [FB PIXEL] Saved purchase data to storage:', purchaseData)
+        console.log('💾 [FB PIXEL] event_id will be generated from Stripe session_id on success page')
       } catch (error) {
         console.error('❌ [FB PIXEL] Failed to save purchase data:', error)
       }

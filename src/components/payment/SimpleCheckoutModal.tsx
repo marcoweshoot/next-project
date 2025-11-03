@@ -12,6 +12,7 @@ import { CreditCard, User, Calendar, Euro, AlertCircle, Loader2, Users, CheckCir
 import { StripeCheckoutButton } from './StripeCheckoutButton'
 import { QuickRegistrationForm } from './QuickRegistrationForm'
 import { GiftCardInput } from '@/components/gift-card/GiftCardInput'
+import { generateEventId, createPurchaseEventId } from '@/utils/facebook'
 
 interface SimpleCheckoutModalProps {
   isOpen: boolean
@@ -199,13 +200,20 @@ export function SimpleCheckoutModal({
 
       // Track Facebook Pixel Purchase event for gift card payments
       if (typeof window !== 'undefined' && window.fbq && totalValue > 0 && !isNaN(totalValue) && isFinite(totalValue)) {
+        // Generate unique event_id for gift card purchases (no Stripe session)
+        const eventId = createPurchaseEventId(`giftcard_${Date.now()}_${user?.id || registeredUserId}`)
+        
+        console.log('🆔 [FB PIXEL] Generated event_id for gift card purchase:', eventId)
+        
         window.fbq('track', 'Purchase', {
           content_name: tour.title,
           content_category: 'Viaggi Fotografici',
           value: totalValue,
           currency: 'EUR',
           num_items: quantity || 1
-        })
+        }, { eventID: eventId })
+        
+        console.log('✅ [FB PIXEL] Purchase event sent with event_id for gift card payment')
       }
 
       // Success - close modal and redirect
@@ -238,13 +246,20 @@ export function SimpleCheckoutModal({
       // Only track if value is greater than 0 (Facebook requirement)
       // This ensures we always send a valid value, even when gift card covers 100% of the cost
       if (totalValue > 0 && !isNaN(totalValue) && isFinite(totalValue)) {
+        // Generate unique event_id for InitiateCheckout
+        const eventId = generateEventId()
+        
+        console.log('🆔 [FB PIXEL] Generated event_id for InitiateCheckout:', eventId)
+        
         window.fbq('track', 'InitiateCheckout', {
           content_name: tour.title,
           content_category: 'Viaggi Fotografici',
           value: totalValue, // Original checkout value, not final payment amount
           currency: 'EUR',
           num_items: quantity || 1
-        })
+        }, { eventID: eventId })
+        
+        console.log('✅ [FB PIXEL] InitiateCheckout event sent with event_id')
       }
     }
     // NOTE: giftCardDiscount is intentionally NOT in dependencies - we want to track the ORIGINAL value

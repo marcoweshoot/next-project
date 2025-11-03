@@ -4,6 +4,7 @@ import { useEffect, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { CheckCircle, Loader2 } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
+import { createEventIdFromStripeSession } from '@/utils/facebook'
 
 function PaymentSuccessContent() {
   const router = useRouter()
@@ -65,6 +66,9 @@ function PaymentSuccessContent() {
               
               // Only track if value is greater than 0 (Facebook requirement)
               if (purchaseValue > 0 && !isNaN(purchaseValue) && isFinite(purchaseValue)) {
+                // Generate event_id from Stripe session_id for deduplication
+                const eventId = createEventIdFromStripeSession(sessionId)
+                
                 const eventData = {
                   content_name: purchase.tourTitle || 'Tour',
                   content_category: 'Viaggi Fotografici',
@@ -73,11 +77,13 @@ function PaymentSuccessContent() {
                   num_items: purchase.quantity || 1
                 }
                 
+                console.log('🆔 [FB PIXEL] Generated event_id from Stripe session:', eventId)
                 console.log('✅ [FB PIXEL] Tracking Purchase event with data:', eventData)
                 
-                window.fbq('track', 'Purchase', eventData)
+                // Track Purchase event with event_id for deduplication
+                window.fbq('track', 'Purchase', eventData, { eventID: eventId })
                 
-                console.log('✅ [FB PIXEL] Purchase event sent successfully!')
+                console.log('✅ [FB PIXEL] Purchase event sent successfully with event_id!')
               } else {
                 console.warn('⚠️ [FB PIXEL] Purchase value is invalid:', purchaseValue)
               }
