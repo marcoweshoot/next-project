@@ -172,34 +172,39 @@ export function SimpleCheckoutModal({
         throw new Error('Errore nella creazione della prenotazione')
       }
 
+      // Calculate the correct base amount for tracking
+      let baseAmount: number
+      if (isBalancePayment) {
+        baseAmount = session.price - session.deposit
+      } else {
+        baseAmount = paymentType === 'deposit' ? session.deposit : session.price
+      }
+      const totalValue = (baseAmount || 0) * (quantity || 1)
+
       // Save purchase data for Facebook Pixel tracking
-      if (typeof window !== 'undefined' && window.sessionStorage) {
-        const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
-        const totalValue = baseAmount * quantity
+      if (typeof window !== 'undefined' && window.sessionStorage && totalValue > 0) {
         sessionStorage.setItem('lastPurchase', JSON.stringify({
           tourTitle: tour.title,
           value: totalValue,
-          quantity,
+          quantity: quantity || 1,
           tourDestination: tour.title,
           sessionDate: session.date
         }))
         console.log('💾 [FB PIXEL] Saved purchase data for gift card payment:', {
           tourTitle: tour.title,
           value: totalValue,
-          quantity
+          quantity: quantity || 1
         })
       }
 
       // Track Facebook Pixel Purchase event for gift card payments
-      if (typeof window !== 'undefined' && window.fbq) {
-        const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
-        const totalValue = baseAmount * quantity
+      if (typeof window !== 'undefined' && window.fbq && totalValue > 0 && !isNaN(totalValue) && isFinite(totalValue)) {
         window.fbq('track', 'Purchase', {
           content_name: tour.title,
           content_category: 'Viaggi Fotografici',
           value: totalValue,
           currency: 'EUR',
-          num_items: quantity
+          num_items: quantity || 1
         })
       }
 
@@ -211,19 +216,39 @@ export function SimpleCheckoutModal({
   }
 
   // Facebook Pixel: Track InitiateCheckout when modal opens
+  // IMPORTANTE: Traccia sempre il VALORE ORIGINALE del checkout (prima di gift card o sconti)
+  // Questo rappresenta il valore del carrello avviato, anche se poi viene coperto da una gift card
   useEffect(() => {
     if (isOpen && typeof window !== 'undefined' && window.fbq) {
-      const baseAmount = paymentType === 'deposit' ? session.deposit : session.price
-      const totalValue = baseAmount * quantity
-      window.fbq('track', 'InitiateCheckout', {
-        content_name: tour.title,
-        content_category: 'Viaggi Fotografici',
-        value: totalValue,
-        currency: 'EUR',
-        num_items: quantity
-      })
+      // Calculate base amount based on payment type (ORIGINAL value, before gift card discount)
+      let baseAmount: number
+      
+      if (isBalancePayment) {
+        // For balance payments, use the remaining balance
+        baseAmount = session.price - session.deposit
+      } else {
+        // For regular payments, use deposit or full price
+        baseAmount = paymentType === 'deposit' ? session.deposit : session.price
+      }
+      
+      // Calculate total value (ORIGINAL checkout value, not final payment amount)
+      // This is the value of the cart being checked out, regardless of gift card coverage
+      const totalValue = (baseAmount || 0) * (quantity || 1)
+      
+      // Only track if value is greater than 0 (Facebook requirement)
+      // This ensures we always send a valid value, even when gift card covers 100% of the cost
+      if (totalValue > 0 && !isNaN(totalValue) && isFinite(totalValue)) {
+        window.fbq('track', 'InitiateCheckout', {
+          content_name: tour.title,
+          content_category: 'Viaggi Fotografici',
+          value: totalValue, // Original checkout value, not final payment amount
+          currency: 'EUR',
+          num_items: quantity || 1
+        })
+      }
     }
-  }, [isOpen, tour.title, quantity, paymentType, session.deposit, session.price])
+    // NOTE: giftCardDiscount is intentionally NOT in dependencies - we want to track the ORIGINAL value
+  }, [isOpen, tour.title, quantity, paymentType, isBalancePayment, session.deposit, session.price])
 
   const getPaymentAmount = () => {
     // For balance payments, calculate the remaining balance to pay

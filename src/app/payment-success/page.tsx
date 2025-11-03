@@ -42,13 +42,19 @@ function PaymentSuccessContent() {
           if (purchaseData) {
             try {
               const purchase = JSON.parse(purchaseData)
-              window.fbq('track', 'Purchase', {
-                content_name: purchase.tourTitle || 'Tour',
-                content_category: 'Viaggi Fotografici',
-                value: purchase.value || 0,
-                currency: 'EUR',
-                num_items: purchase.quantity || 1
-              })
+              const purchaseValue = purchase.value || 0
+              
+              // Only track if value is greater than 0 (Facebook requirement)
+              if (purchaseValue > 0 && !isNaN(purchaseValue) && isFinite(purchaseValue)) {
+                window.fbq('track', 'Purchase', {
+                  content_name: purchase.tourTitle || 'Tour',
+                  content_category: 'Viaggi Fotografici',
+                  value: purchaseValue,
+                  currency: 'EUR',
+                  num_items: purchase.quantity || 1
+                })
+              }
+              
               // Clean up
               sessionStorage.removeItem('lastPurchase')
             } catch (error) {
