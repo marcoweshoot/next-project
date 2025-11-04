@@ -387,6 +387,7 @@ export async function POST(request: NextRequest) {
           }
 
           // Purchase tracking (implementare se necessario)
+          // RIMOSSO BLOCCO CAPI DA QUI
         } catch (error) {
           console.error('Exception during booking creation:', error)
           return NextResponse.json({ 
@@ -564,6 +565,7 @@ export async function POST(request: NextRequest) {
           }
 
           // Purchase tracking (implementare se necessario)
+          // RIMOSSO BLOCCO CAPI DA QUI
         } catch (error) {
           console.error('Exception during full payment booking creation:', error)
           return NextResponse.json({ 
@@ -790,7 +792,7 @@ export async function POST(request: NextRequest) {
     } else if (event.type === 'checkout.session.async_payment_succeeded') {
       const session = event.data.object as Stripe.Checkout.Session
       // Handle successful payment here
-      console.log('✅ [WEBHOOK] Payment successful for session:', session.id)
+      console.log('✅ [WEBHOOK] Async Payment successful for session:', session.id)
 
       // CAPI Purchase Event Tracking for Async Payments
       (async () => {
