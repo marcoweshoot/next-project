@@ -251,15 +251,32 @@ export function SimpleCheckoutModal({
         
         console.log('🆔 [FB PIXEL] Generated event_id for InitiateCheckout:', eventId)
         
-        window.fbq('track', 'InitiateCheckout', {
+        const eventData = {
           content_name: tour.title,
           content_category: 'Viaggi Fotografici',
           value: totalValue, // Original checkout value, not final payment amount
           currency: 'EUR',
           num_items: quantity || 1
-        }, { eventID: eventId })
+        }
+
+        // 1. Track with Browser Pixel
+        window.fbq('track', 'InitiateCheckout', eventData, { eventID: eventId })
         
-        console.log('✅ [FB PIXEL] InitiateCheckout event sent with event_id')
+        console.log('✅ [FB PIXEL] InitiateCheckout event sent from browser with event_id')
+
+        // 2. Track with Conversions API (non-blocking)
+        fetch('/api/track-fb-event', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event_name: 'InitiateCheckout',
+            event_id: eventId,
+            event_source_url: window.location.href,
+            custom_data: eventData,
+          }),
+        }).catch(error => {
+          console.error('❌ [CAPI] Error sending InitiateCheckout event to server:', error)
+        })
       }
     }
     // NOTE: giftCardDiscount is intentionally NOT in dependencies - we want to track the ORIGINAL value

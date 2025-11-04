@@ -4,6 +4,7 @@ import { createClient } from '@supabase/supabase-js'
 import { rateLimits } from '@/lib/rateLimit'
 import { validateFields } from '@/lib/validation'
 import { sendAdminNotification, generateNewBookingAdminEmail } from '@/lib/email'
+import { sendServerEvent } from '@/lib/facebook-capi'
 import Stripe from 'stripe'
 
 // Stripe consiglia Node.js runtime per i webhook
@@ -551,14 +552,14 @@ export async function POST(request: NextRequest) {
               if (billingAddress?.country) updateData.country = billingAddress.country
             }
 
-            const { error: updateError } = await supabase
+            const { error: profileUpdateError } = await supabase
               .from('profiles')
               .update(updateData)
               .eq('id', finalUserId)
 
             // Non blocchiamo il flusso se l'aggiornamento del profilo fallisce
-            if (updateError) {
-              console.error('Error updating user profile:', updateError)
+            if (profileUpdateError) {
+              console.error('Error updating user profile:', profileUpdateError)
             }
           }
 
@@ -633,6 +634,7 @@ export async function POST(request: NextRequest) {
                 console.log(`✅ [WEBHOOK] Gift card applied successfully. Remaining balance: ${result.remainingBalance}`)
               } else {
                 console.error(`❌ [WEBHOOK] Failed to apply gift card: ${result.error}`)
+                // Don't fail the booking, just log the error
               }
             } catch (giftCardError) {
               console.error('❌ [WEBHOOK] Exception applying gift card:', giftCardError)
@@ -714,13 +716,14 @@ export async function POST(request: NextRequest) {
             }
           }
         } catch (error) {
+          console.error('Exception during balance payment update:', error)
           return NextResponse.json({ error: 'Balance payment failed' }, { status: 500 })
         }
       } else {
         return NextResponse.json({ error: 'Unknown payment type' }, { status: 400 })
       }
 
-      // Aggiorna il profilo con i dati di fatturazione da Stripe
+      // Aggiorna il profilo con i dati di fatturazione da Stripe (se presenti)
       if (session.customer_details) {
         try {
           const customerDetails = session.customer_details
