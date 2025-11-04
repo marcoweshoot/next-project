@@ -787,9 +787,65 @@ export async function POST(request: NextRequest) {
           // Non bloccare il flusso se l'aggiornamento del profilo fallisce
         }
       }
-    } else if (event.type === 'payment_intent.succeeded') {
-      // Payment Intent events are handled automatically by Stripe when using Checkout Sessions
-      // We only need to handle checkout.session.completed events for our booking system
+    } else if (event.type === 'checkout.session.async_payment_succeeded') {
+      const session = event.data.object as Stripe.Checkout.Session
+      // Handle successful payment here
+      console.log('✅ [WEBHOOK] Payment successful for session:', session.id)
+
+      // CAPI Purchase Event Tracking for Async Payments
+      (async () => {
+        try {
+          const supabase = createClient(
+            process.env.NEXT_PUBLIC_SUPABASE_URL!,
+            process.env.SUPABASE_SERVICE_ROLE_KEY!
+          )
+
+          const finalUserId = session.metadata?.userId || session.customer_details?.email
+          if (!finalUserId) {
+            console.warn('⚠️ [CAPI] User ID or email not found in async session, cannot send event.')
+            return
+          }
+          
+          const { data: userProfile } = await supabase
+            .from('profiles')
+            .select('first_name, last_name, email, mobile_phone')
+            .eq('id', finalUserId)
+            .single()
+
+          const ip = request.headers.get('x-forwarded-for')
+          const userAgent = request.headers.get('user-agent')
+          const quantity = session.metadata?.quantity ? parseInt(session.metadata.quantity, 10) : 1
+
+          await sendServerEvent({
+            event_name: 'Purchase',
+            event_id: session.id, // Use Stripe Session ID for deduplication
+            event_source_url: `${process.env.NEXT_PUBLIC_SITE_URL}/viaggi-fotografici/tour/${session.metadata?.tourTitle || ''}`,
+            user_data: {
+              external_id: finalUserId,
+              em: userProfile?.email || session.customer_details?.email || undefined,
+              ph: userProfile?.mobile_phone || undefined,
+              fn: userProfile?.first_name || undefined,
+              ln: userProfile?.last_name || undefined,
+              client_ip_address: ip || undefined,
+              client_user_agent: userAgent || undefined,
+            },
+            custom_data: {
+              value: (session.amount_total || 0) / 100,
+              currency: 'EUR',
+              content_name: session.metadata?.tourTitle || '',
+              content_category: 'Viaggi Fotografici',
+              num_items: quantity,
+              order_id: session.metadata?.bookingId || undefined,
+            },
+          })
+        } catch (capiError) {
+          console.error('❌ [WEBHOOK] Failed to send async Purchase event to CAPI:', capiError)
+        }
+      })()
+      
+    } else if (event.type === 'checkout.session.expired') {
+      const session = event.data.object as Stripe.Checkout.Session
+      // Handle expired session here
     }
 
     return NextResponse.json({ 
