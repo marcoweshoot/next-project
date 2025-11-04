@@ -841,7 +841,7 @@ export async function POST(request: NextRequest) {
         } catch (capiError) {
           console.error('❌ [WEBHOOK] Failed to send async Purchase event to CAPI:', capiError)
         }
-      })()
+      })();
       
     } else if (event.type === 'checkout.session.expired') {
       const session = event.data.object as Stripe.Checkout.Session
