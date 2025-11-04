@@ -131,7 +131,7 @@ export async function sendServerEvent(event: Omit<ServerEvent, 'action_source' |
         ...event,
         event_time: Math.floor(Date.now() / 1000),
         action_source: 'website' as const,
-        user_data: event.user_data, // User data should be pre-normalized
+        user_data: normalizeAndHashUserData(event.user_data), // User data is normalized and hashed here
       },
     ],
     ...(FB_TEST_EVENT_CODE && { test_event_code: FB_TEST_EVENT_CODE }),
