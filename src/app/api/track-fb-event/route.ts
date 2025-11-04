@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { sendServerEvent } from '@/lib/facebook-capi'
+import { sendServerEvent, UserData } from '@/lib/facebook-capi'
 import { createServerClientSupabase } from '@/lib/supabase/server'
 import { getCookies } from 'cookies-next'
 
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     const supabase = await createServerClientSupabase()
     const { data: { user } } = await supabase.auth.getUser()
     
-    let userData: any = {
+    const userData: UserData = {
       client_ip_address: ip,
       client_user_agent: userAgent,
       fbp,

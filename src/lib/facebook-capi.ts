@@ -14,7 +14,7 @@
 
 import { createHash } from 'crypto'
 
-interface UserData {
+export interface UserData {
   em?: string // Email
   ph?: string // Phone
   fn?: string // First name
