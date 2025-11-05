@@ -11,6 +11,7 @@ import { Loader2, User, Mail, Lock, AlertCircle, LogIn } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import { GoogleAuthButton } from '@/components/auth/GoogleAuthButton'
 import { validateFields } from '@/lib/validation'
+import { generateEventId } from '@/utils/facebook'
 
 interface QuickRegistrationFormProps {
   onSuccess: (userId: string) => void
@@ -115,6 +116,9 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
     try {
       const supabase = createClient()
 
+      // Generate a unique event_id for this registration event
+      const eventId = generateEventId()
+
       // Registra l'utente
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email: registerData.email,
@@ -147,7 +151,8 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
             firstName: registerData.firstName,
             lastName: registerData.lastName,
             privacyAccepted: registerData.privacyAccepted,
-            marketingAccepted: registerData.marketingAccepted
+            marketingAccepted: registerData.marketingAccepted,
+            fbEventId: eventId, // Pass the event_id to the server
           })
         })
       } catch (profileError) {
@@ -174,7 +179,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
         window.fbq('track', 'CompleteRegistration', {
           content_name: 'Quick Registration',
           status: 'completed'
-        })
+        }, { eventID: eventId })
       }
 
       onSuccess(authData.user.id)

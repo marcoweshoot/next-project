@@ -6,9 +6,9 @@ import { sendServerEvent, UserData } from '@/lib/facebook-capi' // Import CAPI h
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { userId, email, firstName, lastName, privacyAccepted = true, marketingAccepted = false } = body
+    const { userId, email, firstName, lastName, privacyAccepted = true, marketingAccepted = false, fbEventId } = body
 
-    console.log('📝 Creating profile:', { userId, email, firstName, lastName, privacyAccepted, marketingAccepted })
+    console.log('📝 Creating profile:', { userId, email, firstName, lastName, privacyAccepted, marketingAccepted, fbEventId })
 
     if (!userId) {
       return NextResponse.json({ error: 'userId is required' }, { status: 400 })
@@ -99,7 +99,8 @@ export async function POST(request: NextRequest) {
     try {
       const ip = request.headers.get('x-forwarded-for')
       const userAgent = request.headers.get('user-agent')
-      const eventId = `registration_${userId}_${Date.now()}`
+      // Use the event_id from the client, or generate a fallback
+      const eventId = fbEventId || `registration_${userId}_${Date.now()}`
 
       const userData: UserData = {
         external_id: userId,
