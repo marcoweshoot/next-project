@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClientSupabase } from '@/lib/supabase/server'
 import { createClient } from '@supabase/supabase-js'
+import { sendServerEvent, UserData } from '@/lib/facebook-capi' // Import CAPI helper
 
 export async function POST(request: NextRequest) {
   try {
@@ -92,11 +93,42 @@ export async function POST(request: NextRequest) {
     }
 
     console.log('✅ Profile created successfully via RPC')
-    return NextResponse.json({
-      success: true,
-      message: 'Profile created successfully',
-      userId
-    })
+
+    // --- Track CompleteRegistration event with CAPI ---
+    // This is a non-blocking call (fire and forget)
+    try {
+      const ip = request.headers.get('x-forwarded-for')
+      const userAgent = request.headers.get('user-agent')
+      const eventId = `registration_${userId}_${Date.now()}`
+
+      const userData: UserData = {
+        external_id: userId,
+        em: email,
+        fn: firstName,
+        ln: lastName,
+        client_ip_address: ip || undefined,
+        client_user_agent: userAgent || undefined,
+      }
+
+      sendServerEvent({
+        event_name: 'CompleteRegistration',
+        event_id: eventId,
+        event_source_url: request.headers.get('referer') || process.env.NEXT_PUBLIC_SITE_URL,
+        user_data: userData,
+        custom_data: {
+          currency: 'EUR',
+          // You can add a value if registration has a monetary value, otherwise omit it
+        },
+      })
+      
+      console.log('✅ [CAPI] Sent CompleteRegistration event for user:', userId)
+    } catch (capiError) {
+      console.error('❌ [CAPI] Failed to send CompleteRegistration event:', capiError)
+      // Do not block the response for CAPI errors
+    }
+    // ------------------------------------------------
+
+    return NextResponse.json({ success: true, message: 'Profile created successfully' })
 
   } catch (error) {
     console.error('❌ Create profile error:', error)

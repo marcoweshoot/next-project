@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect } from 'react';
+import { generateEventId } from '@/utils/facebook';
 import TourStickyNav from './TourStickyNav';
 import TourGallery from './TourGallery';
 import TourDescription from './TourDescription';
@@ -34,6 +36,41 @@ export default function TourDetailContentClient({
   coaches,
   isFallbackPast = false,
 }: TourDetailContentProps) {
+
+  // --- Track ViewContent event with Pixel & CAPI ---
+  useEffect(() => {
+    if (tour && typeof window !== 'undefined' && window.fbq) {
+      const eventId = generateEventId();
+      const eventData = {
+        content_name: tour.title,
+        content_category: 'Viaggi Fotografici',
+        content_ids: [tour.id], // ID del tour
+        content_type: 'product',
+        value: tour.price || 0,
+        currency: 'EUR',
+      };
+
+      // 1. Track with Browser Pixel
+      window.fbq('track', 'ViewContent', eventData, { eventID: eventId });
+      console.log('✅ [FB PIXEL] ViewContent event sent from browser with event_id:', eventId);
+
+      // 2. Track with Conversions API (non-blocking)
+      fetch('/api/track-fb-event', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          event_name: 'ViewContent',
+          event_id: eventId,
+          event_source_url: window.location.href,
+          custom_data: eventData,
+        }),
+      }).catch(error => {
+        console.error('❌ [CAPI] Error sending ViewContent event to server:', error);
+      });
+    }
+  }, [tour]); // Esegui solo quando l'oggetto tour cambia
+  // ----------------------------------------------------
+
   if (!tour) return null;
 
   const scrollToSection = (id: string) => {
