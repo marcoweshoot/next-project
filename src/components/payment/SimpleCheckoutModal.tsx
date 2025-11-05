@@ -227,6 +227,16 @@ export function SimpleCheckoutModal({
   // IMPORTANTE: Traccia sempre il VALORE ORIGINALE del checkout (prima di gift card o sconti)
   // Questo rappresenta il valore del carrello avviato, anche se poi viene coperto da una gift card
   useEffect(() => {
+    if (
+      !isOpen ||
+      typeof window === 'undefined' ||
+      !window.fbq ||
+      typeof session.price !== 'number' ||
+      session.price <= 0
+    ) {
+      return
+    }
+
     if (isOpen && typeof window !== 'undefined' && window.fbq) {
       // Calculate base amount based on payment type (ORIGINAL value, before gift card discount)
       let baseAmount: number
