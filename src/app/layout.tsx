@@ -32,14 +32,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta httpEquiv="Permissions-Policy" content="payment=(*), camera=(), microphone=(), geolocation=()" />
         
         <FacebookPixel />
+        <IubendaScripts />
+        <ConsentLoaders />
       </head>
 
       {/* Applica i token del tema subito per evitare bordi bianchi in dark */}
       <body className="min-h-screen bg-background text-foreground font-sans antialiased">
         <ToastStateProvider>
           <ClientProviders>
-            <IubendaScripts />
-            <ConsentLoaders />
             <div suppressHydrationWarning>
               {children}
             </div>
