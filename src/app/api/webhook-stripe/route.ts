@@ -725,6 +725,45 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: 'Unknown payment type' }, { status: 400 })
       }
 
+      // CAPI Purchase Event Tracking for sync/async payments on session completion
+      (async () => {
+        try {
+          const { data: userProfile } = await supabase
+            .from('profiles')
+            .select('first_name, last_name, email, mobile_phone')
+            .eq('id', finalUserId)
+            .single()
+
+          const ip = request.headers.get('x-forwarded-for')
+          const userAgent = request.headers.get('user-agent')
+          const quantity = session.metadata?.quantity ? parseInt(session.metadata.quantity, 10) : 1
+
+          await sendServerEvent({
+            event_name: 'Purchase',
+            event_id: session.id, // Use Stripe Session ID for deduplication
+            event_source_url: `${process.env.NEXT_PUBLIC_SITE_URL}/viaggi-fotografici/tour/${session.metadata?.tourTitle || ''}`,
+            user_data: {
+              external_id: finalUserId,
+              em: userProfile?.email || session.customer_details?.email || undefined,
+              ph: userProfile?.mobile_phone || undefined,
+              fn: userProfile?.first_name || undefined,
+              ln: userProfile?.last_name || undefined,
+              client_ip_address: ip || undefined,
+              client_user_agent: userAgent || undefined,
+            },
+            custom_data: {
+              value: (session.amount_total || 0) / 100,
+              currency: 'EUR',
+              content_name: session.metadata?.tourTitle || '',
+              content_category: 'Viaggi Fotografici',
+              num_items: quantity,
+            },
+          })
+        } catch (capiError) {
+          console.error('❌ [WEBHOOK] Failed to send Purchase event to CAPI from checkout.session.completed:', capiError)
+        }
+      })()
+
       // Aggiorna il profilo con i dati di fatturazione da Stripe (se presenti)
       if (session.customer_details) {
         try {
