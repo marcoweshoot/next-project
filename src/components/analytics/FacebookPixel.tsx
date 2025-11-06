@@ -1,6 +1,5 @@
 'use client'
 
-import Script from 'next/script'
 import { useEffect } from 'react'
 import { createClient } from '@/lib/supabase/client'
 
@@ -56,6 +55,7 @@ export function FacebookPixel() {
 
         // --- CORE LOGIC ---
         // Load the Facebook Pixel base code
+        /* eslint-disable @typescript-eslint/no-unused-expressions, prefer-spread, prefer-rest-params */
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -64,6 +64,7 @@ export function FacebookPixel() {
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
+        /* eslint-enable @typescript-eslint/no-unused-expressions, prefer-spread, prefer-rest-params */
         
         // Initialize the pixel with Advanced Matching data
         // For logged-out users, we pass an empty object {} to signal that we have
