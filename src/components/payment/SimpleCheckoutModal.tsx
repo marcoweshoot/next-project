@@ -223,74 +223,52 @@ export function SimpleCheckoutModal({
     }
   }
 
-  // Facebook Pixel: Track InitiateCheckout when modal opens
-  // IMPORTANTE: Traccia sempre il VALORE ORIGINALE del checkout (prima di gift card o sconti)
-  // Questo rappresenta il valore del carrello avviato, anche se poi viene coperto da una gift card
-  useEffect(() => {
-    if (
-      !isOpen ||
-      typeof window === 'undefined' ||
-      !window.fbq ||
-      typeof session.price !== 'number' ||
-      session.price <= 0
-    ) {
+  // Funzione centralizzata per tracciare InitiateCheckout
+  const handleTrackInitiateCheckout = () => {
+    if (typeof window === 'undefined' || !window.fbq || typeof session.price !== 'number' || session.price <= 0) {
       return
     }
 
-    if (isOpen && typeof window !== 'undefined' && window.fbq) {
-      // Calculate base amount based on payment type (ORIGINAL value, before gift card discount)
-      let baseAmount: number
-      
-      if (isBalancePayment) {
-        // For balance payments, use the remaining balance
-        baseAmount = session.price - session.deposit
-      } else {
-        // For regular payments, use deposit or full price
-        baseAmount = paymentType === 'deposit' ? session.deposit : session.price
-      }
-      
-      // Calculate total value (ORIGINAL checkout value, not final payment amount)
-      // This is the value of the cart being checked out, regardless of gift card coverage
-      const totalValue = (baseAmount || 0) * (quantity || 1)
-      
-      // Only track if value is greater than 0 (Facebook requirement)
-      // This ensures we always send a valid value, even when gift card covers 100% of the cost
-      if (totalValue > 0 && !isNaN(totalValue) && isFinite(totalValue)) {
-        // Generate unique event_id for InitiateCheckout
-        const eventId = generateEventId()
-        
-        console.log('🆔 [FB PIXEL] Generated event_id for InitiateCheckout:', eventId)
-        
-        const eventData = {
-          content_name: tour.title,
-          content_category: 'Viaggi Fotografici',
-          value: totalValue, // Original checkout value, not final payment amount
-          currency: 'EUR',
-          num_items: quantity || 1
-        }
-
-        // 1. Track with Browser Pixel
-        window.fbq('track', 'InitiateCheckout', eventData, { eventID: eventId })
-        
-        console.log('✅ [FB PIXEL] InitiateCheckout event sent from browser with event_id')
-
-        // 2. Track with Conversions API (non-blocking)
-        fetch('/api/track-fb-event', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            event_name: 'InitiateCheckout',
-            event_id: eventId,
-            event_source_url: window.location.href,
-            custom_data: eventData,
-          }),
-        }).catch(error => {
-          console.error('❌ [CAPI] Error sending InitiateCheckout event to server:', error)
-        })
-      }
+    // Calcola il valore base in base al tipo di pagamento
+    let baseAmount: number
+    if (isBalancePayment) {
+      baseAmount = session.price - session.deposit
+    } else {
+      baseAmount = paymentType === 'deposit' ? session.deposit : session.price
     }
-    // NOTE: giftCardDiscount is intentionally NOT in dependencies - we want to track the ORIGINAL value
-  }, [isOpen, tour.title, quantity, paymentType, isBalancePayment, session.deposit, session.price])
+    const totalValue = (baseAmount || 0) * (quantity || 1)
+
+    // Traccia solo se il valore è valido
+    if (totalValue > 0 && !isNaN(totalValue) && isFinite(totalValue)) {
+      const eventId = generateEventId()
+      
+      const eventData = {
+        content_name: tour.title,
+        content_category: 'Viaggi Fotografici',
+        value: totalValue,
+        currency: 'EUR',
+        num_items: quantity || 1
+      }
+
+      // 1. Traccia con il Pixel del Browser
+      window.fbq('track', 'InitiateCheckout', eventData, { eventID: eventId })
+      console.log('✅ [FB PIXEL] InitiateCheckout event sent (user identified)')
+
+      // 2. Traccia con l'API Conversions (non bloccante)
+      fetch('/api/track-fb-event', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          event_name: 'InitiateCheckout',
+          event_id: eventId,
+          event_source_url: window.location.href,
+          custom_data: eventData,
+        }),
+      }).catch(error => {
+        console.error('❌ [CAPI] Error sending InitiateCheckout event:', error)
+      })
+    }
+  }
 
   const getPaymentAmount = () => {
     // For balance payments, calculate the remaining balance to pay
@@ -356,6 +334,8 @@ export function SimpleCheckoutModal({
     setError(null)
     // Vai allo step 3 (pagamento) dopo il successo
     setCurrentStep(3)
+    // Traccia l'evento InitiateCheckout ORA che l'utente è identificato
+    handleTrackInitiateCheckout()
   }
 
   const handleRegistrationError = (error: string) => {
@@ -372,6 +352,8 @@ export function SimpleCheckoutModal({
     } else {
       // Utente già registrato, vai allo step 3 (pagamento)
       setCurrentStep(3)
+      // Traccia l'evento InitiateCheckout ORA che l'utente è identificato
+      handleTrackInitiateCheckout()
     }
   }
 
