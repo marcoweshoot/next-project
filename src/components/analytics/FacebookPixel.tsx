@@ -3,6 +3,13 @@
 import { useEffect } from 'react'
 import { createClient } from '@/lib/supabase/client'
 
+// Extend the Window interface to inform TypeScript about the non-standard _fbq property
+declare global {
+  interface Window {
+    _fbq: any; // The FB pixel script adds this non-standard property
+  }
+}
+
 // Data shape for Advanced Matching, according to Meta documentation
 interface AdvancedMatchingData {
   em?: string // Email
