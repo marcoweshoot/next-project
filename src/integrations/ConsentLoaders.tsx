@@ -8,10 +8,11 @@ type IubApi = {
   getConsentForPurpose?: (p: string | number) => boolean;
 };
 
+// This allows us to safely access Iubenda's API and the dataLayer
 declare global {
   interface Window {
     _iub?: { cs?: { api?: IubApi } };
-    dataLayer: any[]; // dichiarata non opzionale nel tuo window.d.ts
+    dataLayer: unknown[]; // Match the stricter type 'unknown[]' from other declarations
   }
 }
 
