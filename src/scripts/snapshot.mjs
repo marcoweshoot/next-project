@@ -226,7 +226,7 @@ async function fetchSupabaseReviews(tourSlug) {
         comment,
         created_at,
         user_id,
-        profiles:user_id (
+        public_profiles!reviews_user_id_fkey (
           first_name,
           last_name,
           profile_picture_url
@@ -241,6 +241,8 @@ async function fetchSupabaseReviews(tourSlug) {
       return [];
     }
 
+    console.log(`[SNAPSHOT] 🔍 Debug recensioni Supabase per ${tourSlug}:`, JSON.stringify(data, null, 2));
+
     return data || [];
   } catch (err) {
     console.warn(`[SNAPSHOT] ⚠️  Errore inatteso recensioni Supabase:`, err?.message || err);
@@ -250,9 +252,9 @@ async function fetchSupabaseReviews(tourSlug) {
 
 /* --------------- normalize Supabase reviews --------------- */
 function normalizeSupabaseReview(r, index) {
-  const firstName = r.profiles?.first_name || "Utente";
-  const lastName = r.profiles?.last_name || "";
-  const profilePictureUrl = r.profiles?.profile_picture_url || null;
+  const firstName = r.public_profiles?.first_name || "Utente";
+  const lastName = r.public_profiles?.last_name || "";
+  const profilePictureUrl = r.public_profiles?.profile_picture_url || null;
   
   return {
     id: `supabase-${r.id}`,
@@ -544,7 +546,7 @@ async function fetchAllReviews() {
       tour_id,
       tour_slug,
       user_id,
-      profiles:user_id (
+      public_profiles:user_id (
         first_name,
         last_name,
         profile_picture_url
@@ -558,9 +560,9 @@ async function fetchAllReviews() {
   }
 
   const supabaseReviews = arr(supabaseData || []).map((r) => {
-    const firstName = r.profiles?.first_name || "Utente";
-    const lastName = r.profiles?.last_name || "";
-    const profilePictureUrl = r.profiles?.profile_picture_url || null;
+    const firstName = r.public_profiles?.first_name || "Utente";
+    const lastName = r.public_profiles?.last_name || "";
+    const profilePictureUrl = r.public_profiles?.profile_picture_url || null;
     
     return {
       id: `supabase-${r.id}`,
