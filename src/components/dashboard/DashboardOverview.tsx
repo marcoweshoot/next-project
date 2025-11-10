@@ -13,7 +13,8 @@ import {
   AlertCircle,
   Loader2,
   ArrowRight,
-  MapPin
+  MapPin,
+  Star
 } from 'lucide-react'
 import Link from 'next/link'
 import { format } from 'date-fns'
@@ -41,6 +42,7 @@ interface DashboardOverviewProps {
 
 export function DashboardOverview({ userId }: DashboardOverviewProps) {
   const [bookings, setBookings] = useState<Booking[]>([])
+  const [reviewedBookingIds, setReviewedBookingIds] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const supabase = createClient()
@@ -49,6 +51,8 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
     const fetchBookings = async () => {
       try {
         setLoading(true)
+        
+        // Fetch bookings
         const { data, error } = await supabase
           .from('bookings')
           .select(`
@@ -65,6 +69,16 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
 
         if (error) throw error
         setBookings(data || [])
+
+        // Fetch reviews to check which bookings already have one
+        const { data: reviewsData } = await supabase
+          .from('reviews')
+          .select('booking_id')
+          .eq('user_id', userId)
+
+        if (reviewsData) {
+          setReviewedBookingIds(new Set(reviewsData.map(r => r.booking_id)))
+        }
       } catch (err) {
         console.error('Error fetching bookings:', err)
         setError(err instanceof Error ? err.message : 'Errore nel caricamento delle prenotazioni')
@@ -178,6 +192,31 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
       default:
         return 'Sconosciuto'
     }
+  }
+
+  const canBeReviewed = (booking: Booking) => {
+    // Non può essere recensito se già c'è una recensione
+    if (reviewedBookingIds.has(booking.id)) return false
+
+    // Non può essere recensito se cancellato o pending
+    if (booking.status === 'cancelled' || booking.status === 'pending') return false
+
+    // Può essere recensito se:
+    // 1. Status è 'completed'
+    // 2. Oppure è pagato (deposit_paid o fully_paid) e la data è passata
+    if (booking.status === 'completed') return true
+
+    if (['deposit_paid', 'fully_paid'].includes(booking.status)) {
+      if (!booking.session_end_date && !booking.session_date) return false
+      
+      const today = new Date()
+      today.setHours(0, 0, 0, 0)
+      const eventDate = new Date(booking.session_end_date || booking.session_date!)
+      
+      return eventDate < today // È passato
+    }
+
+    return false
   }
 
   const stats = getStats()
@@ -323,7 +362,7 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
                     </div>
                   </div>
                   
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3">
                     <div className="text-right">
                       <p className="font-medium">{formatCurrency(booking.total_amount)}</p>
                       <p className="text-sm text-muted-foreground">
@@ -331,11 +370,22 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
                       </p>
                     </div>
                     
-                    <Link href={`/dashboard/bookings/${booking.id}`}>
-                      <Button variant="outline" size="sm">
-                        Dettagli
-                      </Button>
-                    </Link>
+                    <div className="flex gap-2">
+                      {canBeReviewed(booking) && (
+                        <Link href="/dashboard/reviews">
+                          <Button variant="default" size="sm" className="gap-1">
+                            <Star className="w-4 h-4" />
+                            Recensisci
+                          </Button>
+                        </Link>
+                      )}
+                      
+                      <Link href={`/dashboard/bookings/${booking.id}`}>
+                        <Button variant="outline" size="sm">
+                          Dettagli
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}
