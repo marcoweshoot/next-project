@@ -7,13 +7,13 @@ import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { 
   Calendar, 
-  Euro, 
   CheckCircle, 
   Clock, 
   XCircle,
   AlertCircle,
   Loader2,
-  ArrowRight
+  ArrowRight,
+  MapPin
 } from 'lucide-react'
 import Link from 'next/link'
 import { format } from 'date-fns'
@@ -77,23 +77,65 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
   }, [userId, supabase])
 
   const getStats = () => {
+    const now = new Date()
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()) // Midnight today
+    
     const totalBookings = bookings.length
-    const activeBookings = bookings.filter(b => 
-      ['pending', 'deposit_paid', 'fully_paid'].includes(b.status)
-    ).length
-    const completedBookings = bookings.filter(b => b.status === 'completed').length
-    const totalSpent = bookings
-      .filter(b => ['deposit_paid', 'fully_paid', 'completed'].includes(b.status))
-      .reduce((sum, b) => {
-        // Usa l'importo effettivamente pagato
-        return sum + (b.amount_paid || 0)
-      }, 0)
+    
+    // Prenotazioni attive: pagate (deposit_paid o fully_paid) e con data futura o uguale ad oggi
+    const activeBookings = bookings.filter(b => {
+      // Solo prenotazioni pagate (non pending, non cancelled, non completed)
+      if (!['deposit_paid', 'fully_paid'].includes(b.status)) return false
+      
+      // Se non c'è una data, consideriamola attiva (fallback)
+      if (!b.session_end_date && !b.session_date) return true
+      
+      // Usa session_end_date se disponibile, altrimenti session_date
+      const eventDate = new Date(b.session_end_date || b.session_date!)
+      
+      // Il viaggio è attivo se la data è oggi o nel futuro
+      return eventDate >= today
+    }).length
+    
+    // Viaggi completati: viaggi con pagamento confermato e data passata, OPPURE con status 'completed'
+    const completedBookings = bookings.filter(b => {
+      // Se ha status completed, è sicuramente completato
+      if (b.status === 'completed') return true
+      
+      // Altrimenti, controlla se è pagato e la data è passata
+      if (!['deposit_paid', 'fully_paid'].includes(b.status)) return false
+      
+      // Se non c'è una data, non possiamo considerarlo completato
+      if (!b.session_end_date && !b.session_date) return false
+      
+      // Usa session_end_date se disponibile, altrimenti session_date
+      const eventDate = new Date(b.session_end_date || b.session_date!)
+      
+      // Il viaggio è completato se la data è passata (prima di oggi)
+      return eventDate < today
+    }).length
+    
+    // Trova il prossimo viaggio (quello con la data più vicina nel futuro)
+    const upcomingTrips = bookings
+      .filter(b => {
+        if (!['deposit_paid', 'fully_paid'].includes(b.status)) return false
+        if (!b.session_date) return false
+        const eventDate = new Date(b.session_date)
+        return eventDate >= today
+      })
+      .sort((a, b) => {
+        const dateA = new Date(a.session_date!)
+        const dateB = new Date(b.session_date!)
+        return dateA.getTime() - dateB.getTime()
+      })
+    
+    const nextTrip = upcomingTrips.length > 0 ? upcomingTrips[0] : null
 
     return {
       totalBookings,
       activeBookings,
       completedBookings,
-      totalSpent,
+      nextTrip,
     }
   }
 
@@ -191,13 +233,32 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Totale Speso</CardTitle>
-            <Euro className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium">Prossimo Viaggio</CardTitle>
+            <MapPin className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-emerald-600">
-              {formatCurrency(stats.totalSpent)}
-            </div>
+            {stats.nextTrip ? (
+              <div className="space-y-1">
+                <div className="text-lg font-bold text-primary">
+                  {new Date(stats.nextTrip.session_date!).toLocaleDateString('it-IT', {
+                    day: 'numeric',
+                    month: 'short'
+                  })}
+                </div>
+                <div className="text-xs text-muted-foreground line-clamp-1">
+                  {stats.nextTrip.tour_title || stats.nextTrip.tour_destination || 'Tour'}
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-1">
+                <div className="text-sm font-medium text-muted-foreground">
+                  Nessun viaggio
+                </div>
+                <Link href="/viaggi-fotografici" className="text-xs text-primary hover:underline">
+                  Prenota ora
+                </Link>
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>

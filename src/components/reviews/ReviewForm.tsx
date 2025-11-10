@@ -6,15 +6,13 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Textarea } from '@/components/ui/textarea'
-import { Badge } from '@/components/ui/badge'
 import { 
   Star, 
   Send, 
   CheckCircle, 
   AlertCircle,
   Loader2,
-  Calendar,
-  Euro
+  Calendar
 } from 'lucide-react'
 
 interface ReviewFormProps {
@@ -25,6 +23,10 @@ interface ReviewFormProps {
     status: string
     total_amount: number
     created_at: string
+    tour_title?: string
+    tour_destination?: string
+    session_date?: string
+    session_end_date?: string
   }
   tour?: {
     title: string
@@ -109,20 +111,6 @@ export function ReviewForm({ booking, tour, editingReview, onReviewSubmitted }: 
     }
   }
 
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('it-IT', {
-      style: 'currency',
-      currency: 'EUR',
-    }).format(amount / 100)
-  }
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('it-IT', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    })
-  }
 
   if (success) {
     return (
@@ -157,22 +145,19 @@ export function ReviewForm({ booking, tour, editingReview, onReviewSubmitted }: 
       <CardContent className="space-y-4">
         {/* Booking Info */}
         <div className="bg-muted/50 p-4 rounded-lg space-y-2">
-          <h4 className="font-semibold">{tour?.title || (booking ? `Tour ${booking.tour_id}` : 'Tour')}</h4>
+          <h4 className="font-semibold">
+            {booking?.tour_title || tour?.title || (booking ? `Tour ${booking.tour_id}` : 'Tour')}
+          </h4>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            {booking && (
-              <>
-                <div className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
-                  {formatDate(booking.created_at)}
-                </div>
-                <div className="flex items-center gap-1">
-                  <Euro className="w-4 h-4" />
-                  {formatCurrency(booking.total_amount)}
-                </div>
-                <Badge variant="outline" className="text-xs">
-                  {booking.status}
-                </Badge>
-              </>
+            {booking && booking.session_date && (
+              <div className="flex items-center gap-1">
+                <Calendar className="w-4 h-4" />
+                {new Date(booking.session_date).toLocaleDateString('it-IT', {
+                  day: '2-digit',
+                  month: 'long',
+                  year: 'numeric'
+                })}
+              </div>
             )}
           </div>
         </div>
