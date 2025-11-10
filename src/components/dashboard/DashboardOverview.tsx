@@ -23,6 +23,7 @@ import { it } from 'date-fns/locale'
 interface Booking {
   id: string
   tour_id: string
+  tour_slug?: string
   session_id: string
   quantity: number
   status: 'pending' | 'deposit_paid' | 'fully_paid' | 'completed' | 'cancelled'
@@ -58,6 +59,7 @@ export function DashboardOverview({ userId }: DashboardOverviewProps) {
           .select(`
             *,
             tour_title,
+            tour_slug,
             tour_destination,
             session_date,
             session_end_date,

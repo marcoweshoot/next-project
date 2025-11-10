@@ -38,6 +38,7 @@ interface ReviewsListProps {
 interface Booking {
   id: string
   tour_id: string
+  tour_slug?: string
   session_id: string
   tour_title?: string
   tour_destination?: string
@@ -85,6 +86,7 @@ export function ReviewsList({ userId }: ReviewsListProps) {
           .select(`
             *,
             tour_title,
+            tour_slug,
             tour_destination,
             session_date,
             session_end_date
