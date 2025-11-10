@@ -23,6 +23,7 @@ interface Review {
   id: string
   tour_id: string
   tour_slug: string
+  booking_id: string
   rating: number
   comment?: string
   status: 'pending' | 'approved' | 'rejected'
@@ -184,6 +185,18 @@ export function ReviewsList({ userId }: ReviewsListProps) {
     window.location.reload()
   }
 
+  // Trova il titolo del tour per una recensione
+  const getTourTitle = (review: Review) => {
+    const booking = completedBookings.find(b => b.id === review.booking_id)
+    return booking?.tour_title || review.tour_slug || `Tour ID: ${review.tour_id}`
+  }
+
+  // Trova la destinazione del tour per una recensione
+  const getTourDestination = (review: Review) => {
+    const booking = completedBookings.find(b => b.id === review.booking_id)
+    return booking?.tour_destination
+  }
+
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -303,17 +316,23 @@ export function ReviewsList({ userId }: ReviewsListProps) {
       {reviews.length > 0 && (
         <div className="space-y-4">
           <h3 className="text-lg font-semibold">Le Tue Recensioni</h3>
-          {reviews.map((review) => (
+          {reviews.map((review) => {
+            const tourTitle = getTourTitle(review)
+            const tourDestination = getTourDestination(review)
+            
+            return (
         <Card key={review.id} className="hover:shadow-md transition-shadow">
           <CardHeader>
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
               <div className="flex-1 min-w-0">
                 <CardTitle className="text-lg">
-                  Tour: {review.tour_slug}
+                  {tourTitle}
                 </CardTitle>
-                <CardDescription>
-                  Tour ID: {review.tour_id}
-                </CardDescription>
+                {tourDestination && (
+                  <CardDescription>
+                    {tourDestination}
+                  </CardDescription>
+                )}
               </div>
               <div className="flex-shrink-0">
                 {getStatusBadge(review.status)}
@@ -386,7 +405,8 @@ export function ReviewsList({ userId }: ReviewsListProps) {
             </div>
           </CardContent>
         </Card>
-      ))}
+            )
+          })}
         </div>
       )}
 
