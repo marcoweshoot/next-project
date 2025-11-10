@@ -41,10 +41,11 @@ export async function POST(request: NextRequest) {
     )
 
     // STEP 1: Anonimizza le recensioni (manteniamo le recensioni per altri utenti)
+    // Impostiamo user_id a NULL per renderle anonime
     const { error: reviewsError } = await supabaseAdmin
       .from('reviews')
       .update({
-        user_id: '00000000-0000-0000-0000-000000000000', // UUID null
+        user_id: null, // Anonimizza rimuovendo il riferimento all'utente
         // Non tocchiamo il commento, solo il riferimento all'utente
       })
       .eq('user_id', userId)
@@ -62,7 +63,7 @@ export async function POST(request: NextRequest) {
       .update({
         // Manteniamo i dati di fatturazione per legge (10 anni)
         // Ma anonimizziamo i riferimenti personali
-        user_id: '00000000-0000-0000-0000-000000000000',
+        user_id: null, // Anonimizza rimuovendo il riferimento all'utente
       })
       .eq('user_id', userId)
 
