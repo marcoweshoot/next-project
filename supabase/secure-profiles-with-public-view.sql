@@ -1,8 +1,30 @@
--- URGENTE: Sicurezza profili - Espone solo campi pubblici necessari per recensioni
--- PROBLEMA: Attualmente TUTTI i campi di profiles sono pubblici (email, codice fiscale, telefono, indirizzo)
--- SOLUZIONE: Vista pubblica con SOLO i campi necessari per le recensioni
+-- =====================================================
+-- SICUREZZA COMPLETA TABELLA PROFILES
+-- =====================================================
+-- PROBLEMA CRITICO: TUTTI i campi di profiles erano pubblici
+-- (email, codice fiscale, telefono, indirizzo, data nascita)
+-- 
+-- SOLUZIONE COMPLETA con tutte le policy necessarie per:
+-- - Recensioni pubbliche (vista sicura)
+-- - Utenti loggati (proprio profilo)
+-- - Admin (tutti i profili)
+-- - Protezione dati sensibili
 
--- 1. Crea vista SICURA con SOLO campi pubblici necessari per recensioni
+-- =====================================================
+-- STEP 1: RIMUOVI POLICY PERICOLOSE ESISTENTI
+-- =====================================================
+
+DROP POLICY IF EXISTS "Public can view basic profile info" ON profiles;
+DROP POLICY IF EXISTS "Users can read their own profile" ON profiles;
+DROP POLICY IF EXISTS "Admins can read all profiles" ON profiles;
+DROP POLICY IF EXISTS "Users can update their own profile" ON profiles;
+DROP POLICY IF EXISTS "Users can insert their own profile" ON profiles;
+DROP POLICY IF EXISTS "Only super admins can delete profiles" ON profiles;
+
+-- =====================================================
+-- STEP 2: CREA VISTA PUBBLICA SICURA
+-- =====================================================
+
 CREATE OR REPLACE VIEW public_profiles AS
 SELECT 
     id,
@@ -12,17 +34,78 @@ SELECT
     full_name
 FROM profiles;
 
--- 2. Permetti lettura pubblica SOLO della vista (non della tabella originale)
 GRANT SELECT ON public_profiles TO anon, authenticated;
 
--- 3. RIMUOVI la policy pericolosa che espone tutti i campi
-DROP POLICY IF EXISTS "Public can view basic profile info" ON profiles;
+-- =====================================================
+-- STEP 3: POLICY PER LETTURA (SELECT)
+-- =====================================================
 
--- 4. Aggiungi policy per lettura autenticata (solo il proprio profilo)
--- Gli utenti loggati possono leggere SOLO il proprio profilo completo
+-- Policy 1: Gli utenti possono leggere il PROPRIO profilo completo
 CREATE POLICY "Users can read their own profile" ON profiles
-FOR SELECT USING (auth.uid() = id);
+FOR SELECT 
+USING (auth.uid() = id);
 
--- Commento per documentazione
-COMMENT ON VIEW public_profiles IS 'Vista pubblica sicura dei profili: espone SOLO first_name, last_name, profile_picture_url, full_name per le recensioni pubbliche. Protegge dati sensibili come email, telefono, codice fiscale, indirizzo.';
+-- Policy 2: Gli ADMIN possono leggere TUTTI i profili
+CREATE POLICY "Admins can read all profiles" ON profiles
+FOR SELECT 
+USING (
+  EXISTS (
+    SELECT 1 FROM user_roles
+    WHERE user_roles.user_id = auth.uid()
+    AND user_roles.role IN ('admin', 'super_admin')
+  )
+);
+
+-- =====================================================
+-- STEP 4: POLICY PER AGGIORNAMENTO (UPDATE)
+-- =====================================================
+
+CREATE POLICY "Users can update their own profile" ON profiles
+FOR UPDATE 
+USING (auth.uid() = id)
+WITH CHECK (auth.uid() = id);
+
+-- =====================================================
+-- STEP 5: POLICY PER INSERIMENTO (INSERT)
+-- =====================================================
+
+CREATE POLICY "Users can insert their own profile" ON profiles
+FOR INSERT 
+WITH CHECK (auth.uid() = id);
+
+-- =====================================================
+-- STEP 6: POLICY PER CANCELLAZIONE (DELETE)
+-- =====================================================
+
+CREATE POLICY "Only super admins can delete profiles" ON profiles
+FOR DELETE 
+USING (
+  EXISTS (
+    SELECT 1 FROM user_roles
+    WHERE user_roles.user_id = auth.uid()
+    AND user_roles.role = 'super_admin'
+  )
+);
+
+-- =====================================================
+-- DOCUMENTAZIONE
+-- =====================================================
+
+COMMENT ON VIEW public_profiles IS 
+'Vista pubblica sicura: espone SOLO first_name, last_name, profile_picture_url, full_name. Protegge email, telefono, codice fiscale, indirizzo.';
+
+COMMENT ON POLICY "Users can read their own profile" ON profiles IS 
+'Utenti leggono solo il proprio profilo completo';
+
+COMMENT ON POLICY "Admins can read all profiles" ON profiles IS 
+'Admin leggono tutti i profili per gestione e statistiche';
+
+COMMENT ON POLICY "Users can update their own profile" ON profiles IS 
+'Utenti aggiornano solo il proprio profilo';
+
+COMMENT ON POLICY "Users can insert their own profile" ON profiles IS 
+'Utenti creano il proprio profilo alla registrazione';
+
+COMMENT ON POLICY "Only super admins can delete profiles" ON profiles IS 
+'Solo super admin cancellano profili';
 
