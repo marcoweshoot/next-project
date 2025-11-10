@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import fs from "node:fs/promises";
 import path from "node:path";
+import { createClient } from "@supabase/supabase-js";
 
 const ENDPOINT =
   process.env.GRAPHQL_ENDPOINT || "https://api.weshoot.it/graphql";
@@ -10,6 +11,12 @@ const OUT_LIST = path.join(OUT_DIR, "tours.json");
 
 const MEDIA_BASE = (process.env.NEXT_PUBLIC_STRAPI_URL || "https://api.weshoot.it")
   .replace(/\/+$/, "");
+
+// Initialize Supabase client for fetching reviews
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL || "",
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+);
 
 /* ---------------- Helpers ---------------- */
 function toAbsUrl(input) {
@@ -208,8 +215,73 @@ async function fetchGQL(query, variables, timeoutMs = 15000) {
   }
 }
 
+/* --------------- fetch Supabase reviews --------------- */
+async function fetchSupabaseReviews(tourSlug) {
+  try {
+    const { data, error } = await supabase
+      .from("reviews")
+      .select(`
+        id,
+        rating,
+        comment,
+        created_at,
+        user_id,
+        profiles:user_id (
+          first_name,
+          last_name,
+          profile_picture_url
+        )
+      `)
+      .eq("tour_slug", tourSlug)
+      .eq("status", "approved")
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      console.warn(`[SNAPSHOT] ⚠️  Errore fetch recensioni Supabase per ${tourSlug}:`, error.message);
+      return [];
+    }
+
+    return data || [];
+  } catch (err) {
+    console.warn(`[SNAPSHOT] ⚠️  Errore inatteso recensioni Supabase:`, err?.message || err);
+    return [];
+  }
+}
+
+/* --------------- normalize Supabase reviews --------------- */
+function normalizeSupabaseReview(r, index) {
+  const firstName = r.profiles?.first_name || "Utente";
+  const lastName = r.profiles?.last_name || "";
+  const profilePictureUrl = r.profiles?.profile_picture_url || null;
+  
+  return {
+    id: `supabase-${r.id}`,
+    title: "", // Supabase non ha title
+    description: r.comment || "",
+    rating: Number.isFinite(r.rating) ? r.rating : 5,
+    ratingOrganization: null, // Supabase non ha rating dettagliati
+    ratingCordiality: null,
+    ratingProfessionality: null,
+    ratingKnowledge: null,
+    created_at: r.created_at,
+    user: {
+      firstName,
+      lastName,
+      username: "",
+      instagram: "",
+      bio: "",
+      profilePicture: profilePictureUrl ? {
+        url: profilePictureUrl,
+        alternativeText: `${firstName} ${lastName}`.trim() || "Utente",
+      } : null,
+      fiscalCode: null,
+    },
+    source: "supabase", // Marker per sapere da dove viene
+  };
+}
+
 /* --------------- normalizzazione --------------- */
-function normalizeTour(t) {
+async function normalizeTour(t) {
   // cover
   const image = t.image ? { ...t.image, url: toAbsUrl(t.image.url) } : null;
 
@@ -271,8 +343,8 @@ function normalizeTour(t) {
     })),
   }));
 
-  // ✅ reviews -> normalizza e garantisce created_at + avatar assoluto
-  const reviews = arr(t.reviews).map((r, i) => ({
+  // ✅ reviews Strapi -> normalizza e garantisce created_at + avatar assoluto
+  const strapiReviews = arr(t.reviews).map((r, i) => ({
     id: String(r.id ?? `rev-${i}`),
     title: r.title ?? "",
     description: r.description ?? "",
@@ -296,7 +368,26 @@ function normalizeTour(t) {
         : null,
       fiscalCode: r.user?.fiscalCode ?? null,
     },
+    source: "strapi", // Marker per sapere da dove viene
   }));
+
+  // ✅ Fetch e normalizza recensioni Supabase
+  const supabaseReviewsRaw = await fetchSupabaseReviews(t.slug);
+  const supabaseReviews = supabaseReviewsRaw.map((r, i) => normalizeSupabaseReview(r, i));
+
+  // ✅ Merge e ordina per data (più recenti prima)
+  const allReviews = [...strapiReviews, ...supabaseReviews]
+    .filter(r => r.created_at) // Rimuovi recensioni senza data
+    .sort((a, b) => {
+      const dateA = new Date(a.created_at);
+      const dateB = new Date(b.created_at);
+      return dateB.getTime() - dateA.getTime(); // Più recente prima
+    });
+
+  console.log(`[SNAPSHOT] 📝 Tour "${t.slug}": ${strapiReviews.length} Strapi + ${supabaseReviews.length} Supabase = ${allReviews.length} totali`);
+
+  // Usa allReviews invece di reviews
+  const reviews = allReviews;
 
   // icons -> absolute
   const whats_includeds = arr(t.whats_includeds).map((x) => ({
@@ -388,6 +479,128 @@ function normalizeTour(t) {
   };
 }
 
+/* --------------- fetch ALL reviews (for global reviews page) --------------- */
+async function fetchAllReviews() {
+  // 1. Fetch tutte le recensioni Strapi
+  const REVIEWS_QUERY = /* GraphQL */ `
+    query AllReviews {
+      reviews {
+        id
+        title
+        description
+        rating
+        ratingOrganization
+        ratingCordiality
+        ratingProfessionality
+        ratingKnowledge
+        createdAt: published_at
+        user {
+          firstName
+          lastName
+          username
+          instagram
+          bio
+          profilePicture { url alternativeText }
+        }
+      }
+    }
+  `;
+
+  const strapiData = await fetchGQL(REVIEWS_QUERY);
+  const strapiReviews = arr(strapiData?.reviews || []).map((r, i) => ({
+    id: String(r.id ?? `strapi-rev-${i}`),
+    title: r.title ?? "",
+    description: r.description ?? "",
+    rating: Number.isFinite(r.rating) ? r.rating : 5,
+    ratingOrganization: Number.isFinite(r.ratingOrganization) ? r.ratingOrganization : null,
+    ratingCordiality: Number.isFinite(r.ratingCordiality) ? r.ratingCordiality : null,
+    ratingProfessionality: Number.isFinite(r.ratingProfessionality) ? r.ratingProfessionality : null,
+    ratingKnowledge: Number.isFinite(r.ratingKnowledge) ? r.ratingKnowledge : null,
+    created_at: r.createdAt ?? null,
+    user: {
+      firstName: r.user?.firstName ?? "",
+      lastName: r.user?.lastName ?? "",
+      username: r.user?.username ?? "",
+      instagram: r.user?.instagram ?? "",
+      bio: r.user?.bio ?? "",
+      profilePicture: r.user?.profilePicture
+        ? {
+            url: toAbsUrl(r.user.profilePicture.url),
+            alternativeText: r.user.profilePicture.alternativeText ?? null,
+          }
+        : null,
+    },
+    source: "strapi",
+  }));
+
+  // 2. Fetch tutte le recensioni Supabase
+  const { data: supabaseData, error } = await supabase
+    .from("reviews")
+    .select(`
+      id,
+      rating,
+      comment,
+      created_at,
+      tour_id,
+      tour_slug,
+      user_id,
+      profiles:user_id (
+        first_name,
+        last_name,
+        profile_picture_url
+      )
+    `)
+    .eq("status", "approved")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    console.warn("[SNAPSHOT] ⚠️  Errore fetch tutte recensioni Supabase:", error.message);
+  }
+
+  const supabaseReviews = arr(supabaseData || []).map((r) => {
+    const firstName = r.profiles?.first_name || "Utente";
+    const lastName = r.profiles?.last_name || "";
+    const profilePictureUrl = r.profiles?.profile_picture_url || null;
+    
+    return {
+      id: `supabase-${r.id}`,
+      title: "",
+      description: r.comment || "",
+      rating: Number.isFinite(r.rating) ? r.rating : 5,
+      ratingOrganization: null,
+      ratingCordiality: null,
+      ratingProfessionality: null,
+      ratingKnowledge: null,
+      created_at: r.created_at,
+      user: {
+        firstName,
+        lastName,
+        username: "",
+        instagram: "",
+        bio: "",
+        profilePicture: profilePictureUrl ? {
+          url: profilePictureUrl,
+          alternativeText: `${firstName} ${lastName}`.trim() || "Utente",
+        } : null,
+      },
+      source: "supabase",
+    };
+  });
+
+  // 3. Merge e ordina
+  const allReviews = [...strapiReviews, ...supabaseReviews]
+    .filter(r => r.created_at)
+    .sort((a, b) => {
+      const dateA = new Date(a.created_at);
+      const dateB = new Date(b.created_at);
+      return dateB.getTime() - dateA.getTime();
+    });
+
+  console.log(`[SNAPSHOT] 📋 Recensioni globali: ${strapiReviews.length} Strapi + ${supabaseReviews.length} Supabase = ${allReviews.length} totali`);
+
+  return allReviews;
+}
+
 /* --------------- main --------------- */
 async function main() {
   console.log("[SNAPSHOT] endpoint:", ENDPOINT);
@@ -395,19 +608,32 @@ async function main() {
 
   const data = await fetchGQL(TOURS_QUERY);
   const toursRaw = data?.tours || [];
-  const tours = toursRaw.map(normalizeTour);
+  
+  console.log(`[SNAPSHOT] Normalizzazione di ${toursRaw.length} tour (include fetch recensioni Supabase)...`);
+  
+  // Normalizza tutti i tour in parallelo (normalizeTour è ora async)
+  const tours = await Promise.all(toursRaw.map(normalizeTour));
+
+  // Fetch tutte le recensioni per la pagina globale
+  const allReviews = await fetchAllReviews();
 
   await fs.rm(OUT_DIR, { recursive: true, force: true });
   await fs.mkdir(OUT_DIR, { recursive: true });
 
+  // Scrivi tour individuali
   for (const t of tours) {
     const file = path.join(OUT_DIR, `tour.${t.slug}.json`);
     await fs.writeFile(file, JSON.stringify(t, null, 2), "utf8");
   }
 
+  // Scrivi lista tour
   await fs.writeFile(OUT_LIST, JSON.stringify(tours, null, 2), "utf8");
 
-  console.log(`[SNAPSHOT] scritto ${tours.length} tour in ${OUT_DIR}`);
+  // Scrivi tutte le recensioni
+  const reviewsFile = path.join(OUT_DIR, "reviews.json");
+  await fs.writeFile(reviewsFile, JSON.stringify(allReviews, null, 2), "utf8");
+
+  console.log(`[SNAPSHOT] ✅ Scritto ${tours.length} tour e ${allReviews.length} recensioni in ${OUT_DIR}`);
 }
 
 main().catch((err) => {

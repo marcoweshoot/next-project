@@ -353,6 +353,27 @@
   ],
   "reviews": [
     {
+      "id": "254",
+      "title": "Esperienza che consiglio a tutti",
+      "description": "La Cappadocia con WeShoot é stata un'esperienza che consiglio a tutti! Alessandro e Lorenzo sono due fotografi esperti e sensibili che sanno comunicare con grande facilità la loro passione e le conoscenze tecniche che possiedono! Apprendere sul campo in luoghi magici come le valli attorno Göreme e il lago salato di Tüz Golum in cui i tuoi occhi e obiettivi hanno una miriade di immagini e emozioni da cogliere é stato impagabile! Bravi, grazie e buona luce a tutti!",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "created_at": "2023-06-26T06:30:04.000Z",
+      "user": {
+        "firstName": "Barbara",
+        "lastName": "Rubino",
+        "username": "Barbara Rubino",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
       "id": "253",
       "title": "Organizzazione impeccabile",
       "description": "Un posto magico… dove le regole visive rinascono … un gruppo di persone splendide … un’organizzazione impeccabile… ed una professionalità estrema da parte delle nostre guide fotografiche di WeShoot. Grazie ?",
@@ -373,27 +394,8 @@
           "alternativeText": ""
         },
         "fiscalCode": null
-      }
-    },
-    {
-      "id": "254",
-      "title": "Esperienza che consiglio a tutti",
-      "description": "La Cappadocia con WeShoot é stata un'esperienza che consiglio a tutti! Alessandro e Lorenzo sono due fotografi esperti e sensibili che sanno comunicare con grande facilità la loro passione e le conoscenze tecniche che possiedono! Apprendere sul campo in luoghi magici come le valli attorno Göreme e il lago salato di Tüz Golum in cui i tuoi occhi e obiettivi hanno una miriade di immagini e emozioni da cogliere é stato impagabile! Bravi, grazie e buona luce a tutti!",
-      "rating": 5,
-      "ratingOrganization": 5,
-      "ratingCordiality": 5,
-      "ratingProfessionality": 5,
-      "ratingKnowledge": 5,
-      "created_at": "2023-06-26T06:30:04.000Z",
-      "user": {
-        "firstName": "Barbara",
-        "lastName": "Rubino",
-        "username": "Barbara Rubino",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     }
   ],
   "whats_includeds": [

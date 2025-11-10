@@ -233,144 +233,25 @@
   ],
   "reviews": [
     {
-      "id": "45",
-      "title": "Fotografia notturna a Roma",
-      "description": "Marco e ad Alessandro due ottimi maestri e consiglieri che mi hanno arricchito molto con i loro consigli tecnici sulla fotografia notturna. Ora ho le idee un po più chiare su come fotografare di notte! Bel gruppo e bella serata. Distesa e istruttiva! La consiglio come \"cura\" mente corpo!",
+      "id": "248",
+      "title": "Ottima compagnia e Insegnamenti",
+      "description": "Un workshop fotografico in luoghi romantici in ottima compagnia e con i nostri accompagnatori Alessandro e Marco che hanno saputo creare un clima familiare ",
       "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2017-11-15T13:31:06.000Z",
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "created_at": "2022-03-25T10:16:22.000Z",
       "user": {
-        "firstName": "Marcello",
-        "lastName": "",
-        "username": "baconeit@yahoo.it",
+        "firstName": "Mauro",
+        "lastName": "Foco",
+        "username": "maurofoco",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
-    },
-    {
-      "id": "80",
-      "title": "Esperienza esclusiva!!!",
-      "description": "Primo viaggio fotografico di fotografia molto produttivo, sia per la professionalità delle risposte di Marco Carotenuto che per l'approfondimento e la scoperta di nuove tecniche fotografiche. Magico per la location Roma caput mundi, ci ha regalato sfumature arancio alle spalle di San Pietro! Ringrazio nuovamente Marco per la disponibilità e la dedizione e auguro a tutti un viaggio fotografico di tale livello!",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-04-06T18:37:17.000Z",
-      "user": {
-        "firstName": "Davide",
-        "lastName": "Damato",
-        "username": "davide-damato@libero.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "142",
-      "title": "Quando la passione incontra la professionalità ",
-      "description": "Prima di fare questo workshop fotografico non avevo mai acceso una reflex e non capivo assolutamente nulla di fotografia. A fine giornata sono tornata a casa con una voglia matta di entrare in questo mondo, comprare un’attrezzatura adeguata ed uscire a scattare. Marco non so come è riuscito a farmi scattare delle bellissime foto, e a prendere confidenza con la macchina in poco più di 5 ore. Complice della riuscita del tutto è stata anche Roma, semplicemente meravigliosa. Consigliatissimo",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-10-01T17:58:34.000Z",
-      "user": {
-        "firstName": "Camilla",
-        "lastName": "Iaquone",
-        "username": "camilla.iaquone@gmail.com",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "163",
-      "title": "Abbiamo catturato la magia di Roma",
-      "description": "Splendida giornata appena trascorsa al workshop fotografico base a Roma! Le ore sono volate e l’entusiasmo di Alessandro e Marco per la fotografia è contagioso ",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2019-01-14T10:01:27.000Z",
-      "user": {
-        "firstName": "Christian",
-        "lastName": "Amorelli",
-        "username": "christian.amorelli@gmail.com",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "167",
-      "title": "Ne ho già nostalgia!",
-      "description": "E' stato il mio terzo viaggio fotografico a cui partecipavo, ma non mi era mai capitato finora di andar via a fine lavori con la sensazione di aver lasciato degli amici! A conti fatti, in questo workshop fotografico ho conosciuto nuove persone con cui ho trascorso delle ore piacevoli, ho fatto una lunga e bella passeggiata tra le bellezze di Roma, ho portato a casa delle belle foto, ho imparato nuove tecniche ed ho affinato quelle che avevo già. Complimenti a Marco, che ha saputo seguire un gruppo di persone piuttosto eterogeneo per età e competenze fotografiche senza trascurare nulla e nessuno. ",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2019-04-01T18:52:03.000Z",
-      "user": {
-        "firstName": "Massimiliano",
-        "lastName": "Neri",
-        "username": "massimiliano.neri@tim.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "191",
-      "title": "workshop fotografico  Roma",
-      "description": "siete un team molto preparato e in un pomeriggio caldo di Roma siete riusciti a far correre il tempo talmente in fretta che non volevamo concluderlo sia per il bel gruppo sia per tutto ciò che avete insegnato e che abbiamo subito messo in pratica. Bravi, simpatici e molto attenti a rispondere ad ogni nostra domanda. Grazie ragazzi avete messo in me la voglia di sperimentare e imparare tutto ciò che questo mondo può insegnarmi",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2019-06-17T11:21:19.000Z",
-      "user": {
-        "firstName": "Eli",
-        "lastName": "Mirabella",
-        "username": "pois304@gmail.com",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "192",
-      "title": "Competenza e divertimento a passeggio per Roma",
-      "description": "Ale e Marco sono spettacalori, riescono a trasmettere tutta la loro passione per la fotografia. Sempre pronti a darti consigli e suggerimenti. Il tempo è volato. Grande professionalità e competenza. \n\nGrazie e sicuramente al prossimo Workshop fotografico e perche no anche qualche viaggio organizzato da voi ",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2019-06-21T13:28:00.000Z",
-      "user": {
-        "firstName": "Valentina",
-        "lastName": "Mannella",
-        "username": "vale.mannella@libero.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     },
     {
       "id": "212",
@@ -390,27 +271,155 @@
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     },
     {
-      "id": "248",
-      "title": "Ottima compagnia e Insegnamenti",
-      "description": "Un workshop fotografico in luoghi romantici in ottima compagnia e con i nostri accompagnatori Alessandro e Marco che hanno saputo creare un clima familiare ",
+      "id": "192",
+      "title": "Competenza e divertimento a passeggio per Roma",
+      "description": "Ale e Marco sono spettacalori, riescono a trasmettere tutta la loro passione per la fotografia. Sempre pronti a darti consigli e suggerimenti. Il tempo è volato. Grande professionalità e competenza. \n\nGrazie e sicuramente al prossimo Workshop fotografico e perche no anche qualche viaggio organizzato da voi ",
       "rating": 5,
-      "ratingOrganization": 5,
-      "ratingCordiality": 5,
-      "ratingProfessionality": 5,
-      "ratingKnowledge": 5,
-      "created_at": "2022-03-25T10:16:22.000Z",
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2019-06-21T13:28:00.000Z",
       "user": {
-        "firstName": "Mauro",
-        "lastName": "Foco",
-        "username": "maurofoco",
+        "firstName": "Valentina",
+        "lastName": "Mannella",
+        "username": "vale.mannella@libero.it",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "191",
+      "title": "workshop fotografico  Roma",
+      "description": "siete un team molto preparato e in un pomeriggio caldo di Roma siete riusciti a far correre il tempo talmente in fretta che non volevamo concluderlo sia per il bel gruppo sia per tutto ciò che avete insegnato e che abbiamo subito messo in pratica. Bravi, simpatici e molto attenti a rispondere ad ogni nostra domanda. Grazie ragazzi avete messo in me la voglia di sperimentare e imparare tutto ciò che questo mondo può insegnarmi",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2019-06-17T11:21:19.000Z",
+      "user": {
+        "firstName": "Eli",
+        "lastName": "Mirabella",
+        "username": "pois304@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "167",
+      "title": "Ne ho già nostalgia!",
+      "description": "E' stato il mio terzo viaggio fotografico a cui partecipavo, ma non mi era mai capitato finora di andar via a fine lavori con la sensazione di aver lasciato degli amici! A conti fatti, in questo workshop fotografico ho conosciuto nuove persone con cui ho trascorso delle ore piacevoli, ho fatto una lunga e bella passeggiata tra le bellezze di Roma, ho portato a casa delle belle foto, ho imparato nuove tecniche ed ho affinato quelle che avevo già. Complimenti a Marco, che ha saputo seguire un gruppo di persone piuttosto eterogeneo per età e competenze fotografiche senza trascurare nulla e nessuno. ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2019-04-01T18:52:03.000Z",
+      "user": {
+        "firstName": "Massimiliano",
+        "lastName": "Neri",
+        "username": "massimiliano.neri@tim.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "163",
+      "title": "Abbiamo catturato la magia di Roma",
+      "description": "Splendida giornata appena trascorsa al workshop fotografico base a Roma! Le ore sono volate e l’entusiasmo di Alessandro e Marco per la fotografia è contagioso ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2019-01-14T10:01:27.000Z",
+      "user": {
+        "firstName": "Christian",
+        "lastName": "Amorelli",
+        "username": "christian.amorelli@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "142",
+      "title": "Quando la passione incontra la professionalità ",
+      "description": "Prima di fare questo workshop fotografico non avevo mai acceso una reflex e non capivo assolutamente nulla di fotografia. A fine giornata sono tornata a casa con una voglia matta di entrare in questo mondo, comprare un’attrezzatura adeguata ed uscire a scattare. Marco non so come è riuscito a farmi scattare delle bellissime foto, e a prendere confidenza con la macchina in poco più di 5 ore. Complice della riuscita del tutto è stata anche Roma, semplicemente meravigliosa. Consigliatissimo",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-10-01T17:58:34.000Z",
+      "user": {
+        "firstName": "Camilla",
+        "lastName": "Iaquone",
+        "username": "camilla.iaquone@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "80",
+      "title": "Esperienza esclusiva!!!",
+      "description": "Primo viaggio fotografico di fotografia molto produttivo, sia per la professionalità delle risposte di Marco Carotenuto che per l'approfondimento e la scoperta di nuove tecniche fotografiche. Magico per la location Roma caput mundi, ci ha regalato sfumature arancio alle spalle di San Pietro! Ringrazio nuovamente Marco per la disponibilità e la dedizione e auguro a tutti un viaggio fotografico di tale livello!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-04-06T18:37:17.000Z",
+      "user": {
+        "firstName": "Davide",
+        "lastName": "Damato",
+        "username": "davide-damato@libero.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "45",
+      "title": "Fotografia notturna a Roma",
+      "description": "Marco e ad Alessandro due ottimi maestri e consiglieri che mi hanno arricchito molto con i loro consigli tecnici sulla fotografia notturna. Ora ho le idee un po più chiare su come fotografare di notte! Bel gruppo e bella serata. Distesa e istruttiva! La consiglio come \"cura\" mente corpo!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2017-11-15T13:31:06.000Z",
+      "user": {
+        "firstName": "Marcello",
+        "lastName": "",
+        "username": "baconeit@yahoo.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
     }
   ],
   "whats_includeds": [

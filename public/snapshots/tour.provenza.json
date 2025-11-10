@@ -205,204 +205,25 @@
   ],
   "reviews": [
     {
-      "id": "114",
-      "title": "Mi aspettavo 10... ho ottenuto 30!! ",
-      "description": "Bellissima esperienza. Tralasciando le alzatacce mattutine (ampiamente ripagate), il viaggio fotografico è stato bello e interessante sotto ogni aspetto. Gli insegnanti hanno messo a disposizione di tutti i corsisti le loro conoscenze, spiegando il tutto in maniera semplice e precisa. Bravi, veramente bravi!! continuate così ragazzi!!! ",
+      "id": "193",
+      "title": "Esperienza indimenticabile",
+      "description": "Terzo viaggio fotografico con Marco e Alessandro e, come gli altri due, molto soddisfatto. La location parla da sola: uno spettacolo naturale che Marco e Ale ti danno la possibilità di godere nei punti migliori e nei momenti topici per la fotografia. Molto curata la parte di formazione (pianificazione e post) e la logistica. Insomma, ho scelto di partecipare per avere l'opportunità di crescere e devo dire che anche questa volta ho imparato nuove cose e portato a casa bei scatti. Grazie Marco e grazie Alessandro!",
       "rating": 5,
       "ratingOrganization": null,
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "created_at": "2018-07-03T00:40:02.000Z",
+      "created_at": "2019-07-09T08:39:36.000Z",
       "user": {
-        "firstName": "anthony",
-        "lastName": "",
-        "username": "anthony.ortolani@gmail.com",
+        "firstName": "Paolo Zaccagnini",
+        "lastName": "Zaccagnini",
+        "username": "paolo.zac11@gmail.com",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
-    },
-    {
-      "id": "115",
-      "title": "Fantastico ws in Provenza... E non solo paesaggio.",
-      "description": "Alcuni giorni passati nei fantastici lavandeti provenzali. (E non solo). I ragazzi ci hanno fatto fotografare e divertire. Andare con loro piuttosto che da soli ti permette di trovare location insolite e \"studiate\" (non le solite foto da bordo strada). Il clima che si é creato nel gruppo é stato grazie a loro ottimo fin da subito. Abbiamo anche sviluppato il tema del ritratto nei lavandeti che non é cosa da poco.  Da ripetere anche per altri ws. ",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-07-03T21:57:17.000Z",
-      "user": {
-        "firstName": "Renato",
-        "lastName": "",
-        "username": "renatoflosi@gmail.com",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "116",
-      "title": "Immersi nei lavandeti",
-      "description": "Valensole e i suoi lavandeti non hanno bisogno di presentazioni e allora perché non organizzare il viaggio tutto da soli?? Perché nel viaggio fotografico scoprirete quanto sia fondamentale la pianificazione per scattare foto non banali. Troverete dei tutor molto disponibili e competenti che sanno sempre trovare il posto di scatto migliore. Continuate così!!",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-07-07T11:09:17.000Z",
-      "user": {
-        "firstName": "Giampiero",
-        "lastName": "",
-        "username": "lgiampiero384@tiscali.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "117",
-      "title": "Divertente esperienza fotografica di gruppo ",
-      "description": "Non un banale viaggio fotografico, ma un esperienza appagante ed istruttiva, Paesaggi unici e il tutto accompagnati da insegnanti simpatici e professionali. Ho imparato molto e mi sono divertito. assolutamente consigliato!!\n",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-07-07T15:09:21.000Z",
-      "user": {
-        "firstName": "Stefano Sgm",
-        "lastName": "Sgm",
-        "username": "stefano.sugamosto@hotmail.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "118",
-      "title": "WORKSHOP FOTOGRAFICO IN PROVENZA A VALENSOLE",
-      "description": "Ho prenotato il WS insieme ad altre due amiche, poi a causa di un imprevisto famigliare, personalmente, con vero rammarico, non ho potuto partecipare. Questa è però la recensione che le mie amiche Adriana ed Anna mi hanno chiesto di scrivere per loro conto \" Esperienza super positiva, docenti che sanno trasmettere conoscenze e passione, ma anche trasformare in poche ore un gruppo di perfetti sconosciuti, di provenienza, genere ed età diverse in un gruppo di amici che dispiace salutare. Da ripetere assolutamente! \" ",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-07-09T21:18:02.000Z",
-      "user": {
-        "firstName": "brunella",
-        "lastName": "",
-        "username": "bru.ballestra@libero.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "119",
-      "title": "Fantastico!",
-      "description": "Workshop meraviglioso sotto ogni aspetto. Gli insegnanti sanno trasmettere,  con tanta passione, competenze e nozioni a tutti i partecipanti, dal principiante al più esperto. La scelta delle location è stata ottima, l'organizzazione logistica impeccabile. Non da ultimo, la capacità di creare da subito un gruppo affiatato, in cui sentirsi come tra vecchi amici, è impagabile. Esperienza da ripetere e consigliare! ",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-07-09T21:27:36.000Z",
-      "user": {
-        "firstName": "Elisa Marengo",
-        "lastName": "",
-        "username": "Elisa.marengo@gmail.com",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "120",
-      "title": "Meraviglioso",
-      "description": "La scelta delle varie location è stata ottima, lontano dalla bolgia turistica ci siamo trovati da soli in posti meravigliosi.\nLa capacità di creare da subito un gruppo affiatato, in cui sentirsi come tra amici di vecchia data è impagabile. Esperienza da ripetere e consigliare!",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-07-10T09:28:57.000Z",
-      "user": {
-        "firstName": "Francesco Meloni",
-        "lastName": "Meloni",
-        "username": "francme@tin.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "121",
-      "title": "Esperienza fantastica",
-      "description": "Da pochissimo ho iniziato a fotografare e questo viaggio fotografico è stato entusiasmante.  Alessandro e Federico spiegano in modo molto chiaro e preciso, seguono e aiutano. Hanno scelto location molto particolari, lontane dalla folla.\nSi è subito creato un gruppo affiatato, allegro, collaborativo.\nSono molto contenta dell’esperienza che voglio sicuramente ripetere e che consiglio a tutti",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-07-10T18:28:32.000Z",
-      "user": {
-        "firstName": "Anna Scrivi",
-        "lastName": "Scrivi",
-        "username": "scrivi_anna@libero.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "122",
-      "title": "Definitely a must if you want great photos.",
-      "description": "Recommend to anyone who wants to learn more about their camera and  understand the basics of taking a great photo.\nThey will follow you even after the viaggio fotografico.\n Thanks to Alessandro , Federico & Michele very highly professional people.",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-07-10T19:32:34.000Z",
-      "user": {
-        "firstName": "Enzo Minchella",
-        "lastName": "Minchella",
-        "username": "enzominchella@hotmail.com",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "123",
-      "title": "Lavanda, stelle... E non solo!",
-      "description": "Workshop stupendo, fotografi preparatissimi, dei grandi professionisti. \nSi riconosce subito chi ama il proprio lavoro!\nGli scatti realizzati parlano da soli; un ringraziamento speciale a Michele che, in mezzo alla lavanda ed al grano, mi ha dedicato molto del suo prezioso tempo per reallizare alcuni miei ritratti, grazie! \nSicuramente è una esperienza tosta, poche ore di sonno e tanto lavoro, ma condividere la passione per la fotografia con persone sconosciute è stato magnifico. \nTutti insieme a fotografare lo stesso orizzonte, sotto lo stesso cielo stellato, wow!\nGrazie! ?",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-07-11T08:36:13.000Z",
-      "user": {
-        "firstName": "Ilaria Allasina",
-        "lastName": "Allasina",
-        "username": "ilakisskiss94@hotmail.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     },
     {
       "id": "187",
@@ -422,27 +243,218 @@
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     },
     {
-      "id": "193",
-      "title": "Esperienza indimenticabile",
-      "description": "Terzo viaggio fotografico con Marco e Alessandro e, come gli altri due, molto soddisfatto. La location parla da sola: uno spettacolo naturale che Marco e Ale ti danno la possibilità di godere nei punti migliori e nei momenti topici per la fotografia. Molto curata la parte di formazione (pianificazione e post) e la logistica. Insomma, ho scelto di partecipare per avere l'opportunità di crescere e devo dire che anche questa volta ho imparato nuove cose e portato a casa bei scatti. Grazie Marco e grazie Alessandro!",
+      "id": "123",
+      "title": "Lavanda, stelle... E non solo!",
+      "description": "Workshop stupendo, fotografi preparatissimi, dei grandi professionisti. \nSi riconosce subito chi ama il proprio lavoro!\nGli scatti realizzati parlano da soli; un ringraziamento speciale a Michele che, in mezzo alla lavanda ed al grano, mi ha dedicato molto del suo prezioso tempo per reallizare alcuni miei ritratti, grazie! \nSicuramente è una esperienza tosta, poche ore di sonno e tanto lavoro, ma condividere la passione per la fotografia con persone sconosciute è stato magnifico. \nTutti insieme a fotografare lo stesso orizzonte, sotto lo stesso cielo stellato, wow!\nGrazie! ?",
       "rating": 5,
       "ratingOrganization": null,
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "created_at": "2019-07-09T08:39:36.000Z",
+      "created_at": "2018-07-11T08:36:13.000Z",
       "user": {
-        "firstName": "Paolo Zaccagnini",
-        "lastName": "Zaccagnini",
-        "username": "paolo.zac11@gmail.com",
+        "firstName": "Ilaria Allasina",
+        "lastName": "Allasina",
+        "username": "ilakisskiss94@hotmail.it",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "122",
+      "title": "Definitely a must if you want great photos.",
+      "description": "Recommend to anyone who wants to learn more about their camera and  understand the basics of taking a great photo.\nThey will follow you even after the viaggio fotografico.\n Thanks to Alessandro , Federico & Michele very highly professional people.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-07-10T19:32:34.000Z",
+      "user": {
+        "firstName": "Enzo Minchella",
+        "lastName": "Minchella",
+        "username": "enzominchella@hotmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "121",
+      "title": "Esperienza fantastica",
+      "description": "Da pochissimo ho iniziato a fotografare e questo viaggio fotografico è stato entusiasmante.  Alessandro e Federico spiegano in modo molto chiaro e preciso, seguono e aiutano. Hanno scelto location molto particolari, lontane dalla folla.\nSi è subito creato un gruppo affiatato, allegro, collaborativo.\nSono molto contenta dell’esperienza che voglio sicuramente ripetere e che consiglio a tutti",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-07-10T18:28:32.000Z",
+      "user": {
+        "firstName": "Anna Scrivi",
+        "lastName": "Scrivi",
+        "username": "scrivi_anna@libero.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "120",
+      "title": "Meraviglioso",
+      "description": "La scelta delle varie location è stata ottima, lontano dalla bolgia turistica ci siamo trovati da soli in posti meravigliosi.\nLa capacità di creare da subito un gruppo affiatato, in cui sentirsi come tra amici di vecchia data è impagabile. Esperienza da ripetere e consigliare!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-07-10T09:28:57.000Z",
+      "user": {
+        "firstName": "Francesco Meloni",
+        "lastName": "Meloni",
+        "username": "francme@tin.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "119",
+      "title": "Fantastico!",
+      "description": "Workshop meraviglioso sotto ogni aspetto. Gli insegnanti sanno trasmettere,  con tanta passione, competenze e nozioni a tutti i partecipanti, dal principiante al più esperto. La scelta delle location è stata ottima, l'organizzazione logistica impeccabile. Non da ultimo, la capacità di creare da subito un gruppo affiatato, in cui sentirsi come tra vecchi amici, è impagabile. Esperienza da ripetere e consigliare! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-07-09T21:27:36.000Z",
+      "user": {
+        "firstName": "Elisa Marengo",
+        "lastName": "",
+        "username": "Elisa.marengo@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "118",
+      "title": "WORKSHOP FOTOGRAFICO IN PROVENZA A VALENSOLE",
+      "description": "Ho prenotato il WS insieme ad altre due amiche, poi a causa di un imprevisto famigliare, personalmente, con vero rammarico, non ho potuto partecipare. Questa è però la recensione che le mie amiche Adriana ed Anna mi hanno chiesto di scrivere per loro conto \" Esperienza super positiva, docenti che sanno trasmettere conoscenze e passione, ma anche trasformare in poche ore un gruppo di perfetti sconosciuti, di provenienza, genere ed età diverse in un gruppo di amici che dispiace salutare. Da ripetere assolutamente! \" ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-07-09T21:18:02.000Z",
+      "user": {
+        "firstName": "brunella",
+        "lastName": "",
+        "username": "bru.ballestra@libero.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "117",
+      "title": "Divertente esperienza fotografica di gruppo ",
+      "description": "Non un banale viaggio fotografico, ma un esperienza appagante ed istruttiva, Paesaggi unici e il tutto accompagnati da insegnanti simpatici e professionali. Ho imparato molto e mi sono divertito. assolutamente consigliato!!\n",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-07-07T15:09:21.000Z",
+      "user": {
+        "firstName": "Stefano Sgm",
+        "lastName": "Sgm",
+        "username": "stefano.sugamosto@hotmail.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "116",
+      "title": "Immersi nei lavandeti",
+      "description": "Valensole e i suoi lavandeti non hanno bisogno di presentazioni e allora perché non organizzare il viaggio tutto da soli?? Perché nel viaggio fotografico scoprirete quanto sia fondamentale la pianificazione per scattare foto non banali. Troverete dei tutor molto disponibili e competenti che sanno sempre trovare il posto di scatto migliore. Continuate così!!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-07-07T11:09:17.000Z",
+      "user": {
+        "firstName": "Giampiero",
+        "lastName": "",
+        "username": "lgiampiero384@tiscali.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "115",
+      "title": "Fantastico ws in Provenza... E non solo paesaggio.",
+      "description": "Alcuni giorni passati nei fantastici lavandeti provenzali. (E non solo). I ragazzi ci hanno fatto fotografare e divertire. Andare con loro piuttosto che da soli ti permette di trovare location insolite e \"studiate\" (non le solite foto da bordo strada). Il clima che si é creato nel gruppo é stato grazie a loro ottimo fin da subito. Abbiamo anche sviluppato il tema del ritratto nei lavandeti che non é cosa da poco.  Da ripetere anche per altri ws. ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-07-03T21:57:17.000Z",
+      "user": {
+        "firstName": "Renato",
+        "lastName": "",
+        "username": "renatoflosi@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "114",
+      "title": "Mi aspettavo 10... ho ottenuto 30!! ",
+      "description": "Bellissima esperienza. Tralasciando le alzatacce mattutine (ampiamente ripagate), il viaggio fotografico è stato bello e interessante sotto ogni aspetto. Gli insegnanti hanno messo a disposizione di tutti i corsisti le loro conoscenze, spiegando il tutto in maniera semplice e precisa. Bravi, veramente bravi!! continuate così ragazzi!!! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-07-03T00:40:02.000Z",
+      "user": {
+        "firstName": "anthony",
+        "lastName": "",
+        "username": "anthony.ortolani@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
     }
   ],
   "whats_includeds": [

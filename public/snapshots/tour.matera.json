@@ -89,26 +89,6 @@
   ],
   "reviews": [
     {
-      "id": "158",
-      "title": "Workshop Fotografico a Matera",
-      "description": "Bellissimo fine settimana, in compagnia  di altri appassionati fotografi e di 2 ottimi insegnanti sempre pronti a dispensare consigli, ottima organizzazione, nulla è lasciato al caso. Si scatta molto, senza tralasciare informazioni sulla post produzione e soprattutto come pianificare le uscite fotografiche. ",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-12-04T20:06:42.000Z",
-      "user": {
-        "firstName": "Giuseppe ",
-        "lastName": "",
-        "username": "link7719@gmail.com",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
       "id": "159",
       "title": "Primo workshop lontano da casa",
       "description": "Un weekend davvero coinvolgente! Sono molto soddisfatta di questa esperienza che mi è capitata per caso sotto mano e a cui ho partecipato seguendo molto l'impulso del momento.\nMarco e Alessandro sono ragazzi molto disponibili e con una gran voglia di esplorare, osservare e crescere. Sono oltretutto degli ottimi insegnanti perchè condividono la loro più grande passione in modo talmente semplice e concreto che non si può non seguirli ovunque vanno (anche sulle dolomiti lucane!!).\nDi tutte le attività svolte, mi è piaciuta in particolare la sessione di pianificazione che mi ha aperto un mondo che ignoravo. Torno a casa con molti spunti su cui lavorare per migliorare la mia tecnica e soprattutto la mia visione del mondo. Grazie!",
@@ -126,7 +106,29 @@
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "158",
+      "title": "Workshop Fotografico a Matera",
+      "description": "Bellissimo fine settimana, in compagnia  di altri appassionati fotografi e di 2 ottimi insegnanti sempre pronti a dispensare consigli, ottima organizzazione, nulla è lasciato al caso. Si scatta molto, senza tralasciare informazioni sulla post produzione e soprattutto come pianificare le uscite fotografiche. ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-12-04T20:06:42.000Z",
+      "user": {
+        "firstName": "Giuseppe ",
+        "lastName": "",
+        "username": "link7719@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
     }
   ],
   "whats_includeds": [

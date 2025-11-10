@@ -402,44 +402,25 @@
   ],
   "reviews": [
     {
-      "id": "151",
-      "title": "Esperienza da ripetere assolutamente!",
-      "description": "Non leggo mai le recensioni sono spesso un copia incolla di frasi fatte e referenziali. Ho scelto di fare questo viaggio fotografico senza leggere niente su come era organizzato. Sicuramente mi sarei scoraggiata, perché non sono un paesaggista, non ho lo spirito del campeggiatore e amo viaggiare in modo comodo. Però sono partita....... \nCosa dire? Ho visto posti che lasciano senza fiato per la loro bellezza, mi sono adattata ad orari lontani dai miei e pasti spesso improvvisati ma ho scattato tanto e con piacere. Un viaggio adatto per tutti? Non credo. Ve lo posso consigliare? Non lo so, dipende quanto per voi e' importante la fotografia quando viaggiate. L'unica cosa che vi dico che e' stata un'esperienza unica, particolare, per me estremamente divertente e con compagni di ventura incomparabili.\nAlessandro e' una forza della natura, in questo viaggio non doveva seguire gli altri per le foto, era comunque sempre disponibile per un consiglio ed era un piacere ascoltarlo perché conosce ed ama molto la fotografia.",
+      "id": "224",
+      "title": "Viaggio fantastico, esperienza consigliata!",
+      "description": "Ho partecipato al viaggio fotografico in Scozia con Marco e Alessandro, due ragazzi veramente molto simpatici, sempre disponibili e preparati per chiarire ogni vostro dubbio. Viaggio molto ben organizzato nonostante il meteo non sia stato dalla nostra parte. In ogni caso la Scozia ha posti che meritano sicuramente una visita, rimarrete affascinati da questa nazione!",
       "rating": 5,
       "ratingOrganization": null,
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "created_at": "2018-11-17T08:43:00.000Z",
+      "created_at": "2019-11-28T22:23:40.000Z",
       "user": {
-        "firstName": "Anna Lalla",
-        "lastName": "Lalla",
-        "username": "annah_0107@hotmail.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "188",
-      "title": "La mia prima volta in Scozia... ed in camper ",
-      "description": "Scrivo questa recensione mentre sto tornando a casa ed attendo il volo, quando le sensazioni vissute sono ancora molto forti. \nInnanzitutto la prima cosa da dire è che i posti visitati sono strepitosi, e lo dico dopo essere salito due volte allo Storr con vento e pioggia la mattina presto per fotografarlo con la luce migliore (per quanto anche al tramonto è notevole!). \nDecidere di partire col camper significa sapersi adattare, rinunciare alla doccia è un prezzo insignificante da pagare confrontato con le emozioni che madre natura regala. Che dire...  sono davvero contento, e sono sicuro che rivedrò i miei compagni di viaggio molto presto. È stata una settimana fra sconosciuti, ma si è creato da subito un forte legame. Ringrazio dunque Alessandro, Fabiano, Andrea, Rosario e Tina. \nSee you later. \n\nPaolo",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2019-05-25T17:42:46.000Z",
-      "user": {
-        "firstName": "Paolo Cattibini",
+        "firstName": "simone de marchi",
         "lastName": "",
-        "username": "p.cattibini@gmail.com",
+        "username": "simo120395@hotmail.it",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     },
     {
       "id": "189",
@@ -459,27 +440,50 @@
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     },
     {
-      "id": "224",
-      "title": "Viaggio fantastico, esperienza consigliata!",
-      "description": "Ho partecipato al viaggio fotografico in Scozia con Marco e Alessandro, due ragazzi veramente molto simpatici, sempre disponibili e preparati per chiarire ogni vostro dubbio. Viaggio molto ben organizzato nonostante il meteo non sia stato dalla nostra parte. In ogni caso la Scozia ha posti che meritano sicuramente una visita, rimarrete affascinati da questa nazione!",
+      "id": "188",
+      "title": "La mia prima volta in Scozia... ed in camper ",
+      "description": "Scrivo questa recensione mentre sto tornando a casa ed attendo il volo, quando le sensazioni vissute sono ancora molto forti. \nInnanzitutto la prima cosa da dire è che i posti visitati sono strepitosi, e lo dico dopo essere salito due volte allo Storr con vento e pioggia la mattina presto per fotografarlo con la luce migliore (per quanto anche al tramonto è notevole!). \nDecidere di partire col camper significa sapersi adattare, rinunciare alla doccia è un prezzo insignificante da pagare confrontato con le emozioni che madre natura regala. Che dire...  sono davvero contento, e sono sicuro che rivedrò i miei compagni di viaggio molto presto. È stata una settimana fra sconosciuti, ma si è creato da subito un forte legame. Ringrazio dunque Alessandro, Fabiano, Andrea, Rosario e Tina. \nSee you later. \n\nPaolo",
       "rating": 5,
       "ratingOrganization": null,
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "created_at": "2019-11-28T22:23:40.000Z",
+      "created_at": "2019-05-25T17:42:46.000Z",
       "user": {
-        "firstName": "simone de marchi",
+        "firstName": "Paolo Cattibini",
         "lastName": "",
-        "username": "simo120395@hotmail.it",
+        "username": "p.cattibini@gmail.com",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "151",
+      "title": "Esperienza da ripetere assolutamente!",
+      "description": "Non leggo mai le recensioni sono spesso un copia incolla di frasi fatte e referenziali. Ho scelto di fare questo viaggio fotografico senza leggere niente su come era organizzato. Sicuramente mi sarei scoraggiata, perché non sono un paesaggista, non ho lo spirito del campeggiatore e amo viaggiare in modo comodo. Però sono partita....... \nCosa dire? Ho visto posti che lasciano senza fiato per la loro bellezza, mi sono adattata ad orari lontani dai miei e pasti spesso improvvisati ma ho scattato tanto e con piacere. Un viaggio adatto per tutti? Non credo. Ve lo posso consigliare? Non lo so, dipende quanto per voi e' importante la fotografia quando viaggiate. L'unica cosa che vi dico che e' stata un'esperienza unica, particolare, per me estremamente divertente e con compagni di ventura incomparabili.\nAlessandro e' una forza della natura, in questo viaggio non doveva seguire gli altri per le foto, era comunque sempre disponibile per un consiglio ed era un piacere ascoltarlo perché conosce ed ama molto la fotografia.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2018-11-17T08:43:00.000Z",
+      "user": {
+        "firstName": "Anna Lalla",
+        "lastName": "Lalla",
+        "username": "annah_0107@hotmail.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
     }
   ],
   "whats_includeds": [

@@ -247,64 +247,193 @@
   ],
   "reviews": [
     {
-      "id": "136",
-      "title": "Nonostante le avversità del tempo, il workshop è stato davvero fantastico!",
-      "description": "Esperienza davvero bellissima e a dir poco unica visto che abbiamo trovato della neve in piena agosto ahahah. \nMi è piaciuto molto. Ho imparato tanto dai ragazzi e la compagnia è stata piacevole. \nMarco e Ale non si sono limitati solamente a dire come fare una determinata cosa, ma spiegandoci anche il perché di quella particolare scelta nel farlo. I materiali post viaggio fotografico sono sufficienti per poter continuare da soli, ma è comunque meglio prestare attenzioni a dei dettagli durante la lezione teorica o direttamente nella sessione della pratica.\n\nParteciperei sicuramente un altro viaggio fotografico, in particolare quello notturno, perché sarebbe fighissimo poter scattare e parlare con Ale e Marco data la loro enorme conoscenza astronomica!",
+      "id": "256",
+      "title": "Splendido gruppo ed Esperienza Unica",
+      "description": "Esperienza veramente unica sia per gli scatti fatti e sia per i luoghi visitati con Alessandro che si è dimostrato sempre disponibile nei nostri confronti. Indimenticabili le sue lezioni di astronomia sotto le stelle. Si è creato subito un clima da “rimpatriata” con tutti quanti anche se non ci conoscevamo e questo ha contribuito a rendere l’esperienza indimenticabile.",
       "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2018-09-12T20:10:45.000Z",
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "created_at": "2023-07-17T07:20:35.000Z",
       "user": {
-        "firstName": "Qi",
-        "lastName": "",
-        "username": "qi.oliveri.jing@gmail.com",
+        "firstName": "Nicola",
+        "lastName": "Simone",
+        "username": "NicolaSimone",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     },
     {
-      "id": "184",
-      "title": "Top",
-      "description": "Non è stato il mio primo viaggio fotografico con i ragazzi, che come sempre si sono rivelati super competenti in ogni aspetto del viaggio fotografico. In generale il tempo non è stato molto clemente, ma siamo stati ampiamente ripagati dalla possibilità fotografare le Tre Cime innevate. La conoscenza dei luoghi degli insegnanti permette loro di scegliere gli spot fotografici migliori e, per quanto possibile, adattare l'itinerario alle condizioni meteo e alle esigenze individuali. Le lezioni \"in aula\" permettono di apprendere le tecniche di post produzione e di commentare insieme qualche scatto, in modo da potersi migliorare da subito mettendo in pratica i consigli ricevuti già il giorno successivo, aspetto non di secondo piano nei viaggio fotografico di lunga durata come questo. La compagnia fa il resto!! Bravi!",
+      "id": "255",
+      "title": "Bellissima esperienza",
+      "description": "In appena tre giorni sulle Dolomiti abbiamo portato a casa delle bellissime foto (complice anche il meteo fortunato), imparato nozioni importanti sulla tecnica fotografica e sulla filosofia che sta dietro alla fotografia di passeggio. Ultimo aspetto, non meno importante, un bellissimo gruppo! Già dalla prima sera sembravamo dei vecchi amici che si ritrovano davanti ad un tavolo da biliardo! ?\nConsiglio sicuramente l’esperienza.\nStefano",
       "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2019-05-14T16:10:48.000Z",
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "created_at": "2023-07-17T07:04:06.000Z",
       "user": {
-        "firstName": "Enrico Beltrami",
-        "lastName": "",
-        "username": "enrico.beltrami@gmail.com",
+        "firstName": "Stefano",
+        "lastName": "Di Giulio",
+        "username": "StefanoDiGiulio",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     },
     {
-      "id": "185",
-      "title": "Ws Dolomiti",
-      "description": "Workshop fantastico nonostante il tempo poco clemente. Grazie Alessandro e Marco ",
+      "id": "243",
+      "title": "Mi sono trovato come a casa, anzi meglio!",
+      "description": "Marco ed Alessandro sono due  professionisti molto attenti nell'organizzare eventi di alto contenuto tecnico-fotografico in cui trasmettono sempre a tutti i partecipanti la loro grande passione per la fotografia. Sono sempre attenti ai particolari ed alle persone e fanno si che tutti siano sempre allineati con quanto viene spiegato. Devo dire che il tempo e costo investito per questa 3 giorni nelle Dolomiti è sicuramente valsa la pena!\nALLA PROSSIMA!:-)\n\nUn salutone a tutti e grazie ancora di questa stupenda opportunità che mi avete dato.\nAndrea de Polo\nproject manager beni culturali",
       "rating": 5,
       "ratingOrganization": null,
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "created_at": "2019-05-14T18:35:18.000Z",
+      "created_at": "2020-07-21T21:06:33.000Z",
       "user": {
-        "firstName": "Irma Monica Ricci",
-        "lastName": "Ricci",
-        "username": "monricci.roma@gmail.com",
+        "firstName": "Andrea De Polo Saibanti",
+        "lastName": "De Polo Saibanti",
+        "username": "andrea@alinari.it",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "242",
+      "title": "Passione dolomitica",
+      "description": "Marco e Alessandro ancora una volta si sono dimostrati fotografi che trasmettono passione durante i loro viaggio fotografico, a cui aggiungono una conoscenza eccezionale dei vari spot e delle tecniche fotografiche da applicare in ogni singola circostanza.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2020-07-21T16:37:41.000Z",
+      "user": {
+        "firstName": "Marco Scrofani",
+        "lastName": "",
+        "username": "marcosao@icloud.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "241",
+      "title": "Fotografia di paesaggio",
+      "description": "Avvicinarsi alla fotografia di paesaggio con due mostri sacri come Alessandro Cantarelli e Marco Carotenuto non ha prezzo. La loro disponibilità nel seguire gli allievi in ogni fase e nello spiegare con semplicità le tecniche più complesse è l'essenza del loro lavoro e dei loro viaggio fotografico. I percorsi per arrivare alle varie destinazioni sono stati impegnativi, ed a tal proposito si consiglia un minimo di preparazione atletica per seguire i loro passi, ma mai nessuno si è sentito a disagio od in difficoltà. Poi, in quelle zone, le foto, con loro alle spalle, vengono per forza. Grazie ed alla prossima...",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2020-07-21T11:40:44.000Z",
+      "user": {
+        "firstName": "Tommaso Corona",
+        "lastName": "",
+        "username": "tommaso_corona@alice.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "206",
+      "title": "Dolomiti ... e non solo ",
+      "description": "La macchina fotografica è lo strumento che mi permette di regalarmi spazi, di mettermi in “viaggio” per scoprire, sperimentare, confrontarmi, condividere, conoscere e conoscermi, senza approfondire o pianificare in anticipo. Così ho fatto anche in aprile quando attraverso i social mi è apparsa più volte l’opportunità di tornare a vivere per qualche giorno la magica immensità del deserto per fotografare soprattutto il cielo stellato. \nCon Alessandro e Marco ci siamo incontrati per la prima volta in aeroporto ed è stato come ritrovare vecchi amici nonostante la differenza di età.\nDue ragazzi che oltre alla professionalità, all’entusiasmo e all’amore per il proprio lavoro possiedono un valore aggiunto: la capacità di gestire un gruppo in modo armonioso attraverso la disponibilità e l’attenzione alle singole e diversificate necessità.\nCon lo stesso spirito ho aderito al “viaggio” per le Dolomiti, dove, tra maestosità del paesaggio e i cieli che ti mettono in comunione con l’Universo, ho potuto confermare e beneficiare di professionalità e cura.\nBuon meritato “viaggio” ragazzi!!!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2019-08-05T15:46:01.000Z",
+      "user": {
+        "firstName": "Iris Valorosi",
+        "lastName": "",
+        "username": "irisblu2004@yahoo.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "205",
+      "title": "Workshop fotografico sulle Dolomiti",
+      "description": "Organizzazione perfetta. Professionalità altissima. Spettacolare il modo di trasmettere la loro passione per la fotografia,  le loro conoscenze senza alcun limite dal momento della preparazione dello scatto,  dallo scatto stesso allo sviluppo e poi postproduzione.  Disponibili in ogni momento,  molto seri ma con allegria!! Non abbandonano mai nessun componente del gruppo!!! BRAVI E BASTA!!! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2019-08-01T18:34:34.000Z",
+      "user": {
+        "firstName": "Lucia Corrà",
+        "lastName": "",
+        "username": "corralucia@libero.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "204",
+      "title": "Workshop fotografico dolomiti",
+      "description": "Sono tornata da poco dal viaggio fotografico sulle Dolomiti con Marco e Alessandro. È stata la mia seconda esperienza con loro e ho avuto modo di confermare l'ottima impressione avuta nel precedente viaggio fotografico. L'aspetto più importante è secondo me la loro capacità di creare un'atmosfera amichevole senza mai perdere di vista la professionalità e la cura dei dettagli. Il loro entusiasmo traspare in ogni momento e coinvolge tutti i membri del gruppo. Con il loro atteggiamento hanno contribuito a motivarmi e invogliarmi a migliorare le mie tecniche e conoscenze sulla fotografia paesaggistica.\nConsiglio questa esperienza agli appassionati di fotografia, indipendentemente dalle conoscenze pregresse.\nCi vedremo sicuramente presto!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2019-08-01T16:31:38.000Z",
+      "user": {
+        "firstName": "Verdiana Valenti",
+        "lastName": "Valenti",
+        "username": "verdianavalenti@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "203",
+      "title": "Workshop fotografico Dolomiti",
+      "description": "Marco e Alessandro sono, oltre che fotografi eccezionali, due persone che non mancheranno di farti divertire! E' il secondo viaggio fotografico a cui partecipo ed in entrambi i casi ho imparato davvero molto sia sulla pianificazione che sulle tecniche fotografiche più idonee per le varie condizioni di luce. Una cosa che ho molto apprezzato è stata la loro capacità di modificare il programma della giornata sulla base delle previsioni meteo... anche in caso di brutto tempo non c'è da preoccuparsi, avranno sempre una soluzione alternativa! ",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2019-07-30T21:30:47.000Z",
+      "user": {
+        "firstName": "Alexander Vallefuoco",
+        "lastName": "",
+        "username": "alessandro_vallefuoco@yahoo.it",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
     },
     {
       "id": "202",
@@ -327,187 +456,71 @@
           "alternativeText": "Stefano Ricca coach accademia WeShoot"
         },
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     },
     {
-      "id": "203",
-      "title": "Workshop fotografico Dolomiti",
-      "description": "Marco e Alessandro sono, oltre che fotografi eccezionali, due persone che non mancheranno di farti divertire! E' il secondo viaggio fotografico a cui partecipo ed in entrambi i casi ho imparato davvero molto sia sulla pianificazione che sulle tecniche fotografiche più idonee per le varie condizioni di luce. Una cosa che ho molto apprezzato è stata la loro capacità di modificare il programma della giornata sulla base delle previsioni meteo... anche in caso di brutto tempo non c'è da preoccuparsi, avranno sempre una soluzione alternativa! ",
+      "id": "185",
+      "title": "Ws Dolomiti",
+      "description": "Workshop fantastico nonostante il tempo poco clemente. Grazie Alessandro e Marco ",
       "rating": 5,
       "ratingOrganization": null,
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "created_at": "2019-07-30T21:30:47.000Z",
+      "created_at": "2019-05-14T18:35:18.000Z",
       "user": {
-        "firstName": "Alexander Vallefuoco",
+        "firstName": "Irma Monica Ricci",
+        "lastName": "Ricci",
+        "username": "monricci.roma@gmail.com",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "184",
+      "title": "Top",
+      "description": "Non è stato il mio primo viaggio fotografico con i ragazzi, che come sempre si sono rivelati super competenti in ogni aspetto del viaggio fotografico. In generale il tempo non è stato molto clemente, ma siamo stati ampiamente ripagati dalla possibilità fotografare le Tre Cime innevate. La conoscenza dei luoghi degli insegnanti permette loro di scegliere gli spot fotografici migliori e, per quanto possibile, adattare l'itinerario alle condizioni meteo e alle esigenze individuali. Le lezioni \"in aula\" permettono di apprendere le tecniche di post produzione e di commentare insieme qualche scatto, in modo da potersi migliorare da subito mettendo in pratica i consigli ricevuti già il giorno successivo, aspetto non di secondo piano nei viaggio fotografico di lunga durata come questo. La compagnia fa il resto!! Bravi!",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2019-05-14T16:10:48.000Z",
+      "user": {
+        "firstName": "Enrico Beltrami",
         "lastName": "",
-        "username": "alessandro_vallefuoco@yahoo.it",
+        "username": "enrico.beltrami@gmail.com",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     },
     {
-      "id": "204",
-      "title": "Workshop fotografico dolomiti",
-      "description": "Sono tornata da poco dal viaggio fotografico sulle Dolomiti con Marco e Alessandro. È stata la mia seconda esperienza con loro e ho avuto modo di confermare l'ottima impressione avuta nel precedente viaggio fotografico. L'aspetto più importante è secondo me la loro capacità di creare un'atmosfera amichevole senza mai perdere di vista la professionalità e la cura dei dettagli. Il loro entusiasmo traspare in ogni momento e coinvolge tutti i membri del gruppo. Con il loro atteggiamento hanno contribuito a motivarmi e invogliarmi a migliorare le mie tecniche e conoscenze sulla fotografia paesaggistica.\nConsiglio questa esperienza agli appassionati di fotografia, indipendentemente dalle conoscenze pregresse.\nCi vedremo sicuramente presto!",
+      "id": "136",
+      "title": "Nonostante le avversità del tempo, il workshop è stato davvero fantastico!",
+      "description": "Esperienza davvero bellissima e a dir poco unica visto che abbiamo trovato della neve in piena agosto ahahah. \nMi è piaciuto molto. Ho imparato tanto dai ragazzi e la compagnia è stata piacevole. \nMarco e Ale non si sono limitati solamente a dire come fare una determinata cosa, ma spiegandoci anche il perché di quella particolare scelta nel farlo. I materiali post viaggio fotografico sono sufficienti per poter continuare da soli, ma è comunque meglio prestare attenzioni a dei dettagli durante la lezione teorica o direttamente nella sessione della pratica.\n\nParteciperei sicuramente un altro viaggio fotografico, in particolare quello notturno, perché sarebbe fighissimo poter scattare e parlare con Ale e Marco data la loro enorme conoscenza astronomica!",
       "rating": 5,
       "ratingOrganization": null,
       "ratingCordiality": null,
       "ratingProfessionality": null,
       "ratingKnowledge": null,
-      "created_at": "2019-08-01T16:31:38.000Z",
+      "created_at": "2018-09-12T20:10:45.000Z",
       "user": {
-        "firstName": "Verdiana Valenti",
-        "lastName": "Valenti",
-        "username": "verdianavalenti@gmail.com",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "205",
-      "title": "Workshop fotografico sulle Dolomiti",
-      "description": "Organizzazione perfetta. Professionalità altissima. Spettacolare il modo di trasmettere la loro passione per la fotografia,  le loro conoscenze senza alcun limite dal momento della preparazione dello scatto,  dallo scatto stesso allo sviluppo e poi postproduzione.  Disponibili in ogni momento,  molto seri ma con allegria!! Non abbandonano mai nessun componente del gruppo!!! BRAVI E BASTA!!! ",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2019-08-01T18:34:34.000Z",
-      "user": {
-        "firstName": "Lucia Corrà",
+        "firstName": "Qi",
         "lastName": "",
-        "username": "corralucia@libero.it",
+        "username": "qi.oliveri.jing@gmail.com",
         "instagram": "",
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
-    },
-    {
-      "id": "206",
-      "title": "Dolomiti ... e non solo ",
-      "description": "La macchina fotografica è lo strumento che mi permette di regalarmi spazi, di mettermi in “viaggio” per scoprire, sperimentare, confrontarmi, condividere, conoscere e conoscermi, senza approfondire o pianificare in anticipo. Così ho fatto anche in aprile quando attraverso i social mi è apparsa più volte l’opportunità di tornare a vivere per qualche giorno la magica immensità del deserto per fotografare soprattutto il cielo stellato. \nCon Alessandro e Marco ci siamo incontrati per la prima volta in aeroporto ed è stato come ritrovare vecchi amici nonostante la differenza di età.\nDue ragazzi che oltre alla professionalità, all’entusiasmo e all’amore per il proprio lavoro possiedono un valore aggiunto: la capacità di gestire un gruppo in modo armonioso attraverso la disponibilità e l’attenzione alle singole e diversificate necessità.\nCon lo stesso spirito ho aderito al “viaggio” per le Dolomiti, dove, tra maestosità del paesaggio e i cieli che ti mettono in comunione con l’Universo, ho potuto confermare e beneficiare di professionalità e cura.\nBuon meritato “viaggio” ragazzi!!!",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2019-08-05T15:46:01.000Z",
-      "user": {
-        "firstName": "Iris Valorosi",
-        "lastName": "",
-        "username": "irisblu2004@yahoo.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "241",
-      "title": "Fotografia di paesaggio",
-      "description": "Avvicinarsi alla fotografia di paesaggio con due mostri sacri come Alessandro Cantarelli e Marco Carotenuto non ha prezzo. La loro disponibilità nel seguire gli allievi in ogni fase e nello spiegare con semplicità le tecniche più complesse è l'essenza del loro lavoro e dei loro viaggio fotografico. I percorsi per arrivare alle varie destinazioni sono stati impegnativi, ed a tal proposito si consiglia un minimo di preparazione atletica per seguire i loro passi, ma mai nessuno si è sentito a disagio od in difficoltà. Poi, in quelle zone, le foto, con loro alle spalle, vengono per forza. Grazie ed alla prossima...",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2020-07-21T11:40:44.000Z",
-      "user": {
-        "firstName": "Tommaso Corona",
-        "lastName": "",
-        "username": "tommaso_corona@alice.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "242",
-      "title": "Passione dolomitica",
-      "description": "Marco e Alessandro ancora una volta si sono dimostrati fotografi che trasmettono passione durante i loro viaggio fotografico, a cui aggiungono una conoscenza eccezionale dei vari spot e delle tecniche fotografiche da applicare in ogni singola circostanza.",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2020-07-21T16:37:41.000Z",
-      "user": {
-        "firstName": "Marco Scrofani",
-        "lastName": "",
-        "username": "marcosao@icloud.com",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "243",
-      "title": "Mi sono trovato come a casa, anzi meglio!",
-      "description": "Marco ed Alessandro sono due  professionisti molto attenti nell'organizzare eventi di alto contenuto tecnico-fotografico in cui trasmettono sempre a tutti i partecipanti la loro grande passione per la fotografia. Sono sempre attenti ai particolari ed alle persone e fanno si che tutti siano sempre allineati con quanto viene spiegato. Devo dire che il tempo e costo investito per questa 3 giorni nelle Dolomiti è sicuramente valsa la pena!\nALLA PROSSIMA!:-)\n\nUn salutone a tutti e grazie ancora di questa stupenda opportunità che mi avete dato.\nAndrea de Polo\nproject manager beni culturali",
-      "rating": 5,
-      "ratingOrganization": null,
-      "ratingCordiality": null,
-      "ratingProfessionality": null,
-      "ratingKnowledge": null,
-      "created_at": "2020-07-21T21:06:33.000Z",
-      "user": {
-        "firstName": "Andrea De Polo Saibanti",
-        "lastName": "De Polo Saibanti",
-        "username": "andrea@alinari.it",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "255",
-      "title": "Bellissima esperienza",
-      "description": "In appena tre giorni sulle Dolomiti abbiamo portato a casa delle bellissime foto (complice anche il meteo fortunato), imparato nozioni importanti sulla tecnica fotografica e sulla filosofia che sta dietro alla fotografia di passeggio. Ultimo aspetto, non meno importante, un bellissimo gruppo! Già dalla prima sera sembravamo dei vecchi amici che si ritrovano davanti ad un tavolo da biliardo! ?\nConsiglio sicuramente l’esperienza.\nStefano",
-      "rating": 5,
-      "ratingOrganization": 5,
-      "ratingCordiality": 5,
-      "ratingProfessionality": 5,
-      "ratingKnowledge": 5,
-      "created_at": "2023-07-17T07:04:06.000Z",
-      "user": {
-        "firstName": "Stefano",
-        "lastName": "Di Giulio",
-        "username": "StefanoDiGiulio",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
-    },
-    {
-      "id": "256",
-      "title": "Splendido gruppo ed Esperienza Unica",
-      "description": "Esperienza veramente unica sia per gli scatti fatti e sia per i luoghi visitati con Alessandro che si è dimostrato sempre disponibile nei nostri confronti. Indimenticabili le sue lezioni di astronomia sotto le stelle. Si è creato subito un clima da “rimpatriata” con tutti quanti anche se non ci conoscevamo e questo ha contribuito a rendere l’esperienza indimenticabile.",
-      "rating": 5,
-      "ratingOrganization": 5,
-      "ratingCordiality": 5,
-      "ratingProfessionality": 5,
-      "ratingKnowledge": 5,
-      "created_at": "2023-07-17T07:20:35.000Z",
-      "user": {
-        "firstName": "Nicola",
-        "lastName": "Simone",
-        "username": "NicolaSimone",
-        "instagram": "",
-        "bio": "",
-        "profilePicture": null,
-        "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     }
   ],
   "whats_includeds": [

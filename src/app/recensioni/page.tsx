@@ -1,3 +1,5 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
 import { getClient } from '@/lib/apolloClient';
 import { GET_REVIEWS } from '@/graphql/queries';
 import Header from '@/components/Header';
@@ -10,10 +12,21 @@ import ReviewsError from '@/components/reviews/ReviewsError';
 
 export const dynamic = 'force-static';
 
-export default async function ReviewsPage() {
-  let reviews: any[] = [];
-  let error: unknown = null;
+async function getReviews() {
+  // 1) Prova a leggere dallo snapshot
+  try {
+    const snapshotFile = path.join(process.cwd(), 'public', 'snapshots', 'reviews.json');
+    const raw = await fs.readFile(snapshotFile, 'utf8');
+    const reviews = JSON.parse(raw);
+    if (Array.isArray(reviews) && reviews.length > 0) {
+      console.log(`[REVIEWS] ✅ Caricato ${reviews.length} recensioni da snapshot`);
+      return reviews;
+    }
+  } catch (err) {
+    console.warn('[REVIEWS] ⚠️  Snapshot non disponibile, fallback a GraphQL:', err instanceof Error ? err.message : err);
+  }
 
+  // 2) Fallback a GraphQL (solo Strapi)
   try {
     const client = getClient();
     const { data } = await client.query({
@@ -21,9 +34,21 @@ export default async function ReviewsPage() {
       variables: { limit: 50 },
       fetchPolicy: 'no-cache',
     });
-    reviews = data?.reviews || [];
+    return data?.reviews || [];
   } catch (err) {
     console.error('Errore durante il fetch delle recensioni:', err);
+    throw err;
+  }
+}
+
+export default async function ReviewsPage() {
+  let reviews: any[] = [];
+  let error: unknown = null;
+
+  try {
+    reviews = await getReviews();
+  } catch (err) {
+    console.error('Errore durante il caricamento delle recensioni:', err);
     error = err;
   }
 

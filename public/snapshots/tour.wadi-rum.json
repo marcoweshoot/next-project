@@ -477,7 +477,8 @@
         "bio": "",
         "profilePicture": null,
         "fiscalCode": null
-      }
+      },
+      "source": "strapi"
     }
   ],
   "whats_includeds": [
