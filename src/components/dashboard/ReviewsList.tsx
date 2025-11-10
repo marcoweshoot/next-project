@@ -116,6 +116,10 @@ export function ReviewsList({ userId }: ReviewsListProps) {
 
   // Determina se una prenotazione può essere recensita
   const canReviewBooking = (booking: Booking) => {
+    // 0. NON deve avere già una recensione
+    const hasReview = reviews.some(review => review.booking_id === booking.id)
+    if (hasReview) return false
+    
     // 1. Deve essere pagato completamente
     const isFullyPaid = booking.status === 'fully_paid' || booking.status === 'completed'
     
