@@ -1100,12 +1100,12 @@
       "end": "2026-03-14",
       "status": "confirmed",
       "maxPax": 8,
-      "price": 89,
-      "deposit": 89,
+      "price": 69,
+      "deposit": 69,
       "balance": 0,
       "minPax": 3,
       "currency": "EUR",
-      "priceCompanion": 89,
+      "priceCompanion": 69,
       "users": [
         {
           "instagram": "https://www.instagram.com/marco_carotenuto",
