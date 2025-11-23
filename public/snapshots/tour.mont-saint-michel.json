@@ -10,6 +10,7 @@
   "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm), medio zoom (24mm-70mm) e tele (70-200mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri Fotografici ND (opzionale)</li><li>Filtro polarizzatore</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e caldo</li><li>Cappello</li><li>Impermeabile</li><li>Scarpe da Trekking</li></ul>",
   "video_url": null,
   "locale": "it",
+  "PaymentRecipient": "agency",
   "places": {
     "slug": "bretagna",
     "locale": "it",

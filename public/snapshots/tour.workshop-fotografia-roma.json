@@ -10,6 +10,7 @@
   "things_needed": "<p>Fotografica:</p><ul style=\"list-style-type:disc;\"><li>Treppiede</li><li>Relfex, Mirrorless o cellulare</li><li>Grandangolo (tra i 10mm e 18mm) e medio zoom (fino a 100mm)</li><li>Filtri fotografici come polarizzatore e ND (opzionali)</li><li>Scatto remoto (opzionale)<br><br>Abbigliamento:</li><li>Vestiario comodo e fresco (impermeabile in caso di pioggia)</li><li>Scarpe comode per camminare</li></ul>",
   "video_url": null,
   "locale": "it",
+  "PaymentRecipient": "weshoot",
   "places": {
     "slug": "lazio",
     "locale": "it",

@@ -10,6 +10,7 @@
   "things_needed": "<p>Attrezzatura fotografica:</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 16mm) e focali medio/lunghe (24mm-300mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p><br>Abbigliamento:</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarponi da Trekking</li><li>Costume da Bagno</li></ul>",
   "video_url": null,
   "locale": "it",
+  "PaymentRecipient": "agency",
   "places": {
     "slug": "reykjavik",
     "locale": "it",

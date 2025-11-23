@@ -10,6 +10,7 @@
   "things_needed": "<p>Reflex o Mirrorless<br>Obiettivo Grandangolare.<br>Treppiede stabile e preferibilmente senza colonna centrale.<br>Filtro Polarizzatore (molto consigliato)<br>Filtri ND (opzionali ma molto consigliati)<br>Filtri GND (opzionali ma consigliati)<br>Intervallometro/Telecomando di scatto remoto con funzionalità BULB</p><p><br>Abbigliamento e Attrezzatura:<br>Vestiario Primaverile<br>Pantaloni da Trekking o comunque adatti a muoversi, evitare jeans</p>",
   "video_url": null,
   "locale": "it",
+  "PaymentRecipient": "agency",
   "places": {
     "slug": "abruzzo",
     "locale": "it",

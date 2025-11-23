@@ -10,6 +10,7 @@
   "things_needed": "<p>Attrezzatura fotografica consigliata:</p><ul><li>Reflex o Mirrorless</li><li>Obiettivo Grandangolare</li><li>Obiettivo Medio-Tele (facoltativo ma utilizzabile)</li><li>Treppiede stabile e preferibilmente senza colonna centrale.</li><li>Filtri non obbligatori</li><li>Intervallometro/Telecomando di scatto remoto con funzionalità BULB solo per eventuale fotografia notturna</li></ul><p><br>Abbigliamento consigliato per il workshop:</p><ul><li>Vestiario Invernale da neve, termico</li><li>Scaldini, cappello, maglie termiche, calzemaglie termiche e tutti gli</li><li>accessori del caso per ridurre al minimo il freddo</li><li>Torcia da testa</li><li>Ciaspole (obbligatorio almeno portarle per camminare senza sprofondare<br>in caso di neve alta)</li><li>bastoncini da trekking (opzionali)</li></ul>",
   "video_url": null,
   "locale": "it",
+  "PaymentRecipient": "agency",
   "places": {
     "slug": "abruzzo",
     "locale": "it",

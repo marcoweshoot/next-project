@@ -10,6 +10,7 @@
   "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Astroinseguitore (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo per il giorno, maglietta e calzoncini</li><li>Vestiario caldo per la notte, termica, pile e piumino</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li><li>Crema solare</li></ul>",
   "video_url": null,
   "locale": "it",
+  "PaymentRecipient": "agency",
   "places": {
     "slug": "sahara",
     "locale": "it",

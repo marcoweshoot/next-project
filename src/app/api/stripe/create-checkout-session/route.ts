@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
 import Stripe from 'stripe'
+import { getClient } from '@/lib/graphqlClient'
+import { gql } from 'graphql-request'
 
 // Funzione per formattare la data della sessione in modo sicuro
 function formatSessionDate(sessionDate: string | undefined, sessionId: string): string {
@@ -38,6 +40,34 @@ function getSiteUrl() {
   
   // Fallback per sviluppo locale
   return 'http://localhost:3000'
+}
+
+// Query GraphQL per recuperare il payment_recipient del tour
+const GET_TOUR_PAYMENT_RECIPIENT = gql`
+  query GetTourPaymentRecipient($id: ID!) {
+    tour(id: $id) {
+      id
+      PaymentRecipient
+    }
+  }
+`
+
+// Funzione per recuperare il payment_recipient del tour
+async function getTourPaymentRecipient(tourId: string): Promise<'weshoot' | 'agency'> {
+  try {
+    const client = getClient()
+    const data = await client.request<{ tour: { PaymentRecipient?: string } }>(
+      GET_TOUR_PAYMENT_RECIPIENT,
+      { id: tourId }
+    )
+    
+    // Default to 'agency' if not specified
+    return (data.tour?.PaymentRecipient as 'weshoot' | 'agency') || 'agency'
+  } catch (error) {
+    console.error('Error fetching tour payment recipient:', error)
+    // Default to 'agency' in case of error
+    return 'agency'
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -154,6 +184,10 @@ export async function POST(request: NextRequest) {
 
     // Note: Data comes from Strapi via the client
     // The webhook will validate the payment and create the booking
+    
+    // Fetch tour payment recipient from CMS
+    const paymentRecipient = await getTourPaymentRecipient(tourId)
+    console.log(`💳 [CHECKOUT] Payment recipient for tour ${tourId}: ${paymentRecipient}`)
 
     // Create Stripe Checkout Session with billing address collection
     // finalAmount is already the total for all people, so we need to divide by quantity for unit_amount
@@ -226,7 +260,45 @@ export async function POST(request: NextRequest) {
         giftCardCode: giftCardCode || '',
         giftCardDiscount: giftCardDiscount.toString(),
         originalAmount: amount.toString(),
+        paymentRecipient, // Track who receives this payment
       },
+    }
+    
+    // Add Stripe Connect parameters if payment goes to agency
+    if (paymentRecipient === 'agency') {
+      const agencyAccountId = process.env.STRIPE_CONNECT_AGENCY_ACCOUNT_ID
+      
+      if (!agencyAccountId) {
+        console.error('❌ [CHECKOUT] STRIPE_CONNECT_AGENCY_ACCOUNT_ID not configured')
+        return NextResponse.json(
+          { error: 'Payment configuration error' },
+          { status: 500 }
+        )
+      }
+      
+      // Calculate platform fee if configured (optional)
+      const platformFeePercent = parseFloat(process.env.STRIPE_PLATFORM_FEE_PERCENT || '0')
+      const platformFeeAmount = platformFeePercent > 0 
+        ? Math.round(finalAmount * (platformFeePercent / 100))
+        : 0
+      
+      console.log(`🏢 [CHECKOUT] Routing to agency account: ${agencyAccountId}`)
+      if (platformFeeAmount > 0) {
+        console.log(`💰 [CHECKOUT] Platform fee: ${platformFeeAmount / 100}€ (${platformFeePercent}%)`)
+      }
+      
+      // Add payment_intent_data for Stripe Connect
+      sessionParams.payment_intent_data = {
+        on_behalf_of: agencyAccountId,
+        transfer_data: {
+          destination: agencyAccountId,
+        },
+        ...(platformFeeAmount > 0 && {
+          application_fee_amount: platformFeeAmount,
+        }),
+      }
+    } else {
+      console.log(`📸 [CHECKOUT] Payment stays on WeShoot account`)
     }
 
     const checkoutSession = await stripe.checkout.sessions.create(sessionParams)

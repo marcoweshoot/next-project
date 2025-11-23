@@ -32,6 +32,9 @@ export interface Tour {
   status?: string;
   difficulty?: 'easy' | 'medium' | 'hard';
   experience_level?: string;
+  
+  // Payment routing for Stripe Connect
+  payment_recipient?: 'weshoot' | 'agency';
 
   // Coach
   coach: {

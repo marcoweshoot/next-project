@@ -60,6 +60,7 @@ const TOURS_QUERY = /* GraphQL */ `
       things_needed
       video_url
       locale
+      PaymentRecipient
 
       places { slug locale name }
       states { name slug description locale }

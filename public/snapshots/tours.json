@@ -11,6 +11,7 @@
     "things_needed": "<p>Attrezzatura fotografica:</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 16mm) e focali medio/lunghe (24mm-300mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p><br>Abbigliamento:</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scaldacollo</li><li>Scarponi da Trekking</li><li>Costume da Bagno</li><li>Ramponcini da ghiaccio</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "reykjavik",
       "locale": "it",
@@ -1937,6 +1938,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Astroinseguitore (opzionale)</li></ul><p>&nbsp;</p><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scaldacollo</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "canarie",
       "locale": "it",
@@ -2863,6 +2865,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e tele zoom (100mm-400mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Cappello (periodo invernale)</li><li>Guanti (periodo invernale)</li><li>Scarpe da Trekking (consigliate)</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "toscana",
       "locale": "it",
@@ -5994,6 +5997,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e tele zoom (24mm-200mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Scarpe comode o da Trekking</li><li>Insetticida</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "valensole",
       "locale": "it",
@@ -7021,6 +7025,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "algarve",
       "locale": "it",
@@ -8013,6 +8018,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "veneto",
       "locale": "it",
@@ -9270,6 +9276,7 @@
     "things_needed": "<p>Attrezzatura fotografica:</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:</p><ul><li>Vestiario comodo e impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "liguria",
       "locale": "it",
@@ -10783,6 +10790,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e tele zoom (dai 24mm a 300mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "alpi-giulie",
       "locale": "it",
@@ -11419,6 +11427,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking (comsigliato)</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "basilicata",
       "locale": "it",
@@ -11983,6 +11992,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 16mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Astroinseguitore (opzionale)</li></ul><p>Abbigliamento:</p><ul><li>Vestiario da montagna impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "weshoot",
     "places": {
       "slug": "abruzzo",
       "locale": "it",
@@ -12560,6 +12570,7 @@
     "things_needed": "<p>Attrezzatura fotografica:</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "zermatt",
       "locale": "it",
@@ -13068,6 +13079,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li><li>Ramponcini</li><li>Ghette</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "lofoten",
       "locale": "it",
@@ -14704,6 +14716,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Astroinseguitore (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo per il giorno, maglietta e calzoncini</li><li>Vestiario caldo per la notte, termica, pile e piumino</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li><li>Crema solare</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "sahara",
       "locale": "it",
@@ -15787,6 +15800,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "aqaba",
       "locale": "it",
@@ -17073,6 +17087,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li><li>Insetticida</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "isola-skye",
       "locale": "it",
@@ -18198,6 +18213,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "madeira",
       "locale": "it",
@@ -19136,6 +19152,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Astroinseguitore (opzionale)</li></ul><p>Abbigliamento:</p><ul><li>Vestiario comodo e impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "canarie",
       "locale": "it",
@@ -20014,6 +20031,7 @@
     "things_needed": "<p>Abbigliamento classico da Trekking, leggero per camminare di giorno (calzoncini, t-shirt), e termico/traspirante per i pernotti (pantaloni lunghi, maglie e completi impermeabili per quando ci saranno piovaschi di passaggio... e ci saranno). Quindi scarponcini in gore-tex, un grande zaino comodo per camminare (ideale 80lt). Sicuramente un buon sacco a pelo ed un materassino isolante per dormire comodi. Per i pernotti all'aperto verrà fornita una tenda doppia (per due persone) dallo staff, ed è inclusa nel prezzo del viaggio. (supplemento per la tenda singola €50,00)</p>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "nord-norge",
       "locale": "it",
@@ -20732,6 +20750,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm) e tele (70-200mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Astroinseguitore (opzionale)</li></ul><p>Abbigliamento:</p><ul><li>Vestiario comodo e impermeabile</li><li>Maglia termica</li><li>Pile</li><li>Piumino</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "antofagasta",
       "locale": "it",
@@ -21693,6 +21712,7 @@
     "things_needed": "<p>Abbigliamento classico da Trekking, leggero per camminare di giorno (calzoncini, t-shirt), e termico/traspirante per i pernotti (pantaloni lunghi, maglie e completi impermeabili per quando ci saranno piovaschi di passaggio... e ci saranno). Quindi scarponcini in gore-tex, un grande zaino comodo per camminare (ideale 80lt).</p>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": null,
     "places": {
       "slug": "lofoten",
       "locale": "it",
@@ -22732,6 +22752,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "goreme",
       "locale": "it",
@@ -23960,6 +23981,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm), medio zoom (24mm-70mm) e tele (70-200mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri Fotografici ND (opzionale)</li><li>Filtro polarizzatore</li></ul><p>&nbsp;</p><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e caldo</li><li>Cappello</li><li>Guanti</li><li>Impermeabile</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "dublino",
       "locale": "it",
@@ -25296,6 +25318,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e tele zoom (24mm-200mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e impermeabile</li><li>Scarpe comode o da Trekking</li><li>Insetticida</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "amsterdam",
       "locale": "it",
@@ -25894,6 +25917,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm), medio zoom (24mm-70mm) e tele (70-200mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri Fotografici ND (opzionale)</li><li>Filtro polarizzatore</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario comodo e caldo</li><li>Cappello</li><li>Impermeabile</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "bretagna",
       "locale": "it",
@@ -26872,6 +26896,7 @@
     "things_needed": "<p>Attrezzatura fotografica:</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 16mm) e focali medio/lunghe (24mm-300mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p><br>Abbigliamento:</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scarponi da Trekking</li><li>Costume da Bagno</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "reykjavik",
       "locale": "it",
@@ -28114,6 +28139,7 @@
     "things_needed": "<p>Attrezzatura fotografica:</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 16mm) e focali medio/lunghe (24mm-300mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p><br>Abbigliamento:</p><ul><li>Vestiario da montagna impermeabile e traspirante</li><li>Cappello</li><li>Guanti</li><li>Scaldacollo</li><li>Scarponi da Trekking</li><li>Costume da Bagno</li><li>Ramponcini da ghiaccio</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "weshoot",
     "places": {
       "slug": "reykjavik",
       "locale": "it",
@@ -29681,6 +29707,7 @@
     "things_needed": "<p style=\"margin-left:0px;\">Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm) e tele (70-200mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Astroinseguitore (opzionale)</li></ul><p style=\"margin-left:0px;\">Abbigliamento:</p><ul><li>Vestiario comodo e impermeabile</li><li>Maglia termica</li><li>Pile</li><li>Piumino</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "fitz-roy",
       "locale": "it",
@@ -30629,6 +30656,7 @@
     "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>&nbsp;</p><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario pesante da montagna impermeabile e traspirante</li><li>Cappello di lana</li><li>Guanti pesanti</li><li>Scarponi isolanti</li><li>Ramponcini</li><li>Ciaspole</li><li>Verrà creato un gruppo whatsapp la settimana prima dei viaggio per coordinare acquisti o noleggi extra</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "veneto",
       "locale": "it",
@@ -31519,6 +31547,7 @@
     "things_needed": "<p>Fotografica:</p><ul style=\"list-style-type:disc;\"><li>Treppiede</li><li>Relfex, Mirrorless o cellulare</li><li>Grandangolo (tra i 10mm e 18mm) e medio zoom (fino a 100mm)</li><li>Filtri fotografici come polarizzatore e ND (opzionali)</li><li>Scatto remoto (opzionale)<br><br>Abbigliamento:</li><li>Vestiario comodo e fresco (impermeabile in caso di pioggia)</li><li>Scarpe comode per camminare</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "weshoot",
     "places": {
       "slug": "lazio",
       "locale": "it",
@@ -33230,6 +33259,7 @@
     "things_needed": "<p>ATTREZZATURA CONSIGLIATA</p><ul><li>Reflex o Mirrorless</li><li>Obiettivo Grandangolare, Ultragrandangolare o Medio Zoom</li><li>Treppiede</li></ul><p>Abbigliamento:</p><ul><li>Vestiario antivento e antipioggia adatto a temperature autunnali fresche</li><li>Scarpe da Trekking per non avere problemi a camminare nel bosco</li><li>Guanti e Cappello (da tenere con se e usare se necessario)</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "weshoot",
     "places": {
       "slug": "abruzzo",
       "locale": "it",
@@ -33606,6 +33636,7 @@
     "things_needed": "<p>Attrezzatura Fotografica Consigliata<br>Reflex o Mirrorless<br>Obiettivo Grandangolare, Medio-Tele o Super-Tele<br>Treppiede (consigliate ma non obbligatorie le punte da ghiaccio)<br>Filtri ND per lunghe esposizioni</p><p>Abbigliamento Consigliato:<br>Vestiario pesante adatto a temperature Invernali (Negli anni precedenti su<br>questo spot ho fotografato anche a -10 gradi ma di Sera o Mattina presto le<br>temperature possono scendere ancora di più)<br>Scarpe da Trekking (preferibilmente a collo alto)<br>Calzini Pesanti da Trekking Invernali<br>Guanti (consigliati anche muffole/sovraguanti) e Cappello caldo<br>Ciaspole (necessarie per camminare sulla neve alta senza sprofondare)</p>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "abruzzo",
       "locale": "it",
@@ -34008,6 +34039,7 @@
     "things_needed": "<p>ATTREZZATURA CONSIGLIATA</p><ul><li>Reflex o Mirrorless</li><li>Obiettivo Grandangolare e/o Ultragrandangolare.</li><li>Treppiede stabile e preferibilmente senza colonna centrale.</li><li>Filtro Polarizzatore (Molto Consigliato)</li><li>Filtri ND (opzionali)</li></ul><p>Abbigliamento e Attrezzatura:</p><ul><li>Vestiario di fine Inverno/Autunnale.</li><li>Pantaloni da Trekking o comunque adatti a muoversi, evitare jeans.</li><li>Scarpe da Trekking</li><li><strong>STIVALI IMPERMEABILI/STIVALI DA PESCA/TUTA DA PESCA</strong></li><li><strong>OBBLIGATORI PER IMMERGERE PIEDI/GAMBE IN ACQUA</strong></li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "weshoot",
     "places": {
       "slug": "molise",
       "locale": "it",
@@ -34547,6 +34579,7 @@
     "things_needed": "<p>Reflex o Mirrorless<br>Obiettivo Grandangolare.<br>Treppiede stabile e preferibilmente senza colonna centrale.<br>Filtro Polarizzatore (molto consigliato)<br>Filtri ND (opzionali ma molto consigliati)<br>Filtri GND (opzionali ma consigliati)<br>Intervallometro/Telecomando di scatto remoto con funzionalità BULB</p><p><br>Abbigliamento e Attrezzatura:<br>Vestiario Primaverile<br>Pantaloni da Trekking o comunque adatti a muoversi, evitare jeans</p>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "abruzzo",
       "locale": "it",
@@ -35150,6 +35183,7 @@
     "things_needed": "<p>Attrezzatura Fotografica:</p><ul style=\"list-style-type:disc;\"><li>Reflex o Mirrorless</li><li>Obiettivo Grandangolare e/o Medio Tele</li><li>Teleobiettivo (facoltativo o comunque se si vuole portare nel Viaggio poi</li><li>non è sempre consigliato portarlo per ogni uscita, dipende dallo spot)</li><li>Treppiede molto stabile e preferibilmente senza colonna centrale.</li><li>Filtro Polarizzatore (Molto Consigliato)</li><li>Filtri ND (molto consigliati per paesaggi marini o in condizioni nuvolose)</li></ul><p>Abbigliamento:</p><ul style=\"list-style-type:disc;\"><li>Vestiario a strati antivento/antipioggia, le temperature non saranno basse</li><li>ma ci si potrebbe trovare in condizioni di alta umidità e vento forte</li><li>pertanto bisognerà portare dalla maglia a maniche corte fino ad un</li><li>vestiario che vada a coprire quelle che in Italia sono condizioni Autunnali</li><li>inoltrate, consigliamo anche qualche pile non si sa mai.</li><li>Pantaloni da Trekking o comunque adatti a muoversi, evitare jeans.</li><li>Scarpe da Trekking impermeabili.</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "isole-faroe",
       "locale": "it",
@@ -36123,6 +36157,7 @@
     "things_needed": "<p>Attrezzatura fotografica:</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (opzionale)</li><li>Filtri fotografici come polarizzatore e ND (opzionale)</li></ul><p>Abbigliamento:</p><ul><li>2 pantaloni da trekking (quelli che si dividono sono ideali per il giorno dove avremo temperature alte)</li><li>Numero di t-shirt e intimo in base alle necessità e 1–2 felpe</li><li>Scarpe estive e ciabatte per il giorno, una scarpa piu pesante per la sera, non necessariamente uno scarpone da trekking</li><li>Sacco a pelo (comfort intorno ai 0°C)</li><li>Giacca che tenga caldo anche da fermi con circa 3°C (nel deserto di notte con vento può essere fresco</li><li>Cappello e guanti (dipende da quanto soffri il freddo)</li><li>Torcia frontale</li><li>Occhiali da sole</li><li>Asciugamano (meglio se da viaggio, compatto)</li><li>Valigia per trasportare il vestiario</li><li>Zaino con attrezzatura fotografica personale<br>Anche se dormiremo in tenda, saremo sempre vicini all’auto, se hai dei powerbank per caricare la fotocamera ed il cellulare è bene portarli</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "djanet",
       "locale": "it",
@@ -36922,6 +36957,7 @@
     "things_needed": "<p>Attrezzatura fotografica consigliata:</p><ul><li>Reflex o Mirrorless</li><li>Obiettivo Grandangolare</li><li>Obiettivo Medio-Tele (facoltativo ma utilizzabile)</li><li>Treppiede stabile e preferibilmente senza colonna centrale.</li><li>Filtri non obbligatori</li><li>Intervallometro/Telecomando di scatto remoto con funzionalità BULB solo per eventuale fotografia notturna</li></ul><p><br>Abbigliamento consigliato per il workshop:</p><ul><li>Vestiario Invernale da neve, termico</li><li>Scaldini, cappello, maglie termiche, calzemaglie termiche e tutti gli</li><li>accessori del caso per ridurre al minimo il freddo</li><li>Torcia da testa</li><li>Ciaspole (obbligatorio almeno portarle per camminare senza sprofondare<br>in caso di neve alta)</li><li>bastoncini da trekking (opzionali)</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "abruzzo",
       "locale": "it",
@@ -37315,6 +37351,7 @@
     "things_needed": "<p>Fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 15mm) e medio zoom (24mm-70mm)</li><li>Telecomando con temporizzatore (se lo hai portalo, se non lo hai non serve comprarlo)</li><li>Filtri fotografici come polarizzatore e ND (se li hai portali, se non li hai parlerai con il coach per capire se e quali acquistare)</li></ul><p>Abbigliamento:&nbsp;</p><ul><li>Vestiario sufficientemente pesante da montagna impermeabile e traspirante</li><li>Maglia Termica</li><li>Cappello di lana</li><li>Guanti</li><li>Scarponi isolanti</li><li>Verrà creato un gruppo whatsapp la settimana prima dei viaggio per coordinare acquisti o noleggi extra</li></ul>",
     "video_url": null,
     "locale": "it",
+    "PaymentRecipient": "agency",
     "places": {
       "slug": "veneto",
       "locale": "it",

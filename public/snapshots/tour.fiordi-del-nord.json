@@ -10,6 +10,7 @@
   "things_needed": "<p>Abbigliamento classico da Trekking, leggero per camminare di giorno (calzoncini, t-shirt), e termico/traspirante per i pernotti (pantaloni lunghi, maglie e completi impermeabili per quando ci saranno piovaschi di passaggio... e ci saranno). Quindi scarponcini in gore-tex, un grande zaino comodo per camminare (ideale 80lt).</p>",
   "video_url": null,
   "locale": "it",
+  "PaymentRecipient": null,
   "places": {
     "slug": "lofoten",
     "locale": "it",

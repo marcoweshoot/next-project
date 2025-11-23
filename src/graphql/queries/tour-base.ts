@@ -31,6 +31,7 @@ export const TOUR_BASE_FIELDS = gql`
     workshop
     priority
     locale
+    PaymentRecipient
 
 
     highlights {

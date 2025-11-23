@@ -10,6 +10,7 @@
   "things_needed": "<p>ATTREZZATURA CONSIGLIATA</p><ul><li>Reflex o Mirrorless</li><li>Obiettivo Grandangolare, Ultragrandangolare o Medio Zoom</li><li>Treppiede</li></ul><p>Abbigliamento:</p><ul><li>Vestiario antivento e antipioggia adatto a temperature autunnali fresche</li><li>Scarpe da Trekking per non avere problemi a camminare nel bosco</li><li>Guanti e Cappello (da tenere con se e usare se necessario)</li></ul>",
   "video_url": null,
   "locale": "it",
+  "PaymentRecipient": "weshoot",
   "places": {
     "slug": "abruzzo",
     "locale": "it",

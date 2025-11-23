@@ -10,6 +10,7 @@
   "things_needed": "<p>Attrezzatura fotografica:&nbsp;</p><ul><li>Treppiede</li><li>Relfex o Mirrorless</li><li>Grandangolo (tra i 10mm e 16mm)</li><li>Telecomando con temporizzatore (consigliato)</li><li>Astroinseguitore (opzionale)</li></ul><p>Abbigliamento:</p><ul><li>Vestiario da montagna impermeabile</li><li>Cappello</li><li>Guanti</li><li>Scarpe da Trekking</li></ul>",
   "video_url": null,
   "locale": "it",
+  "PaymentRecipient": "weshoot",
   "places": {
     "slug": "abruzzo",
     "locale": "it",
