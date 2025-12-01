@@ -16,9 +16,33 @@ export async function POST(request: NextRequest) {
     const userAgent = request.headers.get('user-agent')
     
     // Leggi i cookie _fbp e _fbc dalla richiesta
-    const cookies = getCookies({ req: request });
-    const fbp = cookies['_fbp'] || undefined;
-    const fbc = cookies['_fbc'] || undefined;
+    let fbp: string | undefined
+    let fbc: string | undefined
+    
+    try {
+      const cookies = getCookies({ req: request });
+      fbp = cookies['_fbp'] || undefined;
+      fbc = cookies['_fbc'] || undefined;
+    } catch (error) {
+      console.warn('⚠️ [API /track-fb-event] Error reading cookies with getCookies, trying manual parsing:', error)
+      
+      // Fallback: leggi i cookie manualmente dall'header
+      const cookieHeader = request.headers.get('cookie')
+      if (cookieHeader) {
+        const cookieMatch = cookieHeader.match(/_fbp=([^;]+)/)
+        if (cookieMatch) fbp = cookieMatch[1]
+        
+        const fbcMatch = cookieHeader.match(/_fbc=([^;]+)/)
+        if (fbcMatch) fbc = fbcMatch[1]
+      }
+    }
+
+    console.log('📊 [API /track-fb-event] Cookies received:', {
+      hasFbp: !!fbp,
+      hasFbc: !!fbc,
+      fbpValue: fbp ? `${fbp.substring(0, 10)}...` : 'missing',
+      fbcValue: fbc ? `${fbc.substring(0, 10)}...` : 'missing'
+    })
 
     // Recupera i dati dell'utente loggato per l'Advanced Matching
     const supabase = await createServerClientSupabase()
@@ -47,11 +71,34 @@ export async function POST(request: NextRequest) {
         userData.ln = profile.last_name
         userData.ph = profile.mobile_phone
       }
+
+      // Log della qualità dei dati utente
+      const dataQuality = {
+        hasEmail: !!userData.em,
+        hasPhone: !!userData.ph,
+        hasFirstName: !!userData.fn,
+        hasLastName: !!userData.ln,
+        hasExternalId: !!userData.external_id,
+        hasFbp: !!userData.fbp,
+        hasFbc: !!userData.fbc,
+        hasIp: !!userData.client_ip_address && userData.client_ip_address !== '127.0.0.1',
+        hasUserAgent: !!userData.client_user_agent
+      }
+      
+      const matchingScore = Object.values(dataQuality).filter(Boolean).length
+      const maxScore = Object.keys(dataQuality).length
+      
+      console.log('📊 [API /track-fb-event] User data quality:', {
+        ...dataQuality,
+        matchingScore: `${matchingScore}/${maxScore}`,
+        quality: matchingScore >= 7 ? '✅ Excellent' : matchingScore >= 5 ? '⚠️ Good' : '❌ Poor'
+      })
+    } else {
+      console.warn('⚠️ [API /track-fb-event] No user logged in - limited matching data available')
     }
 
-    // Invia l'evento all'API Conversions in modo non bloccante
-    // Non usiamo await qui per non far attendere il client
-    sendServerEvent({
+    // Invia l'evento all'API Conversions e attendi la risposta
+    const success = await sendServerEvent({
       event_name,
       event_id,
       event_source_url,
@@ -59,8 +106,22 @@ export async function POST(request: NextRequest) {
       custom_data,
     })
 
-    // Rispondi immediatamente al client senza attendere la risposta di Facebook
-    return NextResponse.json({ success: true, message: 'Event received and is being processed.' })
+    if (!success) {
+      console.error('❌ [API /track-fb-event] Failed to send event to Facebook CAPI')
+      // Restituisci comunque successo al client per non bloccare il flusso utente
+      return NextResponse.json({ 
+        success: true, 
+        message: 'Event received but failed to send to Facebook',
+        warning: 'CAPI event not sent'
+      })
+    }
+
+    console.log('✅ [API /track-fb-event] Event sent successfully to Facebook CAPI', {
+      event_name,
+      event_id
+    })
+
+    return NextResponse.json({ success: true, message: 'Event sent successfully to Facebook.' })
 
   } catch (error) {
     console.error('❌ [API /track-fb-event] Error processing event:', error)
