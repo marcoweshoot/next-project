@@ -193,15 +193,9 @@ export async function POST(request: NextRequest) {
     // finalAmount is already the total for all people, so we need to divide by quantity for unit_amount
     const unitAmount = Math.round(finalAmount / quantity)
     
-    // Use different payment methods based on who receives the payment
-    // Platform account (WeShoot) has more payment methods enabled
-    // Connected accounts (agency) may have limited payment methods
-    const paymentMethods: Stripe.Checkout.SessionCreateParams.PaymentMethodType[] = paymentRecipient === 'weshoot' 
-      ? ['card', 'klarna', 'sepa_debit'] 
-      : ['card'] // Only card for connected accounts unless they enable other methods
-    
+    // Both platform and connected agency accounts have card, Klarna, SEPA, and Link enabled
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
-      payment_method_types: paymentMethods,
+      payment_method_types: ['card', 'klarna', 'sepa_debit', 'link'],
       line_items: [
         {
           price_data: {
