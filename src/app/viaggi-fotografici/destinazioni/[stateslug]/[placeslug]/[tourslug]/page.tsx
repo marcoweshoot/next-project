@@ -370,6 +370,23 @@ export default async function TourDetailPage({ params }: Props) {
       ],
     }
 
+    // FAQ Schema (JSON-LD) per Google Rich Results
+    const stripHtml = (html: string) => html.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim()
+    const faqJsonLd = Array.isArray(tour.faqs) && tour.faqs.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: tour.faqs.map((faq: any) => ({
+            '@type': 'Question',
+            name: faq.question || '',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: stripHtml(faq.answer || ''),
+            },
+          })),
+        }
+      : null
+
     return (
       <div className="min-h-screen bg-background">
         <Header />
@@ -382,11 +399,15 @@ export default async function TourDetailPage({ params }: Props) {
           placeSlug={placeslug}
         />
 
-        {/* JSON-LD (non influisce sull’interfaccia) */}
+        {/* JSON-LD (non influisce sull'interfaccia) */}
         <Script id="ld-product-tour" type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
         <Script id="ld-breadcrumbs" type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        {faqJsonLd && (
+          <Script id="ld-faq" type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        )}
 
         <SocialProofSection />
 
