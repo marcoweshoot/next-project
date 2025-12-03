@@ -21,6 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="it" suppressHydrationWarning className={montserrat.variable}>
       <head>
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="fOGlm_kplUD6mZkgEyyxXo7n3z_MR6LS-ZeBA_tss0I" />
+        
         {/* Viewport per mobile responsiveness - accessibile */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
