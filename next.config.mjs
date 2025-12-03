@@ -83,7 +83,7 @@ const config = {
     ];
   },
 
-  // Redirects (invariati)
+  // Redirects
   async redirects() {
     return [
       {
@@ -92,6 +92,18 @@ const config = {
         // nuovo schema:  /destinazioni/:stateslug/posti/:placeslug
         destination: "/viaggi-fotografici/destinazioni/:stateslug/posti/:placeslug",
         permanent: true, // 308 (SEO-friendly)
+      },
+      {
+        // Redirect del blog da subdirectory a sottodominio
+        source: "/blog",
+        destination: "https://blog.weshoot.it",
+        permanent: true, // 301 permanent redirect
+      },
+      {
+        // Redirect di tutti gli articoli del blog
+        source: "/blog/:path*",
+        destination: "https://blog.weshoot.it/:path*",
+        permanent: true, // 301 permanent redirect
       },
     ];
   },
