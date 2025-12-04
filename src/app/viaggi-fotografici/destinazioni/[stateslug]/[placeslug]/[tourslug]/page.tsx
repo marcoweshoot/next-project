@@ -319,43 +319,122 @@ export default async function TourDetailPage({ params }: Props) {
     const { metaDescription: seoDesc } = getSeoFromStrapi(tour)
     const productJsonLd: Record<string, any> = {
       '@context': 'https://schema.org',
-      '@type': 'Product',
+      '@type': ['Product', 'Service'],  // Servizio/esperienza, non prodotto fisico
       name: tour?.SEO?.metaTitle ?? tour?.title ?? 'Viaggio fotografico',
       description: seoDesc ?? tour?.summary ?? tour?.description ?? '',
       image: [absUrl(mainImg), ...gallery.map(absUrl)].filter(Boolean).slice(0, 6),
       sku: (tour?.sku ?? tourslug)?.toString().toUpperCase(),
       brand: { '@type': 'Brand', name: 'WeShoot' },
-      ...(lowPrice
-        ? {
-            offers:
-              highPrice && highPrice !== lowPrice
-                ? {
-                    '@type': 'AggregateOffer',
-                    priceCurrency: 'EUR',
-                    lowPrice: lowPrice.toFixed(2),
-                    highPrice: highPrice.toFixed(2),
-                    offerCount: String(offerCount || 1),
-                    availability: 'https://schema.org/InStock',
-                    url: pageUrl,
-                  }
-                : {
-                    '@type': 'Offer',
-                    priceCurrency: 'EUR',
-                    price: lowPrice.toFixed(2),
-                    availability: 'https://schema.org/InStock',
-                    url: pageUrl,
-                  },
-          }
-        : {}),
-      ...(reviewsCount
-        ? {
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: Math.max(1, Math.min(5, averageRating)).toFixed(1),
-              reviewCount: String(reviewsCount),
+      category: 'Tour fotografico',
+    }
+
+    // Aggiungi offers (obbligatorio per Google Product Schema)
+    // Se abbiamo un prezzo, usalo; altrimenti usa un'offerta base
+    if (lowPrice && lowPrice > 0) {
+      if (highPrice && highPrice !== lowPrice) {
+        productJsonLd.offers = {
+          '@type': 'AggregateOffer',
+          priceCurrency: 'EUR',
+          lowPrice: lowPrice.toFixed(2),
+          highPrice: highPrice.toFixed(2),
+          offerCount: String(offerCount || 1),
+          availability: 'https://schema.org/InStock',
+          url: pageUrl,
+          // Link ai termini di servizio con politica di cancellazione variabile
+          termsOfService: `${SITE_URL}/terms`,
+          // Nessuna spedizione fisica - è un servizio/esperienza
+          shippingDetails: {
+            '@type': 'OfferShippingDetails',
+            shippingDestination: {
+              '@type': 'DefinedRegion',
+              addressCountry: 'IT',
             },
-          }
-        : {}),
+            deliveryTime: {
+              '@type': 'ShippingDeliveryTime',
+              handlingTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 0,
+                maxValue: 0,
+                unitCode: 'DAY',
+              },
+              transitTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 0,
+                maxValue: 0,
+                unitCode: 'DAY',
+              },
+            },
+            shippingRate: {
+              '@type': 'MonetaryAmount',
+              value: '0',
+              currency: 'EUR',
+            },
+          },
+        }
+      } else {
+        productJsonLd.offers = {
+          '@type': 'Offer',
+          priceCurrency: 'EUR',
+          price: lowPrice.toFixed(2),
+          availability: 'https://schema.org/InStock',
+          url: pageUrl,
+          // Link ai termini di servizio con politica di cancellazione variabile
+          termsOfService: `${SITE_URL}/terms`,
+          // Nessuna spedizione fisica - è un servizio/esperienza
+          shippingDetails: {
+            '@type': 'OfferShippingDetails',
+            shippingDestination: {
+              '@type': 'DefinedRegion',
+              addressCountry: 'IT',
+            },
+            deliveryTime: {
+              '@type': 'ShippingDeliveryTime',
+              handlingTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 0,
+                maxValue: 0,
+                unitCode: 'DAY',
+              },
+              transitTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 0,
+                maxValue: 0,
+                unitCode: 'DAY',
+              },
+            },
+            shippingRate: {
+              '@type': 'MonetaryAmount',
+              value: '0',
+              currency: 'EUR',
+            },
+          },
+        }
+      }
+    } else {
+      // Fallback: se non c'è prezzo, indica che il prodotto richiede un contatto
+      // Questo è valido secondo schema.org per prodotti su richiesta
+      productJsonLd.offers = {
+        '@type': 'Offer',
+        priceCurrency: 'EUR',
+        price: '0',
+        availability: 'https://schema.org/PreOrder',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          price: '0',
+          priceCurrency: 'EUR',
+        },
+        url: pageUrl,
+        termsOfService: `${SITE_URL}/terms`,
+      }
+    }
+
+    // Aggiungi aggregateRating se ci sono recensioni
+    if (reviewsCount > 0) {
+      productJsonLd.aggregateRating = {
+        '@type': 'AggregateRating',
+        ratingValue: Math.max(1, Math.min(5, averageRating)).toFixed(1),
+        reviewCount: String(reviewsCount),
+      }
     }
 
     const breadcrumbJsonLd = {
