@@ -329,13 +329,31 @@ export function SimpleCheckoutModal({
     setError(error)
   }
 
+  // 🆕 Traccia InitiateCheckout quando il modal si apre
+  useEffect(() => {
+    if (isOpen) {
+      // Traccia l'evento quando il modal si apre
+      // Questo segue le best practice di Facebook: tracciare quando l'utente "inizia" il checkout
+      // L'evento viene tracciato con i valori iniziali (quantità e tipo di pagamento di default)
+      handleTrackInitiateCheckout()
+      
+      console.log('🎯 [FB PIXEL] InitiateCheckout tracked on modal open', {
+        tourTitle: tour.title,
+        quantity,
+        paymentType,
+        isBalancePayment
+      })
+    }
+  }, [isOpen]) // Si attiva ogni volta che il modal si apre
+  // Note: Usa i valori correnti di quantity/paymentType quando il modal si apre
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   const handleRegistrationSuccess = (userId: string) => {
     setRegisteredUserId(userId)
     setError(null)
     // Vai allo step 3 (pagamento) dopo il successo
     setCurrentStep(3)
-    // Traccia l'evento InitiateCheckout ORA che l'utente è identificato
-    handleTrackInitiateCheckout()
+    // Non tracciamo più qui perché già tracciato all'apertura del modal
   }
 
   const handleRegistrationError = (error: string) => {
@@ -352,8 +370,7 @@ export function SimpleCheckoutModal({
     } else {
       // Utente già registrato, vai allo step 3 (pagamento)
       setCurrentStep(3)
-      // Traccia l'evento InitiateCheckout ORA che l'utente è identificato
-      handleTrackInitiateCheckout()
+      // Non tracciamo più qui perché già tracciato all'apertura del modal
     }
   }
 
