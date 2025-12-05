@@ -11,7 +11,6 @@ type IubApi = {
 declare global {
   interface Window {
     _iub?: { cs?: { api?: IubApi } };
-    dataLayer: any[]; // dichiarata non opzionale nel tuo window.d.ts
   }
 }
 
