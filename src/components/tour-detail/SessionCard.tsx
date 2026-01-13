@@ -291,10 +291,10 @@ const SessionCard: React.FC<SessionCardProps> = ({
               </div>
 
               <div className="space-y-3">
-                <Button 
-                  onClick={openWhatsApp} 
+                <Button
+                  onClick={openWhatsApp}
                   variant="outline"
-                  className="w-full font-medium py-3 border-primary text-primary hover:bg-primary hover:text-primary-foreground" 
+                  className="w-full font-medium py-3 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   size="lg"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
@@ -303,14 +303,19 @@ const SessionCard: React.FC<SessionCardProps> = ({
 
                 {/* PAGA ORA - nuovo bottone di pagamento */}
                 {showPaymentButton && (
-                  <Button 
-                    onClick={() => setIsQuickCheckoutOpen(true)}
-                    className="w-full font-medium py-3 bg-primary hover:bg-primary/90 text-primary-foreground" 
-                    size="lg"
-                  >
-                    <CreditCard className="w-4 h-4 mr-2" />
-                    PRENOTA ORA
-                  </Button>
+                  <>
+                    <Button
+                      onClick={() => setIsQuickCheckoutOpen(true)}
+                      className="w-full font-medium py-3 bg-primary hover:bg-primary/90 text-primary-foreground"
+                      size="lg"
+                    >
+                      <CreditCard className="w-4 h-4 mr-2" />
+                      PRENOTA ORA
+                    </Button>
+                    <p className="text-xs text-muted-foreground text-center">
+                      💳 Puoi pagare anche a rate con Klarna
+                    </p>
+                  </>
                 )}
 
               </div>
@@ -369,8 +374,8 @@ const SessionCard: React.FC<SessionCardProps> = ({
               <div className="mb-3 flex justify-end">{getStatusBadge(session.status)}</div>
 
               <div className="space-y-2">
-                <Button 
-                  onClick={openWhatsApp} 
+                <Button
+                  onClick={openWhatsApp}
                   variant="outline"
                   className="w-full font-medium border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
@@ -384,13 +389,18 @@ const SessionCard: React.FC<SessionCardProps> = ({
                   const isSoldOut = ["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(normalizedStatus);
                   return showPaymentButton && !isSoldOut;
                 })() && (
-                  <Button 
-                    onClick={() => setIsQuickCheckoutOpen(true)}
-                    className="w-full font-medium bg-primary hover:bg-primary/90 text-primary-foreground"
-                  >
-                    <CreditCard className="w-4 h-4 mr-2" />
-                    PRENOTA ORA
-                  </Button>
+                  <>
+                    <Button
+                      onClick={() => setIsQuickCheckoutOpen(true)}
+                      className="w-full font-medium bg-primary hover:bg-primary/90 text-primary-foreground"
+                    >
+                      <CreditCard className="w-4 h-4 mr-2" />
+                      PRENOTA ORA
+                    </Button>
+                    <p className="text-xs text-muted-foreground text-center">
+                      💳 Puoi pagare anche a rate con Klarna
+                    </p>
+                  </>
                 )}
 
               </div>

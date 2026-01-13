@@ -675,24 +675,31 @@ export function SimpleCheckoutModal({
                   </Button>
                 </div>
               ) : (
-                <StripeCheckoutButton
-                  amount={getPaymentAmount() * 100}
-                  currency={session.currency.toLowerCase()}
-                  tourId={tour.id}
-                  sessionId={session.id}
-                  userId={user?.id || registeredUserId || ''}
-                  paymentType={isBalancePayment ? 'balance' : paymentType}
-                  quantity={quantity}
-                  tourTitle={tour.title}
-                  tourDestination={tour.title}
-                  sessionDate={session.date}
-                  sessionEndDate={tour.endDate}
-                  sessionPrice={session.price}
-                  sessionDeposit={session.deposit}
-                  giftCardCode={giftCardCode}
-                  onSuccess={handlePaymentSuccess}
-                  onError={handlePaymentError}
-                />
+                <div className="space-y-3">
+                  <StripeCheckoutButton
+                    amount={getPaymentAmount() * 100}
+                    currency={session.currency.toLowerCase()}
+                    tourId={tour.id}
+                    sessionId={session.id}
+                    userId={user?.id || registeredUserId || ''}
+                    paymentType={isBalancePayment ? 'balance' : paymentType}
+                    quantity={quantity}
+                    tourTitle={tour.title}
+                    tourDestination={tour.title}
+                    sessionDate={session.date}
+                    sessionEndDate={tour.endDate}
+                    sessionPrice={session.price}
+                    sessionDeposit={session.deposit}
+                    giftCardCode={giftCardCode}
+                    onSuccess={handlePaymentSuccess}
+                    onError={handlePaymentError}
+                  />
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                    <p className="text-sm text-blue-700 text-center">
+                      💳 <strong>Paga a rate con Klarna:</strong> Scegli Klarna al checkout per dividere il pagamento in comode rate senza interessi
+                    </p>
+                  </div>
+                </div>
               )}
               
               <div className="flex gap-3">
