@@ -482,14 +482,6 @@
       "icon": {
         "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_trasporto_via_mare_96_188f03ec6b.png"
       }
-    },
-    {
-      "title": "Hotel 4 stelle",
-      "description": "Tutti i soggiorni saranno in strutture da 4 stelle.",
-      "locale": "it",
-      "icon": {
-        "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_hotel_a_4_stelle_96_175ec22421.png"
-      }
     }
   ],
   "whats_not_includeds": [
@@ -864,7 +856,7 @@
     {
       "id": "faq-16",
       "question": "Direzione Tecnica dell'Agenzia Partner",
-      "answer": "<p>La nostra agenzia partner, Time Travel Bag, con sede operativa in Via Placido Martini 30, 00077, Monte Compatri (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
+      "answer": "<p>La nostra agenzia partner, Enruta360 srl, con sede operativa in Via Ludovico Ariosto 0, 00077, Rocca Priora (RM), è responsabile della direzione tecnica di tutti i nostri viaggi fotografici. Forti di una pluriennale esperienza nel settore del turismo e specializzati in viaggi a tema fotografico, Time Travel Bag garantisce la massima professionalità e sicurezza in ogni aspetto del vostro viaggio. Dal trasporto sicuro e affidabile, alla selezione di alloggi confortevoli e pittoreschi, fino all'organizzazione di ogni minimo dettaglio.</p>",
       "locale": "it"
     },
     {

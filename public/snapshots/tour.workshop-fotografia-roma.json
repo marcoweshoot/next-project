@@ -234,6 +234,90 @@
   ],
   "reviews": [
     {
+      "id": "264",
+      "title": "Un pomeriggio per Roma incredibile",
+      "description": "Grazie a Marco ho imparato a cercare la luce giusta, a costruire l’inquadratura e a usare i miei strumenti con consapevolezza rappresentando la città eterna in un set pieno di storie da raccontare.",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "created_at": "2026-01-05T23:03:37.000Z",
+      "user": {
+        "firstName": "Silvia",
+        "lastName": "Pierini",
+        "username": "Silvia Pierini",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "263",
+      "title": "Passeggiata fotografica interessante e divertente",
+      "description": "Passeggiata fotografica per le strade di Roma davvero molto interessante e divertente. Nonostante il pomeriggio caldissimo, il tempo è piacevolmente volato fino a tarda sera. Marco è stato sempre molto attento alle esigenze e competenze di ciascuno di noi e sempre pronto a darci tutte le spiegazioni tecniche. È stato vicino ad ognuno con professionalità e pazienza. Un’esperienza sicuramente consigliatissima e da ripetere!",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "created_at": "2026-01-05T22:58:40.000Z",
+      "user": {
+        "firstName": "Antonietta",
+        "lastName": "Di Vico",
+        "username": "Antonietta Di Vico",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "262",
+      "title": "Esperienza bellissima ed istruttiva",
+      "description": "Esperienza bellissima ed istruttiva. Grazie a Marco, la nostra guida, oltre che passare un pomeriggio con persone che condividono la mia stessa passione, ho appreso tanti consigli utili alla mia professione. Un'esperienza da fare per chi ama la fotografia e vuole migliorarsi",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "created_at": "2026-01-05T22:55:00.000Z",
+      "user": {
+        "firstName": "Eleonora",
+        "lastName": "Occhipinti",
+        "username": "Eleonora Occhipinti",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
+      "id": "261",
+      "title": "Pomeriggio Splendido",
+      "description": "È stato un pomeriggio splendido che mi sento di raccomandare a tutti gli appassionati di fotografia, per la preparazione e la gentilezza di Marco, che, sempre presente, seguendo ogni partecipante, ha offerto suggerimenti tecnici e creativi... grazie.",
+      "rating": 5,
+      "ratingOrganization": 5,
+      "ratingCordiality": 5,
+      "ratingProfessionality": 5,
+      "ratingKnowledge": 5,
+      "created_at": "2026-01-05T22:52:08.000Z",
+      "user": {
+        "firstName": "Sabina",
+        "lastName": "Cardana",
+        "username": "Sabina Cardana",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "strapi"
+    },
+    {
       "id": "248",
       "title": "Ottima compagnia e Insegnamenti",
       "description": "Un workshop fotografico in luoghi romantici in ottima compagnia e con i nostri accompagnatori Alessandro e Marco che hanno saputo creare un clima familiare ",
