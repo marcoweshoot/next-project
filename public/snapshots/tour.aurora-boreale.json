@@ -23,7 +23,7 @@
     "locale": "it"
   },
   "SEO": {
-    "metaTitle": "Viaggio Fotografico Islanda 2025 | WeShoot",
+    "metaTitle": "Viaggio Fotografico Islanda 2026 | WeShoot",
     "metaDescription": "Vivi un'esperienza incredibile in questo viaggio fotografico Islanda, scopri tutti i migliori spot fotografici insieme a due fotografi professionisti.",
     "structuredData": null
   },
@@ -1497,7 +1497,7 @@
       "id": "237",
       "start": "2026-03-07",
       "end": "2026-03-14",
-      "status": "scheduled",
+      "status": "almostFull",
       "maxPax": 7,
       "price": 2399,
       "deposit": 720,
@@ -1529,6 +1529,37 @@
       "start": "2026-10-10",
       "end": "2026-10-17",
       "status": "scheduled",
+      "maxPax": 7,
+      "price": 2399,
+      "deposit": 720,
+      "balance": 1679,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 2399,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/lorenzonightscapes/",
+          "firstName": "Lorenzo",
+          "lastName": "Ranieri Tenti",
+          "username": "lorenzoranieri",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
+          },
+          "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
+        }
+      ]
+    },
+    {
+      "id": "279",
+      "start": "2026-02-28",
+      "end": "2026-03-07",
+      "status": "soldOut",
       "maxPax": 7,
       "price": 2399,
       "deposit": 720,

@@ -23,7 +23,7 @@
     "locale": "it"
   },
   "SEO": {
-    "metaTitle": "Viaggio Fotografico Faroe 2025 | WeShoot",
+    "metaTitle": "Viaggio Fotografico Faroe 2026 | WeShoot",
     "metaDescription": "Esplora le Isole Faroe con un viaggio fotografico tra scogliere imponenti, fiordi spettacolari e villaggi remoti. Cattura paesaggi mozzafiato e l’incanto dell’aurora boreale.",
     "structuredData": null
   },
@@ -735,6 +735,37 @@
       "balance": 1810,
       "minPax": 4,
       "currency": "EUR",
+      "priceCompanion": 2590,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/ibuxus/",
+          "firstName": "Samuele",
+          "lastName": "Bucci",
+          "username": "samuelebucci",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+          },
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
+        }
+      ]
+    },
+    {
+      "id": "280",
+      "start": "2026-06-13",
+      "end": "2026-06-20",
+      "status": "soldOut",
+      "maxPax": 7,
+      "price": 2590,
+      "deposit": 780,
+      "balance": 1810,
+      "minPax": 3,
+      "currency": null,
       "priceCompanion": 2590,
       "users": [
         {

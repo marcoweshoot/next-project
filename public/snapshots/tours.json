@@ -24,7 +24,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Islanda 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Islanda 2026 | WeShoot",
       "metaDescription": "Vivi un'esperienza incredibile in questo viaggio fotografico Islanda, scopri tutti i migliori spot fotografici insieme a due fotografi professionisti.",
       "structuredData": null
     },
@@ -1498,7 +1498,7 @@
         "id": "237",
         "start": "2026-03-07",
         "end": "2026-03-14",
-        "status": "scheduled",
+        "status": "almostFull",
         "maxPax": 7,
         "price": 2399,
         "deposit": 720,
@@ -1530,6 +1530,37 @@
         "start": "2026-10-10",
         "end": "2026-10-17",
         "status": "scheduled",
+        "maxPax": 7,
+        "price": 2399,
+        "deposit": 720,
+        "balance": 1679,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 2399,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/lorenzonightscapes/",
+            "firstName": "Lorenzo",
+            "lastName": "Ranieri Tenti",
+            "username": "lorenzoranieri",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/lorenzo_ranieri_tenti_75b4a197e4.avif"
+            },
+            "bio": "<p>Content Creator e Formatore dell’accademia Fotografica WeShoot, informatore tecnico presso il Team Sony Alpha IT.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
+          }
+        ]
+      },
+      {
+        "id": "279",
+        "start": "2026-02-28",
+        "end": "2026-03-07",
+        "status": "soldOut",
         "maxPax": 7,
         "price": 2399,
         "deposit": 720,
@@ -1951,7 +1982,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico La Palma 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico La Palma 2026 | WeShoot",
       "metaDescription": "Parti per il viaggio fotografico La Palma, alla scoperta di un'isola delle Canarie dove potrai fotografare incredibili paesaggi e la via lattea.",
       "structuredData": null
     },
@@ -2878,7 +2909,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Val d'Orcia 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Val d'Orcia 2026 | WeShoot",
       "metaDescription": "Vieni a scoprire questo viaggio fotografico Val d'Orcia e le Crete Senesi dove impererai nuove tecniche fotografiche.",
       "structuredData": null
     },
@@ -5437,7 +5468,7 @@
         "id": "233",
         "start": "2026-02-21",
         "end": "2026-02-22",
-        "status": "scheduled",
+        "status": "soldOut",
         "maxPax": 8,
         "price": 349,
         "deposit": 105,
@@ -5468,7 +5499,7 @@
         "id": "236",
         "start": "2026-03-28",
         "end": "2026-03-29",
-        "status": "scheduled",
+        "status": "almostConfirmed",
         "maxPax": 8,
         "price": 349,
         "deposit": 105,
@@ -6010,7 +6041,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Provenza 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Provenza 2026 | WeShoot",
       "metaDescription": "Un viaggio fotografico Provenza tra i bellissimi campi di lavanda dove potrai ammirare albe, tramonti e via lattea.",
       "structuredData": null
     },
@@ -7038,7 +7069,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Algarve 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Algarve 2026 | WeShoot",
       "metaDescription": "Immergiti in questo viaggio fotografico ad Algarve tra mare, scogliere e paesaggi da togliere il fiato. Un'esperienza fotografica incredibile",
       "structuredData": null
     },
@@ -8031,7 +8062,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Dolomiti 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Dolomiti 2026 | WeShoot",
       "metaDescription": "Un'esperienza fotografica tra le incredibili cime più belle del mondo, le Dolomiti. Un viaggio fotografico organizzato in ogni dettaglio.",
       "structuredData": null
     },
@@ -9018,6 +9049,68 @@
             }
           }
         ]
+      },
+      {
+        "id": "278",
+        "start": "2026-07-16",
+        "end": "2026-07-19",
+        "status": "scheduled",
+        "maxPax": 7,
+        "price": 899,
+        "deposit": 270,
+        "balance": 629,
+        "minPax": 4,
+        "currency": "EUR",
+        "priceCompanion": 899,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/anto_tru_alo90/",
+            "firstName": "Antonello",
+            "lastName": "Alò",
+            "username": "antonelloalo",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
+            },
+            "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
+          }
+        ]
+      },
+      {
+        "id": "281",
+        "start": "2026-07-02",
+        "end": "2026-07-05",
+        "status": "soldOut",
+        "maxPax": 8,
+        "price": 990,
+        "deposit": 300,
+        "balance": 690,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 990,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/anto_tru_alo90/",
+            "firstName": "Antonello",
+            "lastName": "Alò",
+            "username": "antonelloalo",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
+            },
+            "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
+          }
+        ]
       }
     ],
     "faqs": [
@@ -9289,7 +9382,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Cinque Terre 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Cinque Terre 2026 | WeShoot",
       "metaDescription": "Un viaggio fotografico che ti farà innamorare delle Cinque Terre ed i suoi borghi a picco sul mare, illuminati dalle luci dell'alba e del tramonto.",
       "structuredData": null
     },
@@ -10803,7 +10896,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico lago di Bled 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico lago di Bled 2026 | WeShoot",
       "metaDescription": "Un viaggio fotografico interamente dedicato al lago di Bled ed ai paesaggi incantati delle colline slovene circostanti.",
       "structuredData": null
     },
@@ -11440,7 +11533,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Matera 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Matera 2027 | WeShoot",
       "metaDescription": "Alla scoperta di Matera e della città dei sassi in un viaggio fotografico dove imparerai nuove tecniche fotografiche insieme a 2 fotografi esperti.",
       "structuredData": null
     },
@@ -12005,7 +12098,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Rocca Calascio 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Rocca Calascio 2026 | WeShoot",
       "metaDescription": "Trascorri una giornata dal tramonto all'alba in una location esclusiva come Rocca Calascio, un viaggio fotografico organizzato con fotografi professionisti.",
       "structuredData": null
     },
@@ -12375,13 +12468,13 @@
         "id": "250",
         "start": "2026-05-09",
         "end": "2026-05-09",
-        "status": "scheduled",
+        "status": "almostFull",
         "maxPax": 8,
         "price": 129,
         "deposit": 129,
         "balance": 0,
         "minPax": 4,
-        "currency": null,
+        "currency": "EUR",
         "priceCompanion": 129,
         "users": [
           {
@@ -12398,6 +12491,22 @@
               "name": "Public",
               "description": "Default role given to unauthenticated user.",
               "type": "public"
+            }
+          },
+          {
+            "instagram": "https://www.instagram.com/marco_carotenuto",
+            "firstName": "Marco",
+            "lastName": "Carotenuto",
+            "username": "marcocarotenuto",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+            },
+            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "level": "coach",
+            "role": {
+              "name": "SuperAdmin",
+              "description": "Top level user",
+              "type": "authenticated"
             }
           }
         ]
@@ -13092,7 +13201,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Lofoten 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Lofoten 2026 | WeShoot",
       "metaDescription": "Ti faremo vivere un esperienza unica andando alla ricerca dell'aurora boreale e degli spot più incredibili in questo viaggio fotografico alle Lofoten.",
       "structuredData": null
     },
@@ -14395,7 +14504,7 @@
         "id": "234",
         "start": "2026-02-07",
         "end": "2026-02-14",
-        "status": "scheduled",
+        "status": "almostFull",
         "maxPax": 7,
         "price": 1999,
         "deposit": 600,
@@ -14434,6 +14543,37 @@
         "minPax": 3,
         "currency": "EUR",
         "priceCompanion": 2199,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/ibuxus/",
+            "firstName": "Samuele",
+            "lastName": "Bucci",
+            "username": "samuelebucci",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+            },
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
+          }
+        ]
+      },
+      {
+        "id": "282",
+        "start": "2026-02-14",
+        "end": "2026-02-21",
+        "status": "soldOut",
+        "maxPax": 7,
+        "price": 1999,
+        "deposit": 690,
+        "balance": 1309,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 1999,
         "users": [
           {
             "instagram": "https://www.instagram.com/ibuxus/",
@@ -14729,7 +14869,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Tunisia 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Tunisia 2026 | WeShoot",
       "metaDescription": "Vivi l'esperienza di un viaggio fotografico in Tunisia: dormire nel deserto del Sahara in un campo tendato sotto miliardi di stelle e la via lattea.",
       "structuredData": null
     },
@@ -15813,7 +15953,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Giordania 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Giordania 2026 | WeShoot",
       "metaDescription": "Il viaggio fotografico in Giordania ti farà vivere un esperienza tra incredibili paesaggi, antiche tradizioni e la magia del deserto Wadi Rum.",
       "structuredData": null
     },
@@ -17100,7 +17240,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Scozia e Isola di Skye 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Scozia e Isola di Skye 2026 | WeShoot",
       "metaDescription": "Un viaggio fotografico tra i paesaggi mistici della Scozia e dell'Isola di Skye, tra scogliere, fari e luci incredibili.",
       "structuredData": null
     },
@@ -18226,7 +18366,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Madeira 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Madeira 2026 | WeShoot",
       "metaDescription": "Vieni a fotografare le foreste incantate e le scogliere incredibili in questo viaggio fotografico sulla bellissima isola di Madeira.",
       "structuredData": null
     },
@@ -19165,7 +19305,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Tenerife 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Tenerife 2026 | WeShoot",
       "metaDescription": "Un viaggio fotografico tra paesaggi marziani di Tenerife e i suoi cieli notturni incredibili dove fotografare la via lattea.",
       "structuredData": null
     },
@@ -20044,7 +20184,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Senja 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Senja 2026 | WeShoot",
       "metaDescription": "Scopri i fiordi norvegesi in questo viaggio fotografico sull'isola di Senja, trekking e viste sui fiordi da togliere il fiato.",
       "structuredData": null
     },
@@ -20763,7 +20903,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Atacama 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Atacama 2027 | WeShoot",
       "metaDescription": "Unisciti a questa esperienza unica, sarà un viaggio fotografico dedicato alla via lattea nel deserto di Atacama, luogo migliore per questo tipo di foto.",
       "structuredData": null
     },
@@ -21725,7 +21865,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Lofoten Estive 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Lofoten Estive 2026 | WeShoot",
       "metaDescription": "Scopri i fiordi norvegesi in questo viaggio fotografico Lofoten che ti farà esplorare l'isola dalle cime più alte e farti ammirare i fiordi dall'alto.",
       "structuredData": null
     },
@@ -22765,7 +22905,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Cappadocia 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Cappadocia 2026 | WeShoot",
       "metaDescription": "Unisciti a questo viaggio fotografico in Cappadocia dove potrai fotografare incredibili paesaggi e lo spettacolo delle mongolfiere.",
       "structuredData": null
     },
@@ -23994,7 +24134,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Irlanda 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Irlanda 2027 | WeShoot",
       "metaDescription": "Immergiti nei paesaggi magici tra scogliere, castelli, fari e bellissime campagne verdeggianti. Il viaggio fotografico in Irlanda ti aspetta.",
       "structuredData": null
     },
@@ -25331,7 +25471,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Olanda tulipani 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Olanda tulipani 2027 | WeShoot",
       "metaDescription": "Parti insieme a noi per questo viaggio fotografico in Olanda tra gli incantevoli paesaggi dei campi fioriti di tulipani e dei mulini a vento.",
       "structuredData": null
     },
@@ -25930,7 +26070,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Bretagna e Mont Saint Michel 2025 | WeShoot",
+      "metaTitle": "Bretagna e Mont Saint Michel 2026 | WeShoot",
       "metaDescription": "Vivi un viaggio fotografico indimenticabile in Bretagna e Mont Saint-Michel: maree, luce epica e guida sul campo. Posti limitati, iscriviti ora con WeShoot.",
       "structuredData": null
     },
@@ -26909,7 +27049,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Islanda Estiva 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Islanda Estiva 2026 | WeShoot",
       "metaDescription": "Il viaggio fotografico Islanda estiva ti farà vivere l'esperienza di fotografare la bellissima luce morbida del sole di mezzanotte.",
       "structuredData": null
     },
@@ -28152,7 +28292,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Islanda 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Islanda 2026 | WeShoot",
       "metaDescription": "Unisciti a noi per un indimenticabile viaggio fotografico in Islanda. Esplora i migliori spot fotografici e impara tecniche per catturare immagini che emozionano.",
       "structuredData": null
     },
@@ -29720,7 +29860,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Patagonia 2025/26",
+      "metaTitle": "Viaggio Fotografico Patagonia 2027",
       "metaDescription": "Partecipa al nostro esclusivo viaggio fotografico in Patagonia, un'avventura unica per appassionati di fotografia, paesaggi mozzafiato e natura incontaminata.",
       "structuredData": null
     },
@@ -30669,7 +30809,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Dolomiti Winter 25 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Dolomiti Winter 2027 | WeShoot",
       "metaDescription": "Partecipa al nostro esclusivo viaggio fotografico in Dolomiti e vivi un'esperienza unica per immortalare la natura incontaminata, tra vette innevate e panorami da sogno.",
       "structuredData": null
     },
@@ -31560,7 +31700,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Workshop di fotografia a Roma 2025",
+      "metaTitle": "Workshop di fotografia a Roma 2026",
       "metaDescription": "Partecipa ai nostri workshop fotografici a Roma, scopri i segreti della fotografia con un professionista che ti insegnerà sul campo come scattare foto da cartolina.",
       "structuredData": null
     },
@@ -32689,7 +32829,7 @@
         "id": "232",
         "start": "2026-02-07",
         "end": "2026-02-07",
-        "status": "confirmed",
+        "status": "almostFull",
         "maxPax": 8,
         "price": 69,
         "deposit": 69,
@@ -32720,7 +32860,7 @@
         "id": "235",
         "start": "2026-03-14",
         "end": "2026-03-14",
-        "status": "confirmed",
+        "status": "almostFull",
         "maxPax": 8,
         "price": 69,
         "deposit": 69,
@@ -33356,7 +33496,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Workshop Fotografico sul Foliage 2025",
+      "metaTitle": "Workshop Fotografico sul Foliage 2026",
       "metaDescription": "Questo workshop di fotografia sul foliage è pensato per tutti i fotografi di paesaggio che amano le atmosfere fiabesche dell' autunno.",
       "structuredData": null
     },
@@ -33733,7 +33873,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "workshop Fotografico Campotosto 2025 | WeShoot",
+      "metaTitle": "workshop Fotografico Campotosto 2026 | WeShoot",
       "metaDescription": "Due giorni di workshop fotografico al lago di Campotosto, in Abruzzo, dove potrai fotografare paesaggi ghiacciati e paesaggi incontaminati.",
       "structuredData": null
     },
@@ -34136,7 +34276,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Workshop Fotografico Cascate del Volturno 2025",
+      "metaTitle": "Workshop Fotografico Cascate del Volturno 2026",
       "metaDescription": "Partecipa al nostro workshop fotografico immerso nella cascate del Volturno, dove imparerai tecniche avanzate per fotografare l'acqua in movimento e perfezionare le tue composizioni.",
       "structuredData": null
     },
@@ -34527,6 +34667,37 @@
             }
           }
         ]
+      },
+      {
+        "id": "283",
+        "start": "2026-03-28",
+        "end": "2026-03-28",
+        "status": "soldOut",
+        "maxPax": 8,
+        "price": 129,
+        "deposit": 129,
+        "balance": null,
+        "minPax": 3,
+        "currency": "EUR",
+        "priceCompanion": 129,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/ibuxus/",
+            "firstName": "Samuele",
+            "lastName": "Bucci",
+            "username": "samuelebucci",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+            },
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
+          }
+        ]
       }
     ],
     "faqs": [
@@ -34676,7 +34847,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Workshop Fotografico Costa Trabocchi 2025",
+      "metaTitle": "Workshop Fotografico Costa Trabocchi 2026",
       "metaDescription": "Partecipa al workshop di fotografia sulla Costa dei Trabocchi in Abruzzo! Scopri come catturare panorami mozzafiato, trabocchi iconici e tramonti spettacolari. Perfetto per gli amanti della fotografia di paesaggio",
       "structuredData": null
     },
@@ -35280,7 +35451,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Faroe 2025 | WeShoot",
+      "metaTitle": "Viaggio Fotografico Faroe 2026 | WeShoot",
       "metaDescription": "Esplora le Isole Faroe con un viaggio fotografico tra scogliere imponenti, fiordi spettacolari e villaggi remoti. Cattura paesaggi mozzafiato e l’incanto dell’aurora boreale.",
       "structuredData": null
     },
@@ -36011,6 +36182,37 @@
             }
           }
         ]
+      },
+      {
+        "id": "280",
+        "start": "2026-06-13",
+        "end": "2026-06-20",
+        "status": "soldOut",
+        "maxPax": 7,
+        "price": 2590,
+        "deposit": 780,
+        "balance": 1810,
+        "minPax": 3,
+        "currency": null,
+        "priceCompanion": 2590,
+        "users": [
+          {
+            "instagram": "https://www.instagram.com/ibuxus/",
+            "firstName": "Samuele",
+            "lastName": "Bucci",
+            "username": "samuelebucci",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+            },
+            "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+            "level": "coach",
+            "role": {
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
+            }
+          }
+        ]
       }
     ],
     "faqs": [
@@ -36246,7 +36448,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico Algeria 2025",
+      "metaTitle": "Viaggio Fotografico Algeria 2026",
       "metaDescription": "Prepara lo zaino e la fotocamera, ti aspettiamo per questo viaggio fotografico in Algeria, sarà un'esperienza incredibile tra le dune del deserto, notti in tenda e l'ospitalità dei Tuareg.",
       "structuredData": null
     },
@@ -36819,7 +37021,7 @@
         "id": "226",
         "start": "2026-03-21",
         "end": "2026-03-28",
-        "status": "almostFull",
+        "status": "soldOut",
         "maxPax": 8,
         "price": 2299,
         "deposit": 690,
@@ -36842,6 +37044,22 @@
               "name": "Public",
               "description": "Default role given to unauthenticated user.",
               "type": "public"
+            }
+          },
+          {
+            "instagram": "https://www.instagram.com/giacomo_finotti/",
+            "firstName": "Giacomo",
+            "lastName": "Finotti",
+            "username": "giacomofinotti",
+            "profilePicture": {
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
+            },
+            "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>",
+            "level": "coach",
+            "role": {
+              "name": "User",
+              "description": "A User",
+              "type": "user"
             }
           }
         ]
@@ -37046,7 +37264,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Workshop Fotografico Prati di Tivo 2025",
+      "metaTitle": "Workshop Fotografico Prati di Tivo 2026",
       "metaDescription": "Partecipa a questo workshop di fotografia di paesaggio ai Prati di Tivo in Abruzzo, imparerai sul campo le migliori tecniche per foto incredibili in un contesto unico.",
       "structuredData": null
     },
@@ -37440,7 +37658,7 @@
       "locale": "it"
     },
     "SEO": {
-      "metaTitle": "Viaggio Fotografico sulle Dolomiti in autunno",
+      "metaTitle": "Viaggio Fotografico sulle Dolomiti in autunno 2026",
       "metaDescription": "Più che un workshop è un'esperienza fotografica immersi tra i bellissimi paesaggi autunnali delle Dolomiti, tra laghi, foreste e cime maestose.",
       "structuredData": null
     },

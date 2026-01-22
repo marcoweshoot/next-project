@@ -23,7 +23,7 @@
     "locale": "it"
   },
   "SEO": {
-    "metaTitle": "Viaggio Fotografico Dolomiti 2025 | WeShoot",
+    "metaTitle": "Viaggio Fotografico Dolomiti 2026 | WeShoot",
     "metaDescription": "Un'esperienza fotografica tra le incredibili cime più belle del mondo, le Dolomiti. Un viaggio fotografico organizzato in ogni dettaglio.",
     "structuredData": null
   },
@@ -1003,6 +1003,68 @@
           },
           "bio": "<p>Fotografo Paesaggista amante della natura ma soprattutto della notte. Il mio obiettivo sarà quello di trasmettervi questa mia passione.</p>",
           "level": "beginner",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
+        }
+      ]
+    },
+    {
+      "id": "278",
+      "start": "2026-07-16",
+      "end": "2026-07-19",
+      "status": "scheduled",
+      "maxPax": 7,
+      "price": 899,
+      "deposit": 270,
+      "balance": 629,
+      "minPax": 4,
+      "currency": "EUR",
+      "priceCompanion": 899,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/anto_tru_alo90/",
+          "firstName": "Antonello",
+          "lastName": "Alò",
+          "username": "antonelloalo",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
+          },
+          "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
+        }
+      ]
+    },
+    {
+      "id": "281",
+      "start": "2026-07-02",
+      "end": "2026-07-05",
+      "status": "soldOut",
+      "maxPax": 8,
+      "price": 990,
+      "deposit": 300,
+      "balance": 690,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 990,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/anto_tru_alo90/",
+          "firstName": "Antonello",
+          "lastName": "Alò",
+          "username": "antonelloalo",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Antonello_Alo_coach_2b8002f501.avif"
+          },
+          "bio": "<p>Fotografo e videomaker della Puglia, che ama trasmettere emozioni vere attraverso la natura e la luce.</p>",
+          "level": "coach",
           "role": {
             "name": "Public",
             "description": "Default role given to unauthenticated user.",

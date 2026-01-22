@@ -23,7 +23,7 @@
     "locale": "it"
   },
   "SEO": {
-    "metaTitle": "Viaggio Fotografico Rocca Calascio 2025 | WeShoot",
+    "metaTitle": "Viaggio Fotografico Rocca Calascio 2026 | WeShoot",
     "metaDescription": "Trascorri una giornata dal tramonto all'alba in una location esclusiva come Rocca Calascio, un viaggio fotografico organizzato con fotografi professionisti.",
     "structuredData": null
   },
@@ -393,13 +393,13 @@
       "id": "250",
       "start": "2026-05-09",
       "end": "2026-05-09",
-      "status": "scheduled",
+      "status": "almostFull",
       "maxPax": 8,
       "price": 129,
       "deposit": 129,
       "balance": 0,
       "minPax": 4,
-      "currency": null,
+      "currency": "EUR",
       "priceCompanion": 129,
       "users": [
         {
@@ -416,6 +416,22 @@
             "name": "Public",
             "description": "Default role given to unauthenticated user.",
             "type": "public"
+          }
+        },
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+          "level": "coach",
+          "role": {
+            "name": "SuperAdmin",
+            "description": "Top level user",
+            "type": "authenticated"
           }
         }
       ]

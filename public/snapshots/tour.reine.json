@@ -23,7 +23,7 @@
     "locale": "it"
   },
   "SEO": {
-    "metaTitle": "Viaggio Fotografico Lofoten 2025 | WeShoot",
+    "metaTitle": "Viaggio Fotografico Lofoten 2026 | WeShoot",
     "metaDescription": "Ti faremo vivere un esperienza unica andando alla ricerca dell'aurora boreale e degli spot più incredibili in questo viaggio fotografico alle Lofoten.",
     "structuredData": null
   },
@@ -1326,7 +1326,7 @@
       "id": "234",
       "start": "2026-02-07",
       "end": "2026-02-14",
-      "status": "scheduled",
+      "status": "almostFull",
       "maxPax": 7,
       "price": 1999,
       "deposit": 600,
@@ -1365,6 +1365,37 @@
       "minPax": 3,
       "currency": "EUR",
       "priceCompanion": 2199,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/ibuxus/",
+          "firstName": "Samuele",
+          "lastName": "Bucci",
+          "username": "samuelebucci",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/samuele_bucci_f51b8975e9.avif"
+          },
+          "bio": "<p>Fotografo Paesaggista e Content Creator con l’Amore per le Lunghe Esposizioni. Ti aiuto a raccontare il mondo con gli occhi di un Pittore.</p>",
+          "level": "coach",
+          "role": {
+            "name": "Public",
+            "description": "Default role given to unauthenticated user.",
+            "type": "public"
+          }
+        }
+      ]
+    },
+    {
+      "id": "282",
+      "start": "2026-02-14",
+      "end": "2026-02-21",
+      "status": "soldOut",
+      "maxPax": 7,
+      "price": 1999,
+      "deposit": 690,
+      "balance": 1309,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 1999,
       "users": [
         {
           "instagram": "https://www.instagram.com/ibuxus/",

@@ -23,7 +23,7 @@
     "locale": "it"
   },
   "SEO": {
-    "metaTitle": "Workshop di fotografia a Roma 2025",
+    "metaTitle": "Workshop di fotografia a Roma 2026",
     "metaDescription": "Partecipa ai nostri workshop fotografici a Roma, scopri i segreti della fotografia con un professionista che ti insegnerà sul campo come scattare foto da cartolina.",
     "structuredData": null
   },
@@ -1152,7 +1152,7 @@
       "id": "232",
       "start": "2026-02-07",
       "end": "2026-02-07",
-      "status": "confirmed",
+      "status": "almostFull",
       "maxPax": 8,
       "price": 69,
       "deposit": 69,
@@ -1183,7 +1183,7 @@
       "id": "235",
       "start": "2026-03-14",
       "end": "2026-03-14",
-      "status": "confirmed",
+      "status": "almostFull",
       "maxPax": 8,
       "price": 69,
       "deposit": 69,

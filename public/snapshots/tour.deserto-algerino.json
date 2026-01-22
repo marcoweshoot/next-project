@@ -23,7 +23,7 @@
     "locale": "it"
   },
   "SEO": {
-    "metaTitle": "Viaggio Fotografico Algeria 2025",
+    "metaTitle": "Viaggio Fotografico Algeria 2026",
     "metaDescription": "Prepara lo zaino e la fotocamera, ti aspettiamo per questo viaggio fotografico in Algeria, sarà un'esperienza incredibile tra le dune del deserto, notti in tenda e l'ospitalità dei Tuareg.",
     "structuredData": null
   },
@@ -596,7 +596,7 @@
       "id": "226",
       "start": "2026-03-21",
       "end": "2026-03-28",
-      "status": "almostFull",
+      "status": "soldOut",
       "maxPax": 8,
       "price": 2299,
       "deposit": 690,
@@ -619,6 +619,22 @@
             "name": "Public",
             "description": "Default role given to unauthenticated user.",
             "type": "public"
+          }
+        },
+        {
+          "instagram": "https://www.instagram.com/giacomo_finotti/",
+          "firstName": "Giacomo",
+          "lastName": "Finotti",
+          "username": "giacomofinotti",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Giacomo_Finotti_b1ddaa6e51.jpg"
+          },
+          "bio": "<p>Sono Giacomo, fotografo di paesaggio. Amo viaggiare nei posti più selvaggi del mondo, immortalando questi scenari creati da madre natura.</p>",
+          "level": "coach",
+          "role": {
+            "name": "User",
+            "description": "A User",
+            "type": "user"
           }
         }
       ]
