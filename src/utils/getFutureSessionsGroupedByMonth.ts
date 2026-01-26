@@ -90,8 +90,8 @@ export async function getFutureSessionsGroupedByMonth() {
   // --- GROUP BY MESE (YYYY-MM) ---
   type Group = {
     month: string;   // "agosto"
-    year: number;    // 2025
-    label: string;   // "agosto 2025"
+    year: number;    // 2026
+    label: string;   // "agosto 2026"
     tours: typeof allSessions;
   };
 
