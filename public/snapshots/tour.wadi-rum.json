@@ -1096,7 +1096,7 @@
     {
       "id": "faq-15",
       "question": "Conferma del Viaggio Fotografico",
-      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza.</span></p>",
+      "answer": "<p>Il gruppo fotografico sarà formato da un massimo di 7 (in alcuni casi 8) persone. Il viaggio fotografico sarà confermato una volta raggiunto il numero minimo di partecipanti o comunque entro e non oltre 21 giorni dalla partenza. Sarà cura della nostra agenzia Enruta360 contattarvi per tempo tramite email o whatsapp.</p>",
       "locale": "it"
     },
     {
@@ -1121,6 +1121,24 @@
       "id": "faq-19",
       "question": "Coach WeShoot e Guide Locali",
       "answer": "<p>I Coach di WeShoot sono fotografi professionisti che, durante i viaggi fotografici, mettono a disposizione la propria esperienza per insegnare sul campo tecniche di scatto, composizione e visione fotografica. Sono il punto di riferimento per tutti i partecipanti che vogliono migliorare le proprie abilità direttamente sul terreno, con il supporto di chi la fotografia la vive ogni giorno.<br>È importante sottolineare che i Coach di WeShoot <strong>non sono guide turistiche né accompagnatori abilitati</strong>, e non devono essere considerati come tali. WeShoot si affida sempre a <strong>guide locali qualificate e autorizzate per tutti gli aspetti logistici e turistici del viaggio,</strong> nel pieno rispetto della normativa vigente. I Coach svolgono esclusivamente il ruolo di formatori in ambito fotografico.<br>Con alle spalle anni di esperienza sul campo e una passione autentica per l’insegnamento, i nostri Coach affiancano i partecipanti per tutta la durata dell’esperienza, aiutandoli a cogliere al meglio ogni situazione fotografica. Ogni viaggio diventa così un’occasione per crescere, confrontarsi e vivere la fotografia in maniera intensa e consapevole, senza mai sostituirsi alle figure professionali abilitate alla conduzione turistica.</p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-20",
+      "question": "Devo acquistare il volo subito dopo la prenotazione del viaggio fotografico?",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">No. Il volo non va assolutamente acquistato prima della conferma ufficiale del viaggio da parte dell’agenzia di viaggio Enruta360, a meno che non sia esplicitamente indicato che il volo è incluso nel pacchetto.</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-21",
+      "question": "Cosa succede se compro il volo prima della conferma?",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Se acquisti il volo prima della conferma ufficiale, lo fai a tuo rischio: eventuali costi di cambio, penali o perdita del biglietto non possono essere imputati né a WeShoot né a Enruta360 (salvo diverse indicazioni previste per legge o da specifiche condizioni del pacchetto).</span></p>",
+      "locale": "it"
+    },
+    {
+      "id": "faq-22",
+      "question": "Quando posso acquistare il volo?",
+      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Puoi acquistarlo solo dopo aver ricevuto la conferma ufficiale del viaggio da Enruta360 (via email o comunicazione formale). In quel momento ti verranno indicati anche eventuali dettagli utili (orari consigliati, aeroporto, ecc.).</span></p>",
       "locale": "it"
     }
   ],
