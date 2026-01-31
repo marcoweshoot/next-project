@@ -177,6 +177,7 @@ export async function middleware(req: NextRequest) {
 // middleware.ts (in fondo)
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap\\.xml|sitemap-.*\\.xml).*)',
+    // Escludi: API routes, _next static files, immagini, favicon, robots.txt, sitemap
+    '/((?!api/|_next/static|_next/image|favicon.ico|robots.txt|sitemap\\.xml|sitemap-.*\\.xml).*)',
   ],
 };
