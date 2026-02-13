@@ -45,7 +45,10 @@ const ContactCard: React.FC<ContactCardProps> = ({ section }) => {
           return (
             <ContactLink
               key={index}
-              contact={contact}
+              type={contact.type}
+              href={contact.href}
+              label={contact.label}
+              value={contact.value}
               sectionTitle={title}
             >
               <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
