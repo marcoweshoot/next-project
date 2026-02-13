@@ -8,6 +8,7 @@ import CollectionDetailContent from '@/components/collection-detail/CollectionDe
 import CollectionDetailTours from '@/components/collection-detail/CollectionDetailTours';
 import CollectionDetailFAQ from '@/components/collection-detail/CollectionDetailFAQ';
 import CollectionDetailError from '@/components/collection-detail/CollectionDetailError';
+import { ViewCategoryTracker } from '@/components/analytics/ViewCategoryTracker';
 import { notFound } from 'next/navigation';
 
 export const dynamic = 'force-static'; // per SSG puro
@@ -59,6 +60,13 @@ export default async function CollectionDetailPage({ params }: Props) {
         />
 
         <Header />
+
+        {/* Track ViewCategory event for Facebook Pixel */}
+        <ViewCategoryTracker
+          categoryName={collection.name}
+          categoryType="Collezione"
+          contentIds={(collection.tours || []).map((t: any) => t.id)}
+        />
 
         <div>
           <CollectionDetailHero collection={collection} />

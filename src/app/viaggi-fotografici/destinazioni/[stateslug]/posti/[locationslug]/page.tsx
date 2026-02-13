@@ -7,6 +7,7 @@ import SEO from '@/components/SEO';
 import LocationHero from '@/components/location-detail/LocationHero';
 import LocationContent from '@/components/location-detail/LocationContent';
 import LocationTours from '@/components/location-detail/LocationTours';
+import { ViewCategoryTracker } from '@/components/analytics/ViewCategoryTracker';
 
 export const dynamic = 'force-static';
 
@@ -188,6 +189,14 @@ export default async function Page({ params }: Props) {
         />
 
         <Header />
+        
+        {/* Track ViewCategory event for Facebook Pixel */}
+        <ViewCategoryTracker
+          categoryName={`${location.title} - ${destination.name}`}
+          categoryType="Location"
+          contentIds={tours.map((t: Tour) => t.id)}
+        />
+        
         <LocationHero location={locationMapped} stateSlug={stateSlug} />
 
         <section className="py-16">

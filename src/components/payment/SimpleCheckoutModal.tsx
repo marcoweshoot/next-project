@@ -191,11 +191,14 @@ export function SimpleCheckoutModal({
           tourDestination: tour.title,
           sessionDate: session.date
         }))
-        console.log('💾 [FB PIXEL] Saved purchase data for gift card payment:', {
-          tourTitle: tour.title,
-          value: totalValue,
-          quantity: quantity || 1
-        })
+        
+        if (process.env.NODE_ENV === 'development') {
+          console.log('💾 [FB PIXEL] Saved purchase data for gift card payment:', {
+            tourTitle: tour.title,
+            value: totalValue,
+            quantity: quantity || 1
+          })
+        }
       }
 
       // Track Facebook Pixel Purchase event for gift card payments
@@ -203,7 +206,9 @@ export function SimpleCheckoutModal({
         // Generate unique event_id for gift card purchases (no Stripe session)
         const eventId = createPurchaseEventId(`giftcard_${Date.now()}_${user?.id || registeredUserId}`)
         
-        console.log('🆔 [FB PIXEL] Generated event_id for gift card purchase:', eventId)
+        if (process.env.NODE_ENV === 'development') {
+          console.log('🆔 [FB PIXEL] Generated event_id for gift card purchase:', eventId)
+        }
         
         window.fbq('track', 'Purchase', {
           content_name: tour.title,
@@ -213,7 +218,9 @@ export function SimpleCheckoutModal({
           num_items: quantity || 1
         }, { eventID: eventId })
         
-        console.log('✅ [FB PIXEL] Purchase event sent with event_id for gift card payment')
+        if (process.env.NODE_ENV === 'development') {
+          console.log('✅ [FB PIXEL] Purchase event sent with event_id for gift card payment')
+        }
       }
 
       // Success - close modal and redirect
@@ -252,7 +259,10 @@ export function SimpleCheckoutModal({
 
       // 1. Traccia con il Pixel del Browser
       window.fbq('track', 'InitiateCheckout', eventData, { eventID: eventId })
-      console.log('✅ [FB PIXEL] InitiateCheckout event sent (user identified)')
+      
+      if (process.env.NODE_ENV === 'development') {
+        console.log('✅ [FB PIXEL] InitiateCheckout event sent (user identified)')
+      }
 
       // 2. Traccia con l'API Conversions (non bloccante)
       fetch('/api/track-fb-event', {
@@ -265,7 +275,9 @@ export function SimpleCheckoutModal({
           custom_data: eventData,
         }),
       }).catch(error => {
-        console.error('❌ [CAPI] Error sending InitiateCheckout event:', error)
+        if (process.env.NODE_ENV === 'development') {
+          console.error('❌ [CAPI] Error sending InitiateCheckout event:', error)
+        }
       })
     }
   }
@@ -337,12 +349,14 @@ export function SimpleCheckoutModal({
       // L'evento viene tracciato con i valori iniziali (quantità e tipo di pagamento di default)
       handleTrackInitiateCheckout()
       
-      console.log('🎯 [FB PIXEL] InitiateCheckout tracked on modal open', {
-        tourTitle: tour.title,
-        quantity,
-        paymentType,
-        isBalancePayment
-      })
+      if (process.env.NODE_ENV === 'development') {
+        console.log('🎯 [FB PIXEL] InitiateCheckout tracked on modal open', {
+          tourTitle: tour.title,
+          quantity,
+          paymentType,
+          isBalancePayment
+        })
+      }
     }
   }, [isOpen]) // Si attiva ogni volta che il modal si apre
   // Note: Usa i valori correnti di quantity/paymentType quando il modal si apre

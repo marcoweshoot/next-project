@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { MessageCircle } from 'lucide-react';
 import TourPricingHeader from './TourPricingHeader';
 import TourInclusionsSection from './TourInclusionsSection';
+import { trackLead } from '@/utils/facebook';
 
 interface TourSummaryCardProps {
   tour: {
@@ -55,6 +56,17 @@ const TourSummaryCard: React.FC<TourSummaryCardProps> = ({
 
   const hasAvailableSessions = !!nextSession;
 
+  const handleWhatsAppClick = () => {
+    // Track Lead event before opening WhatsApp
+    trackLead({
+      contentName: 'WhatsApp Chat - Summary Card',
+      contentCategory: 'Viaggi Fotografici',
+      value: 0,
+    });
+    
+    onOpenWhatsApp();
+  };
+
   return (
     <Card className="sticky top-32 shadow-lg border-0">
       <CardContent className="p-0">
@@ -88,7 +100,7 @@ const TourSummaryCard: React.FC<TourSummaryCardProps> = ({
           </Button>
           <Button
             variant="outline"
-            onClick={onOpenWhatsApp}
+            onClick={handleWhatsAppClick}
             className="w-full border-2 hover:bg-gray-50"
             size="lg"
             aria-label="Contattaci su WhatsApp"

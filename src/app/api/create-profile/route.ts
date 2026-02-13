@@ -122,9 +122,13 @@ export async function POST(request: NextRequest) {
         },
       })
       
-      console.log('✅ [CAPI] Sent CompleteRegistration event for user:', userId)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('✅ [CAPI] Sent CompleteRegistration event for user:', userId)
+      }
     } catch (capiError) {
-      console.error('❌ [CAPI] Failed to send CompleteRegistration event:', capiError)
+      if (process.env.NODE_ENV === 'development') {
+        console.error('❌ [CAPI] Failed to send CompleteRegistration event:', capiError)
+      }
       // Do not block the response for CAPI errors
     }
     // ------------------------------------------------

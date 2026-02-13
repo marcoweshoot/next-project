@@ -84,3 +84,149 @@ export function isValidEventId(eventId: string): boolean {
   return validPattern.test(eventId)
 }
 
+/**
+ * Track Lead event (WhatsApp clicks, contact form submissions, etc.)
+ * 
+ * @param {Object} params - Lead event parameters
+ * @param {string} params.contentName - Name of the content (tour title, "WhatsApp Contact", etc.)
+ * @param {string} params.contentCategory - Category (default: "Viaggi Fotografici")
+ * @param {number} params.value - Value in EUR (default: 0)
+ */
+export function trackLead({
+  contentName,
+  contentCategory = 'Viaggi Fotografici',
+  value = 0,
+}: {
+  contentName: string
+  contentCategory?: string
+  value?: number
+}) {
+  if (typeof window === 'undefined' || !window.fbq) {
+    return
+  }
+
+  const eventId = generateEventId()
+  
+  const eventData = {
+    content_name: contentName,
+    content_category: contentCategory,
+    value,
+    currency: 'EUR',
+  }
+
+  window.fbq('track', 'Lead', eventData, { eventID: eventId })
+  
+  // Log only in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('✅ [FB PIXEL] Lead event tracked:', {
+      contentName,
+      eventId,
+    })
+  }
+}
+
+/**
+ * Track AddToCart event (when user clicks "Prenota" or "Book" button)
+ * 
+ * @param {Object} params - AddToCart event parameters
+ * @param {string} params.tourTitle - Tour title
+ * @param {string} params.tourId - Tour ID
+ * @param {string} params.sessionId - Session ID (optional)
+ * @param {number} params.price - Price in EUR
+ * @param {number} params.quantity - Quantity (default: 1)
+ */
+export function trackAddToCart({
+  tourTitle,
+  tourId,
+  sessionId,
+  price,
+  quantity = 1,
+}: {
+  tourTitle: string
+  tourId: string
+  sessionId?: string
+  price: number
+  quantity?: number
+}) {
+  if (typeof window === 'undefined' || !window.fbq) {
+    return
+  }
+
+  // Validate price
+  if (!price || price <= 0 || !isFinite(price) || isNaN(price)) {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('⚠️ [FB PIXEL] AddToCart: Invalid price', price)
+    }
+    return
+  }
+
+  const eventId = generateEventId()
+  
+  const eventData = {
+    content_name: tourTitle,
+    content_ids: sessionId ? [sessionId] : [tourId],
+    content_type: 'product',
+    value: price,
+    currency: 'EUR',
+    num_items: quantity,
+  }
+
+  window.fbq('track', 'AddToCart', eventData, { eventID: eventId })
+  
+  // Log only in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('✅ [FB PIXEL] AddToCart event tracked:', {
+      tourTitle,
+      price,
+      quantity,
+      eventId,
+    })
+  }
+}
+
+/**
+ * Track ViewCategory event (destination pages, collection pages, calendar, etc.)
+ * 
+ * @param {Object} params - ViewCategory event parameters
+ * @param {string} params.categoryName - Category name (e.g., "Italia", "Wildlife", "Marzo 2026")
+ * @param {string} params.categoryType - Category type (e.g., "Destinazione", "Collezione", "Calendario", "Corso")
+ * @param {string[]} params.contentIds - Array of content IDs in this category (optional)
+ */
+export function trackViewCategory({
+  categoryName,
+  categoryType,
+  contentIds = [],
+}: {
+  categoryName: string
+  categoryType: string
+  contentIds?: string[]
+}) {
+  if (typeof window === 'undefined' || !window.fbq) {
+    return
+  }
+
+  const eventId = generateEventId()
+  
+  const eventData: Record<string, any> = {
+    content_name: categoryName,
+    content_category: categoryType,
+  }
+
+  // Add content_ids only if available
+  if (contentIds.length > 0) {
+    eventData.content_ids = contentIds
+  }
+
+  window.fbq('track', 'ViewCategory', eventData, { eventID: eventId })
+  
+  // Log only in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('✅ [FB PIXEL] ViewCategory event tracked:', {
+      categoryName,
+      categoryType,
+      contentCount: contentIds.length,
+      eventId,
+    })
+  }
+}
+

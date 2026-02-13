@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import TourSummaryCard from './TourSummaryCard';
 import TourHighlights from './TourHighlights';
 
@@ -50,6 +50,21 @@ interface TourDescriptionProps {
 }
 
 const TourDescription: React.FC<TourDescriptionProps> = ({ tour, onViewSessions, onOpenWhatsApp }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Check if content is taller than 4 lines (approximately 6rem with line-height)
+    if (contentRef.current) {
+      const lineHeight = 1.75; // leading-relaxed = 1.75
+      const fontSize = 16; // text-base = 16px
+      const maxHeight = lineHeight * fontSize * 4; // 4 lines
+      
+      setShowButton(contentRef.current.scrollHeight > maxHeight);
+    }
+  }, [tour.description]);
+
   return (
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
@@ -61,10 +76,23 @@ const TourDescription: React.FC<TourDescriptionProps> = ({ tour, onViewSessions,
             </h2>
             <div className="prose prose-lg max-w-none dark:prose-invert">
               {tour.description && (
-                <div
-                  dangerouslySetInnerHTML={{ __html: tour.description }}
-                  className="text-base leading-relaxed text-muted-foreground"
-                />
+                <div className="relative">
+                  <div
+                    ref={contentRef}
+                    dangerouslySetInnerHTML={{ __html: tour.description }}
+                    className={`text-base leading-relaxed text-muted-foreground transition-all duration-300 ${
+                      !isExpanded ? 'line-clamp-4' : ''
+                    }`}
+                  />
+                  {showButton && (
+                    <button
+                      onClick={() => setIsExpanded(!isExpanded)}
+                      className="mt-3 text-primary hover:text-primary/80 font-medium text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                    >
+                      {isExpanded ? 'Mostra meno' : 'Mostra di più'}
+                    </button>
+                  )}
+                </div>
               )}
             </div>
 

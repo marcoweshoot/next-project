@@ -12,6 +12,7 @@ import CourseTeacherPhotos from '@/components/course-detail/CourseTeacherPhotos'
 import CourseFAQ from '@/components/course-detail/CourseFAQ';
 import CourseSidebar from '@/components/course-detail/CourseSidebar';
 import CourseDetailCTA from '@/components/course-detail/CourseDetailCTA';
+import { CourseViewTracker } from '@/components/course-detail/CourseViewTracker';
 
 const endpoint =
   process.env.STRAPI_GRAPHQL_API || process.env.NEXT_PUBLIC_GRAPHQL_API;
@@ -230,6 +231,8 @@ export default async function CoursePage({
   return (
     <>
       <Header />
+      {/* Track ViewCategory event for Facebook Pixel */}
+      <CourseViewTracker courseTitle={course.title} courseId={course.id} />
       <main className="min-h-screen bg-background transition-colors">
         <CourseDetailHero course={course} />
         <section className="py-16">

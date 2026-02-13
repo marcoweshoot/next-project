@@ -24,7 +24,9 @@ export async function POST(request: NextRequest) {
       fbp = cookies['_fbp'] || undefined;
       fbc = cookies['_fbc'] || undefined;
     } catch (error) {
-      console.warn('⚠️ [API /track-fb-event] Error reading cookies with getCookies, trying manual parsing:', error)
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('⚠️ [API /track-fb-event] Error reading cookies with getCookies, trying manual parsing:', error)
+      }
       
       // Fallback: leggi i cookie manualmente dall'header
       const cookieHeader = request.headers.get('cookie')
@@ -37,12 +39,14 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    console.log('📊 [API /track-fb-event] Cookies received:', {
-      hasFbp: !!fbp,
-      hasFbc: !!fbc,
-      fbpValue: fbp ? `${fbp.substring(0, 10)}...` : 'missing',
-      fbcValue: fbc ? `${fbc.substring(0, 10)}...` : 'missing'
-    })
+    if (process.env.NODE_ENV === 'development') {
+      console.log('📊 [API /track-fb-event] Cookies received:', {
+        hasFbp: !!fbp,
+        hasFbc: !!fbc,
+        fbpValue: fbp ? `${fbp.substring(0, 10)}...` : 'missing',
+        fbcValue: fbc ? `${fbc.substring(0, 10)}...` : 'missing'
+      })
+    }
 
     // Recupera i dati dell'utente loggato per l'Advanced Matching
     const supabase = await createServerClientSupabase()
@@ -88,13 +92,17 @@ export async function POST(request: NextRequest) {
       const matchingScore = Object.values(dataQuality).filter(Boolean).length
       const maxScore = Object.keys(dataQuality).length
       
-      console.log('📊 [API /track-fb-event] User data quality:', {
-        ...dataQuality,
-        matchingScore: `${matchingScore}/${maxScore}`,
-        quality: matchingScore >= 7 ? '✅ Excellent' : matchingScore >= 5 ? '⚠️ Good' : '❌ Poor'
-      })
+      if (process.env.NODE_ENV === 'development') {
+        console.log('📊 [API /track-fb-event] User data quality:', {
+          ...dataQuality,
+          matchingScore: `${matchingScore}/${maxScore}`,
+          quality: matchingScore >= 7 ? '✅ Excellent' : matchingScore >= 5 ? '⚠️ Good' : '❌ Poor'
+        })
+      }
     } else {
-      console.warn('⚠️ [API /track-fb-event] No user logged in - limited matching data available')
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('⚠️ [API /track-fb-event] No user logged in - limited matching data available')
+      }
     }
 
     // Invia l'evento all'API Conversions e attendi la risposta
@@ -107,7 +115,9 @@ export async function POST(request: NextRequest) {
     })
 
     if (!success) {
-      console.error('❌ [API /track-fb-event] Failed to send event to Facebook CAPI')
+      if (process.env.NODE_ENV === 'development') {
+        console.error('❌ [API /track-fb-event] Failed to send event to Facebook CAPI')
+      }
       // Restituisci comunque successo al client per non bloccare il flusso utente
       return NextResponse.json({ 
         success: true, 
@@ -116,15 +126,19 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    console.log('✅ [API /track-fb-event] Event sent successfully to Facebook CAPI', {
-      event_name,
-      event_id
-    })
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ [API /track-fb-event] Event sent successfully to Facebook CAPI', {
+        event_name,
+        event_id
+      })
+    }
 
     return NextResponse.json({ success: true, message: 'Event sent successfully to Facebook.' })
 
   } catch (error) {
-    console.error('❌ [API /track-fb-event] Error processing event:', error)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('❌ [API /track-fb-event] Error processing event:', error)
+    }
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }

@@ -119,7 +119,9 @@ function normalizeAndHashUserData(userData: UserData): UserData {
  */
 export async function sendServerEvent(event: Omit<ServerEvent, 'action_source' | 'event_time'>): Promise<boolean> {
   if (!FB_PIXEL_ID || !FB_CAPI_ACCESS_TOKEN) {
-    console.warn('⚠️ [FB CAPI] Missing required environment variables (FB_PIXEL_ID or FB_CAPI_ACCESS_TOKEN). Event not sent.')
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('⚠️ [FB CAPI] Missing required environment variables (FB_PIXEL_ID or FB_CAPI_ACCESS_TOKEN). Event not sent.')
+    }
     return false
   }
 
@@ -150,26 +152,32 @@ export async function sendServerEvent(event: Omit<ServerEvent, 'action_source' |
     const responseData = await response.json()
 
     if (!response.ok) {
-      console.error('❌ [FB CAPI] Error sending event to Facebook:', responseData)
+      if (process.env.NODE_ENV === 'development') {
+        console.error('❌ [FB CAPI] Error sending event to Facebook:', responseData)
+      }
       return false
     }
 
-    if (FB_TEST_EVENT_CODE) {
-      console.log('✅ [FB CAPI] Test event sent successfully to Facebook:', {
-        eventName: event.event_name,
-        eventId: event.event_id,
-        traceId: responseData.trace_id,
-      })
-    } else {
-      console.log('✅ [FB CAPI] Event sent successfully to Facebook:', {
-        eventName: event.event_name,
-        eventId: event.event_id,
-      })
+    if (process.env.NODE_ENV === 'development') {
+      if (FB_TEST_EVENT_CODE) {
+        console.log('✅ [FB CAPI] Test event sent successfully to Facebook:', {
+          eventName: event.event_name,
+          eventId: event.event_id,
+          traceId: responseData.trace_id,
+        })
+      } else {
+        console.log('✅ [FB CAPI] Event sent successfully to Facebook:', {
+          eventName: event.event_name,
+          eventId: event.event_id,
+        })
+      }
     }
 
     return true
   } catch (error) {
-    console.error('❌ [FB CAPI] Failed to send event due to a network or unexpected error:', error)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('❌ [FB CAPI] Failed to send event due to a network or unexpected error:', error)
+    }
     return false
   }
 }

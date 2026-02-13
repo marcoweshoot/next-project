@@ -3,11 +3,14 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { trackAddToCart } from '@/utils/facebook';
 
 interface TourStickyNavProps {
   price?: number;
   onScrollToSection: (sectionId: string) => void;
   tour?: {
+    id?: string;
+    slug?: string;
     title: string;
     duration: number;
     image?: { url: string; alternativeText?: string };
@@ -55,6 +58,22 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
   }, [tour]);
 
   const displayPrice = nextSessionData.price != null ? nextSessionData.price : fallbackPrice;
+
+  const handleBookClick = () => {
+    // Track AddToCart event before scrolling to sessions
+    if (displayPrice && displayPrice > 0) {
+      trackAddToCart({
+        tourTitle: tour?.title || 'Tour',
+        tourId: tour?.id || tour?.slug || 'unknown',
+        sessionId: nextSessionData.session?.id,
+        price: displayPrice,
+        quantity: 1,
+      });
+    }
+    
+    // Scroll to sessions section
+    onScrollToSection('sessions');
+  };
 
   return (
     <div
@@ -113,7 +132,7 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
           <div className="text-sm font-bold text-foreground">{formatPrice(displayPrice)}</div>
         </div>
         <Button
-          onClick={() => onScrollToSection('sessions')}
+          onClick={handleBookClick}
           className="px-4 py-3 sm:min-w-fit sm:px-2 sm:py-3.5 sm:text-xs"
         >
           Prenota

@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import { LucideIcon } from 'lucide-react';
+import { trackLead } from '@/utils/facebook';
 
 interface Contact {
   type: string;
@@ -22,6 +25,17 @@ interface ContactCardProps {
 
 const ContactCard: React.FC<ContactCardProps> = ({ section }) => {
   const { title, description, icon: SectionIcon, contacts } = section;
+
+  const handleContactClick = (contact: Contact) => {
+    // Track Lead event for WhatsApp clicks
+    if (contact.type === 'whatsapp') {
+      trackLead({
+        contentName: `WhatsApp Contact - ${title}`,
+        contentCategory: 'Contatti',
+        value: 0,
+      });
+    }
+  };
 
   return (
     <div className="rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border bg-card text-card-foreground">
@@ -46,6 +60,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ section }) => {
             <a
               key={index}
               href={contact.href}
+              onClick={() => handleContactClick(contact)}
               className="flex items-center p-4 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               target={isExternal ? '_blank' : undefined}
               rel={isExternal ? 'noopener noreferrer' : undefined}

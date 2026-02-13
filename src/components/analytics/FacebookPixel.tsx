@@ -24,7 +24,9 @@ export function FacebookPixel() {
 
   useEffect(() => {
     if (!FB_PIXEL_ID) {
-      console.warn('[FB PIXEL] Pixel ID not found. Aborting initialization.')
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('[FB PIXEL] Pixel ID not found. Aborting initialization.')
+      }
       return
     }
 
@@ -81,14 +83,18 @@ export function FacebookPixel() {
 
         isInitialized = true
 
-        console.log(`✅ [FB PIXEL] Initialized for ${user ? 'logged-in user' : 'anonymous user'}.`, {
-          hasEmail: !!matchingData.em,
-          hasFirstName: !!matchingData.fn,
-          hasLastName: !!matchingData.ln
-        })
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`✅ [FB PIXEL] Initialized for ${user ? 'logged-in user' : 'anonymous user'}.`, {
+            hasEmail: !!matchingData.em,
+            hasFirstName: !!matchingData.fn,
+            hasLastName: !!matchingData.ln
+          })
+        }
 
       } catch (error) {
-        console.error('❌ [FB PIXEL] Error during initialization:', error)
+        if (process.env.NODE_ENV === 'development') {
+          console.error('❌ [FB PIXEL] Error during initialization:', error)
+        }
       }
     }
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { generateEventId } from '@/utils/facebook';
+import { generateEventId, trackLead } from '@/utils/facebook';
 import TourStickyNav from './TourStickyNav';
 import TourGallery from './TourGallery';
 import TourDescription from './TourDescription';
@@ -52,7 +52,10 @@ export default function TourDetailContentClient({
 
       // 1. Track with Browser Pixel
       window.fbq('track', 'ViewContent', eventData, { eventID: eventId });
-      console.log('✅ [FB PIXEL] ViewContent event sent from browser with event_id:', eventId);
+      
+      if (process.env.NODE_ENV === 'development') {
+        console.log('✅ [FB PIXEL] ViewContent event sent from browser with event_id:', eventId);
+      }
 
       // 2. Track with Conversions API (non-blocking)
       fetch('/api/track-fb-event', {
@@ -65,7 +68,9 @@ export default function TourDetailContentClient({
           custom_data: eventData,
         }),
       }).catch(error => {
-        console.error('❌ [CAPI] Error sending ViewContent event to server:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.error('❌ [CAPI] Error sending ViewContent event to server:', error);
+        }
       });
     }
   }, [tour]); // Esegui solo quando l'oggetto tour cambia
@@ -83,6 +88,14 @@ export default function TourDetailContentClient({
   const openWhatsApp = (tourData: any) => {
     const phone = '+393508828541';
     const message = `Ciao! Vorrei avere informazioni sul tour: ${tourData?.title || ''}`;
+    
+    // Track Lead event before opening WhatsApp
+    trackLead({
+      contentName: tourData?.title || 'Tour Info Request',
+      contentCategory: 'Viaggi Fotografici',
+      value: 0,
+    });
+    
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
   };
 

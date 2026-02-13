@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { getTourLink } from "@/components/tour-card/tourCardUtils";
 import { getFullMediaUrl, DEFAULT_COACH_AVATAR } from "@/utils/TourDataUtilis";
+import { trackLead, trackAddToCart } from "@/utils/facebook";
 import { SimpleCheckoutModal } from "@/components/payment/SimpleCheckoutModal";
 
 interface SessionCardProps {
@@ -142,7 +143,32 @@ const SessionCard: React.FC<SessionCardProps> = ({
     const message = encodeURIComponent(
       `Ciao! Sono interessato al viaggio "${tour.title}" in partenza il ${dateRange}. Potresti darmi maggiori informazioni?`
     );
+    
+    // Track Lead event before opening WhatsApp
+    trackLead({
+      contentName: tour.title,
+      contentCategory: 'Viaggi Fotografici',
+      value: 0,
+    });
+    
     window.open(`https://wa.me/393508828541?text=${message}`, "_blank");
+  };
+
+  const handleBookNow = () => {
+    // Track AddToCart event before opening checkout modal (only if price is valid)
+    const sessionPrice = session.price || 0;
+    if (sessionPrice > 0) {
+      trackAddToCart({
+        tourTitle: tour.title,
+        tourId: tour.id || tour.slug,
+        sessionId: session.id,
+        price: sessionPrice,
+        quantity: 1,
+      });
+    }
+    
+    // Open checkout modal
+    setIsQuickCheckoutOpen(true);
   };
 
   const availableSpots = getAvailableSpots();
@@ -305,7 +331,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 {showPaymentButton && (
                   <>
                     <Button
-                      onClick={() => setIsQuickCheckoutOpen(true)}
+                      onClick={handleBookNow}
                       className="w-full font-medium py-3 bg-primary hover:bg-primary/90 text-primary-foreground"
                       size="lg"
                     >
@@ -391,7 +417,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 })() && (
                   <>
                     <Button
-                      onClick={() => setIsQuickCheckoutOpen(true)}
+                      onClick={handleBookNow}
                       className="w-full font-medium bg-primary hover:bg-primary/90 text-primary-foreground"
                     >
                       <CreditCard className="w-4 h-4 mr-2" />

@@ -2,6 +2,7 @@ import React from 'react';
 import CalendarHero from './CalendarHero';
 import CalendarEmptyState from './CalendarEmptyState';
 import CalendarMonthPreview from './CalendarMonthPreview';
+import { CalendarViewTracker } from './CalendarViewTracker';
 
 interface GroupedSessions {
   [key: string]: {
@@ -22,6 +23,9 @@ const CalendarContent: React.FC<CalendarContentProps> = ({
 }) => {
   return (
     <div className="min-h-screen bg-background transition-colors">
+      {/* Track ViewCategory event for Facebook Pixel */}
+      <CalendarViewTracker groupedSessions={groupedSessions} />
+      
       <CalendarHero coverImage={coverImage} />
 
       <section className="py-8 bg-background transition-colors">

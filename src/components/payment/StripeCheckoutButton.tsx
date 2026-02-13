@@ -92,10 +92,15 @@ export function StripeCheckoutButton({
       try {
         sessionStorage.setItem('lastPurchase', JSON.stringify(purchaseData))
         localStorage.setItem('lastPurchase', JSON.stringify(purchaseData))
-        console.log('💾 [FB PIXEL] Saved purchase data to storage:', purchaseData)
-        console.log('💾 [FB PIXEL] event_id will be generated from Stripe session_id on success page')
+        
+        if (process.env.NODE_ENV === 'development') {
+          console.log('💾 [FB PIXEL] Saved purchase data to storage:', purchaseData)
+          console.log('💾 [FB PIXEL] event_id will be generated from Stripe session_id on success page')
+        }
       } catch (error) {
-        console.error('❌ [FB PIXEL] Failed to save purchase data:', error)
+        if (process.env.NODE_ENV === 'development') {
+          console.error('❌ [FB PIXEL] Failed to save purchase data:', error)
+        }
       }
 
       // Redirect a Stripe Checkout

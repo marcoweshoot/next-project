@@ -9,6 +9,7 @@ import DestinationDetailHero from '@/components/destination-detail/DestinationDe
 import DestinationDetailLocations from '@/components/destination-detail/DestinationDetailLocations';
 import DestinationDetailTours from '@/components/destination-detail/DestinationDetailTours';
 import DestinationDetailEmptyState from '@/components/destination-detail/DestinationDetailEmptyState';
+import { ViewCategoryTracker } from '@/components/analytics/ViewCategoryTracker';
 
 export const dynamic = 'force-static';
 
@@ -117,6 +118,15 @@ export default async function StatePage({ params }: PageProps<RouteParams>) {
         )}
 
         <Header />
+
+        {/* Track ViewCategory event for Facebook Pixel */}
+        {destination && (
+          <ViewCategoryTracker
+            categoryName={destination.name}
+            categoryType="Destinazione"
+            contentIds={trs.map((t: any) => t.id)}
+          />
+        )}
 
         <DestinationDetailHero
           destination={destination}

@@ -62,7 +62,9 @@ export async function POST(request: NextRequest) {
       (async () => {
         try {
           if (!finalUserId) {
-            console.warn('⚠️ [CAPI] User ID or email not found in session, cannot send Purchase event.')
+            if (process.env.NODE_ENV === 'development') {
+              console.warn('⚠️ [CAPI] User ID or email not found in session, cannot send Purchase event.')
+            }
             return
           }
 
@@ -854,7 +856,9 @@ export async function POST(request: NextRequest) {
 
           const finalUserId = session.metadata?.userId || session.customer_details?.email
           if (!finalUserId) {
-            console.warn('⚠️ [CAPI] User ID or email not found in async session, cannot send event.')
+            if (process.env.NODE_ENV === 'development') {
+              console.warn('⚠️ [CAPI] User ID or email not found in async session, cannot send event.')
+            }
             return
           }
           
