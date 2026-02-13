@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { trackViewCategory } from '@/utils/facebook'
 
 interface ViewCategoryTrackerProps {
@@ -24,14 +24,23 @@ export function ViewCategoryTracker({
   categoryType,
   contentIds = [],
 }: ViewCategoryTrackerProps) {
+  const lastTrackedRef = useRef<string>('')
+
   useEffect(() => {
-    // Track ViewCategory only once when component mounts
-    trackViewCategory({
-      categoryName,
-      categoryType,
-      contentIds,
-    })
-  }, [categoryName, categoryType]) // Don't re-track if contentIds change
+    // Create a unique key to track if we've already sent this exact event
+    const trackingKey = `${categoryName}|${categoryType}|${contentIds.sort().join(',')}`
+    
+    // Only track if this exact combination hasn't been tracked yet
+    if (lastTrackedRef.current !== trackingKey) {
+      trackViewCategory({
+        categoryName,
+        categoryType,
+        contentIds,
+      })
+      
+      lastTrackedRef.current = trackingKey
+    }
+  }, [categoryName, categoryType, contentIds])
 
   // This component doesn't render anything
   return null
