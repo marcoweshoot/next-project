@@ -7336,14 +7336,6 @@
         }
       },
       {
-        "title": "Volo A/R dall'Italia (Milano)",
-        "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
-        "locale": "it",
-        "icon": {
-          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
-        }
-      },
-      {
         "title": "Coach Professionisti",
         "description": "Sarai costantemente seguito durante tutto il viaggio fotografico da uno dei nostri fotografi professionisti",
         "locale": "it",
@@ -7382,14 +7374,6 @@
         "icon": {
           "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/Alloggio_in_villa_b5499fc6eb.png"
         }
-      },
-      {
-        "title": "Volo A/R dall'Italia (Roma)",
-        "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
-        "locale": "it",
-        "icon": {
-          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
-        }
       }
     ],
     "whats_not_includeds": [
@@ -7402,11 +7386,27 @@
         }
       },
       {
+        "title": "Volo A/R dall'Italia (Milano)",
+        "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+        "locale": "it",
+        "icon": {
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
+        }
+      },
+      {
         "title": "Tutti i Pasti",
         "description": "Colazioni, pranzi e cene.",
         "locale": "it",
         "icon": {
           "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_bento_box_96_9f32206772.png"
+        }
+      },
+      {
+        "title": "Volo A/R dall'Italia (Roma)",
+        "description": "Volo aereo di linea A/R con partenza da Milano o Roma; è possibile scegliere un'altro aeroporto di partenza (con sovrapprezzo).",
+        "locale": "it",
+        "icon": {
+          "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/icons8_airplane_96_f2ebb870ea.png"
         }
       }
     ],
