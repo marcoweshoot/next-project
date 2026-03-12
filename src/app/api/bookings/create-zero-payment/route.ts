@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClientSupabase } from '@/lib/supabase/server'
 import { applyGiftCard } from '@/lib/giftCards'
+import { sendEmail, generateBookingConfirmationEmail } from '@/lib/email'
 
 export async function POST(request: NextRequest) {
   try {
@@ -94,6 +95,33 @@ export async function POST(request: NextRequest) {
         console.error('Exception applying gift card:', giftCardError)
         // Don't fail the booking if gift card application fails
       }
+    }
+
+    // Invia conferma prenotazione al cliente (non-blocking)
+    try {
+      const { data: userProfile } = await supabase
+        .from('profiles')
+        .select('first_name, last_name, email')
+        .eq('id', userId)
+        .single()
+
+      if (userProfile?.email) {
+        const userName = `${userProfile.first_name || ''} ${userProfile.last_name || ''}`.trim() || 'Cliente'
+        const confirmedPaymentType = paymentType === 'deposit' ? 'deposit' : 'full'
+        const confirmedAmountCents = Math.round(totalAmount * 100)
+        const customerEmailData = generateBookingConfirmationEmail(
+          userProfile.email,
+          userName,
+          tour.title,
+          booking.id,
+          confirmedAmountCents,
+          confirmedPaymentType
+        )
+        await sendEmail(customerEmailData)
+        console.log('✅ [CREATE-ZERO-PAYMENT] Customer booking confirmation email sent')
+      }
+    } catch (emailError) {
+      console.error('❌ [CREATE-ZERO-PAYMENT] Exception sending customer confirmation email:', emailError)
     }
 
     return NextResponse.json({

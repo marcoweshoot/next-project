@@ -3,7 +3,7 @@ import { stripe } from '@/lib/stripe'
 import { createClient } from '@supabase/supabase-js'
 import { rateLimits } from '@/lib/rateLimit'
 import { validateFields } from '@/lib/validation'
-import { sendAdminNotification, generateNewBookingAdminEmail } from '@/lib/email'
+import { sendEmail, sendAdminNotification, generateNewBookingAdminEmail, generateGiftCardAdminEmail, generateBookingConfirmationEmail } from '@/lib/email'
 import { sendServerEvent } from '@/lib/facebook-capi'
 import Stripe from 'stripe'
 
@@ -197,6 +197,29 @@ export async function POST(request: NextRequest) {
               console.error('❌ [WEBHOOK] Exception sending gift card email:', emailError)
               // Don't fail the gift card creation
             }
+          }
+
+          // Notifica admin acquisto gift card (non-blocking)
+          try {
+            const adminEmailContent = generateGiftCardAdminEmail(
+              recipientEmail || 'email non disponibile',
+              giftCardCode,
+              giftCardAmount,
+              session.id
+            )
+            const adminNotified = await sendAdminNotification(
+              adminEmailContent.subject,
+              adminEmailContent.html,
+              adminEmailContent.text
+            )
+            if (adminNotified) {
+              console.log('✅ [WEBHOOK] Admin gift card notification sent successfully!')
+            } else {
+              console.error('❌ [WEBHOOK] Admin gift card notification failed to send')
+            }
+          } catch (adminEmailError) {
+            console.error('❌ [WEBHOOK] Exception sending admin gift card notification:', adminEmailError)
+            // Don't fail the gift card creation
           }
           
           return NextResponse.json({
@@ -397,6 +420,22 @@ export async function POST(request: NextRequest) {
               } else {
                 console.error('❌ [WEBHOOK] Admin notification failed to send')
               }
+
+              // Invia conferma prenotazione al cliente
+              const customerEmailData = generateBookingConfirmationEmail(
+                userEmail,
+                userName,
+                session.metadata?.tourTitle || 'Tour',
+                newBooking?.id || '',
+                totalAmountPaid,
+                'deposit'
+              )
+              const customerEmailSent = await sendEmail(customerEmailData)
+              if (customerEmailSent) {
+                console.log('✅ [WEBHOOK] Customer deposit confirmation email sent successfully!')
+              } else {
+                console.error('❌ [WEBHOOK] Customer deposit confirmation email failed to send')
+              }
             } else {
               console.warn('⚠️ [WEBHOOK] User profile not found for userId:', finalUserId)
             }
@@ -575,6 +614,22 @@ export async function POST(request: NextRequest) {
               } else {
                 console.error('❌ [WEBHOOK] Admin notification failed to send')
               }
+
+              // Invia conferma prenotazione al cliente
+              const customerEmailData = generateBookingConfirmationEmail(
+                userEmail,
+                userName,
+                newBooking.tour_title || session.metadata?.tourTitle || 'Tour',
+                newBooking.id,
+                totalAmountPaid,
+                'full'
+              )
+              const customerEmailSent = await sendEmail(customerEmailData)
+              if (customerEmailSent) {
+                console.log('✅ [WEBHOOK] Customer full payment confirmation email sent successfully!')
+              } else {
+                console.error('❌ [WEBHOOK] Customer full payment confirmation email failed to send')
+              }
             } else {
               console.warn('⚠️ [WEBHOOK] User profile not found for userId:', finalUserId)
             }
@@ -730,6 +785,22 @@ export async function POST(request: NextRequest) {
                 console.log('✅ [WEBHOOK] Admin notification sent successfully!')
               } else {
                 console.error('❌ [WEBHOOK] Admin notification failed to send')
+              }
+
+              // Invia conferma pagamento saldo al cliente
+              const customerEmailData = generateBookingConfirmationEmail(
+                userEmail,
+                userName,
+                existingBooking.tour_title || session.metadata?.tourTitle || 'Tour',
+                existingBooking.id,
+                session.amount_total + giftCardDiscount,
+                'balance'
+              )
+              const customerEmailSent = await sendEmail(customerEmailData)
+              if (customerEmailSent) {
+                console.log('✅ [WEBHOOK] Customer balance confirmation email sent successfully!')
+              } else {
+                console.error('❌ [WEBHOOK] Customer balance confirmation email failed to send')
               }
             } else {
               console.warn('⚠️ [WEBHOOK] User profile not found for userId:', finalUserId)

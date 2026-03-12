@@ -250,6 +250,91 @@ Hai domande? Contattaci a info@weshoot.it
   })
 }
 
+export function generateGiftCardAdminEmail(
+  customerEmail: string,
+  giftCardCode: string,
+  amount: number, // in euros (integer)
+  stripeSessionId: string
+): { subject: string; html: string; text: string } {
+  const formattedAmount = new Intl.NumberFormat('it-IT', {
+    style: 'currency',
+    currency: 'EUR',
+  }).format(amount)
+
+  const subject = `Nuova Gift Card Acquistata: ${formattedAmount}`
+
+  const html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>${subject}</title>
+      <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #dc2626; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .content { background: #fff; padding: 20px; border: 1px solid #e9ecef; border-radius: 8px; }
+        .info-box { background: #f8f9fa; padding: 15px; border-radius: 4px; margin: 15px 0; }
+        .button { display: inline-block; padding: 12px 24px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; margin: 10px 0; }
+        .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #e9ecef; font-size: 14px; color: #666; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #e9ecef; }
+        th { background: #f8f9fa; font-weight: bold; }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h1>🎁 Nuova Gift Card Acquistata!</h1>
+        </div>
+
+        <div class="content">
+          <p><strong>È stata acquistata una nuova Gift Card WeShoot.</strong></p>
+
+          <div class="info-box">
+            <h3>📋 Dettagli Gift Card</h3>
+            <table>
+              <tr>
+                <th>Email Acquirente</th>
+                <td><a href="mailto:${customerEmail}">${customerEmail}</a></td>
+              </tr>
+              <tr>
+                <th>Codice Gift Card</th>
+                <td><strong>${giftCardCode}</strong></td>
+              </tr>
+              <tr>
+                <th>Importo</th>
+                <td><strong>${formattedAmount}</strong></td>
+              </tr>
+              <tr>
+                <th>Stripe Session ID</th>
+                <td>${stripeSessionId}</td>
+              </tr>
+              <tr>
+                <th>Data</th>
+                <td>${new Date().toLocaleString('it-IT')}</td>
+              </tr>
+            </table>
+          </div>
+
+          <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin" class="button">
+            Vai alla Dashboard Admin
+          </a>
+        </div>
+
+        <div class="footer">
+          <p>Questa è una notifica automatica del sistema WeShoot.</p>
+        </div>
+      </div>
+    </body>
+    </html>
+  `
+
+  const text = `${subject}\n\nNuova Gift Card acquistata!\n\nDettagli:\n- Email Acquirente: ${customerEmail}\n- Codice: ${giftCardCode}\n- Importo: ${formattedAmount}\n- Stripe Session: ${stripeSessionId}\n- Data: ${new Date().toLocaleString('it-IT')}\n\nDashboard: ${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin`
+
+  return { subject, html, text }
+}
+
 // Admin notification templates
 export function generateNewBookingAdminEmail(
   userName: string,
@@ -497,15 +582,18 @@ export function generateBookingConfirmationEmail(
   tourTitle: string,
   bookingId: string,
   amount: number,
-  paymentType: 'deposit' | 'balance'
+  paymentType: 'deposit' | 'balance' | 'full'
 ): EmailData {
   const formattedAmount = new Intl.NumberFormat('it-IT', {
     style: 'currency',
     currency: 'EUR',
   }).format(amount / 100)
 
-  const subject = paymentType === 'deposit' 
-    ? `Conferma Acconto - ${tourTitle}` 
+  const isDepositPayment = paymentType === 'deposit'
+  const isPaidInFull = paymentType === 'full' || paymentType === 'balance'
+
+  const subject = isDepositPayment
+    ? `Conferma Acconto - ${tourTitle}`
     : `Pagamento Completato - ${tourTitle}`
 
   const html = `
@@ -526,25 +614,25 @@ export function generateBookingConfirmationEmail(
     <body>
       <div class="container">
         <div class="header">
-          <h1>🎉 ${paymentType === 'deposit' ? 'Acconto Confermato!' : 'Pagamento Completato!'}</h1>
+          <h1>🎉 ${isDepositPayment ? 'Acconto Confermato!' : 'Pagamento Completato!'}</h1>
         </div>
         
         <div class="content">
           <p>Ciao ${userName},</p>
           
-          <p>${paymentType === 'deposit' 
-            ? 'Il tuo acconto è stato confermato con successo!' 
+          <p>${isDepositPayment
+            ? 'Il tuo acconto è stato confermato con successo!'
             : 'Il tuo pagamento è stato completato con successo!'}</p>
           
           <h3>Dettagli Prenotazione</h3>
           <ul>
             <li><strong>Tour:</strong> ${tourTitle}</li>
             <li><strong>ID Prenotazione:</strong> ${bookingId}</li>
-            <li><strong>Importo ${paymentType === 'deposit' ? 'Acconto' : 'Pagato'}:</strong> ${formattedAmount}</li>
+            <li><strong>Importo ${isDepositPayment ? 'Acconto' : 'Pagato'}:</strong> ${formattedAmount}</li>
             <li><strong>Data:</strong> ${new Date().toLocaleDateString('it-IT')}</li>
           </ul>
           
-          ${paymentType === 'deposit' ? `
+          ${isDepositPayment ? `
             <p>Il saldo rimanente dovrà essere pagato entro la data indicata nella tua dashboard.</p>
           ` : `
             <p>La tua prenotazione è ora completamente pagata. Ti contatteremo presto con tutti i dettagli del viaggio!</p>
@@ -568,8 +656,8 @@ export function generateBookingConfirmationEmail(
     to: userEmail,
     subject,
     html,
-    text: `${subject}\n\nCiao ${userName},\n\n${paymentType === 'deposit' 
-      ? 'Il tuo acconto è stato confermato con successo!' 
+    text: `${subject}\n\nCiao ${userName},\n\n${isDepositPayment
+      ? 'Il tuo acconto è stato confermato con successo!'
       : 'Il tuo pagamento è stato completato con successo!'}\n\nDettagli:\n- Tour: ${tourTitle}\n- ID: ${bookingId}\n- Importo: ${formattedAmount}\n\nVai alla dashboard: ${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/dashboard`
   }
 }

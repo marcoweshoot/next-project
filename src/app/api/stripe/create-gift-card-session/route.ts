@@ -83,10 +83,10 @@ export async function POST(request: NextRequest) {
           key: 'fiscal_code',
           label: {
             type: 'custom',
-            custom: 'Codice Fiscale (opzionale)',
+            custom: 'Codice Fiscale',
           },
           type: 'text',
-          optional: true,
+          optional: false,
         },
         {
           key: 'vat_number',
