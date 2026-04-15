@@ -24,6 +24,19 @@ function PaymentSuccessContent() {
         // Facebook Pixel: Track Purchase event BEFORE auth check.
         // The purchase already happened — storage data is proof enough.
         // Doing this first avoids losing the event if auth redirects the user away.
+        //
+        // React fires child effects before parent effects, so FacebookPixel (layout)
+        // may not have initialized window.fbq yet. We poll briefly as a safety net.
+        if (typeof window !== 'undefined') {
+          await new Promise<void>((resolve) => {
+            if (window.fbq) { resolve(); return }
+            let attempts = 0
+            const timer = setInterval(() => {
+              if (window.fbq || ++attempts >= 20) { clearInterval(timer); resolve() }
+            }, 100) // polls every 100ms, up to 2s total
+          })
+        }
+
         if (typeof window !== 'undefined' && window.fbq) {
           if (process.env.NODE_ENV === 'development') {
             console.log('🎯 [FB PIXEL] Payment success page loaded, attempting Purchase track')
