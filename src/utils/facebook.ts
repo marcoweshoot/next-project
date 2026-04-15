@@ -114,11 +114,25 @@ export function trackLead({
     currency: 'EUR',
   }
 
+  // 1. Browser pixel
   window.fbq('track', 'Lead', eventData, { eventID: eventId })
+
+  // 2. CAPI server-side (non-blocking) — same event_id for deduplication
+  fetch('/api/track-fb-event', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_name: 'Lead',
+      event_id: eventId,
+      event_source_url: window.location.href,
+      custom_data: eventData,
+    }),
+  }).catch(() => {
+    // intentionally non-blocking
+  })
   
-  // Log only in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('✅ [FB PIXEL] Lead event tracked:', {
+    console.log('✅ [FB PIXEL] Lead event tracked (pixel + CAPI):', {
       contentName,
       eventId,
     })
