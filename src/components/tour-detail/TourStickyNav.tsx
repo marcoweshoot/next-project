@@ -4,10 +4,13 @@ import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { trackAddToCart } from '@/utils/facebook';
+import { SimpleCheckoutModal } from '@/components/payment/SimpleCheckoutModal';
+import { createClient } from '@/lib/supabase/client';
 
 interface TourStickyNavProps {
   price?: number;
   onScrollToSection: (sectionId: string) => void;
+  coachName?: string;
   tour?: {
     id?: string;
     slug?: string;
@@ -18,13 +21,25 @@ interface TourStickyNavProps {
   };
 }
 
-const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onScrollToSection, tour }) => {
+const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onScrollToSection, coachName = 'Coach WeShoot', tour }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [user, setUser] = useState<{ id: string; email: string } | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsVisible(window.scrollY > 200);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Fetch current user for the checkout modal (non-blocking)
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user: authUser } }) => {
+      if (authUser?.email) {
+        setUser({ id: authUser.id, email: authUser.email });
+      }
+    });
   }, []);
 
   // Helper: estrai prezzo dalla sessione
@@ -60,22 +75,31 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
   const displayPrice = nextSessionData.price != null ? nextSessionData.price : fallbackPrice;
 
   const handleBookClick = () => {
-    // Track AddToCart event before scrolling to sessions
-    if (displayPrice && displayPrice > 0) {
-      trackAddToCart({
-        tourTitle: tour?.title || 'Tour',
-        tourId: tour?.id || tour?.slug || 'unknown',
-        sessionId: nextSessionData.session?.id,
-        price: displayPrice,
-        quantity: 1,
-      });
+    if (nextSessionData.session) {
+      // Track AddToCart (same pattern as SessionCard) then open modal
+      if (displayPrice && displayPrice > 0) {
+        trackAddToCart({
+          tourTitle: tour?.title || 'Tour',
+          tourId: tour?.id || tour?.slug || 'unknown',
+          sessionId: nextSessionData.session?.id,
+          price: displayPrice,
+          quantity: 1,
+        });
+      }
+      setIsModalOpen(true);
+    } else {
+      // Fallback: no session data yet, scroll to sessions section
+      onScrollToSection('sessions');
     }
-    
-    // Scroll to sessions section
-    onScrollToSection('sessions');
   };
 
+  const session = nextSessionData.session;
+  const availableSpots = session
+    ? Math.max(0, (session.maxPax ?? 0) - (session.users?.length ?? 0))
+    : 0;
+
   return (
+    <>
     <div
       className={`fixed left-0 right-0 z-50 flex h-[60px] w-full items-center justify-between border-b bg-background/80 px-2 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-200 ease-out ${
         isVisible ? 'top-0' : '-top-20'
@@ -139,6 +163,31 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
         </Button>
       </div>
     </div>
+
+    {session && (
+      <SimpleCheckoutModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        isBalancePayment={false}
+        tour={{
+          id: tour?.id || '',
+          title: tour?.title || '',
+          startDate: session.start || '',
+          endDate: session.end || '',
+          coach: coachName,
+        }}
+        session={{
+          id: session.id || '',
+          date: session.start || '',
+          price: displayPrice || 0,
+          deposit: session.deposit || Math.round((displayPrice || 0) * 0.3),
+          currency: (session.currency || 'EUR').toLowerCase(),
+          availableSpots,
+        }}
+        user={user}
+      />
+    )}
+    </>
   );
 };
 

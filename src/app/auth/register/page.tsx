@@ -25,6 +25,7 @@ import {
   CheckCircle
 } from 'lucide-react'
 import { GoogleAuthButton } from '@/components/auth/GoogleAuthButton'
+import { generateEventId, trackCompleteRegistration } from '@/utils/facebook'
 import dynamic from 'next/dynamic'
 
 const Aurora = dynamic(() => import('@/components/ui/Aurora'), { ssr: false })
@@ -95,6 +96,9 @@ function RegisterForm() {
         setError(error.message)
       } else if (data.user) {
         // Crea il profilo usando l'API che bypassa RLS
+        // Generate eventId here so pixel and CAPI share the same value for deduplication
+        const fbEventId = generateEventId()
+
         try {
           const response = await fetch('/api/create-profile', {
             method: 'POST',
@@ -105,14 +109,16 @@ function RegisterForm() {
               firstName: firstName,
               lastName: lastName,
               privacyAccepted: privacyAccepted,
-              marketingAccepted: marketingAccepted
+              marketingAccepted: marketingAccepted,
+              fbEventId: fbEventId,
             })
           })
           
           const result = await response.json()
           
-          if (!response.ok) {
-            // Profile creation failed, but registration can continue
+          if (response.ok) {
+            // Fire browser pixel with the same eventId used by the server CAPI call
+            trackCompleteRegistration({ eventId: fbEventId })
           }
         } catch (err) {
           // Profile creation failed, but registration can continue

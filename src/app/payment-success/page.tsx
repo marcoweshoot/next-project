@@ -21,115 +21,120 @@ function PaymentSuccessContent() {
           throw new Error('Session ID non trovato')
         }
 
-        
-        // Check if user is authenticated
-        const supabase = createClient()
-        const { data: { user }, error: authError } = await supabase.auth.getUser()
-        
-        if (authError || !user) {
-          // Redirect to login with success message
-          router.push('/auth/login?message=payment_success')
-          return
+        // Facebook Pixel: Track Purchase event BEFORE auth check.
+        // The purchase already happened — storage data is proof enough.
+        // Doing this first avoids losing the event if auth redirects the user away.
+        //
+        // React fires child effects before parent effects, so FacebookPixel (layout)
+        // may not have initialized window.fbq yet. We poll briefly as a safety net.
+        if (typeof window !== 'undefined') {
+          await new Promise<void>((resolve) => {
+            if (window.fbq) { resolve(); return }
+            let attempts = 0
+            const timer = setInterval(() => {
+              if (window.fbq || ++attempts >= 20) { clearInterval(timer); resolve() }
+            }, 100) // polls every 100ms, up to 2s total
+          })
         }
-        
-        
-        // Clear payment data from localStorage (if it was ever there)
-        localStorage.removeItem('paymentData')
-        
-        // Facebook Pixel: Track Purchase event client-side
+
         if (typeof window !== 'undefined' && window.fbq) {
           if (process.env.NODE_ENV === 'development') {
-            console.log('🎯 [FB PIXEL] Payment success page loaded')
-            console.log('🎯 [FB PIXEL] window.fbq exists:', !!window.fbq)
+            console.log('🎯 [FB PIXEL] Payment success page loaded, attempting Purchase track')
           }
-          
-          // Try sessionStorage first, then localStorage as fallback
+
+          // Try sessionStorage first, then localStorage as fallback.
+          // Both are set by StripeCheckoutButton before the Stripe redirect.
           let purchaseData = sessionStorage.getItem('lastPurchase')
           let storageSource = 'sessionStorage'
-          
+
           if (!purchaseData) {
             purchaseData = localStorage.getItem('lastPurchase')
             storageSource = 'localStorage'
-            
             if (process.env.NODE_ENV === 'development') {
               console.log('⚠️ [FB PIXEL] Data not found in sessionStorage, trying localStorage')
             }
           }
-          
+
           if (process.env.NODE_ENV === 'development') {
             console.log('🎯 [FB PIXEL] Purchase data found in', storageSource, purchaseData ? '✅' : '❌')
           }
-          
+
           if (purchaseData) {
             try {
               const purchase = JSON.parse(purchaseData)
               const purchaseValue = purchase.value || 0
-              
+
               if (process.env.NODE_ENV === 'development') {
                 console.log('🎯 [FB PIXEL] Parsed purchase data:', {
                   tourTitle: purchase.tourTitle,
                   value: purchaseValue,
-                  quantity: purchase.quantity
+                  quantity: purchase.quantity,
                 })
               }
-              
-              // Only track if value is greater than 0 (Facebook requirement)
+
               if (purchaseValue > 0 && !isNaN(purchaseValue) && isFinite(purchaseValue)) {
-                // Generate event_id from Stripe session_id for deduplication
+                // Use Stripe session_id as event_id — same value used by the CAPI webhook → deduplication works
                 const eventId = createEventIdFromStripeSession(sessionId)
-                
+
                 const eventData = {
                   content_name: purchase.tourTitle || 'Tour',
                   content_category: 'Viaggi Fotografici',
                   value: purchaseValue,
                   currency: 'EUR',
-                  num_items: purchase.quantity || 1
+                  num_items: purchase.quantity || 1,
                 }
-                
+
                 if (process.env.NODE_ENV === 'development') {
-                  console.log('🆔 [FB PIXEL] Generated event_id from Stripe session:', eventId)
-                  console.log('✅ [FB PIXEL] Tracking Purchase event with data:', eventData)
+                  console.log('🆔 [FB PIXEL] event_id from Stripe session:', eventId)
+                  console.log('✅ [FB PIXEL] Tracking Purchase event:', eventData)
                 }
-                
-                // Track Purchase event with event_id for deduplication
+
                 window.fbq('track', 'Purchase', eventData, { eventID: eventId })
-                
+
                 if (process.env.NODE_ENV === 'development') {
-                  console.log('✅ [FB PIXEL] Purchase event sent successfully with event_id!')
+                  console.log('✅ [FB PIXEL] Purchase event sent successfully!')
                 }
               } else {
                 if (process.env.NODE_ENV === 'development') {
                   console.warn('⚠️ [FB PIXEL] Purchase value is invalid:', purchaseValue)
                 }
               }
-              
-              // Clean up
+
+              // Always clean up regardless of whether value was valid
               sessionStorage.removeItem('lastPurchase')
               localStorage.removeItem('lastPurchase')
-              
+
               if (process.env.NODE_ENV === 'development') {
                 console.log('🧹 [FB PIXEL] Cleaned up storage')
               }
-            } catch (error) {
+            } catch (parseError) {
               if (process.env.NODE_ENV === 'development') {
-                console.error('❌ [FB PIXEL] Failed to track Facebook Pixel Purchase event:', error)
+                console.error('❌ [FB PIXEL] Failed to parse purchase data:', parseError)
               }
             }
           } else {
             if (process.env.NODE_ENV === 'development') {
-              console.warn('⚠️ [FB PIXEL] No purchase data found in sessionStorage or localStorage')
-              console.log('💡 [FB PIXEL] This might happen if:')
-              console.log('   - Browser cleared storage during Stripe redirect')
-              console.log('   - User used incognito/private mode')
-              console.log('   - Data was not saved before redirect')
+              console.warn('⚠️ [FB PIXEL] No purchase data in storage — browser may have cleared it during Stripe redirect (common on Safari/iOS)')
             }
           }
         } else {
           if (process.env.NODE_ENV === 'development') {
-            console.warn('⚠️ [FB PIXEL] Facebook Pixel not initialized (window.fbq not found)')
+            console.warn('⚠️ [FB PIXEL] window.fbq not ready yet on payment-success')
           }
         }
-        
+
+        // Clear unrelated leftover payment data
+        localStorage.removeItem('paymentData')
+
+        // Auth check: determines redirect destination only — pixel has already fired above
+        const supabase = createClient()
+        const { data: { user }, error: authError } = await supabase.auth.getUser()
+
+        if (authError || !user) {
+          router.push('/auth/login?message=payment_success')
+          return
+        }
+
         // Redirect to dashboard with success parameter
         setTimeout(() => {
           router.push('/dashboard?payment=success')

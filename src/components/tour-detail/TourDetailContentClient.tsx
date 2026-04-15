@@ -108,12 +108,17 @@ export default function TourDetailContentClient({
       ? tour.sessions[0]?.price
       : undefined;
 
+  const coachName = Array.isArray(coaches) && coaches[0]
+    ? `${coaches[0].firstName || ''} ${coaches[0].lastName || 'Coach'}`.trim() || 'Coach WeShoot'
+    : 'Coach WeShoot';
+
   return (
     <>
       <TourStickyNav
         price={tour.price || priceFromSession || 0}
         tour={tour}
         onScrollToSection={scrollToSection}
+        coachName={coachName}
       />
 
       <TourGallery gallery={galleryData} />

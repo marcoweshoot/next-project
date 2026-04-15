@@ -33374,19 +33374,19 @@
         "priceCompanion": 69,
         "users": [
           {
-            "instagram": "https://www.instagram.com/marco_carotenuto",
-            "firstName": "Marco",
-            "lastName": "Carotenuto",
-            "username": "marcocarotenuto",
+            "instagram": "alexwidesphotography",
+            "firstName": "Alessandro",
+            "lastName": "Cantarelli",
+            "username": "alessandrocantarelli",
             "profilePicture": {
-              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+              "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/alessandro_cantarelli_coach_weshoot_ce2811c949_693d1d8e3e.jpeg"
             },
-            "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+            "bio": "<p>Riferimento internazionale sulle panoramiche, premiato nei concorsi più importanti al Mondo e pubblicato su Times, National Geographic, Skytg24</p>",
             "level": "coach",
             "role": {
-              "name": "SuperAdmin",
-              "description": "Top level user",
-              "type": "authenticated"
+              "name": "Public",
+              "description": "Default role given to unauthenticated user.",
+              "type": "public"
             }
           }
         ]
@@ -33579,8 +33579,8 @@
       },
       {
         "id": "270",
-        "start": "2026-08-29",
-        "end": "2026-08-29",
+        "start": "2026-08-01",
+        "end": "2026-08-01",
         "status": "scheduled",
         "maxPax": null,
         "price": 69,
@@ -33736,7 +33736,7 @@
         "id": "284",
         "start": "2026-05-16",
         "end": "2026-05-16",
-        "status": "scheduled",
+        "status": "almostFull",
         "maxPax": 8,
         "price": 69,
         "deposit": 69,

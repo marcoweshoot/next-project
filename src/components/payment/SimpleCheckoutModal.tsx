@@ -146,6 +146,9 @@ export function SimpleCheckoutModal({
   }
 
   const handleZeroPayment = async () => {
+    // Generate eventId early so both pixel and CAPI server-side use the same ID for deduplication
+    const fbEventId = createPurchaseEventId(`giftcard_${Date.now()}_${user?.id || registeredUserId}`)
+
     try {
       // Create booking directly without Stripe payment
       const response = await fetch('/api/zero-payment', {
@@ -159,6 +162,7 @@ export function SimpleCheckoutModal({
           paymentType: isBalancePayment ? 'balance' : paymentType,
           giftCardCode,
           amount: getPaymentAmount(), // Pass the actual amount to pay
+          fbEventId, // For CAPI deduplication with the browser pixel event
           // Pass tour and session data for enriched booking
           tourTitle: tour.title,
           tourDestination: tour.title, // or tour.destination if available
@@ -203,11 +207,8 @@ export function SimpleCheckoutModal({
 
       // Track Facebook Pixel Purchase event for gift card payments
       if (typeof window !== 'undefined' && window.fbq && totalValue > 0 && !isNaN(totalValue) && isFinite(totalValue)) {
-        // Generate unique event_id for gift card purchases (no Stripe session)
-        const eventId = createPurchaseEventId(`giftcard_${Date.now()}_${user?.id || registeredUserId}`)
-        
         if (process.env.NODE_ENV === 'development') {
-          console.log('🆔 [FB PIXEL] Generated event_id for gift card purchase:', eventId)
+          console.log('🆔 [FB PIXEL] Using event_id for gift card purchase:', fbEventId)
         }
         
         window.fbq('track', 'Purchase', {
@@ -216,7 +217,7 @@ export function SimpleCheckoutModal({
           value: totalValue,
           currency: 'EUR',
           num_items: quantity || 1
-        }, { eventID: eventId })
+        }, { eventID: fbEventId })
         
         if (process.env.NODE_ENV === 'development') {
           console.log('✅ [FB PIXEL] Purchase event sent with event_id for gift card payment')

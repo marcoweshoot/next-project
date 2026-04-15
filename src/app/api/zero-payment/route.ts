@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServerClientSupabase } from '@/lib/supabase/server'
 import { applyGiftCard } from '@/lib/giftCards'
 import { sendEmail, generateBookingConfirmationEmail } from '@/lib/email'
+import { sendServerEvent, UserData } from '@/lib/facebook-capi'
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,6 +15,7 @@ export async function POST(request: NextRequest) {
       paymentType, 
       giftCardCode, 
       amount,
+      fbEventId,
       tourTitle,
       tourDestination,
       sessionDate,
@@ -21,6 +23,9 @@ export async function POST(request: NextRequest) {
       sessionPrice,
       sessionDeposit
     } = body
+
+    const ip = request.headers.get('x-forwarded-for') || undefined
+    const userAgent = request.headers.get('user-agent') || undefined
 
 
     // Validate required fields
@@ -129,11 +134,11 @@ export async function POST(request: NextRequest) {
         }
       }
 
-      // Invia conferma pagamento saldo al cliente (non-blocking)
+      // Invia conferma pagamento saldo al cliente + CAPI Purchase (non-blocking)
       try {
         const { data: userProfile } = await supabase
           .from('profiles')
-          .select('first_name, last_name, email')
+          .select('first_name, last_name, email, mobile_phone')
           .eq('id', userId)
           .single()
 
@@ -149,6 +154,42 @@ export async function POST(request: NextRequest) {
           )
           await sendEmail(customerEmailData)
           console.log('✅ [ZERO PAYMENT API] Customer balance confirmation email sent')
+        }
+
+        // CAPI Purchase event for gift-card balance payment
+        const balanceValue = ((sessionPrice || 0) - (sessionDeposit || 0)) * (quantity || 1)
+        if (balanceValue > 0) {
+          const capiUserData: UserData = {
+            external_id: userId,
+            em: userProfile?.email || undefined,
+            fn: userProfile?.first_name || undefined,
+            ln: userProfile?.last_name || undefined,
+            ph: userProfile?.mobile_phone || undefined,
+            client_ip_address: ip,
+            client_user_agent: userAgent,
+          }
+          ;(async () => {
+            try {
+              await sendServerEvent({
+                event_name: 'Purchase',
+                event_id: fbEventId || `giftcard_balance_${existingBooking.id}`,
+                event_source_url: request.headers.get('referer') || `${process.env.NEXT_PUBLIC_SITE_URL}/`,
+                user_data: capiUserData,
+                custom_data: {
+                  value: balanceValue,
+                  currency: 'EUR',
+                  content_name: tourTitle || '',
+                  content_category: 'Viaggi Fotografici',
+                  num_items: quantity || 1,
+                  order_id: existingBooking.id,
+                },
+              })
+            } catch (capiError) {
+              if (process.env.NODE_ENV === 'development') {
+                console.error('❌ [ZERO PAYMENT API] Failed to send CAPI Purchase event (balance):', capiError)
+              }
+            }
+          })()
         }
       } catch (emailError) {
         console.error('❌ [ZERO PAYMENT API] Exception sending customer confirmation email:', emailError)
@@ -361,11 +402,11 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Invia conferma prenotazione al cliente (non-blocking)
+    // Invia conferma prenotazione al cliente + CAPI Purchase (non-blocking)
     try {
       const { data: userProfile } = await supabase
         .from('profiles')
-        .select('first_name, last_name, email')
+        .select('first_name, last_name, email, mobile_phone')
         .eq('id', userId)
         .single()
 
@@ -383,6 +424,42 @@ export async function POST(request: NextRequest) {
         )
         await sendEmail(customerEmailData)
         console.log('✅ [ZERO PAYMENT API] Customer booking confirmation email sent')
+      }
+
+      // CAPI Purchase event for gift-card new booking
+      const purchaseValue = amountPaidValue > 0 ? amountPaidValue : expectedPaidAmount
+      if (purchaseValue > 0) {
+        const capiUserData: UserData = {
+          external_id: userId,
+          em: userProfile?.email || undefined,
+          fn: userProfile?.first_name || undefined,
+          ln: userProfile?.last_name || undefined,
+          ph: userProfile?.mobile_phone || undefined,
+          client_ip_address: ip,
+          client_user_agent: userAgent,
+        }
+        ;(async () => {
+          try {
+            await sendServerEvent({
+              event_name: 'Purchase',
+              event_id: fbEventId || `giftcard_new_${booking.id}`,
+              event_source_url: request.headers.get('referer') || `${process.env.NEXT_PUBLIC_SITE_URL}/`,
+              user_data: capiUserData,
+              custom_data: {
+                value: purchaseValue,
+                currency: 'EUR',
+                content_name: tourTitle || '',
+                content_category: 'Viaggi Fotografici',
+                num_items: quantity || 1,
+                order_id: booking.id,
+              },
+            })
+          } catch (capiError) {
+            if (process.env.NODE_ENV === 'development') {
+              console.error('❌ [ZERO PAYMENT API] Failed to send CAPI Purchase event (new booking):', capiError)
+            }
+          }
+        })()
       }
     } catch (emailError) {
       console.error('❌ [ZERO PAYMENT API] Exception sending customer confirmation email:', emailError)
