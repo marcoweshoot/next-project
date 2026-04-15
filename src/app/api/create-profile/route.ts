@@ -84,6 +84,39 @@ export async function POST(request: NextRequest) {
 
       console.log('✅ Profile created successfully via fallback insert')
       console.log('📊 Fallback insert data:', data?.[0])
+
+      // Track CompleteRegistration via CAPI also on fallback path
+      try {
+        const ip = request.headers.get('x-forwarded-for')
+        const userAgent = request.headers.get('user-agent')
+        const eventId = fbEventId || `registration_${userId}_${Date.now()}`
+
+        const fallbackUserData: UserData = {
+          external_id: userId,
+          em: email,
+          fn: firstName,
+          ln: lastName,
+          client_ip_address: ip || undefined,
+          client_user_agent: userAgent || undefined,
+        }
+
+        await sendServerEvent({
+          event_name: 'CompleteRegistration',
+          event_id: eventId,
+          event_source_url: request.headers.get('referer') || process.env.NEXT_PUBLIC_SITE_URL,
+          user_data: fallbackUserData,
+          custom_data: { currency: 'EUR' },
+        })
+
+        if (process.env.NODE_ENV === 'development') {
+          console.log('✅ [CAPI] Sent CompleteRegistration event for user (fallback):', userId)
+        }
+      } catch (capiError) {
+        if (process.env.NODE_ENV === 'development') {
+          console.error('❌ [CAPI] Failed to send CompleteRegistration event (fallback):', capiError)
+        }
+      }
+
       return NextResponse.json({
         success: true,
         message: 'Profile created successfully (fallback)',
@@ -111,14 +144,13 @@ export async function POST(request: NextRequest) {
         client_user_agent: userAgent || undefined,
       }
 
-      sendServerEvent({
+      await sendServerEvent({
         event_name: 'CompleteRegistration',
         event_id: eventId,
         event_source_url: request.headers.get('referer') || process.env.NEXT_PUBLIC_SITE_URL,
         user_data: userData,
         custom_data: {
           currency: 'EUR',
-          // You can add a value if registration has a monetary value, otherwise omit it
         },
       })
       
