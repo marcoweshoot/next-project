@@ -66,7 +66,7 @@ const TourDescription: React.FC<TourDescriptionProps> = ({ tour, onViewSessions,
   }, [tour.description]);
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-8 md:py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Description */}

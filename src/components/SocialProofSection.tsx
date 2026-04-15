@@ -17,13 +17,13 @@ const logos: Logo[] = [
 
 export default function SocialProofSection() {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-8 md:py-16 bg-background">
       <div className="container text-center">
-        <p className="mb-8 text-xl md:text-2xl font-medium text-muted-foreground">
+        <p className="mb-6 md:mb-8 text-xl md:text-2xl font-medium text-muted-foreground">
           1200 Viaggiatori, 100+ Viaggi organizzati, 18.000 WeShooters dal 2015 con pubblicazioni su
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+        <div className="flex flex-nowrap items-center justify-start md:justify-center gap-6 md:gap-12 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 md:px-0">
           {logos.map((l) => (
             <Image
               key={l.src}
@@ -31,7 +31,7 @@ export default function SocialProofSection() {
               alt={l.alt}
               width={l.w}
               height={l.h}
-              className={`h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity
+              className={`shrink-0 h-7 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity
                 ${l.invertInDark ? 'dark:invert' : 'dark:brightness-125 dark:contrast-110'}`}
               sizes="(max-width: 768px) 33vw, 20vw"
               loading="lazy"

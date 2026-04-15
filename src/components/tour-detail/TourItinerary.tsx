@@ -94,7 +94,7 @@ const TourItinerary: React.FC<TourItineraryProps> = ({ itinerary, tour }) => {
     <section
       id="itinerary"
       aria-label="Itinerario giornaliero del tour"
-      className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-muted dark:to-background"
+      className="py-10 md:py-20 bg-gradient-to-b from-gray-50 to-white dark:from-muted dark:to-background"
     >
       <div className="container mx-auto px-4">
         {/* Intestazione */}

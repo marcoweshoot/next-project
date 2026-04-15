@@ -36,7 +36,7 @@ const HighlightCard = React.memo(({ highlight }: { highlight: HighlightItem }) =
     (highlight?.icon?.alternativeText || highlight?.title || 'Icona').toString();
 
   return (
-    <Card className="bg-card text-card-foreground border border-border shadow-sm hover:shadow-md transition-shadow duration-200">
+    <Card className="h-full bg-card text-card-foreground border border-border shadow-sm hover:shadow-md transition-shadow duration-200">
       <CardContent className="p-5">
         <div className="flex items-start space-x-4">
           <div className="flex-shrink-0">
@@ -76,7 +76,28 @@ const TourHighlights: React.FC<TourHighlightsProps> = ({ highlights }) => {
         Punti Salienti del Viaggio
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Mobile: horizontal swipe carousel */}
+      <div className="sm:hidden">
+        <div className="flex items-stretch overflow-x-auto snap-x snap-mandatory scroll-smooth gap-4 -mx-4 px-4 pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          {highlights.map((h, i) => {
+            const safeKey = `${slugify(h?.id ?? h?.title)}-${i}`;
+            return (
+              <div key={safeKey} className="snap-start shrink-0 w-[75%]">
+                <HighlightCard highlight={h} />
+              </div>
+            );
+          })}
+        </div>
+        {highlights.length > 1 && (
+          <div className="flex items-center justify-center gap-1.5 mt-2">
+            <span className="text-xs text-muted-foreground">scorri per vedere tutti</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground"><path d="m9 18 6-6-6-6"/></svg>
+          </div>
+        )}
+      </div>
+
+      {/* Tablet + Desktop: grid */}
+      <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {highlights.map((h, i) => {
           const safeKey = `${slugify(h?.id ?? h?.title)}-${i}`;
           return <HighlightCard key={safeKey} highlight={h} />;

@@ -122,7 +122,7 @@ const TourGallery: React.FC<TourGalleryProps> = ({
 
   return (
     <>
-      <section id="tour-gallery" className="py-16 px-4 md:px-0 bg-background">
+      <section id="tour-gallery" className="py-8 md:py-16 px-4 md:px-0 bg-background">
         <div className="max-w-2xl mx-auto text-center mb-8">
           <h2 className="text-3xl font-semibold mb-2 text-foreground">{title}</h2>
           <p className="text-lg text-muted-foreground">{subtitle}</p>

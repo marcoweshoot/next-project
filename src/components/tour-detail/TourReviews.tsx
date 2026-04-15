@@ -155,7 +155,7 @@ const TourReviews: React.FC<TourReviewsProps> = ({ reviews }) => {
     reviews.length;
 
   return (
-    <section id="reviews" className="py-16 bg-background">
+    <section id="reviews" className="py-8 md:py-16 bg-background">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12">

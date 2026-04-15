@@ -147,7 +147,7 @@ const GroupGallerySection: React.FC<GroupGallerySectionProps> = ({
 
   return (
     <>
-      <section id="group-gallery" className="py-16 px-4 md:px-0">
+      <section id="group-gallery" className="py-8 md:py-16 px-4 md:px-0">
         <div className="max-w-2xl mx-auto text-center mb-8">
           <h2 className="text-3xl font-semibold mb-2">{title}</h2>
           <p className="text-lg text-gray-600">{subtitle}</p>

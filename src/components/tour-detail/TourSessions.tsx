@@ -175,9 +175,9 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
   );
 
   return (
-    <section id="sessions" className="py-16">
+    <section id="sessions" className="py-8 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {futureSessions.length > 0 ? 'Prossime Partenze' : 'Partenze'}
           </h2>
@@ -188,43 +188,71 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {futureSessions.length > 0 ? (
-            sortedYears.map((year, yearIndex) => (
-              <div key={`${tour.id}-${year}`} className={yearIndex > 0 ? 'mt-12' : ''}>
-                {sortedYears.length > 1 && (
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">
-                      {year}
-                    </h3>
-                    <div className="h-px bg-border"></div>
-                  </div>
-                )}
+        {futureSessions.length > 0 ? (
+          <>
+            {/* Mobile: horizontal swipe carousel */}
+            <div className="md:hidden">
+              <div className="flex items-start overflow-x-auto snap-x snap-mandatory scroll-smooth gap-4 pb-4 -mx-4 px-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+                {futureSessions.map((session, index) => {
+                  const isNext = index === 0;
+                  const sessionKey =
+                    session?.id && String(session.id).length > 0
+                      ? `sess-${session.id}`
+                      : `sess-${session.start}-${session.end}-${index}`;
 
-                <div className="space-y-4">
-                  {sessionsByYear[year].map((session, sessionIndex) => {
-                    // La prima sessione del primo anno è quella "prossima"
-                    const isNext = yearIndex === 0 && sessionIndex === 0;
-
-                    // ➜ Key unica e stabile anche se id è mancante/duplicato
-                    const sessionKey =
-                      session?.id && String(session.id).length > 0
-                        ? `sess-${session.id}`
-                        : `sess-${session.start}-${session.end}-${sessionIndex}`;
-
-                    return (
-                      <React.Fragment key={sessionKey}>
-                        {renderSession(session, isNext)}
-                      </React.Fragment>
-                    );
-                  })}
-                </div>
+                  return (
+                    <div key={sessionKey} className="snap-start shrink-0 w-[85%]">
+                      {renderSession(session, isNext)}
+                    </div>
+                  );
+                })}
               </div>
-            ))
-          ) : (
+
+              {futureSessions.length > 1 && (
+                <div className="flex items-center justify-center gap-1.5 mt-3">
+                  <span className="text-xs text-muted-foreground">scorri per vedere tutte le date</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground"><path d="m9 18 6-6-6-6"/></svg>
+                </div>
+              )}
+            </div>
+
+            {/* Desktop: vertical list grouped by year */}
+            <div className="hidden md:block max-w-4xl mx-auto">
+              {sortedYears.map((year, yearIndex) => (
+                <div key={`${tour.id}-${year}`} className={yearIndex > 0 ? 'mt-12' : ''}>
+                  {sortedYears.length > 1 && (
+                    <div className="mb-6">
+                      <h3 className="text-2xl font-bold text-foreground mb-2">
+                        {year}
+                      </h3>
+                      <div className="h-px bg-border"></div>
+                    </div>
+                  )}
+
+                  <div className="space-y-4">
+                    {sessionsByYear[year].map((session, sessionIndex) => {
+                      const isNext = yearIndex === 0 && sessionIndex === 0;
+                      const sessionKey =
+                        session?.id && String(session.id).length > 0
+                          ? `sess-${session.id}`
+                          : `sess-${session.start}-${session.end}-${sessionIndex}`;
+
+                      return (
+                        <React.Fragment key={sessionKey}>
+                          {renderSession(session, isNext)}
+                        </React.Fragment>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : (
+          <div className="max-w-4xl mx-auto">
             <ComingSoonCard />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
