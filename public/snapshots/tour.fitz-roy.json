@@ -532,7 +532,7 @@
   "highlights": [
     {
       "id": "4",
-      "title": "Hotel",
+      "title": "Hotel/Villa",
       "description": "Strutture di alta qualità, in camera doppia con bagno privato (MAI camerate).",
       "locale": "it",
       "icon": {
@@ -828,7 +828,7 @@
     {
       "id": "faq-20",
       "question": "Quando posso acquistare il volo?",
-      "answer": "<p><span style=\"color:hsl(0,0%,0%);\">Puoi acquistarlo solo dopo aver ricevuto la conferma ufficiale del viaggio da Enruta360 (via email o comunicazione formale). In quel momento ti verranno indicati anche eventuali dettagli utili (orari consigliati, aeroporto, ecc.).</span></p>",
+      "answer": "<p>L’acquisto di titoli di viaggio aerei dovrà essere effettuato esclusivamente successivamente alla conferma ufficiale del viaggio fotografico da parte di WeShoot o Enruta360. Per qualsiasi informazione inerente ai voli, inclusi i dettagli relativi al luogo di partenza del coach o di altri partecipanti, il cliente è tenuto a contattare preventivamente prenotazioni@weshoot.it.<br>WeShoot non assume alcuna responsabilità in relazione all’acquisto autonomo di biglietti aerei effettuato prima della conferma del viaggio e non sarà in alcun caso tenuta al rimborso di costi, penali o spese conseguenti.</p>",
       "locale": "it"
     }
   ],
