@@ -199,6 +199,27 @@ export function trackAddToCart({
 }
 
 /**
+ * Track CompleteRegistration event (after successful user registration)
+ *
+ * Only fires the browser pixel — CAPI is already handled server-side by
+ * /api/create-profile, which receives the same eventId for deduplication.
+ *
+ * @param {Object} params
+ * @param {string} params.eventId - The event ID generated client-side, also passed to the server
+ */
+export function trackCompleteRegistration({ eventId }: { eventId: string }) {
+  if (typeof window === 'undefined' || !window.fbq) {
+    return
+  }
+
+  window.fbq('track', 'CompleteRegistration', { currency: 'EUR' }, { eventID: eventId })
+
+  if (process.env.NODE_ENV === 'development') {
+    console.log('✅ [FB PIXEL] CompleteRegistration event tracked (pixel):', { eventId })
+  }
+}
+
+/**
  * Track ViewCategory event (destination pages, collection pages, calendar, etc.)
  * 
  * @param {Object} params - ViewCategory event parameters
