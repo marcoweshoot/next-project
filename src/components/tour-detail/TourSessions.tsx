@@ -58,6 +58,7 @@ interface TourSessionsProps {
 
 const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
   const [user, setUser] = useState<{ id: string; email: string } | null>(null);
+  const [availabilityMap, setAvailabilityMap] = useState<Record<string, number>>({});
   const now = new Date();
 
   useEffect(() => {
@@ -75,6 +76,24 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
     };
     getUser();
   }, []);
+
+  useEffect(() => {
+    const sessionIds = tour.sessions
+      ?.map((s) => s.id)
+      .filter(Boolean)
+      .join(',');
+
+    if (!sessionIds) return;
+
+    fetch(`/api/sessions/availability?ids=${sessionIds}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.availability) setAvailabilityMap(data.availability);
+      })
+      .catch(() => {
+        // Silently fallback al calcolo interno di SessionCard
+      });
+  }, [tour.sessions]);
 
   // Filtra solo le sessioni future e ordinale per data
   const futureSessions =
@@ -131,6 +150,13 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
     const isSoldOut = ["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(normalizedStatus);
     const shouldShowPaymentButton = !isSoldOut;
 
+    // Calcola i posti disponibili da Supabase se disponibili, altrimenti SessionCard usa il fallback interno
+    const booked = availabilityMap[session.id];
+    const availableSpots =
+      booked !== undefined
+        ? Math.max(0, (session.maxPax ?? 0) - booked)
+        : undefined;
+
     return (
       <SessionCard
         session={session}
@@ -138,6 +164,7 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
         coach={sessionCoach}
         isNext={isNext}
         showPaymentButton={shouldShowPaymentButton}
+        availableSpots={availableSpots}
         user={user}
       />
     );

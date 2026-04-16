@@ -63,6 +63,8 @@ interface SessionCardProps {
   ctaLabel?: string; // default: WHATSAPP
   /** Mostra/nasconde il bottone "PAGA ORA" (default: false = nascosto) */
   showPaymentButton?: boolean;
+  /** Posti disponibili calcolati da Supabase. Se omesso, usa il fallback interno (maxPax - users.length). */
+  availableSpots?: number;
   user?: {
     id: string;
     email: string;
@@ -76,6 +78,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
   isNext = false,
   ctaLabel = "WHATSAPP",
   showPaymentButton = false,
+  availableSpots: availableSpotsProp,
   user = null,
 }) => {
   const [isQuickCheckoutOpen, setIsQuickCheckoutOpen] = useState(false);
@@ -171,7 +174,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
     setIsQuickCheckoutOpen(true);
   };
 
-  const availableSpots = getAvailableSpots();
+  const availableSpots = availableSpotsProp !== undefined ? availableSpotsProp : getAvailableSpots();
   const duration = getDuration(session.start, session.end);
   const price = session.price || 0;
   const currency = session.currency || "EUR";

@@ -49,16 +49,14 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({
       .sort((a: any, b: any) => new Date(a.start).getTime() - new Date(b.start).getTime())[0] ||
     tour?.sessions?.[0];
 
-  // calcola durata e maxPax sulla prima sessione (rimane compatibile col precedente)
-  const firstSession = tour?.sessions?.[0];
   const duration =
-    firstSession?.start && firstSession?.end
-      ? Math.ceil(
-          (new Date(firstSession.end).getTime() - new Date(firstSession.start).getTime()) /
+    nextSession?.start && nextSession?.end
+      ? Math.floor(
+          (new Date(nextSession.end).getTime() - new Date(nextSession.start).getTime()) /
             (1000 * 60 * 60 * 24)
-        )
+        ) + 1
       : null;
-  const maxPax = firstSession?.maxPax;
+  const maxPax = nextSession?.maxPax;
 
   const extractPrice = (session: any): number | null => {
     if (!session) return null;
@@ -125,7 +123,7 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({
               {duration && (
                 <Badge variant="secondary" className={pillClasses}>
                   <Clock className="w-4 h-4 mr-2" />
-                  Durata {duration} giorni
+                  Durata {duration} {duration === 1 ? 'giorno' : 'giorni'}
                 </Badge>
               )}
 

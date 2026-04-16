@@ -42,7 +42,7 @@ const TourPricingHeader: React.FC<TourPricingHeaderProps> = ({
     const startDate = new Date(start);
     const endDate = new Date(end);
     const diffTime = endDate.getTime() - startDate.getTime();
-    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
   };
 
   const getDifficultyLabel = (value: string | undefined) => {
@@ -105,10 +105,12 @@ const TourPricingHeader: React.FC<TourPricingHeaderProps> = ({
           <Clock className="mx-auto w-5 h-5 text-gray-400 dark:text-muted-foreground mb-1" />
           <strong className="block text-lg text-gray-900 dark:text-foreground">
             {nextSession?.start && nextSession?.end
-              ? `${getDurationDays(nextSession.start, nextSession.end)}`
+              ? getDurationDays(nextSession.start, nextSession.end)
               : '—'}
           </strong>
-          giorni
+          {nextSession?.start && nextSession?.end
+            ? getDurationDays(nextSession.start, nextSession.end) === 1 ? 'giorno' : 'giorni'
+            : 'giorni'}
         </div>
         <div>
           <Users className="mx-auto w-5 h-5 text-gray-400 dark:text-muted-foreground mb-1" />
