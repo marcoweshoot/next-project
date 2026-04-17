@@ -12,7 +12,7 @@ import { CreditCard, User, Calendar, Euro, AlertCircle, Loader2, Users, CheckCir
 import { StripeCheckoutButton } from './StripeCheckoutButton'
 import { QuickRegistrationForm } from './QuickRegistrationForm'
 import { GiftCardInput } from '@/components/gift-card/GiftCardInput'
-import { generateEventId, createPurchaseEventId } from '@/utils/facebook'
+import { generateEventId, createPurchaseEventId, getFbCookies } from '@/utils/facebook'
 
 interface SimpleCheckoutModalProps {
   isOpen: boolean
@@ -148,6 +148,7 @@ export function SimpleCheckoutModal({
   const handleZeroPayment = async () => {
     // Generate eventId early so both pixel and CAPI server-side use the same ID for deduplication
     const fbEventId = createPurchaseEventId(`giftcard_${Date.now()}_${user?.id || registeredUserId}`)
+    const { fbc, fbp } = getFbCookies()
 
     try {
       // Create booking directly without Stripe payment
@@ -161,8 +162,10 @@ export function SimpleCheckoutModal({
           quantity,
           paymentType: isBalancePayment ? 'balance' : paymentType,
           giftCardCode,
-          amount: getPaymentAmount(), // Pass the actual amount to pay
-          fbEventId, // For CAPI deduplication with the browser pixel event
+          amount: getPaymentAmount(),
+          fbEventId,
+          fbc,
+          fbp,
           // Pass tour and session data for enriched booking
           tourTitle: tour.title,
           tourDestination: tour.title, // or tour.destination if available

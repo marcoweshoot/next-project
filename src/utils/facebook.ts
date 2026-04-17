@@ -63,6 +63,27 @@ export function createPurchaseEventId(transactionId: string): string {
 }
 
 /**
+ * Read _fbc and _fbp cookies from the browser.
+ * These are set by the Facebook Pixel and are needed for server-side matching.
+ * 
+ * @returns {{ fbc?: string; fbp?: string }}
+ */
+export function getFbCookies(): { fbc?: string; fbp?: string } {
+  if (typeof document === 'undefined') return {}
+  const cookies = document.cookie.split(';').reduce<Record<string, string>>((acc, cookie) => {
+    const parts = cookie.trim().split('=')
+    const key = parts[0]
+    const value = parts.slice(1).join('=')
+    if (key && value) acc[key] = decodeURIComponent(value)
+    return acc
+  }, {})
+  return {
+    fbc: cookies['_fbc'] || undefined,
+    fbp: cookies['_fbp'] || undefined,
+  }
+}
+
+/**
  * Validate event ID format
  * Facebook event_id should be alphanumeric with dashes/underscores, max 50 chars
  * 

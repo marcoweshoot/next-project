@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { CreditCard, Loader2 } from 'lucide-react'
+import { getFbCookies } from '@/utils/facebook'
 
 interface StripeCheckoutButtonProps {
   amount: number
@@ -47,6 +48,8 @@ export function StripeCheckoutButton({
     setLoading(true)
     
     try {
+      const { fbc, fbp } = getFbCookies()
+
       // Crea checkout session
       const response = await fetch('/api/stripe/create-checkout-session', {
         method: 'POST',
@@ -68,6 +71,8 @@ export function StripeCheckoutButton({
           sessionPrice,
           sessionDeposit,
           giftCardCode,
+          fbc,
+          fbp,
         }),
       })
 

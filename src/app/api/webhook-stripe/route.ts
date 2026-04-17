@@ -77,10 +77,12 @@ export async function POST(request: NextRequest) {
           const ip = request.headers.get('x-forwarded-for')
           const userAgent = request.headers.get('user-agent')
           const quantity = session.metadata?.quantity ? parseInt(session.metadata.quantity, 10) : 1
+          const fbc = session.metadata?.fbc || undefined
+          const fbp = session.metadata?.fbp || undefined
 
           await sendServerEvent({
             event_name: 'Purchase',
-            event_id: session.id, // Use Stripe Session ID for deduplication
+            event_id: session.id,
             event_source_url: `${process.env.NEXT_PUBLIC_SITE_URL}/viaggi-fotografici/tour/${session.metadata?.tourTitle || ''}`,
             user_data: {
               external_id: finalUserId,
@@ -90,6 +92,8 @@ export async function POST(request: NextRequest) {
               ln: userProfile?.last_name || undefined,
               client_ip_address: ip || undefined,
               client_user_agent: userAgent || undefined,
+              fbc,
+              fbp,
             },
             custom_data: {
               value: (session.amount_total || 0) / 100,
@@ -942,10 +946,12 @@ export async function POST(request: NextRequest) {
           const ip = request.headers.get('x-forwarded-for')
           const userAgent = request.headers.get('user-agent')
           const quantity = session.metadata?.quantity ? parseInt(session.metadata.quantity, 10) : 1
+          const fbc = session.metadata?.fbc || undefined
+          const fbp = session.metadata?.fbp || undefined
 
           await sendServerEvent({
             event_name: 'Purchase',
-            event_id: session.id, // Use Stripe Session ID for deduplication
+            event_id: session.id,
             event_source_url: `${process.env.NEXT_PUBLIC_SITE_URL}/viaggi-fotografici/tour/${session.metadata?.tourTitle || ''}`,
             user_data: {
               external_id: finalUserId,
@@ -955,6 +961,8 @@ export async function POST(request: NextRequest) {
               ln: userProfile?.last_name || undefined,
               client_ip_address: ip || undefined,
               client_user_agent: userAgent || undefined,
+              fbc,
+              fbp,
             },
             custom_data: {
               value: (session.amount_total || 0) / 100,

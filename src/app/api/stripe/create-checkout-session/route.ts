@@ -88,7 +88,9 @@ export async function POST(request: NextRequest) {
       sessionEndDate,
       sessionPrice,
       sessionDeposit,
-      giftCardCode
+      giftCardCode,
+      fbc,
+      fbp,
     } = body
 
     // Debug logging
@@ -261,7 +263,9 @@ export async function POST(request: NextRequest) {
         giftCardCode: giftCardCode || '',
         giftCardDiscount: giftCardDiscount.toString(),
         originalAmount: amount.toString(),
-        paymentRecipient, // Track who receives this payment
+        paymentRecipient,
+        fbc: fbc || '',
+        fbp: fbp || '',
       },
     }
     

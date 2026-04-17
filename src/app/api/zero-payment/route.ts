@@ -16,13 +16,15 @@ export async function POST(request: NextRequest) {
       giftCardCode, 
       amount,
       fbEventId,
-      tourTitle,
-      tourDestination,
-      sessionDate,
-      sessionEndDate,
-      sessionPrice,
-      sessionDeposit
-    } = body
+    tourTitle,
+    tourDestination,
+    sessionDate,
+    sessionEndDate,
+    sessionPrice,
+    sessionDeposit,
+    fbc,
+    fbp,
+  } = body
 
     const ip = request.headers.get('x-forwarded-for') || undefined
     const userAgent = request.headers.get('user-agent') || undefined
@@ -167,6 +169,8 @@ export async function POST(request: NextRequest) {
             ph: userProfile?.mobile_phone || undefined,
             client_ip_address: ip,
             client_user_agent: userAgent,
+            fbc: fbc || undefined,
+            fbp: fbp || undefined,
           }
           ;(async () => {
             try {
@@ -437,6 +441,8 @@ export async function POST(request: NextRequest) {
           ph: userProfile?.mobile_phone || undefined,
           client_ip_address: ip,
           client_user_agent: userAgent,
+          fbc: fbc || undefined,
+          fbp: fbp || undefined,
         }
         ;(async () => {
           try {

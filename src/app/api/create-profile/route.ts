@@ -6,7 +6,7 @@ import { sendServerEvent, UserData } from '@/lib/facebook-capi' // Import CAPI h
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { userId, email, firstName, lastName, privacyAccepted = true, marketingAccepted = false, fbEventId } = body
+    const { userId, email, firstName, lastName, privacyAccepted = true, marketingAccepted = false, fbEventId, fbc, fbp } = body
 
     console.log('📝 Creating profile:', { userId, email, firstName, lastName, privacyAccepted, marketingAccepted, fbEventId })
 
@@ -98,6 +98,8 @@ export async function POST(request: NextRequest) {
           ln: lastName,
           client_ip_address: ip || undefined,
           client_user_agent: userAgent || undefined,
+          fbc: fbc || undefined,
+          fbp: fbp || undefined,
         }
 
         await sendServerEvent({
@@ -142,6 +144,8 @@ export async function POST(request: NextRequest) {
         ln: lastName,
         client_ip_address: ip || undefined,
         client_user_agent: userAgent || undefined,
+        fbc: fbc || undefined,
+        fbp: fbp || undefined,
       }
 
       await sendServerEvent({
