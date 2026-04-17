@@ -41,12 +41,22 @@ export default function TourDetailContentClient({
   useEffect(() => {
     if (tour && typeof window !== 'undefined' && window.fbq) {
       const eventId = generateEventId();
+
+      // Calcola il prezzo minimo tra le sessioni future (il campo price è sulle sessioni, non sul tour)
+      const now = new Date();
+      const sessionPrice: number = Array.isArray(tour.sessions)
+        ? (tour.sessions as any[])
+            .filter((s) => s?.start && new Date(s.start) >= now && typeof s.price === 'number' && s.price > 0)
+            .map((s) => s.price as number)
+            .sort((a, b) => a - b)[0] ?? 0
+        : 0;
+
       const eventData = {
         content_name: tour.title,
         content_category: 'Viaggi Fotografici',
-        content_ids: [tour.id], // ID del tour
+        content_ids: [tour.id],
         content_type: 'product',
-        value: tour.price || 0,
+        value: sessionPrice,
         currency: 'EUR',
       };
 
