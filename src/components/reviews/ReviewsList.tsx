@@ -20,6 +20,10 @@ interface ReviewsListProps {
 }
 
 export default function ReviewsList({ reviews }: ReviewsListProps) {
+  const sortedReviews = [...reviews].sort(
+    (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+  );
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('it-IT', {
@@ -46,7 +50,7 @@ export default function ReviewsList({ reviews }: ReviewsListProps) {
 
   return (
     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {reviews.map((review) => {
+      {sortedReviews.map((review) => {
         const isLong = review.description.length > MAX_LENGTH;
         const truncated = isLong
           ? review.description.slice(0, MAX_LENGTH) + '...'
