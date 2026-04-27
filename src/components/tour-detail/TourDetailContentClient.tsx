@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { generateEventId, trackLead } from '@/utils/facebook';
 import TourStickyNav from './TourStickyNav';
 import TourGallery from './TourGallery';
@@ -36,6 +36,19 @@ export default function TourDetailContentClient({
   coaches,
   isFallbackPast = false,
 }: TourDetailContentProps) {
+
+  const [supabaseReviews, setSupabaseReviews] = useState<any[]>([])
+
+  // Fetcha le recensioni approvate da Supabase (realtime, non dipende dallo snapshot)
+  useEffect(() => {
+    if (!tour?.slug) return
+    fetch(`/api/reviews?tourSlug=${encodeURIComponent(tour.slug)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data?.reviews)) setSupabaseReviews(data.reviews)
+      })
+      .catch(() => {}) // fallback silenzioso: se fallisce si vedono solo le CMS
+  }, [tour?.slug])
 
   // --- Track ViewContent event with Pixel & CAPI ---
   useEffect(() => {
@@ -178,9 +191,12 @@ export default function TourDetailContentClient({
 
       <GroupGallerySection gallery={galleryData} />
 
-      {Array.isArray(tour.reviews) && tour.reviews.length > 0 && (
-        <TourReviews reviews={tour.reviews} />
-      )}
+      {(() => {
+        const cmsReviews = Array.isArray(tour.reviews) ? tour.reviews : []
+        // Deduplicazione: rimuovi dalle CMS eventuali recensioni già presenti in Supabase con stesso id
+        const mergedReviews = [...cmsReviews, ...supabaseReviews]
+        return mergedReviews.length > 0 ? <TourReviews reviews={mergedReviews} /> : null
+      })()}
 
       <section id="faq" className="py-16 bg-background border-t border-border transition-colors">
         <div className="container mx-auto px-4">

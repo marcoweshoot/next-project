@@ -121,6 +121,69 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Verifica disponibilità posti in Supabase prima di procedere
+    // I pagamenti di saldo (balance) saltano il check: la prenotazione esiste già e il posto è già conteggiato
+    if (paymentType !== 'balance' && sessionId && quantity) {
+      const { createClient: createSupabaseClient } = await import('@supabase/supabase-js')
+      const supabaseCheck = createSupabaseClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY!,
+        { auth: { autoRefreshToken: false, persistSession: false } }
+      )
+
+      // Recupera maxPax dalla sessione (via GraphQL) e i posti già prenotati (via Supabase)
+      const [sessionData, bookingsData] = await Promise.allSettled([
+        (async () => {
+          const { gql } = await import('graphql-request')
+          const GET_SESSION_MAX_PAX = gql`
+            query GetSessionMaxPax($id: ID!) {
+              session(id: $id) {
+                id
+                maxPax
+                status
+              }
+            }
+          `
+          const client = getClient()
+          return client.request<{ session: { id: string; maxPax?: number; status?: string } }>(
+            GET_SESSION_MAX_PAX,
+            { id: sessionId }
+          )
+        })(),
+        supabaseCheck
+          .from('bookings')
+          .select('quantity')
+          .eq('session_id', sessionId)
+          .not('status', 'in', '("cancelled","refunded")')
+      ])
+
+      const cmsSession = sessionData.status === 'fulfilled' ? sessionData.value?.session : null
+      const bookings = bookingsData.status === 'fulfilled' ? bookingsData.value?.data : null
+
+      // Blocca se il CMS segna la sessione come sold-out/waitinglist/closed
+      const soldOutStatuses = ['soldout', 'sold_out', 'closed', 'waitinglist', 'waiting_list']
+      if (cmsSession?.status && soldOutStatuses.includes((cmsSession.status).toLowerCase())) {
+        console.warn(`⛔ [CHECKOUT] Session ${sessionId} is marked as sold-out in CMS (status: ${cmsSession.status})`)
+        return NextResponse.json(
+          { error: 'Questa sessione non è più disponibile per la prenotazione.' },
+          { status: 409 }
+        )
+      }
+
+      // Blocca se i posti in Supabase sono esauriti
+      if (cmsSession?.maxPax != null && bookings) {
+        const totalBooked = bookings.reduce((sum: number, b: any) => sum + (b.quantity ?? 1), 0)
+        const remainingSpots = cmsSession.maxPax - totalBooked
+        if (remainingSpots < quantity) {
+          console.warn(`⛔ [CHECKOUT] Not enough spots for session ${sessionId}: requested ${quantity}, available ${remainingSpots}`)
+          return NextResponse.json(
+            { error: `Posti insufficienti: richiesti ${quantity}, disponibili ${Math.max(0, remainingSpots)}.` },
+            { status: 409 }
+          )
+        }
+      }
+    }
+
     // Handle gift card if provided
     // Calculate the actual discount that was applied
     let giftCardDiscount = 0

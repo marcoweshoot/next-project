@@ -60,7 +60,11 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
       ? '—'
       : new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', minimumFractionDigits: 0 }).format(amount);
 
-  // Prossima sessione (o fallback)
+  const normStatus = (s?: string) => (s || '').toLowerCase();
+  const isSoldOutStatus = (s?: string) =>
+    ['soldout', 'sold_out', 'closed', 'waitinglist', 'waiting_list'].includes(normStatus(s));
+
+  // Prossima sessione (o fallback) — esclude le sessioni sold-out/waitinglist
   const nextSessionData = useMemo(() => {
     const now = new Date();
     const sessions = tour?.sessions;
@@ -68,15 +72,15 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
     const future = sessions
       .filter((s: any) => s?.start && new Date(s.start) >= now)
       .sort((a: any, b: any) => new Date(a.start).getTime() - new Date(b.start).getTime());
-    const chosen = future[0] || sessions[0];
+    // Preferisce la prima sessione futura prenotabile; altrimenti null
+    const chosen = future.find((s: any) => !isSoldOutStatus(s?.status)) ?? null;
     return { session: chosen, price: extractPrice(chosen) };
   }, [tour]);
 
   const displayPrice = nextSessionData.price != null ? nextSessionData.price : fallbackPrice;
 
   const handleBookClick = () => {
-    if (nextSessionData.session) {
-      // Track AddToCart (same pattern as SessionCard) then open modal
+    if (nextSessionData.session && !isSoldOutStatus(nextSessionData.session?.status)) {
       if (displayPrice && displayPrice > 0) {
         trackAddToCart({
           tourTitle: tour?.title || 'Tour',
@@ -88,7 +92,7 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
       }
       setIsModalOpen(true);
     } else {
-      // Fallback: no session data yet, scroll to sessions section
+      // Nessuna sessione prenotabile: porta l'utente alla lista delle partenze
       onScrollToSection('sessions');
     }
   };

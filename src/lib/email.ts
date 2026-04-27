@@ -576,6 +576,112 @@ export function generateBalanceReminderAdminEmail(
   return { subject, html, text }
 }
 
+export function generateGiftCardBookingAdminEmail(
+  userName: string,
+  userEmail: string,
+  tourTitle: string,
+  sessionDate: string,
+  bookingId: string,
+  quantity: number,
+  giftCardCode: string,
+  totalAmount: number, // in euros
+  paymentType: 'deposit' | 'balance' | 'full'
+): { subject: string; html: string; text: string } {
+  const formattedTotal = new Intl.NumberFormat('it-IT', {
+    style: 'currency',
+    currency: 'EUR',
+  }).format(totalAmount)
+
+  const formattedDate = sessionDate
+    ? new Date(sessionDate).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' })
+    : 'N/D'
+
+  const paymentLabel =
+    paymentType === 'deposit' ? 'Acconto' :
+    paymentType === 'balance' ? 'Saldo (prenotazione esistente)' :
+    'Pagamento Completo'
+
+  const headerTitle =
+    paymentType === 'balance'
+      ? '🎁 Saldo pagato con Gift Card'
+      : '🎁 Nuova prenotazione con Gift Card'
+
+  const headerSubtitle =
+    paymentType === 'balance'
+      ? 'Un cliente ha saldato una prenotazione esistente con una gift card'
+      : 'Un cliente ha pagato con una gift card'
+
+  const subject =
+    paymentType === 'balance'
+      ? `🎁 Saldo con Gift Card: ${tourTitle} — ${userName}`
+      : `🎁 Prenotazione con Gift Card: ${tourTitle} — ${userName}`
+
+  const html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>${subject}</title>
+      <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #7c3aed; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .content { background: #fff; padding: 20px; border: 1px solid #e9ecef; border-radius: 8px; }
+        .info-box { background: #f8f9fa; padding: 15px; border-radius: 4px; margin: 15px 0; }
+        .gift-card-code { font-family: monospace; font-size: 20px; font-weight: bold; color: #7c3aed; background: #f3f0ff; padding: 8px 16px; border-radius: 6px; display: inline-block; }
+        .button { display: inline-block; padding: 12px 24px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; margin: 10px 0; }
+        .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #e9ecef; font-size: 14px; color: #666; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #e9ecef; }
+        th { background: #f8f9fa; font-weight: bold; width: 40%; }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h1>${headerTitle}</h1>
+          <p style="margin:0;opacity:0.9;">${headerSubtitle}</p>
+        </div>
+
+        <div class="content">
+          <div class="info-box">
+            <h3>📋 Dettagli Prenotazione</h3>
+            <table>
+              <tr><th>Cliente</th><td>${userName}</td></tr>
+              <tr><th>Email</th><td><a href="mailto:${userEmail}">${userEmail}</a></td></tr>
+              <tr><th>Tour</th><td><strong>${tourTitle}</strong></td></tr>
+              <tr><th>Data Sessione</th><td>${formattedDate}</td></tr>
+              <tr><th>Partecipanti</th><td>${quantity}</td></tr>
+              <tr><th>Tipo Pagamento</th><td>${paymentLabel}</td></tr>
+              <tr><th>Totale</th><td><strong>${formattedTotal}</strong></td></tr>
+              <tr><th>ID Prenotazione</th><td>${bookingId}</td></tr>
+              <tr><th>Data Operazione</th><td>${new Date().toLocaleString('it-IT')}</td></tr>
+            </table>
+          </div>
+
+          <div class="info-box" style="border-left: 4px solid #7c3aed;">
+            <h3>🎁 Gift Card Utilizzata</h3>
+            <p style="margin:0;">Codice: <span class="gift-card-code">${giftCardCode}</span></p>
+          </div>
+
+          <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin/bookings" class="button">
+            Vedi Prenotazione
+          </a>
+        </div>
+
+        <div class="footer">
+          <p>Notifica automatica — sistema prenotazioni WeShoot.</p>
+        </div>
+      </div>
+    </body>
+    </html>
+  `
+
+  const text = `${subject}\n\n${headerSubtitle}\n\nCliente: ${userName} (${userEmail})\nTour: ${tourTitle}\nData: ${formattedDate}\nPartecipanti: ${quantity}\nTipo: ${paymentLabel}\nTotale: ${formattedTotal}\nGift Card: ${giftCardCode}\nID Prenotazione: ${bookingId}\n\nVai alla dashboard: ${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin/bookings`
+
+  return { subject, html, text }
+}
+
 export function generateBookingConfirmationEmail(
   userEmail: string,
   userName: string,

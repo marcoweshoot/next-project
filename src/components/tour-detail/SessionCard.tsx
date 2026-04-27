@@ -130,6 +130,8 @@ const SessionCard: React.FC<SessionCardProps> = ({
   };
 
   const norm = (s?: string) => (s || "").toLowerCase();
+  const isSoldOutStatus = (s?: string) =>
+    ["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(norm(s));
 
   const getAvailableSpots = () => {
     const s = norm(session.status);
@@ -174,7 +176,13 @@ const SessionCard: React.FC<SessionCardProps> = ({
     setIsQuickCheckoutOpen(true);
   };
 
-  const availableSpots = availableSpotsProp !== undefined ? availableSpotsProp : getAvailableSpots();
+  // Se lo status è sold-out/waitinglist, i posti disponibili sono sempre 0,
+  // indipendentemente dal conteggio Supabase (che potrebbe essere > 0 per discrepanze tra CMS e DB).
+  const availableSpots = isSoldOutStatus(session.status)
+    ? 0
+    : availableSpotsProp !== undefined
+      ? availableSpotsProp
+      : getAvailableSpots();
   const duration = getDuration(session.start, session.end);
   const price = session.price || 0;
   const currency = session.currency || "EUR";

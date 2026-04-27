@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClientSupabase } from '@/lib/supabase/server'
 import { applyGiftCard } from '@/lib/giftCards'
-import { sendEmail, generateBookingConfirmationEmail } from '@/lib/email'
+import { sendEmail, generateBookingConfirmationEmail, generateGiftCardBookingAdminEmail, sendAdminNotification } from '@/lib/email'
 import { sendServerEvent, UserData } from '@/lib/facebook-capi'
 
 export async function POST(request: NextRequest) {
@@ -39,6 +39,66 @@ export async function POST(request: NextRequest) {
     }
 
     const supabase = await createServerClientSupabase()
+
+    // Verifica disponibilità posti prima di procedere (solo per nuove prenotazioni, non per saldi)
+    if (paymentType !== 'balance' && sessionId && quantity) {
+      const { createClient: createSupabaseClient } = await import('@supabase/supabase-js')
+      const supabaseCheck = createSupabaseClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY!,
+        { auth: { autoRefreshToken: false, persistSession: false } }
+      )
+
+      const [sessionData, bookingsData] = await Promise.allSettled([
+        (async () => {
+          const { getClient } = await import('@/lib/graphqlClient')
+          const { gql } = await import('graphql-request')
+          const GET_SESSION_MAX_PAX = gql`
+            query GetSessionMaxPax($id: ID!) {
+              session(id: $id) {
+                id
+                maxPax
+                status
+              }
+            }
+          `
+          const client = getClient()
+          return client.request<{ session: { id: string; maxPax?: number; status?: string } }>(
+            GET_SESSION_MAX_PAX,
+            { id: sessionId }
+          )
+        })(),
+        supabaseCheck
+          .from('bookings')
+          .select('quantity')
+          .eq('session_id', sessionId)
+          .not('status', 'in', '("cancelled","refunded")')
+      ])
+
+      const cmsSession = sessionData.status === 'fulfilled' ? sessionData.value?.session : null
+      const bookings = bookingsData.status === 'fulfilled' ? bookingsData.value?.data : null
+
+      const soldOutStatuses = ['soldout', 'sold_out', 'closed', 'waitinglist', 'waiting_list']
+      if (cmsSession?.status && soldOutStatuses.includes((cmsSession.status).toLowerCase())) {
+        console.warn(`⛔ [ZERO PAYMENT] Session ${sessionId} is marked as sold-out in CMS (status: ${cmsSession.status})`)
+        return NextResponse.json(
+          { error: 'Questa sessione non è più disponibile per la prenotazione.' },
+          { status: 409 }
+        )
+      }
+
+      if (cmsSession?.maxPax != null && bookings) {
+        const totalBooked = bookings.reduce((sum: number, b: any) => sum + (b.quantity ?? 1), 0)
+        const remainingSpots = cmsSession.maxPax - totalBooked
+        if (remainingSpots < quantity) {
+          console.warn(`⛔ [ZERO PAYMENT] Not enough spots for session ${sessionId}: requested ${quantity}, available ${remainingSpots}`)
+          return NextResponse.json(
+            { error: `Posti insufficienti: richiesti ${quantity}, disponibili ${Math.max(0, remainingSpots)}.` },
+            { status: 409 }
+          )
+        }
+      }
+    }
 
     // For balance payments, we need to find the existing booking to update it
     if (paymentType === 'balance') {
@@ -156,6 +216,24 @@ export async function POST(request: NextRequest) {
           )
           await sendEmail(customerEmailData)
           console.log('✅ [ZERO PAYMENT API] Customer balance confirmation email sent')
+
+          // Notifica admin: saldo pagato con gift card
+          // Il saldo effettivo è (prezzo - acconto) * quantità, non il prezzo intero
+          const balanceAmountForAdmin = ((sessionPrice || 0) - (sessionDeposit || 0)) * (quantity || 1)
+          const adminEmailData = generateGiftCardBookingAdminEmail(
+            userName,
+            userProfile.email,
+            tourTitle || 'Tour',
+            sessionDate || '',
+            existingBooking.id,
+            quantity || 1,
+            giftCardCode,
+            balanceAmountForAdmin,
+            'balance'
+          )
+          sendAdminNotification(adminEmailData.subject, adminEmailData.html, adminEmailData.text)
+            .catch(() => {}) // non-blocking, non critico
+          console.log('✅ [ZERO PAYMENT API] Admin gift card balance notification sent')
         }
 
         // CAPI Purchase event for gift-card balance payment
@@ -428,6 +506,22 @@ export async function POST(request: NextRequest) {
         )
         await sendEmail(customerEmailData)
         console.log('✅ [ZERO PAYMENT API] Customer booking confirmation email sent')
+
+        // Notifica admin: nuova prenotazione con gift card
+        const adminEmailData = generateGiftCardBookingAdminEmail(
+          userName,
+          userProfile.email,
+          tourTitle || 'Tour',
+          sessionDate || '',
+          booking.id,
+          quantity || 1,
+          giftCardCode,
+          totalTourAmount,
+          confirmedPaymentType
+        )
+        sendAdminNotification(adminEmailData.subject, adminEmailData.html, adminEmailData.text)
+          .catch(() => {}) // non-blocking, non critico
+        console.log('✅ [ZERO PAYMENT API] Admin gift card booking notification sent')
       }
 
       // CAPI Purchase event for gift-card new booking

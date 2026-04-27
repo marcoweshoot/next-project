@@ -56,7 +56,7 @@ export function ReviewsAdminList() {
           .from('reviews')
           .select(`
             *,
-            profiles!inner(
+            profiles(
               first_name,
               last_name,
               email
