@@ -318,6 +318,27 @@
       "source": "strapi"
     },
     {
+      "id": "supabase-90f548d7-8cd4-4cc5-b849-5e81833ad314",
+      "title": "",
+      "description": "Il workshop è stato un’esperienza fantastica! Il tour fotografico per Roma è stato ben organizzato e davvero formativo. Marco si è dimostrato sempre disponibile e attento, offrendo consigli preziosi su composizione, pianificazione e uso avanzato della fotocamera. Molto interessanti anche i momenti di revisione e confronto delle foto scattate, così come i video tutorial sulla post-produzione ricevuti al termine del workshop.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2025-11-12T18:48:42.175309+00:00",
+      "user": {
+        "firstName": "Utente",
+        "lastName": "",
+        "username": "",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "supabase"
+    },
+    {
       "id": "248",
       "title": "Ottima compagnia e Insegnamenti",
       "description": "Un workshop fotografico in luoghi romantici in ottima compagnia e con i nostri accompagnatori Alessandro e Marco che hanno saputo creare un clima familiare ",
@@ -1369,7 +1390,7 @@
       "id": "253",
       "start": "2026-07-04",
       "end": "2026-07-04",
-      "status": "almostConfirmed",
+      "status": "confirmed",
       "maxPax": 8,
       "price": 69,
       "deposit": 69,
