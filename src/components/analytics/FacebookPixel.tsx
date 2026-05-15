@@ -74,6 +74,13 @@ export function FacebookPixel() {
         'https://connect.facebook.net/en_US/fbevents.js');
         /* eslint-enable @typescript-eslint/no-unused-expressions, prefer-spread, prefer-rest-params */
         
+        // Disable Automatic Event Tracking (AET) before init.
+        // AET fires InitiateCheckout, AddToCart, Purchase, etc. automatically based on
+        // button clicks and URL patterns — without value/currency — causing Facebook's
+        // "invalid price information" warning. All standard events are tracked manually
+        // in this codebase with correct parameters, so AET is not needed.
+        window.fbq('set', 'autoConfig', false, FB_PIXEL_ID)
+
         // Initialize the pixel with Advanced Matching data.
         // For logged-out users, we pass an empty object {} to signal that we have
         // implemented the logic, thus resolving the "manual configuration" warning.

@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import Header from '@/components/Header'
 import { CheckCircle, Loader2, User, Mail, AlertCircle } from 'lucide-react'
+import { generateEventId, trackCompleteRegistration, getFbCookies } from '@/utils/facebook'
 
 function GoogleSignupConfirmContent() {
   const [loading, setLoading] = useState(false)
@@ -79,6 +80,9 @@ function GoogleSignupConfirmContent() {
     setError(null)
 
     try {
+      const fbEventId = generateEventId()
+      const { fbc, fbp } = getFbCookies()
+
       // Create profile using API that bypasses RLS
       const response = await fetch('/api/create-profile', {
         method: 'POST',
@@ -89,7 +93,10 @@ function GoogleSignupConfirmContent() {
           firstName: userData.firstName,
           lastName: userData.lastName,
           privacyAccepted: privacyAccepted,
-          marketingAccepted: marketingAccepted
+          marketingAccepted: marketingAccepted,
+          fbEventId,
+          fbc,
+          fbp,
         })
       })
 
@@ -100,6 +107,9 @@ function GoogleSignupConfirmContent() {
         setError('Errore nella creazione del profilo. Riprova.')
         return
       }
+
+      // Fire pixel CompleteRegistration with the same event_id used by CAPI
+      trackCompleteRegistration({ eventId: fbEventId })
 
       // Success - redirect to dashboard
       router.push('/dashboard')

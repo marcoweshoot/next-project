@@ -225,6 +225,16 @@ export function SimpleCheckoutModal({
         if (process.env.NODE_ENV === 'development') {
           console.log('✅ [FB PIXEL] Purchase event sent with event_id for gift card payment')
         }
+
+        // Clear storage immediately — pixel already fired, so stale data must not
+        // trigger a second Purchase event if the user later lands on /payment-success
+        // for a different Stripe checkout.
+        try {
+          sessionStorage.removeItem('lastPurchase')
+          localStorage.removeItem('lastPurchase')
+        } catch {
+          // Storage access may be restricted; safe to ignore
+        }
       }
 
       // Success - close modal and redirect
