@@ -198,7 +198,9 @@ const SessionCard: React.FC<SessionCardProps> = ({
   const coachAlt = coach?.avatar?.alt || coach?.name || "Coach WeShoot";
   const coachName = coach?.name || "Coach WeShoot";
 
-  const getStatusBadge = (status: string) => {
+  const getStatusBadge = (status: string, spots?: number) => {
+    // Il ribbon "SOLD OUT" sulla card gestisce già questo caso
+    if (spots !== undefined && spots === 0) return null
     switch (norm(status)) {
       case "scheduled":
         return (
@@ -206,14 +208,14 @@ const SessionCard: React.FC<SessionCardProps> = ({
             <Clock className="w-3 h-3" />
             Iscrizioni aperte
           </Badge>
-        );
+        )
       case "almostconfirmed":
         return (
           <Badge className="rounded-full px-2.5 py-0.5 bg-cyan-500/15 text-cyan-700 dark:text-cyan-300 ring-1 ring-cyan-500/30 flex items-center gap-1">
             <AlertCircle className="w-3 h-3" />
             Quasi confermato
           </Badge>
-        );
+        )
       case "confirmed":
       case "open":
       case "planning":
@@ -222,7 +224,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
             <CheckCircle className="w-3 h-3" />
             Confermato
           </Badge>
-        );
+        )
       case "almostfull":
       case "almost_full":
         return (
@@ -230,7 +232,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
             <AlertCircle className="w-3 h-3" />
             Quasi pieno
           </Badge>
-        );
+        )
       case "waitinglist":
       case "waiting_list":
         return (
@@ -238,7 +240,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
             <Users className="w-3 h-3" />
             Lista d&apos;attesa
           </Badge>
-        );
+        )
       case "soldout":
       case "sold_out":
       case "closed":
@@ -247,16 +249,16 @@ const SessionCard: React.FC<SessionCardProps> = ({
             <XCircle className="w-3 h-3" />
             Tutto pieno
           </Badge>
-        );
+        )
       default:
         return (
           <Badge className="rounded-full px-2.5 py-0.5 bg-gray-500/15 text-gray-700 dark:text-gray-300 ring-1 ring-gray-500/30 flex items-center gap-1">
             <Clock className="w-3 h-3" />
             Iscrizioni aperte
           </Badge>
-        );
+        )
     }
-  };
+  }
 
   return (
     <>
@@ -266,6 +268,14 @@ const SessionCard: React.FC<SessionCardProps> = ({
       }`}
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/60 via-primary to-primary/60" />
+
+      {availableSpots === 0 && (
+        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
+          <span className="-rotate-[22deg] select-none border-[3px] border-red-600 px-6 py-2 text-4xl font-black uppercase tracking-[0.2em] text-red-600 opacity-80 drop-shadow-sm">
+            Sold Out
+          </span>
+        </div>
+      )}
 
       <CardContent className="p-0">
         {isNext && (
@@ -290,16 +300,18 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 <span className="text-sm">{duration} giorni</span>
               </div>
 
-              <Badge
-                className={`rounded-full px-2.5 py-0.5 flex items-center gap-1 ${
-                  availableSpots <= 3
-                    ? "bg-destructive/10 text-destructive"
-                    : "bg-primary/10 text-primary"
-                }`}
-              >
-                <Users className="w-3 h-3" />
-                {availableSpots > 0 ? `${availableSpots} posti` : "Tutto pieno"}
-              </Badge>
+              {availableSpots > 0 && (
+                <Badge
+                  className={`rounded-full px-2.5 py-0.5 flex items-center gap-1 ${
+                    availableSpots <= 3
+                      ? "bg-destructive/10 text-destructive"
+                      : "bg-primary/10 text-primary"
+                  }`}
+                >
+                  <Users className="w-3 h-3" />
+                  {availableSpots} posti
+                </Badge>
+              )}
             </div>
 
             {/* Coach */}
@@ -339,7 +351,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 </Button>
 
                 {/* PAGA ORA - nuovo bottone di pagamento */}
-                {showPaymentButton && (
+                {showPaymentButton && availableSpots > 0 && (
                   <>
                     <Button
                       onClick={handleBookNow}
@@ -385,18 +397,20 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 <span className="text-sm text-foreground">{coachName}</span>
               </div>
 
-              <div className="flex items-center gap-2">
-                <Badge
-                  className={`rounded-full px-2.5 py-0.5 flex items-center gap-1 ${
-                    availableSpots <= 3
-                      ? "bg-destructive/10 text-destructive"
-                      : "bg-primary/10 text-primary"
-                  }`}
-                >
-                  <Users className="w-3 h-3" />
-                  {availableSpots > 0 ? `${availableSpots} posti` : "Tutto pieno"}
-                </Badge>
-              </div>
+              {availableSpots > 0 && (
+                <div className="flex items-center gap-2">
+                  <Badge
+                    className={`rounded-full px-2.5 py-0.5 flex items-center gap-1 ${
+                      availableSpots <= 3
+                        ? "bg-destructive/10 text-destructive"
+                        : "bg-primary/10 text-primary"
+                    }`}
+                  >
+                    <Users className="w-3 h-3" />
+                    {availableSpots} posti
+                  </Badge>
+                </div>
+              )}
             </div>
 
             {/* Price and Actions */}
@@ -408,7 +422,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
                   maximumFractionDigits: 0,
                 }).format(price)}
               </div>
-              <div className="mb-3 flex justify-end">{getStatusBadge(session.status)}</div>
+              <div className="mb-3 flex justify-end">{getStatusBadge(session.status, availableSpots)}</div>
 
               <div className="space-y-2">
                 <Button
@@ -424,7 +438,8 @@ const SessionCard: React.FC<SessionCardProps> = ({
                 {(() => {
                   const normalizedStatus = norm(session.status);
                   const isSoldOut = ["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(normalizedStatus);
-                  return showPaymentButton && !isSoldOut;
+                  const isSoldOutByCount = availableSpots === 0;
+                  return showPaymentButton && !isSoldOut && !isSoldOutByCount;
                 })() && (
                   <>
                     <Button

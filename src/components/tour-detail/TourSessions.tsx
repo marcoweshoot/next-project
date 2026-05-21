@@ -147,8 +147,7 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
     // Controlla se la sessione è sold out
     const norm = (s?: string) => (s || "").toLowerCase();
     const normalizedStatus = norm(session.status);
-    const isSoldOut = ["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(normalizedStatus);
-    const shouldShowPaymentButton = !isSoldOut;
+    const isSoldOutByStatus = ["soldout", "sold_out", "closed", "waitinglist", "waiting_list"].includes(normalizedStatus);
 
     // Calcola i posti disponibili da Supabase se disponibili, altrimenti SessionCard usa il fallback interno
     const booked = availabilityMap[session.id];
@@ -156,6 +155,10 @@ const TourSessions: React.FC<TourSessionsProps> = ({ tour, coach }) => {
       booked !== undefined
         ? Math.max(0, (session.maxPax ?? 0) - booked)
         : undefined;
+
+    // Sold out se lo status CMS lo dice, OPPURE se i posti live da Supabase sono esauriti
+    const isSoldOutByCount = availableSpots !== undefined && availableSpots === 0;
+    const shouldShowPaymentButton = !isSoldOutByStatus && !isSoldOutByCount;
 
     return (
       <SessionCard

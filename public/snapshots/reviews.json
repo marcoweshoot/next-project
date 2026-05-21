@@ -1,5 +1,25 @@
 [
   {
+    "id": "supabase-151ecda2-a3d4-4780-9374-3d362b200c99",
+    "title": "",
+    "description": "Esperienza veramente molto bella e interessante. Grazie a Marco che ci ha seguiti dall’inizio alla fine con pazienza , gentilezza e motivazione. Esperienza che consiglio vivamente a tutti , sia a chi come me è alle prime armi , sia a chi è più pratico.",
+    "rating": 5,
+    "ratingOrganization": null,
+    "ratingCordiality": null,
+    "ratingProfessionality": null,
+    "ratingKnowledge": null,
+    "created_at": "2026-05-18T15:07:19.076345+00:00",
+    "user": {
+      "firstName": "Utente",
+      "lastName": "",
+      "username": "",
+      "instagram": "",
+      "bio": "",
+      "profilePicture": null
+    },
+    "source": "supabase"
+  },
+  {
     "id": "supabase-90f548d7-8cd4-4cc5-b849-5e81833ad314",
     "title": "",
     "description": "Il workshop è stato un’esperienza fantastica! Il tour fotografico per Roma è stato ben organizzato e davvero formativo. Marco si è dimostrato sempre disponibile e attento, offrendo consigli preziosi su composizione, pianificazione e uso avanzato della fotocamera. Molto interessanti anche i momenti di revisione e confronto delle foto scattate, così come i video tutorial sulla post-produzione ricevuti al termine del workshop.",
