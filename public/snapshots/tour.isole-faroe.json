@@ -736,7 +736,7 @@
       "id": "204",
       "start": "2026-06-06",
       "end": "2026-06-13",
-      "status": "scheduled",
+      "status": "soldOut",
       "maxPax": 7,
       "price": 2590,
       "deposit": 780,

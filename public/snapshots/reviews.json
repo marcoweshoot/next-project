@@ -1,5 +1,45 @@
 [
   {
+    "id": "supabase-20da5782-e71f-412b-9a86-29674a307871",
+    "title": "",
+    "description": "“Grazie” Marco dopo il workshop adesso non riuscirò ad andare in giro per Roma senza cercare linee guida e guardare una possibile composizione 😁\nCorso consigliatissimo",
+    "rating": 5,
+    "ratingOrganization": null,
+    "ratingCordiality": null,
+    "ratingProfessionality": null,
+    "ratingKnowledge": null,
+    "created_at": "2026-05-21T16:39:25.035473+00:00",
+    "user": {
+      "firstName": "Utente",
+      "lastName": "",
+      "username": "",
+      "instagram": "",
+      "bio": "",
+      "profilePicture": null
+    },
+    "source": "supabase"
+  },
+  {
+    "id": "supabase-2fcbae9b-adcb-41b0-a038-ca485f795c96",
+    "title": "",
+    "description": "Marco è un professionista che malgrado il meteo non sia stato completamente a nostro favore, ci ha fatto toccare con mano molte nozioni della fotografia per migliorare in base al nostro livello e con qualsiasi tipo di attrezzatura",
+    "rating": 5,
+    "ratingOrganization": null,
+    "ratingCordiality": null,
+    "ratingProfessionality": null,
+    "ratingKnowledge": null,
+    "created_at": "2026-05-21T16:37:22.638832+00:00",
+    "user": {
+      "firstName": "Utente",
+      "lastName": "",
+      "username": "",
+      "instagram": "",
+      "bio": "",
+      "profilePicture": null
+    },
+    "source": "supabase"
+  },
+  {
     "id": "supabase-151ecda2-a3d4-4780-9374-3d362b200c99",
     "title": "",
     "description": "Esperienza veramente molto bella e interessante. Grazie a Marco che ci ha seguiti dall’inizio alla fine con pazienza , gentilezza e motivazione. Esperienza che consiglio vivamente a tutti , sia a chi come me è alle prime armi , sia a chi è più pratico.",
