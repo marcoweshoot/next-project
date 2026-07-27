@@ -1411,7 +1411,7 @@
       "id": "253",
       "start": "2026-07-04",
       "end": "2026-07-04",
-      "status": "almostFull",
+      "status": "soldOut",
       "maxPax": 8,
       "price": 69,
       "deposit": 69,
@@ -1442,7 +1442,7 @@
       "id": "258",
       "start": "2026-09-12",
       "end": "2026-09-12",
-      "status": "confirmed",
+      "status": "almostFull",
       "maxPax": 8,
       "price": 69,
       "deposit": 69,
@@ -1473,7 +1473,7 @@
       "id": "264",
       "start": "2026-12-19",
       "end": "2026-12-19",
-      "status": "almostConfirmed",
+      "status": "confirmed",
       "maxPax": 8,
       "price": 69,
       "deposit": 69,
@@ -1566,7 +1566,7 @@
       "id": "270",
       "start": "2026-08-01",
       "end": "2026-08-01",
-      "status": "almostConfirmed",
+      "status": "soldOut",
       "maxPax": 8,
       "price": 69,
       "deposit": 69,
@@ -1753,6 +1753,37 @@
       "start": "2026-06-27",
       "end": "2026-06-27",
       "status": "scheduled",
+      "maxPax": 8,
+      "price": 69,
+      "deposit": 69,
+      "balance": 0,
+      "minPax": 3,
+      "currency": "EUR",
+      "priceCompanion": 69,
+      "users": [
+        {
+          "instagram": "https://www.instagram.com/marco_carotenuto",
+          "firstName": "Marco",
+          "lastName": "Carotenuto",
+          "username": "marcocarotenuto",
+          "profilePicture": {
+            "url": "https://s3.eu-west-1.amazonaws.com/mars.weshoot.it/marco_carotenuto_coach_2a9a56628e.avif"
+          },
+          "bio": "<p>La mia passione per la fotografia di paesaggio mi ha spinto a voler unire un intera community in WeShoot.</p>",
+          "level": "coach",
+          "role": {
+            "name": "SuperAdmin",
+            "description": "Top level user",
+            "type": "authenticated"
+          }
+        }
+      ]
+    },
+    {
+      "id": "286",
+      "start": "2026-09-19",
+      "end": "2026-09-19",
+      "status": "confirmed",
       "maxPax": 8,
       "price": 69,
       "deposit": 69,
