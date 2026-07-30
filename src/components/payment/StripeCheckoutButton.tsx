@@ -169,7 +169,7 @@ export function StripeCheckoutButton({
       ) : (
         <>
           <CreditCard className="w-4 h-4 mr-2" />
-          Paga {amount / 100}€
+          Paga {amount / 100}€ con Stripe
         </>
       )}
     </Button>

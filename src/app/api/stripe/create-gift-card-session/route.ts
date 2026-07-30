@@ -1,26 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { stripe } from '@/lib/stripe'
-
-// Funzione per ottenere l'URL del sito in base all'ambiente
-function getSiteUrl() {
-  // In produzione/staging, usa la variabile d'ambiente
-  if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return process.env.NEXT_PUBLIC_SITE_URL
-  }
-  
-  // Per preview, usa URL fisso per evitare problemi di sessione
-  if (process.env.VERCEL_ENV === 'preview') {
-    return 'https://next-project-rho-teal.vercel.app'
-  }
-  
-  // In Vercel production, usa VERCEL_URL
-  if (process.env.VERCEL_URL && process.env.VERCEL_ENV === 'production') {
-    return `https://${process.env.VERCEL_URL}`
-  }
-  
-  // Fallback per sviluppo locale
-  return 'http://localhost:3000'
-}
+import { getSiteUrl } from '@/lib/siteUrl'
 
 export async function POST(request: NextRequest) {
   try {

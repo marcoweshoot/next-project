@@ -7,8 +7,15 @@ import { createClient } from '@/lib/supabase/client'
 import { createEventIdFromStripeSession } from '@/utils/facebook'
 
 const THANK_YOU_DELAY_MS = 2500
+const CLAIM_RETRY_ATTEMPTS = 3
+const CLAIM_RETRY_DELAY_MS = 1500
 
-type SuccessVariant = 'dashboard' | 'complete_account' | 'login_linked' | 'login_generic'
+type SuccessVariant = 'dashboard' | 'complete_account' | 'login_linked'
+
+interface ClaimData {
+  status?: string
+  email?: string
+}
 
 interface SuccessView {
   variant: SuccessVariant
@@ -66,6 +73,54 @@ const trackPurchasePixel = async (sessionId: string) => {
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
+const fetchClaimWithRetry = async (sessionId: string): Promise<ClaimData> => {
+  let lastError = 'Impossibile verificare il pagamento'
+
+  for (let attempt = 0; attempt < CLAIM_RETRY_ATTEMPTS; attempt++) {
+    const claimRes = await fetch(`/api/checkout/claim/${sessionId}`)
+    const claimData = await claimRes.json()
+
+    if (claimRes.ok) {
+      return claimData
+    }
+
+    lastError = claimData.error || lastError
+
+    if (claimRes.status === 404 && attempt < CLAIM_RETRY_ATTEMPTS - 1) {
+      await delay(CLAIM_RETRY_DELAY_MS)
+      continue
+    }
+
+    if (claimRes.status >= 500 && attempt < CLAIM_RETRY_ATTEMPTS - 1) {
+      await delay(CLAIM_RETRY_DELAY_MS)
+      continue
+    }
+
+    throw new Error(lastError)
+  }
+
+  throw new Error(lastError)
+}
+
+const buildGuestRedirectView = (sessionId: string, claimData: ClaimData): SuccessView => {
+  const sessionParam = encodeURIComponent(sessionId)
+
+  if (claimData.status === 'auto_linked' || claimData.status === 'claimed') {
+    const email = encodeURIComponent(claimData.email || '')
+    return {
+      variant: 'login_linked',
+      redirectUrl: `/auth/login?email=${email}&message=payment_success_linked&session_id=${sessionParam}`,
+      subtitle: 'Accedi con il tuo account per vedere la prenotazione...',
+    }
+  }
+
+  return {
+    variant: 'complete_account',
+    redirectUrl: `/checkout/complete-account?session_id=${sessionId}`,
+    subtitle: 'Tra pochi secondi completerai il tuo account...',
+  }
+}
+
 function PaymentSuccessContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -97,33 +152,13 @@ function PaymentSuccessContent() {
             subtitle: 'Reindirizzamento alla dashboard...',
           }
         } else {
-          const claimRes = await fetch(`/api/checkout/claim/${sessionId}`)
-          const claimData = await claimRes.json()
-
-          if (!claimRes.ok) {
-            throw new Error(claimData.error || 'Impossibile verificare il pagamento')
+          let claimData: ClaimData = {}
+          try {
+            claimData = await fetchClaimWithRetry(sessionId)
+          } catch {
+            // Webhook may still be processing; complete-account can recover from Stripe session data
           }
-
-          if (claimData.status === 'pending') {
-            view = {
-              variant: 'complete_account',
-              redirectUrl: `/checkout/complete-account?session_id=${sessionId}`,
-              subtitle: 'Tra pochi secondi completerai il tuo account...',
-            }
-          } else if (claimData.status === 'auto_linked' || claimData.status === 'claimed') {
-            const email = encodeURIComponent(claimData.email || '')
-            view = {
-              variant: 'login_linked',
-              redirectUrl: `/auth/login?email=${email}&message=payment_success_linked`,
-              subtitle: 'Accedi con il tuo account per vedere la prenotazione...',
-            }
-          } else {
-            view = {
-              variant: 'login_generic',
-              redirectUrl: '/auth/login?message=payment_success',
-              subtitle: 'Accedi per gestire la tua prenotazione...',
-            }
-          }
+          view = buildGuestRedirectView(sessionId, claimData)
         }
 
         setSuccessView(view)

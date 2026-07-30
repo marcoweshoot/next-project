@@ -3,8 +3,8 @@ import { stripe } from '@/lib/stripe'
 import Stripe from 'stripe'
 import { getClient } from '@/lib/graphqlClient'
 import { gql } from 'graphql-request'
+import { getSiteUrl } from '@/lib/siteUrl'
 
-// Funzione per formattare la data della sessione in modo sicuro
 function formatSessionDate(sessionDate: string | undefined, sessionId: string): string {
   if (!sessionDate) {
     return `Sessione ${sessionId}`;
@@ -19,27 +19,6 @@ function formatSessionDate(sessionDate: string | undefined, sessionId: string): 
   } catch {
     return `Sessione ${sessionId}`;
   }
-}
-
-// Funzione per ottenere l'URL del sito in base all'ambiente
-function getSiteUrl() {
-  // In produzione/staging, usa la variabile d'ambiente
-  if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return process.env.NEXT_PUBLIC_SITE_URL
-  }
-  
-  // Per preview, usa URL fisso per evitare problemi di sessione
-  if (process.env.VERCEL_ENV === 'preview') {
-    return 'https://next-project-rho-teal.vercel.app'
-  }
-  
-  // In Vercel production, usa VERCEL_URL
-  if (process.env.VERCEL_URL && process.env.VERCEL_ENV === 'production') {
-    return `https://${process.env.VERCEL_URL}`
-  }
-  
-  // Fallback per sviluppo locale
-  return 'http://localhost:3000'
 }
 
 // Query GraphQL per recuperare il payment_recipient del tour

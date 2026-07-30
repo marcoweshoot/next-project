@@ -33,6 +33,7 @@ function LoginForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [paymentMessage, setPaymentMessage] = useState<'linked' | 'new' | 'generic' | null>(null)
+  const [stripeSessionId, setStripeSessionId] = useState<string | null>(null)
   const router = useRouter()
   const searchParams = useSearchParams()
   const supabase = createClient()
@@ -49,6 +50,10 @@ function LoginForm() {
     const emailParam = searchParams.get('email')
     if (emailParam) {
       setEmail(decodeURIComponent(emailParam))
+    }
+    const sessionIdParam = searchParams.get('session_id')
+    if (sessionIdParam?.startsWith('cs_')) {
+      setStripeSessionId(sessionIdParam)
     }
   }, [searchParams])
 
@@ -190,10 +195,18 @@ function LoginForm() {
                         <>Il tuo account è pronto. Accedi con la password che hai appena scelto.</>
                       )}
                       {paymentMessage === 'generic' && (
-                        <>Accedi per gestire la tua prenotazione.</>
+                        <>Se è la tua prima prenotazione, completa l&apos;account con una password.</>
                       )}
                     </AlertDescription>
                   </Alert>
+                )}
+
+                {stripeSessionId && paymentMessage !== 'linked' && paymentMessage !== 'new' && (
+                  <Button asChild className="w-full h-12 bg-primary hover:bg-primary/90">
+                    <Link href={`/checkout/complete-account?session_id=${encodeURIComponent(stripeSessionId)}`}>
+                      Completa il tuo account
+                    </Link>
+                  </Button>
                 )}
                 
                 <form onSubmit={handleLogin} className="space-y-5">

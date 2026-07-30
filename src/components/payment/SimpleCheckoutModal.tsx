@@ -3,17 +3,23 @@
 import { useState, useEffect } from 'react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import { Alert, AlertDescription } from '@/components/ui/alert'
-import { Checkbox } from '@/components/ui/checkbox'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { CreditCard, User, Calendar, Euro, AlertCircle, Loader2, Users, CheckCircle } from 'lucide-react'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
+import { AlertCircle, CheckCircle, ChevronDown } from 'lucide-react'
 import { StripeCheckoutButton } from './StripeCheckoutButton'
 import { GiftCardInput } from '@/components/gift-card/GiftCardInput'
+import {
+  CheckoutStepper,
+  CheckoutTripSummary,
+  CheckoutParticipants,
+  CheckoutPaymentMode,
+  CheckoutOrderRecap,
+  CheckoutFooter,
+} from './checkout/CheckoutParts'
 import { createPurchaseEventId, getFbCookies, trackInitiateCheckout } from '@/utils/facebook'
 import { persistCheckoutSelection, loadCheckoutSelection, type CheckoutPaymentType } from '@/utils/checkoutDraft'
 import { trackCheckoutFunnel } from '@/utils/checkoutFunnel'
+import { cn } from '@/lib/utils'
 
 interface SimpleCheckoutModalProps {
   isOpen: boolean
@@ -67,6 +73,7 @@ export function SimpleCheckoutModal({
   const [giftCardDiscount, setGiftCardDiscount] = useState<number>(0)
   const [currentStep, setCurrentStep] = useState<1 | 2>(initialStep ?? 1)
   const [hasCommitted, setHasCommitted] = useState(false)
+  const [giftCardOpen, setGiftCardOpen] = useState(false)
 
   const handlePrevStep = () => {
     if (currentStep > 1) setCurrentStep(1)
@@ -78,6 +85,7 @@ export function SimpleCheckoutModal({
     setGiftCardCode(undefined)
     setGiftCardDiscount(0)
     setHasCommitted(false)
+    setGiftCardOpen(false)
   }
 
   const handleClose = () => {
@@ -117,6 +125,7 @@ export function SimpleCheckoutModal({
       const giftCardBalanceInEuros = data.giftCard.remaining_balance / 100
       const actualDiscount = Math.min(giftCardBalanceInEuros, totalAmount)
       setGiftCardDiscount(actualDiscount)
+      setGiftCardOpen(true)
     } catch {
       setError('Errore nella validazione della gift card')
     }
@@ -217,11 +226,6 @@ export function SimpleCheckoutModal({
 
   const isUserLoggedIn = Boolean(user?.id && user?.email)
 
-  const getStep1ButtonLabel = () => {
-    if (isBalancePayment) return `Paga Saldo ${getPaymentAmount()}€`
-    return 'Procedi al pagamento'
-  }
-
   const getPaymentAmount = () => {
     const baseAmount = isBalancePayment
       ? (session.price - session.deposit)
@@ -240,6 +244,12 @@ export function SimpleCheckoutModal({
     if (session.deposit >= session.price) return false
     if (session.deposit < session.price * 0.2) return false
     return true
+  }
+
+  const getTotalLabel = () => {
+    if (isBalancePayment) return 'Saldo da pagare'
+    if (paymentType === 'deposit') return 'Acconto ora'
+    return 'Totale'
   }
 
   const handlePaymentSuccess = () => {
@@ -315,199 +325,87 @@ export function SimpleCheckoutModal({
     setCurrentStep(2)
   }
 
+  const modalTitle = currentStep === 1 ? 'Prenota' : 'Pagamento'
+
   return (
     <Dialog open={isOpen} onOpenChange={(open) => { if (!open) handleClose() }}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto w-[95vw] sm:w-full">
-        <DialogHeader>
-          <DialogTitle className="flex items-center gap-2">
-            <CreditCard className="w-5 h-5" />
-            Checkout Rapido
-          </DialogTitle>
-
-          <div className="flex items-center justify-center space-x-2 sm:space-x-4 py-4 px-2">
-            <div className={`flex items-center space-x-1 sm:space-x-2 ${currentStep >= 1 ? 'text-primary' : 'text-muted-foreground'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-medium ${
-                currentStep >= 1 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
-              }`}>
-                1
-              </div>
-              <span className="text-xs sm:text-sm hidden sm:inline">Dettagli</span>
-            </div>
-            <div className={`w-4 sm:w-8 h-0.5 ${currentStep >= 2 ? 'bg-primary' : 'bg-muted'}`} />
-            <div className={`flex items-center space-x-1 sm:space-x-2 ${currentStep >= 2 ? 'text-primary' : 'text-muted-foreground'}`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-medium ${
-                currentStep >= 2 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
-              }`}>
-                2
-              </div>
-              <span className="text-xs sm:text-sm hidden sm:inline">Pagamento</span>
-            </div>
-          </div>
+      <DialogContent className="max-w-lg max-h-[90vh] overflow-y-auto w-[95vw] sm:w-full p-0 gap-0">
+        <DialogHeader className="px-6 pt-6 pb-0 space-y-0">
+          <DialogTitle className="text-lg font-semibold">{modalTitle}</DialogTitle>
+          <CheckoutStepper currentStep={currentStep} />
         </DialogHeader>
 
-        <div className="space-y-6 pb-4">
+        <div className="px-6 pb-6 pt-2">
           {currentStep === 1 && (
             <>
-              <div className="space-y-2">
-                <h3 className="text-xl font-semibold">{tour.title}</h3>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    {new Date(tour.startDate).toLocaleDateString('it-IT')} - {new Date(tour.endDate).toLocaleDateString('it-IT')}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <User className="w-4 h-4" />
-                    Coach: {tour.coach}
-                  </div>
-                </div>
-                <Badge variant="secondary" className="w-fit">
-                  {session.availableSpots} posti disponibili
-                </Badge>
-              </div>
+              <CheckoutTripSummary
+                title={tour.title}
+                startDate={tour.startDate}
+                coach={tour.coach}
+                availableSpots={session.availableSpots}
+              />
 
-              <div className="space-y-4">
-                <h4 className="font-semibold">Seleziona il numero di posti:</h4>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  <div className="flex items-center gap-2">
-                    <Users className="w-5 h-5 text-muted-foreground" />
-                    <Select value={quantity.toString()} onValueChange={(value) => setQuantity(parseInt(value))}>
-                      <SelectTrigger className="w-32">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {Array.from({ length: Math.min(session.availableSpots, 10) }, (_, i) => i + 1).map((num) => (
-                          <SelectItem key={num} value={num.toString()}>
-                            {num} {num === 1 ? 'persona' : 'persone'}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <span className="text-sm text-muted-foreground">
-                    {session.availableSpots} posti disponibili
-                  </span>
-                </div>
-              </div>
+              <CheckoutParticipants
+                quantity={quantity}
+                availableSpots={session.availableSpots}
+                onQuantityChange={setQuantity}
+              />
 
               {!isBalancePayment && shouldShowDepositOption() && (
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Scegli il tipo di pagamento:</h4>
-                  <div className="grid grid-cols-1 gap-4">
-                    <Card
-                      className={`cursor-pointer transition-all ${
-                        paymentType === 'deposit'
-                          ? 'border-primary bg-primary/10'
-                          : 'border-border hover:border-primary/50'
-                      }`}
-                      onClick={() => setPaymentType('deposit')}
-                    >
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-3">
-                          <Checkbox checked={paymentType === 'deposit'} onChange={() => setPaymentType('deposit')} />
-                          <div className="flex-1">
-                            <h5 className="font-semibold text-foreground">Acconto</h5>
-                            <p className="text-sm text-muted-foreground">
-                              Paga solo l&apos;acconto ora, saldo entro 30 giorni dalla partenza
-                            </p>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-lg font-bold text-primary">{getDepositAmount()}€</div>
-                            <div className="text-xs text-muted-foreground">+{getBalanceAmount()}€ saldo</div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card
-                      className={`cursor-pointer transition-all ${
-                        paymentType === 'full'
-                          ? 'border-primary bg-primary/10'
-                          : 'border-border hover:border-primary/50'
-                      }`}
-                      onClick={() => setPaymentType('full')}
-                    >
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-3">
-                          <Checkbox checked={paymentType === 'full'} onChange={() => setPaymentType('full')} />
-                          <div className="flex-1">
-                            <h5 className="font-semibold text-foreground">Pagamento Completo</h5>
-                            <p className="text-sm text-muted-foreground">Paga tutto subito e hai finito</p>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-lg font-bold text-primary">{getTotalAmount()}€</div>
-                            <div className="text-xs text-muted-foreground">Pagamento completo</div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
+                <CheckoutPaymentMode
+                  paymentType={paymentType}
+                  depositAmount={getDepositAmount()}
+                  totalAmount={getTotalAmount()}
+                  balanceAmount={getBalanceAmount()}
+                  onPaymentTypeChange={setPaymentType}
+                />
               )}
 
-              {!shouldShowDepositOption() && !isBalancePayment && (
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <p className="text-sm text-blue-700">
-                      Per questo importo è previsto solo il pagamento completo
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              <Card className="bg-muted/50 border-border">
-                <CardContent className="p-4">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <p className="text-sm text-muted-foreground">
-                        {isBalancePayment
-                          ? `Pagamento saldo rimanente di ${session.price}€`
-                          : paymentType === 'deposit'
-                            ? `Acconto di ${session.deposit}€ (saldo di ${getBalanceAmount()}€ da pagare entro 30 giorni)`
-                            : `Pagamento completo di ${session.price}€`}
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-primary">{getPaymentAmount()}€</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {!isUserLoggedIn && (
-                <p className="text-sm text-muted-foreground text-center">
-                  Potrai creare il tuo account dopo il pagamento con i dati inseriti su Stripe
-                </p>
-              )}
-
-              <div className="flex gap-3">
-                <Button variant="outline" onClick={handleClose} className="flex-1">
-                  Annulla
-                </Button>
-                <Button onClick={handleStartPayment} className="flex-1 bg-primary hover:bg-primary/90">
-                  <Euro className="w-4 h-4 mr-2" />
-                  {getStep1ButtonLabel()}
-                </Button>
-              </div>
+              <CheckoutFooter
+                totalLabel={getTotalLabel()}
+                totalAmount={getPaymentAmount()}
+                primaryLabel="Continua"
+                onPrimary={handleStartPayment}
+                onCancel={handleClose}
+              />
             </>
           )}
 
           {currentStep === 2 && (
             <div className="space-y-4">
-              <div className="text-center space-y-2">
-                <h3 className="text-xl font-semibold">Completa il pagamento</h3>
-                <p className="text-muted-foreground">Procedi con il checkout sicuro Stripe</p>
-              </div>
-
-              <GiftCardInput
-                onApply={handleApplyGiftCard}
-                onRemove={handleRemoveGiftCard}
-                appliedCode={giftCardCode}
-                appliedDiscount={giftCardDiscount}
+              <CheckoutOrderRecap
+                quantity={quantity}
+                isBalancePayment={isBalancePayment}
+                paymentType={paymentType}
+                paymentAmount={getPaymentAmount()}
               />
 
+              <Collapsible
+                open={giftCardOpen || Boolean(giftCardCode)}
+                onOpenChange={setGiftCardOpen}
+              >
+                <CollapsibleTrigger className="flex w-full items-center justify-between py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <span>Hai una gift card?</span>
+                  <ChevronDown
+                    className={cn(
+                      'h-4 w-4 transition-transform',
+                      (giftCardOpen || giftCardCode) && 'rotate-180'
+                    )}
+                  />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="pt-2 pb-4">
+                  <GiftCardInput
+                    onApply={handleApplyGiftCard}
+                    onRemove={handleRemoveGiftCard}
+                    appliedCode={giftCardCode}
+                    appliedDiscount={giftCardDiscount}
+                    hideLabel
+                  />
+                </CollapsibleContent>
+              </Collapsible>
+
               {getPaymentAmount() === 0 ? (
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {!isUserLoggedIn ? (
                     <Alert variant="destructive">
                       <AlertCircle className="h-4 w-4" />
@@ -519,26 +417,25 @@ export function SimpleCheckoutModal({
                     </Alert>
                   ) : (
                     <>
-                      <Alert className="border-green-200 bg-green-50">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        <AlertDescription className="text-green-800">
-                          <strong>Gift card copre l&apos;intero importo!</strong><br />
-                          La tua prenotazione sarà completata automaticamente.
+                      <Alert className="border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950">
+                        <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
+                        <AlertDescription className="text-green-800 dark:text-green-200">
+                          Gift card copre l&apos;intero importo. La prenotazione sarà completata automaticamente.
                         </AlertDescription>
                       </Alert>
                       <Button
                         onClick={handleZeroPayment}
-                        className="w-full bg-green-600 hover:bg-green-700 text-white"
+                        className="w-full"
                         size="lg"
                       >
                         <CheckCircle className="mr-2 h-5 w-5" />
-                        Completa Prenotazione (0€)
+                        Completa prenotazione (0€)
                       </Button>
                     </>
                   )}
                 </div>
               ) : (
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <StripeCheckoutButton
                     amount={getPaymentAmount() * 100}
                     currency={session.currency.toLowerCase()}
@@ -558,24 +455,26 @@ export function SimpleCheckoutModal({
                     onSuccess={handlePaymentSuccess}
                     onError={handlePaymentError}
                   />
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                    <p className="text-sm text-blue-700 text-center">
-                      💳 <strong>Paga a rate con Klarna:</strong> Scegli Klarna al checkout per dividere il pagamento in comode rate senza interessi
-                    </p>
-                  </div>
+                  <p className="text-xs text-center text-muted-foreground">
+                    Klarna disponibile su Stripe
+                  </p>
                 </div>
               )}
 
-              <div className="flex gap-3">
-                <Button variant="outline" onClick={handlePrevStep} className="flex-1">
-                  Indietro
-                </Button>
-              </div>
+              {!isUserLoggedIn && getPaymentAmount() > 0 && (
+                <p className="text-xs text-center text-muted-foreground">
+                  Account creato dopo il pagamento con i dati inseriti su Stripe
+                </p>
+              )}
+
+              <Button variant="outline" onClick={handlePrevStep} className="w-full">
+                Indietro
+              </Button>
             </div>
           )}
 
           {error && (
-            <Alert variant="destructive">
+            <Alert variant="destructive" className="mt-4">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>{error}</AlertDescription>
             </Alert>

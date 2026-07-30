@@ -9,10 +9,11 @@ export default async function DashboardPage({
   searchParams,
 }: {
   searchParams: Promise<{ 
-    payment?: string; 
-    error?: string; 
-    auto_login?: string;
-    payment_success?: string;
+    payment?: string
+    error?: string
+    auto_login?: string
+    payment_success?: string
+    session_id?: string
   }>
 }) {
   const supabase = await createServerClientSupabase()
@@ -23,9 +24,11 @@ export default async function DashboardPage({
 
   const resolvedSearchParams = await searchParams
 
-  // Se non c'è utente ma c'è stato un pagamento, redirect al login con messaggio
   if (!user) {
     if (resolvedSearchParams.payment === 'success') {
+      if (resolvedSearchParams.session_id) {
+        redirect(`/payment-success?session_id=${encodeURIComponent(resolvedSearchParams.session_id)}`)
+      }
       redirect('/auth/login?message=payment_success')
     }
     if (resolvedSearchParams.payment === 'cancelled') {

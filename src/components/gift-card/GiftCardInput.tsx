@@ -12,13 +12,15 @@ interface GiftCardInputProps {
   onRemove: () => void
   appliedCode?: string
   appliedDiscount?: number
+  hideLabel?: boolean
 }
 
 export function GiftCardInput({ 
   onApply, 
   onRemove, 
   appliedCode, 
-  appliedDiscount 
+  appliedDiscount,
+  hideLabel = false,
 }: GiftCardInputProps) {
   const [code, setCode] = useState('')
   const [loading, setLoading] = useState(false)
@@ -73,10 +75,12 @@ export function GiftCardInput({
 
   return (
     <div className="space-y-3">
-      <Label className="flex items-center gap-2 text-sm font-medium">
-        <Gift className="h-4 w-4" />
-        Hai una Gift Card?
-      </Label>
+      {!hideLabel && (
+        <Label className="flex items-center gap-2 text-sm font-medium">
+          <Gift className="h-4 w-4" />
+          Hai una Gift Card?
+        </Label>
+      )}
 
       {appliedCode && appliedDiscount ? (
         // Gift card applied state
@@ -152,10 +156,6 @@ export function GiftCardInput({
               {error}
             </div>
           )}
-          
-          <p className="text-xs text-muted-foreground">
-            Inserisci il codice della tua gift card per applicare lo sconto
-          </p>
         </div>
       )}
     </div>
