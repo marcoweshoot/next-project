@@ -25,6 +25,7 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
   const [isVisible, setIsVisible] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [user, setUser] = useState<{ id: string; email: string } | null>(null);
+  const [availabilityMap, setAvailabilityMap] = useState<Record<string, number>>({});
 
   useEffect(() => {
     const handleScroll = () => setIsVisible(window.scrollY > 200);
@@ -78,9 +79,30 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
   }, [tour]);
 
   const displayPrice = nextSessionData.price != null ? nextSessionData.price : fallbackPrice;
+  const session = nextSessionData.session;
+
+  useEffect(() => {
+    if (!session?.id) return;
+
+    fetch(`/api/sessions/availability?ids=${session.id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.availability) setAvailabilityMap(data.availability);
+      })
+      .catch(() => {});
+  }, [session?.id]);
+
+  const availableSpots = useMemo(() => {
+    if (!session) return 0;
+    const booked = availabilityMap[session.id];
+    if (booked !== undefined) {
+      return Math.max(0, (session.maxPax ?? 0) - booked);
+    }
+    return Math.max(0, (session.maxPax ?? 0) - (session.users?.length ?? 0));
+  }, [session, availabilityMap]);
 
   const handleBookClick = () => {
-    if (nextSessionData.session && !isSoldOutStatus(nextSessionData.session?.status)) {
+    if (nextSessionData.session && !isSoldOutStatus(nextSessionData.session?.status) && availableSpots > 0) {
       if (displayPrice && displayPrice > 0) {
         trackAddToCart({
           tourTitle: tour?.title || 'Tour',
@@ -97,10 +119,41 @@ const TourStickyNav: React.FC<TourStickyNavProps> = ({ price: fallbackPrice, onS
     }
   };
 
-  const session = nextSessionData.session;
-  const availableSpots = session
-    ? Math.max(0, (session.maxPax ?? 0) - (session.users?.length ?? 0))
-    : 0;
+  if (!session) {
+    return (
+      <>
+        <div
+          className={`fixed left-0 right-0 z-50 flex h-[60px] w-full items-center justify-between border-b bg-background/80 px-2 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-200 ease-out ${
+            isVisible ? 'top-0' : '-top-20'
+          }`}
+        >
+          {/* Left section */}
+          <div className="flex items-center gap-2">
+            {tour?.image?.url && (
+              <Image
+                src={tour.image.url}
+                alt={tour.image.alternativeText || tour.title}
+                width={44}
+                height={44}
+                className="hidden h-11 w-11 rounded-lg object-cover sm:block"
+              />
+            )}
+            <div className="flex w-[200px] flex-col justify-center sm:w-[120px]">
+              <div className="h-4 overflow-hidden text-ellipsis whitespace-nowrap text-xs font-extrabold capitalize">
+                {tour?.title || 'Tour'}
+              </div>
+              <div className="text-xs font-semibold uppercase text-muted-foreground">
+                {tour?.duration || 7} giorni
+              </div>
+            </div>
+          </div>
+          <Button onClick={() => onScrollToSection('sessions')} className="px-4 py-3">
+            Prenota
+          </Button>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>

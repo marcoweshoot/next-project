@@ -3,14 +3,15 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { CreditCard, Loader2 } from 'lucide-react'
-import { getFbCookies } from '@/utils/facebook'
+import { getFbCookies, trackAddPaymentInfo } from '@/utils/facebook'
+import { trackCheckoutFunnel } from '@/utils/checkoutFunnel'
 
 interface StripeCheckoutButtonProps {
   amount: number
   currency: string
   tourId: string
   sessionId: string
-  userId: string
+  userId?: string
   paymentType: 'deposit' | 'balance' | 'full'
   quantity?: number
   tourTitle?: string
@@ -20,6 +21,7 @@ interface StripeCheckoutButtonProps {
   sessionPrice?: number
   sessionDeposit?: number
   giftCardCode?: string
+  cancelReturnUrl?: string
   onSuccess?: () => void
   onError?: (error: string) => void
 }
@@ -39,6 +41,7 @@ export function StripeCheckoutButton({
   sessionPrice,
   sessionDeposit,
   giftCardCode,
+  cancelReturnUrl,
   onSuccess,
   onError,
 }: StripeCheckoutButtonProps) {
@@ -61,7 +64,7 @@ export function StripeCheckoutButton({
           currency,
           tourId,
           sessionId,
-          userId,
+          userId: userId || 'guest',
           paymentType,
           quantity,
           tourTitle,
@@ -73,13 +76,39 @@ export function StripeCheckoutButton({
           giftCardCode,
           fbc,
           fbp,
+          cancelReturnUrl,
         }),
       })
 
       const { url, error } = await response.json()
 
       if (error) {
+        trackCheckoutFunnel({
+          step: 'checkout_error',
+          tourId,
+          sessionId,
+          error,
+          metaEvent: 'diagnostic',
+        })
         throw new Error(error)
+      }
+
+      const paymentValue = amount / 100
+      if (tourTitle && paymentValue > 0) {
+        trackAddPaymentInfo({
+          tourTitle,
+          value: paymentValue,
+          quantity,
+        })
+        trackCheckoutFunnel({
+          step: 'stripe_redirect',
+          tourId,
+          sessionId,
+          value: paymentValue,
+          quantity,
+          paymentType,
+          metaEvent: 'AddPaymentInfo',
+        })
       }
 
       // Save purchase data for Facebook Pixel tracking
@@ -112,7 +141,15 @@ export function StripeCheckoutButton({
       window.location.href = url
       
     } catch (error) {
-      onError?.(error instanceof Error ? error.message : 'Checkout failed')
+      const message = error instanceof Error ? error.message : 'Checkout failed'
+      trackCheckoutFunnel({
+        step: 'checkout_error',
+        tourId,
+        sessionId,
+        error: message,
+        metaEvent: 'diagnostic',
+      })
+      onError?.(message)
     } finally {
       setLoading(false)
     }

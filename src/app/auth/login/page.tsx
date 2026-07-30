@@ -41,6 +41,10 @@ function LoginForm() {
     if (searchParams.get('message') === 'payment_success') {
       setShowPaymentSuccess(true)
     }
+    const emailParam = searchParams.get('email')
+    if (emailParam) {
+      setEmail(decodeURIComponent(emailParam))
+    }
   }, [searchParams])
 
   const handleLogin = async (e: React.FormEvent) => {

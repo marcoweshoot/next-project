@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 import { DashboardOverview } from '@/components/dashboard/DashboardOverview'
 import { PaymentSuccessToast } from '@/components/dashboard/PaymentSuccessToast'
 import { PaymentErrorToast } from '@/components/dashboard/PaymentErrorToast'
+import { PaymentCancelledToast } from '@/components/dashboard/PaymentCancelledToast'
 
 export default async function DashboardPage({
   searchParams,
@@ -27,6 +28,9 @@ export default async function DashboardPage({
     if (resolvedSearchParams.payment === 'success') {
       redirect('/auth/login?message=payment_success')
     }
+    if (resolvedSearchParams.payment === 'cancelled') {
+      redirect('/checkout/cancelled')
+    }
     redirect('/auth/login')
   }
 
@@ -35,6 +39,7 @@ export default async function DashboardPage({
       <DashboardOverview userId={user.id} />
       {resolvedSearchParams.payment === 'success' && <PaymentSuccessToast />}
       {resolvedSearchParams.payment === 'error' && <PaymentErrorToast error={resolvedSearchParams.error} />}
+      {resolvedSearchParams.payment === 'cancelled' && <PaymentCancelledToast />}
     </>
   )
 }

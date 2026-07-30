@@ -5,6 +5,16 @@ import { rateLimits } from '@/lib/rateLimit'
 import { validateFields } from '@/lib/validation'
 import { sendEmail, sendAdminNotification, generateNewBookingAdminEmail, generateGiftCardAdminEmail, generateBookingConfirmationEmail } from '@/lib/email'
 import { sendServerEvent } from '@/lib/facebook-capi'
+import {
+  extractStripeGuestData,
+  lookupProfileByEmail,
+  afterGuestOrLinkedBooking,
+  getGuestDisplayName,
+  buildProfileUpdateFromGuestData,
+  getBookingContactInfo,
+  resolveTourCheckoutUser,
+  resolveCapiUserContext,
+} from '@/lib/checkoutClaims'
 import Stripe from 'stripe'
 
 // Stripe consiglia Node.js runtime per i webhook
@@ -54,25 +64,17 @@ export async function POST(request: NextRequest) {
         }
       );
 
-      // Recupera l'ID utente subito per averlo a disposizione
-      const finalUserId = session.metadata?.userId || session.customer_details?.email;
-
       // CAPI Purchase Event Tracking for sync/async payments on session completion
       // Eseguito qui per assicurarsi che venga inviato prima di qualsiasi return anticipato
       (async () => {
         try {
-          if (!finalUserId) {
+          const capiUser = await resolveCapiUserContext(supabase, session)
+          if (!capiUser.email && !capiUser.externalId) {
             if (process.env.NODE_ENV === 'development') {
               console.warn('⚠️ [CAPI] User ID or email not found in session, cannot send Purchase event.')
             }
             return
           }
-
-          const { data: userProfile } = await supabase
-            .from('profiles')
-            .select('first_name, last_name, email, mobile_phone')
-            .eq('id', finalUserId)
-            .single()
 
           const ip = request.headers.get('x-forwarded-for')
           const userAgent = request.headers.get('user-agent')
@@ -85,11 +87,11 @@ export async function POST(request: NextRequest) {
             event_id: session.id,
             event_source_url: `${process.env.NEXT_PUBLIC_SITE_URL}/viaggi-fotografici/tour/${session.metadata?.tourTitle || ''}`,
             user_data: {
-              external_id: finalUserId,
-              em: userProfile?.email || session.customer_details?.email || undefined,
-              ph: userProfile?.mobile_phone || undefined,
-              fn: userProfile?.first_name || undefined,
-              ln: userProfile?.last_name || undefined,
+              external_id: capiUser.externalId,
+              em: capiUser.email,
+              ph: capiUser.phone || undefined,
+              fn: capiUser.firstName || undefined,
+              ln: capiUser.lastName || undefined,
               client_ip_address: ip || undefined,
               client_user_agent: userAgent || undefined,
               fbc,
@@ -293,15 +295,22 @@ export async function POST(request: NextRequest) {
       }
 
       // Ora tutti gli utenti dovrebbero essere registrati prima del pagamento
-      // const finalUserId = userId // NON PIU' NECESSARIO, dichiarato sopra
+      const { resolvedUserId, guestData } = await resolveTourCheckoutUser(
+        supabase,
+        session,
+        userId,
+        paymentType
+      )
 
-      if (userId === 'anonymous') {
-        return NextResponse.json({ 
-          error: 'Anonymous users not supported - user must register first',
+      if (paymentType === 'balance' && !resolvedUserId) {
+        return NextResponse.json({
+          error: 'Balance payment requires a registered user',
           timestamp,
-          sessionId: session.id 
+          sessionId: session.id,
         }, { status: 400 })
       }
+
+      const bookingUserId = resolvedUserId
 
       // Gestisci acconto vs saldo
       if (paymentType === 'deposit') {
@@ -333,7 +342,7 @@ export async function POST(request: NextRequest) {
           const { data: newBooking, error: insertError } = await supabase
             .from('bookings')
             .insert({
-              user_id: finalUserId,
+              user_id: bookingUserId,
               tour_id: tourId,
               session_id: sessionId,
               status: bookingStatus,
@@ -341,6 +350,7 @@ export async function POST(request: NextRequest) {
               total_amount: expectedTotal,
               amount_paid: totalAmountPaid, // Include gift card discount
               stripe_payment_intent_id: session.payment_intent as string,
+              stripe_checkout_session_id: session.id,
               gift_card_code: giftCardCode || null, // Add gift card code if present
               deposit_due_date: new Date().toISOString(),
               balance_due_date: session.metadata?.sessionDate ? 
@@ -361,9 +371,18 @@ export async function POST(request: NextRequest) {
               details: insertError.message 
             }, { status: 500 })
           }
+
+          if (newBooking) {
+            await afterGuestOrLinkedBooking(supabase, {
+              stripeSessionId: session.id,
+              bookingId: newBooking.id,
+              resolvedUserId: bookingUserId,
+              guestData,
+            })
+          }
           
           // Apply gift card if present
-          if (giftCardCode && giftCardDiscount > 0 && newBooking) {
+          if (giftCardCode && giftCardDiscount > 0 && newBooking && bookingUserId) {
             try {
               console.log(`🎁 [WEBHOOK] Applying gift card ${giftCardCode} with discount ${giftCardDiscount}`)
               const { applyGiftCard } = await import('@/lib/giftCards')
@@ -371,7 +390,7 @@ export async function POST(request: NextRequest) {
               const result = await applyGiftCard(
                 giftCardCode,
                 originalAmount,
-                finalUserId,
+                bookingUserId,
                 newBooking.id,
                 supabase as any
               )
@@ -391,15 +410,10 @@ export async function POST(request: NextRequest) {
           // Invia notifica email all'admin (non-blocking)
           try {
             console.log('📧 [WEBHOOK] Attempting to send admin notification...')
-            const { data: userProfile } = await supabase
-              .from('profiles')
-              .select('first_name, last_name, email')
-              .eq('id', finalUserId)
-              .single()
+            const contact = await getBookingContactInfo(supabase, bookingUserId, guestData)
 
-            if (userProfile) {
-              const userName = `${userProfile.first_name || ''} ${userProfile.last_name || ''}`.trim() || 'Cliente'
-              const userEmail = userProfile.email || ''
+            if (contact) {
+              const { userName, userEmail } = contact
               
               console.log(`📧 [WEBHOOK] User profile found: ${userName} (${userEmail})`)
               
@@ -441,7 +455,7 @@ export async function POST(request: NextRequest) {
                 console.error('❌ [WEBHOOK] Customer deposit confirmation email failed to send')
               }
             } else {
-              console.warn('⚠️ [WEBHOOK] User profile not found for userId:', finalUserId)
+              console.warn('⚠️ [WEBHOOK] No contact info for booking notification')
             }
           } catch (emailError) {
             // Log but don't fail the booking
@@ -449,7 +463,7 @@ export async function POST(request: NextRequest) {
           }
 
           // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
-          if (fiscalCode || vatNumber || phoneNumber || fullAddress) {
+          if (bookingUserId && (fiscalCode || vatNumber || phoneNumber || fullAddress)) {
             const updateData: any = {}
             
             if (fiscalCode) {
@@ -473,7 +487,7 @@ export async function POST(request: NextRequest) {
             const { error: updateError } = await supabase
               .from('profiles')
               .update(updateData)
-              .eq('id', finalUserId)
+              .eq('id', bookingUserId)
 
             // Non blocchiamo il flusso se l'aggiornamento del profilo fallisce
             if (updateError) {
@@ -512,7 +526,7 @@ export async function POST(request: NextRequest) {
           const { data: newBooking, error: insertError } = await supabase
             .from('bookings')
             .insert({
-              user_id: finalUserId,
+              user_id: bookingUserId,
               tour_id: tourId,
               session_id: sessionId,
               status: bookingStatus,
@@ -520,6 +534,7 @@ export async function POST(request: NextRequest) {
               total_amount: expectedTotal,
               amount_paid: totalAmountPaid, // Include gift card discount
               stripe_payment_intent_id: session.payment_intent as string,
+              stripe_checkout_session_id: session.id,
               gift_card_code: giftCardCode || null, // Add gift card code if present
               deposit_due_date: new Date().toISOString(),
               balance_due_date: session.metadata?.sessionDate ? 
@@ -540,9 +555,18 @@ export async function POST(request: NextRequest) {
               details: insertError.message 
             }, { status: 500 })
           }
+
+          if (newBooking) {
+            await afterGuestOrLinkedBooking(supabase, {
+              stripeSessionId: session.id,
+              bookingId: newBooking.id,
+              resolvedUserId: bookingUserId,
+              guestData,
+            })
+          }
           
           // Apply gift card if present
-          if (giftCardCode && giftCardDiscount > 0 && newBooking) {
+          if (giftCardCode && giftCardDiscount > 0 && newBooking && bookingUserId) {
             try {
               console.log(`🎁 [WEBHOOK] Applying gift card ${giftCardCode} with discount ${giftCardDiscount} for full payment`)
               const { applyGiftCard } = await import('@/lib/giftCards')
@@ -550,7 +574,7 @@ export async function POST(request: NextRequest) {
               const result = await applyGiftCard(
                 giftCardCode,
                 originalAmount,
-                finalUserId,
+                bookingUserId,
                 newBooking.id,
                 supabase as any
               )
@@ -585,15 +609,10 @@ export async function POST(request: NextRequest) {
           // Invia notifica email all'admin (non-blocking)
           try {
             console.log('📧 [WEBHOOK] Attempting to send admin notification...')
-            const { data: userProfile } = await supabase
-              .from('profiles')
-              .select('first_name, last_name, email')
-              .eq('id', finalUserId)
-              .single()
+            const contact = await getBookingContactInfo(supabase, bookingUserId, guestData)
 
-            if (userProfile) {
-              const userName = `${userProfile.first_name || ''} ${userProfile.last_name || ''}`.trim() || 'Cliente'
-              const userEmail = userProfile.email || ''
+            if (contact) {
+              const { userName, userEmail } = contact
               
               console.log(`📧 [WEBHOOK] User profile found: ${userName} (${userEmail})`)
               
@@ -635,7 +654,7 @@ export async function POST(request: NextRequest) {
                 console.error('❌ [WEBHOOK] Customer full payment confirmation email failed to send')
               }
             } else {
-              console.warn('⚠️ [WEBHOOK] User profile not found for userId:', finalUserId)
+              console.warn('⚠️ [WEBHOOK] No contact info for booking notification')
             }
           } catch (emailError) {
             // Log but don't fail the booking
@@ -643,7 +662,7 @@ export async function POST(request: NextRequest) {
           }
 
           // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
-          if (fiscalCode || vatNumber || phoneNumber || fullAddress) {
+          if (bookingUserId && (fiscalCode || vatNumber || phoneNumber || fullAddress)) {
             const updateData: any = {}
             
             if (fiscalCode) {
@@ -667,7 +686,7 @@ export async function POST(request: NextRequest) {
             const { error: profileUpdateError } = await supabase
               .from('profiles')
               .update(updateData)
-              .eq('id', finalUserId)
+              .eq('id', bookingUserId)
 
             // Non blocchiamo il flusso se l'aggiornamento del profilo fallisce
             if (profileUpdateError) {
@@ -691,7 +710,7 @@ export async function POST(request: NextRequest) {
           const { data: existingBookings, error: searchError } = await supabase
             .from('bookings')
             .select('*')
-            .eq('user_id', finalUserId)
+            .eq('user_id', bookingUserId)
             .eq('tour_id', tourId)
             .eq('session_id', sessionId)
             .eq('status', 'deposit_paid')
@@ -738,7 +757,7 @@ export async function POST(request: NextRequest) {
               const result = await applyGiftCard(
                 giftCardCode,
                 originalAmount,
-                finalUserId,
+                bookingUserId,
                 existingBooking.id,
                 supabase as any
               )
@@ -760,7 +779,7 @@ export async function POST(request: NextRequest) {
             const { data: userProfile } = await supabase
               .from('profiles')
               .select('first_name, last_name, email')
-              .eq('id', finalUserId)
+              .eq('id', bookingUserId)
               .single()
 
             if (userProfile) {
@@ -807,7 +826,7 @@ export async function POST(request: NextRequest) {
                 console.error('❌ [WEBHOOK] Customer balance confirmation email failed to send')
               }
             } else {
-              console.warn('⚠️ [WEBHOOK] User profile not found for userId:', finalUserId)
+              console.warn('⚠️ [WEBHOOK] No contact info for booking notification')
             }
           } catch (emailError) {
             // Log but don't fail the booking
@@ -815,7 +834,7 @@ export async function POST(request: NextRequest) {
           }
 
           // Aggiorna il profilo utente con i dati fiscali da Stripe (se presenti)
-          if (fiscalCode || vatNumber || phoneNumber || fullAddress) {
+          if (bookingUserId && (fiscalCode || vatNumber || phoneNumber || fullAddress)) {
             const updateData: any = {}
             
             if (fiscalCode) {
@@ -838,7 +857,7 @@ export async function POST(request: NextRequest) {
             const { error: profileUpdateError } = await supabase
               .from('profiles')
               .update(updateData)
-              .eq('id', finalUserId)
+              .eq('id', bookingUserId)
 
             if (profileUpdateError) {
               console.error('Error updating user profile:', profileUpdateError)
@@ -900,11 +919,11 @@ export async function POST(request: NextRequest) {
           }
           
           // Aggiorna il profilo solo se ci sono dati da aggiornare
-          if (Object.keys(profileUpdate).length > 0) {
+          if (bookingUserId && Object.keys(profileUpdate).length > 0) {
             const { error: profileError } = await supabase
               .from('profiles')
               .upsert({
-                id: finalUserId,
+                id: bookingUserId,
                 ...profileUpdate,
               }, { onConflict: 'id' })
             
@@ -929,20 +948,14 @@ export async function POST(request: NextRequest) {
             process.env.SUPABASE_SERVICE_ROLE_KEY!
           )
 
-          const finalUserId = session.metadata?.userId || session.customer_details?.email
-          if (!finalUserId) {
+          const capiUser = await resolveCapiUserContext(supabase, session)
+          if (!capiUser.email && !capiUser.externalId) {
             if (process.env.NODE_ENV === 'development') {
               console.warn('⚠️ [CAPI] User ID or email not found in async session, cannot send event.')
             }
             return
           }
           
-          const { data: userProfile } = await supabase
-            .from('profiles')
-            .select('first_name, last_name, email, mobile_phone')
-            .eq('id', finalUserId)
-            .single()
-
           const ip = request.headers.get('x-forwarded-for')
           const userAgent = request.headers.get('user-agent')
           const quantity = session.metadata?.quantity ? parseInt(session.metadata.quantity, 10) : 1
@@ -954,11 +967,11 @@ export async function POST(request: NextRequest) {
             event_id: session.id,
             event_source_url: `${process.env.NEXT_PUBLIC_SITE_URL}/viaggi-fotografici/tour/${session.metadata?.tourTitle || ''}`,
             user_data: {
-              external_id: finalUserId,
-              em: userProfile?.email || session.customer_details?.email || undefined,
-              ph: userProfile?.mobile_phone || undefined,
-              fn: userProfile?.first_name || undefined,
-              ln: userProfile?.last_name || undefined,
+              external_id: capiUser.externalId,
+              em: capiUser.email,
+              ph: capiUser.phone || undefined,
+              fn: capiUser.firstName || undefined,
+              ln: capiUser.lastName || undefined,
               client_ip_address: ip || undefined,
               client_user_agent: userAgent || undefined,
               fbc,

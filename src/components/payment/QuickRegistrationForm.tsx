@@ -12,13 +12,15 @@ import { createClient } from '@/lib/supabase/client'
 import { GoogleAuthButton } from '@/components/auth/GoogleAuthButton'
 import { validateFields } from '@/lib/validation'
 import { generateEventId, getFbCookies } from '@/utils/facebook'
+import type { CheckoutDraft } from '@/utils/checkoutDraft'
 
 interface QuickRegistrationFormProps {
   onSuccess: (userId: string) => void
   onError: (error: string) => void
+  checkoutDraft?: Omit<CheckoutDraft, 'savedAt'>
 }
 
-export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationFormProps) {
+export function QuickRegistrationForm({ onSuccess, onError, checkoutDraft }: QuickRegistrationFormProps) {
   const [activeTab, setActiveTab] = useState<'login' | 'register'>('register')
   
   // Form data per registrazione
@@ -387,7 +389,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
               
               <GoogleAuthButton
                 mode="signin"
-                onSuccess={() => onSuccess('')}
+                checkoutDraft={checkoutDraft}
                 onError={onError}
               />
             </form>
@@ -565,7 +567,7 @@ export function QuickRegistrationForm({ onSuccess, onError }: QuickRegistrationF
               
               <GoogleAuthButton
                 mode="signup"
-                onSuccess={() => onSuccess('')}
+                checkoutDraft={checkoutDraft}
                 onError={onError}
               />
             </form>

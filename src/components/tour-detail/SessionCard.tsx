@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -466,7 +466,7 @@ const SessionCard: React.FC<SessionCardProps> = ({
         <SimpleCheckoutModal
       isOpen={isQuickCheckoutOpen}
       onClose={() => setIsQuickCheckoutOpen(false)}
-      isBalancePayment={false} // Sempre false per nuovi viaggi
+      isBalancePayment={false}
       session={{
         id: session.id,
         date: session.start,

@@ -9,6 +9,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import Header from '@/components/Header'
 import { CheckCircle, Loader2, User, Mail, AlertCircle } from 'lucide-react'
 import { generateEventId, trackCompleteRegistration, getFbCookies } from '@/utils/facebook'
+import { buildCheckoutResumeUrl, loadCheckoutDraft } from '@/utils/checkoutDraft'
 
 function GoogleSignupConfirmContent() {
   const [loading, setLoading] = useState(false)
@@ -111,7 +112,12 @@ function GoogleSignupConfirmContent() {
       // Fire pixel CompleteRegistration with the same event_id used by CAPI
       trackCompleteRegistration({ eventId: fbEventId })
 
-      // Success - redirect to dashboard
+      const draft = loadCheckoutDraft()
+      if (draft) {
+        router.push(buildCheckoutResumeUrl(draft))
+        return
+      }
+
       router.push('/dashboard')
     } catch (err) {
       console.error('Error:', err)

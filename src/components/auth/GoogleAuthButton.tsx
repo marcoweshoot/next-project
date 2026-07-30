@@ -5,13 +5,18 @@ import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/button'
 import { Loader2 } from 'lucide-react'
 
+import { saveCheckoutDraft, type CheckoutDraft } from '@/utils/checkoutDraft'
+import { savePostPaymentClaim } from '@/utils/postPaymentClaim'
+
 interface GoogleAuthButtonProps {
   mode: 'signin' | 'signup'
-  onSuccess?: () => void
+  onSuccess?: (userId: string) => void
   onError?: (error: string) => void
+  checkoutDraft?: Omit<CheckoutDraft, 'savedAt'>
+  postPaymentSessionId?: string
 }
 
-export function GoogleAuthButton({ mode, onSuccess, onError }: GoogleAuthButtonProps) {
+export function GoogleAuthButton({ mode, onSuccess, onError, checkoutDraft, postPaymentSessionId }: GoogleAuthButtonProps) {
   const [loading, setLoading] = useState(false)
   const supabase = createClient()
 
@@ -19,49 +24,31 @@ export function GoogleAuthButton({ mode, onSuccess, onError }: GoogleAuthButtonP
     try {
       setLoading(true)
       
-      // Detect Safari and mobile devices
-      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-      const isSafariMobile = /iPhone|iPad|iPod/.test(navigator.userAgent) && /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)
-      
-      console.log('🔍 Auth detection:', { isSafari, isMobile, isSafariMobile, userAgent: navigator.userAgent })
-      
-      // Per Safari, usiamo sempre redirect manuale
-      const shouldUseManualRedirect = isSafari || isSafariMobile || isMobile
-      
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
           redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || window.location.origin}/auth/callback`,
-          // Safari and mobile-specific options
-          ...(shouldUseManualRedirect ? {
-            queryParams: {
-              access_type: 'offline',
-              prompt: 'consent',
-            }
-          } : {})
         }
       })
 
       if (error) {
         console.error('❌ Google Auth Error:', error)
         onError?.(error.message)
-      } else {
-        // Safari e mobile: redirect manuale per evitare problemi
-        if (shouldUseManualRedirect) {
-          console.log('🔍 Safari/Mobile detected, using manual redirect')
-          if (data.url) {
-            // Per Safari, usiamo window.location.href per evitare problemi di popup
-            window.location.href = data.url
-          } else {
-            onError?.('URL di redirect non disponibile')
-          }
-        } else {
-          // Desktop: comportamento normale (redirect automatico)
-          console.log('🔍 Desktop detected, using automatic redirect')
-          onSuccess?.()
-        }
+        return
       }
+
+      if (postPaymentSessionId) {
+        savePostPaymentClaim(postPaymentSessionId)
+      } else if (checkoutDraft) {
+        saveCheckoutDraft({ ...checkoutDraft, resumeStep: 3 })
+      }
+
+      if (data.url) {
+        window.location.href = data.url
+        return
+      }
+
+      onError?.('URL di redirect non disponibile')
     } catch (err) {
       console.error('❌ Google Auth Exception:', err)
       onError?.('Errore durante l\'autenticazione con Google')

@@ -91,6 +91,7 @@ export async function POST(request: NextRequest) {
       giftCardCode,
       fbc,
       fbp,
+      cancelReturnUrl,
     } = body
 
     // Debug logging
@@ -105,18 +106,26 @@ export async function POST(request: NextRequest) {
       userIdLength: userId?.length
     })
 
-    // Validate required fields (userId is required - no more anonymous users)
-    // Allow amount to be 0 if gift card covers everything
-    if (amount === undefined || amount === null || !tourId || !sessionId || !userId) {
+    // Validate required fields — userId optional for new tour bookings (guest checkout)
+    const isBalancePayment = paymentType === 'balance'
+    const effectiveUserId =
+      userId && userId !== 'guest' ? userId : 'guest'
+
+    if (amount === undefined || amount === null || !tourId || !sessionId) {
       console.error('❌ [CHECKOUT] Missing required fields:', {
         amount: amount,
         tourId: !!tourId,
         sessionId: !!sessionId,
-        userId: !!userId,
-        userIdValue: userId
       })
       return NextResponse.json(
-        { error: 'Missing required fields - user must be registered' },
+        { error: 'Missing required fields' },
+        { status: 400 }
+      )
+    }
+
+    if (isBalancePayment && (!userId || userId === 'guest')) {
+      return NextResponse.json(
+        { error: 'Balance payments require a logged-in user' },
         { status: 400 }
       )
     }
@@ -310,9 +319,9 @@ export async function POST(request: NextRequest) {
       // Personalizziamo i messaggi per l'Italia
       locale: 'it',
       success_url: `${getSiteUrl()}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${getSiteUrl()}/dashboard?payment=cancelled`,
+      cancel_url: `${getSiteUrl()}/checkout/cancelled?return=${encodeURIComponent(cancelReturnUrl || '/viaggi-fotografici')}`,
       metadata: {
-        userId,
+        userId: effectiveUserId,
         tourId,
         sessionId,
         paymentType,

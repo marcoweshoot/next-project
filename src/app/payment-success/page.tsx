@@ -126,19 +126,33 @@ function PaymentSuccessContent() {
         // Clear unrelated leftover payment data
         localStorage.removeItem('paymentData')
 
-        // Auth check: determines redirect destination only — pixel has already fired above
         const supabase = createClient()
-        const { data: { user }, error: authError } = await supabase.auth.getUser()
+        const { data: { user } } = await supabase.auth.getUser()
 
-        if (authError || !user) {
-          router.push('/auth/login?message=payment_success')
+        if (user) {
+          router.push('/dashboard?payment=success')
           return
         }
 
-        // Redirect to dashboard with success parameter
-        setTimeout(() => {
-          router.push('/dashboard?payment=success')
-        }, 2000)
+        const claimRes = await fetch(`/api/checkout/claim/${sessionId}`)
+        const claimData = await claimRes.json()
+
+        if (!claimRes.ok) {
+          throw new Error(claimData.error || 'Impossibile verificare il pagamento')
+        }
+
+        if (claimData.status === 'pending') {
+          router.push(`/checkout/complete-account?session_id=${sessionId}`)
+          return
+        }
+
+        if (claimData.status === 'auto_linked' || claimData.status === 'claimed') {
+          const email = encodeURIComponent(claimData.email || '')
+          router.push(`/auth/login?email=${email}&message=payment_success`)
+          return
+        }
+
+        router.push('/auth/login?message=payment_success')
       } catch (error) {
         if (process.env.NODE_ENV === 'development') {
           console.error('❌ Error handling payment success:', error)

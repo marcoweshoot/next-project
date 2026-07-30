@@ -220,13 +220,94 @@ export function trackAddToCart({
 }
 
 /**
+ * Track InitiateCheckout when user commits to payment (step 1 CTA).
+ */
+export function trackInitiateCheckout({
+  tourTitle,
+  value,
+  quantity = 1,
+}: {
+  tourTitle: string
+  value: number
+  quantity?: number
+}) {
+  if (typeof window === 'undefined' || !window.fbq) return
+  if (!value || value <= 0 || !isFinite(value) || isNaN(value)) return
+
+  const eventId = generateEventId()
+  const eventData = {
+    content_name: tourTitle,
+    content_category: 'Viaggi Fotografici',
+    value,
+    currency: 'EUR',
+    num_items: quantity,
+  }
+
+  window.fbq('track', 'InitiateCheckout', eventData, { eventID: eventId })
+
+  fetch('/api/track-fb-event', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_name: 'InitiateCheckout',
+      event_id: eventId,
+      event_source_url: window.location.href,
+      custom_data: eventData,
+    }),
+  }).catch(() => {})
+
+  if (process.env.NODE_ENV === 'development') {
+    console.log('✅ [FB PIXEL] InitiateCheckout tracked:', { tourTitle, value, quantity, eventId })
+  }
+}
+
+/**
+ * Track AddPaymentInfo when user is redirected to Stripe Hosted Checkout.
+ */
+export function trackAddPaymentInfo({
+  tourTitle,
+  value,
+  quantity = 1,
+}: {
+  tourTitle: string
+  value: number
+  quantity?: number
+}) {
+  if (typeof window === 'undefined' || !window.fbq) return
+  if (!value || value <= 0 || !isFinite(value) || isNaN(value)) return
+
+  const eventId = generateEventId()
+  const eventData = {
+    content_name: tourTitle,
+    content_category: 'Viaggi Fotografici',
+    value,
+    currency: 'EUR',
+    num_items: quantity,
+  }
+
+  window.fbq('track', 'AddPaymentInfo', eventData, { eventID: eventId })
+
+  fetch('/api/track-fb-event', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_name: 'AddPaymentInfo',
+      event_id: eventId,
+      event_source_url: window.location.href,
+      custom_data: eventData,
+    }),
+  }).catch(() => {})
+
+  if (process.env.NODE_ENV === 'development') {
+    console.log('✅ [FB PIXEL] AddPaymentInfo tracked:', { tourTitle, value, quantity, eventId })
+  }
+}
+
+/**
  * Track CompleteRegistration event (after successful user registration)
  *
  * Only fires the browser pixel — CAPI is already handled server-side by
  * /api/create-profile, which receives the same eventId for deduplication.
- *
- * @param {Object} params
- * @param {string} params.eventId - The event ID generated client-side, also passed to the server
  */
 export function trackCompleteRegistration({ eventId }: { eventId: string }) {
   if (typeof window === 'undefined' || !window.fbq) {
