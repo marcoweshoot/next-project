@@ -6,167 +6,140 @@ import { CheckCircle, Loader2 } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import { createEventIdFromStripeSession } from '@/utils/facebook'
 
+const THANK_YOU_DELAY_MS = 2500
+
+type SuccessVariant = 'dashboard' | 'complete_account' | 'login_linked' | 'login_generic'
+
+interface SuccessView {
+  variant: SuccessVariant
+  redirectUrl: string
+  subtitle: string
+}
+
+const trackPurchasePixel = async (sessionId: string) => {
+  if (typeof window === 'undefined') return
+
+  await new Promise<void>((resolve) => {
+    if (window.fbq) {
+      resolve()
+      return
+    }
+    let attempts = 0
+    const timer = setInterval(() => {
+      if (window.fbq || ++attempts >= 20) {
+        clearInterval(timer)
+        resolve()
+      }
+    }, 100)
+  })
+
+  if (!window.fbq) return
+
+  let purchaseData = sessionStorage.getItem('lastPurchase')
+  if (!purchaseData) {
+    purchaseData = localStorage.getItem('lastPurchase')
+  }
+
+  if (!purchaseData) return
+
+  try {
+    const purchase = JSON.parse(purchaseData)
+    const purchaseValue = purchase.value || 0
+
+    if (purchaseValue > 0 && !isNaN(purchaseValue) && isFinite(purchaseValue)) {
+      const eventId = createEventIdFromStripeSession(sessionId)
+      window.fbq('track', 'Purchase', {
+        content_name: purchase.tourTitle || 'Tour',
+        content_category: 'Viaggi Fotografici',
+        value: purchaseValue,
+        currency: 'EUR',
+        num_items: purchase.quantity || 1,
+      }, { eventID: eventId })
+    }
+  } catch {
+    // ignore parse errors
+  } finally {
+    sessionStorage.removeItem('lastPurchase')
+    localStorage.removeItem('lastPurchase')
+  }
+}
+
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
 function PaymentSuccessContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [loading, setLoading] = useState(true)
+  const [phase, setPhase] = useState<'processing' | 'success' | 'error'>('processing')
   const [error, setError] = useState<string | null>(null)
+  const [successView, setSuccessView] = useState<SuccessView | null>(null)
 
   useEffect(() => {
     const handlePaymentSuccess = async () => {
       try {
         const sessionId = searchParams.get('session_id')
-        
+
         if (!sessionId) {
           throw new Error('Session ID non trovato')
         }
 
-        // Facebook Pixel: Track Purchase event BEFORE auth check.
-        // The purchase already happened — storage data is proof enough.
-        // Doing this first avoids losing the event if auth redirects the user away.
-        //
-        // React fires child effects before parent effects, so FacebookPixel (layout)
-        // may not have initialized window.fbq yet. We poll briefly as a safety net.
-        if (typeof window !== 'undefined') {
-          await new Promise<void>((resolve) => {
-            if (window.fbq) { resolve(); return }
-            let attempts = 0
-            const timer = setInterval(() => {
-              if (window.fbq || ++attempts >= 20) { clearInterval(timer); resolve() }
-            }, 100) // polls every 100ms, up to 2s total
-          })
-        }
-
-        if (typeof window !== 'undefined' && window.fbq) {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('🎯 [FB PIXEL] Payment success page loaded, attempting Purchase track')
-          }
-
-          // Try sessionStorage first, then localStorage as fallback.
-          // Both are set by StripeCheckoutButton before the Stripe redirect.
-          let purchaseData = sessionStorage.getItem('lastPurchase')
-          let storageSource = 'sessionStorage'
-
-          if (!purchaseData) {
-            purchaseData = localStorage.getItem('lastPurchase')
-            storageSource = 'localStorage'
-            if (process.env.NODE_ENV === 'development') {
-              console.log('⚠️ [FB PIXEL] Data not found in sessionStorage, trying localStorage')
-            }
-          }
-
-          if (process.env.NODE_ENV === 'development') {
-            console.log('🎯 [FB PIXEL] Purchase data found in', storageSource, purchaseData ? '✅' : '❌')
-          }
-
-          if (purchaseData) {
-            try {
-              const purchase = JSON.parse(purchaseData)
-              const purchaseValue = purchase.value || 0
-
-              if (process.env.NODE_ENV === 'development') {
-                console.log('🎯 [FB PIXEL] Parsed purchase data:', {
-                  tourTitle: purchase.tourTitle,
-                  value: purchaseValue,
-                  quantity: purchase.quantity,
-                })
-              }
-
-              if (purchaseValue > 0 && !isNaN(purchaseValue) && isFinite(purchaseValue)) {
-                // Use Stripe session_id as event_id — same value used by the CAPI webhook → deduplication works
-                const eventId = createEventIdFromStripeSession(sessionId)
-
-                const eventData = {
-                  content_name: purchase.tourTitle || 'Tour',
-                  content_category: 'Viaggi Fotografici',
-                  value: purchaseValue,
-                  currency: 'EUR',
-                  num_items: purchase.quantity || 1,
-                }
-
-                if (process.env.NODE_ENV === 'development') {
-                  console.log('🆔 [FB PIXEL] event_id from Stripe session:', eventId)
-                  console.log('✅ [FB PIXEL] Tracking Purchase event:', eventData)
-                }
-
-                window.fbq('track', 'Purchase', eventData, { eventID: eventId })
-
-                if (process.env.NODE_ENV === 'development') {
-                  console.log('✅ [FB PIXEL] Purchase event sent successfully!')
-                }
-              } else {
-                if (process.env.NODE_ENV === 'development') {
-                  console.warn('⚠️ [FB PIXEL] Purchase value is invalid:', purchaseValue)
-                }
-              }
-
-              // Always clean up regardless of whether value was valid
-              sessionStorage.removeItem('lastPurchase')
-              localStorage.removeItem('lastPurchase')
-
-              if (process.env.NODE_ENV === 'development') {
-                console.log('🧹 [FB PIXEL] Cleaned up storage')
-              }
-            } catch (parseError) {
-              if (process.env.NODE_ENV === 'development') {
-                console.error('❌ [FB PIXEL] Failed to parse purchase data:', parseError)
-              }
-            }
-          } else {
-            if (process.env.NODE_ENV === 'development') {
-              console.warn('⚠️ [FB PIXEL] No purchase data in storage — browser may have cleared it during Stripe redirect (common on Safari/iOS)')
-            }
-          }
-        } else {
-          if (process.env.NODE_ENV === 'development') {
-            console.warn('⚠️ [FB PIXEL] window.fbq not ready yet on payment-success')
-          }
-        }
-
-        // Clear unrelated leftover payment data
+        await trackPurchasePixel(sessionId)
         localStorage.removeItem('paymentData')
 
         const supabase = createClient()
         const { data: { user } } = await supabase.auth.getUser()
 
+        let view: SuccessView
+
         if (user) {
-          router.push('/dashboard?payment=success')
-          return
+          view = {
+            variant: 'dashboard',
+            redirectUrl: '/dashboard?payment=success',
+            subtitle: 'Reindirizzamento alla dashboard...',
+          }
+        } else {
+          const claimRes = await fetch(`/api/checkout/claim/${sessionId}`)
+          const claimData = await claimRes.json()
+
+          if (!claimRes.ok) {
+            throw new Error(claimData.error || 'Impossibile verificare il pagamento')
+          }
+
+          if (claimData.status === 'pending') {
+            view = {
+              variant: 'complete_account',
+              redirectUrl: `/checkout/complete-account?session_id=${sessionId}`,
+              subtitle: 'Tra pochi secondi completerai il tuo account...',
+            }
+          } else if (claimData.status === 'auto_linked' || claimData.status === 'claimed') {
+            const email = encodeURIComponent(claimData.email || '')
+            view = {
+              variant: 'login_linked',
+              redirectUrl: `/auth/login?email=${email}&message=payment_success_linked`,
+              subtitle: 'Accedi con il tuo account per vedere la prenotazione...',
+            }
+          } else {
+            view = {
+              variant: 'login_generic',
+              redirectUrl: '/auth/login?message=payment_success',
+              subtitle: 'Accedi per gestire la tua prenotazione...',
+            }
+          }
         }
 
-        const claimRes = await fetch(`/api/checkout/claim/${sessionId}`)
-        const claimData = await claimRes.json()
-
-        if (!claimRes.ok) {
-          throw new Error(claimData.error || 'Impossibile verificare il pagamento')
-        }
-
-        if (claimData.status === 'pending') {
-          router.push(`/checkout/complete-account?session_id=${sessionId}`)
-          return
-        }
-
-        if (claimData.status === 'auto_linked' || claimData.status === 'claimed') {
-          const email = encodeURIComponent(claimData.email || '')
-          router.push(`/auth/login?email=${email}&message=payment_success`)
-          return
-        }
-
-        router.push('/auth/login?message=payment_success')
-      } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.error('❌ Error handling payment success:', error)
-        }
-        setError(error instanceof Error ? error.message : 'Errore sconosciuto')
-      } finally {
-        setLoading(false)
+        setSuccessView(view)
+        setPhase('success')
+        await delay(THANK_YOU_DELAY_MS)
+        router.push(view.redirectUrl)
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Errore sconosciuto')
+        setPhase('error')
       }
     }
 
     handlePaymentSuccess()
   }, [searchParams, router])
 
-  if (loading) {
+  if (phase === 'processing') {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center space-y-4">
@@ -178,7 +151,7 @@ function PaymentSuccessContent() {
     )
   }
 
-  if (error) {
+  if (phase === 'error') {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center space-y-4">
@@ -187,7 +160,7 @@ function PaymentSuccessContent() {
           </div>
           <h1 className="text-2xl font-semibold text-red-600">Errore</h1>
           <p className="text-muted-foreground">{error}</p>
-          <button 
+          <button
             onClick={() => router.push('/dashboard')}
             className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90"
           >
@@ -199,12 +172,16 @@ function PaymentSuccessContent() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center space-y-4">
+    <div className="min-h-screen flex items-center justify-center bg-background px-4">
+      <div className="text-center space-y-4 max-w-md">
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto" />
-        <h1 className="text-2xl font-semibold">Pagamento Completato!</h1>
-        <p className="text-muted-foreground">La tua prenotazione è stata confermata</p>
-        <p className="text-sm text-muted-foreground">Reindirizzamento alla dashboard...</p>
+        <h1 className="text-2xl font-semibold">Pagamento completato!</h1>
+        <p className="text-muted-foreground">
+          La tua prenotazione è stata confermata. Riceverai a breve un&apos;email di riepilogo.
+        </p>
+        <p className="text-sm text-muted-foreground animate-pulse">
+          {successView?.subtitle}
+        </p>
       </div>
     </div>
   )
@@ -212,14 +189,16 @@ function PaymentSuccessContent() {
 
 export default function PaymentSuccessPage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <div className="text-center space-y-4">
-          <Loader2 className="w-8 h-8 animate-spin mx-auto text-primary" />
-          <h1 className="text-2xl font-semibold">Caricamento...</h1>
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center bg-background">
+          <div className="text-center space-y-4">
+            <Loader2 className="w-8 h-8 animate-spin mx-auto text-primary" />
+            <h1 className="text-2xl font-semibold">Caricamento...</h1>
+          </div>
         </div>
-      </div>
-    }>
+      }
+    >
       <PaymentSuccessContent />
     </Suspense>
   )

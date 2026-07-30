@@ -59,7 +59,7 @@ function CompleteAccountContent() {
         }
 
         if (data.status === 'claimed' || data.status === 'auto_linked') {
-          router.replace(`/auth/login?email=${encodeURIComponent(data.email || '')}&message=payment_success`)
+          router.replace(`/auth/login?email=${encodeURIComponent(data.email || '')}&message=payment_success_linked`)
           return
         }
 
@@ -123,7 +123,7 @@ function CompleteAccountContent() {
       }
 
       if (data.status === 'linked_existing' || data.needsLogin) {
-        router.push(`/auth/login?email=${encodeURIComponent(guest.email)}&message=payment_success`)
+        router.push(`/auth/login?email=${encodeURIComponent(guest.email)}&message=payment_success_linked`)
         return
       }
 
@@ -139,7 +139,7 @@ function CompleteAccountContent() {
       })
 
       if (signInError) {
-        router.push(`/auth/login?email=${encodeURIComponent(guest.email)}&message=payment_success`)
+        router.push(`/auth/login?email=${encodeURIComponent(guest.email)}&message=payment_success_new`)
         return
       }
 

@@ -32,14 +32,19 @@ function LoginForm() {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [showPaymentSuccess, setShowPaymentSuccess] = useState(false)
+  const [paymentMessage, setPaymentMessage] = useState<'linked' | 'new' | 'generic' | null>(null)
   const router = useRouter()
   const searchParams = useSearchParams()
   const supabase = createClient()
 
   useEffect(() => {
-    if (searchParams.get('message') === 'payment_success') {
-      setShowPaymentSuccess(true)
+    const message = searchParams.get('message')
+    if (message === 'payment_success_linked') {
+      setPaymentMessage('linked')
+    } else if (message === 'payment_success_new') {
+      setPaymentMessage('new')
+    } else if (message === 'payment_success') {
+      setPaymentMessage('generic')
     }
     const emailParam = searchParams.get('email')
     if (emailParam) {
@@ -172,13 +177,21 @@ function LoginForm() {
               </CardHeader>
               
               <CardContent className="space-y-6">
-                {showPaymentSuccess && (
+                {paymentMessage && (
                   <Alert className="border-green-500 bg-green-50 dark:bg-green-950 dark:border-green-800">
                     <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
                     <AlertDescription className="text-green-800 dark:text-green-200">
                       <strong>Pagamento completato con successo!</strong>
                       <br />
-                      Abbiamo creato il tuo account. Fai il login per accedere alla dashboard.
+                      {paymentMessage === 'linked' && (
+                        <>La prenotazione è collegata al tuo account. Accedi per vedere la dashboard.</>
+                      )}
+                      {paymentMessage === 'new' && (
+                        <>Il tuo account è pronto. Accedi con la password che hai appena scelto.</>
+                      )}
+                      {paymentMessage === 'generic' && (
+                        <>Accedi per gestire la tua prenotazione.</>
+                      )}
                     </AlertDescription>
                   </Alert>
                 )}
