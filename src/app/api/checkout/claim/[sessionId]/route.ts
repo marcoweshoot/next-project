@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { stripe } from '@/lib/stripe'
-import { rateLimits } from '@/lib/rateLimit'
+import { checkoutClaimRegistration, rateLimits } from '@/lib/rateLimit'
 import {
   buildProfileUpdateFromGuestData,
   extractStripeGuestData,
@@ -111,8 +111,15 @@ export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ sessionId: string }> }
 ) {
-  const rateLimitResponse = await rateLimits.registration(request)
+  const rateLimitResponse = await checkoutClaimRegistration.check(request)
   if (rateLimitResponse) return rateLimitResponse
+
+  const returnWithRateLimitFailure = (response: NextResponse) => {
+    if (response.status >= 400) {
+      checkoutClaimRegistration.recordFailure(request)
+    }
+    return response
+  }
 
   try {
     const { sessionId } = await params
@@ -120,20 +127,28 @@ export async function POST(
     const { password, privacyAccepted, marketingAccepted = false, fbEventId, fbc, fbp } = body
 
     if (!sessionId?.startsWith('cs_')) {
-      return NextResponse.json({ error: 'Invalid session ID' }, { status: 400 })
+      return returnWithRateLimitFailure(
+        NextResponse.json({ error: 'Invalid session ID' }, { status: 400 })
+      )
     }
 
     if (!password || password.length < 6) {
-      return NextResponse.json({ error: 'Password must be at least 6 characters' }, { status: 400 })
+      return returnWithRateLimitFailure(
+        NextResponse.json({ error: 'Password must be at least 6 characters' }, { status: 400 })
+      )
     }
 
     if (!privacyAccepted) {
-      return NextResponse.json({ error: 'Privacy policy must be accepted' }, { status: 400 })
+      return returnWithRateLimitFailure(
+        NextResponse.json({ error: 'Privacy policy must be accepted' }, { status: 400 })
+      )
     }
 
     const stripeSession = await stripe.checkout.sessions.retrieve(sessionId)
     if (stripeSession.payment_status !== 'paid') {
-      return NextResponse.json({ error: 'Payment not completed' }, { status: 400 })
+      return returnWithRateLimitFailure(
+        NextResponse.json({ error: 'Payment not completed' }, { status: 400 })
+      )
     }
 
     const supabase = getServiceSupabase()
@@ -160,7 +175,9 @@ export async function POST(
       : extractStripeGuestData(stripeSession)
 
     if (!guestData?.email) {
-      return NextResponse.json({ error: 'Email not found in payment data' }, { status: 400 })
+      return returnWithRateLimitFailure(
+        NextResponse.json({ error: 'Email not found in payment data' }, { status: 400 })
+      )
     }
 
     const existingProfile = await lookupProfileByEmail(supabase, guestData.email)
@@ -183,9 +200,11 @@ export async function POST(
       })
 
       if (authError || !authData.user) {
-        return NextResponse.json(
-          { error: authError?.message || 'Account creation failed' },
-          { status: 400 }
+        return returnWithRateLimitFailure(
+          NextResponse.json(
+            { error: authError?.message || 'Account creation failed' },
+            { status: 400 }
+          )
         )
       }
 
@@ -272,6 +291,8 @@ export async function POST(
     })
   } catch (error) {
     console.error('Claim POST error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    return returnWithRateLimitFailure(
+      NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    )
   }
 }

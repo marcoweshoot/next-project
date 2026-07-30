@@ -80,6 +80,7 @@ function CompleteAccountContent() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (submitting) return
     if (!sessionId || !guest) return
 
     if (password.length < 6) {
@@ -118,6 +119,18 @@ function CompleteAccountContent() {
       const data = await res.json()
 
       if (!res.ok) {
+        if (res.status === 429) {
+          const retryMinutes = data.retryAfter
+            ? Math.max(1, Math.ceil(data.retryAfter / 60))
+            : null
+          setError(
+            retryMinutes
+              ? `Troppi tentativi di registrazione. Riprova tra circa ${retryMinutes} minuti.`
+              : 'Troppi tentativi di registrazione. Riprova più tardi.'
+          )
+          return
+        }
+
         setError(data.error || 'Errore durante la creazione dell\'account')
         return
       }

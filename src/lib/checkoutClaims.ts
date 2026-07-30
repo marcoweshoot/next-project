@@ -47,6 +47,13 @@ export const extractStripeGuestData = (session: Stripe.Checkout.Session): Stripe
   }
 }
 
+export const isGuestMetadataUserId = (userId?: string | null): boolean =>
+  !userId || userId === 'guest' || userId === 'anonymous'
+
+/** Returns a UUID for DB writes, or null for guest/anonymous checkout metadata. */
+export const toBookingUserId = (userId?: string | null): string | null =>
+  isGuestMetadataUserId(userId) ? null : userId!
+
 export const lookupProfileByEmail = async (
   supabase: SupabaseClient,
   email: string
@@ -125,11 +132,10 @@ export const resolveTourCheckoutUser = async (
   guestData: StripeGuestData | null
 }> => {
   const guestData = extractStripeGuestData(session)
-  const isGuestMetadata =
-    !metadataUserId || metadataUserId === 'guest' || metadataUserId === 'anonymous'
+  const isGuestMetadata = isGuestMetadataUserId(metadataUserId)
 
   if (paymentType === 'balance') {
-    return { resolvedUserId: isGuestMetadata ? null : metadataUserId, guestData }
+    return { resolvedUserId: toBookingUserId(metadataUserId), guestData }
   }
 
   if (!isGuestMetadata) {
@@ -216,8 +222,7 @@ export const resolveCapiUserContext = async (
 }> => {
   const metadataUserId = session.metadata?.userId
   const stripeEmail = session.customer_details?.email?.toLowerCase()
-  const isGuestMetadata =
-    !metadataUserId || metadataUserId === 'guest' || metadataUserId === 'anonymous'
+  const isGuestMetadata = isGuestMetadataUserId(metadataUserId)
 
   if (!isGuestMetadata && metadataUserId) {
     const { data: userProfile } = await supabase

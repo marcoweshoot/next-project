@@ -14,6 +14,7 @@ import {
   getBookingContactInfo,
   resolveTourCheckoutUser,
   resolveCapiUserContext,
+  toBookingUserId,
 } from '@/lib/checkoutClaims'
 import Stripe from 'stripe'
 
@@ -147,7 +148,7 @@ export async function POST(request: NextRequest) {
           }
           
           const giftCardAmount = parseInt(session.metadata?.amount || '0')
-          const purchaserUserId = session.metadata?.userId === 'anonymous' ? null : session.metadata?.userId || null
+          const purchaserUserId = toBookingUserId(session.metadata?.userId)
           const recipientEmail = session.customer_details?.email || null
           
           // Set expiration to 2 years from now
@@ -310,7 +311,7 @@ export async function POST(request: NextRequest) {
         }, { status: 400 })
       }
 
-      const bookingUserId = resolvedUserId
+      const bookingUserId = toBookingUserId(resolvedUserId)
 
       // Gestisci acconto vs saldo
       if (paymentType === 'deposit') {
