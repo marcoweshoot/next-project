@@ -1,6 +1,5 @@
 import { getClient } from '@/lib/apolloClient';
 import { GET_COURSES } from '@/graphql/queries/courses';
-import SEO from '@/components/SEO';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
@@ -9,8 +8,20 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Star, Camera, Users } from 'lucide-react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
+
+export const metadata: Metadata = {
+  title: 'Grazie per la tua prenotazione - WeShoot',
+  description:
+    'Grazie per aver scelto WeShoot! Non vediamo l’ora di condividere con te questa esperienza fotografica indimenticabile.',
+  openGraph: {
+    title: 'Grazie per la tua prenotazione - WeShoot',
+    description:
+      'Grazie per aver scelto WeShoot! Non vediamo l’ora di condividere con te questa esperienza fotografica indimenticabile.',
+  },
+};
 
 export default async function ThankYouPage() {
   const client = getClient();
@@ -82,11 +93,6 @@ export default async function ThankYouPage() {
 
   return (
     <>
-      {/* Metadati SEO */}
-      <SEO
-        title="Grazie per la tua prenotazione - WeShoot"
-        description="Grazie per aver scelto WeShoot! Non vediamo l’ora di condividere con te questa esperienza fotografica indimenticabile."
-      />
 
       {/* Header + Tracking */}
       <Header />

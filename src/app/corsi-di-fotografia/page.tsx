@@ -1,7 +1,6 @@
 import React from 'react';
 import { getClient } from '@/lib/apolloClient';
 import { GET_COURSES } from '@/graphql/queries/courses';
-import SEO from '@/components/SEO';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CoursesHero from '@/components/courses/CoursesHero';
@@ -9,9 +8,23 @@ import WhatIsWeShootSection from '@/components/courses/WhatIsWeShootSection';
 import CoursesFeatures from '@/components/courses/CoursesFeatures';
 import CoursesList from '@/components/courses/CoursesList';
 import CoursesCTA from '@/components/courses/CoursesCTA';
+import type { Metadata } from 'next';
 
 // Forza SSG al build per ottimizzazione SEO e mobile
 export const dynamic = 'force-static';
+
+export const metadata: Metadata = {
+  title: 'Corsi di Fotografia - WeShoot',
+  description:
+    'Esplora i corsi di fotografia di WeShoot, adatti a tutti i livelli: dai principianti ai professionisti. Prenota ora il tuo corso.',
+  alternates: { canonical: '/corsi-di-fotografia' },
+  openGraph: {
+    title: 'Corsi di Fotografia - WeShoot',
+    description:
+      'Esplora i corsi di fotografia di WeShoot, adatti a tutti i livelli: dai principianti ai professionisti. Prenota ora il tuo corso.',
+    url: '/corsi-di-fotografia',
+  },
+};
 
 export default async function CorsiFotografiaPage() {
   const client = getClient();
@@ -24,12 +37,6 @@ export default async function CorsiFotografiaPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Meta tags per SEO */}
-      <SEO
-        title="Corsi di Fotografia – WeShoot"
-        description="Esplora i corsi di fotografia di WeShoot, adatti a tutti i livelli: dai principianti ai professionisti. Prenota ora il tuo corso."
-        url="https://www.weshoot.it/corsi-di-fotografia"
-      />
 
       {/* Header globale */}
       <Header />

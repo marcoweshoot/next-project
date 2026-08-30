@@ -4,12 +4,11 @@ import { GET_REVIEW_BY_ID, GET_REVIEWS } from '@/graphql/queries/reviews';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
 import ReviewsHero from '@/components/reviews/ReviewsHero';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star, ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import Script from 'next/script';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
 
@@ -28,6 +27,33 @@ export async function generateStaticParams() {
 type PageProps = {
   params: Promise<{ id: string }>;
 };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+
+  try {
+    const { data } = await getClient().query({
+      query: GET_REVIEW_BY_ID,
+      variables: { id },
+      fetchPolicy: 'no-cache',
+    });
+    const review = data?.review;
+    if (!review) return {};
+
+    const title = `Recensione di ${review.user?.firstName ?? 'Utente'} | WeShoot`;
+    const description = (review.description || '').slice(0, 160);
+    const url = `/recensioni/${review.id}`;
+
+    return {
+      title,
+      description,
+      alternates: { canonical: url },
+      openGraph: { title, description, url, type: 'article' },
+    };
+  } catch {
+    return {};
+  }
+}
 
 export default async function ReviewPage({ params }: PageProps) {
   const { id } = await params;
@@ -92,12 +118,7 @@ export default async function ReviewPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      <SEO
-        title={`Recensione di ${review.user?.firstName ?? 'Utente'}`}
-        description={(review.description || '').slice(0, 160)}
-        url={`https://www.weshoot.it/recensioni/${review.id}`}
-      />
-      <Script
+      <script
         type="application/ld+json"
         id="structured-data-review"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

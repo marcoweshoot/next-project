@@ -1,6 +1,5 @@
 import { GET_COLLECTION_DETAIL, GET_COLLECTIONS } from '@/graphql/queries';
 import { getClient } from '@/lib/apolloClient';
-import SEO from '@/components/SEO';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CollectionDetailHero from '@/components/collection-detail/CollectionDetailHero';
@@ -10,6 +9,7 @@ import CollectionDetailFAQ from '@/components/collection-detail/CollectionDetail
 import CollectionDetailError from '@/components/collection-detail/CollectionDetailError';
 import { ViewCategoryTracker } from '@/components/analytics/ViewCategoryTracker';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-static'; // per SSG puro
 
@@ -34,6 +34,39 @@ export async function generateStaticParams(): Promise<Params[]> {
   }
 }
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+
+  try {
+    const { data } = await getClient().query({
+      query: GET_COLLECTION_DETAIL,
+      variables: { slug, locale: 'it' },
+    });
+    const collection = data?.collections?.[0];
+    if (!collection) return {};
+
+    const title =
+      collection.seo?.metaTitle || `${collection.name} - Collezioni WeShoot`;
+    const description = collection.seo?.metaDescription || collection.excerpt || '';
+    const url = `/viaggi-fotografici/collezioni/${collection.slug}`;
+    const image = collection.seo?.shareImage?.url || collection.image?.url;
+
+    return {
+      title,
+      description,
+      alternates: { canonical: url },
+      openGraph: {
+        title,
+        description,
+        url,
+        images: image ? [{ url: image }] : undefined,
+      },
+    };
+  } catch {
+    return {};
+  }
+}
+
 export default async function CollectionDetailPage({ params }: Props) {
   const client = getClient();
   const { slug } = await params;
@@ -52,12 +85,6 @@ export default async function CollectionDetailPage({ params }: Props) {
 
     return (
       <div className="min-h-screen bg-background">
-        <SEO
-          title={collection.seo?.metaTitle || `${collection.name} - Collezioni WeShoot`}
-          description={collection.seo?.metaDescription || collection.excerpt}
-          url={`https://www.weshoot.it/viaggi-fotografici/collezioni/${collection.slug}`}
-          image={collection.image?.url}
-        />
 
         <Header />
 

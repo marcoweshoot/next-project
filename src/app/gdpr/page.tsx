@@ -1,10 +1,10 @@
 // app/privacy/page.tsx
+import type { Metadata } from 'next';
 import { getClient } from '@/lib/apolloClient';
 import { GET_PRIVACY_POLICY } from '@/graphql/queries';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -15,6 +15,30 @@ import {
 } from '@/components/ui/breadcrumb';
 
 export const dynamic = 'force-static';
+
+export async function generateMetadata(): Promise<Metadata> {
+  let title = 'Privacy Policy';
+  try {
+    const { data } = await getClient().query({
+      query: GET_PRIVACY_POLICY,
+      fetchPolicy: 'no-cache',
+    });
+    title = data?.gdprPage?.title || title;
+  } catch {
+    // fallback al titolo statico
+  }
+
+  const fullTitle = `${title} | WeShoot`;
+  const description =
+    'Privacy Policy e trattamento dei dati personali per i servizi WeShoot.it - Viaggi fotografici e corsi di fotografia';
+
+  return {
+    title: fullTitle,
+    description,
+    alternates: { canonical: '/gdpr' },
+    openGraph: { title: fullTitle, description, url: '/gdpr' },
+  };
+}
 
 export default async function PrivacyPage() {
   const client = getClient();
@@ -33,11 +57,6 @@ export default async function PrivacyPage() {
 
   return (
     <>
-      <SEO
-        title={privacyData?.title || 'Privacy Policy'}
-        description="Privacy Policy e trattamento dei dati personali per i servizi WeShoot.it - Viaggi fotografici e corsi di fotografia"
-        url="https://www.weshoot.it/gdpr"
-      />
 
       <Header />
 

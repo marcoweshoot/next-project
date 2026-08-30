@@ -1,10 +1,10 @@
 import { getClient } from "@/lib/apolloClient";
 import { GET_COACHES } from "@/graphql/queries/coaches";
-import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CoachesHero from "@/components/CoachesHero";
 import CoachesList from "@/components/CoachesList";
+import type { Metadata } from "next";
 
 export const dynamic = "force-static"; // SSG
 
@@ -21,6 +21,19 @@ const slugify = (s: string) =>
     .trim()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+
+export const metadata: Metadata = {
+  title: 'I nostri Fotografi - WeShoot',
+  description:
+    'Scopri i coach e i fotografi professionisti di WeShoot, pronti ad accompagnarti nei tuoi viaggi fotografici.',
+  alternates: { canonical: '/fotografi' },
+  openGraph: {
+    title: 'I nostri Fotografi - WeShoot',
+    description:
+      'Scopri i coach e i fotografi professionisti di WeShoot, pronti ad accompagnarti nei tuoi viaggi fotografici.',
+    url: '/fotografi',
+  },
+};
 
 export default async function CoachesPage() {
   const client = getClient();
@@ -58,11 +71,6 @@ export default async function CoachesPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      <SEO
-        title="I nostri Fotografi – WeShoot"
-        description="Scopri i coach e i fotografi professionisti di WeShoot, pronti ad accompagnarti nei tuoi viaggi fotografici."
-        url="https://www.weshoot.it/fotografi"
-      />
       <Header />
       <main>
         <CoachesHero />

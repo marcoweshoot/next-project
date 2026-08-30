@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
@@ -17,7 +16,6 @@ const TourDetailError: React.FC<TourDetailErrorProps> = ({ error, data }) => {
 
   return (
     <>
-      <SEO title="Tour non trovato" />
       <div className="min-h-screen bg-white flex flex-col">
         <Header />
         <main className="flex-grow pt-24 container mx-auto px-4">

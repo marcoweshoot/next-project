@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 import DestinationsHero from '@/components/destinations/DestinationsHero';
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import SEO from '@/components/SEO';
+import type { Metadata } from 'next';
 
 const GET_DESTINATIONS = gql`
   query GetDestinations {
@@ -26,6 +26,19 @@ const GET_DESTINATIONS = gql`
 `;
 
 export const dynamic = 'force-static'; // ✅ SSG abilitato
+
+export const metadata: Metadata = {
+  title: 'Destinazioni Viaggi Fotografici | WeShoot',
+  description:
+    'Scopri le incredibili destinazioni per i tuoi viaggi fotografici. Esplora paesaggi mozzafiato e cattura momenti indimenticabili.',
+  alternates: { canonical: '/viaggi-fotografici/destinazioni/' },
+  openGraph: {
+    title: 'Destinazioni Viaggi Fotografici | WeShoot',
+    description:
+      'Scopri le incredibili destinazioni per i tuoi viaggi fotografici. Esplora paesaggi mozzafiato e cattura momenti indimenticabili.',
+    url: '/viaggi-fotografici/destinazioni/',
+  },
+};
 
 export default async function DestinationsPage() {
   let data = null;
@@ -51,11 +64,6 @@ export default async function DestinationsPage() {
         />
       </Head>
 
-      <SEO
-        title="Destinazioni Viaggi Fotografici"
-        description="Scopri le incredibili destinazioni per i tuoi viaggi fotografici. Esplora paesaggi mozzafiato e cattura momenti indimenticabili."
-        url="https://www.weshoot.it/viaggi-fotografici/destinazioni/"
-      />
       <Header />
       <DestinationsHero />
 

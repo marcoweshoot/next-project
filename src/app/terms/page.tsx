@@ -1,12 +1,12 @@
 // app/termini/page.tsx
 
+import type { Metadata } from 'next';
 import { getClient } from '@/lib/apolloClient';
 import { GET_TERMS_CONDITIONS } from '@/graphql/queries';
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -17,6 +17,30 @@ import {
 } from '@/components/ui/breadcrumb';
 
 export const dynamic = 'force-static';
+
+export async function generateMetadata(): Promise<Metadata> {
+  let title = 'Termini e Condizioni';
+  try {
+    const { data } = await getClient().query({
+      query: GET_TERMS_CONDITIONS,
+      fetchPolicy: 'no-cache',
+    });
+    title = data?.terminiCondizioniPage?.title || title;
+  } catch {
+    // fallback al titolo statico
+  }
+
+  const fullTitle = `${title} | WeShoot`;
+  const description =
+    "Termini e condizioni d'uso per i servizi WeShoot.it - Viaggi fotografici e corsi di fotografia";
+
+  return {
+    title: fullTitle,
+    description,
+    alternates: { canonical: '/termini' },
+    openGraph: { title: fullTitle, description, url: '/termini' },
+  };
+}
 
 export default async function TermsPage() {
   const client = getClient();
@@ -34,11 +58,6 @@ export default async function TermsPage() {
 
   return (
     <>
-      <SEO
-        title={termsData?.title || 'Termini e Condizioni'}
-        description="Termini e condizioni d'uso per i servizi WeShoot.it - Viaggi fotografici e corsi di fotografia"
-        url="https://www.weshoot.it/termini"
-      />
       <Header />
 
       {/* Hero Section */}

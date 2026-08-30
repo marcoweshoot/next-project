@@ -4,12 +4,12 @@ import { gql } from 'graphql-request';
 import { getClient } from '@/lib/graphqlClient';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
 import DestinationDetailHero from '@/components/destination-detail/DestinationDetailHero';
 import DestinationDetailLocations from '@/components/destination-detail/DestinationDetailLocations';
 import DestinationDetailTours from '@/components/destination-detail/DestinationDetailTours';
 import DestinationDetailEmptyState from '@/components/destination-detail/DestinationDetailEmptyState';
 import { ViewCategoryTracker } from '@/components/analytics/ViewCategoryTracker';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
 
@@ -79,6 +79,52 @@ export async function generateStaticParams(): Promise<Array<{ stateslug: string 
 
 type RouteParams = { stateslug: string };
 
+const GET_STATE_SEO = gql`
+  query GetStateSeo($locale: String, $slug: String) {
+    states(locale: $locale, where: { slug: $slug }) {
+      name
+      image { url }
+      seo { metaTitle metaDescription }
+    }
+  }
+`;
+
+export async function generateMetadata({
+  params,
+}: PageProps<RouteParams>): Promise<Metadata> {
+  const { stateslug } = await params;
+
+  try {
+    const data = await getClient().request<{ states?: any[] }>(GET_STATE_SEO, {
+      locale: 'it',
+      slug: stateslug,
+    });
+    const destination = data?.states?.[0];
+    if (!destination) return {};
+
+    const title =
+      destination.seo?.metaTitle || `${destination.name} - Viaggi Fotografici | WeShoot`;
+    const description =
+      destination.seo?.metaDescription ||
+      `Scopri i viaggi fotografici in ${destination.name}. Esplora paesaggi mozzafiato e cattura momenti indimenticabili.`;
+    const url = `/viaggi-fotografici/destinazioni/${stateslug}`;
+
+    return {
+      title,
+      description,
+      alternates: { canonical: url },
+      openGraph: {
+        title,
+        description,
+        url,
+        images: destination.image?.url ? [{ url: destination.image.url }] : undefined,
+      },
+    };
+  } catch {
+    return {};
+  }
+}
+
 export default async function StatePage({ params }: PageProps<RouteParams>) {
   const { stateslug } = await params;
   const client = getClient();
@@ -106,16 +152,6 @@ export default async function StatePage({ params }: PageProps<RouteParams>) {
 
     return (
       <div className="min-h-screen bg-background">
-        {destination && (
-          <SEO
-            title={destination.seo?.metaTitle || `${destination.name} - Viaggi Fotografici`}
-            description={
-              destination.seo?.metaDescription ||
-              `Scopri i viaggi fotografici in ${destination.name}. Esplora paesaggi mozzafiato e cattura momenti indimenticabili.`
-            }
-            url={`https://www.weshoot.it/viaggi-fotografici/destinazioni/${stateslug}`}
-          />
-        )}
 
         <Header />
 

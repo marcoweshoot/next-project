@@ -20,8 +20,6 @@ const StoryHero: React.FC<StoryHeroProps> = ({ story, authorName, breadcrumbElem
 
   return (
     <section className="relative" aria-label={`Hero della storia ${story.name}`}>
-      <title>{`${story.name} – Storia di ${authorName} | WeShoot`}</title>
-
       <div className="relative h-[70vh] min-h-[400px] overflow-hidden">
         <Image
           src={imageUrl}

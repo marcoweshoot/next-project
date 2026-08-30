@@ -6,12 +6,12 @@ import {
   GET_PHOTOGRAPHER_TOURS,
   GET_COACHES,
 } from "@/graphql/queries";
-import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PhotographerHero from "@/components/photographer-detail/PhotographerHero";
 import PhotographerGallery from "@/components/photographer-detail/PhotographerGallery";
 import PhotographerTours from "@/components/photographer-detail/PhotographerTours";
+import type { Metadata } from "next";
 
 export const dynamic = "force-static"; // SSG puro
 // Se vuoi ISR, aggiungi: export const revalidate = 60;
@@ -37,6 +37,41 @@ type RouteParams = {
   params: Promise<{ username: string }>;
 };
 
+export async function generateMetadata({ params }: RouteParams): Promise<Metadata> {
+  const { username } = await params;
+
+  try {
+    const { data } = await getClient().query({
+      query: GET_PHOTOGRAPHER_BY_USERNAME,
+      variables: { username },
+    });
+    const photographer = data?.users?.[0];
+    if (!photographer) return {};
+
+    const title = `${photographer.firstName} ${photographer.lastName} - Fotografo WeShoot`;
+    const description =
+      photographer.bio ||
+      `Scopri i viaggi fotografici con ${photographer.firstName} ${photographer.lastName}, fotografo professionista WeShoot.`;
+    const url = `/fotografi/${photographer.username}`;
+    const image = abs(photographer.profilePicture?.url);
+
+    return {
+      title,
+      description,
+      alternates: { canonical: url },
+      openGraph: {
+        title,
+        description,
+        url,
+        type: 'profile',
+        images: image ? [{ url: image }] : undefined,
+      },
+    };
+  } catch {
+    return {};
+  }
+}
+
 export default async function PhotographerPage({ params }: RouteParams) {
   const { username } = await params;
   const client = getClient();
@@ -60,16 +95,6 @@ export default async function PhotographerPage({ params }: RouteParams) {
 
   return (
     <>
-      <SEO
-        title={`${photographer.firstName} ${photographer.lastName} – Fotografo WeShoot`}
-        description={
-          photographer.bio ||
-          `Scopri i viaggi fotografici con ${photographer.firstName} ${photographer.lastName}, fotografo professionista WeShoot.`
-        }
-        url={`https://www.weshoot.it/fotografi/${photographer.username}`}
-        image={abs(photographer.profilePicture?.url)}
-        type="profile"
-      />
 
       {/* Wrapper a token: ora segue light/dark */}
       <div className="min-h-screen bg-background text-foreground font-sans">
