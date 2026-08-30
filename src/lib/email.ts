@@ -335,6 +335,34 @@ export function generateGiftCardAdminEmail(
   return { subject, html, text }
 }
 
+/**
+ * Formatta la data della sessione prenotata.
+ * Le date arrivano come "YYYY-MM-DD": forziamo UTC per non slittare di un giorno.
+ */
+export function formatSessionDates(start?: string | null, end?: string | null): string | null {
+  if (!start) return null
+
+  const startDate = new Date(start)
+  if (isNaN(startDate.getTime())) return null
+
+  const opts: Intl.DateTimeFormatOptions = {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }
+  const formattedStart = startDate.toLocaleDateString('it-IT', opts)
+
+  if (!end) return formattedStart
+  const endDate = new Date(end)
+  if (isNaN(endDate.getTime())) return formattedStart
+
+  // Workshop di un solo giorno: una data sola.
+  if (startDate.getTime() === endDate.getTime()) return formattedStart
+
+  return `${formattedStart} - ${endDate.toLocaleDateString('it-IT', opts)}`
+}
+
 // Admin notification templates
 export function generateNewBookingAdminEmail(
   userName: string,
@@ -343,12 +371,16 @@ export function generateNewBookingAdminEmail(
   bookingId: string,
   amount: number,
   quantity: number,
-  paymentType: 'deposit' | 'balance' | 'full'
+  paymentType: 'deposit' | 'balance' | 'full',
+  sessionDate?: string | null,
+  sessionEndDate?: string | null
 ): { subject: string; html: string; text: string } {
   const formattedAmount = new Intl.NumberFormat('it-IT', {
     style: 'currency',
     currency: 'EUR',
   }).format(amount / 100)
+
+  const formattedSession = formatSessionDates(sessionDate, sessionEndDate)
 
   const subject = paymentType === 'deposit' 
     ? `Nuova Prenotazione: ${tourTitle}` 
@@ -403,6 +435,12 @@ export function generateNewBookingAdminEmail(
                 <th>ID Prenotazione</th>
                 <td>${bookingId}</td>
               </tr>
+              ${formattedSession ? `
+              <tr>
+                <th>Data Sessione</th>
+                <td><strong>${formattedSession}</strong></td>
+              </tr>
+              ` : ''}
               <tr>
                 <th>Partecipanti</th>
                 <td>${quantity}</td>
@@ -416,7 +454,7 @@ export function generateNewBookingAdminEmail(
                 <td>${paymentType === 'deposit' ? '💳 Acconto' : paymentType === 'balance' ? '✅ Saldo Completo' : '💰 Pagamento Completo'}</td>
               </tr>
               <tr>
-                <th>Data</th>
+                <th>Data Pagamento</th>
                 <td>${new Date().toLocaleString('it-IT')}</td>
               </tr>
             </table>
@@ -435,7 +473,7 @@ export function generateNewBookingAdminEmail(
     </html>
   `
 
-  const text = `${subject}\n\n${paymentType === 'deposit' ? 'Nuova prenotazione ricevuta!' : paymentType === 'balance' ? 'Saldo completato!' : 'Pagamento completo effettuato!'}\n\nDettagli:\n- Tour: ${tourTitle}\n- Cliente: ${userName} (${userEmail})\n- ID: ${bookingId}\n- Partecipanti: ${quantity}\n- Importo: ${formattedAmount}\n- Data: ${new Date().toLocaleString('it-IT')}\n\nVai alla dashboard: ${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin/bookings`
+  const text = `${subject}\n\n${paymentType === 'deposit' ? 'Nuova prenotazione ricevuta!' : paymentType === 'balance' ? 'Saldo completato!' : 'Pagamento completo effettuato!'}\n\nDettagli:\n- Tour: ${tourTitle}\n- Cliente: ${userName} (${userEmail})\n- ID: ${bookingId}${formattedSession ? `\n- Data Sessione: ${formattedSession}` : ''}\n- Partecipanti: ${quantity}\n- Importo: ${formattedAmount}\n- Data Pagamento: ${new Date().toLocaleString('it-IT')}\n\nVai alla dashboard: ${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin/bookings`
 
   return { subject, html, text }
 }
@@ -688,12 +726,18 @@ export function generateBookingConfirmationEmail(
   tourTitle: string,
   bookingId: string,
   amount: number,
-  paymentType: 'deposit' | 'balance' | 'full'
+  paymentType: 'deposit' | 'balance' | 'full',
+  quantity?: number,
+  sessionDate?: string | null,
+  sessionEndDate?: string | null
 ): EmailData {
   const formattedAmount = new Intl.NumberFormat('it-IT', {
     style: 'currency',
     currency: 'EUR',
   }).format(amount / 100)
+
+  const formattedSession = formatSessionDates(sessionDate, sessionEndDate)
+  const participants = quantity && quantity > 1 ? quantity : null
 
   const isDepositPayment = paymentType === 'deposit'
   const isPaidInFull = paymentType === 'full' || paymentType === 'balance'
@@ -733,9 +777,10 @@ export function generateBookingConfirmationEmail(
           <h3>Dettagli Prenotazione</h3>
           <ul>
             <li><strong>Tour:</strong> ${tourTitle}</li>
+            ${formattedSession ? `<li><strong>Data:</strong> ${formattedSession}</li>` : ''}
             <li><strong>ID Prenotazione:</strong> ${bookingId}</li>
+            ${participants ? `<li><strong>Partecipanti:</strong> ${participants} persone</li>` : ''}
             <li><strong>Importo ${isDepositPayment ? 'Acconto' : 'Pagato'}:</strong> ${formattedAmount}</li>
-            <li><strong>Data:</strong> ${new Date().toLocaleDateString('it-IT')}</li>
           </ul>
           
           ${isDepositPayment ? `
@@ -764,7 +809,7 @@ export function generateBookingConfirmationEmail(
     html,
     text: `${subject}\n\nCiao ${userName},\n\n${isDepositPayment
       ? 'Il tuo acconto è stato confermato con successo!'
-      : 'Il tuo pagamento è stato completato con successo!'}\n\nDettagli:\n- Tour: ${tourTitle}\n- ID: ${bookingId}\n- Importo: ${formattedAmount}\n\nVai alla dashboard: ${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/dashboard`
+      : 'Il tuo pagamento è stato completato con successo!'}\n\nDettagli:\n- Tour: ${tourTitle}${formattedSession ? `\n- Data: ${formattedSession}` : ''}\n- ID: ${bookingId}${participants ? `\n- Partecipanti: ${participants} persone` : ''}\n- Importo: ${formattedAmount}\n\nVai alla dashboard: ${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/dashboard`
   }
 }
 

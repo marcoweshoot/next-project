@@ -425,7 +425,9 @@ export async function POST(request: NextRequest) {
                 '', // bookingId - we don't have it yet from the insert
                 session.amount_total || 0,
                 quantityValue,
-                'deposit'
+                'deposit',
+                session.metadata?.sessionDate,
+                session.metadata?.sessionEndDate
               )
 
               console.log(`📧 [WEBHOOK] Email content generated. Subject: ${emailContent.subject}`)
@@ -447,7 +449,10 @@ export async function POST(request: NextRequest) {
                 session.metadata?.tourTitle || 'Tour',
                 newBooking?.id || '',
                 totalAmountPaid,
-                'deposit'
+                'deposit',
+                quantityValue,
+                session.metadata?.sessionDate,
+                session.metadata?.sessionEndDate
               )
               const customerEmailSent = await sendEmail(customerEmailData)
               if (customerEmailSent) {
@@ -624,7 +629,9 @@ export async function POST(request: NextRequest) {
                 newBooking.id,
                 session.amount_total || 0,
                 newBooking.quantity || 1,
-                'full'
+                'full',
+                newBooking.session_date || session.metadata?.sessionDate,
+                newBooking.session_end_date || session.metadata?.sessionEndDate
               )
 
               console.log(`📧 [WEBHOOK] Email content generated. Subject: ${emailContent.subject}`)
@@ -646,7 +653,10 @@ export async function POST(request: NextRequest) {
                 newBooking.tour_title || session.metadata?.tourTitle || 'Tour',
                 newBooking.id,
                 totalAmountPaid,
-                'full'
+                'full',
+                newBooking.quantity || 1,
+                newBooking.session_date || session.metadata?.sessionDate,
+                newBooking.session_end_date || session.metadata?.sessionEndDate
               )
               const customerEmailSent = await sendEmail(customerEmailData)
               if (customerEmailSent) {
@@ -796,7 +806,9 @@ export async function POST(request: NextRequest) {
                 existingBooking.id,
                 session.amount_total || 0,
                 existingBooking.quantity || 1,
-                'balance'
+                'balance',
+                existingBooking.session_date || session.metadata?.sessionDate,
+                existingBooking.session_end_date || session.metadata?.sessionEndDate
               )
 
               console.log(`📧 [WEBHOOK] Email content generated. Subject: ${emailContent.subject}`)
@@ -818,7 +830,10 @@ export async function POST(request: NextRequest) {
                 existingBooking.tour_title || session.metadata?.tourTitle || 'Tour',
                 existingBooking.id,
                 session.amount_total + giftCardDiscount,
-                'balance'
+                'balance',
+                existingBooking.quantity || 1,
+                existingBooking.session_date || session.metadata?.sessionDate,
+                existingBooking.session_end_date || session.metadata?.sessionEndDate
               )
               const customerEmailSent = await sendEmail(customerEmailData)
               if (customerEmailSent) {

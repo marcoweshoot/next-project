@@ -26,3 +26,5 @@ out
 build
 dist
 public
+.vercel
+.env*

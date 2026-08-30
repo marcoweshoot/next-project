@@ -115,7 +115,10 @@ export async function POST(request: NextRequest) {
           tour.title,
           booking.id,
           confirmedAmountCents,
-          confirmedPaymentType
+          confirmedPaymentType,
+          quantity,
+          session.start,
+          session.end
         )
         await sendEmail(customerEmailData)
         console.log('✅ [CREATE-ZERO-PAYMENT] Customer booking confirmation email sent')
