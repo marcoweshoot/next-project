@@ -139,6 +139,16 @@ interface Props {
   }>;
 }
 
+// Gli slug con caratteri accentati (es. dyrhólaey) arrivano percent-encoded
+// dal segmento di URL: vanno decodificati prima di interrogare Strapi.
+const decodeSlug = (s: string) => {
+  try {
+    return decodeURIComponent(s);
+  } catch {
+    return s;
+  }
+};
+
 const GET_PLACE_SEO = gql`
   query GetPlaceSeo($stateSlug: String, $placeSlug: String) {
     states(where: { slug: $stateSlug }) {
@@ -152,8 +162,8 @@ const GET_PLACE_SEO = gql`
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { stateslug, locationslug } = await params;
-  const stateSlug = stateslug.replace(/-+$/, '');
-  const placeSlug = locationslug.replace(/-+$/, '');
+  const stateSlug = decodeSlug(stateslug).replace(/-+$/, '');
+  const placeSlug = decodeSlug(locationslug).replace(/-+$/, '');
 
   try {
     const data = await getClient().request<{
@@ -183,8 +193,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: Props) {
   const { stateslug, locationslug } = await params;
 
-  const stateSlug = stateslug.replace(/-+$/, '');
-  const placeSlug = locationslug.replace(/-+$/, '');
+  const stateSlug = decodeSlug(stateslug).replace(/-+$/, '');
+  const placeSlug = decodeSlug(locationslug).replace(/-+$/, '');
 
   const client = getClient();
   try {
