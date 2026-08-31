@@ -91,16 +91,14 @@ export async function middleware(req: NextRequest) {
 
   const csp = [
     "default-src 'self'",
-    // Permettiamo gli script di Facebook temporaneamente per lo strumento di configurazione
-    `script-src 'self' 'nonce-${nonce}' ${isDev ? "'unsafe-eval'" : ""} 'strict-dynamic' https://www.googletagmanager.com https://www.google-analytics.com https://*.facebook.net https://*.facebook.com`.trim(),
+    // niente 'unsafe-inline': consentiamo solo script con nonce (+ strict-dynamic)
+    `script-src 'self' 'nonce-${nonce}' ${isDev ? "'unsafe-eval'" : ""} 'strict-dynamic' https://www.googletagmanager.com https://www.google-analytics.com`.trim(),
     // style: tieni 'unsafe-inline' finché non passi a nonce per gli <style> iniettati
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    // Permettiamo le immagini di Facebook (per il noscript pixel)
-    "img-src 'self' data: blob: https: https://*.facebook.com https://*.facebook.net",
+    "img-src 'self' data: blob: https:",
     "font-src 'self' https://fonts.gstatic.com",
     `connect-src 'self' https://api.weshoot.it https://s3.eu-west-1.amazonaws.com https://wxoodcdxscxazjkoqhsg.supabase.co ${isDev ? "ws: http://localhost:*" : ""}`.trim(),
-    // Permettiamo a Facebook di caricare il suo iframe per lo strumento di configurazione
-    "frame-src https://*.facebook.com",
+    "frame-src 'none'",
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
