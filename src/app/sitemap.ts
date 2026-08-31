@@ -25,6 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/chi-siamo", priority: 0.7 },
     { path: "/contatti", priority: 0.7 },
     { path: "/recensioni", priority: 0.7 },
+    { path: "/promo/porta-un-amico-roma", priority: 0.8 },
     { path: "/privacy-policy", priority: 0.3 },
     { path: "/cookie-policy", priority: 0.3 },
     { path: "/terms", priority: 0.3 },

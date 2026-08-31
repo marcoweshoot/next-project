@@ -212,7 +212,10 @@ export async function POST(request: NextRequest) {
             tourTitle || 'Tour',
             existingBooking.id,
             (existingBooking.total_amount || 0) - (existingBooking.amount_paid || 0),
-            'balance'
+            'balance',
+            quantity,
+            sessionDate,
+            sessionEndDate
           )
           await sendEmail(customerEmailData)
           console.log('✅ [ZERO PAYMENT API] Customer balance confirmation email sent')
@@ -502,7 +505,10 @@ export async function POST(request: NextRequest) {
           tourTitle || 'Tour',
           booking.id,
           confirmedAmount,
-          confirmedPaymentType
+          confirmedPaymentType,
+          quantity,
+          sessionDate,
+          sessionEndDate
         )
         await sendEmail(customerEmailData)
         console.log('✅ [ZERO PAYMENT API] Customer booking confirmation email sent')
