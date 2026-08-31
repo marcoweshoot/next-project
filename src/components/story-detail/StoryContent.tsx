@@ -26,8 +26,6 @@ const StoryContent: React.FC<StoryContentProps> = ({ story }) => {
   return (
     <section className="py-16" aria-labelledby="story-description">
       <div className="max-w-6xl mx-auto px-4">
-        <title>La storia dietro allo scatto – WeShoot</title>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Story Description */}
           <div>

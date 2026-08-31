@@ -1,19 +1,27 @@
 import { Suspense } from 'react';
 import { GiftCardSuccessContent } from '@/components/gift-card/GiftCardSuccessContent';
-import SEO from '@/components/SEO';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Gift Card Acquistata con Successo | WeShoot',
+  description:
+    'La tua gift card WeShoot è stata acquistata con successo. Scopri come utilizzarla per i tuoi viaggi fotografici.',
+  alternates: { canonical: '/gift-card/success' },
+  openGraph: {
+    title: 'Gift Card Acquistata con Successo | WeShoot',
+    description:
+      'La tua gift card WeShoot è stata acquistata con successo. Scopri come utilizzarla per i tuoi viaggi fotografici.',
+    url: '/gift-card/success',
+  },
+};
 
 export default function GiftCardSuccessPage() {
   return (
     <>
-      <SEO
-        title="Gift Card Acquistata con Successo | WeShoot"
-        description="La tua gift card WeShoot è stata acquistata con successo. Scopri come utilizzarla per i tuoi viaggi fotografici."
-        url="https://www.weshoot.it/gift-card/success"
-      />
       <Header />
       
       <main className="min-h-screen bg-background">

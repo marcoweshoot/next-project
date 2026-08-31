@@ -20,7 +20,6 @@ export const GET_TOURS_PAGE = gql`
         id
         metaTitle
         metaDescription
-        structuredData
       }
       Header {
         id

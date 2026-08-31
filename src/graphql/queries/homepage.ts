@@ -58,7 +58,6 @@ export const GET_HOMEPAGE = gql`
         id
         metaTitle
         metaDescription
-        structuredData
       }
       whatsWeshoot {
         id

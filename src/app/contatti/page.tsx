@@ -1,19 +1,27 @@
-import SEO from '@/components/SEO';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactsHero from '@/components/contacts/ContactsHero';
 import ContactsSection from '@/components/contacts/ContactsSection';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
+
+export const metadata: Metadata = {
+  title: 'Contatti | WeShoot - Viaggi Fotografici',
+  description:
+    'Hai bisogno di aiuto per prenotare un viaggio fotografico? Contattaci per assistenza, informazioni o per regalare un\'esperienza unica.',
+  alternates: { canonical: '/contatti' },
+  openGraph: {
+    title: 'Contatti | WeShoot - Viaggi Fotografici',
+    description:
+      'Hai bisogno di aiuto per prenotare un viaggio fotografico? Contattaci per assistenza, informazioni o per regalare un\'esperienza unica.',
+    url: '/contatti',
+  },
+};
 
 export default function ContactsPage() {
   return (
     <>
-      <SEO 
-        title="Contatti | WeShoot - Viaggi Fotografici"
-        description="Hai bisogno di aiuto per prenotare un viaggio fotografico? Contattaci per assistenza, informazioni o per regalare un'esperienza unica."
-        url="https://www.weshoot.it/contatti"
-      />
       <Header />
       {/* Wrapper tema-aware per dark mode */}
       <div className="min-h-screen bg-background">

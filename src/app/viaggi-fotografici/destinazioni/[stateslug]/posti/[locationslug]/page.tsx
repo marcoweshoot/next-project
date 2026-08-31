@@ -3,11 +3,11 @@ import { gql } from 'graphql-request';
 import { getClient } from '@/lib/graphqlClient';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
 import LocationHero from '@/components/location-detail/LocationHero';
 import LocationContent from '@/components/location-detail/LocationContent';
 import LocationTours from '@/components/location-detail/LocationTours';
 import { ViewCategoryTracker } from '@/components/analytics/ViewCategoryTracker';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
 
@@ -139,11 +139,62 @@ interface Props {
   }>;
 }
 
+// Gli slug con caratteri accentati (es. dyrhólaey) arrivano percent-encoded
+// dal segmento di URL: vanno decodificati prima di interrogare Strapi.
+const decodeSlug = (s: string) => {
+  try {
+    return decodeURIComponent(s);
+  } catch {
+    return s;
+  }
+};
+
+const GET_PLACE_SEO = gql`
+  query GetPlaceSeo($stateSlug: String, $placeSlug: String) {
+    states(where: { slug: $stateSlug }) {
+      name
+    }
+    locations(where: { slug: $placeSlug }) {
+      title
+    }
+  }
+`;
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { stateslug, locationslug } = await params;
+  const stateSlug = decodeSlug(stateslug).replace(/-+$/, '');
+  const placeSlug = decodeSlug(locationslug).replace(/-+$/, '');
+
+  try {
+    const data = await getClient().request<{
+      states?: { name: string }[];
+      locations?: { title: string }[];
+    }>(GET_PLACE_SEO, { stateSlug, placeSlug });
+
+    const destination = data?.states?.[0];
+    const location = data?.locations?.[0];
+    if (!destination || !location) return {};
+
+    const title = `${location.title} - Viaggi Fotografici ${destination.name} | WeShoot`;
+    const description = `Scopri ${location.title} in ${destination.name}. Una delle location più belle per i tuoi scatti fotografici.`;
+    const url = `/viaggi-fotografici/destinazioni/${stateSlug}/posti/${placeSlug}`;
+
+    return {
+      title,
+      description,
+      alternates: { canonical: url },
+      openGraph: { title, description, url },
+    };
+  } catch {
+    return {};
+  }
+}
+
 export default async function Page({ params }: Props) {
   const { stateslug, locationslug } = await params;
 
-  const stateSlug = stateslug.replace(/-+$/, '');
-  const placeSlug = locationslug.replace(/-+$/, '');
+  const stateSlug = decodeSlug(stateslug).replace(/-+$/, '');
+  const placeSlug = decodeSlug(locationslug).replace(/-+$/, '');
 
   const client = getClient();
   try {
@@ -182,11 +233,6 @@ export default async function Page({ params }: Props) {
 
     return (
       <div className="min-h-screen bg-background">
-        <SEO
-          title={`${location.title} - Viaggi Fotografici ${destination.name}`}
-          description={`Scopri ${location.title} in ${destination.name}. Una delle location più belle per i tuoi scatti fotografici.`}
-          url={`https://www.weshoot.it/viaggi-fotografici/destinazioni/${stateSlug}/posti/${placeSlug}`}
-        />
 
         <Header />
         

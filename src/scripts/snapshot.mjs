@@ -65,7 +65,7 @@ const TOURS_QUERY = /* GraphQL */ `
       places { slug locale name }
       states { name slug description locale }
 
-      SEO { metaTitle metaDescription structuredData }
+      SEO { metaTitle metaDescription }
 
       locations {
         id

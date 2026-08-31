@@ -6,6 +6,5 @@ export const SEO_FRAGMENT = gql`
     id
     metaTitle
     metaDescription
-    structuredData
   }
 `;

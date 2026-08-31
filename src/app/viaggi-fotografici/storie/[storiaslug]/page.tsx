@@ -21,16 +21,22 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
       fetchPolicy: 'no-cache',
     });
 
-    const story = data?.stories?.[0];
+    // NB: l'endpoint ignora `where`/`limit` e restituisce tutte le storie:
+    // va selezionata per slug, come fa il componente pagina.
+    const story =
+      data?.stories?.find((s: any) => s.slug === storiaslug) ?? data?.stories?.[0];
     if (!story) return {};
 
     const authorName = story?.photographer
       ? `${story.photographer.firstName || ''} ${story.photographer.lastName || ''}`.trim()
       : 'Autore';
 
-    const title = story?.seo?.metaTitle || `${story.name} - Storia di ${authorName} | WeShoot`;
+    // Strapi espone `seo` come componente ripetibile per le storie: arriva come array
+    const seo = Array.isArray(story?.seo) ? story.seo[0] : story?.seo;
+
+    const title = seo?.metaTitle || `${story.name} - Storia di ${authorName} | WeShoot`;
     const description =
-      story?.seo?.metaDescription ||
+      seo?.metaDescription ||
       story?.description ||
       `Scopri la storia dietro questa fotografia di ${authorName}`;
     const url = `https://www.weshoot.it/viaggi-fotografici/storie/${story.slug}`;
@@ -93,7 +99,9 @@ export default async function StoryPage({ params }: { params: Promise<Params> })
     { name: story.name },
   ];
 
-  const rawStructured = story?.seo?.structuredData;
+  // Strapi espone `seo` come componente ripetibile per le storie: arriva come array
+  const seo = Array.isArray(story?.seo) ? story.seo[0] : story?.seo;
+  const rawStructured = seo?.structuredData;
   const structuredJson =
     typeof rawStructured === 'string'
       ? rawStructured

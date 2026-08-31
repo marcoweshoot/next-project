@@ -4,8 +4,8 @@ import { getClient } from '@/lib/apolloClient';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageBreadcrumbs from '@/components/PageBreadcrumbs';
-import SEO from '@/components/SEO';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
 export const revalidate = 60;
@@ -15,6 +15,19 @@ type Story = {
   slug: string;
   name: string;
   photo?: { url?: string; alternativeText?: string };
+};
+
+export const metadata: Metadata = {
+  title: 'Storie di viaggio | WeShoot',
+  description:
+    'Le storie di viaggio raccontante attraverso le nostre foto',
+  alternates: { canonical: '/viaggi-fotografici/storie/' },
+  openGraph: {
+    title: 'Storie di viaggio | WeShoot',
+    description:
+      'Le storie di viaggio raccontante attraverso le nostre foto',
+    url: '/viaggi-fotografici/storie/',
+  },
 };
 
 export default async function StoriesPage() {
@@ -39,11 +52,6 @@ export default async function StoriesPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title="Storie di viaggio"
-        description="Le storie di viaggio raccontante attraverso le nostre foto"
-        url="https://www.weshoot.it/viaggi-fotografici/storie/"
-      />
       <Header />
 
       {/* Hero Section */}

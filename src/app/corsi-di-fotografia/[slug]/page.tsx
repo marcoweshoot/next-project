@@ -21,6 +21,8 @@ if (!endpoint)
 
 const client = new GraphQLClient(endpoint);
 
+const SITE_URL = 'https://www.weshoot.it';
+
 // -------------------- GraphQL --------------------
 const GET_COURSES_SLUGS = gql`
   query AllSlugs {
@@ -48,7 +50,6 @@ const GET_COURSE_BY_SLUG = gql`
       seo {
         metaTitle
         metaDescription
-        structuredData
       }
       teacher {
         firstName
@@ -100,6 +101,83 @@ const GET_COURSE_BY_SLUG = gql`
 export const revalidate = 60;
 
 // -------------------- Helpers --------------------
+const absUrl = (u?: string) =>
+  !u ? '' : u.startsWith('http') ? u : `${SITE_URL}${u.startsWith('/') ? '' : '/'}${u}`;
+
+const stripHtml = (html: string) =>
+  html.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
+
+function buildCourseJsonLd(course: any, pageUrl: string) {
+  const teacherName = course.teacher
+    ? `${course.teacher.firstName ?? ''} ${course.teacher.lastName ?? ''}`.trim()
+    : '';
+
+  const jsonLd: Record<string, any> = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: course.seo?.metaTitle || course.title,
+    description: stripHtml(course.seo?.metaDescription || course.excerpt || ''),
+    url: pageUrl,
+    inLanguage: course.locale || 'it',
+    provider: {
+      '@type': 'Organization',
+      name: 'WeShoot',
+      url: SITE_URL,
+    },
+  };
+
+  const image = absUrl(course.cover?.url || course.image?.url);
+  if (image) jsonLd.image = image;
+
+  if (teacherName) {
+    jsonLd.instructor = { '@type': 'Person', name: teacherName };
+  }
+
+  if (typeof course.price === 'number' && course.price > 0) {
+    jsonLd.offers = {
+      '@type': 'Offer',
+      category: 'Paid',
+      priceCurrency: 'EUR',
+      price: course.price.toFixed(2),
+      availability: 'https://schema.org/InStock',
+      url: pageUrl,
+    };
+  }
+
+  // aggregateRating solo con recensioni reali: senza, viola le linee guida Google
+  const ratings = (course.reviews ?? [])
+    .map((r: any) => Number(r?.rating))
+    .filter((n: number) => Number.isFinite(n) && n > 0);
+  if (ratings.length > 0) {
+    const avg = ratings.reduce((a: number, b: number) => a + b, 0) / ratings.length;
+    jsonLd.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: avg.toFixed(1),
+      reviewCount: String(ratings.length),
+      bestRating: '5',
+      worstRating: '1',
+    };
+  }
+
+  return jsonLd;
+}
+
+function buildFaqJsonLd(faqs: any[]) {
+  if (!Array.isArray(faqs) || faqs.length === 0) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq: any) => ({
+      '@type': 'Question',
+      name: faq.question || '',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: stripHtml(faq.answer || ''),
+      },
+    })),
+  };
+}
+
 function normalizePictures(pictures: any[] = []) {
   return pictures.map((pic) => {
     const imgs = Array.isArray(pic?.image)
@@ -150,6 +228,7 @@ export async function generateMetadata({
   return {
     title: data.seo?.metaTitle || `${data.title} – Corso di Fotografia WeShoot`,
     description: data.seo?.metaDescription || data.excerpt,
+    alternates: { canonical: `/corsi-di-fotografia/${data.slug}` },
     openGraph: {
       title: data.seo?.metaTitle || data.title,
       description: data.seo?.metaDescription || data.excerpt,
@@ -228,9 +307,20 @@ export default async function CoursePage({
     totalLessons: data.totalLessons || 0,
   };
 
+  const pageUrl = `${SITE_URL}/corsi-di-fotografia/${course.slug}`;
+  const courseJsonLd = buildCourseJsonLd(course, pageUrl);
+  const faqJsonLd = buildFaqJsonLd(course.faqs);
+
   return (
     <>
       <Header />
+      {/* JSON-LD (non influisce sull'interfaccia) */}
+      <script id="ld-course" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }} />
+      {faqJsonLd && (
+        <script id="ld-course-faq" type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      )}
       {/* Track ViewCategory event for Facebook Pixel */}
       <CourseViewTracker courseTitle={course.title} courseId={course.id} />
       <main className="min-h-screen bg-background transition-colors">

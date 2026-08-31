@@ -4,7 +4,6 @@ import path from 'node:path'
 import { permanentRedirect } from 'next/navigation'
 import dynamicImport from 'next/dynamic'
 import { unstable_cache as nextCache } from 'next/cache'
-import Script from 'next/script'                       // <-- SEO
 import type { Metadata } from 'next'                  // <-- SEO
 import { getClient } from '@/lib/graphqlClient'
 import { GET_TOUR_BY_SLUG, GET_ALL_TOUR_SLUGS } from '@/graphql/queries/tour-detail'
@@ -479,12 +478,12 @@ export default async function TourDetailPage({ params }: Props) {
         />
 
         {/* JSON-LD (non influisce sull'interfaccia) */}
-        <Script id="ld-product-tour" type="application/ld+json"
+        <script id="ld-product-tour" type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
-        <Script id="ld-breadcrumbs" type="application/ld+json"
+        <script id="ld-breadcrumbs" type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
         {faqJsonLd && (
-          <Script id="ld-faq" type="application/ld+json"
+          <script id="ld-faq" type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
         )}
 

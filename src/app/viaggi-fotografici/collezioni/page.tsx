@@ -4,11 +4,24 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CollectionsHero from '@/components/collections/CollectionsHero';
 import { Card } from '@/components/ui/card';
-import SEO from '@/components/SEO';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-static'; // SSG puro
+
+export const metadata: Metadata = {
+  title: 'Collezioni Viaggi Fotografici | WeShoot',
+  description:
+    'Scopri le nostre collezioni tematiche di viaggi fotografici. Esperienze uniche organizzate per tema e stile fotografico.',
+  alternates: { canonical: '/viaggi-fotografici/collezioni/' },
+  openGraph: {
+    title: 'Collezioni Viaggi Fotografici | WeShoot',
+    description:
+      'Scopri le nostre collezioni tematiche di viaggi fotografici. Esperienze uniche organizzate per tema e stile fotografico.',
+    url: '/viaggi-fotografici/collezioni/',
+  },
+};
 
 export default async function CollectionsPage() {
   const client = getClient();
@@ -44,11 +57,6 @@ export default async function CollectionsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Collezioni Viaggi Fotografici"
-        description="Scopri le nostre collezioni tematiche di viaggi fotografici. Esperienze uniche organizzate per tema e stile fotografico."
-        url="https://www.weshoot.it/viaggi-fotografici/collezioni/"
-      />
       <Header />
       <CollectionsHero />
 

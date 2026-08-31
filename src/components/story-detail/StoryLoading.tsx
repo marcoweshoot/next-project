@@ -1,16 +1,11 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
 import { Skeleton } from '@/components/ui/skeleton';
 
 const StoryLoading: React.FC = () => {
   return (
     <>
-      <SEO
-        title="Caricamento della storia in corso..."
-        description="Stiamo caricando i dettagli della storia fotografica selezionata. Attendi qualche secondo."
-      />
 
       <Header />
 

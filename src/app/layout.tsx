@@ -17,6 +17,25 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 });
 
+// Metadati di default per tutto il sito: le pagine che esportano `metadata` o
+// `generateMetadata` sovrascrivono title/description, il resto viene ereditato.
+export const metadata: Metadata = {
+  metadataBase: new URL('https://www.weshoot.it'),
+  title: 'WeShoot - Viaggi Fotografici nel Mondo',
+  description:
+    'Esplora i nostri viaggi fotografici unici e corsi online per appassionati. Scopri destinazioni mozzafiato con coach professionali.',
+  keywords:
+    'viaggi fotografici, fotografia, workshop, corsi fotografia, destinazioni, coach fotografici, travel photography',
+  authors: [{ name: 'WeShoot.it Team' }],
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    siteName: 'WeShoot',
+    locale: 'it_IT',
+  },
+  twitter: { card: 'summary_large_image' },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="it" suppressHydrationWarning className={montserrat.variable}>

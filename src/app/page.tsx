@@ -60,6 +60,7 @@ export const metadata: Metadata = {
   title: "WeShoot.it - Viaggi Fotografici nel Mondo",
   description:
     "Esplora i nostri viaggi fotografici unici e corsi online per appassionati. Scopri destinazioni mozzafiato con coach professionali.",
+  alternates: { canonical: "/" },
 };
 
 const HomePage = async () => {
