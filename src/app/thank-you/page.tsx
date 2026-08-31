@@ -16,11 +16,6 @@ export const metadata: Metadata = {
   title: 'Grazie per la tua prenotazione - WeShoot',
   description:
     'Grazie per aver scelto WeShoot! Non vediamo l’ora di condividere con te questa esperienza fotografica indimenticabile.',
-  openGraph: {
-    title: 'Grazie per la tua prenotazione - WeShoot',
-    description:
-      'Grazie per aver scelto WeShoot! Non vediamo l’ora di condividere con te questa esperienza fotografica indimenticabile.',
-  },
 };
 
 export default async function ThankYouPage() {

@@ -13,12 +13,6 @@ export const metadata: Metadata = {
   description:
     'Sorprendi i tuoi cari con una carta regalo WeShoot. Il viaggio del futuro comincia adesso con i nostri buoni regalo per viaggi fotografici.',
   alternates: { canonical: '/gift-card' },
-  openGraph: {
-    title: 'Carte Regalo WeShoot | Regala un Viaggio Fotografico',
-    description:
-      'Sorprendi i tuoi cari con una carta regalo WeShoot. Il viaggio del futuro comincia adesso con i nostri buoni regalo per viaggi fotografici.',
-    url: '/gift-card',
-  },
 };
 
 export default function GiftCardPage() {

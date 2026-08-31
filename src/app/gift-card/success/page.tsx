@@ -11,12 +11,6 @@ export const metadata: Metadata = {
   description:
     'La tua gift card WeShoot è stata acquistata con successo. Scopri come utilizzarla per i tuoi viaggi fotografici.',
   alternates: { canonical: '/gift-card/success' },
-  openGraph: {
-    title: 'Gift Card Acquistata con Successo | WeShoot',
-    description:
-      'La tua gift card WeShoot è stata acquistata con successo. Scopri come utilizzarla per i tuoi viaggi fotografici.',
-    url: '/gift-card/success',
-  },
 };
 
 export default function GiftCardSuccessPage() {

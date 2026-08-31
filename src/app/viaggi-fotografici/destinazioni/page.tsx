@@ -32,12 +32,6 @@ export const metadata: Metadata = {
   description:
     'Scopri le incredibili destinazioni per i tuoi viaggi fotografici. Esplora paesaggi mozzafiato e cattura momenti indimenticabili.',
   alternates: { canonical: '/viaggi-fotografici/destinazioni/' },
-  openGraph: {
-    title: 'Destinazioni Viaggi Fotografici | WeShoot',
-    description:
-      'Scopri le incredibili destinazioni per i tuoi viaggi fotografici. Esplora paesaggi mozzafiato e cattura momenti indimenticabili.',
-    url: '/viaggi-fotografici/destinazioni/',
-  },
 };
 
 export default async function DestinationsPage() {

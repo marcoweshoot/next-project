@@ -8,10 +8,11 @@ export const GET_STORY_DETAIL_BY_SLUG = gql`
       slug
       description
       locale
+      published_at
+      updated_at
       seo {
         metaTitle
         metaDescription
-        structuredData
       }
       photographer {
         instagram

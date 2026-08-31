@@ -22,12 +22,6 @@ export const metadata: Metadata = {
   description:
     'Le storie di viaggio raccontante attraverso le nostre foto',
   alternates: { canonical: '/viaggi-fotografici/storie/' },
-  openGraph: {
-    title: 'Storie di viaggio | WeShoot',
-    description:
-      'Le storie di viaggio raccontante attraverso le nostre foto',
-    url: '/viaggi-fotografici/storie/',
-  },
 };
 
 export default async function StoriesPage() {

@@ -27,12 +27,6 @@ export const metadata: Metadata = {
   description:
     'Scopri i coach e i fotografi professionisti di WeShoot, pronti ad accompagnarti nei tuoi viaggi fotografici.',
   alternates: { canonical: '/fotografi' },
-  openGraph: {
-    title: 'I nostri Fotografi - WeShoot',
-    description:
-      'Scopri i coach e i fotografi professionisti di WeShoot, pronti ad accompagnarti nei tuoi viaggi fotografici.',
-    url: '/fotografi',
-  },
 };
 
 export default async function CoachesPage() {

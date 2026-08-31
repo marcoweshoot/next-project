@@ -36,7 +36,6 @@ export async function generateMetadata(): Promise<Metadata> {
     title: fullTitle,
     description,
     alternates: { canonical: '/gdpr' },
-    openGraph: { title: fullTitle, description, url: '/gdpr' },
   };
 }
 
