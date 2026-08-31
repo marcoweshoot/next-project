@@ -8,6 +8,7 @@ type IubApi = {
   getConsentForPurpose?: (p: string | number) => boolean;
 };
 
+// This allows us to safely access Iubenda's API and the dataLayer
 declare global {
   interface Window {
     _iub?: { cs?: { api?: IubApi } };
