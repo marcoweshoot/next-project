@@ -7,6 +7,14 @@ import StoryHero from '@/components/story-detail/StoryHero';
 import StoryContent from '@/components/story-detail/StoryContent';
 import StoryRelatedTours from '@/components/story-detail/StoryRelatedTours';
 
+const SITE_URL = 'https://www.weshoot.it';
+
+const absUrl = (u?: string) =>
+  !u ? '' : u.startsWith('http') ? u : `${SITE_URL}${u.startsWith('/') ? '' : '/'}${u}`;
+
+const stripHtml = (html: string) =>
+  html.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
+
 export const revalidate = 60;
 export const dynamicParams = true;
 
@@ -101,13 +109,31 @@ export default async function StoryPage({ params }: { params: Promise<Params> })
 
   // Strapi espone `seo` come componente ripetibile per le storie: arriva come array
   const seo = Array.isArray(story?.seo) ? story.seo[0] : story?.seo;
-  const rawStructured = seo?.structuredData;
-  const structuredJson =
-    typeof rawStructured === 'string'
-      ? rawStructured
-      : rawStructured
-      ? JSON.stringify(rawStructured)
-      : null;
+
+  const pageUrl = `${SITE_URL}/viaggi-fotografici/storie/${story.slug}`;
+  const articleJsonLd: Record<string, any> = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: seo?.metaTitle || story.name,
+    description: stripHtml(seo?.metaDescription || story.description || ''),
+    url: pageUrl,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+    inLanguage: story.locale || 'it',
+    publisher: {
+      '@type': 'Organization',
+      name: 'WeShoot',
+      url: SITE_URL,
+    },
+  };
+
+  if (authorName && authorName !== 'Autore') {
+    articleJsonLd.author = { '@type': 'Person', name: authorName };
+  }
+  if (story.photo?.url) {
+    articleJsonLd.image = absUrl(story.photo.url);
+  }
+  if (story.published_at) articleJsonLd.datePublished = story.published_at;
+  if (story.updated_at) articleJsonLd.dateModified = story.updated_at;
 
   return (
     <div className="min-h-screen bg-background">
@@ -117,12 +143,11 @@ export default async function StoryPage({ params }: { params: Promise<Params> })
         authorName={authorName}
         breadcrumbElements={breadcrumbElements}
       />
-      {structuredJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredJson }}
-        />
-      )}
+      <script
+        id="ld-story-article"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <StoryContent story={story} />
       {story.tour && (
         <StoryRelatedTours

@@ -18,12 +18,6 @@ export const metadata: Metadata = {
   description:
     'Esplora i corsi di fotografia di WeShoot, adatti a tutti i livelli: dai principianti ai professionisti. Prenota ora il tuo corso.',
   alternates: { canonical: '/corsi-di-fotografia' },
-  openGraph: {
-    title: 'Corsi di Fotografia - WeShoot',
-    description:
-      'Esplora i corsi di fotografia di WeShoot, adatti a tutti i livelli: dai principianti ai professionisti. Prenota ora il tuo corso.',
-    url: '/corsi-di-fotografia',
-  },
 };
 
 export default async function CorsiFotografiaPage() {

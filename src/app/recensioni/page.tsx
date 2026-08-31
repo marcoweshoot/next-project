@@ -56,7 +56,6 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: '/recensioni' },
-    openGraph: { title, description, url: '/recensioni' },
   };
 }
 

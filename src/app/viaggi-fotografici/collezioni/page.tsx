@@ -15,12 +15,6 @@ export const metadata: Metadata = {
   description:
     'Scopri le nostre collezioni tematiche di viaggi fotografici. Esperienze uniche organizzate per tema e stile fotografico.',
   alternates: { canonical: '/viaggi-fotografici/collezioni/' },
-  openGraph: {
-    title: 'Collezioni Viaggi Fotografici | WeShoot',
-    description:
-      'Scopri le nostre collezioni tematiche di viaggi fotografici. Esperienze uniche organizzate per tema e stile fotografico.',
-    url: '/viaggi-fotografici/collezioni/',
-  },
 };
 
 export default async function CollectionsPage() {

@@ -8,6 +8,7 @@ out/
 dist/
 
 # env & misc
+.eslintcache
 .env
 .env.*
 .DS_Store
@@ -25,6 +26,5 @@ node_modules
 out
 build
 dist
-public
 .vercel
 .env*

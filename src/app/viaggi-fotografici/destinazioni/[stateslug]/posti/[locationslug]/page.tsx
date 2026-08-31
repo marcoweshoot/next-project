@@ -183,7 +183,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       alternates: { canonical: url },
-      openGraph: { title, description, url },
     };
   } catch {
     return {};

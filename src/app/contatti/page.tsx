@@ -11,12 +11,6 @@ export const metadata: Metadata = {
   description:
     'Hai bisogno di aiuto per prenotare un viaggio fotografico? Contattaci per assistenza, informazioni o per regalare un\'esperienza unica.',
   alternates: { canonical: '/contatti' },
-  openGraph: {
-    title: 'Contatti | WeShoot - Viaggi Fotografici',
-    description:
-      'Hai bisogno di aiuto per prenotare un viaggio fotografico? Contattaci per assistenza, informazioni o per regalare un\'esperienza unica.',
-    url: '/contatti',
-  },
 };
 
 export default function ContactsPage() {
