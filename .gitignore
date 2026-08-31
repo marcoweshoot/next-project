@@ -28,3 +28,9 @@ build
 dist
 .vercel
 .env*
+
+# tooling & artefatti locali
+.claude/
+graphify-out/
+tsconfig.tsbuildinfo
+public/snapshot.json
