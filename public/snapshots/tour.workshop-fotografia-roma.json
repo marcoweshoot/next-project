@@ -24,8 +24,7 @@
   },
   "SEO": {
     "metaTitle": "Workshop di fotografia a Roma 2026",
-    "metaDescription": "Partecipa ai nostri workshop fotografici a Roma, scopri i segreti della fotografia con un professionista che ti insegnerà sul campo come scattare foto da cartolina.",
-    "structuredData": null
+    "metaDescription": "Partecipa ai nostri workshop fotografici a Roma, scopri i segreti della fotografia con un professionista che ti insegnerà sul campo come scattare foto da cartolina."
   },
   "locations": [
     {
@@ -234,6 +233,69 @@
   ],
   "reviews": [
     {
+      "id": "supabase-bef8e684-2842-4f1b-bd17-74db3f04daa3",
+      "title": "",
+      "description": "bella uscita fotografica a Roma con il tutor Marco persona veramente professionale e competente. Lo straconsiglio",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2026-06-30T19:22:06.151649+00:00",
+      "user": {
+        "firstName": "Emanuele",
+        "lastName": "Palombarani",
+        "username": "",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "supabase"
+    },
+    {
+      "id": "supabase-dc4e2667-3d75-4bad-b17b-dde0b1974e21",
+      "title": "",
+      "description": "Marco una persona molto paziente, gentile e disponibile,  ha saputo amalgamare il gruppo con grande professionalità.  Ha molta esperienza nel settore quindi può coprire vari profili di discenti con competenza e versatilità.",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2026-06-08T11:08:50.30296+00:00",
+      "user": {
+        "firstName": "Giovanni",
+        "lastName": "Quarantini",
+        "username": "",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "supabase"
+    },
+    {
+      "id": "supabase-20da5782-e71f-412b-9a86-29674a307871",
+      "title": "",
+      "description": "“Grazie” Marco dopo il workshop adesso non riuscirò ad andare in giro per Roma senza cercare linee guida e guardare una possibile composizione 😁\nCorso consigliatissimo",
+      "rating": 5,
+      "ratingOrganization": null,
+      "ratingCordiality": null,
+      "ratingProfessionality": null,
+      "ratingKnowledge": null,
+      "created_at": "2026-05-21T16:39:25.035473+00:00",
+      "user": {
+        "firstName": "Daniele",
+        "lastName": "Volpe",
+        "username": "",
+        "instagram": "",
+        "bio": "",
+        "profilePicture": null,
+        "fiscalCode": null
+      },
+      "source": "supabase"
+    },
+    {
       "id": "supabase-151ecda2-a3d4-4780-9374-3d362b200c99",
       "title": "",
       "description": "Esperienza veramente molto bella e interessante. Grazie a Marco che ci ha seguiti dall’inizio alla fine con pazienza , gentilezza e motivazione. Esperienza che consiglio vivamente a tutti , sia a chi come me è alle prime armi , sia a chi è più pratico.",
@@ -244,8 +306,8 @@
       "ratingKnowledge": null,
       "created_at": "2026-05-18T15:07:19.076345+00:00",
       "user": {
-        "firstName": "Utente",
-        "lastName": "",
+        "firstName": "Marta",
+        "lastName": "Goffi",
         "username": "",
         "instagram": "",
         "bio": "",
@@ -349,8 +411,8 @@
       "ratingKnowledge": null,
       "created_at": "2025-11-12T18:48:42.175309+00:00",
       "user": {
-        "firstName": "Utente",
-        "lastName": "",
+        "firstName": "Marco",
+        "lastName": "Capuano",
         "username": "",
         "instagram": "",
         "bio": "",

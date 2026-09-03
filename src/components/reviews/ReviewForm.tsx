@@ -88,7 +88,8 @@ export function ReviewForm({ booking, tour, editingReview, onReviewSubmitted }: 
             user_id: user.id,
             booking_id: booking!.id,
             tour_id: booking!.tour_id,
-            tour_slug: tour?.slug || booking!.tour_slug || booking!.tour_id,
+            // Meglio lasciarlo vuoto che scriverci l'id: il match sul tour avviene su tour_id
+            tour_slug: tour?.slug || booking!.tour_slug || null,
             rating,
             comment: comment.trim() || null,
             status: 'pending'

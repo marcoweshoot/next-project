@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { generateEventId, trackLead } from '@/utils/facebook';
+import { mergeReviews } from '@/lib/reviews';
 import TourStickyNav from './TourStickyNav';
 import TourGallery from './TourGallery';
 import TourDescription from './TourDescription';
@@ -42,13 +43,15 @@ export default function TourDetailContentClient({
   // Fetcha le recensioni approvate da Supabase (realtime, non dipende dallo snapshot)
   useEffect(() => {
     if (!tour?.slug) return
-    fetch(`/api/reviews?tourSlug=${encodeURIComponent(tour.slug)}`)
+    const params = new URLSearchParams({ tourSlug: tour.slug })
+    if (tour.id != null) params.set('tourId', String(tour.id))
+    fetch(`/api/reviews?${params.toString()}`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data?.reviews)) setSupabaseReviews(data.reviews)
       })
-      .catch(() => {}) // fallback silenzioso: se fallisce si vedono solo le CMS
-  }, [tour?.slug])
+      .catch(() => {}) // fallback silenzioso: se fallisce restano quelle dello snapshot
+  }, [tour?.slug, tour?.id])
 
   // --- Track ViewContent event with Pixel & CAPI ---
   useEffect(() => {
@@ -192,9 +195,9 @@ export default function TourDetailContentClient({
       <GroupGallerySection gallery={galleryData} />
 
       {(() => {
-        const cmsReviews = Array.isArray(tour.reviews) ? tour.reviews : []
-        // Deduplicazione: rimuovi dalle CMS eventuali recensioni già presenti in Supabase con stesso id
-        const mergedReviews = [...cmsReviews, ...supabaseReviews]
+        const snapshotReviews = Array.isArray(tour.reviews) ? tour.reviews : []
+        // Lo snapshot contiene già le recensioni Supabase: dedup per id, vince la versione live
+        const mergedReviews = mergeReviews(snapshotReviews, supabaseReviews)
         return mergedReviews.length > 0 ? <TourReviews reviews={mergedReviews} /> : null
       })()}
 

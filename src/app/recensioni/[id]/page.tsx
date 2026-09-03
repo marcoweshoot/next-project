@@ -1,6 +1,7 @@
 // app/recensioni/[id]/page.tsx
 import { getClient } from '@/lib/apolloClient';
-import { GET_REVIEW_BY_ID, GET_REVIEWS } from '@/graphql/queries/reviews';
+import { GET_REVIEW_BY_ID } from '@/graphql/queries/reviews';
+import { getAllReviews, type SnapshotReview } from '@/lib/reviewsSnapshot';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -12,16 +13,31 @@ import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
 
-export async function generateStaticParams() {
-  const client = getClient();
-  const { data } = await client.query({
-    query: GET_REVIEWS,
-    variables: { limit: 100 },
-    fetchPolicy: 'no-cache',
-  });
+// Lo snapshot contiene sia le recensioni Strapi (id numerico) sia quelle
+// Supabase (id `supabase-<uuid>`), che su GraphQL non esistono.
+async function findReview(reviewId: string): Promise<SnapshotReview | null> {
+  const allReviews = await getAllReviews();
+  const fromSnapshot = allReviews.find((review) => String(review.id) === reviewId);
+  if (fromSnapshot) return fromSnapshot;
 
-  const reviews = data?.reviews || [];
-  return reviews.map((review: any) => ({ id: review.id.toString() }));
+  // Le recensioni Strapi fuori dallo snapshot restano raggiungibili via GraphQL
+  if (!/^\d+$/.test(reviewId)) return null;
+
+  try {
+    const { data } = await getClient().query({
+      query: GET_REVIEW_BY_ID,
+      variables: { id: reviewId },
+      fetchPolicy: 'no-cache',
+    });
+    return data?.review ?? null;
+  } catch {
+    return null;
+  }
+}
+
+export async function generateStaticParams() {
+  const reviews = await getAllReviews();
+  return reviews.map((review) => ({ id: String(review.id) }));
 }
 
 type PageProps = {
@@ -30,56 +46,31 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
+  const review = await findReview(id);
+  if (!review) return {};
 
-  try {
-    const { data } = await getClient().query({
-      query: GET_REVIEW_BY_ID,
-      variables: { id },
-      fetchPolicy: 'no-cache',
-    });
-    const review = data?.review;
-    if (!review) return {};
+  const title = `Recensione di ${review.user?.firstName ?? 'Utente'} | WeShoot`;
+  const description = (review.description || '').slice(0, 160);
 
-    const title = `Recensione di ${review.user?.firstName ?? 'Utente'} | WeShoot`;
-    const description = (review.description || '').slice(0, 160);
-    const url = `/recensioni/${review.id}`;
-
-    return {
-      title,
-      description,
-      alternates: { canonical: url },
-    };
-  } catch {
-    return {};
-  }
+  return {
+    title,
+    description,
+    alternates: { canonical: `/recensioni/${review.id}` },
+  };
 }
 
 export default async function ReviewPage({ params }: PageProps) {
-  const { id } = await params;
-  const client = getClient();
-  const reviewId = id;
+  const { id: reviewId } = await params;
 
   if (!reviewId) return notFound();
 
-  const { data: allReviewsData } = await client.query({
-    query: GET_REVIEWS,
-    variables: { limit: 100 },
-    fetchPolicy: 'no-cache',
-  });
-
-  const allReviews = allReviewsData?.reviews || [];
-  const currentIndex = allReviews.findIndex((r: any) => r.id.toString() === reviewId);
-  const previous = allReviews[currentIndex - 1];
-  const next = allReviews[currentIndex + 1];
-
-  const { data } = await client.query({
-    query: GET_REVIEW_BY_ID,
-    variables: { id: reviewId },
-    fetchPolicy: 'no-cache',
-  });
-
-  const review = data?.review;
+  const review = await findReview(reviewId);
   if (!review) return notFound();
+
+  const allReviews = await getAllReviews();
+  const currentIndex = allReviews.findIndex((r) => String(r.id) === reviewId);
+  const previous = currentIndex > 0 ? allReviews[currentIndex - 1] : undefined;
+  const next = currentIndex >= 0 ? allReviews[currentIndex + 1] : undefined;
 
   const formatDate = (dateString: string) =>
     new Date(dateString).toLocaleDateString('it-IT', {

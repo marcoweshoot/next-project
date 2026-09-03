@@ -12,11 +12,22 @@ const OUT_LIST = path.join(OUT_DIR, "tours.json");
 const MEDIA_BASE = (process.env.NEXT_PUBLIC_STRAPI_URL || "https://api.weshoot.it")
   .replace(/\/+$/, "");
 
-// Initialize Supabase client for fetching reviews
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "",
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
-);
+// Initialize Supabase client for fetching reviews.
+// Serve la service role key: `public_profiles` è una view con security_invoker, quindi
+// eredita le RLS di `profiles`, che con la chiave anon non restituiscono nulla e
+// farebbero finire tutti gli autori come "Utente".
+const SUPABASE_KEY =
+  process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+
+if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
+  console.warn(
+    "[SNAPSHOT] ⚠️  SUPABASE_SERVICE_ROLE_KEY mancante: i nomi degli autori delle recensioni Supabase risulteranno 'Utente'"
+  );
+}
+
+const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL || "", SUPABASE_KEY, {
+  auth: { autoRefreshToken: false, persistSession: false },
+});
 
 /* ---------------- Helpers ---------------- */
 function toAbsUrl(input) {
@@ -217,7 +228,19 @@ async function fetchGQL(query, variables, timeoutMs = 15000) {
 }
 
 /* --------------- fetch Supabase reviews --------------- */
-async function fetchSupabaseReviews(tourSlug) {
+// I valori finiscono in un filtro `or` PostgREST, dove virgole e virgolette hanno significato
+const isSafeFilterValue = (value) =>
+  typeof value === "string" && /^[a-zA-Z0-9._-]+$/.test(value);
+
+async function fetchSupabaseReviews(tourSlug, tourId) {
+  // tour_id è la chiave canonica: alcune recensioni storiche hanno tour_slug valorizzato con l'id
+  const filters = [
+    isSafeFilterValue(tourSlug) ? `tour_slug.eq.${tourSlug}` : null,
+    isSafeFilterValue(String(tourId ?? "")) ? `tour_id.eq.${tourId}` : null,
+  ].filter(Boolean);
+
+  if (filters.length === 0) return [];
+
   try {
     const { data, error } = await supabase
       .from("reviews")
@@ -233,7 +256,7 @@ async function fetchSupabaseReviews(tourSlug) {
           profile_picture_url
         )
       `)
-      .eq("tour_slug", tourSlug)
+      .or(filters.join(","))
       .eq("status", "approved")
       .order("created_at", { ascending: false });
 
@@ -241,8 +264,6 @@ async function fetchSupabaseReviews(tourSlug) {
       console.warn(`[SNAPSHOT] ⚠️  Errore fetch recensioni Supabase per ${tourSlug}:`, error.message);
       return [];
     }
-
-    console.log(`[SNAPSHOT] 🔍 Debug recensioni Supabase per ${tourSlug}:`, JSON.stringify(data, null, 2));
 
     return data || [];
   } catch (err) {
@@ -375,7 +396,7 @@ async function normalizeTour(t) {
   }));
 
   // ✅ Fetch e normalizza recensioni Supabase
-  const supabaseReviewsRaw = await fetchSupabaseReviews(t.slug);
+  const supabaseReviewsRaw = await fetchSupabaseReviews(t.slug, t.id);
   const supabaseReviews = supabaseReviewsRaw.map((r, i) => normalizeSupabaseReview(r, i));
 
   // ✅ Merge e ordina per data (più recenti prima)

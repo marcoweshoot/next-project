@@ -7,6 +7,7 @@ import { unstable_cache as nextCache } from 'next/cache'
 import type { Metadata } from 'next'                  // <-- SEO
 import { getClient } from '@/lib/graphqlClient'
 import { GET_TOUR_BY_SLUG, GET_ALL_TOUR_SLUGS } from '@/graphql/queries/tour-detail'
+import { mergeReviews, summarizeReviews } from '@/lib/reviews'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SocialProofSection from '@/components/SocialProofSection'
@@ -283,10 +284,10 @@ export default async function TourDetailPage({ params }: Props) {
     const isFallbackPast = upcoming.length === 0 && past.length > 0
     const coaches = upcoming.length > 0 ? upcoming : past
 
-    const reviewsCount = Array.isArray(tour.reviews) ? tour.reviews.length : 0
-    const averageRating = reviewsCount
-      ? tour.reviews.reduce((sum: number, r: any) => sum + (r?.rating ?? 0), 0) / reviewsCount
-      : 0
+    // Dedup con la stessa logica del client, così hero e carosello mostrano lo stesso numero
+    const { reviewsCount, averageRating } = summarizeReviews(
+      mergeReviews(Array.isArray(tour.reviews) ? tour.reviews : [], [])
+    )
 
     /* ===== SOLO SEO: Product + Breadcrumbs (niente UI) ===== */
     const nowTs = Date.now()
