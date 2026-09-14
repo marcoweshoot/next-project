@@ -83,6 +83,57 @@ lista `"client, proxy1, proxy2"`): Meta vuole un IP singolo, e il valore incide 
 > mescolano tre proprietà. Questa validazione protegge solo ciò che passa da Vercel: eventi
 > server-side generati dalle macchine di accademia/blog non passano di qui.
 
+## `PageView` sulle navigazioni client-side (14/09/2026)
+
+`FacebookPixel.tsx` è montato una volta nel root layout e lo snippet base spara `PageView`
+solo lì, cioè sulla pagina di atterraggio. Le navigazioni dell'App Router non ricaricano la
+pagina, quindi home → tour → calendario produceva **un solo PageView**. Ora un `useEffect`
+su `usePathname()` spara `PageView` a ogni cambio di pathname (la prima esecuzione è saltata
+perché la copre l'init). `fbq` allega da solo la URL corrente completa (`dl=`).
+
+Serve ai pubblici filtrati per URL ("ha visitato una pagina contenente `/viaggi-fotografici`"):
+senza, entrava solo chi atterrava direttamente su quelle pagine. Non cambia il numero di
+visitatori unici. Il PageView resta solo browser: non passa da `/api/track-fb-event`, che
+infatti non lo ammette.
+
+## Il flusso di PageView server-side non viene da questo repo (14/09/2026)
+
+Il dataset riceve ~400–500 `PageView`/h costanti 24h/24. Misurato il 12/09/2026 con
+`ads_get_dataset_stats` (giornata senza picchi):
+
+| Metrica | Valore |
+|---|---|
+| `PageView` `SERVER_ONLY` | 395–473/h, piatti giorno e notte (~9.850/giorno) |
+| `PageView` `WEB_ONLY` | 1–32/h, curva umana (~230/giorno) |
+| Eventi con `event_source_url` (aggregazioni `host`/`url`) | ~20–90/h (~1.060/giorno) |
+| `event_total_counts` per `PageView` | 9.430 + 414 + 228 + 5 |
+
+**9.430 PageView/giorno sono CAPI senza `event_source_url`**, un evento ogni ~9 secondi
+senza variazione giorno/notte: una macchina. Il repo è escluso:
+
+- nessun chiamante di `sendServerEvent` manda `PageView` (solo `Purchase` e
+  `CompleteRegistration`);
+- `/api/track-fb-event`, anche prima della validazione, rifiutava i body senza
+  `event_source_url`, quindi non può produrre eventi senza URL;
+- log runtime Vercel in produzione, 24h: **29 richieste** a `/api/track-fb-event`.
+
+La sorgente va cercata sull'EC2 dell'accademia (`54.76.69.98`, dove gira un plugin CAPI di
+WordPress: `UserProperties` nel dataset non esiste in questo codice). Il volume è compatibile
+con un health check o un uptime monitor che colpisce WordPress ogni pochi secondi con `Host`
+assente o IP privato, per cui Meta scarta la URL. Verifica sui log nginx:
+
+```
+zgrep '12/Sep/2026' /var/log/nginx/access.log* | awk -F'"' '{print $6}' | sort | uniq -c | sort -rn | head
+```
+
+Se uno user-agent totalizza ~9.400 hit/giorno la sorgente è confermata. Fix lato accademia:
+disattivare il `PageView` server-side nel plugin (senza `fbp`/`fbc` non entra in nessun
+pubblico), puntare l'health check a un file statico servito da nginx invece che a `/`, e
+chiudere :80/:443 dell'istanza a tutto tranne il security group dell'ALB.
+
+> `ViewCategory` invece **esiste** in questo repo (`trackViewCategory`, solo browser): non
+> è una firma del plugin WordPress.
+
 ## Come verificare
 
 1. Impostare `FB_TEST_EVENT_CODE` in locale, aprire una pagina tour, click "PRENOTA ORA".
@@ -94,6 +145,9 @@ lista `"client, proxy1, proxy2"`): Meta vuole un IP singolo, e il valore incide 
    Click su "Vedi Partenze" nell'hero: nessuna richiesta a `facebook.com/tr/?ev=InitiateCheckout`.
 4. Dopo 48–72h: in Events Manager la quota "Server" di `AddToCart` deve essere ≈ 50% del
    totale, come per `InitiateCheckout`.
+5. Home → click su un tour → "Vedi Partenze": in Network, filtro `facebook.com/tr`, un
+   `ev=PageView` per ogni navigazione con `dl=` uguale alla URL corrente. Ricaricando una
+   pagina tour: un solo `PageView`.
 
 > `FB_TEST_EVENT_CODE` **non** deve essere impostato su Vercel Production, altrimenti tutti
 > gli eventi CAPI finiscono in Test Events.
