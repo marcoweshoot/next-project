@@ -117,22 +117,36 @@ senza variazione giorno/notte: una macchina. Il repo è escluso:
   `event_source_url`, quindi non può produrre eventi senza URL;
 - log runtime Vercel in produzione, 24h: **29 richieste** a `/api/track-fb-event`.
 
-La sorgente va cercata sull'EC2 dell'accademia (`54.76.69.98`, dove gira un plugin CAPI di
-WordPress: `UserProperties` nel dataset non esiste in questo codice). Il volume è compatibile
-con un health check o un uptime monitor che colpisce WordPress ogni pochi secondi con `Host`
-assente o IP privato, per cui Meta scarta la URL. Verifica sui log nginx:
+**Sorgente trovata (14/09/2026, ispezione via wp-admin dell'accademia, EC2 `54.76.69.98`, Apache):**
 
-```
-zgrep '12/Sep/2026' /var/log/nginx/access.log* | awk -F'"' '{print $6}' | sort | uniq -c | sort -rn | head
-```
+- Il PageView server-side lo manda **Meta for WooCommerce** (plugin ufficiale,
+  `facebook-commerce-events-tracker.php` → `inject_page_view_event()` su `wp_head` →
+  `send_api_event()`), cioè a ogni pagina renderizzata da WordPress. Il suo filtro
+  anti-crawler blocca solo user-agent contenenti `crawler` o `meta-*`.
+- `event_source_url` viene da `home_url()`, ma **WordPress prende il proprio indirizzo
+  dall'header `Host`** (`WP_HOME` dinamico): `curl -H 'Host: test.invalid' http://54.76.69.98/`
+  restituisce `<link rel="canonical" href="http://test.invalid/">`. Quindi: `Host: 54.76.69.98`
+  → URL `http://54.76.69.98/`; `Host: ws.bitmex.com` (proxy-abuse) → `http://ws.bitmex.com/`;
+  **HTTP/1.0 senza `Host`** (scanner, monitor, health check) → `http:///` → Meta scarta la URL
+  → il bucket da 9.430/giorno senza host.
+- Il server risponde `200` con tutto WordPress a qualsiasi `Host`, anche assente, e imposta
+  `_fbp` con `domain=54.76.69.98`.
+- Il plugin "Facebook Pixel PRO" (custom) è solo pixel browser; il tema figlio imposta cookie
+  `utm_*`/`fbclid`/`ref`/`ip` ma non chiama Meta. `ViewCategory` esiste in questo repo, non è
+  una firma di plugin WordPress.
 
-Se uno user-agent totalizza ~9.400 hit/giorno la sorgente è confermata. Fix lato accademia:
-disattivare il `PageView` server-side nel plugin (senza `fbp`/`fbc` non entra in nessun
-pubblico), puntare l'health check a un file statico servito da nginx invece che a `/`, e
-chiudere :80/:443 dell'istanza a tutto tranne il security group dell'ALB.
+**Fix, in `functions.php` del tema figlio (BuddyBoss Child) dell'accademia**, senza SSH:
 
-> `ViewCategory` invece **esiste** in questo repo (`trackViewCategory`, solo browser): non
-> è una firma del plugin WordPress.
+1. Su `init` (priorità 0), se `HTTP_HOST` non è `accademia.weshoot.it`, rispondere `200 ok`
+   in text/plain e uscire: gli health check restano verdi, ma niente pagina, niente pixel,
+   niente CAPI.
+2. `add_filter('wc_facebook_is_crawler_request', ...)` per trattare come crawler gli UA vuoti
+   o contenenti `bot`, `spider`, `crawl`, `curl`, `wget`, `python`, `go-http`, `okhttp`,
+   `healthchecker`, `uptime`, `monitor`, `headless`, `lighthouse`, `facebookexternalhit`.
+
+Poi, con accesso al server: security group :80/:443 solo dal SG dell'ALB, vhost Apache di
+default che risponde `403` a `Host` ≠ `accademia.weshoot.it`, health check dell'ALB su un file
+statico. Log: `/var/log/apache2/access.log*` (non nginx).
 
 ## Come verificare
 
