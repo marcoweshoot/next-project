@@ -302,15 +302,18 @@ export function SimpleCheckoutModal({
   }, [quantity, paymentType, isOpen, tour.id, session.id])
 
   const handleStartPayment = () => {
-    setHasCommitted(true)
     const totalValue = getCheckoutValue()
 
     if (totalValue > 0) {
-      trackInitiateCheckout({
-        tourTitle: tour.title,
-        value: totalValue,
-        quantity,
-      })
+      // Fire InitiateCheckout once per checkout session: Continua → Indietro → Continua
+      // must not produce a second event (hasCommitted is reset by resetModal on close).
+      if (!hasCommitted) {
+        trackInitiateCheckout({
+          tourTitle: tour.title,
+          value: totalValue,
+          quantity,
+        })
+      }
       trackCheckoutFunnel({
         step: 'step1_commit',
         tourId: tour.id,
@@ -322,6 +325,7 @@ export function SimpleCheckoutModal({
       })
     }
 
+    setHasCommitted(true)
     setCurrentStep(2)
   }
 

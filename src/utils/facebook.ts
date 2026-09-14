@@ -207,7 +207,21 @@ export function trackAddToCart({
   }
 
   window.fbq('track', 'AddToCart', eventData, { eventID: eventId })
-  
+
+  // Server-side mirror (CAPI) with the same event_id so Meta deduplicates the pair.
+  // Without it AddToCart is browser-only and gets lost for in-app browsers,
+  // iOS/ATT and ad-blockers, which is why it was under-attributed vs InitiateCheckout.
+  fetch('/api/track-fb-event', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_name: 'AddToCart',
+      event_id: eventId,
+      event_source_url: window.location.href,
+      custom_data: eventData,
+    }),
+  }).catch(() => {})
+
   // Log only in development
   if (process.env.NODE_ENV === 'development') {
     console.log('✅ [FB PIXEL] AddToCart event tracked:', {
