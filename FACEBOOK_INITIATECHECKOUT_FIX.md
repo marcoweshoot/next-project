@@ -23,8 +23,10 @@ nel commit `232e966`, 30 luglio 2026).
   regole no-code dell'Event Setup Tool (Events Manager → pixel → Impostazioni → Eventi),
   che il pixel scarica da `connect.facebook.net/signals/config/<pixel_id>` e applica ai
   click con `eid=ob3_plugin-set_…`, senza `value` e senza `event_id`.
-- La CSP in `middleware.ts` include `https://www.facebook.com` e `https://connect.facebook.net`
-  in `connect-src`, così `fbevents.js` può usare `sendBeacon`/`fetch` oltre al fallback `<img>`.
+- La CSP in `src/middleware.ts` include `https://www.facebook.com` e `https://connect.facebook.net`
+  sia in `connect-src` (così `fbevents.js` può usare `sendBeacon`/`fetch` oltre al fallback
+  `<img>`) sia in `script-src` (senza, lo script non si carica affatto). Vedi la sezione sul
+  middleware in fondo: fino al 14/09/2026 quella CSP non veniva emessa.
 
 ## Perché AddToCart ha anche il gemello CAPI (fix del 14/09/2026)
 
@@ -147,6 +149,58 @@ senza variazione giorno/notte: una macchina. Il repo è escluso:
 Poi, con accesso al server: security group :80/:443 solo dal SG dell'ALB, vhost Apache di
 default che risponde `403` a `Host` ≠ `accademia.weshoot.it`, health check dell'ALB su un file
 statico. Log: `/var/log/apache2/access.log*` (non nginx).
+
+## `external_id` sempre presente sugli eventi CAPI (14/09/2026)
+
+Events Manager → Diagnostica segnalava **"Invia i parametri dei dati degli utenti mancanti"**
+su `InitiateCheckout`, `ViewContent` e `Lead`, **19% degli eventi totali**: senza almeno una
+chiave di corrispondenza in `user_data` quegli eventi non sono utilizzabili per attribuzione
+e ottimizzazione.
+
+Per un visitatore anonimo alla prima visita `user_data` conteneva solo `client_ip_address` e
+`client_user_agent`: niente email, niente `external_id`, e nemmeno `_fbp`, che il pixel non ha
+ancora scritto. `Purchase` e `CompleteRegistration` non erano tra gli eventi segnalati perché
+partono da `webhook-stripe` e `create-profile`, dove l'utente è identificato.
+
+`external_id` è ora sempre valorizzato: l'id dell'utente loggato, altrimenti un UUID anonimo
+di prima parte nel cookie **`ws_eid`** (httpOnly, SameSite lax, 1 anno). Il cookie viene
+generato durante la richiesta stessa, così anche il primo evento parte con un `external_id`
+invece di aspettare quello successivo, e viene scritto **solo sulle risposte di successo**:
+una richiesta rifiutata dalle allowlist non riceve un identificativo.
+
+> `ws_eid` è un identificativo di tracciamento: va aggiunto alla cookie policy.
+
+## Il middleware non veniva eseguito (14/09/2026)
+
+`middleware.ts` stava nella root del repo, ma la app è in `src/app`: con la cartella `src`
+Next.js carica **`src/middleware.ts`**. Verificato in locale prima dello spostamento: nessun
+header `Content-Security-Policy`, nessun `x-nonce`, zero righe di log su
+`/auth/reset-password`.
+
+Non giravano quindi la CSP, il refresh della sessione Supabase (il pattern documentato di
+`@supabase/ssr`) e la rimozione di `code`/`access_token` dall'URL di reset password. La
+protezione di `/admin` **non** era un buco: `src/app/admin/layout.tsx` e ogni pagina sotto
+`/admin` fanno già il proprio controllo server-side su `user_roles` con `redirect()`.
+
+Spostare il file e basta avrebbe spento il sito: la CSP usa `'strict-dynamic'`, che fa
+ignorare al browser `'self'` e gli allowlist per host lasciando passare solo ciò che porta il
+nonce — e il nonce non veniva applicato a nulla, perché finiva in `x-nonce` sulla *risposta*
+mentre Next.js lo legge dall'header `Content-Security-Policy` della *richiesta*. Ora nonce e
+CSP viaggiano su `NextResponse.next({ request: { headers } })`: 24 dei 25 tag `<script>` della
+pagina ricevono il nonce.
+
+**La CSP è emessa come `Content-Security-Policy-Report-Only`**: non blocca nulla, segnala solo
+in console. Non c'è un `report-uri`, quindi le violazioni si leggono dalla console del browser.
+Prima di passare a `Content-Security-Policy` in enforcing, verificare:
+
+- `frame-src 'none'` contro il banner e il preference center di Iubenda, che possono usare iframe;
+- lo script inline di `next-themes`, l'unico senza nonce. Passarglielo richiede `headers()` nel
+  layout root, che renderebbe dinamico tutto il sito togliendo la generazione statica alle
+  pagine ISR.
+
+Il controllo admin nel middleware non redirige più se la RPC `is_admin` va in errore: non è
+stato possibile verificarne l'esistenza e un errore avrebbe chiuso fuori gli admin senza
+aggiungere protezione, visto che il layout fa già la verifica autorevole.
 
 ## Come verificare
 
