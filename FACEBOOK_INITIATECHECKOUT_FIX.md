@@ -54,6 +54,35 @@ quindi i browser possono applicare le vecchie regole per al massimo 20 minuti do
 cancellazione. **Non ricreare regole no-code**: tutti gli eventi standard sono tracciati dal
 codice con `value`, `currency` ed `event_id`.
 
+## `POST /api/track-fb-event` è un endpoint validato (14/09/2026)
+
+L'endpoint inoltra eventi alla Conversions API con `FB_CAPI_ACCESS_TOKEN`, quindi il body è
+input non fidato. Prima era un relay aperto: accettava qualsiasi `event_name`, qualsiasi
+`event_source_url` e qualsiasi `custom_data`, senza controllo di origine. Ora rifiuta con
+`400`:
+
+| Controllo | Regola |
+|---|---|
+| `event_name` | Solo `ViewContent`, `Lead`, `AddToCart`, `InitiateCheckout`, `AddPaymentInfo`. |
+| `event_source_url` | Hostname deve essere `www.weshoot.it` o `weshoot.it` (in dev anche `localhost`/`127.0.0.1`). |
+| Header `Origin` | Stessa allowlist di hostname. Il browser lo manda sempre sui POST; un chiamante server-to-server di norma no. |
+
+**`Purchase` e `CompleteRegistration` non sono in allowlist di proposito.** Partono già
+server-side da `webhook-stripe/route.ts`, `zero-payment/route.ts`, `create-profile/route.ts`
+e `checkout/claim/[sessionId]/route.ts`, che chiamano `sendServerEvent` direttamente senza
+passare da qui. Tenerli fuori impedisce di iniettare acquisti finti con `value` arbitrario.
+Se in futuro serve un nuovo evento dal browser, va aggiunto a `ALLOWED_EVENT_NAMES`.
+
+I preview deploy `*.vercel.app` sono esclusi, così non inquinano il dataset di produzione.
+
+`client_ip_address` prende ora solo il primo elemento di `x-forwarded-for` (può essere una
+lista `"client, proxy1, proxy2"`): Meta vuole un IP singolo, e il valore incide sull'EMQ.
+
+> **Nota sul dataset.** Il pixel `220965505676374` è condiviso fra `www.weshoot.it`,
+> `accademia.weshoot.it` e `blog.weshoot.it`, quindi i pubblici "visitatori del sito"
+> mescolano tre proprietà. Questa validazione protegge solo ciò che passa da Vercel: eventi
+> server-side generati dalle macchine di accademia/blog non passano di qui.
+
 ## Come verificare
 
 1. Impostare `FB_TEST_EVENT_CODE` in locale, aprire una pagina tour, click "PRENOTA ORA".
