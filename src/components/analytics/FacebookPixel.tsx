@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 
 // Extend the Window interface to inform TypeScript about the non-standard _fbq property
@@ -21,6 +22,10 @@ interface AdvancedMatchingData {
 
 export function FacebookPixel() {
   const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL
+  const pathname = usePathname()
+  // Pathname of the last PageView fired. Seeded with the landing pathname so the
+  // route-change effect skips the first render (init already fires PageView).
+  const lastTrackedPath = useRef<string | null>(null)
 
   useEffect(() => {
     if (!FB_PIXEL_ID) {
@@ -86,6 +91,7 @@ export function FacebookPixel() {
         // implemented the logic, thus resolving the "manual configuration" warning.
         window.fbq('init', FB_PIXEL_ID, matchingData)
         window.fbq('track', 'PageView')
+        lastTrackedPath.current = window.location.pathname
 
         isInitialized = true
 
@@ -106,6 +112,27 @@ export function FacebookPixel() {
 
     initializePixel()
   }, [FB_PIXEL_ID])
+
+  // App Router navigations don't reload the page, so the base snippet fires
+  // PageView only on the landing page. Without this, URL-filtered audiences
+  // (e.g. "visited /viaggi-fotografici") miss everyone who navigates there
+  // instead of landing on it. `fbq` sends the full current URL on its own.
+  useEffect(() => {
+    if (!FB_PIXEL_ID || typeof window === 'undefined' || !window.fbq) return
+    if (lastTrackedPath.current === null) {
+      // Init hasn't fired PageView yet (async Supabase lookup): let it own the
+      // first one for this pathname instead of double counting.
+      return
+    }
+    if (lastTrackedPath.current === pathname) return
+
+    lastTrackedPath.current = pathname
+    window.fbq('track', 'PageView')
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ [FB PIXEL] PageView tracked on route change:', pathname)
+    }
+  }, [FB_PIXEL_ID, pathname])
 
   if (!FB_PIXEL_ID) {
     return null
