@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { randomUUID } from 'crypto'
 import { sendServerEvent, UserData } from '@/lib/facebook-capi'
 import { createServerClientSupabase } from '@/lib/supabase/server'
 import { getCookies } from 'cookies-next'
@@ -22,11 +23,34 @@ const ALLOWED_EVENT_NAMES = new Set([
 
 const ALLOWED_HOSTNAMES = new Set(['www.weshoot.it', 'weshoot.it'])
 
+// Identificativo anonimo di prima parte, usato come `external_id` quando il visitatore non è
+// loggato. Senza di esso un evento da utente anonimo arriva a Meta con il solo IP e user agent,
+// che non contano come chiavi di corrispondenza: la Diagnostica del pixel segnala
+// "Invia i parametri dei dati degli utenti mancanti" e quegli eventi non sono utilizzabili
+// né per l'attribuzione né per l'ottimizzazione.
+const ANON_ID_COOKIE = 'ws_eid'
+const ANON_ID_MAX_AGE = 60 * 60 * 24 * 365 // 1 anno
+
 function isAllowedHostname(hostname: string): boolean {
   if (ALLOWED_HOSTNAMES.has(hostname)) return true
   // In sviluppo accetta anche il server locale; i preview deploy *.vercel.app restano esclusi
   // di proposito, così non inquinano il dataset di produzione.
   return process.env.NODE_ENV !== 'production' && (hostname === 'localhost' || hostname === '127.0.0.1')
+}
+
+// Persiste l'id anonimo solo quando è appena stato generato, e solo sulle risposte di successo:
+// una richiesta rifiutata non deve ricevere un identificativo.
+function withAnonId(res: NextResponse, anonId: string, isNew: boolean): NextResponse {
+  if (isNew) {
+    res.cookies.set(ANON_ID_COOKIE, anonId, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      maxAge: ANON_ID_MAX_AGE,
+      path: '/',
+    })
+  }
+  return res
 }
 
 function hostnameOf(url: string | null): string | null {
@@ -70,7 +94,12 @@ export async function POST(request: NextRequest) {
     // Leggi i cookie _fbp e _fbc dalla richiesta
     let fbp: string | undefined
     let fbc: string | undefined
-    
+    let anonId = request.cookies.get(ANON_ID_COOKIE)?.value
+    // Alla primissima visita il cookie non c'è ancora: generalo subito, così anche questo
+    // evento parte con un external_id invece di aspettare la richiesta successiva.
+    const isNewAnonId = !anonId
+    if (!anonId) anonId = randomUUID()
+
     try {
       const cookies = getCookies({ req: request });
       fbp = cookies['_fbp'] || undefined;
@@ -109,10 +138,12 @@ export async function POST(request: NextRequest) {
       client_user_agent: userAgent,
       fbp,
       fbc,
+      // Sempre presente: l'id dell'utente loggato, altrimenti quello anonimo di prima parte.
+      // Garantisce almeno una chiave di corrispondenza su ogni evento.
+      external_id: user?.id ?? anonId,
     }
 
     if (user) {
-      userData.external_id = user.id
       userData.em = user.email
 
       // Prova a recuperare dati più dettagliati dal profilo
@@ -171,11 +202,11 @@ export async function POST(request: NextRequest) {
         console.error('❌ [API /track-fb-event] Failed to send event to Facebook CAPI')
       }
       // Restituisci comunque successo al client per non bloccare il flusso utente
-      return NextResponse.json({ 
-        success: true, 
+      return withAnonId(NextResponse.json({
+        success: true,
         message: 'Event received but failed to send to Facebook',
         warning: 'CAPI event not sent'
-      })
+      }), anonId, isNewAnonId)
     }
 
     if (process.env.NODE_ENV === 'development') {
@@ -185,7 +216,11 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    return NextResponse.json({ success: true, message: 'Event sent successfully to Facebook.' })
+    return withAnonId(
+      NextResponse.json({ success: true, message: 'Event sent successfully to Facebook.' }),
+      anonId,
+      isNewAnonId
+    )
 
   } catch (error) {
     if (process.env.NODE_ENV === 'development') {
