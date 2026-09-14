@@ -23,8 +23,10 @@ nel commit `232e966`, 30 luglio 2026).
   regole no-code dell'Event Setup Tool (Events Manager → pixel → Impostazioni → Eventi),
   che il pixel scarica da `connect.facebook.net/signals/config/<pixel_id>` e applica ai
   click con `eid=ob3_plugin-set_…`, senza `value` e senza `event_id`.
-- La CSP in `middleware.ts` include `https://www.facebook.com` e `https://connect.facebook.net`
-  in `connect-src`, così `fbevents.js` può usare `sendBeacon`/`fetch` oltre al fallback `<img>`.
+- La CSP in `src/middleware.ts` include `https://www.facebook.com` e `https://connect.facebook.net`
+  sia in `connect-src` (così `fbevents.js` può usare `sendBeacon`/`fetch` oltre al fallback
+  `<img>`) sia in `script-src` (senza, lo script non si carica affatto). Vedi la sezione sul
+  middleware in fondo: fino al 14/09/2026 quella CSP non veniva emessa.
 
 ## Perché AddToCart ha anche il gemello CAPI (fix del 14/09/2026)
 
@@ -83,6 +85,123 @@ lista `"client, proxy1, proxy2"`): Meta vuole un IP singolo, e il valore incide 
 > mescolano tre proprietà. Questa validazione protegge solo ciò che passa da Vercel: eventi
 > server-side generati dalle macchine di accademia/blog non passano di qui.
 
+## `PageView` sulle navigazioni client-side (14/09/2026)
+
+`FacebookPixel.tsx` è montato una volta nel root layout e lo snippet base spara `PageView`
+solo lì, cioè sulla pagina di atterraggio. Le navigazioni dell'App Router non ricaricano la
+pagina, quindi home → tour → calendario produceva **un solo PageView**. Ora un `useEffect`
+su `usePathname()` spara `PageView` a ogni cambio di pathname (la prima esecuzione è saltata
+perché la copre l'init). `fbq` allega da solo la URL corrente completa (`dl=`).
+
+Serve ai pubblici filtrati per URL ("ha visitato una pagina contenente `/viaggi-fotografici`"):
+senza, entrava solo chi atterrava direttamente su quelle pagine. Non cambia il numero di
+visitatori unici. Il PageView resta solo browser: non passa da `/api/track-fb-event`, che
+infatti non lo ammette.
+
+## Il flusso di PageView server-side non viene da questo repo (14/09/2026)
+
+Il dataset riceve ~400–500 `PageView`/h costanti 24h/24. Misurato il 12/09/2026 con
+`ads_get_dataset_stats` (giornata senza picchi):
+
+| Metrica | Valore |
+|---|---|
+| `PageView` `SERVER_ONLY` | 395–473/h, piatti giorno e notte (~9.850/giorno) |
+| `PageView` `WEB_ONLY` | 1–32/h, curva umana (~230/giorno) |
+| Eventi con `event_source_url` (aggregazioni `host`/`url`) | ~20–90/h (~1.060/giorno) |
+| `event_total_counts` per `PageView` | 9.430 + 414 + 228 + 5 |
+
+**9.430 PageView/giorno sono CAPI senza `event_source_url`**, un evento ogni ~9 secondi
+senza variazione giorno/notte: una macchina. Il repo è escluso:
+
+- nessun chiamante di `sendServerEvent` manda `PageView` (solo `Purchase` e
+  `CompleteRegistration`);
+- `/api/track-fb-event`, anche prima della validazione, rifiutava i body senza
+  `event_source_url`, quindi non può produrre eventi senza URL;
+- log runtime Vercel in produzione, 24h: **29 richieste** a `/api/track-fb-event`.
+
+**Sorgente trovata (14/09/2026, ispezione via wp-admin dell'accademia, EC2 `54.76.69.98`, Apache):**
+
+- Il PageView server-side lo manda **Meta for WooCommerce** (plugin ufficiale,
+  `facebook-commerce-events-tracker.php` → `inject_page_view_event()` su `wp_head` →
+  `send_api_event()`), cioè a ogni pagina renderizzata da WordPress. Il suo filtro
+  anti-crawler blocca solo user-agent contenenti `crawler` o `meta-*`.
+- `event_source_url` viene da `home_url()`, ma **WordPress prende il proprio indirizzo
+  dall'header `Host`** (`WP_HOME` dinamico): `curl -H 'Host: test.invalid' http://54.76.69.98/`
+  restituisce `<link rel="canonical" href="http://test.invalid/">`. Quindi: `Host: 54.76.69.98`
+  → URL `http://54.76.69.98/`; `Host: ws.bitmex.com` (proxy-abuse) → `http://ws.bitmex.com/`;
+  **HTTP/1.0 senza `Host`** (scanner, monitor, health check) → `http:///` → Meta scarta la URL
+  → il bucket da 9.430/giorno senza host.
+- Il server risponde `200` con tutto WordPress a qualsiasi `Host`, anche assente, e imposta
+  `_fbp` con `domain=54.76.69.98`.
+- Il plugin "Facebook Pixel PRO" (custom) è solo pixel browser; il tema figlio imposta cookie
+  `utm_*`/`fbclid`/`ref`/`ip` ma non chiama Meta. `ViewCategory` esiste in questo repo, non è
+  una firma di plugin WordPress.
+
+**Fix, in `functions.php` del tema figlio (BuddyBoss Child) dell'accademia**, senza SSH:
+
+1. Su `init` (priorità 0), se `HTTP_HOST` non è `accademia.weshoot.it`, rispondere `200 ok`
+   in text/plain e uscire: gli health check restano verdi, ma niente pagina, niente pixel,
+   niente CAPI.
+2. `add_filter('wc_facebook_is_crawler_request', ...)` per trattare come crawler gli UA vuoti
+   o contenenti `bot`, `spider`, `crawl`, `curl`, `wget`, `python`, `go-http`, `okhttp`,
+   `healthchecker`, `uptime`, `monitor`, `headless`, `lighthouse`, `facebookexternalhit`.
+
+Poi, con accesso al server: security group :80/:443 solo dal SG dell'ALB, vhost Apache di
+default che risponde `403` a `Host` ≠ `accademia.weshoot.it`, health check dell'ALB su un file
+statico. Log: `/var/log/apache2/access.log*` (non nginx).
+
+## `external_id` sempre presente sugli eventi CAPI (14/09/2026)
+
+Events Manager → Diagnostica segnalava **"Invia i parametri dei dati degli utenti mancanti"**
+su `InitiateCheckout`, `ViewContent` e `Lead`, **19% degli eventi totali**: senza almeno una
+chiave di corrispondenza in `user_data` quegli eventi non sono utilizzabili per attribuzione
+e ottimizzazione.
+
+Per un visitatore anonimo alla prima visita `user_data` conteneva solo `client_ip_address` e
+`client_user_agent`: niente email, niente `external_id`, e nemmeno `_fbp`, che il pixel non ha
+ancora scritto. `Purchase` e `CompleteRegistration` non erano tra gli eventi segnalati perché
+partono da `webhook-stripe` e `create-profile`, dove l'utente è identificato.
+
+`external_id` è ora sempre valorizzato: l'id dell'utente loggato, altrimenti un UUID anonimo
+di prima parte nel cookie **`ws_eid`** (httpOnly, SameSite lax, 1 anno). Il cookie viene
+generato durante la richiesta stessa, così anche il primo evento parte con un `external_id`
+invece di aspettare quello successivo, e viene scritto **solo sulle risposte di successo**:
+una richiesta rifiutata dalle allowlist non riceve un identificativo.
+
+> `ws_eid` è un identificativo di tracciamento: va aggiunto alla cookie policy.
+
+## Il middleware non veniva eseguito (14/09/2026)
+
+`middleware.ts` stava nella root del repo, ma la app è in `src/app`: con la cartella `src`
+Next.js carica **`src/middleware.ts`**. Verificato in locale prima dello spostamento: nessun
+header `Content-Security-Policy`, nessun `x-nonce`, zero righe di log su
+`/auth/reset-password`.
+
+Non giravano quindi la CSP, il refresh della sessione Supabase (il pattern documentato di
+`@supabase/ssr`) e la rimozione di `code`/`access_token` dall'URL di reset password. La
+protezione di `/admin` **non** era un buco: `src/app/admin/layout.tsx` e ogni pagina sotto
+`/admin` fanno già il proprio controllo server-side su `user_roles` con `redirect()`.
+
+Spostare il file e basta avrebbe spento il sito: la CSP usa `'strict-dynamic'`, che fa
+ignorare al browser `'self'` e gli allowlist per host lasciando passare solo ciò che porta il
+nonce — e il nonce non veniva applicato a nulla, perché finiva in `x-nonce` sulla *risposta*
+mentre Next.js lo legge dall'header `Content-Security-Policy` della *richiesta*. Ora nonce e
+CSP viaggiano su `NextResponse.next({ request: { headers } })`: 24 dei 25 tag `<script>` della
+pagina ricevono il nonce.
+
+**La CSP è emessa come `Content-Security-Policy-Report-Only`**: non blocca nulla, segnala solo
+in console. Non c'è un `report-uri`, quindi le violazioni si leggono dalla console del browser.
+Prima di passare a `Content-Security-Policy` in enforcing, verificare:
+
+- `frame-src 'none'` contro il banner e il preference center di Iubenda, che possono usare iframe;
+- lo script inline di `next-themes`, l'unico senza nonce. Passarglielo richiede `headers()` nel
+  layout root, che renderebbe dinamico tutto il sito togliendo la generazione statica alle
+  pagine ISR.
+
+Il controllo admin nel middleware non redirige più se la RPC `is_admin` va in errore: non è
+stato possibile verificarne l'esistenza e un errore avrebbe chiuso fuori gli admin senza
+aggiungere protezione, visto che il layout fa già la verifica autorevole.
+
 ## Come verificare
 
 1. Impostare `FB_TEST_EVENT_CODE` in locale, aprire una pagina tour, click "PRENOTA ORA".
@@ -94,6 +213,9 @@ lista `"client, proxy1, proxy2"`): Meta vuole un IP singolo, e il valore incide 
    Click su "Vedi Partenze" nell'hero: nessuna richiesta a `facebook.com/tr/?ev=InitiateCheckout`.
 4. Dopo 48–72h: in Events Manager la quota "Server" di `AddToCart` deve essere ≈ 50% del
    totale, come per `InitiateCheckout`.
+5. Home → click su un tour → "Vedi Partenze": in Network, filtro `facebook.com/tr`, un
+   `ev=PageView` per ogni navigazione con `dl=` uguale alla URL corrente. Ricaricando una
+   pagina tour: un solo `PageView`.
 
 > `FB_TEST_EVENT_CODE` **non** deve essere impostato su Vercel Production, altrimenti tutti
 > gli eventi CAPI finiscono in Test Events.
