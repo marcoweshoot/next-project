@@ -29,7 +29,11 @@ export async function middleware(req: NextRequest) {
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
-    "upgrade-insecure-requests",
+    // `upgrade-insecure-requests` è volutamente assente: in una policy Report-Only non ha
+    // alcun effetto e Chrome lo segnala come errore una volta per contesto di navigazione,
+    // riempiendo di righe rosse la console di produzione. L'upgrade a HTTPS è già garantito
+    // dall'header Strict-Transport-Security servito da Vercel sul dominio.
+    // RIMETTERLA insieme al passaggio in enforcing (Content-Security-Policy senza -Report-Only).
   ].join("; ");
 
   // Next.js legge il nonce dall'header Content-Security-Policy della RICHIESTA e lo applica
