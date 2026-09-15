@@ -12,6 +12,7 @@ export { TOUR_INCLUSIONS_FIELDS } from './tour-inclusions';
 export { GET_COACHES } from './coaches';
 export { GET_COLLECTIONS } from './collections';
 export { GET_DESTINATIONS } from './destinations';
+export { GET_ALL_LOCATIONS } from './locations';
 export { GET_PHOTOGRAPHER_BY_USERNAME, GET_PHOTOGRAPHER_TOURS } from './photographer';
 export { GET_PRIVACY_POLICY } from './privacy';
 export { GET_REVIEWS } from './reviews';

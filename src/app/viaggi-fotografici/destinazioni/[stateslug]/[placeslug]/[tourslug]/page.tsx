@@ -444,8 +444,9 @@ export default async function TourDetailPage({ params }: Props) {
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
         { '@type': 'ListItem', position: 2, name: 'Viaggi fotografici', item: `${SITE_URL}/viaggi-fotografici` },
         { '@type': 'ListItem', position: 3, name: humanize(stateslug), item: `${SITE_URL}${CANONICAL_BASE}/${stateslug}` },
-        { '@type': 'ListItem', position: 4, name: humanize(placeslug), item: `${SITE_URL}${CANONICAL_BASE}/${stateslug}/${placeslug}` },
-        { '@type': 'ListItem', position: 5, name: humanize(tourslug), item: pageUrl },
+        // Il place non ha una pagina propria: `${CANONICAL_BASE}/${stateslug}/${placeslug}`
+        // veniva rediretto su /posti/ che risolve le location, quindi 404.
+        { '@type': 'ListItem', position: 4, name: humanize(tourslug), item: pageUrl },
       ],
     }
 

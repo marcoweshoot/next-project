@@ -5,6 +5,7 @@ import { GET_TOURS } from "@/graphql/queries/tours-list";
 import { GET_DESTINATIONS } from "@/graphql/queries/destinations";
 import { GET_COLLECTIONS } from "@/graphql/queries/collections";
 import { GET_COURSES } from "@/graphql/queries/courses";
+import { GET_ALL_LOCATIONS } from "@/graphql/queries/locations";
 
 export const revalidate = 86400; // 24h: numero letterale
 
@@ -112,27 +113,29 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           priority: 0.8,
         }));
 
-    // 4. Places (estratti dai tour)
-    const uniquePlaces = new Map<string, { stateSlug: string; placeSlug: string }>();
-    ((toursData?.tours as Tour[]) ?? []).forEach((t) => {
-      const stateSlug = t.states?.[0]?.slug;
-      const placeSlug = t.places?.[0]?.slug;
-      if (stateSlug && placeSlug) {
-        const key = `${stateSlug}/${placeSlug}`;
-        if (!uniquePlaces.has(key)) {
-          uniquePlaces.set(key, { stateSlug, placeSlug });
-        }
-      }
+    // 4. Locations (i singoli spot fotografici)
+    // NB: la route /destinazioni/:state/posti/:slug risolve le `locations`, non i `places`.
+    // Prima questa sezione derivava gli URL da tour.places[0] e produceva 404 sistematici.
+    const { data: locationsData } = await client.query({
+      query: GET_ALL_LOCATIONS,
+      variables: { locale: "it", limit: 1000 },
     });
 
-    const placeUrls: MetadataRoute.Sitemap = Array.from(uniquePlaces.values()).map(
-      ({ stateSlug, placeSlug }) => ({
-        url: `${BASE_URL}/viaggi-fotografici/destinazioni/${stateSlug}/posti/${placeSlug}`,
-        lastModified: now,
-        changeFrequency: "weekly" as const,
-        priority: 0.7,
-      })
-    );
+    type Location = {
+      slug?: string | null;
+      updated_at?: string | null;
+      state?: { slug?: string | null } | null;
+    };
+
+    const locationUrls: MetadataRoute.Sitemap =
+      ((locationsData?.locations as Location[]) ?? [])
+        .filter((l) => l.slug && l.state?.slug)
+        .map((l) => ({
+          url: `${BASE_URL}/viaggi-fotografici/destinazioni/${l.state!.slug}/posti/${l.slug}`,
+          lastModified: l.updated_at ? new Date(l.updated_at) : now,
+          changeFrequency: "weekly" as const,
+          priority: 0.7,
+        }));
 
     // 5. Collezioni
     const { data: collectionsData } = await client.query({ 
@@ -181,7 +184,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ...staticRoutes,
       ...tourUrls,
       ...stateUrls,
-      ...placeUrls,
+      ...locationUrls,
       ...collectionUrls,
       ...courseUrls,
       ...coachUrls,

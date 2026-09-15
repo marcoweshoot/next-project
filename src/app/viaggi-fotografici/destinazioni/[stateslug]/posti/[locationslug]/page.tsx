@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { gql } from 'graphql-request';
 import { getClient } from '@/lib/graphqlClient';
 import Header from '@/components/Header';
@@ -40,6 +40,10 @@ type Location = {
 type QueryResult = {
   states: { id: string; name: string; slug: string }[];
   locations: Location[];
+  // `place` è un'entità distinta da `location` su Strapi (area/regione vs singolo spot).
+  // Serve solo a capire se uno slug che non è una location è invece un place, per
+  // reindirizzarlo invece di restituire 404.
+  places: { slug: string }[];
 };
 
 const GET_DESTINATION_PLACE_PAGE = gql`
@@ -47,6 +51,9 @@ const GET_DESTINATION_PLACE_PAGE = gql`
     states(where: { slug: $stateSlug }) {
       id
       name
+      slug
+    }
+    places(where: { slug: $placeSlug }) {
       slug
     }
     locations(
@@ -196,65 +203,78 @@ export default async function Page({ params }: Props) {
   const placeSlug = decodeSlug(locationslug).replace(/-+$/, '');
 
   const client = getClient();
+
+  // Il try racchiude solo la chiamata di rete: notFound() e permanentRedirect()
+  // lanciano un'eccezione di controllo (NEXT_HTTP_ERROR_FALLBACK / NEXT_REDIRECT) che,
+  // se intercettata qui, verrebbe loggata come errore e il redirect degraderebbe in 404.
+  let data: QueryResult;
   try {
-    const data = await client.request<QueryResult>(
+    data = await client.request<QueryResult>(
       GET_DESTINATION_PLACE_PAGE,
       { stateSlug, placeSlug }
     );
-
-    const destination = data.states?.[0];
-    const location = data.locations?.[0];
-
-    if (!destination || !location) {
-      return notFound();
-    }
-
-    // Tutti i tour legati a questa location
-    const tours = location.tours;
-
-    const locationMapped = {
-      title: location.title,
-      slug: location.slug,
-      latitude: location.latitude,
-      longitude: location.longitude,
-      state: location.state,
-      description: location.description,
-      pictures: location.pictures.map((pic) => {
-        const img = pic.image[0];
-        return {
-          id: pic.id,
-          title: pic.title ?? '',
-          url: img?.url ?? '',
-          alternativeText: img?.alternativeText ?? '',
-        };
-      }),
-    };
-
-    return (
-      <div className="min-h-screen bg-background">
-
-        <Header />
-        
-        {/* Track ViewCategory event for Facebook Pixel */}
-        <ViewCategoryTracker
-          categoryName={`${location.title} - ${destination.name}`}
-          categoryType="Location"
-          contentIds={tours.map((t: Tour) => t.id)}
-        />
-        
-        <LocationHero location={locationMapped} stateSlug={stateSlug} />
-
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <LocationContent location={locationMapped} loading={false} />
-            <LocationTours tours={tours} locationTitle={location.title} />
-          </div>
-        </section>
-        <Footer />
-      </div>
-    );
   } catch (error: any) {
-    console.error('❌ Errore caricamento pagina:', error.response || error);
-    return notFound();
+    console.error('❌ Errore GraphQL pagina location:', error?.response || error);
+    notFound();
   }
+
+  const destination = data.states?.[0];
+  const location = data.locations?.[0];
+
+  // Slug come `canarie`, `toscana`, `lofoten` sono `places` (aree), non `locations`:
+  // questa route risolve solo le locations, quindi mandiamo il place sulla pagina dello
+  // stato, che elenca già tutte le sue locations. La location viene cercata per prima,
+  // così gli slug che esistono in entrambe le entità continuano a servire la location.
+  if (!location && data.places?.[0]) {
+    permanentRedirect(`/viaggi-fotografici/destinazioni/${stateSlug}`);
+  }
+
+  if (!destination || !location) {
+    notFound();
+  }
+
+  // Tutti i tour legati a questa location
+  const tours = location.tours;
+
+  const locationMapped = {
+    title: location.title,
+    slug: location.slug,
+    latitude: location.latitude,
+    longitude: location.longitude,
+    state: location.state,
+    description: location.description,
+    pictures: location.pictures.map((pic) => {
+      const img = pic.image[0];
+      return {
+        id: pic.id,
+        title: pic.title ?? '',
+        url: img?.url ?? '',
+        alternativeText: img?.alternativeText ?? '',
+      };
+    }),
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+
+      <Header />
+      
+      {/* Track ViewCategory event for Facebook Pixel */}
+      <ViewCategoryTracker
+        categoryName={`${location.title} - ${destination.name}`}
+        categoryType="Location"
+        contentIds={tours.map((t: Tour) => t.id)}
+      />
+      
+      <LocationHero location={locationMapped} stateSlug={stateSlug} />
+
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <LocationContent location={locationMapped} loading={false} />
+          <LocationTours tours={tours} locationTitle={location.title} />
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
 }
