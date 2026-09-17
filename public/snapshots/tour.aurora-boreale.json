@@ -1527,7 +1527,7 @@
       "id": "262",
       "start": "2026-10-10",
       "end": "2026-10-17",
-      "status": "scheduled",
+      "status": "soldOut",
       "maxPax": 7,
       "price": 2399,
       "deposit": 720,
