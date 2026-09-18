@@ -177,17 +177,21 @@ export async function middleware(req: NextRequest) {
         return NextResponse.redirect(new URL('/auth/login', req.url))
       }
 
-      // Verifica se l'utente è admin usando la funzione RPC.
-      // Se la RPC fallisce NON si redirige: l'autorizzazione autorevole è già in
-      // src/app/admin/layout.tsx (e in ogni pagina sotto /admin), che legge user_roles e
-      // fa redirect da Server Component. Bloccare qui su un errore della RPC
-      // chiuderebbe fuori gli admin senza aggiungere protezione.
-      const { data: isAdmin, error } = await supabase
-        .rpc('is_admin', { user_uuid: user.id })
+      // Stesso controllo di src/app/admin/layout.tsx: basta un ruolo admin O super_admin.
+      // NON usare la RPC is_admin: accetta solo 'admin' e gli utenti reali sono tutti
+      // super_admin, quindi chiudeva fuori tutti.
+      // Se la query fallisce NON si redirige: l'autorizzazione autorevole è già nel layout
+      // (e in ogni pagina sotto /admin), che legge user_roles e fa redirect da Server
+      // Component. Bloccare qui su un errore chiuderebbe fuori gli admin senza aggiungere protezione.
+      const { data: roles, error } = await supabase
+        .from('user_roles')
+        .select('role')
+        .eq('user_id', user.id)
+        .in('role', ['admin', 'super_admin'])
 
       if (error) {
-        console.error('Middleware: RPC is_admin non disponibile, delego il controllo al layout admin', error)
-      } else if (!isAdmin) {
+        console.error('Middleware: user_roles non leggibile, delego il controllo al layout admin', error)
+      } else if (!roles || roles.length === 0) {
         return NextResponse.redirect(new URL('/dashboard', req.url))
       }
     } catch (error) {

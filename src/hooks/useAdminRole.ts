@@ -38,7 +38,8 @@ export function useAdminRole(user: User | null): AdminRole {
           setIsAdmin(false)
           setIsSuperAdmin(false)
         } else {
-          setIsAdmin(isAdminResult || false)
+          // Un super_admin è anche admin, come in src/app/admin/layout.tsx
+          setIsAdmin(isAdminResult || isSuperAdminResult || false)
           setIsSuperAdmin(isSuperAdminResult || false)
         }
       } catch (err) {
