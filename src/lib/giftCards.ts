@@ -230,3 +230,37 @@ export function formatCurrency(amountInCents: number): string {
   }).format(amountInCents / 100)
 }
 
+
+/**
+ * Stato "effettivo" di una gift card.
+ * Nel DB `expired` non viene mai scritto (la scadenza è solo `expires_at`) e non esiste
+ * uno stato per le card parzialmente usate: qui si derivano entrambi.
+ */
+export type GiftCardEffectiveStatus =
+  | 'active'
+  | 'partial'
+  | 'expiring'
+  | 'used'
+  | 'expired'
+  | 'cancelled'
+
+export const GIFT_CARD_EXPIRING_DAYS = 90
+
+export function getGiftCardEffectiveStatus(
+  giftCard: Pick<GiftCard, 'status' | 'remaining_balance' | 'amount' | 'expires_at'>,
+  now: Date = new Date(),
+  expiringDays: number = GIFT_CARD_EXPIRING_DAYS
+): GiftCardEffectiveStatus {
+  if (giftCard.status === 'cancelled') return 'cancelled'
+  if (giftCard.status === 'used' || giftCard.remaining_balance <= 0) return 'used'
+
+  if (giftCard.expires_at) {
+    const expiresAt = new Date(giftCard.expires_at)
+    if (expiresAt < now) return 'expired'
+    const threshold = new Date(now.getTime() + expiringDays * 24 * 60 * 60 * 1000)
+    if (expiresAt <= threshold) return 'expiring'
+  }
+
+  if (giftCard.remaining_balance < giftCard.amount) return 'partial'
+  return 'active'
+}

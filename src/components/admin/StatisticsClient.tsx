@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -407,9 +408,14 @@ export function StatisticsClient({
         {/* Gift Card Details */}
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Gift className="w-5 h-5" />
-              Dettaglio Gift Card
+            <CardTitle className="flex items-center justify-between gap-2">
+              <span className="flex items-center gap-2">
+                <Gift className="w-5 h-5" />
+                Dettaglio Gift Card
+              </span>
+              <Link href="/admin/gift-cards" className="text-sm font-normal text-primary hover:underline">
+                Vedi tutte →
+              </Link>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">

@@ -2,7 +2,7 @@ import { createServerClientSupabase } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, Settings, Users, BarChart3, Calendar } from 'lucide-react'
+import { ArrowLeft, Settings, Users, BarChart3, Calendar, Gift } from 'lucide-react'
 import Header from '@/components/Header'
 import type { Metadata } from 'next'
 
@@ -71,7 +71,7 @@ export default async function AdminLayout({
             </div>
             <h1 className="text-3xl font-bold text-foreground">Pannello Admin</h1>
             <p className="text-muted-foreground">
-              Gestisci recensioni, utenti e visualizza statistiche
+              Gestisci prenotazioni, gift card, recensioni, utenti e visualizza statistiche
             </p>
           </div>
         </div>
@@ -89,6 +89,12 @@ export default async function AdminLayout({
               <Button variant="outline" size="sm" className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
                 Prenotazioni
+              </Button>
+            </Link>
+            <Link href="/admin/gift-cards">
+              <Button variant="outline" size="sm" className="flex items-center gap-2">
+                <Gift className="w-4 h-4" />
+                Gift Card
               </Button>
             </Link>
             <Link href="/admin/reviews">
