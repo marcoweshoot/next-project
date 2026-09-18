@@ -47,8 +47,9 @@ const GiftCardFAQ: React.FC = () => {
               Le carte regalo hanno una scadenza?
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-4 text-muted-foreground">
-              Le nostre carte regalo hanno una scadenza indicata nel codice della carta regalo, possono essere utilizzate in qualsiasi
-              momento per prenotare uno dei nostri viaggi fotografici fino alla scadenza indicata nel codice.
+              Le carte regalo sono valide 1 anno dalla data di acquisto. La data di scadenza esatta è indicata
+              nell&apos;email con il codice e nella tua area personale: fino a quel giorno puoi usarla in qualsiasi
+              momento per prenotare uno dei nostri viaggi fotografici, anche su più prenotazioni.
             </AccordionContent>
           </AccordionItem>
 

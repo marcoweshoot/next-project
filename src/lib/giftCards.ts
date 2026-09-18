@@ -246,6 +246,13 @@ export type GiftCardEffectiveStatus =
 
 export const GIFT_CARD_EXPIRING_DAYS = 90
 
+/**
+ * Validità delle nuove gift card, in anni dalla data di acquisto.
+ * Fino al 18 settembre 2026 era 2: le card già emesse conservano la loro
+ * `expires_at` salvata nel DB, questa costante vale solo per le nuove.
+ */
+export const GIFT_CARD_VALIDITY_YEARS = 1
+
 export function getGiftCardEffectiveStatus(
   giftCard: Pick<GiftCard, 'status' | 'remaining_balance' | 'amount' | 'expires_at'>,
   now: Date = new Date(),

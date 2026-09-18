@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
         
         try {
           // Import gift card utilities
-          const { generateGiftCardCode } = await import('@/lib/giftCards')
+          const { generateGiftCardCode, GIFT_CARD_VALIDITY_YEARS } = await import('@/lib/giftCards')
           
           // Generate unique code
           let giftCardCode = generateGiftCardCode()
@@ -151,9 +151,9 @@ export async function POST(request: NextRequest) {
           const purchaserUserId = toBookingUserId(session.metadata?.userId)
           const recipientEmail = session.customer_details?.email || null
           
-          // Set expiration to 2 years from now
+          // Scadenza: GIFT_CARD_VALIDITY_YEARS dalla data di acquisto
           const expiresAt = new Date()
-          expiresAt.setFullYear(expiresAt.getFullYear() + 2)
+          expiresAt.setFullYear(expiresAt.getFullYear() + GIFT_CARD_VALIDITY_YEARS)
           
           // Create gift card
           const { data: giftCard, error: insertError } = await supabase
