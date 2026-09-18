@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   description:
     'Sorprendi i tuoi cari con una carta regalo WeShoot. Il viaggio del futuro comincia adesso con i nostri buoni regalo per viaggi fotografici.',
   alternates: { canonical: '/gift-card' },
+  // Vendita gift card sospesa: pagina tolta dal footer e dai motori di ricerca
+  robots: { index: false, follow: false },
 };
 
 export default function GiftCardPage() {

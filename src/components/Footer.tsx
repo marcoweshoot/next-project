@@ -24,7 +24,6 @@ const QUICK_LINKS = [
   { href: '/viaggi-fotografici/storie', label: '📚 Storie di Viaggio' },
   { href: '/corsi-di-fotografia', label: '🎓 Corsi di Fotografia Online' },
   { href: 'https://accademia.weshoot.it/', label: '🏫 Accademia WeShoot' },
-  { href: '/gift-card', label: '🎁 Carte Regalo' }
 ];
 
 const SUPPORT_LINKS = [
