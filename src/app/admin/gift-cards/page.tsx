@@ -66,22 +66,28 @@ export default async function AdminGiftCardsPage() {
       .order('created_at', { ascending: false }),
   ])
 
-  const cards = (giftCards || []) as GiftCard[]
-  const txs = (transactions || []) as Array<{
+  type JoinedBooking = {
+    id: string
+    tour_title: string | null
+    tour_destination: string | null
+    session_date: string | null
+    status: string | null
+  }
+  type RawTransaction = {
     id: string
     gift_card_id: string
     booking_id: string | null
     user_id: string | null
     amount_used: number
     created_at: string
-    bookings: {
-      id: string
-      tour_title: string | null
-      tour_destination: string | null
-      session_date: string | null
-      status: string | null
-    } | null
-  }>
+    // I tipi generati da Supabase vedono il join come array, a runtime con la FK è un oggetto
+    bookings: JoinedBooking | JoinedBooking[] | null
+  }
+
+  const cards = (giftCards || []) as GiftCard[]
+  const txs = (transactions || []) as unknown as RawTransaction[]
+  const joinedBooking = (b: RawTransaction['bookings']): JoinedBooking | null =>
+    Array.isArray(b) ? b[0] ?? null : b
 
   // Profili di acquirenti, riscattatori e utenti delle transazioni, in una sola query
   const userIds = Array.from(
@@ -118,15 +124,7 @@ export default async function AdminGiftCardsPage() {
       amount_used: t.amount_used,
       created_at: t.created_at,
       user: t.user_id ? people.get(t.user_id) ?? null : null,
-      booking: t.bookings
-        ? {
-            id: t.bookings.id,
-            tour_title: t.bookings.tour_title,
-            tour_destination: t.bookings.tour_destination,
-            session_date: t.bookings.session_date,
-            status: t.bookings.status,
-          }
-        : null,
+      booking: joinedBooking(t.bookings),
     })
     txByCard.set(t.gift_card_id, list)
   }
