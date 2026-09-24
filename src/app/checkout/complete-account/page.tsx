@@ -36,6 +36,8 @@ function CompleteAccountContent() {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [guest, setGuest] = useState<GuestData | null>(null)
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [privacyAccepted, setPrivacyAccepted] = useState(false)
@@ -65,6 +67,8 @@ function CompleteAccountContent() {
 
         if (data.guest) {
           setGuest(data.guest)
+          setFirstName(data.guest.firstName || '')
+          setLastName(data.guest.lastName || '')
         } else {
           setError('Dati pagamento non trovati')
         }
@@ -83,6 +87,10 @@ function CompleteAccountContent() {
     if (submitting) return
     if (!sessionId || !guest) return
 
+    if (!firstName.trim()) {
+      setError('Inserisci il nome')
+      return
+    }
     if (password.length < 6) {
       setError('La password deve essere di almeno 6 caratteri')
       return
@@ -108,6 +116,8 @@ function CompleteAccountContent() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           password,
+          firstName: firstName.trim(),
+          lastName: lastName.trim(),
           privacyAccepted,
           marketingAccepted,
           fbEventId,
@@ -224,7 +234,7 @@ function CompleteAccountContent() {
             <div className="flex items-start gap-2">
               <User className="w-4 h-4 mt-0.5 text-muted-foreground" />
               <div>
-                <p className="text-muted-foreground">Nome</p>
+                <p className="text-muted-foreground">Nome di fatturazione</p>
                 <p className="font-medium">
                   {[guest?.firstName, guest?.lastName].filter(Boolean).join(' ') || '—'}
                 </p>
@@ -248,10 +258,35 @@ function CompleteAccountContent() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Scegli una password</CardTitle>
+            <CardTitle className="text-lg">Crea il tuo account</CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="firstName">Nome</Label>
+                  <Input
+                    id="firstName"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    maxLength={100}
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="lastName">Cognome</Label>
+                  <Input
+                    id="lastName"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    maxLength={100}
+                  />
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground -mt-2">
+                Se è un regalo, inserisci il nome di chi partecipa.
+              </p>
+
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
                 <div className="relative">

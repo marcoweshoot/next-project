@@ -122,6 +122,44 @@ export const linkBookingToUser = async (
     .eq('id', bookingId)
 }
 
+/**
+ * Ricollega all'utente le prenotazioni guest rimaste senza user_id
+ * (es. account cancellato e ricreato con la stessa email).
+ * Chiamare solo con un'email verificata dell'utente autenticato.
+ */
+export const linkOrphanBookingsByEmail = async (
+  supabase: SupabaseClient,
+  params: { userId: string; email: string }
+): Promise<number> => {
+  const email = params.email.trim().toLowerCase()
+
+  const { data: claims } = await supabase
+    .from('checkout_claims')
+    .select('booking_id')
+    .eq('email', email)
+    .not('booking_id', 'is', null)
+
+  const bookingIds = (claims || []).map((c) => c.booking_id as string)
+  if (bookingIds.length === 0) return 0
+
+  const { data: linked } = await supabase
+    .from('bookings')
+    .update({ user_id: params.userId })
+    .in('id', bookingIds)
+    .is('user_id', null)
+    .select('id')
+
+  const linkedIds = (linked || []).map((b) => b.id as string)
+  if (linkedIds.length === 0) return 0
+
+  await supabase
+    .from('checkout_claims')
+    .update({ claimed_user_id: params.userId, claimed_at: new Date().toISOString() })
+    .in('booking_id', linkedIds)
+
+  return linkedIds.length
+}
+
 export const resolveTourCheckoutUser = async (
   supabase: SupabaseClient,
   session: Stripe.Checkout.Session,

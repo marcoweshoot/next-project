@@ -125,6 +125,10 @@ export async function POST(
     const { sessionId } = await params
     const body = await request.json()
     const { password, privacyAccepted, marketingAccepted = false, fbEventId, fbc, fbp } = body
+    const cleanName = (value: unknown) =>
+      typeof value === 'string' ? value.trim().slice(0, 100) : ''
+    const overrideFirstName = cleanName(body.firstName)
+    const overrideLastName = cleanName(body.lastName)
 
     if (!sessionId?.startsWith('cs_')) {
       return returnWithRateLimitFailure(
@@ -159,7 +163,7 @@ export async function POST(
       .eq('stripe_session_id', sessionId)
       .maybeSingle()
 
-    const guestData = claim
+    const baseGuestData = claim
       ? {
           email: claim.email,
           firstName: claim.first_name || '',
@@ -173,6 +177,11 @@ export async function POST(
           country: claim.country,
         }
       : extractStripeGuestData(stripeSession)
+
+    // Il partecipante può differire da chi ha pagato (es. regalo)
+    const guestData = baseGuestData && overrideFirstName
+      ? { ...baseGuestData, firstName: overrideFirstName, lastName: overrideLastName }
+      : baseGuestData
 
     if (!guestData?.email) {
       return returnWithRateLimitFailure(

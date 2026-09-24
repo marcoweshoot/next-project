@@ -1,5 +1,7 @@
 import { redirect } from 'next/navigation'
 import { createServerClientSupabase } from '@/lib/supabase/server'
+import { createClient } from '@supabase/supabase-js'
+import { linkOrphanBookingsByEmail } from '@/lib/checkoutClaims'
 import { LogoutButton } from '@/components/dashboard/LogoutButton'
 import { DashboardNavigation } from '@/components/dashboard/DashboardNavigation'
 import Header from '@/components/Header'
@@ -31,6 +33,20 @@ export default async function DashboardLayout({
 
   if (!user) {
     redirect('/auth/login')
+  }
+
+  // Ricollega prenotazioni guest orfane (es. account ricreato con la stessa email)
+  if (user.email && user.email_confirmed_at) {
+    try {
+      const supabaseAdmin = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY!,
+        { auth: { autoRefreshToken: false, persistSession: false } }
+      )
+      await linkOrphanBookingsByEmail(supabaseAdmin, { userId: user.id, email: user.email })
+    } catch (err) {
+      console.error('Error linking orphan bookings:', err)
+    }
   }
 
   return (
