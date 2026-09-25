@@ -18,13 +18,14 @@ export async function middleware(req: NextRequest) {
     // niente 'unsafe-inline': consentiamo solo script con nonce (+ strict-dynamic).
     // I domini elencati servono ai browser che non supportano 'strict-dynamic': dove è
     // supportato vengono ignorati e conta solo il nonce, che si propaga agli script
-    // iniettati dinamicamente (fbevents.js, gtm.js, gli script figli di Iubenda).
-    `script-src 'self' 'nonce-${nonce}' ${isDev ? "'unsafe-eval'" : ""} 'strict-dynamic' https://cdn.iubenda.com https://connect.facebook.net https://www.facebook.com https://www.googletagmanager.com https://www.google-analytics.com`.trim(),
+    // iniettati dinamicamente (fbevents.js, gtm.js). Il CMP (vanilla-cookieconsent) è
+    // bundlato nel codice dell'app, non serve un dominio esterno.
+    `script-src 'self' 'nonce-${nonce}' ${isDev ? "'unsafe-eval'" : ""} 'strict-dynamic' https://connect.facebook.net https://www.facebook.com https://www.googletagmanager.com https://www.google-analytics.com`.trim(),
     // style: tieni 'unsafe-inline' finché non passi a nonce per gli <style> iniettati
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "img-src 'self' data: blob: https:",
     "font-src 'self' https://fonts.gstatic.com",
-    `connect-src 'self' https://api.weshoot.it https://s3.eu-west-1.amazonaws.com https://wxoodcdxscxazjkoqhsg.supabase.co https://www.facebook.com https://connect.facebook.net https://cdn.iubenda.com https://www.googletagmanager.com https://www.google-analytics.com ${isDev ? "ws: http://localhost:*" : ""}`.trim(),
+    `connect-src 'self' https://api.weshoot.it https://s3.eu-west-1.amazonaws.com https://wxoodcdxscxazjkoqhsg.supabase.co https://www.facebook.com https://connect.facebook.net https://www.googletagmanager.com https://www.google-analytics.com ${isDev ? "ws: http://localhost:*" : ""}`.trim(),
     "frame-src 'none'",
     "object-src 'none'",
     "base-uri 'self'",

@@ -4,7 +4,7 @@ import { Montserrat } from 'next/font/google';
 import ClientProviders from '@/components/providers/ClientProviders';
 import { ToastStateProvider } from '@/components/ui/toast-provider';
 import { Toaster } from '@/components/ui/toaster';
-import IubendaScripts from "@/integrations/IubendaScripts";
+import CookieConsentBanner from "@/integrations/CookieConsentBanner";
 import ConsentLoaders from "@/integrations/ConsentLoaders";
 import { FacebookPixel } from "@/components/analytics/FacebookPixel";
 
@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta httpEquiv="Permissions-Policy" content="payment=(*), camera=(), microphone=(), geolocation=()" />
         
         <FacebookPixel />
-        <IubendaScripts />
+        <CookieConsentBanner />
         <ConsentLoaders />
       </head>
 

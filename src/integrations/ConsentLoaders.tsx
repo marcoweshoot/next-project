@@ -3,67 +3,42 @@ import { useEffect, useRef } from "react";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID; // es. GTM-XXXXXXX
 
-type IubApi = {
-  isConsentGiven?: () => boolean;
-  getConsentForPurpose?: (p: string | number) => boolean;
+type CookieConsentEventDetail = {
+  cookie?: {
+    categories?: string[];
+  };
 };
-
-declare global {
-  interface Window {
-    _iub?: { cs?: { api?: IubApi } };
-  }
-}
 
 function ensureDL() {
   window.dataLayer = window.dataLayer || [];
 }
 
-function getIubApi(): IubApi | null {
-  return (window._iub && window._iub.cs && window._iub.cs.api) || null;
-}
-
-function readPurposes(api: IubApi) {
-  const has = (keys: (string | number)[]) =>
-    keys.some(k => !!api.getConsentForPurpose?.(k as any));
-
-  // Proviamo i nomi e anche alcuni ID comuni
-  const analytics = has(["analytics", "measurement", "statistics", 4, 5, 7]);
-  const marketing = has(["marketing", "advertising", "targeting", 4, 5, 8]);
-
-  const any = analytics || marketing || !!api.isConsentGiven?.();
-  return { analytics, marketing, any };
-}
-
 function loadGTM(gtmId: string) {
-  if (document.getElementById('gtm-script')) return;
-  
-  const script = document.createElement('script');
-  script.id = 'gtm-script';
+  if (document.getElementById("gtm-script")) return;
+
+  const script = document.createElement("script");
+  script.id = "gtm-script";
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
   document.head.appendChild(script);
 }
 
-// ...
-function pushConsentGranted() {
-  // Default: denied
+// A differenza della vecchia integrazione iubenda (che concedeva sempre tutti
+// e 4 i flag a qualunque evento di consenso), qui i flag riflettono le
+// categorie granulari realmente accettate: `analytics` pilota
+// analytics_storage, `marketing` pilota i 3 flag ads.
+function pushConsentUpdate(categories: string[]) {
   ensureDL();
+  const hasAnalytics = categories.includes("analytics");
+  const hasMarketing = categories.includes("marketing");
+
   window.dataLayer.push({
-    event: "default_consent",
-    analytics_storage: "denied",
-    ad_storage: "denied",
-    ad_user_data: "denied",
-    ad_personalization: "denied",
+    event: "cookie_consent_update",
+    analytics_storage: hasAnalytics ? "granted" : "denied",
+    ad_storage: hasMarketing ? "granted" : "denied",
+    ad_user_data: hasMarketing ? "granted" : "denied",
+    ad_personalization: hasMarketing ? "granted" : "denied",
   });
-  // Dopo il click su Accetta / Salva preferenze -> granted
-  window.dataLayer.push({
-    event: "iubenda_consent_update",
-    analytics_storage: "granted",
-    ad_storage: "granted",
-    ad_user_data: "granted",
-    ad_personalization: "granted",
-  });
-  window.dataLayer.push({ event: "iubenda_consent_given" });
 }
 
 export default function ConsentLoaders() {
@@ -72,7 +47,8 @@ export default function ConsentLoaders() {
   useEffect(() => {
     if (!GTM_ID) return;
 
-    // 1) stato iniziale: nega tutto (consent mode baseline)
+    // 1) stato iniziale: nega tutto (consent mode baseline), prima che
+    // l'utente interagisca col banner.
     ensureDL();
     window.dataLayer.push({
       event: "default_consent",
@@ -82,58 +58,28 @@ export default function ConsentLoaders() {
       ad_personalization: "denied",
     });
 
-    // 2) se Iubenda è già pronta e ricorda un consenso, ok;
-    //    ma se l'API non dà i purpose, non blocchiamoci
-    const tryApiOnce = () => {
-      const api = window._iub?.cs?.api;
-      if (!api) return false;
-      // molti setup qui tornano sempre false: passiamo comunque
-      if (api.isConsentGiven?.() === true) {
-        pushConsentGranted();
-        return true;
-      }
-      return false;
-    };
-    if (!tryApiOnce()) {
-      // 3) ascolta SEMPRE gli eventi di Iubenda
-      const onChange = () => {
-        pushConsentGranted();
-        if (!gtmLoaded.current) {
-          loadGTM(GTM_ID!);
-          gtmLoaded.current = true;
-        }
-      };
-      document.addEventListener("iubenda_consent_given", onChange as EventListener);
-      document.addEventListener("iubenda_preference_given", onChange as EventListener);
-      document.addEventListener("iubenda_preference_updated", onChange as EventListener);
+    const handleConsent = (event: Event) => {
+      const detail = (event as CustomEvent<CookieConsentEventDetail>).detail;
+      const categories = detail?.cookie?.categories ?? [];
 
-      // 4) piccolo poll per quando l’API arriva tardi
-      let tries = 0;
-      const iv = setInterval(() => {
-        if (tryApiOnce()) {
-          clearInterval(iv);
-          if (!gtmLoaded.current) {
-            loadGTM(GTM_ID!);
-            gtmLoaded.current = true;
-          }
-        } else if (++tries > 40) {
-          clearInterval(iv);
-        }
-      }, 250);
+      pushConsentUpdate(categories);
 
-      return () => {
-        clearInterval(iv);
-        document.removeEventListener("iubenda_consent_given", onChange as EventListener);
-        document.removeEventListener("iubenda_preference_given", onChange as EventListener);
-        document.removeEventListener("iubenda_preference_updated", onChange as EventListener);
-      };
-    } else {
-      // consenso già presente -> carica GTM subito
-      if (!gtmLoaded.current) {
+      if (categories.includes("analytics") && !gtmLoaded.current) {
         loadGTM(GTM_ID!);
         gtmLoaded.current = true;
       }
-    }
+    };
+
+    // cc:onConsent -> primo consenso dell'utente (o consenso già salvato al
+    // caricamento pagina). cc:onChange -> l'utente ha cambiato le preferenze
+    // dal pannello (es. da footer "Gestisci preferenze cookie").
+    window.addEventListener("cc:onConsent", handleConsent as EventListener);
+    window.addEventListener("cc:onChange", handleConsent as EventListener);
+
+    return () => {
+      window.removeEventListener("cc:onConsent", handleConsent as EventListener);
+      window.removeEventListener("cc:onChange", handleConsent as EventListener);
+    };
   }, []);
 
   return null;

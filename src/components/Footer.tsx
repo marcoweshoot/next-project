@@ -1,5 +1,7 @@
 // src/components/Footer.tsx
 
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,6 +12,7 @@ import {
   Mail,
   Phone
 } from 'lucide-react';
+import { openCookiePreferences } from '@/integrations/cookieConsent';
 
 // Compute once at build time for SSG
 const currentYear = new Date().getFullYear();
@@ -126,9 +129,16 @@ const Footer: React.FC = () => (
           © {currentYear} WeShoot.it. Tutti i diritti riservati - P.IVA IT14945891001
         </p>
         <div className="flex space-x-6 mt-4 md:mt-0">
-          <Link href="https://www.iubenda.com/privacy-policy/43774671/cookie-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
+          <Link href="/cookie-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
             Cookie Policy
           </Link>
+          <button
+            type="button"
+            onClick={() => openCookiePreferences()}
+            className="text-gray-400 hover:text-white text-sm transition-colors"
+          >
+            Gestisci preferenze cookie
+          </button>
         </div>
       </div>
     </div>

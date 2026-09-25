@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
+import { hasConsentFor } from '@/integrations/cookieConsent'
 
 // Extend the Window interface to inform TypeScript about the non-standard _fbq property
 declare global {
@@ -40,6 +41,13 @@ export function FacebookPixel() {
     const initializePixel = async () => {
       // Prevent re-initialization
       if (isInitialized || typeof window === 'undefined' || window.fbq) {
+        return
+      }
+
+      // Il Meta Pixel è "marketing": non deve caricarsi né impostare cookie
+      // prima che l'utente accetti quella categoria nel banner dei cookie.
+      const marketingConsent = await hasConsentFor('marketing')
+      if (!marketingConsent) {
         return
       }
 
@@ -111,6 +119,20 @@ export function FacebookPixel() {
     }
 
     initializePixel()
+
+    // Se al mount il consenso "marketing" non era ancora stato dato, riprova
+    // quando l'utente lo accetta dal banner (subito o in un secondo momento
+    // da "Gestisci preferenze cookie").
+    const onConsentChange = () => {
+      initializePixel()
+    }
+    window.addEventListener('cc:onConsent', onConsentChange)
+    window.addEventListener('cc:onChange', onConsentChange)
+
+    return () => {
+      window.removeEventListener('cc:onConsent', onConsentChange)
+      window.removeEventListener('cc:onChange', onConsentChange)
+    }
   }, [FB_PIXEL_ID])
 
   // App Router navigations don't reload the page, so the base snippet fires
@@ -134,18 +156,8 @@ export function FacebookPixel() {
     }
   }, [FB_PIXEL_ID, pathname])
 
-  if (!FB_PIXEL_ID) {
-    return null
-  }
-
-  return (
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        style={{ display: 'none' }}
-        src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
-      />
-    </noscript>
-  )
+  // Nessun fallback <noscript> con pixel di tracciamento: per un utente senza
+  // JS non c'è modo di verificare il consenso (il banner stesso richiede JS),
+  // quindi non deve partire nessuna chiamata di tracciamento incondizionata.
+  return null
 }
